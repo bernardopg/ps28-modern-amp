@@ -19,13 +19,15 @@ def main():
     }
     reports = {}
     for name, command in commands.items():
+        expected = build / ('container.net' if name == 'schematic' else 'container.svg')
+        expected.unlink(missing_ok=True)
         result = subprocess.run(command, cwd=ROOT, capture_output=True, text=True, timeout=60)
         output = result.stdout + result.stderr
         (build / f'{name}-smoke.log').write_text(output)
         reports[name] = {'exit_code': result.returncode,
                          'assertion_warning': 'No enum choices defined' in output}
-        if result.returncode:
-            raise RuntimeError(f'{name} parse failed; see build/{name}-smoke.log')
+        if result.returncode or not expected.exists() or expected.stat().st_size == 0:
+            raise RuntimeError(f'{name} parse/export failed; see build/{name}-smoke.log')
     reports['hardware_validated'] = False
     (build / 'eda-smoke.json').write_text(json.dumps(reports, indent=2) + '\n')
     print(json.dumps(reports, indent=2))

@@ -11,3 +11,8 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 - PBTL M1/M2, diferenças LC datasheet/EVM e riscos de alimentação/medição esclarecidos.
 ### Pending
 - G0–G5; circuito físico, ERC/DRC de projeto real, bancada, licença e fabricação.
+### Infrastructure verification
+- Repositório privado bernardopg/ps28-modern-amp publicado; CI inicial aprovado.
+- 18 issues e cinco milestones espelham tasks; script dry-run/idempotente de criação.
+- Warnings PROPERTY_ENUM de KiCad 10.0.7 registrados em TOOL-001; IPC sem conexão.
+- Checkout CI atualizado para SHA da v7.0.1/node24 após aviso do runtime antigo.

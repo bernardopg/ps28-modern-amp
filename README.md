@@ -1,4 +1,6 @@
 # PS28 Modern Amp
+[GitHub privado](https://github.com/bernardopg/ps28-modern-amp) · [Issues e milestones](docs/github.md)
+
 Substituição do plate amplifier do Infinity Primus PS28 por um amplificador Classe D,
 preservando gabinete, dutos e woofer. Projeto de engenharia em fase de requisitos,
 **não um circuito pronto para fabricar**.

@@ -19,4 +19,6 @@ Este relatório valida infraestrutura/documentação, NÃO hardware.
   independente de comportamento/qualidade profissional.
 
 G0–G5 pendentes. Instrumentos, dimensões, woofer, MPNs e limites de bancada desconhecidos.
+GitHub privado publicado; 18 issues e cinco milestones, com links em .tasks/github-mirror.json.
+CI inicial em 1bd8dc7 aprovado: https://github.com/bernardopg/ps28-modern-amp/actions/runs/37654550846
 Revisão do proprietário pendente em SETUP-003. Logs de trabalho ficam em build/.

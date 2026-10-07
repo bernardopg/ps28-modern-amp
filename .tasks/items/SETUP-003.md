@@ -11,10 +11,12 @@ updated: 2026-10-07
 ## Objetivo
 GitHub e revisão do setup, atendendo docs/requirements.md e gates docs/safety.md.
 ## Critérios de aceite
-- [ ] Repositório privado e main enviados
-- [ ] Workflow remoto confirmado
+- [x] Repositório privado e main enviados
+- [x] Workflow remoto confirmado
 - [ ] Proprietário revisou escopo, backlog e pendências
 ## Evidência
-Pendente. Não marcar critérios sem evidência.
+GitHub privado: https://github.com/bernardopg/ps28-modern-amp.
+CI inicial aprovado: https://github.com/bernardopg/ps28-modern-amp/actions/runs/37654550846
+Review do proprietário ainda pendente; task permanece In Progress.
 ## Risco / aprovação
 Alterações de hardware exigem fonte primária e gate humano; sem pedidos automáticos.

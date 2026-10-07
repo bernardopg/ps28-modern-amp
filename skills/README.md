@@ -1,6 +1,8 @@
 # Skills do projeto
 Fonte única skills/<nome>/SKILL.md; links .claude/skills e .agents/skills apontam aqui.
-No harness Pi, carregar o SKILL.md explicitamente se o catálogo não atualizar a sessão.
+Pi descobre `.agents/skills/` no projeto; executar `/reload` após mudanças, ou usar
+`/skill:hardware-researcher` (e demais nomes) para forçar carregamento.
+Nesta sessão, carregar SKILL.md explicitamente se o catálogo ainda estiver desatualizado.
 Não instalar globalmente: evita aplicar regras de amplificador a outros projetos.
 
 - reference-design-guardrails: mudança no core/LC ou comparação com TI.

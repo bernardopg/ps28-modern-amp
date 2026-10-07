@@ -5,5 +5,5 @@ Ordem: [requisitos](requirements.md) → [arquitetura](architecture.md) →
 
 Transversais: [segurança](safety.md), [decisões](decisions.md), [referências](references.md),
 [toolchain](toolchain.md), [auditoria de origem](source-review.md),
-[compras/BOM](procurement.md), [assets](assets.md).
+[compras/BOM](procurement.md), [assets](assets.md), [GitHub/CI](github.md).
 Planejamento vive somente em `.tasks/`; instruções de agentes somente em `AGENTS.md`.
