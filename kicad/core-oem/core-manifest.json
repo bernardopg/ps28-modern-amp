@@ -1,0 +1,1495 @@
+{
+  "source": "TI SLASEA8A: p.3-4 pins; p.28 fig.31/table11; DDV0044D top PowerPAD",
+  "schematic_uuid": "dcab56f2-75b9-546c-abf8-720df9b76816",
+  "core_only": true,
+  "parts": [
+    {
+      "ref": "U1",
+      "lib_id": "PS28:TPA3255DDV",
+      "value": "TPA3255DDV",
+      "nets": {
+        "1": "GVDD_AB",
+        "2": "AUX_12V",
+        "3": "GND",
+        "4": "DVDD_INTERNAL",
+        "5": "INPUT_A_AC",
+        "6": "INPUT_B_AC",
+        "7": "OC_ADJ",
+        "8": "FREQ_ADJ",
+        "9": null,
+        "10": null,
+        "11": "DVDD_INTERNAL",
+        "12": "GND",
+        "13": "GND",
+        "14": "AVDD",
+        "15": "C_START",
+        "16": "GND",
+        "17": "GND",
+        "18": "RESET",
+        "19": "FAULT",
+        "20": "VBG",
+        "21": "CLIP_OTW",
+        "22": "GVDD_CD",
+        "23": "BST_D",
+        "24": "BST_C",
+        "25": "GND",
+        "26": "GND",
+        "27": "PWM_BD",
+        "28": "PWM_BD",
+        "29": "PVDD_36V",
+        "30": "PVDD_36V",
+        "31": "PVDD_36V",
+        "32": "PWM_AC",
+        "33": "GND",
+        "34": "GND",
+        "35": "PWM_BD",
+        "36": "PVDD_36V",
+        "37": "PVDD_36V",
+        "38": "PVDD_36V",
+        "39": "PWM_AC",
+        "40": "PWM_AC",
+        "41": "GND",
+        "42": "GND",
+        "43": "BST_B",
+        "44": "BST_A"
+      },
+      "footprint": "Package_SO:HTSSOP-44_6.1x14mm_P0.635mm_TopEP4.14x7.01mm",
+      "pcb_position": [
+        89,
+        52
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "TPA3255DDVR",
+      "manufacturer": "Texas Instruments",
+      "source": "TI SLASEA8A DDV0044D / package addendum",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "R1",
+      "lib_id": "Device:R",
+      "value": "3.3R 0.25W 1%",
+      "nets": {
+        "1": "AUX_12V",
+        "2": "GVDD_AB"
+      },
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "pcb_position": [
+        78,
+        40
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "CRCW12063R30FKEA",
+      "manufacturer": "Vishay",
+      "source": "Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "R2",
+      "lib_id": "Device:R",
+      "value": "3.3R 0.25W 1%",
+      "nets": {
+        "1": "AUX_12V",
+        "2": "GVDD_CD"
+      },
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "pcb_position": [
+        78,
+        65
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "CRCW12063R30FKEA",
+      "manufacturer": "Vishay",
+      "source": "Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "R3",
+      "lib_id": "Device:R",
+      "value": "22k 1%",
+      "nets": {
+        "1": "OC_ADJ",
+        "2": "GND"
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pcb_position": [
+        69,
+        56
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "CRCW060322K0FKEA",
+      "manufacturer": "Vishay",
+      "source": "Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "R4",
+      "lib_id": "Device:R",
+      "value": "30k 1%",
+      "nets": {
+        "1": "FREQ_ADJ",
+        "2": "GND"
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pcb_position": [
+        69,
+        60
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "CRCW060330K0FKEA",
+      "manufacturer": "Vishay",
+      "source": "Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C1",
+      "lib_id": "Device:C_Polarized",
+      "value": "470uF 35V",
+      "nets": {
+        "1": "AUX_12V",
+        "2": "GND"
+      },
+      "footprint": "PS28:WE_860020575014",
+      "pcb_position": [
+        97.5,
+        84
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "860020575014",
+      "manufacturer": "Wurth Elektronik",
+      "source": "WE WCAP-ATG5 rev1.0 2014-11-11 p.1: 470uF 35V D10 H16+1.5 P5 drill0.9; ripple520mA/120Hz",
+      "geometry": {
+        "diameter_max_mm": 10.5,
+        "height_max_mm": 17.5,
+        "pitch_mm": 5,
+        "drill_mm": 0.9
+      },
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C2",
+      "lib_id": "Device:C",
+      "value": "100nF 50V X7R",
+      "nets": {
+        "1": "AUX_12V",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [
+        80,
+        44
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "C0603C104K5RACTU",
+      "manufacturer": "KEMET",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C3",
+      "lib_id": "Device:C",
+      "value": "10uF 16V X5R",
+      "nets": {
+        "1": "AUX_12V",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pcb_position": [
+        75,
+        44
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "EMK212BJ106KG-T",
+      "manufacturer": "Taiyo Yuden",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified; effective capacitance/DC-bias check still required at VDD",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C4",
+      "lib_id": "Device:C",
+      "value": "100nF 50V X7R",
+      "nets": {
+        "1": "GVDD_AB",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [
+        79,
+        48
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "C0603C104K5RACTU",
+      "manufacturer": "KEMET",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C5",
+      "lib_id": "Device:C",
+      "value": "100nF 50V X7R",
+      "nets": {
+        "1": "GVDD_CD",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [
+        79,
+        61
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "C0603C104K5RACTU",
+      "manufacturer": "KEMET",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C6",
+      "lib_id": "Device:C",
+      "value": "1uF 16V X7R",
+      "nets": {
+        "1": "DVDD_INTERNAL",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [
+        75,
+        52
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "GRM188R71C105KA12D",
+      "manufacturer": "Murata",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C7",
+      "lib_id": "Device:C",
+      "value": "1uF 16V X7R",
+      "nets": {
+        "1": "AVDD",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [
+        70,
+        48
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "GRM188R71C105KA12D",
+      "manufacturer": "Murata",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C8",
+      "lib_id": "Device:C",
+      "value": "47nF 25V X7R",
+      "nets": {
+        "1": "C_START",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "pcb_position": [
+        70,
+        52
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "GRM155R71E473KA88D",
+      "manufacturer": "Murata",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C9",
+      "lib_id": "Device:C",
+      "value": "1uF 16V X7R",
+      "nets": {
+        "1": "VBG",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [
+        74,
+        64
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "GRM188R71C105KA12D",
+      "manufacturer": "Murata",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C10",
+      "lib_id": "Device:C",
+      "value": "1uF 100V X7R",
+      "nets": {
+        "1": "PVDD_36V",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "pcb_position": [
+        98,
+        47
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "GRM31CR72A105KA01L",
+      "manufacturer": "Murata",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C11",
+      "lib_id": "Device:C",
+      "value": "1uF 100V X7R",
+      "nets": {
+        "1": "PVDD_36V",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "pcb_position": [
+        98,
+        52
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "GRM31CR72A105KA01L",
+      "manufacturer": "Murata",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C12",
+      "lib_id": "Device:C",
+      "value": "1uF 100V X7R",
+      "nets": {
+        "1": "PVDD_36V",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "pcb_position": [
+        98,
+        57
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "GRM31CR72A105KA01L",
+      "manufacturer": "Murata",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C13",
+      "lib_id": "Device:C",
+      "value": "1uF 100V X7R",
+      "nets": {
+        "1": "PVDD_36V",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "pcb_position": [
+        98,
+        62
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "GRM31CR72A105KA01L",
+      "manufacturer": "Murata",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C14",
+      "lib_id": "Device:C_Polarized",
+      "value": "1500uF 63V",
+      "nets": {
+        "1": "PVDD_36V",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm",
+      "pcb_position": [
+        36.25,
+        45
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "UHE1J152MHD",
+      "manufacturer": "Nichicon",
+      "source": "Nichicon UHE CAT.8100M p.1/p.6: UHE1J152MHD 1500uF 63V D18 H40+2 P7.5; Zmax36mOhm/100kHz/20C; ripple2470mA/100kHz/105C (x0.8 at120Hz); 10000h/105C",
+      "geometry": {
+        "diameter_max_mm": 18.5,
+        "height_max_mm": 42,
+        "pitch_mm": 7.5,
+        "ripple_A_100kHz_105C": 2.47,
+        "ripple_A_120Hz_105C": 1.976,
+        "impedance_max_ohm_100kHz_20C": 0.036,
+        "endurance_hours_105C": 10000
+      },
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C15",
+      "lib_id": "Device:C_Polarized",
+      "value": "1500uF 63V",
+      "nets": {
+        "1": "PVDD_36V",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm",
+      "pcb_position": [
+        36.25,
+        73
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "UHE1J152MHD",
+      "manufacturer": "Nichicon",
+      "source": "Nichicon UHE CAT.8100M p.1/p.6: UHE1J152MHD 1500uF 63V D18 H40+2 P7.5; Zmax36mOhm/100kHz/20C; ripple2470mA/100kHz/105C (x0.8 at120Hz); 10000h/105C",
+      "geometry": {
+        "diameter_max_mm": 18.5,
+        "height_max_mm": 42,
+        "pitch_mm": 7.5,
+        "ripple_A_100kHz_105C": 2.47,
+        "ripple_A_120Hz_105C": 1.976,
+        "impedance_max_ohm_100kHz_20C": 0.036,
+        "endurance_hours_105C": 10000
+      },
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C16",
+      "lib_id": "Device:C",
+      "value": "33nF 25V X7R",
+      "nets": {
+        "1": "BST_A",
+        "2": "PWM_AC"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [
+        99,
+        40
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "GRM188R71E333KA01D",
+      "manufacturer": "Murata",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C17",
+      "lib_id": "Device:C",
+      "value": "33nF 25V X7R",
+      "nets": {
+        "1": "BST_B",
+        "2": "PWM_BD"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [
+        103,
+        49
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "GRM188R71E333KA01D",
+      "manufacturer": "Murata",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C18",
+      "lib_id": "Device:C",
+      "value": "33nF 25V X7R",
+      "nets": {
+        "1": "BST_C",
+        "2": "PWM_AC"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [
+        103,
+        58
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "GRM188R71E333KA01D",
+      "manufacturer": "Murata",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C19",
+      "lib_id": "Device:C",
+      "value": "33nF 25V X7R",
+      "nets": {
+        "1": "BST_D",
+        "2": "PWM_BD"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [
+        99,
+        69
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "GRM188R71E333KA01D",
+      "manufacturer": "Murata",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C20",
+      "lib_id": "Device:C",
+      "value": "10uF 16V X5R",
+      "nets": {
+        "1": "DIFF_P",
+        "2": "INPUT_A_AC"
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pcb_position": [
+        65,
+        47
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "EMK212BJ106KG-T",
+      "manufacturer": "Taiyo Yuden",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified; effective capacitance/DC-bias check still required at VDD",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C21",
+      "lib_id": "Device:C",
+      "value": "10uF 16V X5R",
+      "nets": {
+        "1": "DIFF_N",
+        "2": "INPUT_B_AC"
+      },
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pcb_position": [
+        65,
+        51
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "EMK212BJ106KG-T",
+      "manufacturer": "Taiyo Yuden",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified; effective capacitance/DC-bias check still required at VDD",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "L1",
+      "lib_id": "Device:L",
+      "value": "10uH 16A 22A_Isat_typ",
+      "nets": {
+        "1": "PWM_AC",
+        "2": "SPK_P"
+      },
+      "footprint": "PS28:WE_HCF2013_7443631000",
+      "pcb_position": [
+        134,
+        38.5
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "7443631000",
+      "manufacturer": "Wurth Elektronik",
+      "source": "WE 006.000 2025-07-08 p.1: 10uH/16A/22A typ/8.76mOhm max; stability land NOT electrical",
+      "geometry": {
+        "body_max_mm": [
+          21.8,
+          21.5,
+          14.5
+        ],
+        "pad3": "unnumbered mechanical stability; no net"
+      },
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "L2",
+      "lib_id": "Device:L",
+      "value": "10uH 16A 22A_Isat_typ",
+      "nets": {
+        "1": "SPK_N",
+        "2": "PWM_BD"
+      },
+      "footprint": "PS28:WE_HCF2013_7443631000",
+      "pcb_position": [
+        134,
+        69.5
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "7443631000",
+      "manufacturer": "Wurth Elektronik",
+      "source": "WE 006.000 2025-07-08 p.1: 10uH/16A/22A typ/8.76mOhm max; stability land NOT electrical",
+      "geometry": {
+        "body_max_mm": [
+          21.8,
+          21.5,
+          14.5
+        ],
+        "pad3": "unnumbered mechanical stability; no net"
+      },
+      "rotation": 180,
+      "in_bom": true
+    },
+    {
+      "ref": "C22",
+      "lib_id": "Device:C",
+      "value": "470nF 100V PP 5%",
+      "nets": {
+        "1": "SPK_P",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2",
+      "pcb_position": [
+        159,
+        34
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "MKP2D034701M00JSSD",
+      "manufacturer": "WIMA",
+      "source": "WIMA MKP2 03.26 p.38-39: 470nF 100V, W8.5 H14 L7.2 PCM5; J S SD suffix",
+      "geometry": {
+        "body_nominal_mm": [
+          7.2,
+          8.5,
+          14
+        ],
+        "pitch_mm": 5,
+        "lead_mm": 0.5
+      },
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C23",
+      "lib_id": "Device:C",
+      "value": "470nF 100V PP 5%",
+      "nets": {
+        "1": "SPK_P",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2",
+      "pcb_position": [
+        159,
+        48
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "MKP2D034701M00JSSD",
+      "manufacturer": "WIMA",
+      "source": "WIMA MKP2 03.26 p.38-39: 470nF 100V, W8.5 H14 L7.2 PCM5; J S SD suffix",
+      "geometry": {
+        "body_nominal_mm": [
+          7.2,
+          8.5,
+          14
+        ],
+        "pitch_mm": 5,
+        "lead_mm": 0.5
+      },
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C24",
+      "lib_id": "Device:C",
+      "value": "1nF 100V C0G",
+      "nets": {
+        "1": "SPK_P",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "pcb_position": [
+        152,
+        33
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "12061A102JAT2A",
+      "manufacturer": "KYOCERA AVX",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C25",
+      "lib_id": "Device:C",
+      "value": "10nF 100V X7R",
+      "nets": {
+        "1": "SPK_P",
+        "2": "SPK_P_SNUB"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [
+        152,
+        40
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "06031C103KAT2A",
+      "manufacturer": "KYOCERA AVX",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "R5",
+      "lib_id": "Device:R",
+      "value": "3.3R 0.25W 1%",
+      "nets": {
+        "1": "SPK_P_SNUB",
+        "2": "GND"
+      },
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "pcb_position": [
+        151,
+        48
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "CRCW12063R30FKEA",
+      "manufacturer": "Vishay",
+      "source": "Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C26",
+      "lib_id": "Device:C",
+      "value": "470nF 100V PP 5%",
+      "nets": {
+        "1": "SPK_N",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2",
+      "pcb_position": [
+        159,
+        69
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "MKP2D034701M00JSSD",
+      "manufacturer": "WIMA",
+      "source": "WIMA MKP2 03.26 p.38-39: 470nF 100V, W8.5 H14 L7.2 PCM5; J S SD suffix",
+      "geometry": {
+        "body_nominal_mm": [
+          7.2,
+          8.5,
+          14
+        ],
+        "pitch_mm": 5,
+        "lead_mm": 0.5
+      },
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C27",
+      "lib_id": "Device:C",
+      "value": "470nF 100V PP 5%",
+      "nets": {
+        "1": "SPK_N",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2",
+      "pcb_position": [
+        159,
+        83
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "MKP2D034701M00JSSD",
+      "manufacturer": "WIMA",
+      "source": "WIMA MKP2 03.26 p.38-39: 470nF 100V, W8.5 H14 L7.2 PCM5; J S SD suffix",
+      "geometry": {
+        "body_nominal_mm": [
+          7.2,
+          8.5,
+          14
+        ],
+        "pitch_mm": 5,
+        "lead_mm": 0.5
+      },
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C28",
+      "lib_id": "Device:C",
+      "value": "1nF 100V C0G",
+      "nets": {
+        "1": "SPK_N",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "pcb_position": [
+        152,
+        68
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "12061A102JAT2A",
+      "manufacturer": "KYOCERA AVX",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "C29",
+      "lib_id": "Device:C",
+      "value": "10nF 100V X7R",
+      "nets": {
+        "1": "SPK_N",
+        "2": "SPK_N_SNUB"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [
+        152,
+        75
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "06031C103KAT2A",
+      "manufacturer": "KYOCERA AVX",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "R6",
+      "lib_id": "Device:R",
+      "value": "3.3R 0.25W 1%",
+      "nets": {
+        "1": "SPK_N_SNUB",
+        "2": "GND"
+      },
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "pcb_position": [
+        150,
+        83
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "CRCW12063R30FKEA",
+      "manufacturer": "Vishay",
+      "source": "Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "R7",
+      "lib_id": "Device:R",
+      "value": "10k 1%",
+      "nets": {
+        "1": "VIO_3V3_EXTERNAL",
+        "2": "FAULT"
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pcb_position": [
+        69,
+        74
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "CRCW060310K0FKEA",
+      "manufacturer": "Vishay",
+      "source": "Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "R8",
+      "lib_id": "Device:R",
+      "value": "10k 1%",
+      "nets": {
+        "1": "VIO_3V3_EXTERNAL",
+        "2": "CLIP_OTW"
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pcb_position": [
+        69,
+        78
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "CRCW060310K0FKEA",
+      "manufacturer": "Vishay",
+      "source": "Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "R9",
+      "lib_id": "Device:R",
+      "value": "10k 1%",
+      "nets": {
+        "1": "RESET",
+        "2": "GND"
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pcb_position": [
+        69,
+        82
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "CRCW060310K0FKEA",
+      "manufacturer": "Vishay",
+      "source": "Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "J1",
+      "lib_id": "Connector_Generic:Conn_01x02",
+      "value": "691137710002 2P 5.00mm",
+      "nets": {
+        "1": "PVDD_36V",
+        "2": "GND"
+      },
+      "footprint": "PS28:WE_WR_TBL_691137710002",
+      "pcb_position": [
+        40,
+        90
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "691137710002",
+      "manufacturer": "Wurth Elektronik",
+      "source": "WE WR-TBL1377 rev001.003 2021-07-30 p.1-2: pitch5.00 NOT5.08; 2pins, D1.3 drill, 16A UL/24A VDE",
+      "geometry": {
+        "body_mm": [
+          10,
+          7.5,
+          11.5
+        ],
+        "pitch_mm": 5,
+        "drill_mm": 1.3,
+        "rated_current_UL_A": 16
+      },
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "J2",
+      "lib_id": "Connector_Generic:Conn_01x02",
+      "value": "Auxiliary 12V",
+      "nets": {
+        "1": "AUX_12V",
+        "2": "GND"
+      },
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "pcb_position": [
+        90,
+        90
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "PBC02SAAN",
+      "manufacturer": "Sullins",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "J3",
+      "lib_id": "Connector_Generic:Conn_01x03",
+      "value": "Differential audio",
+      "nets": {
+        "1": "DIFF_P",
+        "2": "DIFF_N",
+        "3": "GND"
+      },
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+      "pcb_position": [
+        72,
+        89
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "PBC03SAAN",
+      "manufacturer": "Sullins",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "J4",
+      "lib_id": "Connector_Generic:Conn_02x04_Odd_Even",
+      "value": "Control 2x4: 3V3 RESET FAULT CLIP GND GND NC NC",
+      "nets": {
+        "1": "VIO_3V3_EXTERNAL",
+        "2": "RESET",
+        "3": "FAULT",
+        "4": "CLIP_OTW",
+        "5": "GND",
+        "6": "GND",
+        "7": null,
+        "8": null
+      },
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical",
+      "pcb_position": [
+        56,
+        71
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "PEC04DAAN",
+      "manufacturer": "Sullins",
+      "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "J5",
+      "lib_id": "Connector_Generic:Conn_01x02",
+      "value": "691137710002 2P 5.00mm",
+      "nets": {
+        "1": "SPK_P",
+        "2": "SPK_N"
+      },
+      "footprint": "PS28:WE_WR_TBL_691137710002",
+      "pcb_position": [
+        163,
+        90
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "691137710002",
+      "manufacturer": "Wurth Elektronik",
+      "source": "WE WR-TBL1377 rev001.003 2021-07-30 p.1-2: pitch5.00 NOT5.08; 2pins, D1.3 drill, 16A UL/24A VDE",
+      "geometry": {
+        "body_mm": [
+          10,
+          7.5,
+          11.5
+        ],
+        "pitch_mm": 5,
+        "drill_mm": 1.3,
+        "rated_current_UL_A": 16
+      },
+      "rotation": 0,
+      "in_bom": true
+    },
+    {
+      "ref": "J6",
+      "lib_id": "Connector_Generic:Conn_01x01",
+      "value": "GND braid solder bond - NO mounting hole",
+      "nets": {
+        "1": "GND"
+      },
+      "footprint": "PS28:Ground_Bond_SMD_6mm",
+      "pcb_position": [
+        112,
+        87
+      ],
+      "selection": "Selected for engineering validation; NO procurement/release approval",
+      "mpn": "PCB solder land + grounded braid assembly; NOT purchase PN",
+      "manufacturer": "PCB assembly feature",
+      "source": "D-014: reuse OEM mounts, no new mounting point; dedicated GND bond",
+      "rotation": 0,
+      "in_bom": false
+    }
+  ],
+  "symbol_positions": {
+    "U1": [
+      64.77,
+      80.01
+    ],
+    "R1": [
+      149.86,
+      25.4
+    ],
+    "R2": [
+      185.42,
+      25.4
+    ],
+    "R3": [
+      220.98,
+      25.4
+    ],
+    "R4": [
+      256.54,
+      25.4
+    ],
+    "C1": [
+      292.1,
+      25.4
+    ],
+    "C2": [
+      327.66,
+      25.4
+    ],
+    "C3": [
+      363.22,
+      25.4
+    ],
+    "C4": [
+      149.86,
+      50.8
+    ],
+    "C5": [
+      185.42,
+      50.8
+    ],
+    "C6": [
+      220.98,
+      50.8
+    ],
+    "C7": [
+      256.54,
+      50.8
+    ],
+    "C8": [
+      292.1,
+      50.8
+    ],
+    "C9": [
+      327.66,
+      50.8
+    ],
+    "C10": [
+      363.22,
+      50.8
+    ],
+    "C11": [
+      149.86,
+      76.2
+    ],
+    "C12": [
+      185.42,
+      76.2
+    ],
+    "C13": [
+      220.98,
+      76.2
+    ],
+    "C14": [
+      256.54,
+      76.2
+    ],
+    "C15": [
+      292.1,
+      76.2
+    ],
+    "C16": [
+      327.66,
+      76.2
+    ],
+    "C17": [
+      363.22,
+      76.2
+    ],
+    "C18": [
+      149.86,
+      101.6
+    ],
+    "C19": [
+      185.42,
+      101.6
+    ],
+    "C20": [
+      220.98,
+      101.6
+    ],
+    "C21": [
+      256.54,
+      101.6
+    ],
+    "L1": [
+      292.1,
+      101.6
+    ],
+    "L2": [
+      327.66,
+      101.6
+    ],
+    "C22": [
+      363.22,
+      101.6
+    ],
+    "C23": [
+      149.86,
+      127.0
+    ],
+    "C24": [
+      185.42,
+      127.0
+    ],
+    "C25": [
+      220.98,
+      127.0
+    ],
+    "R5": [
+      256.54,
+      127.0
+    ],
+    "C26": [
+      292.1,
+      127.0
+    ],
+    "C27": [
+      327.66,
+      127.0
+    ],
+    "C28": [
+      363.22,
+      127.0
+    ],
+    "C29": [
+      149.86,
+      152.4
+    ],
+    "R6": [
+      185.42,
+      152.4
+    ],
+    "R7": [
+      220.98,
+      152.4
+    ],
+    "R8": [
+      256.54,
+      152.4
+    ],
+    "R9": [
+      292.1,
+      152.4
+    ],
+    "J1": [
+      35.56,
+      175.26
+    ],
+    "J2": [
+      105.41,
+      175.26
+    ],
+    "J3": [
+      175.26,
+      175.26
+    ],
+    "J4": [
+      245.11,
+      175.26
+    ],
+    "J5": [
+      314.96,
+      175.26
+    ],
+    "J6": [
+      384.81,
+      175.26
+    ],
+    "#FLG01": [
+      39.37,
+      219.71
+    ],
+    "#FLG02": [
+      85.09,
+      219.71
+    ],
+    "#FLG03": [
+      129.54,
+      219.71
+    ],
+    "#FLG04": [
+      175.26,
+      219.71
+    ],
+    "#FLG05": [
+      219.71,
+      219.71
+    ],
+    "#FLG06": [
+      265.43,
+      219.71
+    ]
+  },
+  "unassigned_footprints": [],
+  "revision": "B-selected",
+  "mechanical_approved": false,
+  "manufacturing_approved": false,
+  "design_directory": "kicad/core-selected",
+  "mechanical_reconstruction": {
+    "status": "SCALED STUDY ONLY; NOT a drill template or manufacturing approval",
+    "source": "reference/infinity/ps28-service-manual.pdf",
+    "source_sha256": "e207d1aa85dc2df3572646905a729e18af49c8e653f3622e5bb2ea0cc4da818c",
+    "printed_pages": [
+      15,
+      16,
+      17,
+      18
+    ],
+    "raster_pdf_page": 19,
+    "raster_render": "pdftoppm -f19 -l19 -scale-to1600 -png",
+    "raster_dimensions_px": [
+      1600,
+      1131
+    ],
+    "digitization_uncertainty_px": 1.0,
+    "calibrations": [
+      {
+        "ref": "P101",
+        "manual_printed_page": 15,
+        "pitch_mm": 2.5,
+        "five_pitch_span_mm": 12.5,
+        "x_centers_px": [
+          606.5,
+          623.5,
+          639.5,
+          655.5,
+          672.0,
+          688.5
+        ],
+        "pixels_per_mm": 6.56
+      },
+      {
+        "ref": "P103",
+        "manual_printed_page": 15,
+        "pitch_mm": 3.96,
+        "outer_pin_span_mm": 7.92,
+        "x_centers_px": [
+          1107.5,
+          1133.5,
+          1159.5
+        ],
+        "pixels_per_mm": 6.565656565656566
+      }
+    ],
+    "horizontal_scale_disagreement_fraction": 0.0008619097457366982,
+    "pixels_per_mm_study": 6.562828282828283,
+    "vertical_scale": "ASSUMED isotropic; no independent vertical calibration/measurement",
+    "origin_px": [
+      254,
+      59
+    ],
+    "copper_panel_bounds_px": [
+      254,
+      59,
+      1257,
+      578
+    ],
+    "outer_graphic_frame_bounds_px": [
+      254,
+      59,
+      1343,
+      578
+    ],
+    "copper_region_mm_study": [
+      152.83,
+      79.082
+    ],
+    "outer_graphic_frame_mm_study": [
+      165.935,
+      79.082
+    ],
+    "right_blank_strip_is_actual_PCB": "UNRESOLVED: could be drawing/frame/side-view, not adopted as fabrication edge",
+    "mechanical_features": [
+      {
+        "id": "LEFT_UPPER",
+        "center_px": [
+          274,
+          119
+        ],
+        "center_mm_study": [
+          3.047,
+          9.142
+        ],
+        "classification": "rectangular copper opening; drill/slot/support identity unconfirmed",
+        "drill_shape_mm": null,
+        "reserve_radius_mm": 4.5
+      },
+      {
+        "id": "LEFT_LOWER",
+        "center_px": [
+          274,
+          390
+        ],
+        "center_mm_study": [
+          3.047,
+          50.436
+        ],
+        "classification": "rectangular opening + nearby small aperture; identity unconfirmed",
+        "drill_shape_mm": null,
+        "reserve_radius_mm": 4.5
+      },
+      {
+        "id": "RIGHT_UPPER",
+        "center_px": [
+          1227,
+          119
+        ],
+        "center_mm_study": [
+          148.259,
+          9.142
+        ],
+        "classification": "octagonal land with small aperture; mounting/ground-contact role unconfirmed",
+        "drill_shape_mm": null,
+        "reserve_radius_mm": 4.5
+      },
+      {
+        "id": "RIGHT_LOWER",
+        "center_px": [
+          1227,
+          390
+        ],
+        "center_mm_study": [
+          148.259,
+          50.436
+        ],
+        "classification": "octagonal land; drill is not unambiguously shown",
+        "drill_shape_mm": null,
+        "reserve_radius_mm": 4.5
+      },
+      {
+        "id": "THERMAL_LEFT",
+        "center_px": [
+          592,
+          157
+        ],
+        "center_mm_study": [
+          51.502,
+          14.933
+        ],
+        "classification": "large octagonal land near power-stage region; NOT assumed a screw hole",
+        "drill_shape_mm": null,
+        "reserve_radius_mm": 4.5
+      },
+      {
+        "id": "THERMAL_RIGHT",
+        "center_px": [
+          822,
+          157
+        ],
+        "center_mm_study": [
+          86.548,
+          14.933
+        ],
+        "classification": "large octagonal land near power-stage region; NOT assumed a screw hole",
+        "drill_shape_mm": null,
+        "reserve_radius_mm": 4.5
+      }
+    ],
+    "OEM_Q107_Q108_centers_mm_study": [
+      [
+        49.064,
+        32.303
+      ],
+      [
+        89.291,
+        32.303
+      ]
+    ],
+    "new_U1_center_mm_study": [
+      69,
+      32
+    ],
+    "preserve_original_mounting_points": true,
+    "allow_new_plate_holes": false,
+    "mounting_pattern_complete": false,
+    "mechanical_approved": false,
+    "manufacturing_approved": false
+  },
+  "provisional_outline_mm": [
+    166,
+    79.1
+  ],
+  "outline_basis": "OUTER GRAPHIC FRAME study; actual edge/right strip unresolved, not OEM fit approval"
+}

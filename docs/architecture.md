@@ -3,9 +3,14 @@
 RCA L/R → soma resistiva → buffer → LR4 80 Hz ─┐
 RCA LFE → buffer ────────────────────────────┴→ seleção → volume
  → conversor diferencial → fase → TPA3255 PBTL → LC → SPK±
-36 V externo → fusível/proteção reversa/TVS → PVDD
-           └→ DC/DC 12 V → VDD e front-end/VMID
+T1 original → retificação/bulk/proteção secundária → conversão regulada 36 V → PVDD
+                                              └→ auxiliar 12 V → VDD/front-end/VMID
 ```
+D-010 seleciona reaproveitamento de T1; detalhes da fonte dependem do envelope
+VAC/DC medido, ripple, térmica e proteções. Nenhum rail ±Vcc antigo ligado diretamente
+ao TPA3255; primário original permanece separado da PCB nova. Saúde dos componentes
+informada pelo proprietário, não medida pelo agente. Ver [decisão](transformer-reuse.md).
+
 Planejar terras por retorno de corrente, plano contínuo e placement; não usar uma
 regra genérica de estrela para romper os retornos HF. RCA/chassi/ESD exigem decisão.
 

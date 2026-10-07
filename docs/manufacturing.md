@@ -1,6 +1,8 @@
 # Fabricação e release — bloqueados até G3
 Comparar JLCPCB/PCBWay com a mesma stackup, cobre, quantidade e montagem.
-Preço/cupom antigo não é orçamento. Exposed pad montado por processo adequado;
+Preço/cupom antigo não é orçamento. No TPA3255DDV, PowerPAD é SUPERIOR:
+reflow dos 44 leads, dissipador aterrado e interface mecânica/térmica correta,
+sem exposed-pad inferior para soldar ou inspecionar por raio-X como premissa;
 TH pode ser manual após avaliação de acesso/temperatura/retrabalho.
 
 Pacote por commit/tag: Gerber, drill, BOM/MPN/DNP, CPL, PDF schematic,

@@ -34,5 +34,69 @@
     "sha256": "8f8477044d5b4ebf360d4ff7ea779e69a2f8ee6736a080759480f54c7033d538",
     "license": "Third-party copyright; local engineering reference only",
     "review_status": "Downloaded; revision and circuit review required"
+  },
+  {
+    "file": "reference/infinity/ps28-service-manual.pdf",
+    "source": "Owner-provided Infinity-PS28-sub-sm.pdf",
+    "document": "PS28 SERVICE MANUAL Rev1 3/2007; 120 V model",
+    "sha256": "e207d1aa85dc2df3572646905a729e18af49c8e653f3622e5bb2ea0cc4da818c",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Specifications, parts and supply schematics reviewed; physical unit and transformer ratings unmeasured"
+  },
+  {
+    "file": "reference/parts/we-hcf-7443631000.pdf",
+    "url": "https://www.we-online.com/components/products/datasheet/7443631000.pdf",
+    "accessed": "2026-10-07T18:52:55.828496+00:00",
+    "sha256": "f42aecc53bd62d9662908ed57feb51d2f9975253c8c1ae538a50fb2fad015a78",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "WE 006.000 2025-07-08 p.1: 10uH/16A/22A typ/8.76mOhm max; stability land NOT electrical"
+  },
+  {
+    "file": "reference/parts/wima-mkp2.pdf",
+    "url": "https://www.wima.de/wp-content/uploads/media/e_WIMA_MKP_2.pdf",
+    "accessed": "2026-10-07T18:52:55.830846+00:00",
+    "sha256": "1c8527fb1fef607bbf2f67997225102f0cc8e0a433816fe65fe4e58064fe0ec4",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "WIMA MKP2 03.26 p.38-39: 470nF 100V, W8.5 H14 L7.2 PCM5; J S SD suffix"
+  },
+  {
+    "file": "reference/parts/we-860020575014.pdf",
+    "url": "https://www.we-online.com/components/products/datasheet/860020575014.pdf",
+    "accessed": "2026-10-07T18:52:55.832177+00:00",
+    "sha256": "eff049197c2f5beb02604463f02b6ec34d715c8c7f7b6add5dfed2a90ce44781",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "WE WCAP-ATG5 rev1.0 2014-11-11 p.1: 470uF 35V D10 H16+1.5 P5 drill0.9; ripple520mA/120Hz"
+  },
+  {
+    "file": "reference/parts/panasonic-nhg-a.pdf",
+    "url": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDF0000/ABA0000C1215.pdf",
+    "accessed": "2026-10-07T18:52:55.834035+00:00",
+    "sha256": "914a996a845486e76369393aa01adb8009a93c68667d1463fc8d4b4c31dba511",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Panasonic NHG-A 01-Sep-25 p.1/p.3: ECA1JHG222 2200uF 63V D18 H35.5 P7.5 1610mA/120Hz; lifecycle unconfirmed"
+  },
+  {
+    "file": "reference/parts/we-691137710002.pdf",
+    "url": "https://www.we-online.com/components/products/datasheet/691137710002.pdf",
+    "accessed": "2026-10-07T18:52:55.835897+00:00",
+    "sha256": "d04df0570a887f97eac04076a353de421f27841df3e0e912b46c5b484948bc8e",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "WE WR-TBL1377 rev001.003 2021-07-30 p.1-2: pitch5.00 NOT5.08; 2pins, D1.3 drill, 16A UL/24A VDE"
+  },
+  {
+    "file": "reference/parts/vishay-dcrcwe3.pdf",
+    "url": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "accessed": "2026-10-07T18:52:55.836859+00:00",
+    "sha256": "ca58e35d83dd8da96ae8d4ac84c163e2f2f8d4e1366370f7abd737ec00531135",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system"
+  },
+  {
+    "file": "reference/parts/nichicon-uhe.pdf",
+    "url": "https://www.nichicon.co.jp/english/series_items/catalog_pdf/e-uhe.pdf",
+    "accessed": "2026-10-07T19:56:12.920472+00:00",
+    "sha256": "fcc5554836adbf921499f2969fb661b03a22e0ee37874d7db5bd5f9ccd499267",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "CAT.8100M p.1/p.6 geometry/endurance/ripple/Z reviewed; no lifecycle/stock/thermal qualification claim"
   }
 ]

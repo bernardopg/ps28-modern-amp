@@ -5,7 +5,8 @@ gerador/analisador, carga 4 Ω não indutiva com potência/cooling suficientes,
 termopar/termômetro, ESD e extintor apropriado. Inventário físico ainda desconhecido.
 
 1. Sem alimentação/woofer: inspeção óptica, polaridade, resistência PVDD-GND,
-   PowerPAD (evidência de montagem/raio-X), fixação, descarga, instrumentação.
+   44 leads do DDV, PowerPAD superior/dissipador aterrado e interface térmica,
+   fixação, descarga, instrumentação. Não presumir solda/pad térmico inferior.
 2. RESET assertado: sequência conforme TI e Vin mínimo do DC/DC; não usar uma
    rampa indiscriminada que deixe o auxiliar fora da faixa. Medir rails/VMID/RESET.
 3. PVDD: current limit definido, registrar repouso e temperaturas; confirmar FAULT.

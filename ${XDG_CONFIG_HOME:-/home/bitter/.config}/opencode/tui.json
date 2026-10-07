@@ -1,0 +1,5 @@
+{
+  "plugin": [
+    "file:///home/bitter/development/ps28-modern-amp-starter/$%7BXDG_CONFIG_HOME:-/home/bitter/.config%7D/opencode/plugins/orca-opencode-status-tui/tui.js"
+  ]
+}

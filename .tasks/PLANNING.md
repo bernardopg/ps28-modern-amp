@@ -1,4 +1,5 @@
 # Planejamento
+
 Scrumban solo inspirado no wingdrive: sprints de duas semanas após ativação humana,
 WIP máximo 2, backlog ordenado por risco/dependência, roadmap Now/Next/Later.
 S01 é preparação: não há compromisso de datas nem capacidade inferida.

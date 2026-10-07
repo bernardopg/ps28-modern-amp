@@ -7,7 +7,9 @@ Status: baseline herdada do starter, pendente de confirmação física e do prop
   Definir frequência, duração, THD+N, duty cycle e temperatura ambiente em SYS-002.
   P=V_RMS²/R: 150 W requerem 24,49 Vrms, 34,64 Vp e 6,12 Arms.
   Em 36 V, margem real de perdas/clipping é pequena; não prometer esse resultado.
-- REQ-003: entrada DC externa isolada/certificada 36 V, capacidade candidata 5–6 A;
+- REQ-003 (D-010): reaproveitar T1 original com retificação/proteção e conversão
+  secundária nova para PVDD regulado 36 V, capacidade candidata 5–6 A;
+  fonte externa isolada somente bancada/fallback; VAC/VA de T1 ainda não medidos;
   especificar tolerância, ripple, transient, inrush, proteções e conector em PWR-001.
 - REQ-004: rail auxiliar 12 V; orçamento candidato ≥0,5 A a calcular; VMID ~6 V.
 - REQ-005: RCA L/R sem curto entre fontes; LFE independente com bypass do LPF,

@@ -7,8 +7,10 @@ Confirmar cobre/dielétrico/vias com fábrica antes de finalizar regras.
 - Capacitores PVDD próximos aos pinos, vias curtas; bulk não substitui cerâmicos.
 - Reduzir área de switch nodes; não rotear analógico sob eles/indutores.
 - Plano GND contínuo com caminhos de retorno controlados; não cortar sob sinais HF.
-- PowerPAD conforme TI e montagem escolhida: filled/capped não é igual a tented.
-  Avaliar solder wicking, pasta, raio-X, dissipador e contato mecânico.
+- TPA3255DDV tem PowerPAD SUPERIOR (SLASEA8A p.3–4/DDV0044D): footprint TopEP,
+  44 leads, sem pad inferior 45. Dissipador aterrado, contato térmico e fixação independentes.
+  Não aplicar receita bottom-EP com pasta/vias centrais. Verificar altura/relief do
+  dissipador sobre capacitores; a reserva Dwgs.User do draft não é keepout aprovado.
 - Cobre e vias calculados para corrente, perdas e ΔT; 0,25 mm não é regra de potência.
 - Não delegar loops críticos a Freerouting; autorouter só auxilia sinais não críticos.
 - Confirmar placa/painel/furos/chicotes, isolamento de ferragens, airflow e vedação acústica.

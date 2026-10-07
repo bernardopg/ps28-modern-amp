@@ -1,0 +1,36 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+C10,1uF 100V X7R,C_1206_3216Metric,84.0,-55.0,0.0,top
+C11,1uF 100V X7R,C_1206_3216Metric,84.0,-60.0,0.0,top
+C12,1uF 100V X7R,C_1206_3216Metric,84.0,-65.0,0.0,top
+C13,1uF 100V X7R,C_1206_3216Metric,84.0,-70.0,0.0,top
+C16,33nF 25V X7R,C_0603_1608Metric,85.0,-48.0,0.0,top
+C17,33nF 25V X7R,C_0603_1608Metric,89.0,-57.0,0.0,top
+C18,33nF 25V X7R,C_0603_1608Metric,89.0,-66.0,0.0,top
+C19,33nF 25V X7R,C_0603_1608Metric,85.0,-77.0,0.0,top
+C2,100nF 25V X7R,C_0603_1608Metric,66.0,-52.0,0.0,top
+C20,10uF 16V X7R,C_1206_3216Metric,55.0,-46.0,0.0,top
+C21,10uF 16V X7R,C_1206_3216Metric,55.0,-50.0,0.0,top
+C24,1nF 100V C0G,C_0603_1608Metric,139.0,-45.0,0.0,top
+C25,10nF 100V dielectric TBD,C_1206_3216Metric,144.0,-45.0,0.0,top
+C28,1nF 100V C0G,C_0603_1608Metric,139.0,-80.0,0.0,top
+C29,10nF 100V dielectric TBD,C_1206_3216Metric,144.0,-80.0,0.0,top
+C3,10uF 25V X7R,C_1206_3216Metric,61.0,-52.0,0.0,top
+C4,100nF 25V X7R,C_0603_1608Metric,65.0,-56.0,0.0,top
+C5,100nF 25V X7R,C_0603_1608Metric,65.0,-69.0,0.0,top
+C6,1uF 16V X7R,C_0603_1608Metric,61.0,-60.0,0.0,top
+C7,1uF 16V X7R,C_0603_1608Metric,56.0,-56.0,0.0,top
+C8,47nF 25V X7R,C_0603_1608Metric,56.0,-60.0,0.0,top
+C9,1uF 16V X7R,C_0603_1608Metric,60.0,-72.0,0.0,top
+J2,12V auxiliary,PinHeader_1x02_P2.54mm_Vertical,35.0,-36.27,0.0,top
+J3,Differential audio interface,PinHeader_1x03_P2.54mm_Vertical,35.0,-67.54,0.0,top
+J4,Control: 3V3 RESET FAULT CLIP GND,PinHeader_1x05_P2.54mm_Vertical,35.0,-90.08,0.0,top
+R1,3.3R,R_0603_1608Metric,64.0,-48.0,0.0,top
+R2,3.3R,R_0603_1608Metric,64.0,-73.0,0.0,top
+R3,22k 1%,R_0603_1608Metric,55.0,-64.0,0.0,top
+R4,30k 1%,R_0603_1608Metric,55.0,-68.0,0.0,top
+R5,3.3R power TBD,R_1206_3216Metric,144.0,-50.0,0.0,top
+R6,3.3R power TBD,R_1206_3216Metric,144.0,-85.0,0.0,top
+R7,10k,R_0603_1608Metric,40.0,-90.0,0.0,top
+R8,10k,R_0603_1608Metric,40.0,-94.0,0.0,top
+R9,10k RESET safe-low,R_0603_1608Metric,40.0,-98.0,0.0,top
+U1,TPA3255DDV,HTSSOP-44_6.1x14mm_P0.635mm_TopEP4.14x7.01mm,75.0,-60.0,270.0,top

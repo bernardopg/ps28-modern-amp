@@ -1,7 +1,11 @@
 # Segurança e gates obrigatórios
 36 V reduz risco de choque, mas altas correntes, incêndio, partes quentes e energia
-nos capacitores continuam presentes. Rede AC fica fora da PCB; fonte certificada externa.
-Não reutilizar transformador 34-0-34 VAC do original nesta arquitetura.
+nos capacitores continuam presentes. Rede AC fica fora da PCB nova; fonte certificada
+externa fica restrita a bancada/fallback. D-010 seleciona T1 original com novo bloco
+secundário; o proprietário informou saúde dos componentes e capacidade técnica
+para medições/conexões/testes. Ratings e segurança do conjunto novo ainda exigem
+evidência e gates: [D-009/D-010](transformer-reuse.md).
+O manual não comprova 34-0-34 VAC. Não ligar a fonte simétrica diretamente ao TPA3255.
 
 ## Proibições
 - Sem woofer no primeiro bring-up; sem energização sem checklist e limites aprovados.

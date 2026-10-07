@@ -16,3 +16,4 @@ __pycache__/
 reference/**/*.pdf
 reference/**/*.zip
 .DS_Store
+.mypy_cache/

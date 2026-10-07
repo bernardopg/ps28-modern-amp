@@ -1,8 +1,11 @@
-.PHONY: check doctor simulate eda-smoke erc drc fetch-reference
+.PHONY: check core-check doctor simulate eda-smoke erc drc fetch-reference
 
 check:
 	python3 scripts/validate.py
 	python3 -m unittest discover -s tests/unit -v
+
+core-check:
+	python3 scripts/check_core.py
 
 doctor:
 	python3 scripts/doctor.py

@@ -1,0 +1,685 @@
+{
+  "source": "TI SLASEA8A: p.3-4 pins; p.28 fig.31/table11; DDV0044D top PowerPAD",
+  "schematic_uuid": "dcab56f2-75b9-546c-abf8-720df9b76816",
+  "core_only": true,
+  "parts": [
+    {
+      "ref": "U1",
+      "lib_id": "PS28:TPA3255DDV",
+      "value": "TPA3255DDV",
+      "nets": {
+        "1": "GVDD_AB",
+        "2": "AUX_12V",
+        "3": "GND",
+        "4": "DVDD_INTERNAL",
+        "5": "INPUT_A_AC",
+        "6": "INPUT_B_AC",
+        "7": "OC_ADJ",
+        "8": "FREQ_ADJ",
+        "9": null,
+        "10": null,
+        "11": "DVDD_INTERNAL",
+        "12": "GND",
+        "13": "GND",
+        "14": "AVDD",
+        "15": "C_START",
+        "16": "GND",
+        "17": "GND",
+        "18": "RESET",
+        "19": "FAULT",
+        "20": "VBG",
+        "21": "CLIP_OTW",
+        "22": "GVDD_CD",
+        "23": "BST_D",
+        "24": "BST_C",
+        "25": "GND",
+        "26": "GND",
+        "27": "PWM_BD",
+        "28": "PWM_BD",
+        "29": "PVDD_36V",
+        "30": "PVDD_36V",
+        "31": "PVDD_36V",
+        "32": "PWM_AC",
+        "33": "GND",
+        "34": "GND",
+        "35": "PWM_BD",
+        "36": "PVDD_36V",
+        "37": "PVDD_36V",
+        "38": "PVDD_36V",
+        "39": "PWM_AC",
+        "40": "PWM_AC",
+        "41": "GND",
+        "42": "GND",
+        "43": "BST_B",
+        "44": "BST_A"
+      },
+      "footprint": "Package_SO:HTSSOP-44_6.1x14mm_P0.635mm_TopEP4.14x7.01mm",
+      "pcb_position": [75, 60],
+      "selection": "TI package/pinout checked; order MPN TBD"
+    },
+    {
+      "ref": "R1",
+      "lib_id": "Device:R",
+      "value": "3.3R",
+      "nets": {
+        "1": "AUX_12V",
+        "2": "GVDD_AB"
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pcb_position": [64, 48],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "R2",
+      "lib_id": "Device:R",
+      "value": "3.3R",
+      "nets": {
+        "1": "AUX_12V",
+        "2": "GVDD_CD"
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pcb_position": [64, 73],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "R3",
+      "lib_id": "Device:R",
+      "value": "22k 1%",
+      "nets": {
+        "1": "OC_ADJ",
+        "2": "GND"
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pcb_position": [55, 64],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "R4",
+      "lib_id": "Device:R",
+      "value": "30k 1%",
+      "nets": {
+        "1": "FREQ_ADJ",
+        "2": "GND"
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pcb_position": [55, 68],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C1",
+      "lib_id": "Device:C_Polarized",
+      "value": "470uF voltage/ripple TBD",
+      "nets": {
+        "1": "AUX_12V",
+        "2": "GND"
+      },
+      "footprint": "",
+      "pcb_position": null,
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C2",
+      "lib_id": "Device:C",
+      "value": "100nF 25V X7R",
+      "nets": {
+        "1": "AUX_12V",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [66, 52],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C3",
+      "lib_id": "Device:C",
+      "value": "10uF 25V X7R",
+      "nets": {
+        "1": "AUX_12V",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "pcb_position": [61, 52],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C4",
+      "lib_id": "Device:C",
+      "value": "100nF 25V X7R",
+      "nets": {
+        "1": "GVDD_AB",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [65, 56],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C5",
+      "lib_id": "Device:C",
+      "value": "100nF 25V X7R",
+      "nets": {
+        "1": "GVDD_CD",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [65, 69],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C6",
+      "lib_id": "Device:C",
+      "value": "1uF 16V X7R",
+      "nets": {
+        "1": "DVDD_INTERNAL",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [61, 60],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C7",
+      "lib_id": "Device:C",
+      "value": "1uF 16V X7R",
+      "nets": {
+        "1": "AVDD",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [56, 56],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C8",
+      "lib_id": "Device:C",
+      "value": "47nF 25V X7R",
+      "nets": {
+        "1": "C_START",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [56, 60],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C9",
+      "lib_id": "Device:C",
+      "value": "1uF 16V X7R",
+      "nets": {
+        "1": "VBG",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [60, 72],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C10",
+      "lib_id": "Device:C",
+      "value": "1uF 100V X7R",
+      "nets": {
+        "1": "PVDD_36V",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "pcb_position": [84, 55],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C11",
+      "lib_id": "Device:C",
+      "value": "1uF 100V X7R",
+      "nets": {
+        "1": "PVDD_36V",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "pcb_position": [84, 60],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C12",
+      "lib_id": "Device:C",
+      "value": "1uF 100V X7R",
+      "nets": {
+        "1": "PVDD_36V",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "pcb_position": [84, 65],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C13",
+      "lib_id": "Device:C",
+      "value": "1uF 100V X7R",
+      "nets": {
+        "1": "PVDD_36V",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "pcb_position": [84, 70],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C14",
+      "lib_id": "Device:C_Polarized",
+      "value": "470uF 63V ripple TBD",
+      "nets": {
+        "1": "PVDD_36V",
+        "2": "GND"
+      },
+      "footprint": "",
+      "pcb_position": null,
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C15",
+      "lib_id": "Device:C_Polarized",
+      "value": "470uF 63V ripple TBD",
+      "nets": {
+        "1": "PVDD_36V",
+        "2": "GND"
+      },
+      "footprint": "",
+      "pcb_position": null,
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C16",
+      "lib_id": "Device:C",
+      "value": "33nF 25V X7R",
+      "nets": {
+        "1": "BST_A",
+        "2": "PWM_AC"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [85, 48],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C17",
+      "lib_id": "Device:C",
+      "value": "33nF 25V X7R",
+      "nets": {
+        "1": "BST_B",
+        "2": "PWM_BD"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [89, 57],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C18",
+      "lib_id": "Device:C",
+      "value": "33nF 25V X7R",
+      "nets": {
+        "1": "BST_C",
+        "2": "PWM_AC"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [89, 66],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C19",
+      "lib_id": "Device:C",
+      "value": "33nF 25V X7R",
+      "nets": {
+        "1": "BST_D",
+        "2": "PWM_BD"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [85, 77],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C20",
+      "lib_id": "Device:C",
+      "value": "10uF 16V X7R",
+      "nets": {
+        "1": "DIFF_P",
+        "2": "INPUT_A_AC"
+      },
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "pcb_position": [55, 46],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C21",
+      "lib_id": "Device:C",
+      "value": "10uF 16V X7R",
+      "nets": {
+        "1": "DIFF_N",
+        "2": "INPUT_B_AC"
+      },
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "pcb_position": [55, 50],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "L1",
+      "lib_id": "Device:L",
+      "value": "10uH Isat/Irms/MPN TBD",
+      "nets": {
+        "1": "PWM_AC",
+        "2": "SPK_P"
+      },
+      "footprint": "",
+      "pcb_position": null,
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "L2",
+      "lib_id": "Device:L",
+      "value": "10uH Isat/Irms/MPN TBD",
+      "nets": {
+        "1": "PWM_BD",
+        "2": "SPK_N"
+      },
+      "footprint": "",
+      "pcb_position": null,
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C22",
+      "lib_id": "Device:C",
+      "value": "470nF 100V dielectric TBD",
+      "nets": {
+        "1": "SPK_P",
+        "2": "GND"
+      },
+      "footprint": "",
+      "pcb_position": [132, 45],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C23",
+      "lib_id": "Device:C",
+      "value": "470nF 100V dielectric TBD",
+      "nets": {
+        "1": "SPK_P",
+        "2": "GND"
+      },
+      "footprint": "",
+      "pcb_position": [132, 50],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C24",
+      "lib_id": "Device:C",
+      "value": "1nF 100V C0G",
+      "nets": {
+        "1": "SPK_P",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [139, 45],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C25",
+      "lib_id": "Device:C",
+      "value": "10nF 100V dielectric TBD",
+      "nets": {
+        "1": "SPK_P",
+        "2": "SPK_P_SNUB"
+      },
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "pcb_position": [144, 45],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "R5",
+      "lib_id": "Device:R",
+      "value": "3.3R power TBD",
+      "nets": {
+        "1": "SPK_P_SNUB",
+        "2": "GND"
+      },
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "pcb_position": [144, 50],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C26",
+      "lib_id": "Device:C",
+      "value": "470nF 100V dielectric TBD",
+      "nets": {
+        "1": "SPK_N",
+        "2": "GND"
+      },
+      "footprint": "",
+      "pcb_position": [132, 80],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C27",
+      "lib_id": "Device:C",
+      "value": "470nF 100V dielectric TBD",
+      "nets": {
+        "1": "SPK_N",
+        "2": "GND"
+      },
+      "footprint": "",
+      "pcb_position": [132, 85],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C28",
+      "lib_id": "Device:C",
+      "value": "1nF 100V C0G",
+      "nets": {
+        "1": "SPK_N",
+        "2": "GND"
+      },
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pcb_position": [139, 80],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "C29",
+      "lib_id": "Device:C",
+      "value": "10nF 100V dielectric TBD",
+      "nets": {
+        "1": "SPK_N",
+        "2": "SPK_N_SNUB"
+      },
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "pcb_position": [144, 80],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "R6",
+      "lib_id": "Device:R",
+      "value": "3.3R power TBD",
+      "nets": {
+        "1": "SPK_N_SNUB",
+        "2": "GND"
+      },
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "pcb_position": [144, 85],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "R7",
+      "lib_id": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "VIO_3V3_EXTERNAL",
+        "2": "FAULT"
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pcb_position": [40, 90],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "R8",
+      "lib_id": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "VIO_3V3_EXTERNAL",
+        "2": "CLIP_OTW"
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pcb_position": [40, 94],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "R9",
+      "lib_id": "Device:R",
+      "value": "10k RESET safe-low",
+      "nets": {
+        "1": "RESET",
+        "2": "GND"
+      },
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "pcb_position": [40, 98],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "J1",
+      "lib_id": "Connector_Generic:Conn_01x02",
+      "value": "36V regulated input - connector TBD",
+      "nets": {
+        "1": "PVDD_36V",
+        "2": "GND"
+      },
+      "footprint": "",
+      "pcb_position": null,
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "J2",
+      "lib_id": "Connector_Generic:Conn_01x02",
+      "value": "12V auxiliary",
+      "nets": {
+        "1": "AUX_12V",
+        "2": "GND"
+      },
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "pcb_position": [35, 35],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "J3",
+      "lib_id": "Connector_Generic:Conn_01x03",
+      "value": "Differential audio interface",
+      "nets": {
+        "1": "DIFF_P",
+        "2": "DIFF_N",
+        "3": "GND"
+      },
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+      "pcb_position": [35, 65],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "J4",
+      "lib_id": "Connector_Generic:Conn_01x05",
+      "value": "Control: 3V3 RESET FAULT CLIP GND",
+      "nets": {
+        "1": "VIO_3V3_EXTERNAL",
+        "2": "RESET",
+        "3": "FAULT",
+        "4": "CLIP_OTW",
+        "5": "GND"
+      },
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical",
+      "pcb_position": [35, 85],
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "J5",
+      "lib_id": "Connector_Generic:Conn_01x02",
+      "value": "Floating speaker - connector TBD",
+      "nets": {
+        "1": "SPK_P",
+        "2": "SPK_N"
+      },
+      "footprint": "",
+      "pcb_position": null,
+      "selection": "MPN/ratings pending"
+    },
+    {
+      "ref": "J6",
+      "lib_id": "Connector_Generic:Conn_01x01",
+      "value": "Grounded top heatsink bond - mechanical TBD",
+      "nets": {
+        "1": "GND"
+      },
+      "footprint": "",
+      "pcb_position": null,
+      "selection": "MPN/ratings pending"
+    }
+  ],
+  "symbol_positions": {
+    "U1": [64.77, 80.01],
+    "R1": [149.86, 25.4],
+    "R2": [185.42, 25.4],
+    "R3": [220.98, 25.4],
+    "R4": [256.54, 25.4],
+    "C1": [292.1, 25.4],
+    "C2": [327.66, 25.4],
+    "C3": [363.22, 25.4],
+    "C4": [149.86, 50.8],
+    "C5": [185.42, 50.8],
+    "C6": [220.98, 50.8],
+    "C7": [256.54, 50.8],
+    "C8": [292.1, 50.8],
+    "C9": [327.66, 50.8],
+    "C10": [363.22, 50.8],
+    "C11": [149.86, 76.2],
+    "C12": [185.42, 76.2],
+    "C13": [220.98, 76.2],
+    "C14": [256.54, 76.2],
+    "C15": [292.1, 76.2],
+    "C16": [327.66, 76.2],
+    "C17": [363.22, 76.2],
+    "C18": [149.86, 101.6],
+    "C19": [185.42, 101.6],
+    "C20": [220.98, 101.6],
+    "C21": [256.54, 101.6],
+    "L1": [292.1, 101.6],
+    "L2": [327.66, 101.6],
+    "C22": [363.22, 101.6],
+    "C23": [149.86, 127.0],
+    "C24": [185.42, 127.0],
+    "C25": [220.98, 127.0],
+    "R5": [256.54, 127.0],
+    "C26": [292.1, 127.0],
+    "C27": [327.66, 127.0],
+    "C28": [363.22, 127.0],
+    "C29": [149.86, 152.4],
+    "R6": [185.42, 152.4],
+    "R7": [220.98, 152.4],
+    "R8": [256.54, 152.4],
+    "R9": [292.1, 152.4],
+    "J1": [35.56, 175.26],
+    "J2": [105.41, 175.26],
+    "J3": [175.26, 175.26],
+    "J4": [245.11, 175.26],
+    "J5": [314.96, 175.26],
+    "J6": [384.81, 175.26],
+    "#FLG01": [39.37, 219.71],
+    "#FLG02": [85.09, 219.71],
+    "#FLG03": [129.54, 219.71],
+    "#FLG04": [175.26, 219.71],
+    "#FLG05": [219.71, 219.71],
+    "#FLG06": [265.43, 219.71]
+  },
+  "unassigned_footprints": [
+    "C1",
+    "C14",
+    "C15",
+    "L1",
+    "L2",
+    "C22",
+    "C23",
+    "C26",
+    "C27",
+    "J1",
+    "J5",
+    "J6"
+  ]
+}

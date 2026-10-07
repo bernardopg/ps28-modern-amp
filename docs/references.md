@@ -15,5 +15,10 @@ URL dinâmica pode entregar revisão nova: conferir capa e hash, não confiar no
 - [Konnect](https://github.com/obhox/kicad-mcp).
 - [MCP Pro](https://github.com/oaslananka/kicad-mcp-pro).
 
-Referência Infinity PS28 primária pendente: confirmar versão/região e dados do
-transdutor, não confundir com outros Primus. Links de plugins não são endosso de sign-off.
+Manual de serviço Infinity PS28 recebido do proprietário: Rev1 3/2007, 25 páginas,
+versão 120 V; cópia local em `reference/infinity/ps28-service-manual.pdf`, hash no manifesto.
+Revisadas especificações/lista de peças e figuras de fonte/blocos/schematic.
+Páginas impressas 16 e 24 identificam T1 e sua topologia, mas NÃO tensão VAC/potência VA.
+Ver [decisão de reaproveitamento](transformer-reuse.md). Confirmar etiqueta/revisão
+física e estado do transdutor; documentação não equivale à medição da unidade.
+Links de plugins não são endosso de sign-off.
