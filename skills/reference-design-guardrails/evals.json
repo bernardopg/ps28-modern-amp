@@ -1,0 +1,17 @@
+{
+  "skill_name": "reference-design-guardrails",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Quero ligar PBTL usando M3 e curto direto dos quatro OUTs.",
+      "expected_output": "Detectar ausência de M3, recusar ligação não fundamentada e pedir matriz/figura TI.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Faça a revisão, mas faltam artefatos reais e todos os limites são TBD.",
+      "expected_output": "Explicitar lacunas, pedir evidência e não declarar aprovado nem inventar resultados.",
+      "files": []
+    }
+  ]
+}

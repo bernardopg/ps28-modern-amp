@@ -1,0 +1,17 @@
+{
+  "skill_name": "class-d-layout-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Autorouter passou DRC, aprove o PowerPAD e loops.",
+      "expected_output": "Exigir revisão térmica/geométrica e evidência; DRC sozinho não aprova.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Faça a revisão, mas faltam artefatos reais e todos os limites são TBD.",
+      "expected_output": "Explicitar lacunas, pedir evidência e não declarar aprovado nem inventar resultados.",
+      "files": []
+    }
+  ]
+}

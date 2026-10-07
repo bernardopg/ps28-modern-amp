@@ -1,0 +1,17 @@
+{
+  "skill_name": "schematic-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Um schematic vazio passou ERC. Posso fabricar?",
+      "expected_output": "Explicar que não contém circuito e bloquear fabricação/G1.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Faça a revisão, mas faltam artefatos reais e todos os limites são TBD.",
+      "expected_output": "Explicitar lacunas, pedir evidência e não declarar aprovado nem inventar resultados.",
+      "files": []
+    }
+  ]
+}

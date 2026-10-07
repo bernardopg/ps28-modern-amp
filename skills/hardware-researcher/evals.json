@@ -1,0 +1,17 @@
+{
+  "skill_name": "hardware-researcher",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Um fórum diz que PS28 é 8 Ω; use isso no cálculo final.",
+      "expected_output": "Solicitar fonte primária/identificação e medida, registrar conflito e manter impedância TBD.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Faça a revisão, mas faltam artefatos reais e todos os limites são TBD.",
+      "expected_output": "Explicitar lacunas, pedir evidência e não declarar aprovado nem inventar resultados.",
+      "files": []
+    }
+  ]
+}

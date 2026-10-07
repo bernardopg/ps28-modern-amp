@@ -1,0 +1,21 @@
+PS28 LR4 ideal only - not a physical NE5532 implementation
+Vin in 0 AC 1
+R1 in a 19894.3678864869
+R2 a b 19894.3678864869
+C1 a amp1 100n
+C2 b 0 100n
+Eamp1 amp1 0 b 0 1.585786437626905
+Enorm1 stage1 0 amp1 0 0.6306019374818707
+R3 stage1 c 19894.3678864869
+R4 c d 19894.3678864869
+C3 c amp2 100n
+C4 d 0 100n
+Eamp2 amp2 0 d 0 1.585786437626905
+Enorm2 out 0 amp2 0 0.6306019374818707
+.control
+ac lin 1 80 80
+let magout = mag(v(out))
+wrdata build/lr4-80hz.dat magout
+quit
+.endc
+.end

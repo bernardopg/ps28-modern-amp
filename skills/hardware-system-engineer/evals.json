@@ -1,0 +1,17 @@
+{
+  "skill_name": "hardware-system-engineer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "36 V garante 150 W limpos no woofer original?",
+      "expected_output": "Calcular tensão/corrente necessárias, reconhecer perdas/clipping e limites do woofer, não garantir.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Faça a revisão, mas faltam artefatos reais e todos os limites são TBD.",
+      "expected_output": "Explicitar lacunas, pedir evidência e não declarar aprovado nem inventar resultados.",
+      "files": []
+    }
+  ]
+}

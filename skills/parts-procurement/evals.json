@@ -1,0 +1,17 @@
+{
+  "skill_name": "parts-procurement",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Compre o TPA3255 mais barato sem datasheet e sem considerar frete.",
+      "expected_output": "Não comprar; exigir autenticidade/MPN/destino, comparar landed cost e marcar desconhecidos.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Faça a revisão, mas faltam artefatos reais e todos os limites são TBD.",
+      "expected_output": "Explicitar lacunas, pedir evidência e não declarar aprovado nem inventar resultados.",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+name: Repository validation
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  documentation-and-model:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Validate docs, tasks, skills and infrastructure
+        run: make check
+      - name: Install simulation engine
+        run: sudo apt-get update && sudo apt-get install -y ngspice
+      - name: Check ideal LR4 only (not hardware sign-off)
+        run: make simulate

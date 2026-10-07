@@ -1,0 +1,17 @@
+{
+  "skill_name": "bom-dfm-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Troque o indutor por um Basic mais barato só pelo valor 10 µH.",
+      "expected_output": "Comparar Isat/Irms/DCR/HF/térmica/footprint; não aceitar só indutância.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Faça a revisão, mas faltam artefatos reais e todos os limites são TBD.",
+      "expected_output": "Explicitar lacunas, pedir evidência e não declarar aprovado nem inventar resultados.",
+      "files": []
+    }
+  ]
+}

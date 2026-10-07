@@ -1,0 +1,18 @@
+# Generated, local state and secrets
+build/
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+*.pem
+*.key
+*~
+*.bak
+*.kicad_prl
+*.lck
+*-backups/
+.versions/
+reference/**/*.pdf
+reference/**/*.zip
+.DS_Store

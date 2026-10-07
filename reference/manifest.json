@@ -1,0 +1,38 @@
+[
+  {
+    "file": "reference/ti/tpa3255.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/tpa3255.pdf",
+    "resolved_url": "https://www.ti.com/lit/ds/symlink/tpa3255.pdf",
+    "accessed": "2026-10-07T16:42:47.021685+00:00",
+    "sha256": "d8533eff6fcbb901e90c67f3a1f5af939c44daf22d9b769775079d5b789a202f",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Downloaded; revision and circuit review required"
+  },
+  {
+    "file": "reference/ti/slou441.pdf",
+    "url": "https://www.ti.com/lit/pdf/slou441",
+    "resolved_url": "https://www.ti.com/lit/ug/slou441/slou441.pdf?ts=1791390183575",
+    "accessed": "2026-10-07T16:42:47.023508+00:00",
+    "sha256": "dd94f244f9f027cff5dbc8dfb60616ec757da24572851d7bc49034edebb264db",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Downloaded; revision and circuit review required"
+  },
+  {
+    "file": "reference/ti/slar129a.pdf",
+    "url": "https://www.ti.com/lit/df/slar129a/slar129a.pdf",
+    "resolved_url": "https://www.ti.com/lit/df/slar129a/slar129a.pdf",
+    "accessed": "2026-10-07T16:42:47.025068+00:00",
+    "sha256": "d3b979eac36b246652324ee57b082552e07881d861f2bb5feea73b614734930b",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Downloaded; revision and circuit review required"
+  },
+  {
+    "file": "reference/ti/slar130a.pdf",
+    "url": "https://www.ti.com/lit/df/slar130a/slar130a.pdf",
+    "resolved_url": "https://www.ti.com/lit/df/slar130a/slar130a.pdf",
+    "accessed": "2026-10-07T16:42:47.025543+00:00",
+    "sha256": "8f8477044d5b4ebf360d4ff7ea779e69a2f8ee6736a080759480f54c7033d538",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Downloaded; revision and circuit review required"
+  }
+]
