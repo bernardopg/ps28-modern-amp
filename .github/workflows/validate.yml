@@ -15,3 +15,5 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y ngspice
       - name: Check LR4, differential LC and bounded analog study (not hardware sign-off)
         run: make simulate
+      - name: Fetch audited TI model and check OPA1656 supply-temperature cases (not hardware sign-off)
+        run: python3 scripts/simulate_opa1656.py --fetch-model

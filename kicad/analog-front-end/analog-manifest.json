@@ -1,0 +1,434 @@
+{
+  "status": "ISOLATED CAPTURE STUDY",
+  "source": "TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study",
+  "parts": [
+    {
+      "ref": "U2",
+      "lib_id": "PS28_ANALOG:OPA1656ID",
+      "value": "OPA1656ID",
+      "nets": {
+        "1": "BUFFERED",
+        "2": "BUFFERED",
+        "3": "DIVIDED",
+        "4": "GND",
+        "5": "Y1",
+        "6": "FILTERED1",
+        "7": "FILTERED1",
+        "8": "AUX_12V"
+      },
+      "units": [
+        [
+          1,
+          45.72,
+          40.64
+        ],
+        [
+          2,
+          147.32,
+          40.64
+        ],
+        [
+          3,
+          274.32,
+          40.64
+        ]
+      ],
+      "footprint": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+      "mpn": "OPA1656ID"
+    },
+    {
+      "ref": "U3",
+      "lib_id": "PS28_ANALOG:OPA1656ID",
+      "value": "OPA1656ID",
+      "nets": {
+        "1": "DIFF_POS",
+        "2": "DIFF_POS",
+        "3": "Y2",
+        "4": "GND",
+        "5": "VMID_EXTERNAL",
+        "6": "MINUS",
+        "7": "DIFF_NEG",
+        "8": "AUX_12V"
+      },
+      "units": [
+        [
+          1,
+          45.72,
+          116.84
+        ],
+        [
+          2,
+          147.32,
+          116.84
+        ],
+        [
+          3,
+          274.32,
+          111.76
+        ]
+      ],
+      "footprint": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+      "mpn": "OPA1656ID"
+    },
+    {
+      "ref": "R101",
+      "lib_id": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "MONO_BIASED",
+        "2": "DIVIDED"
+      },
+      "units": [
+        [
+          1,
+          30.48,
+          198.12
+        ]
+      ],
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "mpn": "TBD"
+    },
+    {
+      "ref": "R102",
+      "lib_id": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "DIVIDED",
+        "2": "VMID_EXTERNAL"
+      },
+      "units": [
+        [
+          1,
+          81.28,
+          198.12
+        ]
+      ],
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "mpn": "TBD"
+    },
+    {
+      "ref": "R103",
+      "lib_id": "Device:R",
+      "value": "14k",
+      "nets": {
+        "1": "BUFFERED",
+        "2": "X1"
+      },
+      "units": [
+        [
+          1,
+          132.07999999999998,
+          198.12
+        ]
+      ],
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "mpn": "TBD"
+    },
+    {
+      "ref": "R104",
+      "lib_id": "Device:R",
+      "value": "14k",
+      "nets": {
+        "1": "X1",
+        "2": "Y1"
+      },
+      "units": [
+        [
+          1,
+          182.87999999999997,
+          198.12
+        ]
+      ],
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "mpn": "TBD"
+    },
+    {
+      "ref": "R105",
+      "lib_id": "Device:R",
+      "value": "14k",
+      "nets": {
+        "1": "FILTERED1",
+        "2": "X2"
+      },
+      "units": [
+        [
+          1,
+          30.48,
+          228.6
+        ]
+      ],
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "mpn": "TBD"
+    },
+    {
+      "ref": "R106",
+      "lib_id": "Device:R",
+      "value": "14k",
+      "nets": {
+        "1": "X2",
+        "2": "Y2"
+      },
+      "units": [
+        [
+          1,
+          81.28,
+          228.6
+        ]
+      ],
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "mpn": "TBD"
+    },
+    {
+      "ref": "R107",
+      "lib_id": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "DIFF_POS",
+        "2": "MINUS"
+      },
+      "units": [
+        [
+          1,
+          132.07999999999998,
+          228.6
+        ]
+      ],
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "mpn": "TBD"
+    },
+    {
+      "ref": "R108",
+      "lib_id": "Device:R",
+      "value": "10k",
+      "nets": {
+        "1": "DIFF_NEG",
+        "2": "MINUS"
+      },
+      "units": [
+        [
+          1,
+          182.87999999999997,
+          228.6
+        ]
+      ],
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "mpn": "TBD"
+    },
+    {
+      "ref": "C101",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "nets": {
+        "1": "X1",
+        "2": "FILTERED1"
+      },
+      "units": [
+        [
+          1,
+          233.68,
+          198.12
+        ]
+      ],
+      "footprint": "",
+      "mpn": "TBD"
+    },
+    {
+      "ref": "C102",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "nets": {
+        "1": "X1",
+        "2": "FILTERED1"
+      },
+      "units": [
+        [
+          1,
+          279.4,
+          198.12
+        ]
+      ],
+      "footprint": "",
+      "mpn": "TBD"
+    },
+    {
+      "ref": "C103",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "nets": {
+        "1": "Y1",
+        "2": "VMID_EXTERNAL"
+      },
+      "units": [
+        [
+          1,
+          325.12,
+          198.12
+        ]
+      ],
+      "footprint": "",
+      "mpn": "TBD"
+    },
+    {
+      "ref": "C104",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "nets": {
+        "1": "X2",
+        "2": "DIFF_POS"
+      },
+      "units": [
+        [
+          1,
+          370.84000000000003,
+          198.12
+        ]
+      ],
+      "footprint": "",
+      "mpn": "TBD"
+    },
+    {
+      "ref": "C105",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "nets": {
+        "1": "X2",
+        "2": "DIFF_POS"
+      },
+      "units": [
+        [
+          1,
+          233.68,
+          228.6
+        ]
+      ],
+      "footprint": "",
+      "mpn": "TBD"
+    },
+    {
+      "ref": "C106",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "nets": {
+        "1": "Y2",
+        "2": "VMID_EXTERNAL"
+      },
+      "units": [
+        [
+          1,
+          279.4,
+          228.6
+        ]
+      ],
+      "footprint": "",
+      "mpn": "TBD"
+    },
+    {
+      "ref": "C107",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "nets": {
+        "1": "AUX_12V",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          325.12,
+          228.6
+        ]
+      ],
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "mpn": "TBD"
+    },
+    {
+      "ref": "C108",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "nets": {
+        "1": "AUX_12V",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          370.84000000000003,
+          228.6
+        ]
+      ],
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "mpn": "TBD"
+    },
+    {
+      "ref": "J101",
+      "lib_id": "Connector_Generic:Conn_01x03",
+      "value": "INPUT_BIASED",
+      "nets": {
+        "1": "MONO_BIASED",
+        "2": "VMID_EXTERNAL",
+        "3": "GND"
+      },
+      "units": [
+        [
+          1,
+          345.44,
+          40.64
+        ]
+      ],
+      "footprint": "",
+      "mpn": "TBD"
+    },
+    {
+      "ref": "J102",
+      "lib_id": "Connector_Generic:Conn_01x04",
+      "value": "DIFFERENTIAL_OUT",
+      "nets": {
+        "1": "DIFF_POS",
+        "2": "DIFF_NEG",
+        "3": "VMID_EXTERNAL",
+        "4": "GND"
+      },
+      "units": [
+        [
+          1,
+          345.44,
+          111.76
+        ]
+      ],
+      "footprint": "",
+      "mpn": "TBD"
+    },
+    {
+      "ref": "J103",
+      "lib_id": "Connector_Generic:Conn_01x03",
+      "value": "SUPPLY_EXTERNAL",
+      "nets": {
+        "1": "AUX_12V",
+        "2": "VMID_EXTERNAL",
+        "3": "GND"
+      },
+      "units": [
+        [
+          1,
+          345.44,
+          157.48
+        ]
+      ],
+      "footprint": "",
+      "mpn": "TBD"
+    }
+  ],
+  "hardware_validated": false,
+  "manufacturing_approved": false,
+  "integrated_with_core": false,
+  "unassigned_footprints": [
+    "C101",
+    "C102",
+    "C103",
+    "C104",
+    "C105",
+    "C106",
+    "J101",
+    "J102",
+    "J103"
+  ]
+}

@@ -1,0 +1,1 @@
+(sym_lib_table (version 7) (lib (name "PS28_ANALOG") (type "KiCad") (uri "${KIPRJMOD}/libraries/PS28_ANALOG.kicad_sym") (options "") (descr "Local flattened symbol; TI OPA1656 pinout audited; analog study")))

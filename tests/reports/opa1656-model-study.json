@@ -1,0 +1,248 @@
+{
+  "status": "OFFICIAL-MODEL STUDY PASS; NOT MEASURED HARDWARE",
+  "model_url": "https://www.ti.com/lit/zip/SBOMAW6",
+  "model_sha256": "9847ed60c62e792ee6f1c84899278a3c11ce71a6d21804bdd88f51199f1ba055",
+  "model_version": "TI Final1.3 25AUG2022 / SBOMAW6C",
+  "model_pin_order": [
+    "IN+",
+    "IN-",
+    "VCC",
+    "VEE",
+    "OUT"
+  ],
+  "audit_directives": [
+    ".ENDS",
+    ".MODEL",
+    ".SUBCKT"
+  ],
+  "compatibility": "ngspice psa, local SPICE_USERINIT_DIR only",
+  "config_sha256": "37182b8da7a97924d03e5e0c9f4db24769c8983dfd63f796ae0bed5bc9f5c0f5",
+  "cases": [
+    {
+      "supply_v": 10.8,
+      "temperature_c": 0,
+      "ac_points": 151,
+      "max_ac_difference_from_ideal_db": 0.0003844634298079785,
+      "convergence_warnings": [
+        "Warning: Dynamic gmin stepping failed",
+        "Warning: True gmin stepping failed"
+      ],
+      "differential_rms_v": 1.9923785997424048,
+      "differential_dc_v": -8.572548918174494e-05,
+      "buffer_positive_negative_peak_relative_to_vmid_v": [
+        1.4142802600000004,
+        1.4090136700000002,
+        1.40888304
+      ],
+      "common_mode_input_upper_limit_v": 8.55,
+      "worst_signal_max_v": 6.81414916,
+      "window_s": [
+        0.250009786,
+        0.35
+      ],
+      "steady_samples": 10022
+    },
+    {
+      "supply_v": 10.8,
+      "temperature_c": 27,
+      "ac_points": 151,
+      "max_ac_difference_from_ideal_db": 0.0003844634298079785,
+      "convergence_warnings": [
+        "Warning: Dynamic gmin stepping failed",
+        "Warning: True gmin stepping failed"
+      ],
+      "differential_rms_v": 1.9923780999405478,
+      "differential_dc_v": -6.012342639969549e-05,
+      "buffer_positive_negative_peak_relative_to_vmid_v": [
+        1.4142721800000002,
+        1.4089894900000002,
+        1.4088750599999997
+      ],
+      "common_mode_input_upper_limit_v": 8.55,
+      "worst_signal_max_v": 6.81415727,
+      "window_s": [
+        0.250009418,
+        0.35
+      ],
+      "steady_samples": 10018
+    },
+    {
+      "supply_v": 10.8,
+      "temperature_c": 70,
+      "ac_points": 151,
+      "max_ac_difference_from_ideal_db": 0.0003844634298079785,
+      "convergence_warnings": [
+        "Warning: Dynamic gmin stepping failed",
+        "Warning: True gmin stepping failed"
+      ],
+      "differential_rms_v": 1.9923756646629625,
+      "differential_dc_v": -4.157240723535476e-05,
+      "buffer_positive_negative_peak_relative_to_vmid_v": [
+        1.4142592700000005,
+        1.4089507600000002,
+        1.4088621299999993
+      ],
+      "common_mode_input_upper_limit_v": 8.55,
+      "worst_signal_max_v": 6.8141701,
+      "window_s": [
+        0.250007632,
+        0.35
+      ],
+      "steady_samples": 10018
+    },
+    {
+      "supply_v": 12,
+      "temperature_c": 0,
+      "ac_points": 151,
+      "max_ac_difference_from_ideal_db": 0.0003844634298079785,
+      "convergence_warnings": [
+        "Warning: Dynamic gmin stepping failed",
+        "Warning: True gmin stepping failed",
+        "Warning: source stepping failed"
+      ],
+      "differential_rms_v": 1.9923713654425452,
+      "differential_dc_v": -0.00041603886685023854,
+      "buffer_positive_negative_peak_relative_to_vmid_v": [
+        1.41433944,
+        1.4091913500000004,
+        1.4089423300000004
+      ],
+      "common_mode_input_upper_limit_v": 9.75,
+      "worst_signal_max_v": 7.41408994,
+      "window_s": [
+        0.25000476,
+        0.35
+      ],
+      "steady_samples": 10544
+    },
+    {
+      "supply_v": 12,
+      "temperature_c": 27,
+      "ac_points": 151,
+      "max_ac_difference_from_ideal_db": 0.0003844634298079785,
+      "convergence_warnings": [
+        "Warning: Dynamic gmin stepping failed",
+        "Warning: True gmin stepping failed",
+        "Warning: source stepping failed"
+      ],
+      "differential_rms_v": 1.992377350250589,
+      "differential_dc_v": -0.00030200224337645435,
+      "buffer_positive_negative_peak_relative_to_vmid_v": [
+        1.4143313800000001,
+        1.40916685,
+        1.4089340300000002
+      ],
+      "common_mode_input_upper_limit_v": 9.75,
+      "worst_signal_max_v": 7.41409792,
+      "window_s": [
+        0.250009172,
+        0.35
+      ],
+      "steady_samples": 10596
+    },
+    {
+      "supply_v": 12,
+      "temperature_c": 70,
+      "ac_points": 151,
+      "max_ac_difference_from_ideal_db": 0.0003844634298079785,
+      "convergence_warnings": [
+        "Warning: Dynamic gmin stepping failed",
+        "Warning: True gmin stepping failed",
+        "Warning: source stepping failed"
+      ],
+      "differential_rms_v": 1.9923754559578541,
+      "differential_dc_v": -0.00027633481859083947,
+      "buffer_positive_negative_peak_relative_to_vmid_v": [
+        1.4143185000000003,
+        1.4091283800000003,
+        1.40892136
+      ],
+      "common_mode_input_upper_limit_v": 9.75,
+      "worst_signal_max_v": 7.41411092,
+      "window_s": [
+        0.250007769,
+        0.35
+      ],
+      "steady_samples": 10622
+    },
+    {
+      "supply_v": 13.2,
+      "temperature_c": 0,
+      "ac_points": 151,
+      "max_ac_difference_from_ideal_db": 0.0003844634298079785,
+      "convergence_warnings": [
+        "Warning: Dynamic gmin stepping failed",
+        "Warning: True gmin stepping failed",
+        "Warning: source stepping failed"
+      ],
+      "differential_rms_v": 1.9923766145659876,
+      "differential_dc_v": -0.0005801728240357591,
+      "buffer_positive_negative_peak_relative_to_vmid_v": [
+        1.4143987299999994,
+        1.40936899,
+        1.40900158
+      ],
+      "common_mode_input_upper_limit_v": 10.95,
+      "worst_signal_max_v": 8.0140307,
+      "window_s": [
+        0.250008715,
+        0.35
+      ],
+      "steady_samples": 10811
+    },
+    {
+      "supply_v": 13.2,
+      "temperature_c": 27,
+      "ac_points": 151,
+      "max_ac_difference_from_ideal_db": 0.0003844634298079785,
+      "convergence_warnings": [
+        "Warning: Dynamic gmin stepping failed",
+        "Warning: True gmin stepping failed",
+        "Warning: source stepping failed"
+      ],
+      "differential_rms_v": 1.992366179056814,
+      "differential_dc_v": -0.0006888753650705139,
+      "buffer_positive_negative_peak_relative_to_vmid_v": [
+        1.4143900699999996,
+        1.4093431299999999,
+        1.4089929600000008
+      ],
+      "common_mode_input_upper_limit_v": 10.95,
+      "worst_signal_max_v": 8.01403927,
+      "window_s": [
+        0.250000969,
+        0.35
+      ],
+      "steady_samples": 10723
+    },
+    {
+      "supply_v": 13.2,
+      "temperature_c": 70,
+      "ac_points": 151,
+      "max_ac_difference_from_ideal_db": 0.0003844634298079785,
+      "convergence_warnings": [
+        "Warning: Dynamic gmin stepping failed",
+        "Warning: True gmin stepping failed",
+        "Warning: source stepping failed"
+      ],
+      "differential_rms_v": 1.9923722732985483,
+      "differential_dc_v": -0.0005548493424941634,
+      "buffer_positive_negative_peak_relative_to_vmid_v": [
+        1.41437757,
+        1.4093058199999993,
+        1.4089804099999998
+      ],
+      "common_mode_input_upper_limit_v": 10.95,
+      "worst_signal_max_v": 8.01405173,
+      "window_s": [
+        0.250005544,
+        0.35
+      ],
+      "steady_samples": 10764
+    }
+  ],
+  "VMID_physical_startup_noise_protection_qualified": false,
+  "manufacturer_model_does_not_guarantee_production_extremes": true,
+  "hardware_validated": false,
+  "manufacturing_approved": false
+}

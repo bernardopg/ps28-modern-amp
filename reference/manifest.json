@@ -116,5 +116,23 @@
     "sha256": "1cd93742f903265ed3937e9b99d718633b03adfdde0b3f993ff09a318105a5b1",
     "license": "Third-party copyright; local engineering reference only",
     "review_status": "fig.5/eq.9 p.4 and unity-gain ratio case p.5 reviewed; C1=ground and C2=feedback"
+  },
+  {
+    "file": "reference/ti/opa1656.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/opa1656.pdf",
+    "accessed": "2026-10-08",
+    "document": "SBOS901C March 2019 revised September 2022",
+    "sha256": "4243b58e553e6f27274858637c596596dbb89bba94d05b44fedd32877d988e9d",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "fig.5-3 p.3 SOIC8 pinout, p.4 supplies, p.6 CM conditions and p.7 current reviewed; prototype candidate only, not bench/DFM qualification"
+  },
+  {
+    "file": "build/analog/parts/OPA1656.LIB",
+    "url": "https://www.ti.com/lit/zip/SBOMAW6",
+    "accessed": "2026-10-08",
+    "document": "SBOMAW6C PSpice / TI Final1.3 25AUG2022; internal datasheet reference SBOS901B",
+    "sha256": "9847ed60c62e792ee6f1c84899278a3c11ce71a6d21804bdd88f51199f1ba055",
+    "license": "TI copyrighted AS IS customer-aid model; local-only download, not redistributed",
+    "review_status": "Entire ASCII model audited: only SUBCKT/MODEL/ENDS directives; 5-pin order checked. ngspice PSA isolated config,9 supply-temperature cases passed, convergence fallbacks disclosed; no guarantee of production extremes"
   }
 ]

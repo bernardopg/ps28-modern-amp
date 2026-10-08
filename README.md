@@ -40,6 +40,10 @@ Stackup, roteamento e fabricação não aprovados.
 151 pontos de magnitude/fase,16.384 combinações extremas e2048 amostras.
 O NE5532 em12V e VMID ainda não estão qualificados; não é implementação integrada.
 
+[Captura analógica KiCad e OPA1656 candidato](docs/analog-capture.md):21 componentes,
+58 pinos/14R-C conferidos, ERC0 e modelo oficial em9 casos de rail/temperatura.
+Fonte/VMID/supervisor externos e9 footprints pendentes; não é placa operacional.
+
 ## Renders 3D do próprio KiCad
 
 **Estudo não roteado; modelos 3D incompletos; não aprovado para fabricação.**

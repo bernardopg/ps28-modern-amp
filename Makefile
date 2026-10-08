@@ -1,4 +1,4 @@
-.PHONY: check core-check doctor simulate eda-smoke erc drc fetch-reference
+.PHONY: check core-check analog-check doctor simulate simulate-opa eda-smoke erc drc fetch-reference
 
 check:
 	python3 scripts/validate.py
@@ -6,6 +6,12 @@ check:
 
 core-check:
 	python3 scripts/check_core.py
+
+analog-check:
+	python3 scripts/check_analog_capture.py
+
+simulate-opa:
+	python3 scripts/simulate_opa1656.py
 
 doctor:
 	python3 scripts/doctor.py

@@ -45,4 +45,13 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   Fontes TI SLOA024B p.4–5 e SLOS075K p.3–4; riscos: clipping/bias/partida, ruído
   e tolerâncias. Não altera PCB, gates ou topologia de potência. ELEC-002 continua
   bloqueada; ver `analog-lr4-study.md` e relatório de simulação,2026-10-08.
+- D-016 — OPA1656ID candidato para captura analógica isolada, em vez de presumir
+  NE5532 qualificado a12V. TI SBOS901C fig.5-3 p.3/p.4–7 e modelo SBOMAW6C
+  Final1.3 auditados;9 casos de rail/temperatura passaram no modelo oficial.
+  U2/U3 duals, 21 componentes/58 pinos; ERC0,14 R/C comparados com SPICE.
+  Mantém fonte12V/front-end sem MCU; não acrescenta placa física à arquitetura.
+  Símbolo local e SOIC8 candidatos;9 footprints e MPNs passivos ainda TBD.
+  VMID/fonte/supervisor/ruído/startup/fábrica não qualificados. Objetivo: sair de
+  VCVS genérica para candidato real; risco: simulação não garantir extremos reais.
+  Evidência `analog-capture.md`,2026-10-08; ELEC-002/003 não concluídas.
 Não confundir decisão de arquitetura com liberação de fabricação/energização.

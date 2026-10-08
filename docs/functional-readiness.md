@@ -27,7 +27,9 @@ O checker é revisão automatizada, não substitui revisão elétrica independen
   Soma L/R, LINE/LFE, volume, fase, VMID, diferencial e LR4 físico não existem
   nesta candidata. O modelo LR4 ideal não valida op-amps, estabilidade ou headroom.
   [Incremento LR4 com R/C explícitos](analog-lr4-study.md) está simulado como estudo,
-  mas NE5532/VMID reais e captura/integração continuam não qualificados.
+  mas VMID/integração continuam não qualificados. D-016 acrescenta
+  [captura isolada e modelo oficial OPA1656](analog-capture.md):21 partes/58 pinos,
+  ERC0, nove casos de modelo. Não é o somador/LINE/LFE/volume completo nem PCB.
 - **Bloqueador — woofer:** ainda não há limitador, high-pass qualificado nem
   proteção DC diferencial. Proteções internas do CI não garantem proteção de
   cone/bobina. Projetar detecção após LC entre SPK+ e SPK−, rejeitando PWM sem

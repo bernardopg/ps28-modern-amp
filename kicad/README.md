@@ -6,6 +6,12 @@ conferidos. Seleção/placement/revisão em ../docs/selected-core.md; sem roteam
 fit medido ou fabricação. Make erc/drc/core-check usam esta revisão.
 A revisão abaixo é histórica; não sobrescrevê-la a partir de buffers GUI antigos.
 
+## Captura analógica isolada D-016
+`analog-front-end/analog-front-end.kicad_pro`: 21 componentes/58 pinos, dois
+OPA1656ID candidatos/quatro amplificadores; ERC0 e14R/C comparados com SPICE.
+Sem PCB/fonte/VMID/supervisor completos; não acrescenta placa física à arquitetura.
+Ver [captura e modelo oficial](../docs/analog-capture.md);9 footprints pendentes.
+
 ## Primeiro draft A (preservado)
 Abrir `ps28-modern.kicad_pro`. Captura com 47 componentes e PCB com 35 footprints
 em placement, ainda sem roteamento. Quatro camadas e contorno 145 × 95 mm provisórios.

@@ -1,0 +1,31 @@
+{
+  "components": 21,
+  "native_pins_checked": 58,
+  "passives_matched_to_spice": 14,
+  "opamp_packages": 2,
+  "opamp_units": 4,
+  "opamp_power_pins_checked": 4,
+  "unassigned_footprints": [
+    "C101",
+    "C102",
+    "C103",
+    "C104",
+    "C105",
+    "C106",
+    "J101",
+    "J102",
+    "J103"
+  ],
+  "hardware_validated": false,
+  "manufacturing_approved": false,
+  "native_erc_violations": 0,
+  "status": "CAPTURE CONSISTENCY PASS; NO PCB/VMID/FULL FRONT-END",
+  "schematic_sha256": "8fc865ccb44407168007ed1fc46438e6b5fb220f6c73d196bad79c022c168819",
+  "native_xml_sha256": "0a83da9cb29b72c26c6bcdd59952fa797470929ce74ac1399396c07e713a3730",
+  "native_exports": [
+    "docs/images/analog-front-end/analog-front-end.pdf",
+    "docs/images/analog-front-end/analog-front-end.svg"
+  ],
+  "physical_vmid_source_and_full_front_end_captured": false,
+  "native_xml_header_normalized": "Only absolute source path made project-relative; component/net/pin data unchanged"
+}

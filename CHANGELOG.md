@@ -5,6 +5,12 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 ## [Unreleased]
 
 ### Added
+- Captura analógica KiCad isolada de21 componentes/58 pinos, candidato OPA1656ID,
+  símbolo local auditado, ERC0 e14R/C comparados com netlist SPICE independente.
+- Modelo TI SBOMAW6C/Final1.3 auditado sem redistribuir/vendor scripts;9 casos de
+  supplies/temperatura no ngspice PSA local, com warnings/fallbacks explícitos.
+- Exportações nativas PDF/SVG, fixtures/hashes e regressões;9 footprints, VMID e
+  front-end completo permanecem pendentes; nenhuma PCB/mount/gate alterados.
 - Contrato preparatório do supervisor contra TI: assinatura normal de FAULT baixo
   na partida, RESET baixo apaga FAULT, rearme≥4ms e latch sem oscilação automática;
   temporizações/circuito ainda TBD, sem MCU ou mudança no core.

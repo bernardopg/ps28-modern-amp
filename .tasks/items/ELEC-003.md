@@ -27,6 +27,12 @@ RESET baixo apaga FAULT; startup normalmente leva FAULT baixo. Proibido AND
 combinacional ingênuo; memória de falha e intervalo mínimo de4ms exigidos.
 Não é implementação nem teste de bancada; critérios acima continuam pendentes.
 
+D-016: captura analógica ISOLADA em `kicad/analog-front-end`,21 componentes,
+58 pinos, quatro unidades em dois OPA1656ID. ERC nativo0 sem exclusões,14R/C
+comparados pin-a-pin/valor com SPICE e pinout SOIC8 contra TI. Fonte/VMID/supervisor
+externos; RCA/LFE/volume/fase/proteção ainda não capturados,9 footprints pendentes.
+Esquema INTEGRADO continua pendente. Ver `docs/analog-capture.md` e relatório.
+
 ## Risco / aprovação
 
 Alterações de hardware exigem fonte primária e gate humano; sem pedidos automáticos.

@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>kicad/analog-front-end/analog-front-end.kicad_sch</source>
+    <date>2026-10-08T01:13:29</date>
+    <tool>Eeschema 10.0.7</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>PS28 ANALOG CAPTURE STUDY - NO POWER/VMID/SUPERVISOR</title>
+        <company/>
+        <rev>A-analog-study</rev>
+        <date/>
+        <source>analog-front-end.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C101">
+      <value>100n</value>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study"/>
+      <property name="Sheetname" value="analog-front-end"/>
+      <property name="Sheetfile" value="analog-front-end.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>12a8a97c-8ad5-5642-aba2-55c5300e08e4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C102">
+      <value>100n</value>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study"/>
+      <property name="Sheetname" value="analog-front-end"/>
+      <property name="Sheetfile" value="analog-front-end.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b5b5c4ae-ea55-5cf3-adbd-ff13c1ae477c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C103">
+      <value>100n</value>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study"/>
+      <property name="Sheetname" value="analog-front-end"/>
+      <property name="Sheetfile" value="analog-front-end.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fc2ce3ce-aeb6-55b6-821b-fc3dbb1b18a8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C104">
+      <value>100n</value>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study"/>
+      <property name="Sheetname" value="analog-front-end"/>
+      <property name="Sheetfile" value="analog-front-end.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5c405d62-4581-5bb0-9cd4-ca80464bb725</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C105">
+      <value>100n</value>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study"/>
+      <property name="Sheetname" value="analog-front-end"/>
+      <property name="Sheetfile" value="analog-front-end.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2c202ac5-5667-5a7b-b098-b8bbefbb3891</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C106">
+      <value>100n</value>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study"/>
+      <property name="Sheetname" value="analog-front-end"/>
+      <property name="Sheetfile" value="analog-front-end.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fd0ebfbb-f2e1-58dd-a173-2f30f511c34a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C107">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study"/>
+      <property name="Sheetname" value="analog-front-end"/>
+      <property name="Sheetfile" value="analog-front-end.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d2cfe67d-a614-5dae-befe-5473681e038e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C108">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study"/>
+      <property name="Sheetname" value="analog-front-end"/>
+      <property name="Sheetfile" value="analog-front-end.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>425589bd-caf6-56b3-99ef-545cd948f8e9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J101">
+      <value>INPUT_BIASED</value>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study"/>
+      <property name="Sheetname" value="analog-front-end"/>
+      <property name="Sheetfile" value="analog-front-end.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8ffde66a-94d8-56e1-b9b5-dcdfc2acee3c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J102">
+      <value>DIFFERENTIAL_OUT</value>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study"/>
+      <property name="Sheetname" value="analog-front-end"/>
+      <property name="Sheetfile" value="analog-front-end.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>be6c0a36-162f-5362-9658-0e48410eb446</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J103">
+      <value>SUPPLY_EXTERNAL</value>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study"/>
+      <property name="Sheetname" value="analog-front-end"/>
+      <property name="Sheetfile" value="analog-front-end.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0585387c-c388-57e0-972f-1e47bc97788e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R101">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study"/>
+      <property name="Sheetname" value="analog-front-end"/>
+      <property name="Sheetfile" value="analog-front-end.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>92f7fa74-0e57-57ea-ad94-72b78219592a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R102">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study"/>
+      <property name="Sheetname" value="analog-front-end"/>
+      <property name="Sheetfile" value="analog-front-end.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8c9ec329-ea79-537c-b19e-7d3908799429</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R103">
+      <value>14k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study"/>
+      <property name="Sheetname" value="analog-front-end"/>
+      <property name="Sheetfile" value="analog-front-end.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>da0929c6-69d9-5d62-bc76-7b1bc4fc2a43</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R104">
+      <value>14k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study"/>
+      <property name="Sheetname" value="analog-front-end"/>
+      <property name="Sheetfile" value="analog-front-end.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0a47b96b-4bf3-5ce2-8007-754060aeae7c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R105">
+      <value>14k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study"/>
+      <property name="Sheetname" value="analog-front-end"/>
+      <property name="Sheetfile" value="analog-front-end.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6be87146-6837-5c6f-8013-8d8e15a93ba7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R106">
+      <value>14k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study"/>
+      <property name="Sheetname" value="analog-front-end"/>
+      <property name="Sheetfile" value="analog-front-end.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>61d5a6cf-a8bb-54de-8948-f59532a032bf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R107">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study"/>
+      <property name="Sheetname" value="analog-front-end"/>
+      <property name="Sheetfile" value="analog-front-end.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f9042dc5-7331-599c-a31e-7dc5b4cc57fd</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R108">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study"/>
+      <property name="Sheetname" value="analog-front-end"/>
+      <property name="Sheetfile" value="analog-front-end.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>11b76834-7a0e-54df-bd79-d848835792d8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>OPA1656ID</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <fields>
+        <field name="MPN">OPA1656ID</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="PS28_ANALOG" part="OPA1656ID" description="OPA1656 dual audio amplifier; TI SBOS901C reviewed pinout; study"/>
+      <property name="MPN" value="OPA1656ID"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study"/>
+      <property name="Sheetname" value="analog-front-end"/>
+      <property name="Sheetfile" value="analog-front-end.kicad_sch"/>
+      <property name="ki_keywords" value="dual opamp"/>
+      <property name="ki_fp_filters" value="SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4906e077-a09a-59b9-95f1-feccf50be598 51086ea3-7fef-5b73-a4a9-157481f1ce06 1f3d7f1f-7f53-54c2-9f1e-5b50e755a704</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="8"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U3">
+      <value>OPA1656ID</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <fields>
+        <field name="MPN">OPA1656ID</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="PS28_ANALOG" part="OPA1656ID" description="OPA1656 dual audio amplifier; TI SBOS901C reviewed pinout; study"/>
+      <property name="MPN" value="OPA1656ID"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="TI SBOS901C fig.5-3 p.3; SLOA024B fig.5/eq.9 p.4; D-015/D-016 study"/>
+      <property name="Sheetname" value="analog-front-end"/>
+      <property name="Sheetfile" value="analog-front-end.kicad_sch"/>
+      <property name="ki_keywords" value="dual opamp"/>
+      <property name="ki_fp_filters" value="SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c60d82fd-b776-52fb-ae0f-6e2e38c7076f c50a1d54-4376-50a2-a147-9373652ddfbe 10836bc6-3363-5908-88bb-f5a1fd153f0a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="8"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_01x03">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="PS28_ANALOG" part="OPA1656ID">
+      <description>OPA1656 dual audio amplifier; TI SBOS901C reviewed pinout; study</description>
+      <docs>https://www.ti.com/lit/ds/symlink/opa1656.pdf</docs>
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>TO*99*</fp>
+        <fp>OnSemi*Micro8*</fp>
+        <fp>TSSOP*3x3mm*P0.65mm*</fp>
+        <fp>TSSOP*4.4x3mm*P0.65mm*</fp>
+        <fp>MSOP*3x3mm*P0.65mm*</fp>
+        <fp>SSOP*3.9x4.9mm*P0.635mm*</fp>
+        <fp>LFCSP*2x2mm*P0.5mm*</fp>
+        <fp>*SIP*</fp>
+        <fp>SOIC*5.3x6.2mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">OPA1656ID</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/opa1656.pdf</field>
+        <field name="Description">OPA1656 dual audio amplifier; TI SBOS901C reviewed pinout; study</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="output"/>
+        <pin num="2" name="-" type="input"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="V-" type="power_in"/>
+        <pin num="5" name="+" type="input"/>
+        <pin num="6" name="-" type="input"/>
+        <pin num="7" name="" type="output"/>
+        <pin num="8" name="V+" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>${KICAD10_SYMBOL_DIR}/Device.kicad_sym</uri>
+    </library>
+    <library logical="PS28_ANALOG">
+      <uri>${KIPRJMOD}/libraries/PS28_ANALOG.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/AUX_12V" class="Default">
+      <node ref="C107" pin="1" pintype="passive"/>
+      <node ref="C108" pin="1" pintype="passive"/>
+      <node ref="J103" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="U2" pin="8" pinfunction="V+_8" pintype="power_in"/>
+      <node ref="U3" pin="8" pinfunction="V+_8" pintype="power_in"/>
+    </net>
+    <net code="2" name="/BUFFERED" class="Default">
+      <node ref="R103" pin="1" pintype="passive"/>
+      <node ref="U2" pin="1" pintype="output"/>
+      <node ref="U2" pin="2" pinfunction="-_2" pintype="input"/>
+    </net>
+    <net code="3" name="/DIFF_NEG" class="Default">
+      <node ref="J102" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R108" pin="1" pintype="passive"/>
+      <node ref="U3" pin="7" pintype="output"/>
+    </net>
+    <net code="4" name="/DIFF_POS" class="Default">
+      <node ref="C104" pin="2" pintype="passive"/>
+      <node ref="C105" pin="2" pintype="passive"/>
+      <node ref="J102" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R107" pin="1" pintype="passive"/>
+      <node ref="U3" pin="1" pintype="output"/>
+      <node ref="U3" pin="2" pinfunction="-_2" pintype="input"/>
+    </net>
+    <net code="5" name="/DIVIDED" class="Default">
+      <node ref="R101" pin="2" pintype="passive"/>
+      <node ref="R102" pin="1" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="+_3" pintype="input"/>
+    </net>
+    <net code="6" name="/FILTERED1" class="Default">
+      <node ref="C101" pin="2" pintype="passive"/>
+      <node ref="C102" pin="2" pintype="passive"/>
+      <node ref="R105" pin="1" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="-_6" pintype="input"/>
+      <node ref="U2" pin="7" pintype="output"/>
+    </net>
+    <net code="7" name="/GND" class="Default">
+      <node ref="C107" pin="2" pintype="passive"/>
+      <node ref="C108" pin="2" pintype="passive"/>
+      <node ref="J101" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="J102" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="J103" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="U2" pin="4" pinfunction="V-_4" pintype="power_in"/>
+      <node ref="U3" pin="4" pinfunction="V-_4" pintype="power_in"/>
+    </net>
+    <net code="8" name="/MINUS" class="Default">
+      <node ref="R107" pin="2" pintype="passive"/>
+      <node ref="R108" pin="2" pintype="passive"/>
+      <node ref="U3" pin="6" pinfunction="-_6" pintype="input"/>
+    </net>
+    <net code="9" name="/MONO_BIASED" class="Default">
+      <node ref="J101" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R101" pin="1" pintype="passive"/>
+    </net>
+    <net code="10" name="/VMID_EXTERNAL" class="Default">
+      <node ref="C103" pin="2" pintype="passive"/>
+      <node ref="C106" pin="2" pintype="passive"/>
+      <node ref="J101" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J102" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="J103" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R102" pin="2" pintype="passive"/>
+      <node ref="U3" pin="5" pinfunction="+_5" pintype="input"/>
+    </net>
+    <net code="11" name="/X1" class="Default">
+      <node ref="C101" pin="1" pintype="passive"/>
+      <node ref="C102" pin="1" pintype="passive"/>
+      <node ref="R103" pin="2" pintype="passive"/>
+      <node ref="R104" pin="1" pintype="passive"/>
+    </net>
+    <net code="12" name="/X2" class="Default">
+      <node ref="C104" pin="1" pintype="passive"/>
+      <node ref="C105" pin="1" pintype="passive"/>
+      <node ref="R105" pin="2" pintype="passive"/>
+      <node ref="R106" pin="1" pintype="passive"/>
+    </net>
+    <net code="13" name="/Y1" class="Default">
+      <node ref="C103" pin="1" pintype="passive"/>
+      <node ref="R104" pin="2" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="+_5" pintype="input"/>
+    </net>
+    <net code="14" name="/Y2" class="Default">
+      <node ref="C106" pin="1" pintype="passive"/>
+      <node ref="R106" pin="2" pintype="passive"/>
+      <node ref="U3" pin="3" pinfunction="+_3" pintype="input"/>
+    </net>
+  </nets>
+</export>
