@@ -4,6 +4,7 @@ This is a graph consistency check, not electrical/thermal/manufacturing approval
 """
 
 from pathlib import Path
+import argparse
 import json
 
 from create_core_draft import parse, library_pins, walk
@@ -28,9 +29,9 @@ def design_dir(root=ROOT):
     return selected if (selected / "core-manifest.json").exists() else root / "kicad"
 
 
-def check(root=ROOT):
+def check(root=ROOT, directory=None):
     errors = []
-    directory = design_dir(root)
+    directory = Path(directory) if directory is not None else design_dir(root)
     manifest = json.loads((directory / "core-manifest.json").read_text())
     schematic = parse((directory / "ps28-modern.kicad_sch").read_text())
     board = parse((directory / "ps28-modern.kicad_pcb").read_text())
@@ -184,7 +185,10 @@ def check(root=ROOT):
 
 
 if __name__ == "__main__":
-    failures, report = check()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--design-dir', type=Path, help='Explicit study directory; default remains core-selected')
+    args = parser.parse_args()
+    failures, report = check(directory=args.design_dir)
     print(json.dumps(report, indent=2))
     for error in failures:
         print("ERROR:", error)

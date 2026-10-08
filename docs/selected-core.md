@@ -58,7 +58,12 @@ Com36V, fPWM mínimo430kHz e Lmín8,5µH, ripple triangular máximo aproximado
 36/(4×430k×8,5µ)=2,462App; pico estimado9,892A. Margem perante22A típico não
 substitui curva a quente/garantias nem análise de curto/OCP. DCR a20°C dá aproximadamente
 0,329W por indutor para a fundamental, excluindo core loss/AC/resistência a quente.
-LC nominal10µH/940nF por lado: frequência natural≈1642Hz; não é crossover LR4.
+LC nominal10µH/940nF por lado: frequência natural≈51,9 kHz; não é crossover LR4.
+**Correção dimensional:** o valor anterior1642Hz estava errado. fn=1/(2π√(LC)).
+No modelo diferencial balanceado, Ldiff=20µH e Cdiff=470nF; mesma fn e
+Q≈0,613 para carga resistiva4Ω, ignorando DCR. `simulation/output-lc-ideal.cir`
+confere a resposta linear com DCR20°C; não modela comutação, perdas de núcleo,
+impedância do woofer ou estabilidade física do TPA3255.
 150W é envelope de dimensionamento, NÃO potência aprovada para woofer/fonte.
 Bulk novo armazena aproximadamente1,94J a36V; limites de descarga/inrush permanecem.
 

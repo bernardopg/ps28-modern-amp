@@ -13,6 +13,40 @@ def lr4_magnitude(frequency, cutoff=80):
     return 1 / (1 + (frequency / cutoff) ** 4)
 
 
+def output_lc_magnitude(frequency, inductance=10e-6, capacitance=940e-9,
+                        load=4.0, winding_dcr=8.76e-3):
+    """Balanced differential linear model: series 2L/2DCR, equivalent C/2."""
+    s = complex(0, 2 * math.pi * frequency)
+    ld, cd, rd = 2 * inductance, capacitance / 2, 2 * winding_dcr
+    return abs(1 / (1 + rd / load + s * (ld / load + rd * cd) + s * s * ld * cd))
+
+
+def verify_output_lc(build):
+    data = build / 'output-lc.dat'
+    report_path = build / 'output-lc-result.json'
+    data.unlink(missing_ok=True)
+    report_path.unlink(missing_ok=True)
+    result = subprocess.run(['ngspice', '-b', 'simulation/output-lc-ideal.cir'],
+                            cwd=ROOT, capture_output=True, text=True, timeout=60)
+    (build / 'output-lc.log').write_text(result.stdout + result.stderr)
+    if result.returncode or not data.exists():
+        raise RuntimeError('LC ngspice failed; see build/output-lc.log')
+    rows = [list(map(float, line.split()[:2])) for line in data.read_text().splitlines() if line.strip()]
+    if len(rows) < 100 or not math.isclose(rows[0][0], 10) or not math.isclose(rows[-1][0], 1e6):
+        raise ValueError('Incomplete LC sweep')
+    for frequency, magnitude in rows:
+        if not math.isclose(magnitude, output_lc_magnitude(frequency), rel_tol=1e-5):
+            raise ValueError(f'LC model disagreement at {frequency} Hz')
+    report = {'model': 'Balanced differential passive LC, linear 4 ohm load, 20 C DCR',
+              'natural_frequency_hz': 1 / (2 * math.pi * math.sqrt(10e-6 * 940e-9)),
+              'q_without_dcr': (4 / 2) * math.sqrt(940e-9 / 10e-6),
+              'sweep_points_checked': len(rows),
+              'includes_switching_core_loss_woofer_thermal': False,
+              'hardware_validated': False}
+    report_path.write_text(json.dumps(report, indent=2) + '\n')
+    print(f"LC differential: fn={report['natural_frequency_hz']:.1f} Hz; {len(rows)} SPICE points checked; hardware NOT validated")
+
+
 def main():
     build = ROOT / "build"
     build.mkdir(exist_ok=True)
@@ -48,6 +82,7 @@ def main():
     print(
         f"LR4 ideal: {report['gain_db']:.4f} dB @ {frequency:g} Hz; hardware NOT validated"
     )
+    verify_output_lc(build)
 
 
 if __name__ == "__main__":

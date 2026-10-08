@@ -1,0 +1,180 @@
+{
+  "status": "SCALED STUDY ONLY; NOT a drill template or manufacturing approval",
+  "source": "reference/infinity/ps28-service-manual.pdf",
+  "source_sha256": "e207d1aa85dc2df3572646905a729e18af49c8e653f3622e5bb2ea0cc4da818c",
+  "printed_pages": [
+    15,
+    16,
+    17,
+    18
+  ],
+  "raster_pdf_page": 19,
+  "raster_render": "pdftoppm -f19 -l19 -scale-to1600 -png",
+  "raster_dimensions_px": [
+    1600,
+    1131
+  ],
+  "digitization_uncertainty_px": 1.0,
+  "calibrations": [
+    {
+      "ref": "P101",
+      "manual_printed_page": 15,
+      "pitch_mm": 2.5,
+      "five_pitch_span_mm": 12.5,
+      "x_centers_px": [
+        606.5,
+        623.5,
+        639.5,
+        655.5,
+        672.0,
+        688.5
+      ],
+      "pixels_per_mm": 6.56
+    },
+    {
+      "ref": "P103",
+      "manual_printed_page": 15,
+      "pitch_mm": 3.96,
+      "outer_pin_span_mm": 7.92,
+      "x_centers_px": [
+        1107.5,
+        1133.5,
+        1159.5
+      ],
+      "pixels_per_mm": 6.565656565656566
+    }
+  ],
+  "horizontal_scale_disagreement_fraction": 0.0008619097457366982,
+  "pixels_per_mm_study": 6.562828282828283,
+  "vertical_scale": "ASSUMED isotropic; no independent vertical calibration/measurement",
+  "origin_px": [
+    254,
+    59
+  ],
+  "copper_panel_bounds_px": [
+    254,
+    59,
+    1257,
+    578
+  ],
+  "outer_graphic_frame_bounds_px": [
+    254,
+    59,
+    1343,
+    578
+  ],
+  "copper_region_mm_study": [
+    152.83,
+    79.082
+  ],
+  "outer_graphic_frame_mm_study": [
+    165.935,
+    79.082
+  ],
+  "right_blank_strip_is_actual_PCB": "UNRESOLVED: could be drawing/frame/side-view, not adopted as fabrication edge",
+  "mechanical_features": [
+    {
+      "id": "LEFT_UPPER",
+      "center_px": [
+        274,
+        119
+      ],
+      "center_mm_study": [
+        3.047,
+        9.142
+      ],
+      "classification": "rectangular copper opening; drill/slot/support identity unconfirmed",
+      "drill_shape_mm": null,
+      "reserve_radius_mm": 4.5
+    },
+    {
+      "id": "LEFT_LOWER",
+      "center_px": [
+        274,
+        390
+      ],
+      "center_mm_study": [
+        3.047,
+        50.436
+      ],
+      "classification": "rectangular opening + nearby small aperture; identity unconfirmed",
+      "drill_shape_mm": null,
+      "reserve_radius_mm": 4.5
+    },
+    {
+      "id": "RIGHT_UPPER",
+      "center_px": [
+        1227,
+        119
+      ],
+      "center_mm_study": [
+        148.259,
+        9.142
+      ],
+      "classification": "octagonal land with small aperture; mounting/ground-contact role unconfirmed",
+      "drill_shape_mm": null,
+      "reserve_radius_mm": 4.5
+    },
+    {
+      "id": "RIGHT_LOWER",
+      "center_px": [
+        1227,
+        390
+      ],
+      "center_mm_study": [
+        148.259,
+        50.436
+      ],
+      "classification": "octagonal land; drill is not unambiguously shown",
+      "drill_shape_mm": null,
+      "reserve_radius_mm": 4.5
+    },
+    {
+      "id": "THERMAL_LEFT",
+      "center_px": [
+        592,
+        157
+      ],
+      "center_mm_study": [
+        51.502,
+        14.933
+      ],
+      "classification": "large octagonal land near power-stage region; NOT assumed a screw hole",
+      "drill_shape_mm": null,
+      "reserve_radius_mm": 4.5
+    },
+    {
+      "id": "THERMAL_RIGHT",
+      "center_px": [
+        822,
+        157
+      ],
+      "center_mm_study": [
+        86.548,
+        14.933
+      ],
+      "classification": "large octagonal land near power-stage region; NOT assumed a screw hole",
+      "drill_shape_mm": null,
+      "reserve_radius_mm": 4.5
+    }
+  ],
+  "OEM_Q107_Q108_centers_mm_study": [
+    [
+      49.064,
+      32.303
+    ],
+    [
+      89.291,
+      32.303
+    ]
+  ],
+  "new_U1_center_mm_study": [
+    69,
+    32
+  ],
+  "preserve_original_mounting_points": true,
+  "allow_new_plate_holes": false,
+  "mounting_pattern_complete": false,
+  "mechanical_approved": false,
+  "manufacturing_approved": false
+}

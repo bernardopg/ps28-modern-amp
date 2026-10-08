@@ -5,6 +5,14 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 ## [Unreleased]
 
 ### Added
+- Candidata OEM refinada separada: contorno conservador153×79,1mm inferido,
+  24 reservas nas quatro camadas, sem nova furação;47 footprints/142 pads,
+  DRC0 geometria/0 paridade/109 não roteadas e ERC4 conflitos não excluídos.
+- Revisão de operacionalidade com bloqueios de fonte, controle, entrada, proteção,
+  dissipação e roteamento; nenhum gate físico aprovado.
+- Modelo LC diferencial ngspice com201 pontos conferidos analiticamente; corrigido
+  erro dimensional da frequência natural:51,9kHz, não1642Hz.
+- Geração OEM atômica, validação por diretório explícito e cinco regressões novas.
 
 - Projeto Git, containers KiCad 4 camadas vazios, CLI/CI e testes de infraestrutura.
 - AGENTS único com links CLAUDE/skills; backlog, roadmap, S01–S05 e tasks rastreáveis.

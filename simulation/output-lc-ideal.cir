@@ -1,0 +1,19 @@
+* Differential small-signal LC only; NOT a switching, thermal or woofer model.
+* TI SLASEA8A fig.31: 10uH and 2x470nF per leg, 4ohm differential load.
+* Wurth 7443631000 DCR max at 20C = 8.76mOhm per winding.
+VP inp 0 AC 0.5 0
+VN inn 0 AC 0.5 180
+RP inp lp 8.76m
+RN inn ln 8.76m
+LP lp outp 10u
+LN ln outn 10u
+CP outp 0 940n
+CN outn 0 940n
+RL outp outn 4
+.control
+ac dec 40 10 1Meg
+let gain = mag(v(outp,outn))
+wrdata build/output-lc.dat gain
+quit
+.endc
+.end
