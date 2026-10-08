@@ -128,6 +128,9 @@ make simulate-vmid-protected  # modelo TI local auditado; ngspice>=47
 make analog-protected-check  # KiCad native ERC/netlist, dois audits independentes
 make check
 ```
+Teste unitário de geração/refusal/retrocompatibilidade usa os símbolos reais
+incorporados nas capturas auditadas, sem bibliotecas globais de KiCad nem skips.
+Isso não substitui `analog-protected-check`, que executa o KiCad nativo.
 Circuitos/dados/logs em `build/analog/vmid-protection/`; modelo do fabricante
 permanece local, nunca incluído nos commits/artifacts. Imagens PDF/SVG são
 exportações nativas do KiCad em `docs/images/analog-protected/`.

@@ -87,8 +87,9 @@ class ProtectionTests(unittest.TestCase):
 
     def test_generator_atomic_refusal_and_original_unchanged(self):
         from unittest.mock import patch
-        from create_core_draft import parse
+
         from create_analog_capture import build
+        from create_core_draft import parse
 
         # Portable unit fixture: actual embedded symbols already checked by native
         # ERC. No installed/global KiCad libraries and no skipped test required.
