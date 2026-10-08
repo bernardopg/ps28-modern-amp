@@ -6,6 +6,14 @@ conforme pedido de início da PCB. Não fecha M1/G0 nem libera fabricação;
 fonte D-010, magnetics, térmica e dimensões continuam dependentes de evidências.
 
 
+## Snapshot D-018/D-019 — 2026-10-08
+[Mapa de capturas, PCBs e bloqueios](../docs/development-status.md): core B/OEM
+preservado; analógico protegido32/80/ERC0 ainda sem PCB; isolamento/pré-carga
+D-019 ainda sem implementação. Galeria 3D nativa regenerada mostra só o núcleo,
+não integração elétrica nova. Próximo risco: proteção de sinais/power-order,
+qualificação de parts/fonte e evidência mecânica antes de roteamento/freeze.
+Tasks locais seguem canônicas, WIP2 e todos os gates pendentes; S03 não ativada.
+
 ## Now — M0: fundação reproduzível
 
 S01: documentação, skills, ferramentas, GitHub e comandos verificáveis.

@@ -46,6 +46,11 @@ A captura D-018 e o núcleo NÃO foram conectados. Chaves/retorno/capacitância/
 comparadores, defaults e tempos seguem TBD; estudos RC não fecham G1 nem a
 dependência ELEC-002. Ver `docs/input-power-order-study.md`.
 
+Atualização docs/3D: `docs/development-status.md` e galeria agora explicitam que
+D-018/D-019 não estão integrados à PCB. Nenhum schematic/PCB foi alterado; 13
+footprints e pinagem/MPNs/control/proteção/supervisor finais seguem pendentes.
+Status To Do/dependência ELEC-002 preservados; não fechar G1 por imagem/ERC0.
+
 ## Risco / aprovação
 
 Alterações de hardware exigem fonte primária e gate humano; sem pedidos automáticos.

@@ -23,4 +23,14 @@ Ordem por dependência/risco; estado canônico nos arquivos de task.
 
 - [TOOL-001 — Investigar warnings KiCad](items/TOOL-001.md) (M1, backlog; avaliar antes de captura prolongada)
 
+## Prioridade técnica após D-018/D-019
+- [ELEC-002](items/ELEC-002.md)/[PWR-001](items/PWR-001.md): qualificar
+  envelope/parts D-018, proteger RCA/INPUT_A/B e demonstrar power-order/pré-carga.
+- [ELEC-003](items/ELEC-003.md): integrar mute/isolation/supervisor e funções
+  pendentes no schematic; resolver 13 footprints, sem fechar G1 por ERC0.
+- [MECH-001](items/MECH-001.md)/[PCB-003](items/PCB-003.md): cotas/contacto OEM,
+  revisão independente e posterior integração/roteamento. Galeria só do core.
+[Estado/evidências](../docs/development-status.md); esta ordem não altera status,
+dependências, WIP ou ativação de sprint, nem autoriza produção/energização.
+
 Backlog futuro não comprometido: auto-standby, EMI formal e revisão B de crossover; criar tasks apenas após priorização.

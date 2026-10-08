@@ -1,7 +1,39 @@
 {
   "renderer": "10.0.7",
-  "source_commit": "4d97b885a41ba5dc98ea31a140a5c290364adde5",
+  "source_commit": "e26f61fb90a43af1aa1d69a0a768e10b21122e12",
   "method": "kicad-cli pcb render; Pillow adds status bands and encodes GIFs only",
+  "generator_sha256": "3a714ded8d2ca4a8b33ed50e19039d57b5b7ff3129ccf611742534deab737a8a",
+  "electrical_context": {
+    "scope": "POWER_CORE_ONLY",
+    "analog_protection_integrated_in_rendered_pcbs": false,
+    "protected_analog_capture_components": 32,
+    "protected_analog_unassigned_footprints": [
+      "C101",
+      "C102",
+      "C103",
+      "C104",
+      "C105",
+      "C106",
+      "C203",
+      "J101",
+      "J102",
+      "J103",
+      "R201",
+      "R202",
+      "R203"
+    ],
+    "notes": [
+      "D-018 captured separately; no analog PCB",
+      "D-019 isolation/precharge contract not implemented",
+      "No added mounts, routing or fabricated 3D substitutes"
+    ],
+    "source_sha256": {
+      "kicad/analog-protected/analog-protected.kicad_sch": "f46adefe0383358837e4eb49a41fe21b8017f39b549f789c10675ca4ac277303",
+      "kicad/analog-protected/vmid-manifest.json": "f4ab47cd848ccf1d1e14ed1c0d52f7ccb51eb6b55bfe189640ab7730778ff119",
+      "simulation/analog/vmid-protection.json": "c44c0878556a9034e0764a2635e3768964bccd538d14dec7185f44749946e62a",
+      "simulation/analog/input-power-order.json": "9cd67b003a855e4b8f1b8e3176daf64a800a9d8a904eaf2a46301c160d4791b7"
+    }
+  },
   "hardware_validated": false,
   "manufacturing_approved": false,
   "designs": {
@@ -843,11 +875,11 @@
       "models_are_visual_not_manufacturer_qualification": true,
       "gif_size_pixels": [
         784,
-        558
+        578
       ],
       "png_size_pixels": [
         1264,
-        862
+        882
       ]
     },
     "oem": {
@@ -1688,22 +1720,22 @@
       "models_are_visual_not_manufacturer_qualification": true,
       "gif_size_pixels": [
         784,
-        558
+        578
       ],
       "png_size_pixels": [
         1264,
-        862
+        882
       ]
     }
   },
   "asset_sha256": {
-    "oem-bottom.png": "2f063ea20201ffb90409a928d40feb9c8e07a7a6bff84162fecdbd5a464aae38",
-    "oem-isometric.png": "9d35550ff08081fe943ada523e203f9e000718c8d24051e10b30556fc27889d0",
-    "oem-orbit.gif": "9f66fd6a4e1b499b22f4ae19b15ca25c1ce149d3e525a74fecaaf11d9e121b02",
-    "oem-top.png": "73b8093cdeb382d3cf106a78bf6c27db4bf236b34c904c5a155797b9d9bbd93b",
-    "selected-bottom.png": "b8698ae7544e5b962e302e25d4eff17bb5d676e799539a5a0072a1b22a9db8df",
-    "selected-isometric.png": "9feaa64acdc3b293ddcb37b6bdca571b101a61d077f2cf26cf93dcdda65f4a9f",
-    "selected-orbit.gif": "20cbf0092aa6c4a5db8ec17ecfbd114a8b774f32b7f7890ad2b0ad9805d16dd8",
-    "selected-top.png": "cc1bf5d5f4b901a7fe54cc9c54316e461b64f49224bf61e9aac80c37d51b0896"
+    "oem-bottom.png": "53b68391199486abb5e9f62e7d3113a26ccb8a24b67da638661125a14a1cc222",
+    "oem-isometric.png": "74c2abd949f27c97e62ae8576e725f4fe75b7f340efa8f9ee2edc407b027b10b",
+    "oem-orbit.gif": "513beaeded82ec95f18f879524cdb502571ca85c952422b931668ea2c94d9b20",
+    "oem-top.png": "95b6130407e72ad06e40a40fbd688222b6da51e924cac909116f13f0c116a299",
+    "selected-bottom.png": "a4c8fedfeb3a633168c47dd47b02bbb2829c9d5d65a9da18ac47891b41538894",
+    "selected-isometric.png": "d7e1965a6802ddf14908c225c00524dd936ac94493b40ced2a855536b244405e",
+    "selected-orbit.gif": "0cdd5c8d10296111bc4b4a0518ba05d9710c531eadf8c72fbaf0d6432984d973",
+    "selected-top.png": "58535d6d21bf4adbb9e7ce9ee6fb60bb35cbd152759e37a1048dc7ccfa4e1728"
   }
 }

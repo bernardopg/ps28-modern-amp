@@ -1,4 +1,4 @@
-.PHONY: check core-check analog-check doctor simulate simulate-input-order simulate-opa simulate-vmid simulate-vmid-protected analog-protected-check eda-smoke erc drc fetch-reference
+.PHONY: check core-check analog-check doctor simulate simulate-input-order simulate-opa simulate-vmid simulate-vmid-protected analog-protected-check render-3d eda-smoke erc drc fetch-reference
 
 check:
 	python3 scripts/validate.py
@@ -32,6 +32,9 @@ simulate:
 	python3 scripts/simulate.py
 	python3 scripts/simulate_analog.py
 	python3 scripts/simulate_input_power_order.py
+
+render-3d:
+	python3 scripts/render_kicad_gallery.py --frames 16
 
 eda-smoke:
 	python3 scripts/eda_smoke.py

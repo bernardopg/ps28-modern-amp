@@ -5,6 +5,15 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 ## [Unreleased]
 
 ### Added
+- Estado consolidado D-018/D-019: arquitetura, mapa das capturas/PCBs, riscos/
+pendências e tasks/sprint/roadmap sincronizados, sem mudança de status/gates.
+- `make render-3d`: galeria KiCad regenerada (6 PNGs/2 GIFs,16 câmeras/GIF),
+contexto/hash dos estudos/captura e aviso de núcleo sem integração analógica.
+Staging verifica todos os assets antes de promover manifesto; notas manuais e
+revisões preservadas, sem modificar PCB/mounts ou inventar modelos ausentes.
+- Relatório consolidado de checks/mídia/tasks,60 testes;19 tasks agora com
+espelhos GitHub únicos, incluindo PCB-003 que estava sem issue. Rechecagem
+nativa B/OEM mantém ERC4/109 não roteadas, geometria/paridade0; sem sign-off.
 - D-019: 288 hipóteses RC/196 violações e quatro comparações ngspice para
 C20/C21 e power-order TPA, mais duas redes com a alimentação D-018 intacta;
 VMID protegido não qualifica entrada TPA. Capacitor/resistor série/chave upstream e conexão

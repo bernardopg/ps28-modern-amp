@@ -5,7 +5,7 @@ status: Blocked
 milestone: M1
 sprint: S02
 depends_on: SYS-001
-updated: 2026-10-07
+updated: 2026-10-08
 ---
 
 # MECH-001 — Medir plate e modelar envelope
@@ -32,7 +32,13 @@ contém main PCB104-a05064a00-e. Referência em mechanical/original-board-refere
 Pendência para fechamento: reconstruir gabarito com escala verificada e entrecentros
 conferidos na placa original; pedir somente cotas locais não recuperáveis do documento.
 Não bloquear desenvolvimento por um levantamento novo de todo o gabinete.
-Contorno145×95, posição deU1/J6 e sapata atuais são propostas, não interfaces OEM.
+Contorno145×95 pertence ao draft/B preservado, não a uma validação de interfaces OEM.
+A candidata `core-oem-refined/` usa contorno **inferido**153×79,1mm, J6 pad de
+trança GND e seis features reservadas em quatro camadas, sem furos inventados.
+Galeria 3D nativa atualizada em `docs/images/kicad-3d/`; nenhum mount/layout alterado
+nesta atualização. U1 segue sem modelo disponível, impedindo confirmar por imagem
+altura/folga do contato PowerPAD/dissipador; fit/térmica/cotas locais continuam TBD.
+Ver `docs/development-status.md`. Status Blocked e critérios físicos preservados.
 Não usinar/perfurar/fabricar por esse modelo; todos critérios físicos continuam pendentes.
 
 ## Risco / aprovação

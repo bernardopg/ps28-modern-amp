@@ -3,7 +3,10 @@
 Estas imagens vêm de **`kicad-cli pcb render`**, não de desenho conceitual,
 renderizador CAD alternativo ou rotação artificial de uma foto. Cada GIF contém
 16 renders de câmera independentes do KiCad. Pillow somente acrescenta faixas de
-status e codifica os GIFs. Saída real: PNG1264×862; GIF784×558,
+status e codifica os GIFs. Atualização após D-018/D-019, snapshot `e26f61f`:
+**núcleo apenas, sem PCB analógica/proteção integrada**. Geometria das PCBs
+preservada; faixas e manifesto agora tornam essa separação explícita.
+Saída real: PNG1264×882; GIF784×578,
 16frames,140ms/frame, loop. O KiCad ajustou as dimensões solicitadas ao renderizar.
 
 ## OEM refinada — candidata de estudo
@@ -22,6 +25,14 @@ status e codifica os GIFs. Saída real: PNG1264×862; GIF784×558,
 
 [Vista superior](selected-top.png) · [Vista inferior](selected-bottom.png)
 
+## D-018/D-019 não aparecem como componentes nessas PCBs
+O estudo `kicad/analog-protected/` tem schematic de 32 componentes/80 pinos e
+13 footprints pendentes, **não PCB**. D-019 ainda é contrato de isolamento/
+mute/pré-carga, não circuito capturado. Nenhum preamp/supervisor/chave/roteamento
+foi acrescentado para aparentar integração. [Estado completo](../../development-status.md).
+A inscrição em todas as imagens/GIFs acompanha essas alterações documentais,
+sem inventar geometria ou alterar mounts OEM.
+
 ## Limites — não omitir ao compartilhar
 
 - As duas placas estão **sem roteamento**. Galeria não é gerber, prova de fit,
@@ -38,12 +49,21 @@ status e codifica os GIFs. Saída real: PNG1264×862; GIF784×558,
 ## Reprodução e rastreabilidade
 
 ```bash
-python3 scripts/render_kicad_gallery.py --frames 16
+make render-3d
+# equivalente: python3 scripts/render_kicad_gallery.py --frames 16
 ```
 
 Dependências locais: KiCad CLI e modelos de sua biblioteca, Python/Pillow e fonte
 DejaVuSans. Não são instaladas automaticamente. Logs e frames brutos ficam em
 `build/renders/`, fora do Git. `manifest.json` registra versão KiCad, commit-fonte,
-SHA256 das PCBs/imagens, comandos e auditoria de modelos para cada footprint.
+SHA256 das PCBs/imagens/gerador, comandos e auditoria de modelos por footprint.
+O contexto elétrico também vincula hashes da captura D-018/configs D-018/D-019,
+quantidade de componentes e footprints pendentes, sem afirmar integração física.
+O gerador prepara/verifica todos os assets em staging antes de promover os arquivos;
+manifesto por último, README/notas manuais preservados. Falha de render/hash/set
+incompleto não publica um sucesso novo. Regressões offline não exigem KiCad/Pillow.
+Evidência consolidada: `tests/reports/documentation-media-refresh.json` — 60 testes
+locais e rechecagem nativa B/OEM (ERC4,109 não roteadas; geometria/paridade0).
+Nenhuma alteração das PCBs/capturas ou aprovação de fit/roteamento.
 O commit-fonte antecede o commit da mídia: é a revisão elétrica/mecânica renderizada.
 Ver [operacionalidade](../../functional-readiness.md) para os bloqueios do produto.

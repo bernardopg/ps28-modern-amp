@@ -68,6 +68,11 @@ permanecem contrato condicional sem parts/circuito. Bias/impedância desligados
 TPA não caracterizados; nenhuma captura promovida. Ver
 `docs/input-power-order-study.md` e `tests/reports/input-power-order-study.json`.
 
+Docs/3Ds/tasks atualizados após D-019: os renders continuam somente core,
+sem integração de 32 componentes/13 footprints analógicos pendentes ou chaves/
+supervisor. `docs/development-status.md` centraliza distinções e próximos bloqueios;
+nenhum limite/modelo/caso foi relaxado, status Blocked/dependências preservados.
+
 ## Risco / aprovação
 
 Alterações de hardware exigem fonte primária e gate humano; sem pedidos automáticos.

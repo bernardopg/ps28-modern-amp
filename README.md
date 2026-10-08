@@ -20,11 +20,17 @@ medições, excursão, clipping e térmica. Não há fonte de rede na PCB nem MC
 ```bash
 make check       # documentação, tasks, skills e testes de infraestrutura
 make doctor      # auditoria local, sem instalar ou alterar o sistema
-make simulate    # LR4/LC + R/C/headroom comportamental; não valida hardware
+make simulate    # LR4/LC, R/C/headroom e contraprovas power-order; não valida hardware
+make render-3d   # galeria nativa atual; exige KiCad/Pillow/modelos locais
 make eda-smoke   # parsing de containers; registra warnings conhecidos do KiCad
 make erc         # apenas quando houver schematic não vazio
 make drc         # apenas quando houver PCB não vazia
 ```
+
+[Estado consolidado e próximos bloqueios](docs/development-status.md):
+D-018 é schematic analógico com alimentação/VMID, **sem PCB**; D-019 é contrato
+não implementado. A galeria B/OEM foi regenerada, mas a geometria não mudou e
+não representa integração do preamp/supervisor/proteção ao núcleo.
 
 Abrir **`kicad/core-selected/ps28-modern.kicad_pro`** no KiCad (revisão atual B).
 [Peças, integração ao gabinete e revisão ERC/DRC](docs/selected-core.md).
@@ -57,11 +63,13 @@ ESR/temperatura/pulso/sinais externos/supervisor/integração TPA continuam pend
 [D-019 — interface TPA e pré-carga](docs/input-power-order-study.md):
 contraprovas RC de desligamento/conexão com áudio e requisitos de isolamento
 pós-capacitor; sem circuito/MPNs aprovados. J102 continua separado do núcleo.
-`make simulate-input-order` reproduz quatro comparações SPICE, sem macro de CI.
+`make simulate-input-order` reproduz quatro comparações RC e duas redes acopladas
+D-018, sem macro OPA/TPA; não qualifica comportamento desligado dos componentes.
 
 ## Renders 3D do próprio KiCad
 
-**Estudo não roteado; modelos 3D incompletos; não aprovado para fabricação.**
+**Núcleo apenas; D-018/D-019 sem PCB integrada. Não roteado, modelos incompletos,
+sem aprovação de fabricação.**
 
 ![Candidata OEM refinada — KiCad 3D](docs/images/kicad-3d/oem-isometric.png)
 

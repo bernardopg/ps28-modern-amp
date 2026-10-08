@@ -26,6 +26,13 @@ GitHub privado: <https://github.com/bernardopg/ps28-modern-amp>.
 CI inicial aprovado: <https://github.com/bernardopg/ps28-modern-amp/actions/runs/37654550846>
 Review do proprietário ainda pendente; task permanece In Progress.
 
+Atualização de 2026-10-08: D-019 publicado em main (`e26f61f`), CI completo
+aprovado: <https://github.com/bernardopg/ps28-modern-amp/actions/runs/37784991096>.
+Docs/tasks e galeria nativa regenerada com separação explícita entre core e
+capturas/contrato analógicos ainda sem PCB. Histórico/revisões preservados;
+nenhum review humano inferido desse pedido de atualização. WIP permanece2,
+S03 planejada e gates G0–G5 pendentes. Ver `docs/development-status.md`.
+
 ## Risco / aprovação
 
 Alterações de hardware exigem fonte primária e gate humano; sem pedidos automáticos.
