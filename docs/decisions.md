@@ -38,4 +38,11 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   /escala1:1 da PCB não são declarados; reconstruir/conferir gabarito antes de fabricação.
   PCB/adaptador atuais se adaptam ao OEM, nunca o contrário; não solicitar novo
   levantamento completo do gabinete como pré-requisito para avançar.
+- D-015 — Proposta reversível de front-end LINE para estudo: duas SK de ganho
+  unitário14k/CFB200nF/CG100nF, divisor de entrada1/2 e inversor diferencial unitário.
+  Mantém LR4≈80Hz, LFE bypass e rail auxiliar12V sem MCU. Não congela NE5532,
+  MPNs ou pinagem; modelo comportamental não garante CM/swing/VMID a10,8–13,2V.
+  Fontes TI SLOA024B p.4–5 e SLOS075K p.3–4; riscos: clipping/bias/partida, ruído
+  e tolerâncias. Não altera PCB, gates ou topologia de potência. ELEC-002 continua
+  bloqueada; ver `analog-lr4-study.md` e relatório de simulação,2026-10-08.
 Não confundir decisão de arquitetura com liberação de fabricação/energização.

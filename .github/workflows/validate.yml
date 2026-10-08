@@ -13,5 +13,5 @@ jobs:
         run: make check
       - name: Install simulation engine
         run: sudo apt-get update && sudo apt-get install -y ngspice
-      - name: Check ideal LR4 only (not hardware sign-off)
+      - name: Check LR4, differential LC and bounded analog study (not hardware sign-off)
         run: make simulate

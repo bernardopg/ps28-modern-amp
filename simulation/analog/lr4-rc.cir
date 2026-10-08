@@ -1,0 +1,36 @@
+* PS28 LR4 physical R/C study. NO qualified NE5532/VMID/startup model.
+* CFB is TI SLOA024B C2; CG is TI C1, fig.5/eq.9 p.4.
+VSUP supply 0 10.8
+VMID mid 0 5.4
+VIN input mid DC 0 AC 1 SIN(0 2.82842712475 20)
+RATT input divided 10000
+RBIAS divided mid 10000
+XBUF divided buffered buffered mid supply AMP
+R11 buffered x1 14000
+R12 x1 y1 14000
+CF11 x1 filtered1 1e-07
+CF12 x1 filtered1 1e-07
+CG1 y1 mid 1e-07
+XLP1 y1 filtered1 filtered1 mid supply AMP
+R21 filtered1 x2 14000
+R22 x2 y2 14000
+CF21 x2 positive 1e-07
+CF22 x2 positive 1e-07
+CG2 y2 mid 1e-07
+XLP2 y2 positive positive mid supply AMP
+RINV positive minus 10000
+RF negative minus 10000
+XINV mid minus negative mid supply AMP
+RLOADP positive mid 10000
+RLOADN negative mid 10000
+.subckt AMP p n out mid supply
+EAMP out 0 p n 1e9
+.ends AMP
+.control
+ac dec 50 10 10k
+let gain=mag(v(positive,negative))
+let phase=57.2957795131*ph(v(positive,negative))
+wrdata build/analog/rc-ideal.dat gain phase
+quit
+.endc
+.end

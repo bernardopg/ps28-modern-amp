@@ -21,9 +21,13 @@ O checker é revisão automatizada, não substitui revisão elétrica independen
   R9 garante RESET baixo sem controle; não basta aplicar PVDD para obter áudio.
   Faltam captura e validação de partida/desligamento/brownout, remoção de RESET
   antes de rails fora de faixa e resposta a FAULT. Não derivar controle de AVDD/DVDD.
+  [Contrato preparatório](reset-supervisor-contract.md): não usar AND combinacional
+  FAULT/RESET; startup produz FAULT baixo e RESET baixo força FAULT alto (TI).
 - **Bloqueador — entrada:** J3 espera sinal diferencial adequado ao TPA3255.
   Soma L/R, LINE/LFE, volume, fase, VMID, diferencial e LR4 físico não existem
   nesta candidata. O modelo LR4 ideal não valida op-amps, estabilidade ou headroom.
+  [Incremento LR4 com R/C explícitos](analog-lr4-study.md) está simulado como estudo,
+  mas NE5532/VMID reais e captura/integração continuam não qualificados.
 - **Bloqueador — woofer:** ainda não há limitador, high-pass qualificado nem
   proteção DC diferencial. Proteções internas do CI não garantem proteção de
   cone/bobina. Projetar detecção após LC entre SPK+ e SPK−, rejeitando PWM sem

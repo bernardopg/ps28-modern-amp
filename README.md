@@ -20,7 +20,7 @@ medições, excursão, clipping e térmica. Não há fonte de rede na PCB nem MC
 ```bash
 make check       # documentação, tasks, skills e testes de infraestrutura
 make doctor      # auditoria local, sem instalar ou alterar o sistema
-make simulate    # LR4/LC ideais; não valida a implementação física
+make simulate    # LR4/LC + R/C/headroom comportamental; não valida hardware
 make eda-smoke   # parsing de containers; registra warnings conhecidos do KiCad
 make erc         # apenas quando houver schematic não vazio
 make drc         # apenas quando houver PCB não vazia
@@ -35,6 +35,10 @@ DRC: geometria/paridade sem ocorrências, 109 conexões ainda não roteadas.
 Mounting points e dissipação OEM fixos; reconstrução e conferência do gabarito
 original pendentes. Referência: mechanical/original-board-reference.md.
 Stackup, roteamento e fabricação não aprovados.
+
+[Incremento do front-end LR4](docs/analog-lr4-study.md): valores R/C explícitos,
+151 pontos de magnitude/fase,16.384 combinações extremas e2048 amostras.
+O NE5532 em12V e VMID ainda não estão qualificados; não é implementação integrada.
 
 ## Renders 3D do próprio KiCad
 

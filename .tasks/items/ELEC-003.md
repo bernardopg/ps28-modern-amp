@@ -5,7 +5,7 @@ status: To Do
 milestone: M2
 sprint: S03
 depends_on: ELEC-002
-updated: 2026-10-07
+updated: 2026-10-08
 ---
 
 # ELEC-003 — Capturar schematic e revisar ERC
@@ -21,7 +21,11 @@ Capturar schematic e revisar ERC, atendendo docs/requirements.md e gates docs/sa
 
 ## Evidência
 
-Pendente. Não marcar critérios sem evidência.
+Captura integrada pendente. Contrato preparatório do supervisor em
+`docs/reset-supervisor-contract.md`, contra TI SLASEA8A p.20–21/30–31:
+RESET baixo apaga FAULT; startup normalmente leva FAULT baixo. Proibido AND
+combinacional ingênuo; memória de falha e intervalo mínimo de4ms exigidos.
+Não é implementação nem teste de bancada; critérios acima continuam pendentes.
 
 ## Risco / aprovação
 

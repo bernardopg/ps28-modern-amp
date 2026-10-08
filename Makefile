@@ -12,6 +12,7 @@ doctor:
 
 simulate:
 	python3 scripts/simulate.py
+	python3 scripts/simulate_analog.py
 
 eda-smoke:
 	python3 scripts/eda_smoke.py

@@ -5,6 +5,14 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 ## [Unreleased]
 
 ### Added
+- Contrato preparatório do supervisor contra TI: assinatura normal de FAULT baixo
+  na partida, RESET baixo apaga FAULT, rearme≥4ms e latch sem oscilação automática;
+  temporizações/circuito ainda TBD, sem MCU ou mudança no core.
+- Estudo executável de front-end LINE LR4 com R/C explícitos, ganho unitário por
+  seção e divisor1/2→diferencial;151 pontos de magnitude/fase,16.384 corners e
+  2048 amostras. Modelo de headroom comportamental, NÃO NE5532 qualificado.
+- Fontes TI SLOA024B/SLOS075K revisadas com hashes; explicitada ausência de garantia
+  CM/swing em10,8–13,2V totais. ELEC-002 permanece bloqueada, sem alterar as PCBs.
 - Galeria versionada do renderizador3D nativo KiCad:6 PNGs e2 GIFs com16 frames
   independentes cada, faixas de estudo não roteado, auditoria de modelos ausentes
   e SHA256/commit/comandos; reprodução por `scripts/render_kicad_gallery.py`.

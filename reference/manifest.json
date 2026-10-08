@@ -98,5 +98,23 @@
     "sha256": "fcc5554836adbf921499f2969fb661b03a22e0ee37874d7db5bd5f9ccd499267",
     "license": "Third-party copyright; local engineering reference only",
     "review_status": "CAT.8100M p.1/p.6 geometry/endurance/ripple/Z reviewed; no lifecycle/stock/thermal qualification claim"
+  },
+  {
+    "file": "reference/ti/ne5532.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/ne5532.pdf",
+    "accessed": "2026-10-08",
+    "document": "SLOS075K November 1979 revised December 2025",
+    "sha256": "d9ab074bb64a1a0374f2c353f0b7854ee55e8a95e6de44c336a1084749fdbcb0",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "p.3 recommended supplies; p.4 characteristics at +/-15V only. No guaranteed CM/swing inference at 10.8-13.2V; manufacturer macromodel not qualified"
+  },
+  {
+    "file": "reference/ti/sloa024b.pdf",
+    "url": "https://www.ti.com/lit/an/sloa024b/sloa024b.pdf",
+    "accessed": "2026-10-08",
+    "document": "SLOA024B July 1999 revised September 2002",
+    "sha256": "1cd93742f903265ed3937e9b99d718633b03adfdde0b3f993ff09a318105a5b1",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "fig.5/eq.9 p.4 and unity-gain ratio case p.5 reviewed; C1=ground and C2=feedback"
   }
 ]
