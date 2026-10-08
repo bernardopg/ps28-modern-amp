@@ -1,9 +1,10 @@
 {
-  "producer": "kicad-cli native sch export pdf/svg --mode-multi",
+  "producer": "kicad-cli native sch export pdf/svg",
   "kicad_version": "10.0.7",
   "source_and_exports_sha256": {
     "kicad/analog-protected/analog-protected.kicad_sch": "f46adefe0383358837e4eb49a41fe21b8017f39b549f789c10675ca4ac277303",
-    "docs/images/analog-protected/analog-protected.pdf": "3bbbc1331f69a882b716fbb44905bf9934a935b7871025cfcecc81fc5b77e2ae"
+    "docs/images/analog-protected/analog-protected.pdf": "3bbbc1331f69a882b716fbb44905bf9934a935b7871025cfcecc81fc5b77e2ae",
+    "docs/images/analog-protected/analog-protected.svg": "c78dc5711c865c72dba813172f21715b789f5b8e672f728d2d2f15b3a9fa0656"
   },
   "hardware_validated": false,
   "pcb_changed": false

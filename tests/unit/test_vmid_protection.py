@@ -155,6 +155,19 @@ class ProtectionTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             verify_analog(ET.tostring(tree, encoding="unicode"), bad, spice, aliases)
 
+    def test_native_export_files_exist_and_match_source(self):
+        m = json.loads(
+            (ROOT / "docs/images/analog-protected/manifest.json").read_text()
+        )
+        names = m["source_and_exports_sha256"]
+        self.assertTrue(any(n.endswith(".svg") for n in names))
+        self.assertTrue(any(n.endswith(".pdf") for n in names))
+        for name, digest in names.items():
+            self.assertEqual(
+                hashlib.sha256((ROOT / name).read_bytes()).hexdigest(), digest
+            )
+        self.assertFalse(m["pcb_changed"])
+
     def test_recorded_evidence_binds_sources_and_keeps_gates(self):
         r = json.loads((ROOT / "tests/reports/vmid-protection-study.json").read_text())
         for name, digest in r["source_hashes"].items():
