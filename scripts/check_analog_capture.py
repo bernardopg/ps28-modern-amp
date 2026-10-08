@@ -64,7 +64,7 @@ OPA_EXPECTED = {
 }
 
 
-def verify(xml, manifest, spice):
+def verify(xml, manifest, spice, aliases=ALIASES):
     tree = ET.fromstring(xml)
     components = {
         n.attrib["ref"]: n
@@ -100,7 +100,7 @@ def verify(xml, manifest, spice):
     }
     for ref, sref in SPICE_REFS.items():
         a, b = lines[sref][1:3]
-        if ALIASES[pins[(ref, "1")]] != a or ALIASES[pins[(ref, "2")]] != b:
+        if aliases[pins[(ref, "1")]] != a or aliases[pins[(ref, "2")]] != b:
             raise ValueError("KiCad vs SPICE passive wiring mismatch: " + ref)
         value = expected[ref]["value"]
         numeric = (
@@ -112,7 +112,7 @@ def verify(xml, manifest, spice):
             raise ValueError("KiCad vs SPICE R/C value mismatch: " + ref)
     for ref, table in OPA_EXPECTED.items():
         for pin, net in table.items():
-            if ALIASES[pins[(ref, pin)]] != net:
+            if aliases[pins[(ref, pin)]] != net:
                 raise ValueError("TI SOIC8 pin mapping differs: " + ref + "." + pin)
         mpn = next(
             (

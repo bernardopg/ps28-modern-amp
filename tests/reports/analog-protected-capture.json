@@ -1,0 +1,32 @@
+{
+  "components": 11,
+  "native_pins_checked": 22,
+  "independent_passives_checked": 10,
+  "diode_polarity_checked": true,
+  "hardware_validated": false,
+  "manufacturing_approved": false,
+  "analog_validation": {
+    "components": 21,
+    "native_pins_checked": 58,
+    "passives_matched_to_spice": 14,
+    "opamp_packages": 2,
+    "opamp_units": 4,
+    "opamp_power_pins_checked": 4,
+    "unassigned_footprints": [
+      "C101",
+      "C102",
+      "C103",
+      "C104",
+      "C105",
+      "C106",
+      "J101",
+      "J102",
+      "J103"
+    ],
+    "hardware_validated": false,
+    "manufacturing_approved": false
+  },
+  "total_components": 32,
+  "total_native_pins_checked": 80,
+  "native_erc_violations": 0
+}

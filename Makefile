@@ -1,4 +1,4 @@
-.PHONY: check core-check analog-check doctor simulate simulate-opa simulate-vmid eda-smoke erc drc fetch-reference
+.PHONY: check core-check analog-check doctor simulate simulate-opa simulate-vmid simulate-vmid-protected analog-protected-check eda-smoke erc drc fetch-reference
 
 check:
 	python3 scripts/validate.py
@@ -12,6 +12,12 @@ analog-check:
 
 simulate-opa:
 	python3 scripts/simulate_opa1656.py
+
+simulate-vmid-protected:
+	python3 scripts/simulate_vmid_protection.py
+
+analog-protected-check:
+	python3 scripts/check_vmid_protection.py --integrated
 
 simulate-vmid:
 	python3 scripts/simulate_vmid.py

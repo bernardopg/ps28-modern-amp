@@ -52,6 +52,14 @@ qualificados antes de captura. Não usar RESET como proteção desses pinos.
 Ver `docs/vmid-buffer-study.md` e `tests/reports/vmid-buffer-study.json`.
 Sem captura/PCB/MPNs/fabricação/energização; estudo não conclui o critério VMID.
 
+D-018 corrige a causa D-017 sob envelope: rail analógico isolado/reserva,
+VMID passivo150/150Ω,1µF, sem buffer/REF22µF. Prova RC com ESR e cargas;
+30 quedas+3 casos de partida/brownout/fonte desconectada;9 casos LR4/TI.
+Captura integrada32 componentes/80 pinos/ERC0; preserve contraprova sem isolamento.
+`docs/vmid-protection.md` e `tests/reports/vmid-protection-study.json`.
+Ainda Blocked: confirmar ESR/aging/temperatura/Vf/pulso/MPNs/correntes, proteger
+sinais externos/TPA power-order, supervisor/fonte; nenhuma qualificação de hardware.
+
 ## Risco / aprovação
 
 Alterações de hardware exigem fonte primária e gate humano; sem pedidos automáticos.

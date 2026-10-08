@@ -33,6 +33,10 @@ O checker é revisão automatizada, não substitui revisão elétrica independen
   [VMID físico D-017](vmid-buffer-study.md):32 casos/PM mínimo60,67°, carga±1mA
   e LR4 acoplado; candidata bloqueada por REF armazenada no desligamento sem
   clamp/descarga/backfeed qualificados. RESET não protege esses pinos analógicos.
+  [Correção D-018](vmid-protection.md): rail isolado/reserva e VMID passivo,
+  captura integrada32/80/ERC0;33 testes de rede e9 LR4 passaram sob envelope.
+  Ainda faltam ESR/pulso/temperatura, proteção de sinais externos/power-order TPA,
+  fonte/supervisor e qualificação completa; nenhuma aprovação física.
 - **Bloqueador — woofer:** ainda não há limitador, high-pass qualificado nem
   proteção DC diferencial. Proteções internas do CI não garantem proteção de
   cone/bobina. Projetar detecção após LC entre SPK+ e SPK−, rejeitando PWM sem

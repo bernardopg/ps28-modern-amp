@@ -1,5 +1,8 @@
 # VMID físico — estudo D-017, desligamento bloqueado
 
+**Histórico D-017, preservado:** candidata substituída pela [correção D-018](vmid-protection.md).
+Não reutilizar o buffer/REF22µF abaixo. A correção tem envelope explícito e gates pendentes.
+
 ## Objetivo e estado
 Substituir a fonte VMID ideal do estudo por divisor, buffer e carga capacitiva
 explícitos, **antes** de integrar o front-end à PCB. Resultado: comportamento

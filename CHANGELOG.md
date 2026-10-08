@@ -5,6 +5,14 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 ## [Unreleased]
 
 ### Added
+- D-018 corrige o VMID D-017 sob envelope: divisor passivo/rail isolado/reserva,
+  sem buffer indefinido no desligamento; prova RC com ESR/carga/fuga,33 cenários
+  de rede e9 casos oficiais LR4. Critérios/contraprovas mantidos; sem sign-off.
+- Captura integrada `kicad/analog-protected/`:32 componentes/80 pinos/ERC0,
+  dois audits independentes e SVG/PDF nativos. Bloco lógico13/27 separado para
+  revisão, não outra PCB. Originais/PCBs/galeria3D preservados.
+- Gerador genérico retrocompatível, atômico/sem sobrescrita; auditoria da ligação
+  dos opamps ao rail protegido rejeita até mutação consistente de XML/manifesto.
 - Estudo de VMID físico D-017 com modelo TI íntegro:32 casos de return ratio,
   PM mínimo60,67°, contraprova sem isolamento/PM negativo, carga±1mA, ripple,
   referência inicialmente descarregada com AUX já válido e LR4 acoplado.

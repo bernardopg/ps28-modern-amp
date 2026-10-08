@@ -1,0 +1,1282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>kicad/analog-protected/analog-protected.kicad_sch</source>
+    <date>2026-10-08T08:24:45</date>
+    <tool>Eeschema 10.0.7</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>PS28 D-018 POWER/VMID BLOCK - PROTOTYPE ENVELOPE ONLY</title>
+        <company/>
+        <rev>A-analog-study</rev>
+        <date/>
+        <source>analog-protected.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C101">
+      <value>100n</value>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2d63d920-1870-5169-b45d-69ee37066285</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C102">
+      <value>100n</value>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0a3985ff-ffc8-51e8-9a81-7ecfbe72e2c0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C103">
+      <value>100n</value>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9f499f21-9ad1-528f-a036-de1804448e61</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C104">
+      <value>100n</value>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8febe8ab-6b96-5a7d-943b-5d27cc20c3a4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C105">
+      <value>100n</value>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>626410cf-10f2-568e-aa64-ce1df7b6d725</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C106">
+      <value>100n</value>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f4c90004-5dd3-56e0-80e0-01104a976ac4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C107">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7556509f-7cae-5d4a-9d0c-b739593332ba</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C108">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>320fe16e-dc2e-5e80-8bcd-75bae717f8f3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C201">
+      <value>470u</value>
+      <footprint>PS28:WE_860020575014</footprint>
+      <fields>
+        <field name="MPN">860020575014</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint">PS28:WE_860020575014</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="MPN" value="860020575014"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e2c7bd00-a42b-5846-8308-e8f05f89758e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C202">
+      <value>470u</value>
+      <footprint>PS28:WE_860020575014</footprint>
+      <fields>
+        <field name="MPN">860020575014</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint">PS28:WE_860020575014</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="MPN" value="860020575014"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ab146652-7d3b-53a1-839d-47d745a996e4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C203">
+      <value>1u</value>
+      <fields>
+        <field name="MPN">TBD: total VMID storage &lt;=2uF, ESR&lt;=2ohm</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="TBD: total VMID storage &lt;=2uF, ESR&lt;=2ohm"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ae51d917-4322-58a7-b93f-5b736c90391e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D201">
+      <value>1N4007</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="MPN">1N4007-E3/54</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint">Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="MPN" value="1N4007-E3/54"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="diode"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ba0cfd66-a414-52b1-8855-3d3edf0474d0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J101">
+      <value>INPUT_BIASED</value>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>39cddef1-15c1-5822-ac4a-14aed40c3fcc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J102">
+      <value>DIFFERENTIAL_OUT</value>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8a63a7c3-22e1-5ab3-8daa-daa5e1cf75a5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J103">
+      <value>RAW_AUX_IN / VMID_MONITOR</value>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b8a71954-89aa-5487-9335-d41e3762ce2f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R101">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a566a6c8-9a7a-51c7-963c-41527603e6fd</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R102">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d56b96bd-a910-5fc3-99b4-01f1a585c681</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R103">
+      <value>14k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ad420b2e-fce3-535f-a5b9-23a3c0100e1b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R104">
+      <value>14k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fc83552c-9346-52c8-ae22-9108af3598f7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R105">
+      <value>14k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c55f83f3-def6-5f6f-915d-f46b0816df30</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R106">
+      <value>14k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2d82a042-6e62-5edb-b0b1-86b73620e3ee</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R107">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8d694271-08cd-559d-95fc-b35d16e523cc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R108">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cb019bb6-90ca-5276-9534-a43f195d14d7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R201">
+      <value>15</value>
+      <fields>
+        <field name="MPN">TBD: &gt;=0.1J input-charge pulse qualification</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD: &gt;=0.1J input-charge pulse qualification"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>17e0647a-a4b3-5933-ae6d-2d0c65d163b6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R202">
+      <value>1k</value>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>59dca0f2-1deb-5a0c-9bfc-48877535489e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R203">
+      <value>2.2k</value>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>764eeb2e-65d9-597d-9dee-9ddf9955c47c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R204">
+      <value>75</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="MPN">CRCW120675R0FKEA</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="CRCW120675R0FKEA"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c6c12274-42c3-52c1-a99a-8109604f4ef6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R205">
+      <value>75</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="MPN">CRCW120675R0FKEA</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="CRCW120675R0FKEA"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0d46ab9d-d1ee-502b-8caa-c00cd6c036bd</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R206">
+      <value>75</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="MPN">CRCW120675R0FKEA</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="CRCW120675R0FKEA"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>52de2a63-8aa6-5b26-96c2-b14ab4454b6f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R207">
+      <value>75</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="MPN">CRCW120675R0FKEA</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="CRCW120675R0FKEA"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4071a6d6-1e70-5515-b379-cf7f8bb60653</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>OPA1656ID</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <fields>
+        <field name="MPN">OPA1656ID</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="PS28_ANALOG" part="OPA1656ID" description="OPA1656 dual audio amplifier; TI SBOS901C reviewed pinout; study"/>
+      <property name="MPN" value="OPA1656ID"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="dual opamp"/>
+      <property name="ki_fp_filters" value="SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6c1cc8ee-b440-58b4-a306-320fb1379679 1a22c94e-b42b-5ae1-b952-d33ac9d1122d 14aa8008-9846-55a4-a89a-cf03b55adc3c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="8"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U3">
+      <value>OPA1656ID</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <fields>
+        <field name="MPN">OPA1656ID</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="PS28_ANALOG" part="OPA1656ID" description="OPA1656 dual audio amplifier; TI SBOS901C reviewed pinout; study"/>
+      <property name="MPN" value="OPA1656ID"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off"/>
+      <property name="Sheetname" value="Raiz"/>
+      <property name="Sheetfile" value="analog-protected.kicad_sch"/>
+      <property name="ki_keywords" value="dual opamp"/>
+      <property name="ki_fp_filters" value="SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>818541b1-3d72-5a69-a910-c8e4809adfde f0a11523-36c7-5dc4-ab05-1b5b48c05e35 4f350959-7f3d-5819-8e36-61e2381f0fcc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="8"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_01x03">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Polarized">
+      <description>Polarized capacitor</description>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Polarized</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Polarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D">
+      <description>Diode</description>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Diode</field>
+        <field name="Sim.Device">D</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="PS28_ANALOG" part="OPA1656ID">
+      <description>OPA1656 dual audio amplifier; TI SBOS901C reviewed pinout; study</description>
+      <docs>https://www.ti.com/lit/ds/symlink/opa1656.pdf</docs>
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>TO*99*</fp>
+        <fp>OnSemi*Micro8*</fp>
+        <fp>TSSOP*3x3mm*P0.65mm*</fp>
+        <fp>TSSOP*4.4x3mm*P0.65mm*</fp>
+        <fp>MSOP*3x3mm*P0.65mm*</fp>
+        <fp>SSOP*3.9x4.9mm*P0.635mm*</fp>
+        <fp>LFCSP*2x2mm*P0.5mm*</fp>
+        <fp>*SIP*</fp>
+        <fp>SOIC*5.3x6.2mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">OPA1656ID</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/opa1656.pdf</field>
+        <field name="Description">OPA1656 dual audio amplifier; TI SBOS901C reviewed pinout; study</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="output"/>
+        <pin num="2" name="-" type="input"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="V-" type="power_in"/>
+        <pin num="5" name="+" type="input"/>
+        <pin num="6" name="-" type="input"/>
+        <pin num="7" name="" type="output"/>
+        <pin num="8" name="V+" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>${KICAD10_SYMBOL_DIR}/Device.kicad_sym</uri>
+    </library>
+    <library logical="PS28_ANALOG">
+      <uri>${KIPRJMOD}/libraries/PS28_ANALOG.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/ANALOG_12V" class="Default">
+      <node ref="C107" pin="1" pintype="passive"/>
+      <node ref="C108" pin="1" pintype="passive"/>
+      <node ref="C201" pin="1" pintype="passive"/>
+      <node ref="C202" pin="1" pintype="passive"/>
+      <node ref="R201" pin="2" pintype="passive"/>
+      <node ref="R203" pin="1" pintype="passive"/>
+      <node ref="R204" pin="1" pintype="passive"/>
+      <node ref="U2" pin="8" pinfunction="V+_8" pintype="power_in"/>
+      <node ref="U3" pin="8" pinfunction="V+_8" pintype="power_in"/>
+    </net>
+    <net code="2" name="/AUX_RAW" class="Default">
+      <node ref="D201" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="J103" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R202" pin="1" pintype="passive"/>
+    </net>
+    <net code="3" name="/BUFFERED" class="Default">
+      <node ref="R103" pin="1" pintype="passive"/>
+      <node ref="U2" pin="1" pintype="output"/>
+      <node ref="U2" pin="2" pinfunction="-_2" pintype="input"/>
+    </net>
+    <net code="4" name="/DIFF_NEG" class="Default">
+      <node ref="J102" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R108" pin="1" pintype="passive"/>
+      <node ref="U3" pin="7" pintype="output"/>
+    </net>
+    <net code="5" name="/DIFF_POS" class="Default">
+      <node ref="C104" pin="2" pintype="passive"/>
+      <node ref="C105" pin="2" pintype="passive"/>
+      <node ref="J102" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R107" pin="1" pintype="passive"/>
+      <node ref="U3" pin="1" pintype="output"/>
+      <node ref="U3" pin="2" pinfunction="-_2" pintype="input"/>
+    </net>
+    <net code="6" name="/DIVIDED" class="Default">
+      <node ref="R101" pin="2" pintype="passive"/>
+      <node ref="R102" pin="1" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="+_3" pintype="input"/>
+    </net>
+    <net code="7" name="/DIV_BOTTOM" class="Default">
+      <node ref="R206" pin="2" pintype="passive"/>
+      <node ref="R207" pin="1" pintype="passive"/>
+    </net>
+    <net code="8" name="/DIV_TOP" class="Default">
+      <node ref="R204" pin="2" pintype="passive"/>
+      <node ref="R205" pin="1" pintype="passive"/>
+    </net>
+    <net code="9" name="/FILTERED1" class="Default">
+      <node ref="C101" pin="2" pintype="passive"/>
+      <node ref="C102" pin="2" pintype="passive"/>
+      <node ref="R105" pin="1" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="-_6" pintype="input"/>
+      <node ref="U2" pin="7" pintype="output"/>
+    </net>
+    <net code="10" name="/GND" class="Default">
+      <node ref="C107" pin="2" pintype="passive"/>
+      <node ref="C108" pin="2" pintype="passive"/>
+      <node ref="C201" pin="2" pintype="passive"/>
+      <node ref="C202" pin="2" pintype="passive"/>
+      <node ref="C203" pin="2" pintype="passive"/>
+      <node ref="J101" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="J102" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="J103" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R202" pin="2" pintype="passive"/>
+      <node ref="R203" pin="2" pintype="passive"/>
+      <node ref="R207" pin="2" pintype="passive"/>
+      <node ref="U2" pin="4" pinfunction="V-_4" pintype="power_in"/>
+      <node ref="U3" pin="4" pinfunction="V-_4" pintype="power_in"/>
+    </net>
+    <net code="11" name="/ISO_FEED" class="Default">
+      <node ref="D201" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="R201" pin="1" pintype="passive"/>
+    </net>
+    <net code="12" name="/MINUS" class="Default">
+      <node ref="R107" pin="2" pintype="passive"/>
+      <node ref="R108" pin="2" pintype="passive"/>
+      <node ref="U3" pin="6" pinfunction="-_6" pintype="input"/>
+    </net>
+    <net code="13" name="/MONO_BIASED" class="Default">
+      <node ref="J101" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R101" pin="1" pintype="passive"/>
+    </net>
+    <net code="14" name="/VMID" class="Default">
+      <node ref="C103" pin="2" pintype="passive"/>
+      <node ref="C106" pin="2" pintype="passive"/>
+      <node ref="C203" pin="1" pintype="passive"/>
+      <node ref="J101" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J102" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="J103" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R102" pin="2" pintype="passive"/>
+      <node ref="R205" pin="2" pintype="passive"/>
+      <node ref="R206" pin="1" pintype="passive"/>
+      <node ref="U3" pin="5" pinfunction="+_5" pintype="input"/>
+    </net>
+    <net code="15" name="/X1" class="Default">
+      <node ref="C101" pin="1" pintype="passive"/>
+      <node ref="C102" pin="1" pintype="passive"/>
+      <node ref="R103" pin="2" pintype="passive"/>
+      <node ref="R104" pin="1" pintype="passive"/>
+    </net>
+    <net code="16" name="/X2" class="Default">
+      <node ref="C104" pin="1" pintype="passive"/>
+      <node ref="C105" pin="1" pintype="passive"/>
+      <node ref="R105" pin="2" pintype="passive"/>
+      <node ref="R106" pin="1" pintype="passive"/>
+    </net>
+    <net code="17" name="/Y1" class="Default">
+      <node ref="C103" pin="1" pintype="passive"/>
+      <node ref="R104" pin="2" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="+_5" pintype="input"/>
+    </net>
+    <net code="18" name="/Y2" class="Default">
+      <node ref="C106" pin="1" pintype="passive"/>
+      <node ref="R106" pin="2" pintype="passive"/>
+      <node ref="U3" pin="3" pinfunction="+_3" pintype="input"/>
+    </net>
+  </nets>
+</export>

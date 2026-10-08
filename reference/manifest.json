@@ -134,5 +134,14 @@
     "sha256": "9847ed60c62e792ee6f1c84899278a3c11ce71a6d21804bdd88f51199f1ba055",
     "license": "TI copyrighted AS IS customer-aid model; local-only download, not redistributed",
     "review_status": "Entire ASCII model audited: only SUBCKT/MODEL/ENDS directives; 5-pin order checked. ngspice PSA isolated config,9 supply-temperature cases passed, convergence fallbacks disclosed; no guarantee of production extremes"
+  },
+  {
+    "file": "reference/parts/vishay-1n400x.pdf",
+    "url": "https://www.vishay.com/docs/88503/1n4001.pdf",
+    "document": "Vishay 1N4001-1N4007, doc88503, revision29-Apr-2020",
+    "accessed": "2026-10-08",
+    "sha256": "56a77c6615c90c11993d37d94e67f335cf3a2d1fe00f25d2a1a4833834356d07",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "p.1 DO41/cathode band/1A at75C and9.5mm leads; p.2 VFmax1.1V at1A/25C, reverse5uA25C/50uA125C, ordering54 pattern. D018 forward1.5V/ESR/pulse envelopes are NOT guaranteed full-temperature qualification; physical gates pending"
   }
 ]

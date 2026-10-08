@@ -28,6 +28,8 @@ jobs:
         run: python scripts/simulate_opa1656.py --fetch-model
       - name: Verify physical VMID study and required unsafe-power-down counterexamples
         run: python scripts/simulate_vmid.py
+      - name: Verify protected analog rail and passive VMID correction under declared envelope
+        run: python scripts/simulate_vmid_protection.py
       - name: Preserve official-model diagnostics (never redistribute vendor model)
         if: always()
         uses: actions/upload-artifact@v4
@@ -38,4 +40,6 @@ jobs:
             build/analog/opa1656/result.json
             build/analog/vmid/*.log
             build/analog/vmid/result.json
+            build/analog/vmid-protection/*.log
+            build/analog/vmid-protection/result.json
           if-no-files-found: warn

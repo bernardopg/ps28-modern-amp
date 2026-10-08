@@ -64,4 +64,14 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   Objetivo: quantificar carga/estabilidade e evitar captura insegura. Risco:
   extrapolar macro/curvas típicas para startup/clamps/hardware. Evidência em
   `vmid-buffer-study.md` e relatório,2026-10-08; gates/tasks não concluídos.
+- D-018 — Substituir a candidata VMID D-017 por divisor passivo150/150Ω
+  (quatro75Ω) e1µF, todos os opamps no rail ANALOG_12V isolado de AUX_RAW,
+  filtro15Ω/reserva2×470µF/bleeds1k e2,2k. Remover buffer/REF22µF, sem
+  depender de clamp interno/estado do opamp desligado. Limites de armazenamento,
+  ESR, carga e fuga explícitos; invariância RC resolve a causa D-017 sob esse
+  envelope. Captura integrada32componentes/80pinos/ERC0 e9 casos TI; não
+  relaxar critérios anteriores nem alegar hardware aprovado. Custo/risco:
+  consumo/térmica/divisor, queda de rail, pulso, ESR/temperatura e power-order
+  TPA/sinais externos ainda requerem qualificação. Não outra PCB/mounts/MCU.
+  Ver `vmid-protection.md` e relatórios; decisão reversível,2026-10-08.
 Não confundir decisão de arquitetura com liberação de fabricação/energização.

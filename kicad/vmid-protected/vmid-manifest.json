@@ -1,0 +1,257 @@
+{
+  "status": "ISOLATED CAPTURE STUDY",
+  "source": "D-018: isolated ANALOG_12V/passive VMID; declared envelope only; no hardware sign-off",
+  "parts": [
+    {
+      "ref": "D201",
+      "lib_id": "Device:D",
+      "value": "1N4007",
+      "mpn": "1N4007-E3/54",
+      "footprint": "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal",
+      "nets": {
+        "1": "ISO_FEED",
+        "2": "AUX_RAW"
+      },
+      "units": [
+        [
+          1,
+          50.8,
+          40.64
+        ]
+      ]
+    },
+    {
+      "ref": "R201",
+      "lib_id": "Device:R",
+      "value": "15",
+      "mpn": "TBD: >=0.1J input-charge pulse qualification",
+      "footprint": "",
+      "nets": {
+        "1": "ISO_FEED",
+        "2": "ANALOG_12V"
+      },
+      "units": [
+        [
+          1,
+          139.7,
+          40.64
+        ]
+      ]
+    },
+    {
+      "ref": "R202",
+      "lib_id": "Device:R",
+      "value": "1k",
+      "mpn": "TBD",
+      "footprint": "",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          228.60000000000002,
+          40.64
+        ]
+      ]
+    },
+    {
+      "ref": "R203",
+      "lib_id": "Device:R",
+      "value": "2.2k",
+      "mpn": "TBD",
+      "footprint": "",
+      "nets": {
+        "1": "ANALOG_12V",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          317.50000000000006,
+          40.64
+        ]
+      ]
+    },
+    {
+      "ref": "R204",
+      "lib_id": "Device:R",
+      "value": "75",
+      "mpn": "CRCW120675R0FKEA",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "nets": {
+        "1": "ANALOG_12V",
+        "2": "DIV_TOP"
+      },
+      "units": [
+        [
+          1,
+          50.8,
+          96.52000000000001
+        ]
+      ]
+    },
+    {
+      "ref": "R205",
+      "lib_id": "Device:R",
+      "value": "75",
+      "mpn": "CRCW120675R0FKEA",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "nets": {
+        "1": "DIV_TOP",
+        "2": "VMID"
+      },
+      "units": [
+        [
+          1,
+          139.7,
+          96.52000000000001
+        ]
+      ]
+    },
+    {
+      "ref": "R206",
+      "lib_id": "Device:R",
+      "value": "75",
+      "mpn": "CRCW120675R0FKEA",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "nets": {
+        "1": "VMID",
+        "2": "DIV_BOTTOM"
+      },
+      "units": [
+        [
+          1,
+          228.60000000000002,
+          96.52000000000001
+        ]
+      ]
+    },
+    {
+      "ref": "R207",
+      "lib_id": "Device:R",
+      "value": "75",
+      "mpn": "CRCW120675R0FKEA",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "nets": {
+        "1": "DIV_BOTTOM",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          317.50000000000006,
+          96.52000000000001
+        ]
+      ]
+    },
+    {
+      "ref": "C201",
+      "lib_id": "Device:C_Polarized",
+      "value": "470u",
+      "mpn": "860020575014",
+      "footprint": "PS28:WE_860020575014",
+      "nets": {
+        "1": "ANALOG_12V",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          50.8,
+          152.4
+        ]
+      ]
+    },
+    {
+      "ref": "C202",
+      "lib_id": "Device:C_Polarized",
+      "value": "470u",
+      "mpn": "860020575014",
+      "footprint": "PS28:WE_860020575014",
+      "nets": {
+        "1": "ANALOG_12V",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          139.7,
+          152.4
+        ]
+      ]
+    },
+    {
+      "ref": "C203",
+      "lib_id": "Device:C",
+      "value": "1u",
+      "mpn": "TBD: total VMID storage <=2uF, ESR<=2ohm",
+      "footprint": "",
+      "nets": {
+        "1": "VMID",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          228.60000000000002,
+          152.4
+        ]
+      ]
+    },
+    {
+      "ref": "J201",
+      "lib_id": "Connector_Generic:Conn_01x02",
+      "value": "RAW_AUX_INPUT",
+      "mpn": "TBD",
+      "footprint": "",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          317.50000000000006,
+          152.4
+        ]
+      ]
+    },
+    {
+      "ref": "J202",
+      "lib_id": "Connector_Generic:Conn_01x03",
+      "value": "PROTECTED_ANALOG_OUTPUT",
+      "mpn": "TBD",
+      "footprint": "",
+      "nets": {
+        "1": "ANALOG_12V",
+        "2": "VMID",
+        "3": "GND"
+      },
+      "units": [
+        [
+          1,
+          50.8,
+          208.28000000000003
+        ]
+      ]
+    }
+  ],
+  "hardware_validated": false,
+  "manufacturing_approved": false,
+  "integrated_with_core": false,
+  "unassigned_footprints": [
+    "R201",
+    "R202",
+    "R203",
+    "C203",
+    "J201",
+    "J202"
+  ],
+  "interface_contract": {
+    "J201": "Regulated raw AUX10.8-13.2V, not PVDD or transformer",
+    "J202": "All front-end opamp V+ MUST use ANALOG_12V, not raw AUX; VMID load <=1mA, total effective C<=2uF",
+    "new_physical_board": false
+  }
+}

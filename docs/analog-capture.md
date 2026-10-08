@@ -90,6 +90,9 @@ captura editada. Fonte/pinout/documentos/hashes em `reference/manifest.json`.
 Relatórios: [captura](../tests/reports/analog-capture-review.json) e
 [modelo TI](../tests/reports/opa1656-model-study.json).
 
+[Revisão D-018](vmid-protection.md) integra fonte/VMID corrigidos ao front-end
+em `kicad/analog-protected/`; esta captura D-016 foi preservada, não sobrescrita.
+
 ## Ainda falta
 [D-017: VMID físico em estudo](vmid-buffer-study.md) acrescenta estabilidade/carga
 modeladas, mas detecta bloqueio no desligamento sem clamp/descarga/backfeed

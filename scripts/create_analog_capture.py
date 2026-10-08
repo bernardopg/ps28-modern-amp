@@ -164,18 +164,27 @@ def parts():
     return out
 
 
-def build():
-    inventory = parts()
+def build(
+    inventory=None,
+    *,
+    project="analog-front-end",
+    namespace="analog",
+    source=SOURCE,
+    title="PS28 ANALOG CAPTURE STUDY - NO POWER/VMID/SUPERVISOR",
+    warning="STUDY ONLY - ALL INPUTS BIASED TO EXTERNAL VMID - NO RCA/LINE-LFE/VOLUME/DC PROTECTION - PASSIVE MPN/FOOTPRINT TBD",
+    power_flags=("AUX_12V", "VMID_EXTERNAL", "GND"),
+    paper="A3",
+):
+    inventory = parts() if inventory is None else inventory
     symbols = {"PS28_ANALOG:OPA1656ID": opamp_symbol()}
     for p in inventory:
         if p["lib_id"] not in symbols:
             symbols[p["lib_id"]] = stock_symbol(*p["lib_id"].split(":"))
     symbols["power:PWR_FLAG"] = stock_symbol("power", "PWR_FLAG")
-    root = uid("analog:root")
-    project = "analog-front-end"
+    root = uid(namespace + ":root")
     out = [
-        f'(kicad_sch (version 20250114) (generator "eeschema") (uuid {q(root)}) (paper "A3")',
-        '(title_block (title "PS28 ANALOG CAPTURE STUDY - NO POWER/VMID/SUPERVISOR") (rev "A-analog-study"))',
+        f'(kicad_sch (version 20250114) (generator "eeschema") (uuid {q(root)}) (paper {q(paper)})',
+        f'(title_block (title {q(title)}) (rev "A-analog-study"))',
         "(lib_symbols " + " ".join(render(x) for x in symbols.values()) + ")",
     ]
 
@@ -195,7 +204,7 @@ def build():
             "Footprint": p["footprint"],
             "MPN": p["mpn"],
             "SelectionStatus": "STUDY; passives/interfaces not selected",
-            "Source": SOURCE,
+            "Source": source,
         }
         property_text = " ".join(
             f"(property {q(k)} {q(v)} (at {x} {y - 5.08 if k == 'Reference' else y + 5.08} 0) "
@@ -206,9 +215,9 @@ def build():
         out.append(
             f"(symbol (lib_id {q(lib)}) (at {x} {y} 0) (unit {unit}) "
             f"(in_bom {'no' if p['ref'].startswith('#') else 'yes'}) (on_board {'no' if p['ref'].startswith('#') else 'yes'}) "
-            f"(uuid {q(uid('analog:' + pid))}) {property_text} "
+            f"(uuid {q(uid(namespace + ':' + pid))}) {property_text} "
             + " ".join(
-                f"(pin {child(n, 'number')[1]} (uuid {q(uid('analog:' + pid + ':pin:' + child(n, 'number')[1]))}))"
+                f"(pin {child(n, 'number')[1]} (uuid {q(uid(namespace + ':' + pid + ':pin:' + child(n, 'number')[1]))}))"
                 for n in pins
             )
             + f"(instances (project {q(project)} (path {q('/' + root)} (reference {q(p['ref'])}) (unit {unit})))))"
@@ -223,17 +232,17 @@ def build():
             lx = round(wx + 3.81 * math.cos(rad), 4)
             ly = round(wy - 3.81 * math.sin(rad), 4)
             out.append(
-                f"(wire (pts (xy {wx} {wy}) (xy {lx} {ly})) (stroke (width 0) (type default)) (uuid {q(uid('analog:' + pid + ':wire:' + number))}))"
+                f"(wire (pts (xy {wx} {wy}) (xy {lx} {ly})) (stroke (width 0) (type default)) (uuid {q(uid(namespace + ':' + pid + ':wire:' + number))}))"
             )
             justify = "right bottom" if lx < wx else "left bottom"
             out.append(
-                f"(label {q(p['nets'][number])} (at {lx} {ly} 0) (effects (font (size .9 .9)) (justify {justify})) (uuid {q(uid('analog:' + pid + ':label:' + number))}))"
+                f"(label {q(p['nets'][number])} (at {lx} {ly} 0) (effects (font (size .9 .9)) (justify {justify})) (uuid {q(uid(namespace + ':' + pid + ':label:' + number))}))"
             )
 
     for p in inventory:
         for unit, x, y in p["units"]:
             place(p, unit, x, y)
-    for i, net in enumerate(["AUX_12V", "VMID_EXTERNAL", "GND"]):
+    for i, net in enumerate(power_flags):
         place(
             {
                 "ref": f"#FLG10{i}",
@@ -248,13 +257,13 @@ def build():
             266.7,
         )
     out.append(
-        f'(text "STUDY ONLY - ALL INPUTS BIASED TO EXTERNAL VMID - NO RCA/LINE-LFE/VOLUME/DC PROTECTION - PASSIVE MPN/FOOTPRINT TBD" '
-        f"(at 20.32 12.7 0) (effects (font (size 1.2 1.2)) (justify left)) (uuid {q(uid('analog:warning'))}))"
+        f"(text {q(warning)} "
+        f"(at 20.32 12.7 0) (effects (font (size 1.2 1.2)) (justify left)) (uuid {q(uid(namespace + ':warning'))}))"
     )
     out.append(")")
     return "\n".join(out) + "\n", {
         "status": "ISOLATED CAPTURE STUDY",
-        "source": SOURCE,
+        "source": source,
         "parts": inventory,
         "hardware_validated": False,
         "manufacturing_approved": False,

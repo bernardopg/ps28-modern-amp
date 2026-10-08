@@ -52,6 +52,12 @@ válido≈0,33 s NÃO define timeout do supervisor nem comprova power-on real.
 Fonte, tolerâncias e comportamento de todas as entradas no power-down continuam
 bloqueios; não assumir diodos internos como proteção de sistema.
 
+D-018 substitui o buffer por bias passivo/rail protegido ([estudo](vmid-protection.md)).
+Supervisor deve verificar AUX_RAW E ANALOG_12V/VMID; não assumir que a reserva
+elimina pop ou protege INPUT_A/B do TPA enquanto o preamp ainda está vivo.
+J102 não pode ser ligado ao núcleo energizável antes da revisão de todos os
+pinos/coupling e power-order. Não reutilizar timeout≈0,33s da candidata anterior.
+
 ## Testes futuros obrigatórios
 Fonte faltante/em ordem invertida; VMID fora de faixa; FAULT inicial normal;
 FAULT persistente; FAULT seguido de RESET baixo sem autorrearme; OTW ativo ao

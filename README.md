@@ -48,6 +48,12 @@ Fonte/VMID/supervisor externos e9 footprints pendentes; não é placa operaciona
 modelo TI, carga bidirecional e LR4 acoplado; **integração bloqueada pelo power-down**
 sem descarga/clamp/backfeed qualificados. RESET não protege pinos analógicos.
 
+[Correção D-018](docs/vmid-protection.md): buffer substituído por VMID passivo e
+rail analógico isolado com reserva; captura integrada32 componentes/80 pinos/ERC0.
+30 quedas +3 casos partida/brownout/fonte ausente e9 casos LR4 passaram.
+Causa D-017 resolvida **sob envelope declarado**, não hardware aprovado:
+ESR/temperatura/pulso/sinais externos/supervisor/integração TPA continuam pendentes.
+
 ## Renders 3D do próprio KiCad
 
 **Estudo não roteado; modelos 3D incompletos; não aprovado para fabricação.**

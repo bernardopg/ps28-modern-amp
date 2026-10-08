@@ -1,0 +1,16 @@
+* D-018 canonical terminal topology, independent of KiCad generator.
+* BISO is a conservative diode envelope, NOT a manufacturer macromodel.
+* Capacitor ESR is internal to real parts, bounded separately in safety study.
+.subckt VMID_PROTECTED raw ana mid ret
+BISO raw iso I={max(0,(V(raw,iso)-1.5)/.001)-50u*min(1,max(0,V(iso,raw)/.001))}
+R201 iso ana 15
+R202 raw ret 1000
+R203 ana ret 2200
+R204 ana divtop 75
+R205 divtop mid 75
+R206 mid divbottom 75
+R207 divbottom ret 75
+C201 ana ret 0.000470
+C202 ana ret 0.000470
+C203 mid ret 0.000001
+.ends VMID_PROTECTED

@@ -33,6 +33,13 @@ comparados pin-a-pin/valor com SPICE e pinout SOIC8 contra TI. Fonte/VMID/superv
 externos; RCA/LFE/volume/fase/proteção ainda não capturados,9 footprints pendentes.
 Esquema INTEGRADO continua pendente. Ver `docs/analog-capture.md` e relatório.
 
+D-018: revisão integrada `kicad/analog-protected/`,32 componentes/80 pinos/ERC0;
+10 passivos/polaridade D201 auditados contra topologia independente;14 R/C LR4
+mais pinagem TI dos4amps conferidos. U2/U3p8 exclusivamente ANALOG_12V;
+J103p2 somente VMID monitor. Fonte+VMID capturados, não uma PCB adicional.
+13 footprints e MPNs/ESR/pulso/temp pendentes; sinais externos/TPA power-order,
+LINE/LFE/volume/DC/supervisor não completos. Não concluir task/gates por ERC0.
+
 ## Risco / aprovação
 
 Alterações de hardware exigem fonte primária e gate humano; sem pedidos automáticos.
