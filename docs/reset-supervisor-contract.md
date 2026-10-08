@@ -58,6 +58,18 @@ elimina pop ou protege INPUT_A/B do TPA enquanto o preamp ainda está vivo.
 J102 não pode ser ligado ao núcleo energizável antes da revisão de todos os
 pinos/coupling e power-order. Não reutilizar timeout≈0,33s da candidata anterior.
 
+## Interface de saída — contrato preparatório D-019
+[Contraprovas e requisitos](input-power-order-study.md): INPUT_X tem limite
+absoluto −0,3…7 V relativo a GND, diferente do OPA1656. A pré-carga da Fig.32
+não pode ser substituída por reconectar capacitores com áudio já ativo.
+Supervisor precisa comandar isolamento **depois** de C20/C21 e mute analógico
+real, controlar a placa isolada sem aterrar o pino TPA conectado e observar DC
+válido dos dois ramos antes de áudio. Implementação/MPNs/defaults/latências TBD.
+Os 100 µs e janela DC 2…5 V do contrato são requisitos propostos, não resultados
+de bancada ou garantias TI. Os 145,19 ms do equivalente de partida NÃO são
+timeout de produto; FAULT alto não comprova pré-carga concluída. O input RIN
+20 kΩ típico não garante retorno quando desligado. Nenhuma integração liberada.
+
 ## Testes futuros obrigatórios
 Fonte faltante/em ordem invertida; VMID fora de faixa; FAULT inicial normal;
 FAULT persistente; FAULT seguido de RESET baixo sem autorrearme; OTW ativo ao

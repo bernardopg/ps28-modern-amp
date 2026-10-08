@@ -54,6 +54,11 @@ rail analógico isolado com reserva; captura integrada32 componentes/80 pinos/ER
 Causa D-017 resolvida **sob envelope declarado**, não hardware aprovado:
 ESR/temperatura/pulso/sinais externos/supervisor/integração TPA continuam pendentes.
 
+[D-019 — interface TPA e pré-carga](docs/input-power-order-study.md):
+contraprovas RC de desligamento/conexão com áudio e requisitos de isolamento
+pós-capacitor; sem circuito/MPNs aprovados. J102 continua separado do núcleo.
+`make simulate-input-order` reproduz quatro comparações SPICE, sem macro de CI.
+
 ## Renders 3D do próprio KiCad
 
 **Estudo não roteado; modelos 3D incompletos; não aprovado para fabricação.**

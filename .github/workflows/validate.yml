@@ -13,8 +13,18 @@ jobs:
         run: make check
       - name: Install simulation engine
         run: sudo apt-get update && sudo apt-get install -y ngspice
-      - name: Check LR4, differential LC and bounded analog study (not hardware sign-off)
+      - name: Check LR4, LC, bounded analog and required unsafe input-order cases (not hardware sign-off)
         run: make simulate
+      - name: Preserve passive input-order diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: input-power-order-diagnostics
+          path: |
+            build/analog/input-power-order/rc-*.log
+            build/analog/input-power-order/coupled-*.log
+            build/analog/input-power-order/result.json
+          if-no-files-found: warn
   official-opamp-model:
     runs-on: ubuntu-latest
     container: archlinux:base

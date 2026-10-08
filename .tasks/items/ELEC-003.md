@@ -40,6 +40,12 @@ J103p2 somente VMID monitor. Fonte+VMID capturados, não uma PCB adicional.
 13 footprints e MPNs/ESR/pulso/temp pendentes; sinais externos/TPA power-order,
 LINE/LFE/volume/DC/supervisor não completos. Não concluir task/gates por ERC0.
 
+D-019 documenta contrato preparatório para INPUT_A/B: isolar depois de C20/C21,
+controlar placa isolada, mute analógico e pré-carga observada antes do áudio.
+A captura D-018 e o núcleo NÃO foram conectados. Chaves/retorno/capacitância/
+comparadores, defaults e tempos seguem TBD; estudos RC não fecham G1 nem a
+dependência ELEC-002. Ver `docs/input-power-order-study.md`.
+
 ## Risco / aprovação
 
 Alterações de hardware exigem fonte primária e gate humano; sem pedidos automáticos.

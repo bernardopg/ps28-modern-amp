@@ -143,5 +143,23 @@
     "sha256": "56a77c6615c90c11993d37d94e67f335cf3a2d1fe00f25d2a1a4833834356d07",
     "license": "Third-party copyright; local engineering reference only",
     "review_status": "p.1 DO41/cathode band/1A at75C and9.5mm leads; p.2 VFmax1.1V at1A/25C, reverse5uA25C/50uA125C, ordering54 pattern. D018 forward1.5V/ESR/pulse envelopes are NOT guaranteed full-temperature qualification; physical gates pending"
+  },
+  {
+    "file": "reference/ti/tmux7211.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/tmux7211.pdf",
+    "document": "TI SCDS416D, revised July 2024",
+    "accessed": "2026-10-08",
+    "sha256": "e2f1799be16893fd7c756f13aeb782e33838d63602edae5383a0b59febda00af",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Sections6.1 p.5/6.4 p.6: S/D supply-referenced ratings, not independent power-off protection. Rejected for D019 isolation role; no MPN/package/stock selection"
+  },
+  {
+    "file": "reference/ti/tmux7462f.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/tmux7462f.pdf",
+    "document": "TI SCDS394B, revised June 2023",
+    "accessed": "2026-10-08",
+    "sha256": "62c57abf3394c86e6e6ff8fb25760ae9a7f65709c9bb485d521edcf9186d7f5d",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Section6.1 p.4: source+-65V differs from drain VFN-0.7..VFP+0.7; section6.5 p.5 typical fault threshold0.7V not a -0.3V TPA clamp guarantee. Not selected for D019; whole-interface qualification required"
   }
 ]

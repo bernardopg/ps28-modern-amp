@@ -9,5 +9,6 @@ Transversais: [segurança](safety.md), [decisões](decisions.md), [referências]
 [front-end LR4 e headroom em estudo](analog-lr4-study.md),
 [captura KiCad e modelo oficial OPA1656](analog-capture.md),
 [VMID físico e bloqueio de desligamento](vmid-buffer-study.md),
-[correção D-018 — rail protegido/VMID passivo](vmid-protection.md).
+[correção D-018 — rail protegido/VMID passivo](vmid-protection.md),
+[interface TPA: desligamento/pré-carga e contrato D-019](input-power-order-study.md).
 Planejamento vive somente em `.tasks/`; instruções de agentes somente em `AGENTS.md`.

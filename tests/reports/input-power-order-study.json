@@ -1,0 +1,176 @@
+{
+  "case_count": 288,
+  "violating_hypothesis_cases": 196,
+  "worst_hypothesis": {
+    "capacitance_f": 1.2e-05,
+    "return_resistance_ohm": 40000,
+    "series_resistance_ohm": 0,
+    "initial_receiver_bias_v": 0,
+    "receiver_first_delay_s": 0,
+    "driver_fall_s": 1e-06,
+    "minimum_input_v": -2.749997135418656,
+    "maximum_input_v": 0,
+    "violates_input_voltage_rating": true
+  },
+  "native_value_counterexample": {
+    "capacitance_f": 1e-05,
+    "return_resistance_ohm": 20000,
+    "series_resistance_ohm": 0,
+    "initial_receiver_bias_v": 3.875,
+    "receiver_first_delay_s": 0.1,
+    "driver_fall_s": 0.03,
+    "minimum_input_v": -0.5307597139250033,
+    "maximum_input_v": 3.875,
+    "violates_input_voltage_rating": true
+  },
+  "series_resistor_counterexample": {
+    "capacitance_f": 1e-05,
+    "return_resistance_ohm": 20000,
+    "series_resistance_ohm": 1000,
+    "initial_receiver_bias_v": 0,
+    "receiver_first_delay_s": 0,
+    "driver_fall_s": 0.02,
+    "minimum_input_v": -2.49819782089039,
+    "maximum_input_v": 0,
+    "violates_input_voltage_rating": true
+  },
+  "upstream_switch_clamped_plate_counterexample_v": -5.0,
+  "cold_connect_with_audio": {
+    "muted_until_ideal_dc_window": false,
+    "hypothetical_ready_s": 0,
+    "minimum_input_v": -2.22354142066664,
+    "maximum_input_v": 4.853532381341156,
+    "violates_input_voltage_rating": true
+  },
+  "muted_observed_precharge": {
+    "muted_until_ideal_dc_window": true,
+    "hypothetical_ready_s": 0.14518740067658725,
+    "minimum_input_v": 0.0,
+    "maximum_input_v": 4.882748930345551,
+    "violates_input_voltage_rating": false
+  },
+  "unrealized_isolation_contract": {
+    "contributions_v": {
+      "driver_step_v": 0.1,
+      "latency_slew_v": 0.1,
+      "charge_injection_v": 0.004999999999999999,
+      "off_feedthrough_v": 0.019999999999999997,
+      "off_leakage_v": 0.005,
+      "preclose_plate_error_v": 0.01
+    },
+    "total_excursion_bound_v": 0.24000000000000002,
+    "minimum_margin_to_absolute_v": 0.05999999999999997,
+    "passes_if_all_unmeasured_requirements_hold": true,
+    "hardware_implemented_or_qualified": false
+  },
+  "interfaces": {
+    "core_refs": [
+      "C20",
+      "C21"
+    ],
+    "source_ref": "J102",
+    "audit_level": "Manifest only; native KiCad electrical audits remain separate",
+    "mapping_for_review_only": {
+      "DIFF_POS": "DIFF_P",
+      "DIFF_NEG": "DIFF_N"
+    },
+    "schematics_connected_or_modified": false
+  },
+  "independent_passive_spice": [
+    {
+      "name": "rc-c1e-05-r20000-s0",
+      "points_checked": 175022,
+      "maximum_analytical_error_v": 9.687490898357964e-08,
+      "minimum_input_v": -0.5307547072003024
+    },
+    {
+      "name": "rc-c1e-06-r20000-s0",
+      "points_checked": 175022,
+      "maximum_analytical_error_v": 9.687419386672502e-07,
+      "minimum_input_v": -1.418435402513513
+    },
+    {
+      "name": "rc-c1.2e-05-r40000-s0",
+      "points_checked": 175022,
+      "maximum_analytical_error_v": 4.038157852548352e-08,
+      "minimum_input_v": 0.1910540652214312
+    },
+    {
+      "name": "rc-c1e-05-r20000-s1000",
+      "points_checked": 175022,
+      "maximum_analytical_error_v": 8.786874383659438e-08,
+      "minimum_input_v": -0.4534043801067952
+    }
+  ],
+  "coupled_d018_rail_receiver_hypotheses": [
+    {
+      "name": "coupled-bias0",
+      "points_checked": 45025,
+      "receiver_initial_bias_hypothesis_v": 0,
+      "minimum_input_at_analog_supply_ge_4_5_v": -2.090427952445229,
+      "analog_supply_at_minimum_v": 4.500453388255452,
+      "time_at_minimum_s": 0.1666950000000398,
+      "maximum_independent_integration_error_v": 4.0129854994575e-10,
+      "vmid_input_voltage_envelope_passes": true,
+      "violates_tpa_input_rating_in_powered_analog_window": true
+    },
+    {
+      "name": "coupled-bias3.875",
+      "points_checked": 45025,
+      "receiver_initial_bias_hypothesis_v": 3.875,
+      "minimum_input_at_analog_supply_ge_4_5_v": -0.2295039540954567,
+      "analog_supply_at_minimum_v": 4.500453388255452,
+      "time_at_minimum_s": 0.1666950000000398,
+      "maximum_independent_integration_error_v": 9.687492852350488e-08,
+      "vmid_input_voltage_envelope_passes": true,
+      "violates_tpa_input_rating_in_powered_analog_window": false
+    }
+  ],
+  "classification": "Preparatory RC hypotheses and unrealized isolation contract; NOT hardware qualification",
+  "hashes": {
+    "simulation/analog/input-power-order.json": "9cd67b003a855e4b8f1b8e3176daf64a800a9d8a904eaf2a46301c160d4791b7",
+    "simulation/analog/input-coupling.cir": "9b64afc18d15118cefefb26f640e7add702372589c5673bb05234f8d988fc876",
+    "scripts/simulate_input_power_order.py": "8658c5470fb2f7d44ebb1eeb20db8f2af5648f8164ca160590afba79e2f89af7",
+    "kicad/core-selected/core-manifest.json": "c30dd838895f625e641d76fe2199a89b2cbdbbac9b7194beaaefc5e15e2dbd74",
+    "kicad/analog-protected/vmid-manifest.json": "f4ab47cd848ccf1d1e14ed1c0d52f7ccb51eb6b55bfe189640ab7730778ff119",
+    "kicad/core-selected/ps28-modern.kicad_sch": "63ab6dc33d89510fd536616a62e29561d68b5bd0ccdd6294df5f34f85825e7e9",
+    "kicad/analog-protected/analog-protected.kicad_sch": "f46adefe0383358837e4eb49a41fe21b8017f39b549f789c10675ca4ac277303",
+    "simulation/analog/vmid-protection.json": "c44c0878556a9034e0764a2635e3768964bccd538d14dec7185f44749946e62a",
+    "scripts/simulate_vmid_protection.py": "ff745ebfc8f0a0d61380580ed5b2494fda64e078c694873effce407eba019b10",
+    "scripts/simulate_opa1656.py": "462214c11b8ee4decbd9afa32ee6e5493a7cfe38dbed35cd80369ded83e5318a"
+  },
+  "sources": [
+    {
+      "file": "reference/ti/tpa3255.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/tpa3255.pdf",
+      "document": "TI SLASEA8A, October 2016, sections 7.1 p.5, 7.5 p.6, 11.2 figure 32 p.30, 11.3 p.31",
+      "sha256": "d8533eff6fcbb901e90c67f3a1f5af939c44daf22d9b769775079d5b789a202f",
+      "local_pdf_hash_rechecked": true
+    },
+    {
+      "file": "reference/ti/tmux7211.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/tmux7211.pdf",
+      "document": "TI SCDS416D, July 2024, sections 6.1 p.5 and 6.4 p.6; rejected for this role",
+      "sha256": "e2f1799be16893fd7c756f13aeb782e33838d63602edae5383a0b59febda00af",
+      "local_pdf_hash_rechecked": true
+    },
+    {
+      "file": "reference/ti/tmux7462f.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/tmux7462f.pdf",
+      "document": "TI SCDS394B, June 2023, section 6.1 p.4; source/drain ratings differ; not selected",
+      "sha256": "62c57abf3394c86e6e6ff8fb25760ae9a7f65709c9bb485d521edcf9186d7f5d",
+      "local_pdf_hash_rechecked": true
+    },
+    {
+      "file": "reference/ti/opa1656.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/opa1656.pdf",
+      "document": "TI SBOS901C, September 2022, section 6.3 p.4: recommended supply minimum 4.5 V; no unpowered behavior extrapolation",
+      "sha256": "4243b58e553e6f27274858637c596596dbb89bba94d05b44fedd32877d988e9d",
+      "local_pdf_hash_rechecked": true
+    }
+  ],
+  "actual_poweroff_impedance_bias_driver_behavior_characterized": false,
+  "vendor_macro_executed": false,
+  "existing_interface_protected": false,
+  "hardware_validated": false
+}

@@ -1,0 +1,12 @@
+TPA input coupling: passive RC COUNTEREXAMPLE, not a TPA/OPA device model
+* TI SLASEA8A 7.5 p.6 gives RIN=20k typical at powered test conditions.
+* Treating this resistance and AVDD/2 as an unpowered Thevenin bias is a
+* HYPOTHESIS, NOT a TI guarantee. No internal clamps are modeled or presumed.
+* Receiver bias falls first; driver remains between 5 and 2.25 V throughout.
+* A preamp tracking this proxy would have a 10..4.5 V supply, never below 4.5.
+VDRIVER driver 0 PWL(0 5 .12 5 .15 2.25 .35 2.25)
+VBIAS bias 0 PWL(0 3.875 .02 3.875 .020001 0 .35 0)
+C20 driver tp 10u
+RIN tp bias 20k
+* No SPICE control: runner supplies independent per-case commands/data paths.
+.end

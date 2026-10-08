@@ -37,6 +37,11 @@ O checker é revisão automatizada, não substitui revisão elétrica independen
   captura integrada32/80/ERC0;33 testes de rede e9 LR4 passaram sob envelope.
   Ainda faltam ESR/pulso/temperatura, proteção de sinais externos/power-order TPA,
   fonte/supervisor e qualificação completa; nenhuma aprovação física.
+
+  [D-019: power-order/pré-carga](input-power-order-study.md): 288 hipóteses RC
+  e quatro comparações SPICE preservam contraprovas de tensão negativa nas
+  entradas TPA. Isolamento pós-capacitor, mute analógico e pré-carga observada
+  ainda são contrato sem circuito/MPNs; J102 não foi conectado ao núcleo.
 - **Bloqueador — woofer:** ainda não há limitador, high-pass qualificado nem
   proteção DC diferencial. Proteções internas do CI não garantem proteção de
   cone/bobina. Projetar detecção após LC entre SPK+ e SPK−, rejeitando PWM sem

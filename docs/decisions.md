@@ -74,4 +74,14 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   consumo/térmica/divisor, queda de rail, pulso, ESR/temperatura e power-order
   TPA/sinais externos ainda requerem qualificação. Não outra PCB/mounts/MCU.
   Ver `vmid-protection.md` e relatórios; decisão reversível,2026-10-08.
+- D-019 — Bloquear integração energizável da saída analógica até proteção de
+INPUT_A/B e pré-carga qualificada. Adotar contrato **preparatório**, não um
+circuito/MPN aprovado: isolamento depois de C20/C21, controle da placa isolada,
+mute analógico e observação de DC antes de áudio; auditar ambos os terminais
+quando a chave estiver sem alimentação. Contraprovas RC mostram que capacitor,
+resistor série, chave upstream ou reconexão com áudio não demonstram segurança.
+Não tratar RIN/bias típicos como garantia de CI desligado nem usar 1 mA como permissão
+para violar −0,3…7 V. Objetivo: impedir fechamento falso de ELEC-002/003;
+risco: limites de chave/slew/pré-carga ainda TBD. Ver
+`input-power-order-study.md`, relatório e regressões; 2026-10-08.
 Não confundir decisão de arquitetura com liberação de fabricação/energização.

@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "classification": "Preparatory RC hypotheses and unrealized isolation contract; NOT hardware qualification",
+  "input_absolute_limits_v": [-0.3, 7.0],
+  "coupling_nominal_f": 0.00001,
+  "hypothesis_capacitances_f": [0.000001, 0.00001, 0.000012],
+  "hypothesis_return_resistances_ohm": [10000, 20000, 40000],
+  "hypothesis_series_resistances_ohm": [0, 1000],
+  "hypothesis_initial_receiver_bias_v": [0, 3.875],
+  "hypothesis_receiver_first_delays_s": [0, 0.1],
+  "hypothesis_driver_falls_s": [0.000001, 0.002, 0.02, 0.1],
+  "driver_initial_v": 5.0,
+  "driver_final_v": 2.25,
+  "signal_peak_v": 1.4142135623730951,
+  "signal_frequency_hz": 20,
+  "startup_receiver_bias_v": 3.875,
+  "startup_qualified_dc_window_v": [2.0, 5.0],
+  "isolation_contract_requirements_not_measured": {
+    "maximum_detection_and_open_delay_s": 0.0001,
+    "maximum_driver_step_v": 0.1,
+    "maximum_driver_slew_v_per_s": 1000,
+    "maximum_charge_injection_c": 0.00000000002,
+    "minimum_added_pin_capacitance_f": 0.000000004,
+    "maximum_off_capacitance_f": 0.000000000005,
+    "maximum_isolated_plate_excursion_v": 16,
+    "maximum_off_leakage_a": 0.0000001,
+    "maximum_external_return_resistance_ohm": 50000,
+    "maximum_preclose_plate_error_v": 0.01,
+    "minimum_margin_to_absolute_v": 0.05
+  },
+  "sources": [
+    {
+      "file": "reference/ti/tpa3255.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/tpa3255.pdf",
+      "document": "TI SLASEA8A, October 2016, sections 7.1 p.5, 7.5 p.6, 11.2 figure 32 p.30, 11.3 p.31",
+      "sha256": "d8533eff6fcbb901e90c67f3a1f5af939c44daf22d9b769775079d5b789a202f"
+    },
+    {
+      "file": "reference/ti/tmux7211.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/tmux7211.pdf",
+      "document": "TI SCDS416D, July 2024, sections 6.1 p.5 and 6.4 p.6; rejected for this role",
+      "sha256": "e2f1799be16893fd7c756f13aeb782e33838d63602edae5383a0b59febda00af"
+    },
+    {
+      "file": "reference/ti/tmux7462f.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/tmux7462f.pdf",
+      "document": "TI SCDS394B, June 2023, section 6.1 p.4; source/drain ratings differ; not selected",
+      "sha256": "62c57abf3394c86e6e6ff8fb25760ae9a7f65709c9bb485d521edcf9186d7f5d"
+    },
+    {
+      "file": "reference/ti/opa1656.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/opa1656.pdf",
+      "document": "TI SBOS901C, September 2022, section 6.3 p.4: recommended supply minimum 4.5 V; no unpowered behavior extrapolation",
+      "sha256": "4243b58e553e6f27274858637c596596dbb89bba94d05b44fedd32877d988e9d"
+    }
+  ]
+}

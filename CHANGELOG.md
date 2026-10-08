@@ -5,6 +5,13 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 ## [Unreleased]
 
 ### Added
+- D-019: 288 hipóteses RC/196 violações e quatro comparações ngspice para
+C20/C21 e power-order TPA, mais duas redes com a alimentação D-018 intacta;
+VMID protegido não qualifica entrada TPA. Capacitor/resistor série/chave upstream e conexão
+com áudio preservados como contraprovas. Contrato de isolamento/pré-carga
+condicional, sem MPN escolhido ou proteção física aprovada; fontes TI auditadas.
+- `make simulate-input-order`, dez regressões offline, hashes de circuito/código/
+capturas, logs de CI e integração ao `make simulate`; PCBs/schematics intactos.
 - Teste de geração/refusal/retrocompatibilidade usa cache real de símbolos
   incorporados às capturas, permitindo CI sem bibliotecas globais KiCad;
   nenhum teste/critério/modelo suprimido. ERC nativo permanece validação separada.

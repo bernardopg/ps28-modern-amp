@@ -60,6 +60,14 @@ Captura integrada32 componentes/80 pinos/ERC0; preserve contraprova sem isolamen
 Ainda Blocked: confirmar ESR/aging/temperatura/Vf/pulso/MPNs/correntes, proteger
 sinais externos/TPA power-order, supervisor/fonte; nenhuma qualificação de hardware.
 
+D-019: 288 hipóteses RC (196 violações neste equivalente), quatro comparações
+ngspice, duas redes acopladas D-018 e regressões de desligamento/conexão fria;
+capacitor/resistor série
+não demonstram proteção. Mute/pré-carga observada e isolamento pós-C20/C21
+permanecem contrato condicional sem parts/circuito. Bias/impedância desligados
+TPA não caracterizados; nenhuma captura promovida. Ver
+`docs/input-power-order-study.md` e `tests/reports/input-power-order-study.json`.
+
 ## Risco / aprovação
 
 Alterações de hardware exigem fonte primária e gate humano; sem pedidos automáticos.
