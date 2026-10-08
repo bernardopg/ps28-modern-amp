@@ -1,0 +1,1709 @@
+{
+  "renderer": "10.0.7",
+  "source_commit": "4d97b885a41ba5dc98ea31a140a5c290364adde5",
+  "method": "kicad-cli pcb render; Pillow adds status bands and encodes GIFs only",
+  "hardware_validated": false,
+  "manufacturing_approved": false,
+  "designs": {
+    "selected": {
+      "pcb": "kicad/core-selected/ps28-modern.kicad_pcb",
+      "pcb_sha256": "2f3ab1f1667a714c892b0e1c31d9a7447c1772f695b11268b348edec311aed99",
+      "footprints": 47,
+      "without_available_model": [
+        "C1",
+        "J1",
+        "J5",
+        "J6",
+        "L1",
+        "L2",
+        "U1"
+      ],
+      "model_audit": [
+        {
+          "reference": "R9",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "J2",
+          "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x02_P2.54mm_Vertical.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C1",
+          "footprint": "PS28:WE_860020575014",
+          "models": [],
+          "missing_models": [],
+          "has_available_model": false
+        },
+        {
+          "reference": "C3",
+          "footprint": "Capacitor_SMD:C_0805_2012Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "J4",
+          "footprint": "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_2x04_P2.54mm_Vertical.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C12",
+          "footprint": "Capacitor_SMD:C_1206_3216Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1206_3216Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "J5",
+          "footprint": "PS28:WE_WR_TBL_691137710002",
+          "models": [],
+          "missing_models": [],
+          "has_available_model": false
+        },
+        {
+          "reference": "C27",
+          "footprint": "Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_THT.3dshapes/C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C28",
+          "footprint": "Capacitor_SMD:C_1206_3216Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1206_3216Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C4",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "L1",
+          "footprint": "PS28:WE_HCF2013_7443631000",
+          "models": [],
+          "missing_models": [],
+          "has_available_model": false
+        },
+        {
+          "reference": "C9",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "U1",
+          "footprint": "Package_SO:HTSSOP-44_6.1x14mm_P0.635mm_TopEP4.14x7.01mm",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/HTSSOP-44_6.1x14mm_P0.635mm_TopEP4.14x7.01mm.step"
+          ],
+          "missing_models": [
+            "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/HTSSOP-44_6.1x14mm_P0.635mm_TopEP4.14x7.01mm.step"
+          ],
+          "has_available_model": false
+        },
+        {
+          "reference": "C18",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C29",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C10",
+          "footprint": "Capacitor_SMD:C_1206_3216Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1206_3216Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C14",
+          "footprint": "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_THT.3dshapes/CP_Radial_D18.0mm_P7.50mm.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C16",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C6",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C5",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C13",
+          "footprint": "Capacitor_SMD:C_1206_3216Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1206_3216Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C23",
+          "footprint": "Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_THT.3dshapes/C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "R2",
+          "footprint": "Resistor_SMD:R_1206_3216Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_1206_3216Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "R7",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "R8",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C8",
+          "footprint": "Capacitor_SMD:C_0402_1005Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C2",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C20",
+          "footprint": "Capacitor_SMD:C_0805_2012Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C11",
+          "footprint": "Capacitor_SMD:C_1206_3216Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1206_3216Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "J3",
+          "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "L2",
+          "footprint": "PS28:WE_HCF2013_7443631000",
+          "models": [],
+          "missing_models": [],
+          "has_available_model": false
+        },
+        {
+          "reference": "R1",
+          "footprint": "Resistor_SMD:R_1206_3216Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_1206_3216Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C21",
+          "footprint": "Capacitor_SMD:C_0805_2012Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C15",
+          "footprint": "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_THT.3dshapes/CP_Radial_D18.0mm_P7.50mm.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "R3",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C19",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C17",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "J6",
+          "footprint": "MountingHole:MountingHole_3.2mm_M3_Pad",
+          "models": [],
+          "missing_models": [],
+          "has_available_model": false
+        },
+        {
+          "reference": "R5",
+          "footprint": "Resistor_SMD:R_1206_3216Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_1206_3216Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C24",
+          "footprint": "Capacitor_SMD:C_1206_3216Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1206_3216Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "J1",
+          "footprint": "PS28:WE_WR_TBL_691137710002",
+          "models": [],
+          "missing_models": [],
+          "has_available_model": false
+        },
+        {
+          "reference": "C25",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "R6",
+          "footprint": "Resistor_SMD:R_1206_3216Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_1206_3216Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "R4",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C7",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C26",
+          "footprint": "Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_THT.3dshapes/C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C22",
+          "footprint": "Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_THT.3dshapes/C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        }
+      ],
+      "native_commands": [
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "1280",
+          "--height",
+          "800",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,25",
+          "--output",
+          "build/renders/native/selected-isometric.png",
+          "--perspective",
+          "kicad/core-selected/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "1280",
+          "--height",
+          "800",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "0,0,0",
+          "--output",
+          "build/renders/native/selected-top.png",
+          "kicad/core-selected/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "1280",
+          "--height",
+          "800",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "bottom",
+          "--rotate",
+          "0,0,0",
+          "--output",
+          "build/renders/native/selected-bottom.png",
+          "kicad/core-selected/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,0",
+          "--output",
+          "build/renders/native/selected-frame-000.png",
+          "--perspective",
+          "kicad/core-selected/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,22.5",
+          "--output",
+          "build/renders/native/selected-frame-001.png",
+          "--perspective",
+          "kicad/core-selected/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,45",
+          "--output",
+          "build/renders/native/selected-frame-002.png",
+          "--perspective",
+          "kicad/core-selected/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,67.5",
+          "--output",
+          "build/renders/native/selected-frame-003.png",
+          "--perspective",
+          "kicad/core-selected/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,90",
+          "--output",
+          "build/renders/native/selected-frame-004.png",
+          "--perspective",
+          "kicad/core-selected/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,112.5",
+          "--output",
+          "build/renders/native/selected-frame-005.png",
+          "--perspective",
+          "kicad/core-selected/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,135",
+          "--output",
+          "build/renders/native/selected-frame-006.png",
+          "--perspective",
+          "kicad/core-selected/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,157.5",
+          "--output",
+          "build/renders/native/selected-frame-007.png",
+          "--perspective",
+          "kicad/core-selected/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,180",
+          "--output",
+          "build/renders/native/selected-frame-008.png",
+          "--perspective",
+          "kicad/core-selected/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,202.5",
+          "--output",
+          "build/renders/native/selected-frame-009.png",
+          "--perspective",
+          "kicad/core-selected/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,225",
+          "--output",
+          "build/renders/native/selected-frame-010.png",
+          "--perspective",
+          "kicad/core-selected/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,247.5",
+          "--output",
+          "build/renders/native/selected-frame-011.png",
+          "--perspective",
+          "kicad/core-selected/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,270",
+          "--output",
+          "build/renders/native/selected-frame-012.png",
+          "--perspective",
+          "kicad/core-selected/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,292.5",
+          "--output",
+          "build/renders/native/selected-frame-013.png",
+          "--perspective",
+          "kicad/core-selected/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,315",
+          "--output",
+          "build/renders/native/selected-frame-014.png",
+          "--perspective",
+          "kicad/core-selected/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,337.5",
+          "--output",
+          "build/renders/native/selected-frame-015.png",
+          "--perspective",
+          "kicad/core-selected/ps28-modern.kicad_pcb"
+        ]
+      ],
+      "images": [
+        "selected-isometric.png",
+        "selected-top.png",
+        "selected-bottom.png"
+      ],
+      "gif": "selected-orbit.gif",
+      "frames": 16,
+      "frame_duration_ms": 140,
+      "models_are_visual_not_manufacturer_qualification": true,
+      "gif_size_pixels": [
+        784,
+        558
+      ],
+      "png_size_pixels": [
+        1264,
+        862
+      ]
+    },
+    "oem": {
+      "pcb": "kicad/core-oem-refined/ps28-modern.kicad_pcb",
+      "pcb_sha256": "a411e0b47843fb179f5d3bf621118539ccafcd4fc8e6c0617c5bc5c397222215",
+      "footprints": 47,
+      "without_available_model": [
+        "C1",
+        "J1",
+        "J5",
+        "J6",
+        "L1",
+        "L2",
+        "U1"
+      ],
+      "model_audit": [
+        {
+          "reference": "R9",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "J2",
+          "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x02_P2.54mm_Vertical.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C1",
+          "footprint": "PS28:WE_860020575014",
+          "models": [],
+          "missing_models": [],
+          "has_available_model": false
+        },
+        {
+          "reference": "C3",
+          "footprint": "Capacitor_SMD:C_0805_2012Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "J4",
+          "footprint": "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_2x04_P2.54mm_Vertical.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C12",
+          "footprint": "Capacitor_SMD:C_1206_3216Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1206_3216Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "J5",
+          "footprint": "PS28:WE_WR_TBL_691137710002",
+          "models": [],
+          "missing_models": [],
+          "has_available_model": false
+        },
+        {
+          "reference": "C27",
+          "footprint": "Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_THT.3dshapes/C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C28",
+          "footprint": "Capacitor_SMD:C_1206_3216Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1206_3216Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C4",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "L1",
+          "footprint": "PS28:WE_HCF2013_7443631000",
+          "models": [],
+          "missing_models": [],
+          "has_available_model": false
+        },
+        {
+          "reference": "C9",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "J6",
+          "footprint": "PS28:Ground_Bond_SMD_6mm",
+          "models": [],
+          "missing_models": [],
+          "has_available_model": false
+        },
+        {
+          "reference": "U1",
+          "footprint": "Package_SO:HTSSOP-44_6.1x14mm_P0.635mm_TopEP4.14x7.01mm",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/HTSSOP-44_6.1x14mm_P0.635mm_TopEP4.14x7.01mm.step"
+          ],
+          "missing_models": [
+            "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/HTSSOP-44_6.1x14mm_P0.635mm_TopEP4.14x7.01mm.step"
+          ],
+          "has_available_model": false
+        },
+        {
+          "reference": "C18",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C29",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C10",
+          "footprint": "Capacitor_SMD:C_1206_3216Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1206_3216Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C14",
+          "footprint": "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_THT.3dshapes/CP_Radial_D18.0mm_P7.50mm.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C16",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C6",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C5",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C13",
+          "footprint": "Capacitor_SMD:C_1206_3216Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1206_3216Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C23",
+          "footprint": "Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_THT.3dshapes/C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "R2",
+          "footprint": "Resistor_SMD:R_1206_3216Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_1206_3216Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "R7",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "R8",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C8",
+          "footprint": "Capacitor_SMD:C_0402_1005Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C2",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C20",
+          "footprint": "Capacitor_SMD:C_0805_2012Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C11",
+          "footprint": "Capacitor_SMD:C_1206_3216Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1206_3216Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "J3",
+          "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "L2",
+          "footprint": "PS28:WE_HCF2013_7443631000",
+          "models": [],
+          "missing_models": [],
+          "has_available_model": false
+        },
+        {
+          "reference": "R1",
+          "footprint": "Resistor_SMD:R_1206_3216Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_1206_3216Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C21",
+          "footprint": "Capacitor_SMD:C_0805_2012Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C15",
+          "footprint": "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_THT.3dshapes/CP_Radial_D18.0mm_P7.50mm.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "R3",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C19",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C17",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "R5",
+          "footprint": "Resistor_SMD:R_1206_3216Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_1206_3216Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C24",
+          "footprint": "Capacitor_SMD:C_1206_3216Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1206_3216Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "J1",
+          "footprint": "PS28:WE_WR_TBL_691137710002",
+          "models": [],
+          "missing_models": [],
+          "has_available_model": false
+        },
+        {
+          "reference": "C25",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "R6",
+          "footprint": "Resistor_SMD:R_1206_3216Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_1206_3216Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "R4",
+          "footprint": "Resistor_SMD:R_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C7",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C26",
+          "footprint": "Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_THT.3dshapes/C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C22",
+          "footprint": "Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_THT.3dshapes/C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        }
+      ],
+      "native_commands": [
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "1280",
+          "--height",
+          "800",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,25",
+          "--output",
+          "build/renders/native/oem-isometric.png",
+          "--perspective",
+          "kicad/core-oem-refined/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "1280",
+          "--height",
+          "800",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "0,0,0",
+          "--output",
+          "build/renders/native/oem-top.png",
+          "kicad/core-oem-refined/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "1280",
+          "--height",
+          "800",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "bottom",
+          "--rotate",
+          "0,0,0",
+          "--output",
+          "build/renders/native/oem-bottom.png",
+          "kicad/core-oem-refined/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,0",
+          "--output",
+          "build/renders/native/oem-frame-000.png",
+          "--perspective",
+          "kicad/core-oem-refined/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,22.5",
+          "--output",
+          "build/renders/native/oem-frame-001.png",
+          "--perspective",
+          "kicad/core-oem-refined/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,45",
+          "--output",
+          "build/renders/native/oem-frame-002.png",
+          "--perspective",
+          "kicad/core-oem-refined/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,67.5",
+          "--output",
+          "build/renders/native/oem-frame-003.png",
+          "--perspective",
+          "kicad/core-oem-refined/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,90",
+          "--output",
+          "build/renders/native/oem-frame-004.png",
+          "--perspective",
+          "kicad/core-oem-refined/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,112.5",
+          "--output",
+          "build/renders/native/oem-frame-005.png",
+          "--perspective",
+          "kicad/core-oem-refined/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,135",
+          "--output",
+          "build/renders/native/oem-frame-006.png",
+          "--perspective",
+          "kicad/core-oem-refined/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,157.5",
+          "--output",
+          "build/renders/native/oem-frame-007.png",
+          "--perspective",
+          "kicad/core-oem-refined/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,180",
+          "--output",
+          "build/renders/native/oem-frame-008.png",
+          "--perspective",
+          "kicad/core-oem-refined/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,202.5",
+          "--output",
+          "build/renders/native/oem-frame-009.png",
+          "--perspective",
+          "kicad/core-oem-refined/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,225",
+          "--output",
+          "build/renders/native/oem-frame-010.png",
+          "--perspective",
+          "kicad/core-oem-refined/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,247.5",
+          "--output",
+          "build/renders/native/oem-frame-011.png",
+          "--perspective",
+          "kicad/core-oem-refined/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,270",
+          "--output",
+          "build/renders/native/oem-frame-012.png",
+          "--perspective",
+          "kicad/core-oem-refined/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,292.5",
+          "--output",
+          "build/renders/native/oem-frame-013.png",
+          "--perspective",
+          "kicad/core-oem-refined/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,315",
+          "--output",
+          "build/renders/native/oem-frame-014.png",
+          "--perspective",
+          "kicad/core-oem-refined/ps28-modern.kicad_pcb"
+        ],
+        [
+          "kicad-cli",
+          "pcb",
+          "render",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--quality",
+          "high",
+          "--background",
+          "opaque",
+          "--side",
+          "top",
+          "--rotate",
+          "325,0,337.5",
+          "--output",
+          "build/renders/native/oem-frame-015.png",
+          "--perspective",
+          "kicad/core-oem-refined/ps28-modern.kicad_pcb"
+        ]
+      ],
+      "images": [
+        "oem-isometric.png",
+        "oem-top.png",
+        "oem-bottom.png"
+      ],
+      "gif": "oem-orbit.gif",
+      "frames": 16,
+      "frame_duration_ms": 140,
+      "models_are_visual_not_manufacturer_qualification": true,
+      "gif_size_pixels": [
+        784,
+        558
+      ],
+      "png_size_pixels": [
+        1264,
+        862
+      ]
+    }
+  },
+  "asset_sha256": {
+    "oem-bottom.png": "2f063ea20201ffb90409a928d40feb9c8e07a7a6bff84162fecdbd5a464aae38",
+    "oem-isometric.png": "9d35550ff08081fe943ada523e203f9e000718c8d24051e10b30556fc27889d0",
+    "oem-orbit.gif": "9f66fd6a4e1b499b22f4ae19b15ca25c1ce149d3e525a74fecaaf11d9e121b02",
+    "oem-top.png": "73b8093cdeb382d3cf106a78bf6c27db4bf236b34c904c5a155797b9d9bbd93b",
+    "selected-bottom.png": "b8698ae7544e5b962e302e25d4eff17bb5d676e799539a5a0072a1b22a9db8df",
+    "selected-isometric.png": "9feaa64acdc3b293ddcb37b6bdca571b101a61d077f2cf26cf93dcdda65f4a9f",
+    "selected-orbit.gif": "20cbf0092aa6c4a5db8ec17ecfbd114a8b774f32b7f7890ad2b0ad9805d16dd8",
+    "selected-top.png": "cc1bf5d5f4b901a7fe54cc9c54316e461b64f49224bf61e9aac80c37d51b0896"
+  }
+}

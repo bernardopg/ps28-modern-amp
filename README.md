@@ -20,7 +20,7 @@ medições, excursão, clipping e térmica. Não há fonte de rede na PCB nem MC
 ```bash
 make check       # documentação, tasks, skills e testes de infraestrutura
 make doctor      # auditoria local, sem instalar ou alterar o sistema
-make simulate    # LR4 ideal; não valida a implementação física
+make simulate    # LR4/LC ideais; não valida a implementação física
 make eda-smoke   # parsing de containers; registra warnings conhecidos do KiCad
 make erc         # apenas quando houver schematic não vazio
 make drc         # apenas quando houver PCB não vazia
@@ -35,6 +35,20 @@ DRC: geometria/paridade sem ocorrências, 109 conexões ainda não roteadas.
 Mounting points e dissipação OEM fixos; reconstrução e conferência do gabarito
 original pendentes. Referência: mechanical/original-board-reference.md.
 Stackup, roteamento e fabricação não aprovados.
+
+## Renders 3D do próprio KiCad
+
+**Estudo não roteado; modelos 3D incompletos; não aprovado para fabricação.**
+
+![Candidata OEM refinada — KiCad 3D](docs/images/kicad-3d/oem-isometric.png)
+
+![Órbita da candidata OEM — frames nativos KiCad](docs/images/kicad-3d/oem-orbit.gif)
+
+[Galeria completa: B/OEM, imagens e dois GIFs](docs/images/kicad-3d/README.md)
+· [Auditoria e proveniência](docs/images/kicad-3d/manifest.json)
+· [Bloqueios de operacionalidade](docs/functional-readiness.md).
+As revisões anteriores permanecem preservadas; não foram adicionadas peças fictícias
+para esconder os sete footprints sem modelo disponível.
 
 ## Mapa
 

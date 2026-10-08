@@ -5,6 +5,9 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 ## [Unreleased]
 
 ### Added
+- Galeria versionada do renderizador3D nativo KiCad:6 PNGs e2 GIFs com16 frames
+  independentes cada, faixas de estudo não roteado, auditoria de modelos ausentes
+  e SHA256/commit/comandos; reprodução por `scripts/render_kicad_gallery.py`.
 - Candidata OEM refinada separada: contorno conservador153×79,1mm inferido,
   24 reservas nas quatro camadas, sem nova furação;47 footprints/142 pads,
   DRC0 geometria/0 paridade/109 não roteadas e ERC4 conflitos não excluídos.
