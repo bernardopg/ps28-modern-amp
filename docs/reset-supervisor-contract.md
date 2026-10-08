@@ -1,6 +1,7 @@
 # Contrato RESET/FAULT — preparação do supervisor, não circuito implementado
 
 ## Achado crítico
+
 **Não conectar RESET como simples AND de power-good e FAULT.**
 TI SLASEA8A Rev.A (out.2016), §9.4.1.8,p.21: RESET baixo força FAULT alto,
 apagando a informação externa de falha. §11.2/figura32,p.30: após liberar RESET,
@@ -15,9 +16,11 @@ liberar RESET em sobretemperatura; conferir CLIP_OTW alto antes de rearme.
 §11.3,p.31 recomenda RESET baixo no power-down para minimizar artefatos.
 
 ## Estados propostos, sem MCU
+
 A futura implementação deve usar supervisão, memória de falha e temporização
 analógica/lógica discreta. Estes nomes especificam comportamento, não firmware
 ou componentes escolhidos:
+
 - **SAFE:** RESET baixo por padrão, inclusive sem3V3 de controle. R9 legado10 kΩ **não** garante VIL≤0,8 V com fuga100 µA (§7.5p8).
   D-020 usa4,7 kΩ só na candidata; driver/backfeed/rampas seguem pendentes. Não inferir rail válido só pela existência de tensão.
 - **STARTING:** somente liberar RESET após rails/VMID estáveis e autorização;
@@ -33,6 +36,7 @@ ou componentes escolhidos:
   Falhas persistentes exigem diagnóstico; não aumentar limite de corrente.
 
 ## Bloqueios de captura e ensaio
+
 - Limiares/histerese, tolerância, ripple e velocidade de perda de PVDD/12V/3V3/VMID:
   TBD; dimensionar conforme fontes reais e thresholds TI, não escolher por estética.
 - Janela de blanking/timeout baseada em C_START, AVDD, pré-carga e ramp-up:
@@ -44,6 +48,7 @@ ou componentes escolhidos:
 - Não há simulação real do supervisor, ERC desse bloco ou sign-off de proteção DC.
 
 ## VMID e proteção dos pinos — D-017
+
 [Estudo físico de VMID](vmid-buffer-study.md): o RC de referência pode manter
 REF acima de V++0,5 V quando AUX cai. RESET baixo não evita injeção nos pinos
 analógicos nem backfeed pelo driver/VMID. Qualificar descarga/clamp/corrente e
@@ -59,6 +64,7 @@ J102 não pode ser ligado ao núcleo energizável antes da revisão de todos os
 pinos/coupling e power-order. Não reutilizar timeout≈0,33s da candidata anterior.
 
 ## Interface de saída — contrato preparatório D-019
+
 [Contraprovas e requisitos](input-power-order-study.md): INPUT_X tem limite
 absoluto −0,3…7 V relativo a GND, diferente do OPA1656. A pré-carga da Fig.32
 não pode ser substituída por reconectar capacitores com áudio já ativo.
@@ -71,6 +77,7 @@ timeout de produto; FAULT alto não comprova pré-carga concluída. O input RIN
 20 kΩ típico não garante retorno quando desligado. Nenhuma integração liberada.
 
 ## Incremento D-020 — especificação, não circuito
+
 TI §11.2p30 recomenda RESET baixo≥250 ms apósPVDD. Timer300 ms típico com
 mínimo180 ms não atende; contrato executável usa mínimo360 ms e observações
 explícitas. FAULT/CLIP_OTW têm pull-ups internos20…32 kΩ aDVDD (§7.5p8):
@@ -79,6 +86,7 @@ Supervisor/mute/proteção físicos ainda não capturados; latência100 µs não
 Ver [sequência e pesquisa](integration-protection-review.md).
 
 ## Testes futuros obrigatórios
+
 Fonte faltante/em ordem invertida; VMID fora de faixa; FAULT inicial normal;
 FAULT persistente; FAULT seguido de RESET baixo sem autorrearme; OTW ativo ao
 rearmar; brownout breve/lento; power-down; chaveamento de fase/volume; falha da

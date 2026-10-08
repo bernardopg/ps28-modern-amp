@@ -1,12 +1,13 @@
 # Roadmap
 
 ## Incremento atual autorizado
+
 [PCB-003](items/PCB-003.md): captura e placement exploratório do core PBTL,
 conforme pedido de início da PCB. Não fecha M1/G0 nem libera fabricação;
 fonte D-010, magnetics, térmica e dimensões continuam dependentes de evidências.
 
-
 ## Snapshot D-018/D-019 — 2026-10-08
+
 [Mapa de capturas, PCBs e bloqueios](../docs/development-status.md): core B/OEM
 preservado; analógico protegido32/80/ERC0 ainda sem PCB; isolamento/pré-carga
 D-019 ainda sem implementação. Galeria 3D nativa regenerada mostra só o núcleo,

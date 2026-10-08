@@ -1,7 +1,9 @@
 # Toolchain e auditoria local
+
 Snapshot em 2026-10-07 (relógio da máquina); reproduzir com make doctor.
 
 ## Verificado
+
 Arch Linux x86_64; KiCad 10.0.7; bibliotecas símbolos/footprints/3D 10.0.7;
 ngspice 47; Python 3.14.7; uv 0.12.23; Git e gh autenticado como bernardopg;
 poppler/pdftotext, curl, make, gcc, cmake, ninja; numpy/matplotlib disponíveis.
@@ -11,6 +13,7 @@ Isso pode significar editor fechado/socket indisponível; não prova falha de in
 Abrir PCB, confirmar Preferences → API e testar conexão antes de editar via MCP.
 
 ## Seleção enxuta, não ranking universal
+
 - Base obrigatória já instalada: KiCad oficial + libraries + ngspice + Git/CLI.
 - IA opcional já presente: paul356/KiCad-AI-Assistant MIT + kcaa da sessão.
   Validar conexão e criar snapshot antes de escrever. Não reinstalar sem necessidade.
@@ -30,6 +33,7 @@ e ferramentas já presentes. Se precisar opcionais Arch, revisar pacotes atuais 
 atualização completa de sistema, nunca atualização parcial nem curl|sh cego.
 
 ## Lacunas físicas
+
 Fonte de bancada, sonda diferencial, scope, carga, medição térmica, ESD, bancada e
 woofer não podem ser auditados por software. BENCH-001/SYS-001 são pré-requisitos.
 Documentação/simulação funcionais; containers EDA parseados, mas instalação com ressalva:

@@ -4,6 +4,7 @@
 Não reutilizar o buffer/REF22µF abaixo. A correção tem envelope explícito e gates pendentes.
 
 ## Objetivo e estado
+
 Substituir a fonte VMID ideal do estudo por divisor, buffer e carga capacitiva
 explícitos, **antes** de integrar o front-end à PCB. Resultado: comportamento
 estacionário promissor no modelo TI; **candidata NÃO aprovada para captura/integração**
@@ -11,7 +12,9 @@ porque a referência armazenada exige proteção no desligamento. Nenhuma PCB,
 mount OEM, esquema KiCad existente ou gate foi alterado.
 
 ## Fontes primárias
+
 TI OPA1656 **SBOS901C**, rev. setembro/2022:
+
 - §6.1, p.4: entrada entre V−−0,5 V e V++0,5 V; corrente de entrada ±10 mA.
   São limites absolutos, **não metas de projeto nem autorização para exceder tensão**.
 - §6.3, p.4: alimentação recomendada de 4,5–36 V single.
@@ -25,6 +28,7 @@ nenhuma alteração no modelo TI nem relaxamento de convergência. Dados e estud
 não são medições de bancada ou garantia de componentes/produção.
 
 ## Proposta avaliada, sem seleção de BOM
+
 Divisor AUX_12V → 4,7 kΩ → REF → 4,7 kΩ → GND; CREF=22 µF de REF a GND.
 Buffer OPA1656 seguidor: feedback no **driver, antes** de RISO.
 Driver → RISO → VMID; capacitor de VMID a GND com ESR explícita.
@@ -38,6 +42,7 @@ comportamento de clamp/backfeed ainda TBD. 25 Ω é referência de estudo, não
 promessa de estoque nem resistor escolhido para fabricação.
 
 ## Cálculos independentes
+
 - Rth do divisor nominal: 2,35 kΩ; τREF=51,7 ms; polo≈3,08 Hz.
 - Com RISO=25 Ω e 47 µF, τVMID≈1,175 ms (ESR pequena à parte).
 - Corners divisor/fuga a 13,2 V: REF entre 6,51050 e 6,66600 V.
@@ -47,7 +52,9 @@ promessa de estoque nem resistor escolhido para fabricação.
   Não são requisitos de bancada aprovados nem timeout escolhido do supervisor.
 
 ## Simulações executadas
+
 Relatório: [JSON versionado](../tests/reports/vmid-buffer-study.json).
+
 - **32 casos de return ratio**: 10,8/13,2 V ×0/70 °C ×25/50 Ω ×22/47 µF ×duas ESRs.
   Fonte de injeção em série no feedback, DC=0; cálculo de −Vdriver/Vfeedback.
   721 pontos de 1 Hz a 1 GHz; um cruzamento unitário por caso, mínimo de
@@ -75,6 +82,7 @@ comprovam estabilidade física, EMI, layout ou ruído. O teste de return ratio f
 checado também contra função de transferência analítica conhecida.
 
 ## Bloqueio crítico: power-down
+
 Não simulamos o macro abaixo da alimentação recomendada para inventar proteção.
 Analisamos o RC passivo, **sem clamp qualificado**, partindo de 12 V/REF=6 V,
 com rampas de AUX até zero em 0,1/2/20/100 ms. Ao fim das rampas, REF permanece

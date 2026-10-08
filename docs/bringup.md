@@ -1,4 +1,5 @@
 # Bring-up seguro
+
 Pré-requisito BENCH-001: preencher limites numéricos em tests/bench-plan.md e obter
 aprovação. Fonte ajustável limitada em corrente, DMM, sonda diferencial/scope,
 gerador/analisador, carga 4 Ω não indutiva com potência/cooling suficientes,

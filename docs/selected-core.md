@@ -1,6 +1,7 @@
 # Core B — seleção, placement e revisão
 
 ## Estado e arquivos atuais
+
 Abrir `kicad/core-selected/ps28-modern.kicad_pro`. Esta revisão tem **47 componentes,
 47 footprints e 142 pads elétricos conferidos**; os dois tabs de estabilidade dos
 indutores são pads mecânicos sem número/net. Nenhum footprint crítico ficou vazio.
@@ -13,7 +14,9 @@ Não sobrescrever buffer aberto nem matar processo com possível trabalho não s
 `make erc`, `make drc` e `make core-check` agora apontam para core-selected.
 
 ## D-012 — Peças selecionadas para validação, não para compra/liberação
+
 Fontes primárias arquivadas em reference/parts, com URLs/hash em reference/manifest.json.
+
 - **L1/L2: Wurth 7443631000**, 10 µH ±15%, Ir 16 A (ΔT50 K), Isat10% 22 A
   **típico**, DCR máximo 8,76 mΩ, corpo máximo 21,8 × 21,5 × 14,5 mm.
   Datasheet rev006.000/2025-07-08 p.1. Footprint local HCF2013 com pads 5×5 mm,
@@ -53,6 +56,7 @@ Fontes primárias arquivadas em reference/parts, com URLs/hash em reference/mani
 Nenhum preço, estoque, autenticidade/lifecycle ou equivalência de reposição foi inventado.
 
 ## Envelope elétrico calculado (não medida)
+
 Dimensionamento resistivo150W/4Ω: Irms=6,124A, pico=8,660A por indutor, não metade.
 Com36V, fPWM mínimo430kHz e Lmín8,5µH, ripple triangular máximo aproximado
 36/(4×430k×8,5µ)=2,462App; pico estimado9,892A. Margem perante22A típico não
@@ -68,6 +72,7 @@ impedância do woofer ou estabilidade física do TPA3255.
 Bulk novo armazena aproximadamente1,94J a36V; limites de descarga/inrush permanecem.
 
 ## Placement refinado e revisão de regras
+
 Indutores alinhados aos loops de saída, filme próximo ao LC, bulk separado do analógico,
 J1 alimentação/J5 saída/J6 bond distintos. L2 girado180° com reversão dos pins1/2
 DO INDUTOR NÃO ACOPLADO no schematic também; OUT_B/D e SPK_N não foram trocados.
@@ -75,15 +80,16 @@ Corrigidos conflito de silkC20/bulk, courtyard de C1 por tolerância de diâmetr
 BOM de J6 e nome de camada de footprint. `Rescue` não é camada válida: teste captura isso.
 
 ERC bruto: **4 pin_to_pin**, todos revisados/classificados:
+
 1. OUT_A39/40: pads duplicados da mesma saída física, intencionalmente unidos.
 2. OUT_D27/28: idem.
 3. OUT_C32/OUT_A39: paralelamento PBTL exigido pela figura31.
 4. OUT_B35/OUT_D28: paralelamento PBTL exigido pela figura31.
-M1=GND/M2=DVDD e INPUT_C/D=GND conferidos contra tabela11. Não alterados tipos dos
-outputs nem matriz global para esconder conflitos. As quatro falsas faltas de fonteBST
-foram resolvidas com hints PWR_FLAG explícitos da alimentação bootstrap interna, sem
-introduzir fonte externa ou parte física. **Nenhuma exclusão dos quatro conflitos aplicada**;
-exceções específicas/revisão independente exigidas para freeze, não ERC geral relaxado.
+   M1=GND/M2=DVDD e INPUT_C/D=GND conferidos contra tabela11. Não alterados tipos dos
+   outputs nem matriz global para esconder conflitos. As quatro falsas faltas de fonteBST
+   foram resolvidas com hints PWR_FLAG explícitos da alimentação bootstrap interna, sem
+   introduzir fonte externa ou parte física. **Nenhuma exclusão dos quatro conflitos aplicada**;
+   exceções específicas/revisão independente exigidas para freeze, não ERC geral relaxado.
 
 DRC/paridade atual: **zero violações geométricas, zero divergências de paridade,
 109 conexões não roteadas**. O aumento85→109 decorre dos 12 footprints que faltavam
@@ -92,6 +98,7 @@ agora presentes e do header expandido. Não são defeitos resolvidos por desativ
 Logs e exports em build/core-selected, resumo em tests/reports/core-selected-review.json.
 
 ## D-013 — Integrar ao gabinete/plate/dissipador originais
+
 Escolhido adaptador de cobre no PowerPAD superior ligado ao dissipador metálico original,
 com braço elevado para não tocar SMDs, apoio/fixação reagindo no suporte e GND viaJ6.
 Preservar vedação acústica e barreiras do primário. Não confundir caixa com dissipador.

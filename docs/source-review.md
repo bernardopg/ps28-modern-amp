@@ -1,8 +1,10 @@
 # Revisão do starter original
+
 Todos os 15 documentos de raiz e cinco skills originais foram lidos e preservados
 em docs/archive/chatgpt; primeiro commit conserva paths e conteúdo exatos.
 
 Correções:
+
 - Markdown truncado: tabelas BOM/requisitos, títulos e passos de segurança foram
   reescritos; fragmentos não foram reconstruídos como fatos sem evidência.
 - Baseline virou proposta; potência/custo/woofer/fonte não são validações reais.

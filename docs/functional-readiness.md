@@ -1,6 +1,7 @@
 # Operacionalidade — revisão do núcleo e bloqueios do produto
 
 ## Estado verificável
+
 A candidata separada `kicad/core-oem-refined/` preserva B e C, sem modificar buffers
 antigos. É estudo de integração OEM, **não produto operacional nem PCB fabricável**.
 `core-selected` permanece o padrão dos comandos existentes; conferir a candidata com
@@ -12,6 +13,7 @@ ERC nativo:4 conflitos `pin_to_pin`, ainda sem exclusões. G0–G5 continuam pen
 O checker é revisão automatizada, não substitui revisão elétrica independente.
 
 ## Achados que afetam funcionamento
+
 - **Bloqueador — fonte:** J1/PVDD e J2/AUX_12V são interfaces, não conversores.
   T1 original não pode ser ligado diretamente ao core, muito menos seus rails
   simétricos. Faltam qualificação VAC/VA/ripple e captura da retificação, fusível,
@@ -42,6 +44,7 @@ O checker é revisão automatizada, não substitui revisão elétrica independen
   e quatro comparações SPICE preservam contraprovas de tensão negativa nas
   entradas TPA. Isolamento pós-capacitor, mute analógico e pré-carga observada
   ainda são contrato sem circuito/MPNs; J102 não foi conectado ao núcleo.
+
 - **Bloqueador — woofer:** ainda não há limitador, high-pass qualificado nem
   proteção DC diferencial. Proteções internas do CI não garantem proteção de
   cone/bobina. Projetar detecção após LC entre SPK+ e SPK−, rejeitando PWM sem
@@ -54,6 +57,7 @@ O checker é revisão automatizada, não substitui revisão elétrica independen
   loops de comutação, retorno, largura de cobre, EMI ou integridade de potência.
 
 ## Correção técnica do LC
+
 Foi corrigido erro dimensional em `selected-core.md`:10µH e940nF por lado dão
 **fn=51,9106kHz**, não1642Hz. Referência de topologia:TI SLASEA8A Rev.A,
 §10.2.4/figura31,p.28; A+C/B+D antes das duas pernas LC, não quatro filtros EVM.
@@ -64,6 +68,7 @@ conferidos contra equação independente; sem comutação, perdas HF ou woofer r
 Essa correção não altera componentes nem demonstra estabilidade física.
 
 ## Budget de potência — cálculo, não rating do conjunto
+
 Para REQ-002/carga **resistiva**4Ω:
 -120W:21,91Vrms,30,98Vp,5,48Arms;
 -150W:24,49Vrms,34,64Vp,6,12Arms.
@@ -73,6 +78,7 @@ duas bobinas em20°C seria0,526W/0,657W respectivamente; não inclui aquecimento
 núcleo, ripple PWM ou perdas do CI. DCR do woofer não é impedância nominal/frequencial.
 
 ## Sequência de fechamento técnico
+
 1. Revisar pin-a-pin o core e resolver/classificar os quatro ERC individualmente,
    sem enfraquecer regras globais. Confirmar PBTL, rails e controle contra TI.
 2. Qualificar secundário de T1 e contato térmico OEM; obter só cotas locais
@@ -86,6 +92,7 @@ núcleo, ripple PWM ou perdas do CI. DCR do woofer não é impedância nominal/f
    verificados. SPK± sempre ativos/flutuantes; nenhuma garra terra neles.
 
 ## Evidência
+
 Relatório versionado: `tests/reports/core-oem-refined-review.json`.
 Logs nativos/exportações/modelos: `build/mechanical-reference/` e `build/`.
 Sem compra, pedido fabril, alteração de rede primária ou energização nesta revisão.

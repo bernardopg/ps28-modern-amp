@@ -1,4 +1,5 @@
 # Referências
+
 Fontes TI baixadas em 2026-10-07; checksums em reference/manifest.json.
 URL dinâmica pode entregar revisão nova: conferir capa e hash, não confiar no nome.
 

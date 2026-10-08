@@ -1,5 +1,7 @@
 # Registro de decisões
+
 Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data e tasks.
+
 - D-001 — Proposta herdada: TPA3255 PBTL/36 V externo/12 V/sem MCU.
   Origem da alimentação supersedida por D-010; demais requisitos ainda sujeitos a G0.
 - D-002 — Aceita para infraestrutura: KiCad + ngspice + Git/CLI; um escritor de EDA.
@@ -75,24 +77,24 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   TPA/sinais externos ainda requerem qualificação. Não outra PCB/mounts/MCU.
   Ver `vmid-protection.md` e relatórios; decisão reversível,2026-10-08.
 - D-019 — Bloquear integração energizável da saída analógica até proteção de
-INPUT_A/B e pré-carga qualificada. Adotar contrato **preparatório**, não um
-circuito/MPN aprovado: isolamento depois de C20/C21, controle da placa isolada,
-mute analógico e observação de DC antes de áudio; auditar ambos os terminais
-quando a chave estiver sem alimentação. Contraprovas RC mostram que capacitor,
-resistor série, chave upstream ou reconexão com áudio não demonstram segurança.
-Não tratar RIN/bias típicos como garantia de CI desligado nem usar 1 mA como permissão
-para violar −0,3…7 V. Objetivo: impedir fechamento falso de ELEC-002/003;
-risco: limites de chave/slew/pré-carga ainda TBD. Ver
-`input-power-order-study.md`, relatório e regressões; 2026-10-08.
+  INPUT_A/B e pré-carga qualificada. Adotar contrato **preparatório**, não um
+  circuito/MPN aprovado: isolamento depois de C20/C21, controle da placa isolada,
+  mute analógico e observação de DC antes de áudio; auditar ambos os terminais
+  quando a chave estiver sem alimentação. Contraprovas RC mostram que capacitor,
+  resistor série, chave upstream ou reconexão com áudio não demonstram segurança.
+  Não tratar RIN/bias típicos como garantia de CI desligado nem usar 1 mA como permissão
+  para violar −0,3…7 V. Objetivo: impedir fechamento falso de ELEC-002/003;
+  risco: limites de chave/slew/pré-carga ainda TBD. Ver
+  `input-power-order-study.md`, relatório e regressões; 2026-10-08.
 - D-020 — Integrar core + analógico em **candidata de revisão separada**, sem
-fechar ponte de sinal D-019 e sem mover baselines. Nets de alimentação compartilhadas,
-76 componentes/212 pads; analógico em banco externo ao contorno, não fit concluído.
-Objetivo: avançar captura, candidatos de passivos, assets CAD oficiais com licença
-confirmada e especificação executável de sequência (não firmware/MCU). R9 candidata
-4,7 kΩ substitui10 kΩ diante de fuga100 µA/VIL0,8 V; holdRESET≥250 ms TI, proposta
-mínimo360 ms. Risco: pulse/ESR/drift/backfeed/isolamento/sensores/mute/latências reais
-não qualificados. Nenhum switch pesquisado fechou D-019. Validação: revisão
-independente, regressões com contraprovas, ERC/DRC nativos e ledger de nets/UUIDs.
-Ver `integration-protection-review.md` e `system-candidate-review.json`; reversível,
-2026-10-08. G0–G5, tasks, WIP e S03 inalterados.
-Não confundir decisão de arquitetura com liberação de fabricação/energização.
+  fechar ponte de sinal D-019 e sem mover baselines. Nets de alimentação compartilhadas,
+  76 componentes/212 pads; analógico em banco externo ao contorno, não fit concluído.
+  Objetivo: avançar captura, candidatos de passivos, assets CAD oficiais com licença
+  confirmada e especificação executável de sequência (não firmware/MCU). R9 candidata
+  4,7 kΩ substitui10 kΩ diante de fuga100 µA/VIL0,8 V; holdRESET≥250 ms TI, proposta
+  mínimo360 ms. Risco: pulse/ESR/drift/backfeed/isolamento/sensores/mute/latências reais
+  não qualificados. Nenhum switch pesquisado fechou D-019. Validação: revisão
+  independente, regressões com contraprovas, ERC/DRC nativos e ledger de nets/UUIDs.
+  Ver `integration-protection-review.md` e `system-candidate-review.json`; reversível,
+  2026-10-08. G0–G5, tasks, WIP e S03 inalterados.
+  Não confundir decisão de arquitetura com liberação de fabricação/energização.

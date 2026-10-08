@@ -1,4 +1,5 @@
 # Segurança e gates obrigatórios
+
 36 V reduz risco de choque, mas altas correntes, incêndio, partes quentes e energia
 nos capacitores continuam presentes. Rede AC fica fora da PCB nova; fonte certificada
 externa fica restrita a bancada/fallback. D-010 seleciona T1 original com novo bloco
@@ -8,6 +9,7 @@ evidência e gates: [D-009/D-010](transformer-reuse.md).
 O manual não comprova 34-0-34 VAC. Não ligar a fonte simétrica diretamente ao TPA3255.
 
 ## Proibições
+
 - Sem woofer no primeiro bring-up; sem energização sem checklist e limites aprovados.
 - SPK± não são GND. Nunca prender garra terra de scope em uma dessas saídas.
   Usar sonda diferencial com limites de common-mode/banda adequados. Nunca remover
@@ -17,6 +19,7 @@ O manual não comprova 34-0-34 VAC. Não ligar a fonte simétrica diretamente ao
 - Não expor circuitos de rede do plate original sem técnico qualificado.
 
 ## Registro de riscos
+
 R1: topologia PBTL incorreta → curto/destruição; ELEC-001 e revisão pin-a-pin.
 R2: fonte/TVS/fusível incompatíveis → incêndio; PWR-001 e análise transientes/inrush.
 R3: swing/bias/VMID incorretos → clipping/DC/pop; ELEC-002 e BENCH-001.
@@ -26,6 +29,7 @@ R6: excesso de excursão no gabinete → woofer danificado; SYS-001 e ACOU-001.
 R7: preço/MPN falsos → retrabalho/fraude; BUY-001 e rastreabilidade de fornecedor.
 
 ## Gates (todos exigem responsável humano, data, commit e evidência)
+
 G0 requisitos e baseline aprovados; G1 captura+SPICE+ERC revisados;
 G2 layout+DRC+paridade+fit/térmica revisados; G3 BOM/CPL/DFM+cotação aprovados;
 G4 carga resistiva/rails/DC/FAULT/térmica aprovados; G5 teste acústico e integração.

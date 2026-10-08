@@ -1,4 +1,5 @@
 # Fabricação e release — bloqueados até G3
+
 Comparar JLCPCB/PCBWay com a mesma stackup, cobre, quantidade e montagem.
 Preço/cupom antigo não é orçamento. No TPA3255DDV, PowerPAD é SUPERIOR:
 reflow dos 44 leads, dissipador aterrado e interface mecânica/térmica correta,

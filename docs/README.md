@@ -1,4 +1,5 @@
 # Documentação técnica
+
 Começar pelo [estado consolidado D-018/D-019 e mapa das capturas/PCBs](development-status.md)
 e pela [galeria 3D nativa atual](images/kicad-3d/README.md). Estudos analógicos não
 foram integrados à PCB; planejamento/gates não avançam por aparência do render.

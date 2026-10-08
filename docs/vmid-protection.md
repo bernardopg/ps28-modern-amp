@@ -1,6 +1,7 @@
 # D-018 — Correção da fonte VMID e rail analógico protegido
 
 ## O que foi corrigido
+
 A candidata D-017 foi **substituída**, não remendada com um diodo interno presumido.
 Removemos o buffer de VMID e seu capacitor REF de 22 µF; os quatro opamps passam
 a receber **ANALOG_12V**, derivado de AUX_RAW por diodo isolador, resistor e reserva
@@ -13,6 +14,7 @@ BOM congelada, medição ou autorização de fabricação/energização. D-017 e
 contraprovas foram preservados para detectar regressões.
 
 ## Circuito capturado
+
 - AUX_RAW → anodo D201 → catodo ISO_FEED → R201 **15 Ω** → ANALOG_12V.
 - C201/C202: duas candidatas Würth **860020575014**, 470 µF/35 V em paralelo.
 - R202: **1 kΩ** de AUX_RAW a GND, limita alimentação fantasma por fuga reversa.
@@ -34,7 +36,9 @@ no envelope de uso são hipóteses conservadoras a verificar**, não especifica�
 inventada para todas as temperaturas. PDF local/hash em `reference/manifest.json`.
 
 ## Envelope explícito, não gate de bancada aprovado
+
 `simulation/analog/vmid-protection.json` é a fonte dos limites:
+
 - AUX_RAW regulado 10,8–13,2 V; amplitude máxima 13,2 V; sem overshoot não analisado.
 - R201±5%; divisor/bleed analógico±1%; R202 variação TOTAL≤5%.
 - Reserva analógica **≥752 µF**, ESR combinada **≤0,5 Ω**.
@@ -51,9 +55,11 @@ pulso de R201 NÃO estão qualificados. Duas peças±20% dão a capacitância m�
 aritmética; isso não substitui avaliação de aging/temperatura de peças reais.
 
 ## Por que funciona sem macromodelo abaixo de 4,5 V
+
 A reserva do rail sustenta os opamps enquanto o divisor descarrega VMID.
 A prova usa tensões de armazenamento dos dois capacitores e campo vetorial RC,
 não a saída de um opamp desligado. Na fronteira VMID_storage=ANA_storage+0,4 V:
+
 - maior decaimento permitido de ANA_storage≈**77,2 V/s**;
 - decaimento mínimo de VMID_storage≈**432,4 V/s**;
 - campo aponta para dentro com margem≈**355,2 V/s**.
@@ -69,8 +75,10 @@ alimentação fantasma conservadora≤**52,5 mV**, incluindo tolerância de R202
 conectores: essa garantia se refere ao caminho D201/R202.
 
 ## Evidência executada
+
 [Relatório](../tests/reports/vmid-protection-study.json), com hashes de código,
 configuração, topologia canônica e modelo TI original:
+
 - **30 quedas**: duas entradas ×cinco tempos (1 µs,100 µs,2 ms,20 ms,100 ms)
   ×três cargas VMID. Todas dentro dos limites absolutos de entrada.
 - **3 casos adicionais**: partida descarregada/brownout/rearme em duas cargas e
@@ -90,6 +98,7 @@ foi removido. Isso não dispensa revisão da estabilidade/ruído dos opamps LR4 
 da interação com fonte/regulador e EMI Classe D.
 
 ## Captura e integração lógica reais
+
 [Revisão integrada](../kicad/analog-protected/README.md): **32 componentes/80 pinos**,
 ERC nativo **zero, sem exclusões**. Dez passivos +polaridade de D201 conferidos
 contra `simulation/analog/vmid-protected.cir`;14 R/C e pinagem dos quatro amps
@@ -106,6 +115,7 @@ PCB nem novos conectores físicos adicionais**. Captura D-016 original e todas
 as PCBs/galerias3D foram preservadas. Geradores recusam diretórios existentes.
 
 ## Limitações que continuam bloqueando o sistema
+
 - Entrada externa ainda presente com opamps sem alimentação: proteção de TODOS
   os pinos/RCA e capacitores de sinal não está qualificada por este estudo.
 - OPA pode ficar vivo depois de AUX_RAW/TPA cair: conferir INPUT_A/B/coupling e
@@ -123,11 +133,13 @@ foi removido por mudança de topologia sob envelope, não por mudar tolerâncias
 silenciar contraprovas ou declarar o sistema aprovado.**
 
 ## Reprodução
+
 ```bash
 make simulate-vmid-protected  # modelo TI local auditado; ngspice>=47
 make analog-protected-check  # KiCad native ERC/netlist, dois audits independentes
 make check
 ```
+
 Teste unitário de geração/refusal/retrocompatibilidade usa os símbolos reais
 incorporados nas capturas auditadas, sem bibliotecas globais de KiCad nem skips.
 Isso não substitui `analog-protected-check`, que executa o KiCad nativo.

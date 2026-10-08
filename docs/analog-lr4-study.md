@@ -1,12 +1,14 @@
 # Front-end — incremento LR4 e budget de headroom
 
 ## Objetivo e limite
+
 Preparação verificável de ELEC-002, não conclusão da task nem esquema integrado.
 Fonte/supervisor, somador L/R, seleção LFE, potenciômetro, VMID físico, ESD,
 proteção/limitação e montagem continuam ausentes do core. Não altera as PCBs
 renderizadas nem libera roteamento/fabricação. D-015 é proposta reversível de estudo.
 
 ## Fontes primárias e achado de risco
+
 - TI **SLOA024B**, jul.1999/rev.set.2002, figura5/equação9,p.4 e caso K=1,p.5.
   Sua C1 é capacitor para referência; C2 é capacitor de feedback. Neste projeto
   usamos nomes **CG/CFB** para não trocar as posições.
@@ -21,6 +23,7 @@ PDFs locais e URLs/revisões/hashes: `reference/manifest.json`. Nenhum script de
 fabricante executado; modelos comportamentais abaixo foram escritos no projeto.
 
 ## Circuito R/C explícito
+
 `simulation/analog/lr4-rc.cir` contém esta cadeia de estudo:
 
 ```text
@@ -30,6 +33,7 @@ MONO AC já referido a VMID → divisor10k/10k → buffer → SK1 → SK2
 ```
 
 Cada Sallen-Key tem ganho unitário e:
+
 - R1=R2=14,0 kΩ;
 - CFB=2×100 nF em paralelo, do nó entre resistores até a saída;
 - CG=100 nF, da entrada não inversora para VMID;
@@ -49,6 +53,7 @@ não foram implementados ou validados. Não confundir180° relativo entre pernas
 com fase absoluta do LR4, que varia com frequência.
 
 ## Contratos ainda não fechados
+
 - MONO representa sinal **AC acoplado/biasado em VMID**, máximo candidato2 Vrms;
   fonte ideal no modelo. Somador L/R deve evitar ganho2 com entradas correlacionadas.
   Corrente/impedância do divisor e fonte RCA reais precisam de verificação.
@@ -64,7 +69,9 @@ com fase absoluta do LR4, que varia com frequência.
   sink/source, tolerância de referência, partida ou comportamento sem alimentação.
 
 ## Simulações executadas
+
 `make simulate` agora também executa `scripts/simulate_analog.py`:
+
 1. **151 pontos10 Hz–10 kHz**, magnitude **e fase** do circuito R/C com VCVS
    conferidas contra equação independente, incluindo divisor e inversor diferencial.
 2. Modelo próprio de um polo: Aol=100000/GBW=12 MHz/Rout=50Ω, saída limitada
@@ -84,6 +91,7 @@ com fase absoluta do LR4, que varia com frequência.
    o risco da hipótese; **não prevê clipping/THD do NE5532 real**.
 
 ## Próximos fechamentos de ELEC-002
+
 Modelo autorizado/compatível ou ensaio qualificado para headroom em rail mínimo,
 VMID real e carga; incluir bias/offset, impedâncias, ganho/ruído, degrau e power-up/down.
 Depois capturar somador/LINE/LFE/volume/fase com MPN/pinagem/footprint auditados,

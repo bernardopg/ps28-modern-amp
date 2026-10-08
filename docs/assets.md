@@ -1,4 +1,5 @@
 # Assets e proveniência
+
 - Bibliotecas oficiais KiCad instaladas; preferir symbol/footprint oficiais e validar
   pin mapping, package drawing, PowerPAD/paste e STEP antes de usar.
 - PDFs TI baixados e validados como PDF em reference/ti; URLs/hashes no manifesto.

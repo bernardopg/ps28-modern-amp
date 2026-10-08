@@ -1,4 +1,5 @@
 # Requisitos Rev. A — rascunho verificável
+
 Status: baseline herdada do starter, pendente de confirmação física e do proprietário.
 
 - REQ-001: preservar gabinete/dutos/woofer; confirmar modelo, impedância nominal,

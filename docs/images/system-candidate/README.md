@@ -13,6 +13,7 @@
   Demais corpos genéricos não são CAD qualificados do fabricante.
 
 Regenerar nativamente (arquivos atuais preservados antes de mutação):
+
 ```sh
 kicad-cli sch export svg --output build/system-svg/ kicad/system-candidate/system-candidate.kicad_sch
 kicad-cli pcb render --output build/system-native.png --width 1600 --height 1200 --perspective --rotate 325,0,25 kicad/system-candidate/system-candidate.kicad_pcb

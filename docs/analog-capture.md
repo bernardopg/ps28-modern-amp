@@ -1,6 +1,7 @@
 # Captura analógica isolada — OPA1656 candidato
 
 ## Incremento D-016
+
 O NE5532 não foi declarado qualificado em12V. Selecionamos **OPA1656ID como
 candidato de estudo** e capturamos a cadeia já calculada em uma folha independente:
 `kicad/analog-front-end/analog-front-end.kicad_sch`. Nenhuma PCB existente foi
@@ -12,7 +13,9 @@ OEM da integração ainda serão definidos. Fonte, VMID e supervisor permanecem 
 [PDF nativo para zoom](images/analog-front-end/analog-front-end.pdf).
 
 ## Evidência primária e pinagem
+
 TI **SBOS901C**, rev.set.2022:
+
 - Figura5-3,p.3: SOIC8, OUTA1/INA−2/INA+3/V−4/INB+5/INB−6/OUTB7/V+8.
 - §6.3,p.4: alimentação single4,5–36V, dual±2,25–±18V.
 - §6.6,p.6: faixa de CM relativa(V−) a(V+)−2,25V. Cabeçalho de caracterização
@@ -28,8 +31,9 @@ flattened da representação gráfica LM2904 das bibliotecas KiCad. A equivalên
 Footprint candidato SOIC-8_3.9x4.9mm_P1.27mm; seleção sem stock/preço/compra ou DFM.
 
 ## Captura e comparação independente
+
 - **21 componentes,58 pinos físicos** conferidos na netlist nativa.
--14 resistores/capacitores do caminho de sinal comparados pin-a-pin e por valor
+  -14 resistores/capacitores do caminho de sinal comparados pin-a-pin e por valor
   com `simulation/analog/lr4-rc.cir`; buffers e inversor com pinagem TI independente.
 - **ERC nativo:0 violações**, sem relaxar regras ou excluir achados.
 - Seis capacitores de filtro e três interfaces ainda sem footprint:9 pendências;
@@ -41,6 +45,7 @@ Footprint candidato SOIC-8_3.9x4.9mm_P1.27mm; seleção sem stock/preço/compra 
   J102 entrega DIFF_POS/DIFF_NEG analógicos: **não são saídas de alto-falante**.
 
 ## Modelo oficial — o que passou e o que não passou
+
 Modelo TI **SBOMAW6C / Final1.3,25AUG2022**, pin order IN+,IN−,VCC,VEE,OUT.
 Referência interna do modelo é SBOS901B; datasheet consultado é C. Não presumimos
 que macro/modelo reproduza todas diferenças/revisões e extremos de produção.
@@ -53,6 +58,7 @@ subprocesso; não modificamos configuração global. HOME isolado evita depender
 exclusivamente de SPICE_USERINIT_DIR nos builds de distribuição. Falhas incluem log no console e CI
 preserva diagnóstico sem publicar o modelo TI.9 casos:10,8/12/13,2V ×0/27/70°C:
 -151 pontos AC10Hz–10kHz por caso, efeito contra modelo R/C ideal dentro de0,1dB;
+
 - transiente20Hz, entrada2Vrms, divisor1/2 e janela final100ms;
 - saída diferencial≈1,9924Vrms; offset diferencial modelado entre≈−0,689mV e−0,042mV;
 - sinais modelados mantidos abaixo do limite CM superior usado na comparação;
@@ -94,6 +100,7 @@ Relatórios: [captura](../tests/reports/analog-capture-review.json) e
 em `kicad/analog-protected/`; esta captura D-016 foi preservada, não sobrescrita.
 
 ## Ainda falta
+
 [D-017: VMID físico em estudo](vmid-buffer-study.md) acrescenta estabilidade/carga
 modeladas, mas detecta bloqueio no desligamento sem clamp/descarga/backfeed
 qualificados; **não foi integrado à captura**. As evidências D-016 acima conservam

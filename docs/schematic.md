@@ -1,5 +1,7 @@
 # Plano de captura elétrica — não é schematic aprovado
+
 ## Estado após D-018/D-019
+
 Core B/OEM permanece com 47 componentes/142 pads; D-018 é captura **separada**
 com 32 componentes/80 pinos/ERC0, ainda sem PCB. D-019 é contrato não implementado
 para isolamento pós-C20/C21, mute analógico e pré-carga observada. J102 não foi
@@ -9,6 +11,7 @@ U2/U3p8 usam ANALOG_12V, não AUX_RAW; VMID é monitor/referência, não fonte e
 Ver [D-018](vmid-protection.md) e [D-019](input-power-order-study.md).
 
 ## Golden reference
+
 SLASEA8A §10.2.4, tabela 11: M2=H, M1=L, INPUT_C/D aterrados.
 D-011: SLASEA8A Fig.31/tabela11 p.28, A+C/B+D antes dos dois ramos LC.
 SLOU441 §4.2 é comparação com a EVM de quatro filtros; não misturar topologias.
@@ -18,10 +21,12 @@ sem fonte/front-end e sem freeze. Ver [incremento](core-draft.md). SYS/PWR ainda
 bloqueiam integração e fechamento do schematic, não a análise isolada do core.
 
 ## Folhas planejadas
+
 Power input/auxiliary; analog inputs/VMID; LINE filter/control; power core/output LC.
 Hierarquia deve ter nomes de nets inequívocos e pins/tipos elétricos coerentes.
 
 ## Revisão por bloco
+
 - RCA: acoplamento, impedância, soma L/R, RF/ESD e retorno sem corrente de potência.
 - VMID: ruído, corrente, estabilidade, startup e carga do volume/op-amps.
 - LPF: topologia explícita; duas seções Butterworth Q=1/√2 para LR4; valores de R/C

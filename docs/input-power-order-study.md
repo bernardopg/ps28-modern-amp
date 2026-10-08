@@ -10,6 +10,7 @@ Não houve mudança de schematic, PCB, mounts OEM ou arquivos de produção.
 ELEC-002 continua Blocked; ELEC-003 e os gates não foram concluídos.
 
 Interfaces conferidas nos manifestos, com hashes dos schematics preservados:
+
 - `kicad/analog-protected/`: J102.1 DIFF_POS, .2 DIFF_NEG, .3 VMID, .4 GND.
   VMID é referência/monitor, não retorno da entrada diferencial do TPA.
 - `kicad/core-selected/`: C20 de DIFF_P a INPUT_A_AC; C21 de DIFF_N a
@@ -21,6 +22,7 @@ Interfaces conferidas nos manifestos, com hashes dos schematics preservados:
 ## Evidência primária — não misturar ratings
 
 TI **SLASEA8A**, Rev. A, outubro de 2016:
+
 - §7.1, p.5: INPUT_X admite **−0,3…7 V em relação a GND** como limite
   absoluto. Não é VDD+0,5 V nem a faixa de entrada do OPA1656.
 - §7.5, p.6: RIN **20 kΩ típico**, AVDD **7,75 V típico** e corrente de
@@ -76,6 +78,7 @@ VMID de uma alimentação de 10 a 4,5 V, nunca extrapola operação energizada
 abaixo de 4,5 V. Ainda assim, isso **não caracteriza** a saída real do OPA.
 
 Contraprovas obrigatórias:
+
 - C=10 µF/RIN=20 kΩ, bias 3,875 V perdido 100 ms antes e driver caindo
   5→2,25 V em 30 ms: **−0,53076 V** na entrada, abaixo de −0,3 V.
 - Adicionar RS=1 kΩ, bias já zero e queda em 20 ms: **−2,49820 V**.
@@ -99,6 +102,7 @@ Duas redes adicionais reutilizam **sem alterar** a alimentação passiva D-018
 (12 V raw/queda em 100 µs, carga envelopada), com driver proxy seguindo VMID
 e o mesmo retorno TPA **hipotético**. Cada uma verifica 45.025 pontos contra
 integração independente. Avaliar a entrada somente com ANALOG_12V≥4,5 V:
+
 - bias de entrada já zero: mínimo **−2,09043 V**, com rail analógico ainda
   em **4,50045 V**; o próprio VMID continua dentro de −0,5…VANA+0,5 V;
 - bias inicial 3,875 V perdido 100 ms antes: mínimo **−0,22950 V** nessa
@@ -114,6 +118,7 @@ esses números não são medição de dano na placa atual.
 ## Contrato proposto de isolamento — ainda sem componentes
 
 Arquitetura em estudo, na mesma PCB OEM:
+
 1. Uma interrupção de cada ramo **no lado TPA do capacitor**; chave precisa
    tolerar os estados energizado/desenergizado de **ambos** os terminais,
    sem backfeed. Exigir especificações de fuga e feedthrough, não apenas RON.
@@ -130,6 +135,7 @@ Arquitetura em estudo, na mesma PCB OEM:
    presumir pronto apenas porque FAULT subiu ou um timer de 200 ms venceu.
 
 **Requisitos numéricos propostos, não medidos nem especificações de parts:**
+
 - detecção + abertura ≤100 µs; durante esse intervalo, salto do driver ≤0,1 V
   e slew ≤1000 V/s, incluindo brownout, ESR e ações de fase/volume;
 - injeção de chave ≤20 pC, capacitância off ≤5 pF, fuga ≤100 nA;

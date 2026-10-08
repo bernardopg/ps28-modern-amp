@@ -1,6 +1,7 @@
 # D-009/D-010 — Transformador original: reaproveitamento selecionado
 
 ## Recomendação
+
 D-010: reaproveitar T1 original e projetar fonte nova no domínio secundário,
 com alvo PVDD regulado em 36 V e auxiliar 12 V; fonte externa só bancada/fallback.
 O proprietário informou transformador e capacitores saudáveis e capacidade técnica
@@ -10,6 +11,7 @@ Não conectar a fonte simétrica original diretamente ao TPA3255. Esta é uma
 recomendação de arquitetura, não aprovação de segurança nem circuito fechado.
 
 ## Evidência do dispositivo original
+
 Manual entregue pelo proprietário: PS28 SERVICE MANUAL, Rev1 3/2007.
 As páginas abaixo são a numeração impressa; o índice físico do PDF é uma página maior.
 
@@ -31,6 +33,7 @@ As páginas abaixo são a numeração impressa; o índice físico do PDF é uma 
 A afirmação antiga de 34-0-34 VAC no starter não tem comprovação neste documento.
 
 ## Compatibilidade elétrica
+
 TI SLASEA8A p.6, §7.3: PVDD 18–53,5 V em carga 4 Ω; VDD/GVDD 10,8–13,2 V.
 O máximo absoluto PVDD 69 V, p.5, NÃO é uma tensão de projeto/operação.
 O TPA3255 requer PVDD positivo e GND, não alimentação simétrica ±Vcc.
@@ -44,6 +47,7 @@ inclusive o máximo absoluto do CI; o primeiro ainda exige análise de rede alta
 Capacitores antigos de 50 V não comprovam a tensão de operação nem sua saúde atual.
 
 ## Caminho preferido se o transformador passar
+
 T1 existente → retificação full-wave apropriada ao secundário CT → bulk/proteção →
 DC/DC de potência regulado 36 V → TPA3255; auxiliar 12 V dimensionado separadamente.
 Esse diagrama não especifica ligações, diodos, capacitância, MPN ou layout.
@@ -57,6 +61,7 @@ ripple/EMI, corrente de partida, dissipação, capacitores, fusíveis e proteç�
 Um módulo barato rotulado "300 W" não equivale a 150 W contínuos neste conjunto.
 
 ## Gate antes da seleção final (PWR-001/BENCH-001)
+
 - Técnico qualificado verifica isolamento, fiação, proteção/fusível, fixação e estado de T1.
 - Documentar tensão por meia-bobina e total, regulação a vazio/sob carga, envelope
   de rede e ripple DC; confirmar capacidade térmica para carga e duração pretendidas.

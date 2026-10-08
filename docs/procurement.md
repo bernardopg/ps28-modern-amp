@@ -1,4 +1,5 @@
 # BOM e compras
+
 BOM inicial é uma lista de candidatos em bom/README.md. BOM de montagem virá do
 schematic; não criar refs/quantidades aparentemente definitivas agora.
 

@@ -5,6 +5,7 @@ Planejamento canônico: `.tasks/items/`; este resumo não muda estados ou gates.
 Não é release de hardware, montagem completa ou autorização de fabricação.
 
 ## Incremento posterior D-020 — candidata incompleta
+
 [Core + analógico e pesquisa de proteção](integration-protection-review.md):
 `kicad/system-candidate/system-candidate.kicad_pro` contém76 componentes/212 pads,
 sem footprints vazios nessa candidata. Analógico em banco **fora do contorno**,
