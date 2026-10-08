@@ -86,11 +86,17 @@ def official_deck(config, filename, supply, temperature, transient=False):
 def run(config, directory, supply, temperature, transient):
     name = f"v{supply:g}-t{temperature:g}-" + ("tran" if transient else "ac")
     data = directory / (name + ".dat")
+    text = official_deck(config, data.relative_to(ROOT), supply, temperature, transient)
+    return execute_deck(text, directory, name)
+
+
+def execute_deck(text, directory, name):
+    """Execute an agent-authored deck with isolated PSA init and strict diagnostics."""
+    directory.mkdir(parents=True, exist_ok=True)
+    data = directory / (name + ".dat")
     data.unlink(missing_ok=True)
     circuit = directory / (name + ".cir")
-    circuit.write_text(
-        official_deck(config, data.relative_to(ROOT), supply, temperature, transient)
-    )
+    circuit.write_text(text)
     # Isolated startup file: no global ngspice configuration modifications.
     init = directory / "init"
     init.mkdir(exist_ok=True)

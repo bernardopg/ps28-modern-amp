@@ -30,6 +30,9 @@ O checker é revisão automatizada, não substitui revisão elétrica independen
   mas VMID/integração continuam não qualificados. D-016 acrescenta
   [captura isolada e modelo oficial OPA1656](analog-capture.md):21 partes/58 pinos,
   ERC0, nove casos de modelo. Não é o somador/LINE/LFE/volume completo nem PCB.
+  [VMID físico D-017](vmid-buffer-study.md):32 casos/PM mínimo60,67°, carga±1mA
+  e LR4 acoplado; candidata bloqueada por REF armazenada no desligamento sem
+  clamp/descarga/backfeed qualificados. RESET não protege esses pinos analógicos.
 - **Bloqueador — woofer:** ainda não há limitador, high-pass qualificado nem
   proteção DC diferencial. Proteções internas do CI não garantem proteção de
   cone/bobina. Projetar detecção após LC entre SPK+ e SPK−, rejeitando PWM sem

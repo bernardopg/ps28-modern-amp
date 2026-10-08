@@ -42,6 +42,16 @@ critério completo acima NÃO fechado. Captura independente21 componentes/58pino
 ERC0 e14R/C comparados com SPICE;9 footprints pendentes.
 Ver `docs/analog-capture.md` e `tests/reports/opa1656-model-study.json`.
 
+D-017: VMID físico avaliado no modelo TI (divisor, CREF, buffer, isolamento/ESR).
+32 casos de return ratio, PM mínimo60,67°; carga±1mA/ripple e carga inicial de
+referência com AUX já válido conferidos contra equações independentes. Contraprova
+sem isolamento: PM−2,96°. LR4 acoplado ao VMID físico≈1,99237Vrms/20Hz.
+**Bloqueio adicional de segurança:** power-down passivo sem clamp deixa REF acima
+V++0,5V; descarga, corrente/backfeed e os outros pinos analógicos devem ser
+qualificados antes de captura. Não usar RESET como proteção desses pinos.
+Ver `docs/vmid-buffer-study.md` e `tests/reports/vmid-buffer-study.json`.
+Sem captura/PCB/MPNs/fabricação/energização; estudo não conclui o critério VMID.
+
 ## Risco / aprovação
 
 Alterações de hardware exigem fonte primária e gate humano; sem pedidos automáticos.

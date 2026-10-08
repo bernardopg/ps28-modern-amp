@@ -44,6 +44,10 @@ O NE5532 em12V e VMID ainda não estão qualificados; não é implementação in
 58 pinos/14R-C conferidos, ERC0 e modelo oficial em9 casos de rail/temperatura.
 Fonte/VMID/supervisor externos e9 footprints pendentes; não é placa operacional.
 
+[VMID físico em estudo](docs/vmid-buffer-study.md):32 casos de estabilidade no
+modelo TI, carga bidirecional e LR4 acoplado; **integração bloqueada pelo power-down**
+sem descarga/clamp/backfeed qualificados. RESET não protege pinos analógicos.
+
 ## Renders 3D do próprio KiCad
 
 **Estudo não roteado; modelos 3D incompletos; não aprovado para fabricação.**

@@ -1,0 +1,21 @@
+{
+  "status": "REVERSIBLE STUDY; POWER-DOWN BLOCKED; NOT FOR CAPTURE/FABRICATION",
+  "divider_ohm": [4700, 4700],
+  "divider_tolerance_fraction": 0.01,
+  "reference_capacitance_f": 0.000022,
+  "reference_leakage_assumed_max_a": 0.00001,
+  "isolation_candidates_ohm": [25, 50],
+  "reservoir_capacitance_f": 0.000047,
+  "reservoir_capacitance_candidates_f": [0.000022, 0.000047],
+  "reservoir_esr_assumed_candidates_ohm": [0.05, 2],
+  "load_step_a": 0.001,
+  "proposed_dc_error_limit_v": 0.15,
+  "proposed_return_ratio_phase_margin_min_deg": 45,
+  "proposed_settling_error_v": 0.01,
+  "auxiliary_ripple_test_hz": 100,
+  "auxiliary_ripple_test_peak_v": 0.1,
+  "hard_power_down_fall_candidates_s": [0.0001, 0.002, 0.02, 0.1],
+  "exact_mpn_footprint_and_esr_selected": false,
+  "supervisor_or_input_clamps_implemented": false,
+  "hardware_validated": false
+}

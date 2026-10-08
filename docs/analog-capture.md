@@ -91,6 +91,11 @@ Relatórios: [captura](../tests/reports/analog-capture-review.json) e
 [modelo TI](../tests/reports/opa1656-model-study.json).
 
 ## Ainda falta
+[D-017: VMID físico em estudo](vmid-buffer-study.md) acrescenta estabilidade/carga
+modeladas, mas detecta bloqueio no desligamento sem clamp/descarga/backfeed
+qualificados; **não foi integrado à captura**. As evidências D-016 acima conservam
+VMID ideal/external e não validam power-down.
+
 VMID físico estável (sink/source/carga capacitiva/startup), somador L/R, bypass LFE,
 volume/fase, ganho/ruído/impedância completos, high-pass/limitação, proteção DC e
 supervisor. Fechar MPNs/footprints passivos; integrar e revisar esquema completo;

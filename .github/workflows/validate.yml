@@ -26,6 +26,8 @@ jobs:
         run: ngspice --version
       - name: Fetch audited TI model and check all OPA1656 supply-temperature cases (not hardware sign-off)
         run: python scripts/simulate_opa1656.py --fetch-model
+      - name: Verify physical VMID study and required unsafe-power-down counterexamples
+        run: python scripts/simulate_vmid.py
       - name: Preserve official-model diagnostics (never redistribute vendor model)
         if: always()
         uses: actions/upload-artifact@v4
@@ -34,4 +36,6 @@ jobs:
           path: |
             build/analog/opa1656/*.log
             build/analog/opa1656/result.json
+            build/analog/vmid/*.log
+            build/analog/vmid/result.json
           if-no-files-found: warn

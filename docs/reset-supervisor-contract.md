@@ -43,6 +43,15 @@ ou componentes escolhidos:
   pull-ups quando CI/fonte estão desligados.3V3 externa no J4 permanece interface.
 - Não há simulação real do supervisor, ERC desse bloco ou sign-off de proteção DC.
 
+## VMID e proteção dos pinos — D-017
+[Estudo físico de VMID](vmid-buffer-study.md): o RC de referência pode manter
+REF acima de V++0,5 V quando AUX cai. RESET baixo não evita injeção nos pinos
+analógicos nem backfeed pelo driver/VMID. Qualificar descarga/clamp/corrente e
+fonte ausente antes de integrar. Assentamento calculado/modelado com AUX já
+válido≈0,33 s NÃO define timeout do supervisor nem comprova power-on real.
+Fonte, tolerâncias e comportamento de todas as entradas no power-down continuam
+bloqueios; não assumir diodos internos como proteção de sistema.
+
 ## Testes futuros obrigatórios
 Fonte faltante/em ordem invertida; VMID fora de faixa; FAULT inicial normal;
 FAULT persistente; FAULT seguido de RESET baixo sem autorrearme; OTW ativo ao

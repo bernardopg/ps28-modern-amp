@@ -124,7 +124,7 @@
     "document": "SBOS901C March 2019 revised September 2022",
     "sha256": "4243b58e553e6f27274858637c596596dbb89bba94d05b44fedd32877d988e9d",
     "license": "Third-party copyright; local engineering reference only",
-    "review_status": "fig.5-3 p.3 SOIC8 pinout, p.4 supplies, p.6 CM conditions and p.7 current reviewed; prototype candidate only, not bench/DFM qualification"
+    "review_status": "fig.5-3 p.3 SOIC8 pinout; p.4 supplies/input absolute maxima; p.6 CM conditions; p.7 current; fig.6-35/36 p.13 capacitive load/isolation typical curves reviewed. D-017 uF-load model study does NOT extrapolate pF curves to qualification; power-down/clamps/backfeed blocked. Prototype candidate only, not bench/DFM qualification"
   },
   {
     "file": "build/analog/parts/OPA1656.LIB",

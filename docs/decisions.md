@@ -54,4 +54,14 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   VMID/fonte/supervisor/ruído/startup/fábrica não qualificados. Objetivo: sair de
   VCVS genérica para candidato real; risco: simulação não garantir extremos reais.
   Evidência `analog-capture.md`,2026-10-08; ELEC-002/003 não concluídas.
+- D-017 — Estudo de VMID físico com divisor 4,7 kΩ/4,7 kΩ, CREF 22 µF,
+  buffer OPA1656 e isolamento 25/50 Ω para reservatório 22/47 µF; NÃO adotar
+  nem capturar como fonte pronta. Modelo TI: 32 casos, PM mínimo 60,67°;
+  sem isolamento PM negativo. Análise RC independente mostra REF acima do
+  limite de entrada em power-down sem clamp qualificado (SBOS901C §6.1 p.4).
+  Exigir descarga/clamp/corrente/backfeed e sequenciamento antes de integração;
+  RESET não protege os pinos analógicos. MPNs/ESR/fuga e fonte reais TBD.
+  Objetivo: quantificar carga/estabilidade e evitar captura insegura. Risco:
+  extrapolar macro/curvas típicas para startup/clamps/hardware. Evidência em
+  `vmid-buffer-study.md` e relatório,2026-10-08; gates/tasks não concluídos.
 Não confundir decisão de arquitetura com liberação de fabricação/energização.

@@ -5,6 +5,14 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 ## [Unreleased]
 
 ### Added
+- Estudo de VMID físico D-017 com modelo TI íntegro:32 casos de return ratio,
+  PM mínimo60,67°, contraprova sem isolamento/PM negativo, carga±1mA, ripple,
+  referência inicialmente descarregada com AUX já válido e LR4 acoplado.
+- Bloqueio de power-down pela análise RC independente: REF retida acima do
+  rating de entrada sem clamp/descarga/backfeed qualificados. Sem captura
+  insegura, MPN freeze, alterações às PCBs ou aprovação de gates.
+- `make simulate-vmid`, relatórios/hashes/regressões e CI; runner PSA isolado
+  compartilhado, sem modificar modelo do fabricante ou configurações globais.
 - Estudo TI exige ngspice>=47 após falha real de convergência no42 do Ubuntu;
   CI usa job isolado Arch Linux/pacotes assinados, sem alterar modelo/critérios.
   Versão registrada, regressão de rejeição de runtime legado e invalidação de
