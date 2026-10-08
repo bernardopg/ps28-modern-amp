@@ -73,6 +73,14 @@ sem integração de 32 componentes/13 footprints analógicos pendentes ou chaves
 supervisor. `docs/development-status.md` centraliza distinções e próximos bloqueios;
 nenhum limite/modelo/caso foi relaxado, status Blocked/dependências preservados.
 
+D-020: três subagentes pesquisaram CAD/parts/proteção/controle e reviewer
+independente encontrou bugs corrigidos nas regressões de sequência/identidade EDA.
+R9 legado10k pode exceder VIL0,8V com fuga100µA; candidata4,7k separada.
+HoldRESET≥250ms TI, contrato executável360ms mínimo; latência física100µs não
+provada. Nenhuma chave demonstrou todos budgetsD019; ADG461x não é±16V.
+`docs/integration-protection-review.md`; proteção/mute/supervisor físicos pendentes.
+Status Blocked preservado, nenhuma energização/relaxamento de critérios.
+
 ## Risco / aprovação
 
 Alterações de hardware exigem fonte primária e gate humano; sem pedidos automáticos.

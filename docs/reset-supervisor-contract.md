@@ -18,8 +18,8 @@ liberar RESET em sobretemperatura; conferir CLIP_OTW alto antes de rearme.
 A futura implementação deve usar supervisão, memória de falha e temporização
 analógica/lógica discreta. Estes nomes especificam comportamento, não firmware
 ou componentes escolhidos:
-- **SAFE:** RESET baixo por padrão, inclusive sem3V3 de controle. R9 do core já
-  garante safe-low. Não inferir rail válido só pela existência de tensão.
+- **SAFE:** RESET baixo por padrão, inclusive sem3V3 de controle. R9 legado10 kΩ **não** garante VIL≤0,8 V com fuga100 µA (§7.5p8).
+  D-020 usa4,7 kΩ só na candidata; driver/backfeed/rampas seguem pendentes. Não inferir rail válido só pela existência de tensão.
 - **STARTING:** somente liberar RESET após rails/VMID estáveis e autorização;
   permitir a assinatura normal de FAULT baixo inicial, por janela derivada do
   startup real. Timeout ou perda de rail levam a estado seguro. A janela é TBD.
@@ -69,6 +69,14 @@ Os 100 µs e janela DC 2…5 V do contrato são requisitos propostos, não resul
 de bancada ou garantias TI. Os 145,19 ms do equivalente de partida NÃO são
 timeout de produto; FAULT alto não comprova pré-carga concluída. O input RIN
 20 kΩ típico não garante retorno quando desligado. Nenhuma integração liberada.
+
+## Incremento D-020 — especificação, não circuito
+TI §11.2p30 recomenda RESET baixo≥250 ms apósPVDD. Timer300 ms típico com
+mínimo180 ms não atende; contrato executável usa mínimo360 ms e observações
+explícitas. FAULT/CLIP_OTW têm pull-ups internos20…32 kΩ aDVDD (§7.5p8):
+R7/R8 podem realimentar controle morto. Não unir nova3V3 automaticamente.
+Supervisor/mute/proteção físicos ainda não capturados; latência100 µs não provada.
+Ver [sequência e pesquisa](integration-protection-review.md).
 
 ## Testes futuros obrigatórios
 Fonte faltante/em ordem invertida; VMID fora de faixa; FAULT inicial normal;

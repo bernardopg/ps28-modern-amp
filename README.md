@@ -66,6 +66,15 @@ pós-capacitor; sem circuito/MPNs aprovados. J102 continua separado do núcleo.
 `make simulate-input-order` reproduz quatro comparações RC e duas redes acopladas
 D-018, sem macro OPA/TPA; não qualifica comportamento desligado dos componentes.
 
+## Integração candidata D-020 — trabalho em andamento
+[Core+analógico/CAD/controle](docs/integration-protection-review.md): abrir
+`kicad/system-candidate/system-candidate.kicad_pro` para76 componentes/212 pads,
+footprints candidatos atribuídos. Analógico ainda em banco fora do contorno;
+ponte de sinal aberta, proteção/mute/supervisor físicos não implementados.
+Sequência executável é especificação testada, não firmware/circuito qualificado.
+CAD Würth disponível/licenciado; U1 e bornes mantêm pendências explícitas.
+Baselines e renders históricos abaixo não foram substituídos nem aprovados.
+
 ## Renders 3D do próprio KiCad
 
 **Núcleo apenas; D-018/D-019 sem PCB integrada. Não roteado, modelos incompletos,

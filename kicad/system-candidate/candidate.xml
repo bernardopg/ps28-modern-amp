@@ -1,0 +1,3063 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/home/bitter/development/ps28-modern-amp-starter/kicad/.system-stage-3jp_6ie9/system-candidate.kicad_sch</source>
+    <date>2026-10-08T14:54:34</date>
+    <tool>Eeschema 10.0.7</tool>
+    <textvar name="PROJECT_STATUS">CORE DRAFT - UNROUTED - NOT FOR FABRICATION</textvar>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>PS28 CORE + PROTECTED ANALOG - INCOMPLETE SAFETY REVIEW CANDIDATE</title>
+        <company/>
+        <rev>B-selected-NOT-RELEASED</rev>
+        <date/>
+        <source>system-candidate.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>470uF 35V</value>
+      <footprint>PS28:WE_860020575014</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">WE WCAP-ATG5 rev1.0 2014-11-11 p.1: 470uF 35V D10 H16+1.5 P5 drill0.9; ripple520mA/120Hz</field>
+        <field name="MPN">860020575014</field>
+        <field name="Manufacturer">Wurth Elektronik</field>
+        <field name="Footprint">PS28:WE_860020575014</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="WE WCAP-ATG5 rev1.0 2014-11-11 p.1: 470uF 35V D10 H16+1.5 P5 drill0.9; ripple520mA/120Hz"/>
+      <property name="MPN" value="860020575014"/>
+      <property name="Manufacturer" value="Wurth Elektronik"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c6a2c573-5737-5a25-bbd8-bbb5ddb164a0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>100nF 50V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified</field>
+        <field name="MPN">C0603C104K5RACTU</field>
+        <field name="Manufacturer">KEMET</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified"/>
+      <property name="MPN" value="C0603C104K5RACTU"/>
+      <property name="Manufacturer" value="KEMET"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dc19c4f8-670a-5582-b239-87504d2af6e0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C3">
+      <value>10uF 16V X5R</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified; effective capacitance/DC-bias check still required at VDD</field>
+        <field name="MPN">EMK212BJ106KG-T</field>
+        <field name="Manufacturer">Taiyo Yuden</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified; effective capacitance/DC-bias check still required at VDD"/>
+      <property name="MPN" value="EMK212BJ106KG-T"/>
+      <property name="Manufacturer" value="Taiyo Yuden"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e0a11e73-816d-5d15-8382-2efe2d6e1291</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C4">
+      <value>100nF 50V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified</field>
+        <field name="MPN">C0603C104K5RACTU</field>
+        <field name="Manufacturer">KEMET</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified"/>
+      <property name="MPN" value="C0603C104K5RACTU"/>
+      <property name="Manufacturer" value="KEMET"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e1b12682-25a2-56eb-9276-95f36b0a08ae</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C5">
+      <value>100nF 50V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified</field>
+        <field name="MPN">C0603C104K5RACTU</field>
+        <field name="Manufacturer">KEMET</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified"/>
+      <property name="MPN" value="C0603C104K5RACTU"/>
+      <property name="Manufacturer" value="KEMET"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4a8a4bd2-76b1-5e8d-a289-7b95bfc70d49</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C6">
+      <value>1uF 16V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified</field>
+        <field name="MPN">GRM188R71C105KA12D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified"/>
+      <property name="MPN" value="GRM188R71C105KA12D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ced0acd0-b59f-523b-805a-104670be41ca</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C7">
+      <value>1uF 16V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified</field>
+        <field name="MPN">GRM188R71C105KA12D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified"/>
+      <property name="MPN" value="GRM188R71C105KA12D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>065af13b-8aae-58a0-a01e-e3a10225a254</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C8">
+      <value>47nF 25V X7R</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified</field>
+        <field name="MPN">GRM155R71E473KA88D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified"/>
+      <property name="MPN" value="GRM155R71E473KA88D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f9044812-4441-5061-9d6a-9cf87142baa6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C9">
+      <value>1uF 16V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified</field>
+        <field name="MPN">GRM188R71C105KA12D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified"/>
+      <property name="MPN" value="GRM188R71C105KA12D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>72bfe19e-8d21-5c7b-be81-cfdf7119419c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C10">
+      <value>1uF 100V X7R</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified</field>
+        <field name="MPN">GRM31CR72A105KA01L</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Capacitor_SMD:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified"/>
+      <property name="MPN" value="GRM31CR72A105KA01L"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2c9fc09d-0923-52ee-b78f-a958698669be</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C11">
+      <value>1uF 100V X7R</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified</field>
+        <field name="MPN">GRM31CR72A105KA01L</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Capacitor_SMD:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified"/>
+      <property name="MPN" value="GRM31CR72A105KA01L"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b20cea80-0d7f-5dd8-bc20-51783799ecdd</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C12">
+      <value>1uF 100V X7R</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified</field>
+        <field name="MPN">GRM31CR72A105KA01L</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Capacitor_SMD:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified"/>
+      <property name="MPN" value="GRM31CR72A105KA01L"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2de7ad07-436b-5942-abdb-5947805321a6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C13">
+      <value>1uF 100V X7R</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified</field>
+        <field name="MPN">GRM31CR72A105KA01L</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Capacitor_SMD:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified"/>
+      <property name="MPN" value="GRM31CR72A105KA01L"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ada7739e-feb4-58f8-9bae-b84d0194cded</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C14">
+      <value>1500uF 63V</value>
+      <footprint>Capacitor_THT:CP_Radial_D18.0mm_P7.50mm</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">Nichicon UHE CAT.8100M p.1/p.6: UHE1J152MHD 1500uF 63V D18 H40+2 P7.5; Zmax36mOhm/100kHz/20C; ripple2470mA/100kHz/105C (x0.8 at120Hz); 10000h/105C</field>
+        <field name="MPN">UHE1J152MHD</field>
+        <field name="Manufacturer">Nichicon</field>
+        <field name="Footprint">Capacitor_THT:CP_Radial_D18.0mm_P7.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="Nichicon UHE CAT.8100M p.1/p.6: UHE1J152MHD 1500uF 63V D18 H40+2 P7.5; Zmax36mOhm/100kHz/20C; ripple2470mA/100kHz/105C (x0.8 at120Hz); 10000h/105C"/>
+      <property name="MPN" value="UHE1J152MHD"/>
+      <property name="Manufacturer" value="Nichicon"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9734b66e-75a0-5478-b9f5-a6410b1467a6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C15">
+      <value>1500uF 63V</value>
+      <footprint>Capacitor_THT:CP_Radial_D18.0mm_P7.50mm</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">Nichicon UHE CAT.8100M p.1/p.6: UHE1J152MHD 1500uF 63V D18 H40+2 P7.5; Zmax36mOhm/100kHz/20C; ripple2470mA/100kHz/105C (x0.8 at120Hz); 10000h/105C</field>
+        <field name="MPN">UHE1J152MHD</field>
+        <field name="Manufacturer">Nichicon</field>
+        <field name="Footprint">Capacitor_THT:CP_Radial_D18.0mm_P7.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="Nichicon UHE CAT.8100M p.1/p.6: UHE1J152MHD 1500uF 63V D18 H40+2 P7.5; Zmax36mOhm/100kHz/20C; ripple2470mA/100kHz/105C (x0.8 at120Hz); 10000h/105C"/>
+      <property name="MPN" value="UHE1J152MHD"/>
+      <property name="Manufacturer" value="Nichicon"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f11fd256-e681-5f00-af7f-3e5cfd83c6b2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C16">
+      <value>33nF 25V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified</field>
+        <field name="MPN">GRM188R71E333KA01D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified"/>
+      <property name="MPN" value="GRM188R71E333KA01D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ff68f0f4-12cd-5613-8e86-062fe43ec919</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C17">
+      <value>33nF 25V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified</field>
+        <field name="MPN">GRM188R71E333KA01D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified"/>
+      <property name="MPN" value="GRM188R71E333KA01D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1d17531d-fc01-53cd-b8ef-d1f2d0a484ad</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C18">
+      <value>33nF 25V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified</field>
+        <field name="MPN">GRM188R71E333KA01D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified"/>
+      <property name="MPN" value="GRM188R71E333KA01D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b78afba6-d89f-58d6-8d8a-444c182c5d3d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C19">
+      <value>33nF 25V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified</field>
+        <field name="MPN">GRM188R71E333KA01D</field>
+        <field name="Manufacturer">Murata</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified"/>
+      <property name="MPN" value="GRM188R71E333KA01D"/>
+      <property name="Manufacturer" value="Murata"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6e741b46-3dba-5ef9-bd6a-c9c6c647e490</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C20">
+      <value>10uF 16V X5R</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified; effective capacitance/DC-bias check still required at VDD</field>
+        <field name="MPN">EMK212BJ106KG-T</field>
+        <field name="Manufacturer">Taiyo Yuden</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified; effective capacitance/DC-bias check still required at VDD"/>
+      <property name="MPN" value="EMK212BJ106KG-T"/>
+      <property name="Manufacturer" value="Taiyo Yuden"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>41f719c2-82ef-56c2-a69a-7a652b4659dc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C21">
+      <value>10uF 16V X5R</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified; effective capacitance/DC-bias check still required at VDD</field>
+        <field name="MPN">EMK212BJ106KG-T</field>
+        <field name="Manufacturer">Taiyo Yuden</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified; effective capacitance/DC-bias check still required at VDD"/>
+      <property name="MPN" value="EMK212BJ106KG-T"/>
+      <property name="Manufacturer" value="Taiyo Yuden"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b99e9e6b-9e64-5215-a8c7-3e32bed3270c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C22">
+      <value>470nF 100V PP 5%</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">WIMA MKP2 03.26 p.38-39: 470nF 100V, W8.5 H14 L7.2 PCM5; J S SD suffix</field>
+        <field name="MPN">MKP2D034701M00JSSD</field>
+        <field name="Manufacturer">WIMA</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="WIMA MKP2 03.26 p.38-39: 470nF 100V, W8.5 H14 L7.2 PCM5; J S SD suffix"/>
+      <property name="MPN" value="MKP2D034701M00JSSD"/>
+      <property name="Manufacturer" value="WIMA"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>34228ebd-384b-5e70-a87d-0a35740f58c3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C23">
+      <value>470nF 100V PP 5%</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">WIMA MKP2 03.26 p.38-39: 470nF 100V, W8.5 H14 L7.2 PCM5; J S SD suffix</field>
+        <field name="MPN">MKP2D034701M00JSSD</field>
+        <field name="Manufacturer">WIMA</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="WIMA MKP2 03.26 p.38-39: 470nF 100V, W8.5 H14 L7.2 PCM5; J S SD suffix"/>
+      <property name="MPN" value="MKP2D034701M00JSSD"/>
+      <property name="Manufacturer" value="WIMA"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>eb7a5cee-d9cf-5a63-af58-522423b00b45</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C24">
+      <value>1nF 100V C0G</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified</field>
+        <field name="MPN">12061A102JAT2A</field>
+        <field name="Manufacturer">KYOCERA AVX</field>
+        <field name="Footprint">Capacitor_SMD:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified"/>
+      <property name="MPN" value="12061A102JAT2A"/>
+      <property name="Manufacturer" value="KYOCERA AVX"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>217dd621-d2a4-553d-8876-1234bb38b1d3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C25">
+      <value>10nF 100V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified</field>
+        <field name="MPN">06031C103KAT2A</field>
+        <field name="Manufacturer">KYOCERA AVX</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified"/>
+      <property name="MPN" value="06031C103KAT2A"/>
+      <property name="Manufacturer" value="KYOCERA AVX"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>91ee61fb-554d-5260-a09d-030a7b6c67a6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C26">
+      <value>470nF 100V PP 5%</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">WIMA MKP2 03.26 p.38-39: 470nF 100V, W8.5 H14 L7.2 PCM5; J S SD suffix</field>
+        <field name="MPN">MKP2D034701M00JSSD</field>
+        <field name="Manufacturer">WIMA</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="WIMA MKP2 03.26 p.38-39: 470nF 100V, W8.5 H14 L7.2 PCM5; J S SD suffix"/>
+      <property name="MPN" value="MKP2D034701M00JSSD"/>
+      <property name="Manufacturer" value="WIMA"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7acd2fcf-ebaf-5d64-a3e6-62722429b194</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C27">
+      <value>470nF 100V PP 5%</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">WIMA MKP2 03.26 p.38-39: 470nF 100V, W8.5 H14 L7.2 PCM5; J S SD suffix</field>
+        <field name="MPN">MKP2D034701M00JSSD</field>
+        <field name="Manufacturer">WIMA</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="WIMA MKP2 03.26 p.38-39: 470nF 100V, W8.5 H14 L7.2 PCM5; J S SD suffix"/>
+      <property name="MPN" value="MKP2D034701M00JSSD"/>
+      <property name="Manufacturer" value="WIMA"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>86fe68bb-abdc-5f1d-9615-c6a43e22abdf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C28">
+      <value>1nF 100V C0G</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified</field>
+        <field name="MPN">12061A102JAT2A</field>
+        <field name="Manufacturer">KYOCERA AVX</field>
+        <field name="Footprint">Capacitor_SMD:C_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified"/>
+      <property name="MPN" value="12061A102JAT2A"/>
+      <property name="Manufacturer" value="KYOCERA AVX"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f15f2dc2-3db8-5b9a-90d7-5c46997d5485</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C29">
+      <value>10nF 100V X7R</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified</field>
+        <field name="MPN">06031C103KAT2A</field>
+        <field name="Manufacturer">KYOCERA AVX</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified"/>
+      <property name="MPN" value="06031C103KAT2A"/>
+      <property name="Manufacturer" value="KYOCERA AVX"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>49998067-894f-5a1b-97e6-2ae1aa67757e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C101">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm</footprint>
+      <fields>
+        <field name="MPN">MKP2D031001F00JSSD</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="MKP2D031001F00JSSD"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e9f045a5-7d8b-54d4-88f3-51e5a3537b0e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C102">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm</footprint>
+      <fields>
+        <field name="MPN">MKP2D031001F00JSSD</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="MKP2D031001F00JSSD"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2d686177-c913-561d-bd8c-32cd6056f640</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C103">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm</footprint>
+      <fields>
+        <field name="MPN">MKP2D031001F00JSSD</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="MKP2D031001F00JSSD"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9b3be438-e7eb-5403-b4b4-89abf81320c2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C104">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm</footprint>
+      <fields>
+        <field name="MPN">MKP2D031001F00JSSD</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="MKP2D031001F00JSSD"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a9298699-1f08-5ba8-a925-939f91f1373d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C105">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm</footprint>
+      <fields>
+        <field name="MPN">MKP2D031001F00JSSD</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="MKP2D031001F00JSSD"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0098acd5-1eac-5043-991e-301c7dba25d1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C106">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm</footprint>
+      <fields>
+        <field name="MPN">MKP2D031001F00JSSD</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="MKP2D031001F00JSSD"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0332dc77-064a-557d-9331-4bd400ce24ee</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C107">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ae54ee7f-099c-546c-8bcd-c377286e599f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C108">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8fe3f903-f042-54ae-a3ed-091a4ca4e79e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C201">
+      <value>470u</value>
+      <footprint>PS28:WE_860020575014</footprint>
+      <fields>
+        <field name="MPN">860020575014</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">PS28:WE_860020575014</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="MPN" value="860020575014"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5c0b4822-778b-5849-9788-5f1af1c59e5f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C202">
+      <value>470u</value>
+      <footprint>PS28:WE_860020575014</footprint>
+      <fields>
+        <field name="MPN">860020575014</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">PS28:WE_860020575014</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="MPN" value="860020575014"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2fe3f90d-f22f-5d86-bf20-9d94edd2adf2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C203">
+      <value>1u</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W11.0mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</footprint>
+      <fields>
+        <field name="MPN">MKP2C041001N00JSSD</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Capacitor_THT:C_Rect_L7.2mm_W11.0mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="MKP2C041001N00JSSD"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>30084882-7164-5767-9d68-d2bc983f135c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D201">
+      <value>1N4007</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <fields>
+        <field name="MPN">1N4007-E3/54</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="MPN" value="1N4007-E3/54"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="diode"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>771fed2a-bb61-5178-9f83-4ee7719ec1ee</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>691137710002 2P 5.00mm</value>
+      <footprint>PS28:WE_WR_TBL_691137710002</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">WE WR-TBL1377 rev001.003 2021-07-30 p.1-2: pitch5.00 NOT5.08; 2pins, D1.3 drill, 16A UL/24A VDE</field>
+        <field name="MPN">691137710002</field>
+        <field name="Manufacturer">Wurth Elektronik</field>
+        <field name="Footprint">PS28:WE_WR_TBL_691137710002</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="WE WR-TBL1377 rev001.003 2021-07-30 p.1-2: pitch5.00 NOT5.08; 2pins, D1.3 drill, 16A UL/24A VDE"/>
+      <property name="MPN" value="691137710002"/>
+      <property name="Manufacturer" value="Wurth Elektronik"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d04640b1-8978-5228-9827-a57515809f00</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J2">
+      <value>Auxiliary 12V</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified</field>
+        <field name="MPN">PBC02SAAN</field>
+        <field name="Manufacturer">Sullins</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified"/>
+      <property name="MPN" value="PBC02SAAN"/>
+      <property name="Manufacturer" value="Sullins"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>26354813-9f1d-550b-9f4b-1bbe85b06d2f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J3">
+      <value>Differential audio</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified</field>
+        <field name="MPN">PBC03SAAN</field>
+        <field name="Manufacturer">Sullins</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified"/>
+      <property name="MPN" value="PBC03SAAN"/>
+      <property name="Manufacturer" value="Sullins"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>197b7113-ae6b-540b-bfed-9b3fe6644b86</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J4">
+      <value>Control 2x4: 3V3 RESET FAULT CLIP GND GND NC NC</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified</field>
+        <field name="MPN">PEC04DAAN</field>
+        <field name="Manufacturer">Sullins</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_02x04_Odd_Even" description="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified"/>
+      <property name="MPN" value="PEC04DAAN"/>
+      <property name="Manufacturer" value="Sullins"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b3c5e144-44a3-59a3-83e8-750de9601439</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="5"/>
+            <pin num="7"/>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="6"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J5">
+      <value>691137710002 2P 5.00mm</value>
+      <footprint>PS28:WE_WR_TBL_691137710002</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">WE WR-TBL1377 rev001.003 2021-07-30 p.1-2: pitch5.00 NOT5.08; 2pins, D1.3 drill, 16A UL/24A VDE</field>
+        <field name="MPN">691137710002</field>
+        <field name="Manufacturer">Wurth Elektronik</field>
+        <field name="Footprint">PS28:WE_WR_TBL_691137710002</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="WE WR-TBL1377 rev001.003 2021-07-30 p.1-2: pitch5.00 NOT5.08; 2pins, D1.3 drill, 16A UL/24A VDE"/>
+      <property name="MPN" value="691137710002"/>
+      <property name="Manufacturer" value="Wurth Elektronik"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b2552319-80d4-5f7f-8506-8b805e6821f3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J6">
+      <value>GND braid solder bond - NO mounting hole</value>
+      <footprint>PS28:Ground_Bond_SMD_6mm</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">D-014: reuse OEM mounts, no new mounting point; dedicated GND bond</field>
+        <field name="MPN">PCB solder land + grounded braid assembly; NOT purchase PN</field>
+        <field name="Manufacturer">PCB assembly feature</field>
+        <field name="Footprint">PS28:Ground_Bond_SMD_6mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="D-014: reuse OEM mounts, no new mounting point; dedicated GND bond"/>
+      <property name="MPN" value="PCB solder land + grounded braid assembly; NOT purchase PN"/>
+      <property name="Manufacturer" value="PCB assembly feature"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1aa666af-288d-5485-bd93-3249704cb8c8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L1">
+      <value>10uH 16A 22A_Isat_typ</value>
+      <footprint>PS28:WE_HCF2013_7443631000</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">WE 006.000 2025-07-08 p.1: 10uH/16A/22A typ/8.76mOhm max; stability land NOT electrical</field>
+        <field name="MPN">7443631000</field>
+        <field name="Manufacturer">Wurth Elektronik</field>
+        <field name="Footprint">PS28:WE_HCF2013_7443631000</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="L" description="Inductor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="WE 006.000 2025-07-08 p.1: 10uH/16A/22A typ/8.76mOhm max; stability land NOT electrical"/>
+      <property name="MPN" value="7443631000"/>
+      <property name="Manufacturer" value="Wurth Elektronik"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>07d4489c-13bd-5530-9d40-2302a772136c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L2">
+      <value>10uH 16A 22A_Isat_typ</value>
+      <footprint>PS28:WE_HCF2013_7443631000</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">WE 006.000 2025-07-08 p.1: 10uH/16A/22A typ/8.76mOhm max; stability land NOT electrical</field>
+        <field name="MPN">7443631000</field>
+        <field name="Manufacturer">Wurth Elektronik</field>
+        <field name="Footprint">PS28:WE_HCF2013_7443631000</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="L" description="Inductor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="WE 006.000 2025-07-08 p.1: 10uH/16A/22A typ/8.76mOhm max; stability land NOT electrical"/>
+      <property name="MPN" value="7443631000"/>
+      <property name="Manufacturer" value="Wurth Elektronik"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1184e02d-3715-5665-9e64-2e0089db54cf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1">
+      <value>3.3R 0.25W 1%</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system</field>
+        <field name="MPN">CRCW12063R30FKEA</field>
+        <field name="Manufacturer">Vishay</field>
+        <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system"/>
+      <property name="MPN" value="CRCW12063R30FKEA"/>
+      <property name="Manufacturer" value="Vishay"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b4fab299-6d12-57c7-92a1-b5279ef963c6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>3.3R 0.25W 1%</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system</field>
+        <field name="MPN">CRCW12063R30FKEA</field>
+        <field name="Manufacturer">Vishay</field>
+        <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system"/>
+      <property name="MPN" value="CRCW12063R30FKEA"/>
+      <property name="Manufacturer" value="Vishay"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1c0959cf-c316-589c-b2f7-b9c12d89e2a2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R3">
+      <value>22k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system</field>
+        <field name="MPN">CRCW060322K0FKEA</field>
+        <field name="Manufacturer">Vishay</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system"/>
+      <property name="MPN" value="CRCW060322K0FKEA"/>
+      <property name="Manufacturer" value="Vishay"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>429e34a9-1a6e-522d-a946-ec8a5962ccca</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R4">
+      <value>30k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system</field>
+        <field name="MPN">CRCW060330K0FKEA</field>
+        <field name="Manufacturer">Vishay</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system"/>
+      <property name="MPN" value="CRCW060330K0FKEA"/>
+      <property name="Manufacturer" value="Vishay"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7f19c915-ddac-5dcb-b6a4-a84a1063f126</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R5">
+      <value>3.3R 0.25W 1%</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system</field>
+        <field name="MPN">CRCW12063R30FKEA</field>
+        <field name="Manufacturer">Vishay</field>
+        <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system"/>
+      <property name="MPN" value="CRCW12063R30FKEA"/>
+      <property name="Manufacturer" value="Vishay"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>38dd3b0d-ee9f-5d7e-8cc4-197deac39552</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R6">
+      <value>3.3R 0.25W 1%</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system</field>
+        <field name="MPN">CRCW12063R30FKEA</field>
+        <field name="Manufacturer">Vishay</field>
+        <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system"/>
+      <property name="MPN" value="CRCW12063R30FKEA"/>
+      <property name="Manufacturer" value="Vishay"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>efe4ac89-790b-5a0c-b1ef-fa0819415067</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R7">
+      <value>10k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system</field>
+        <field name="MPN">CRCW060310K0FKEA</field>
+        <field name="Manufacturer">Vishay</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system"/>
+      <property name="MPN" value="CRCW060310K0FKEA"/>
+      <property name="Manufacturer" value="Vishay"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>77e1026d-dc67-529d-b551-d7dede4b7ccc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R8">
+      <value>10k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system</field>
+        <field name="MPN">CRCW060310K0FKEA</field>
+        <field name="Manufacturer">Vishay</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system"/>
+      <property name="MPN" value="CRCW060310K0FKEA"/>
+      <property name="Manufacturer" value="Vishay"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c9954b2b-0731-5f5c-9689-b1a856620ec2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R9">
+      <value>4.7k 1%</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system</field>
+        <field name="MPN">CRCW06034K70FKEA</field>
+        <field name="Manufacturer">Vishay</field>
+        <field name="Footprint">Resistor_SMD:R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system"/>
+      <property name="MPN" value="CRCW06034K70FKEA"/>
+      <property name="Manufacturer" value="Vishay"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bc1b17b8-94b8-546c-afcc-926593b463f9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R101">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>641151d9-a39a-55fd-a792-207de61f2196</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R102">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7555318c-2242-587e-b313-3340bad2bc35</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R103">
+      <value>14k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c6d81eb7-502f-5220-baa1-485e52e488f9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R104">
+      <value>14k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>318c6854-922c-5869-9f73-975772e25b67</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R105">
+      <value>14k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>60e36246-0b97-5fbb-9f3a-1d9495fcd2c9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R106">
+      <value>14k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e27384a8-f780-57b4-bffb-399640ed3714</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R107">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f1b4cba1-dbe7-57cb-a9f9-c7c9a8145ba8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R108">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">TBD</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TBD"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cc158532-cba7-55c5-9dec-7274a20bc143</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R201">
+      <value>15</value>
+      <footprint>Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P20.32mm_Horizontal</footprint>
+      <fields>
+        <field name="MPN">AC03000001509JAC00</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P20.32mm_Horizontal</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="AC03000001509JAC00"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>148910a0-ae69-52f2-a4ab-a2c303cf7617</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R202">
+      <value>1k</value>
+      <footprint>PS28_ANALOG:TNPW1206_IPC_Reflow</footprint>
+      <fields>
+        <field name="MPN">TNPW12061K00BEEA</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">PS28_ANALOG:TNPW1206_IPC_Reflow</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TNPW12061K00BEEA"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c4715b6e-8a0a-5eb2-9b25-5cabbf4328db</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R203">
+      <value>2.2k</value>
+      <footprint>PS28_ANALOG:TNPW1206_IPC_Reflow</footprint>
+      <fields>
+        <field name="MPN">TNPW12062K20BEEA</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">PS28_ANALOG:TNPW1206_IPC_Reflow</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="TNPW12062K20BEEA"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f4563d18-9163-55b5-8a4d-a10cfe91ddf8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R204">
+      <value>75</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="MPN">CRCW120675R0FKEA</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="CRCW120675R0FKEA"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>10078523-22ac-51d1-b95b-e07f03f93ec5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R205">
+      <value>75</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="MPN">CRCW120675R0FKEA</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="CRCW120675R0FKEA"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cad67bfd-85ab-53b4-8141-8c767faa8b25</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R206">
+      <value>75</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="MPN">CRCW120675R0FKEA</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="CRCW120675R0FKEA"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fd2e7f6d-4325-5bb9-9f37-1276942e3d6d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R207">
+      <value>75</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="MPN">CRCW120675R0FKEA</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="CRCW120675R0FKEA"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>937c94bb-fedf-5194-96bb-aeb20b762ade</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1">
+      <value>TPA3255DDV</value>
+      <footprint>Package_SO:HTSSOP-44_6.1x14mm_P0.635mm_TopEP4.14x7.01mm</footprint>
+      <fields>
+        <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
+        <field name="Source">TI SLASEA8A DDV0044D / package addendum</field>
+        <field name="MPN">TPA3255DDVR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Footprint">Package_SO:HTSSOP-44_6.1x14mm_P0.635mm_TopEP4.14x7.01mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="PS28" part="TPA3255DDV" description=""/>
+      <property name="SelectionStatus" value="Selected for engineering validation; NO procurement/release approval"/>
+      <property name="Source" value="TI SLASEA8A DDV0044D / package addendum"/>
+      <property name="MPN" value="TPA3255DDVR"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5982dd4e-3f76-59ec-81f4-9b814ee5be1e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+            <pin num="19"/>
+            <pin num="20"/>
+            <pin num="21"/>
+            <pin num="22"/>
+            <pin num="44"/>
+            <pin num="43"/>
+            <pin num="42"/>
+            <pin num="41"/>
+            <pin num="40"/>
+            <pin num="39"/>
+            <pin num="38"/>
+            <pin num="37"/>
+            <pin num="36"/>
+            <pin num="35"/>
+            <pin num="34"/>
+            <pin num="33"/>
+            <pin num="32"/>
+            <pin num="31"/>
+            <pin num="30"/>
+            <pin num="29"/>
+            <pin num="28"/>
+            <pin num="27"/>
+            <pin num="26"/>
+            <pin num="25"/>
+            <pin num="24"/>
+            <pin num="23"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>OPA1656ID</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <fields>
+        <field name="MPN">OPA1656ID</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="PS28_ANALOG" part="OPA1656ID" description="OPA1656 dual audio amplifier; TI SBOS901C reviewed pinout; study"/>
+      <property name="MPN" value="OPA1656ID"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="dual opamp"/>
+      <property name="ki_fp_filters" value="SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d64ee016-3e83-5f89-8322-870c91a24d35 dc31fb5d-0022-51a7-b4f7-8d742548c3a9 596c107b-e8bf-5507-8ae4-28ff0ad14614</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="8"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U3">
+      <value>OPA1656ID</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <fields>
+        <field name="MPN">OPA1656ID</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="PS28_ANALOG" part="OPA1656ID" description="OPA1656 dual audio amplifier; TI SBOS901C reviewed pinout; study"/>
+      <property name="MPN" value="OPA1656ID"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="dual opamp"/>
+      <property name="ki_fp_filters" value="SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ebc471e1-6369-5499-984f-6852b651c3b3 b51923d9-441f-51ce-991b-59e99aa5a9d2 affa6a55-1661-5b59-9a45-35b993ff5b72</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="8"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_01x01">
+      <description>Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x01</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x03">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x04_Odd_Even">
+      <description>Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x04_Odd_Even</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Polarized">
+      <description>Polarized capacitor</description>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Polarized</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Polarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D">
+      <description>Diode</description>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Diode</field>
+        <field name="Sim.Device">D</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="L">
+      <description>Inductor</description>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Inductor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="PS28" part="TPA3255DDV">
+      <docs>https://www.ti.com/lit/ds/symlink/tpa3255.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPA3255DDV</field>
+        <field name="Footprint">Package_SO:HTSSOP-44_6.1x14mm_P0.635mm_TopEP4.14x7.01mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tpa3255.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GVDD_AB" type="power_in"/>
+        <pin num="2" name="VDD" type="power_in"/>
+        <pin num="3" name="M1" type="input"/>
+        <pin num="4" name="M2" type="input"/>
+        <pin num="5" name="INPUT_A" type="input"/>
+        <pin num="6" name="INPUT_B" type="input"/>
+        <pin num="7" name="OC_ADJ" type="bidirectional"/>
+        <pin num="8" name="FREQ_ADJ" type="output"/>
+        <pin num="9" name="OSC_IOM" type="bidirectional"/>
+        <pin num="10" name="OSC_IOP" type="output"/>
+        <pin num="11" name="DVDD" type="power_out"/>
+        <pin num="12" name="GND" type="power_in"/>
+        <pin num="13" name="GND" type="power_in"/>
+        <pin num="14" name="AVDD" type="power_out"/>
+        <pin num="15" name="C_START" type="output"/>
+        <pin num="16" name="INPUT_C" type="input"/>
+        <pin num="17" name="INPUT_D" type="input"/>
+        <pin num="18" name="~{RESET}" type="input"/>
+        <pin num="19" name="~{FAULT}" type="open_collector"/>
+        <pin num="20" name="VBG" type="power_out"/>
+        <pin num="21" name="~{CLIP_OTW}" type="open_collector"/>
+        <pin num="22" name="GVDD_CD" type="power_in"/>
+        <pin num="23" name="BST_D" type="power_in"/>
+        <pin num="24" name="BST_C" type="power_in"/>
+        <pin num="25" name="GND" type="power_in"/>
+        <pin num="26" name="GND" type="power_in"/>
+        <pin num="27" name="OUT_D" type="power_out"/>
+        <pin num="28" name="OUT_D" type="power_out"/>
+        <pin num="29" name="PVDD_CD" type="power_in"/>
+        <pin num="30" name="PVDD_CD" type="power_in"/>
+        <pin num="31" name="PVDD_CD" type="power_in"/>
+        <pin num="32" name="OUT_C" type="power_out"/>
+        <pin num="33" name="GND" type="power_in"/>
+        <pin num="34" name="GND" type="power_in"/>
+        <pin num="35" name="OUT_B" type="power_out"/>
+        <pin num="36" name="PVDD_AB" type="power_in"/>
+        <pin num="37" name="PVDD_AB" type="power_in"/>
+        <pin num="38" name="PVDD_AB" type="power_in"/>
+        <pin num="39" name="OUT_A" type="power_out"/>
+        <pin num="40" name="OUT_A" type="power_out"/>
+        <pin num="41" name="GND" type="power_in"/>
+        <pin num="42" name="GND" type="power_in"/>
+        <pin num="43" name="BST_B" type="power_in"/>
+        <pin num="44" name="BST_A" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="PS28_ANALOG" part="OPA1656ID">
+      <description>OPA1656 dual audio amplifier; TI SBOS901C reviewed pinout; study</description>
+      <docs>https://www.ti.com/lit/ds/symlink/opa1656.pdf</docs>
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>TO*99*</fp>
+        <fp>OnSemi*Micro8*</fp>
+        <fp>TSSOP*3x3mm*P0.65mm*</fp>
+        <fp>TSSOP*4.4x3mm*P0.65mm*</fp>
+        <fp>MSOP*3x3mm*P0.65mm*</fp>
+        <fp>SSOP*3.9x4.9mm*P0.635mm*</fp>
+        <fp>LFCSP*2x2mm*P0.5mm*</fp>
+        <fp>*SIP*</fp>
+        <fp>SOIC*5.3x6.2mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">OPA1656ID</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/opa1656.pdf</field>
+        <field name="Description">OPA1656 dual audio amplifier; TI SBOS901C reviewed pinout; study</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="output"/>
+        <pin num="2" name="-" type="input"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="V-" type="power_in"/>
+        <pin num="5" name="+" type="input"/>
+        <pin num="6" name="-" type="input"/>
+        <pin num="7" name="" type="output"/>
+        <pin num="8" name="V+" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>${KICAD10_SYMBOL_DIR}/Device.kicad_sym</uri>
+    </library>
+    <library logical="PS28">
+      <uri>${KIPRJMOD}/libraries/PS28.kicad_sym</uri>
+    </library>
+    <library logical="PS28_ANALOG">
+      <uri>${KIPRJMOD}/libraries/PS28_ANALOG.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/ANALOG_12V" class="Default">
+      <node ref="C107" pin="1" pintype="passive"/>
+      <node ref="C108" pin="1" pintype="passive"/>
+      <node ref="C201" pin="1" pintype="passive"/>
+      <node ref="C202" pin="1" pintype="passive"/>
+      <node ref="R201" pin="2" pintype="passive"/>
+      <node ref="R203" pin="1" pintype="passive"/>
+      <node ref="R204" pin="1" pintype="passive"/>
+      <node ref="U2" pin="8" pinfunction="V+_8" pintype="power_in"/>
+      <node ref="U3" pin="8" pinfunction="V+_8" pintype="power_in"/>
+    </net>
+    <net code="2" name="/AUX_RAW" class="Default">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="D201" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R202" pin="1" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="VDD_2" pintype="power_in"/>
+    </net>
+    <net code="3" name="/AVDD" class="Default">
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="AVDD_14" pintype="power_out"/>
+    </net>
+    <net code="4" name="/BST_A" class="Default">
+      <node ref="C16" pin="1" pintype="passive"/>
+      <node ref="U1" pin="44" pinfunction="BST_A_44" pintype="power_in"/>
+    </net>
+    <net code="5" name="/BST_B" class="Default">
+      <node ref="C17" pin="1" pintype="passive"/>
+      <node ref="U1" pin="43" pinfunction="BST_B_43" pintype="power_in"/>
+    </net>
+    <net code="6" name="/BST_C" class="Default">
+      <node ref="C18" pin="1" pintype="passive"/>
+      <node ref="U1" pin="24" pinfunction="BST_C_24" pintype="power_in"/>
+    </net>
+    <net code="7" name="/BST_D" class="Default">
+      <node ref="C19" pin="1" pintype="passive"/>
+      <node ref="U1" pin="23" pinfunction="BST_D_23" pintype="power_in"/>
+    </net>
+    <net code="8" name="/BUFFERED" class="Default">
+      <node ref="R103" pin="1" pintype="passive"/>
+      <node ref="U2" pin="1" pintype="output"/>
+      <node ref="U2" pin="2" pinfunction="-_2" pintype="input"/>
+    </net>
+    <net code="9" name="/CLIP_OTW" class="Default">
+      <node ref="J4" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="U1" pin="21" pinfunction="~{CLIP_OTW}_21" pintype="open_collector"/>
+    </net>
+    <net code="10" name="/C_START" class="Default">
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="U1" pin="15" pinfunction="C_START_15" pintype="output"/>
+    </net>
+    <net code="11" name="/DIFF_N" class="Default">
+      <node ref="C21" pin="1" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+    </net>
+    <net code="12" name="/DIFF_NEG" class="Default">
+      <node ref="R108" pin="1" pintype="passive"/>
+      <node ref="U3" pin="7" pintype="output"/>
+    </net>
+    <net code="13" name="/DIFF_P" class="Default">
+      <node ref="C20" pin="1" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+    </net>
+    <net code="14" name="/DIFF_POS" class="Default">
+      <node ref="C104" pin="2" pintype="passive"/>
+      <node ref="C105" pin="2" pintype="passive"/>
+      <node ref="R107" pin="1" pintype="passive"/>
+      <node ref="U3" pin="1" pintype="output"/>
+      <node ref="U3" pin="2" pinfunction="-_2" pintype="input"/>
+    </net>
+    <net code="15" name="/DIVIDED" class="Default">
+      <node ref="R101" pin="2" pintype="passive"/>
+      <node ref="R102" pin="1" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="+_3" pintype="input"/>
+    </net>
+    <net code="16" name="/DIV_BOTTOM" class="Default">
+      <node ref="R206" pin="2" pintype="passive"/>
+      <node ref="R207" pin="1" pintype="passive"/>
+    </net>
+    <net code="17" name="/DIV_TOP" class="Default">
+      <node ref="R204" pin="2" pintype="passive"/>
+      <node ref="R205" pin="1" pintype="passive"/>
+    </net>
+    <net code="18" name="/DVDD_INTERNAL" class="Default">
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="DVDD_11" pintype="power_out"/>
+      <node ref="U1" pin="4" pinfunction="M2_4" pintype="input"/>
+    </net>
+    <net code="19" name="/FAULT" class="Default">
+      <node ref="J4" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="U1" pin="19" pinfunction="~{FAULT}_19" pintype="open_collector"/>
+    </net>
+    <net code="20" name="/FILTERED1" class="Default">
+      <node ref="C101" pin="2" pintype="passive"/>
+      <node ref="C102" pin="2" pintype="passive"/>
+      <node ref="R105" pin="1" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="-_6" pintype="input"/>
+      <node ref="U2" pin="7" pintype="output"/>
+    </net>
+    <net code="21" name="/FREQ_ADJ" class="Default">
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="FREQ_ADJ_8" pintype="output"/>
+    </net>
+    <net code="22" name="/GND" class="Default">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="C107" pin="2" pintype="passive"/>
+      <node ref="C108" pin="2" pintype="passive"/>
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="C12" pin="2" pintype="passive"/>
+      <node ref="C13" pin="2" pintype="passive"/>
+      <node ref="C14" pin="2" pintype="passive"/>
+      <node ref="C15" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C201" pin="2" pintype="passive"/>
+      <node ref="C202" pin="2" pintype="passive"/>
+      <node ref="C203" pin="2" pintype="passive"/>
+      <node ref="C22" pin="2" pintype="passive"/>
+      <node ref="C23" pin="2" pintype="passive"/>
+      <node ref="C24" pin="2" pintype="passive"/>
+      <node ref="C26" pin="2" pintype="passive"/>
+      <node ref="C27" pin="2" pintype="passive"/>
+      <node ref="C28" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J3" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="J4" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="J4" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="J6" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R202" pin="2" pintype="passive"/>
+      <node ref="R203" pin="2" pintype="passive"/>
+      <node ref="R207" pin="2" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="GND_12" pintype="power_in"/>
+      <node ref="U1" pin="13" pinfunction="GND_13" pintype="power_in"/>
+      <node ref="U1" pin="16" pinfunction="INPUT_C_16" pintype="input"/>
+      <node ref="U1" pin="17" pinfunction="INPUT_D_17" pintype="input"/>
+      <node ref="U1" pin="25" pinfunction="GND_25" pintype="power_in"/>
+      <node ref="U1" pin="26" pinfunction="GND_26" pintype="power_in"/>
+      <node ref="U1" pin="3" pinfunction="M1_3" pintype="input"/>
+      <node ref="U1" pin="33" pinfunction="GND_33" pintype="power_in"/>
+      <node ref="U1" pin="34" pinfunction="GND_34" pintype="power_in"/>
+      <node ref="U1" pin="41" pinfunction="GND_41" pintype="power_in"/>
+      <node ref="U1" pin="42" pinfunction="GND_42" pintype="power_in"/>
+      <node ref="U2" pin="4" pinfunction="V-_4" pintype="power_in"/>
+      <node ref="U3" pin="4" pinfunction="V-_4" pintype="power_in"/>
+    </net>
+    <net code="23" name="/GVDD_AB" class="Default">
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="GVDD_AB_1" pintype="power_in"/>
+    </net>
+    <net code="24" name="/GVDD_CD" class="Default">
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="U1" pin="22" pinfunction="GVDD_CD_22" pintype="power_in"/>
+    </net>
+    <net code="25" name="/INPUT_A_AC" class="Default">
+      <node ref="C20" pin="2" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="INPUT_A_5" pintype="input"/>
+    </net>
+    <net code="26" name="/INPUT_B_AC" class="Default">
+      <node ref="C21" pin="2" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="INPUT_B_6" pintype="input"/>
+    </net>
+    <net code="27" name="/ISO_FEED" class="Default">
+      <node ref="D201" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="R201" pin="1" pintype="passive"/>
+    </net>
+    <net code="28" name="/MINUS" class="Default">
+      <node ref="R107" pin="2" pintype="passive"/>
+      <node ref="R108" pin="2" pintype="passive"/>
+      <node ref="U3" pin="6" pinfunction="-_6" pintype="input"/>
+    </net>
+    <net code="29" name="/OC_ADJ" class="Default">
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="OC_ADJ_7" pintype="bidirectional"/>
+    </net>
+    <net code="30" name="/PVDD_36V" class="Default">
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="C12" pin="1" pintype="passive"/>
+      <node ref="C13" pin="1" pintype="passive"/>
+      <node ref="C14" pin="1" pintype="passive"/>
+      <node ref="C15" pin="1" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="U1" pin="29" pinfunction="PVDD_CD_29" pintype="power_in"/>
+      <node ref="U1" pin="30" pinfunction="PVDD_CD_30" pintype="power_in"/>
+      <node ref="U1" pin="31" pinfunction="PVDD_CD_31" pintype="power_in"/>
+      <node ref="U1" pin="36" pinfunction="PVDD_AB_36" pintype="power_in"/>
+      <node ref="U1" pin="37" pinfunction="PVDD_AB_37" pintype="power_in"/>
+      <node ref="U1" pin="38" pinfunction="PVDD_AB_38" pintype="power_in"/>
+    </net>
+    <net code="31" name="/PWM_AC" class="Default">
+      <node ref="C16" pin="2" pintype="passive"/>
+      <node ref="C18" pin="2" pintype="passive"/>
+      <node ref="L1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="32" pinfunction="OUT_C_32" pintype="power_out"/>
+      <node ref="U1" pin="39" pinfunction="OUT_A_39" pintype="power_out"/>
+      <node ref="U1" pin="40" pinfunction="OUT_A_40" pintype="power_out"/>
+    </net>
+    <net code="32" name="/PWM_BD" class="Default">
+      <node ref="C17" pin="2" pintype="passive"/>
+      <node ref="C19" pin="2" pintype="passive"/>
+      <node ref="L2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U1" pin="27" pinfunction="OUT_D_27" pintype="power_out"/>
+      <node ref="U1" pin="28" pinfunction="OUT_D_28" pintype="power_out"/>
+      <node ref="U1" pin="35" pinfunction="OUT_B_35" pintype="power_out"/>
+    </net>
+    <net code="33" name="/RESET" class="Default">
+      <node ref="J4" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="U1" pin="18" pinfunction="~{RESET}_18" pintype="input"/>
+    </net>
+    <net code="34" name="/SPK_N" class="Default">
+      <node ref="C26" pin="1" pintype="passive"/>
+      <node ref="C27" pin="1" pintype="passive"/>
+      <node ref="C28" pin="1" pintype="passive"/>
+      <node ref="C29" pin="1" pintype="passive"/>
+      <node ref="J5" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="L2" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="35" name="/SPK_N_SNUB" class="Default">
+      <node ref="C29" pin="2" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+    </net>
+    <net code="36" name="/SPK_P" class="Default">
+      <node ref="C22" pin="1" pintype="passive"/>
+      <node ref="C23" pin="1" pintype="passive"/>
+      <node ref="C24" pin="1" pintype="passive"/>
+      <node ref="C25" pin="1" pintype="passive"/>
+      <node ref="J5" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="L1" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="37" name="/SPK_P_SNUB" class="Default">
+      <node ref="C25" pin="2" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+    </net>
+    <net code="38" name="/VBG" class="Default">
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="U1" pin="20" pinfunction="VBG_20" pintype="power_out"/>
+    </net>
+    <net code="39" name="/VIO_3V3_EXTERNAL" class="Default">
+      <node ref="J4" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+    </net>
+    <net code="40" name="/VMID" class="Default">
+      <node ref="C103" pin="2" pintype="passive"/>
+      <node ref="C106" pin="2" pintype="passive"/>
+      <node ref="C203" pin="1" pintype="passive"/>
+      <node ref="R102" pin="2" pintype="passive"/>
+      <node ref="R205" pin="2" pintype="passive"/>
+      <node ref="R206" pin="1" pintype="passive"/>
+      <node ref="U3" pin="5" pinfunction="+_5" pintype="input"/>
+    </net>
+    <net code="41" name="/X1" class="Default">
+      <node ref="C101" pin="1" pintype="passive"/>
+      <node ref="C102" pin="1" pintype="passive"/>
+      <node ref="R103" pin="2" pintype="passive"/>
+      <node ref="R104" pin="1" pintype="passive"/>
+    </net>
+    <net code="42" name="/X2" class="Default">
+      <node ref="C104" pin="1" pintype="passive"/>
+      <node ref="C105" pin="1" pintype="passive"/>
+      <node ref="R105" pin="2" pintype="passive"/>
+      <node ref="R106" pin="1" pintype="passive"/>
+    </net>
+    <net code="43" name="/Y1" class="Default">
+      <node ref="C103" pin="1" pintype="passive"/>
+      <node ref="R104" pin="2" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="+_5" pintype="input"/>
+    </net>
+    <net code="44" name="/Y2" class="Default">
+      <node ref="C106" pin="1" pintype="passive"/>
+      <node ref="R106" pin="2" pintype="passive"/>
+      <node ref="U3" pin="3" pinfunction="+_3" pintype="input"/>
+    </net>
+    <net code="45" name="MONO_BIASED" class="Default">
+      <node ref="R101" pin="1" pintype="passive"/>
+    </net>
+    <net code="46" name="unconnected-(J4-Pin_7-Pad7)" class="Default">
+      <node ref="J4" pin="7" pinfunction="Pin_7_7" pintype="passive+no_connect"/>
+    </net>
+    <net code="47" name="unconnected-(J4-Pin_8-Pad8)" class="Default">
+      <node ref="J4" pin="8" pinfunction="Pin_8_8" pintype="passive+no_connect"/>
+    </net>
+    <net code="48" name="unconnected-(U1-OSC_IOM-Pad9)" class="Default">
+      <node ref="U1" pin="9" pinfunction="OSC_IOM_9" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="49" name="unconnected-(U1-OSC_IOP-Pad10)" class="Default">
+      <node ref="U1" pin="10" pinfunction="OSC_IOP_10" pintype="output+no_connect"/>
+    </net>
+  </nets>
+</export>

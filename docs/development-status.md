@@ -4,6 +4,15 @@ Snapshot técnico após D-018/D-019, com galeria nativa regenerada.
 Planejamento canônico: `.tasks/items/`; este resumo não muda estados ou gates.
 Não é release de hardware, montagem completa ou autorização de fabricação.
 
+## Incremento posterior D-020 — candidata incompleta
+[Core + analógico e pesquisa de proteção](integration-protection-review.md):
+`kicad/system-candidate/system-candidate.kicad_pro` contém76 componentes/212 pads,
+sem footprints vazios nessa candidata. Analógico em banco **fora do contorno**,
+ponte de sinal aberta e proteção/mute/supervisor físicos NÃO implementados.
+CAD Würth licenciado incorporado; R9 candidata4,7k após contraprova de fuga.
+B/OEM/capturas anteriores e seus números abaixo permanecem históricos intactos.
+Não confundir importação de footprints com placement ou schematic completo.
+
 ## O que existe e onde abrir
 
 - **Core B**, `kicad/core-selected/ps28-modern.kicad_pro`: captura/placement

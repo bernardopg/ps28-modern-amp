@@ -51,6 +51,12 @@ D-018/D-019 não estão integrados à PCB. Nenhum schematic/PCB foi alterado; 13
 footprints e pinagem/MPNs/control/proteção/supervisor finais seguem pendentes.
 Status To Do/dependência ELEC-002 preservados; não fechar G1 por imagem/ERC0.
 
+D-020: `kicad/system-candidate/` integra captura core+29 analógicos (76/212),
+GND/AUX_RAW compartilhados, p8OPA emANALOG_12V. J101–103 eram interfaces lógicas,
+removidas sem novos conectores OEM. Footprints/MPNs candidatos atribuídos;
+saída permanece ABERTA e proteção/mute/control/fonte/funções RCA não completos.
+Não fechar G1 nem marcar task Done. Baselines intactas; ver D-020.
+
 ## Risco / aprovação
 
 Alterações de hardware exigem fonte primária e gate humano; sem pedidos automáticos.

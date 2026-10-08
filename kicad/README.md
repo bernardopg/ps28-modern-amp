@@ -6,6 +6,13 @@ conferidos. Seleção/placement/revisão em ../docs/selected-core.md; sem roteam
 fit medido ou fabricação. Make erc/drc/core-check usam esta revisão.
 A revisão abaixo é histórica; não sobrescrevê-la a partir de buffers GUI antigos.
 
+## Integração candidata D-020 — INCOMPLETA
+`system-candidate/system-candidate.kicad_pro`: coreOEM+29 analógicos,76 footprints/
+212 pads. Potência/GND integrados; saída de sinal **aberta** até proteção qualificada.
+Novos footprints em banco fora do contorno; sem fit/placement/roteamento completos.
+MPNs/passivos candidatos, CAD Würth licenciado, R9 candidata4,7k; não fabricar/energizar.
+Ver [D-020](../docs/integration-protection-review.md); baselines preservados.
+
 ## Captura analógica protegida D-018 — sem PCB
 `analog-protected/analog-protected.kicad_pro`: 32 componentes/80 pinos, ERC0 e
 13 footprints pendentes. Fonte+VMID passivos integrados **ao estudo analógico**,

@@ -5,6 +5,16 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 ## [Unreleased]
 
 ### Added
+- D-020: candidata separada core+analógico76 componentes/212 pads, passivos/
+footprints candidatos e CAD oficial Würth CC com atribuição; ponte de sinal aberta,
+analógico fora do contorno em banco de importação, sem fit/proteção física completos.
+- Especificação executável de sequência semMCU: hold≥250ms TI (candidata360ms),
+FAULTmemorizado, pré-carga observada de ambos ramos, confirmação de isolamento,
+novo dwell/rearme e rejeição de atrasos típicos como máximos. Não é firmware.
+- Contraprova R9legado10k versus fuga100µA/VIL0,8V; candidata4,7k separada.
+Gerador no-overwrite/no-replace, identidade multiunit auditada e regressões de
+feedback contraditório. Pesquisa por três subagentes+revisão independente;
+nenhuma fabricação/compra/energização/gate aprovado.
 - Estado consolidado D-018/D-019: arquitetura, mapa das capturas/PCBs, riscos/
 pendências e tasks/sprint/roadmap sincronizados, sem mudança de status/gates.
 - `make render-3d`: galeria KiCad regenerada (6 PNGs/2 GIFs,16 câmeras/GIF),

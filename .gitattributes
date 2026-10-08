@@ -1,0 +1,5 @@
+# Vendor CAD stays byte-identical (including CRLF); hashes are independently tested.
+kicad/models/vendor-wurth/*.step binary
+kicad/models/vendor-wurth/LICENSE.txt -text whitespace=cr-at-eol
+# Native KiCad drawing primitives are generated media, not manually edited source.
+docs/images/system-candidate/system-candidate.svg binary
