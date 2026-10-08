@@ -86,21 +86,45 @@ class ProtectionTests(unittest.TestCase):
         self.assertEqual(ps["D201"]["nets"], {"1": "ISO_FEED", "2": "AUX_RAW"})
 
     def test_generator_atomic_refusal_and_original_unchanged(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            out = Path(tmp) / "analog-protected"
-            generate(out, True)
-            original = (out / "analog-protected.kicad_sch").read_bytes()
-            with self.assertRaises(FileExistsError):
-                generate(out, True)
-            self.assertEqual(
-                original, (out / "analog-protected.kicad_sch").read_bytes()
-            )
+        from unittest.mock import patch
+        from create_core_draft import parse
         from create_analog_capture import build
 
-        self.assertEqual(
-            build()[0],
-            (ROOT / "kicad/analog-front-end/analog-front-end.kicad_sch").read_text(),
-        )
+        # Portable unit fixture: actual embedded symbols already checked by native
+        # ERC. No installed/global KiCad libraries and no skipped test required.
+        cache = {}
+        for name in ["analog-front-end", "analog-protected"]:
+            tree = parse((ROOT / f"kicad/{name}/{name}.kicad_sch").read_text())
+            lib = next(n for n in tree if isinstance(n, list) and n[0] == "lib_symbols")
+            for symbol in lib[1:]:
+                cache.setdefault(symbol[1].strip('"'), symbol)
+
+        def stock(library, name):
+            return copy.deepcopy(cache[library + ":" + name])
+
+        def opamp():
+            return stock("PS28_ANALOG", "OPA1656ID")
+
+        with (
+            patch("create_analog_capture.stock_symbol", side_effect=stock),
+            patch("create_analog_capture.opamp_symbol", side_effect=opamp),
+            patch("create_vmid_protection.opamp_symbol", side_effect=opamp),
+        ):
+            with tempfile.TemporaryDirectory() as tmp:
+                out = Path(tmp) / "analog-protected"
+                generate(out, True)
+                original = (out / "analog-protected.kicad_sch").read_bytes()
+                with self.assertRaises(FileExistsError):
+                    generate(out, True)
+                self.assertEqual(
+                    original, (out / "analog-protected.kicad_sch").read_bytes()
+                )
+            self.assertEqual(
+                build()[0],
+                (
+                    ROOT / "kicad/analog-front-end/analog-front-end.kicad_sch"
+                ).read_text(),
+            )
 
     def test_native_fixture_independent_domains_and_terminal_topology(self):
         text = (ROOT / "tests/fixtures/analog-protected.xml").read_text()

@@ -5,6 +5,9 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 ## [Unreleased]
 
 ### Added
+- Teste de geração/refusal/retrocompatibilidade usa cache real de símbolos
+  incorporados às capturas, permitindo CI sem bibliotecas globais KiCad;
+  nenhum teste/critério/modelo suprimido. ERC nativo permanece validação separada.
 - D-018 corrige o VMID D-017 sob envelope: divisor passivo/rail isolado/reserva,
   sem buffer indefinido no desligamento; prova RC com ESR/carga/fuga,33 cenários
   de rede e9 casos oficiais LR4. Critérios/contraprovas mantidos; sem sign-off.
