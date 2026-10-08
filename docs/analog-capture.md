@@ -48,8 +48,10 @@ ZIP/modelo ficam somente em `build/`, sem republicar binários/projetos/modelo d
 fabricante. Download extrai **somente OPA1656.LIB**; hash e whitelist de diretivas
 `.SUBCKT/.MODEL/.ENDS` são conferidos antes de simular. Nenhum script TI executado.
 
-Ngspice PSA em configuração **local** por SPICE_USERINIT_DIR; não modificamos
-configuração global.9 casos:10,8/12/13,2V ×0/27/70°C:
+Ngspice PSA em configuração **local** por HOME/SPICE_USERINIT_DIR apenas do
+subprocesso; não modificamos configuração global. HOME isolado evita depender
+exclusivamente de SPICE_USERINIT_DIR nos builds de distribuição. Falhas incluem log no console e CI
+preserva diagnóstico sem publicar o modelo TI.9 casos:10,8/12/13,2V ×0/27/70°C:
 -151 pontos AC10Hz–10kHz por caso, efeito contra modelo R/C ideal dentro de0,1dB;
 - transiente20Hz, entrada2Vrms, divisor1/2 e janela final100ms;
 - saída diferencial≈1,9924Vrms; offset diferencial modelado entre≈−0,689mV e−0,042mV;

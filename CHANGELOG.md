@@ -5,6 +5,8 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 ## [Unreleased]
 
 ### Added
+- Diagnóstico de simulação TI preservado como artifact CI sem incluir modelo
+  proprietário; HOME/PSA isolados no subprocesso para builds ngspice legados.
 - Captura analógica KiCad isolada de21 componentes/58 pinos, candidato OPA1656ID,
   símbolo local auditado, ERC0 e14R/C comparados com netlist SPICE independente.
 - Modelo TI SBOMAW6C/Final1.3 auditado sem redistribuir/vendor scripts;9 casos de

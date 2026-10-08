@@ -15,7 +15,7 @@
     ".MODEL",
     ".SUBCKT"
   ],
-  "compatibility": "ngspice psa, local SPICE_USERINIT_DIR only",
+  "compatibility": "ngspice psa, child-process HOME and SPICE_USERINIT_DIR isolated",
   "config_sha256": "37182b8da7a97924d03e5e0c9f4db24769c8983dfd63f796ae0bed5bc9f5c0f5",
   "cases": [
     {

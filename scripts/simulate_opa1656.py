@@ -85,7 +85,9 @@ def run(config, directory, supply, temperature, transient):
     init = directory / "init"
     init.mkdir(exist_ok=True)
     (init / ".spiceinit").write_text("set ngbehavior=psa\n")
-    env = dict(os.environ, SPICE_USERINIT_DIR=str(init))
+    # Older distribution builds may not honor SPICE_USERINIT_DIR. HOME is
+    # overridden only for this child process, keeping its startup file isolated.
+    env = dict(os.environ, HOME=str(init), SPICE_USERINIT_DIR=str(init))
     result = subprocess.run(
         ["ngspice", "-b", str(circuit.relative_to(ROOT))],
         cwd=ROOT,
@@ -98,7 +100,9 @@ def run(config, directory, supply, temperature, transient):
     log = result.stdout + result.stderr
     (directory / (name + ".log")).write_text(log)
     if result.returncode or not data.exists() or "Error:" in log:
-        raise RuntimeError("Official-model simulation failed: " + name)
+        raise RuntimeError(
+            "Official-model simulation failed: " + name + "\n" + log[-2000:]
+        )
     warnings = [line for line in log.splitlines() if "Warning:" in line]
     approved = {
         "Warning: Dynamic gmin stepping failed",
@@ -220,7 +224,7 @@ def main():
         "model_version": "TI Final1.3 25AUG2022 / SBOMAW6C",
         "model_pin_order": ["IN+", "IN-", "VCC", "VEE", "OUT"],
         "audit_directives": directives,
-        "compatibility": "ngspice psa, local SPICE_USERINIT_DIR only",
+        "compatibility": "ngspice psa, child-process HOME and SPICE_USERINIT_DIR isolated",
         "config_sha256": hashlib.sha256(CONFIG.read_bytes()).hexdigest(),
         "cases": cases,
         "VMID_physical_startup_noise_protection_qualified": False,

@@ -17,3 +17,12 @@ jobs:
         run: make simulate
       - name: Fetch audited TI model and check OPA1656 supply-temperature cases (not hardware sign-off)
         run: python3 scripts/simulate_opa1656.py --fetch-model
+      - name: Preserve official-model diagnostics (never redistribute vendor model)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: opa1656-diagnostics
+          path: |
+            build/analog/opa1656/*.log
+            build/analog/opa1656/result.json
+          if-no-files-found: warn
