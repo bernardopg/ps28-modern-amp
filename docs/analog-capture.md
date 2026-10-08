@@ -72,11 +72,16 @@ completos do modelo TI ou uma distribuição de fábrica. Nenhum gate fechado.
 make check
 make simulate
 python3 scripts/simulate_opa1656.py --fetch-model  # download explícito TI, auditado
-make simulate-opa                              # requer modelo local íntegro
+make simulate-opa                              # requer ngspice>=47 e modelo local íntegro
 make analog-check                              # requer KiCad compatível com esta folha
 ```
 
-CI executa modelo TI auditado e testes de regressão. O ERC/netlist nativos foram
+CI executa modelo TI auditado em job Arch Linux com pacote assinado ngspice>=47,
+e testes/modelos genéricos no Ubuntu. Ngspice42 do Ubuntu falhou com matriz
+singular e operating-point não convergido no primeiro caso; diagnóstico foi
+preservado. **Não alteramos modelo, removemos casos ou relaxamos convergência**.
+Resultados novos incluem versão do simulador; falha de pré-validação invalida
+relatório anterior. Esta é uma dependência de ferramenta, não aprovação de hardware. O ERC/netlist nativos foram
 executados localmente; fixture XML e hashes versionados evitam reutilizar evidência
 após alteração de esquema. `make analog-check` gera relatórios novos em `build/analog/`.
 Gerador `scripts/create_analog_capture.py` recusa sobrescrever; não regenerar sobre

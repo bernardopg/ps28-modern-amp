@@ -8,6 +8,7 @@ import itertools
 import json
 import math
 import os
+import re
 import subprocess
 import urllib.request
 import zipfile
@@ -17,6 +18,15 @@ from simulate_analog import CONFIG, ROOT, deck, section_response
 URL = "https://www.ti.com/lit/zip/SBOMAW6"
 MODEL_SHA = "9847ed60c62e792ee6f1c84899278a3c11ce71a6d21804bdd88f51199f1ba055"
 MODEL = ROOT / "build/analog/parts/OPA1656.LIB"
+
+
+def require_simulator(version_text):
+    match = re.search(r"ngspice-(\d+)", version_text)
+    if not match or int(match[1]) < 47:
+        raise ValueError(
+            "Official TI model study requires ngspice >=47; Ubuntu ngspice42 failed operating-point convergence. Do not substitute model or suppress errors."
+        )
+    return int(match[1])
 
 
 def audit_model(content):
@@ -162,6 +172,10 @@ def main():
         help="Explicit TI download; verify hash and safe directives",
     )
     args = ap.parse_args()
+    output = ROOT / "build/analog/opa1656/result.json"
+    output.unlink(
+        missing_ok=True
+    )  # Invalidate even when cache/version preflight fails.
     if args.fetch_model and not MODEL.exists():
         fetch_model()
     if not MODEL.exists():
@@ -169,6 +183,10 @@ def main():
             "Missing local TI model; run with --fetch-model. No substitute model allowed."
         )
     directives = audit_model(MODEL.read_bytes())
+    version = subprocess.run(
+        ["ngspice", "--version"], capture_output=True, text=True, check=True
+    )
+    simulator_version = require_simulator(version.stdout + version.stderr)
     config = json.loads(CONFIG.read_text())
     values = (
         config["stage_ohm"]
@@ -177,8 +195,6 @@ def main():
     )
     directory = ROOT / "build/analog/opa1656"
     directory.mkdir(parents=True, exist_ok=True)
-    output = directory / "result.json"
-    output.unlink(missing_ok=True)
     cases = []
     for supply in [10.8, 12, 13.2]:
         for temperature in [0, 27, 70]:
@@ -219,6 +235,7 @@ def main():
             )
     report = {
         "status": "OFFICIAL-MODEL STUDY PASS; NOT MEASURED HARDWARE",
+        "ngspice_version": simulator_version,
         "model_url": URL,
         "model_sha256": MODEL_SHA,
         "model_version": "TI Final1.3 25AUG2022 / SBOMAW6C",

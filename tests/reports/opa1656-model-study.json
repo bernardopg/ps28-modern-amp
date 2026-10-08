@@ -1,5 +1,6 @@
 {
   "status": "OFFICIAL-MODEL STUDY PASS; NOT MEASURED HARDWARE",
+  "ngspice_version": 47,
   "model_url": "https://www.ti.com/lit/zip/SBOMAW6",
   "model_sha256": "9847ed60c62e792ee6f1c84899278a3c11ce71a6d21804bdd88f51199f1ba055",
   "model_version": "TI Final1.3 25AUG2022 / SBOMAW6C",

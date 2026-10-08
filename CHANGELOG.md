@@ -5,6 +5,10 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 ## [Unreleased]
 
 ### Added
+- Estudo TI exige ngspice>=47 após falha real de convergência no42 do Ubuntu;
+  CI usa job isolado Arch Linux/pacotes assinados, sem alterar modelo/critérios.
+  Versão registrada, regressão de rejeição de runtime legado e invalidação de
+  relatório mesmo quando falha preflight. Sem instalações no host do usuário.
 - Diagnóstico de simulação TI preservado como artifact CI sem incluir modelo
   proprietário; HOME/PSA isolados no subprocesso para builds ngspice legados.
 - Captura analógica KiCad isolada de21 componentes/58 pinos, candidato OPA1656ID,

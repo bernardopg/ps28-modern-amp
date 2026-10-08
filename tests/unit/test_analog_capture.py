@@ -11,7 +11,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from check_analog_capture import verify
 from create_analog_capture import parts
 from create_core_draft import parse, walk
-from simulate_opa1656 import audit_model
+from simulate_opa1656 import audit_model, require_simulator
 
 
 class AnalogCaptureTests(unittest.TestCase):
@@ -77,6 +77,15 @@ class AnalogCaptureTests(unittest.TestCase):
             if n[0] == "pin"
         )
         self.assertEqual(numbers, list(range(1, 9)))
+
+    def test_legacy_simulator_failure_is_not_silently_accepted(self):
+        self.assertEqual(
+            require_simulator("** ngspice-47 : Circuit level simulation"), 47
+        )
+        with self.assertRaisesRegex(ValueError, "requires ngspice"):
+            require_simulator("** ngspice-42 : Circuit level simulation")
+        with self.assertRaises(ValueError):
+            require_simulator("Unknown simulator")
 
     def test_vendor_file_audit_rejects_changed_hash_and_executable_directives(self):
         with self.assertRaisesRegex(ValueError, "hash changed"):
