@@ -1,0 +1,192 @@
+{
+  "status": "ISOLATED CAPTURE STUDY",
+  "source": "D-021: unregulated PVDD from T1 CT two-diode rectifier; study only; no hardware sign-off",
+  "parts": [
+    {
+      "ref": "J301",
+      "lib_id": "Connector_Generic:Conn_01x03",
+      "value": "T1_SECONDARY",
+      "mpn": "TBD: mate original T1 harness; >=8 A/pin",
+      "footprint": "",
+      "nets": {
+        "1": "T1_A",
+        "2": "T1_CT",
+        "3": "T1_B"
+      },
+      "units": [
+        [
+          1,
+          50.8,
+          50.8
+        ]
+      ]
+    },
+    {
+      "ref": "F301",
+      "lib_id": "Device:Fuse",
+      "value": "T8A slow",
+      "mpn": "TBD: time-lag, I2t >= 60 A2s inrush margin, >=63 VDC",
+      "footprint": "",
+      "nets": {
+        "1": "T1_CT",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          139.7,
+          50.8
+        ]
+      ]
+    },
+    {
+      "ref": "D301",
+      "lib_id": "Device:D",
+      "value": "RECT >=400V",
+      "mpn": "TBD: VRRM>=400 V, IF(AV)>=6 A, IFSM>=200 A",
+      "footprint": "",
+      "nets": {
+        "1": "PVDD",
+        "2": "T1_A"
+      },
+      "units": [
+        [
+          1,
+          228.60000000000002,
+          50.8
+        ]
+      ]
+    },
+    {
+      "ref": "D302",
+      "lib_id": "Device:D",
+      "value": "RECT >=400V",
+      "mpn": "TBD: VRRM>=400 V, IF(AV)>=6 A, IFSM>=200 A",
+      "footprint": "",
+      "nets": {
+        "1": "PVDD",
+        "2": "T1_B"
+      },
+      "units": [
+        [
+          1,
+          50.8,
+          106.68
+        ]
+      ]
+    },
+    {
+      "ref": "C301",
+      "lib_id": "Device:C_Polarized",
+      "value": "4700u 63V",
+      "mpn": "TBD: >=63 V, 105 C, ripple >=3.5 A at 120 Hz each",
+      "footprint": "",
+      "nets": {
+        "1": "PVDD",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          139.7,
+          106.68
+        ]
+      ]
+    },
+    {
+      "ref": "C302",
+      "lib_id": "Device:C_Polarized",
+      "value": "4700u 63V",
+      "mpn": "TBD: >=63 V, 105 C, ripple >=3.5 A at 120 Hz each",
+      "footprint": "",
+      "nets": {
+        "1": "PVDD",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          228.60000000000002,
+          106.68
+        ]
+      ]
+    },
+    {
+      "ref": "R301",
+      "lib_id": "Device:R",
+      "value": "4.7k 2W",
+      "mpn": "TBD: >=1 W continuous at 50 V (0.53 W), >=100 V",
+      "footprint": "",
+      "nets": {
+        "1": "PVDD",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          50.8,
+          162.56
+        ]
+      ]
+    },
+    {
+      "ref": "D303",
+      "lib_id": "Device:D_TVS",
+      "value": "TVS VWM>=51V",
+      "mpn": "TBD: VWM>=51 V (above 49.8 V worst idle), Vc below 69 V abs max at rated pulse",
+      "footprint": "",
+      "nets": {
+        "1": "PVDD",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          139.7,
+          162.56
+        ]
+      ]
+    },
+    {
+      "ref": "J302",
+      "lib_id": "Connector_Generic:Conn_01x02",
+      "value": "PVDD_TO_CORE",
+      "mpn": "Logical interface to core J1; same PCB, not a new connector",
+      "footprint": "",
+      "nets": {
+        "1": "PVDD",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          228.60000000000002,
+          162.56
+        ]
+      ]
+    }
+  ],
+  "hardware_validated": false,
+  "manufacturing_approved": false,
+  "integrated_with_core": false,
+  "unassigned_footprints": [
+    "J301",
+    "F301",
+    "D301",
+    "D302",
+    "C301",
+    "C302",
+    "R301",
+    "D303",
+    "J302"
+  ],
+  "interface_contract": {
+    "J301": "1=red A, 2=black CT, 3=red B; verify harness pinout before mating",
+    "J302": "PVDD 40-50 V unregulated to core J1; core C14/C15 3000 uF add to C301/C302",
+    "not_captured": [
+      "AUX 12 V buck (Vin>=65 V)",
+      "PVDD OVP to RESET/relay supervisor"
+    ],
+    "new_physical_board": false
+  }
+}

@@ -98,3 +98,24 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   Ver `integration-protection-review.md` e `system-candidate-review.json`; reversível,
   2026-10-08. G0–G5, tasks, WIP e S03 inalterados.
   Não confundir decisão de arquitetura com liberação de fabricação/energização.
+- D-021 — Substitui o alvo "PVDD regulado 36 V" de D-010; mantém reuso de T1.
+  PVDD **não regulado** por retificação full-wave CT com dois diodos: cada fio
+  vermelho via diodo para +PVDD, fio preto (CT) para GND. Evidência do proprietário
+  2026-10-09: 34,35 VAC por metade e 69,2 VAC total a vazio com rede 126,6 VAC;
+  CT confirmado por resistência e tensão (`transformer-reuse.md`). Calculado, não
+  medido: ≈47,7 V a vazio em 126,6 V, ≈50,1 V a vazio em 133 V, ≈42–46 V sob carga
+  conforme bulk. Dentro de PVDD 18–53,5 V (SLASEA8A p.6 §7.3), margem ≈3,4 V.
+  Proibido ligar vermelho–vermelho em ponte (≈97 V). Consequências obrigatórias:
+  bulk ≥63 V redimensionado por ripple de 120 Hz (estimativa 10–15 mF; 6800 µF/50 V
+  originais não reutilizáveis nesse rail), proteção de sobretensão/TVS abaixo de
+  53,5 V, inrush, fusível no secundário, buck 48→12 V para auxiliar e limiter/teto
+  de ganho porque a potência disponível excede o woofer original. Objetivo: eliminar
+  o buck 36 V/5–6 A. Risco: margem pequena em rede alta/vazio, ripple e regulação
+  sob carga não medidos. Validação: PWR-001/BENCH-001 com carga resistiva. Aprovada
+  pelo proprietário em 2026-10-09; não libera fabricação nem energização.
+- D-022 — Crossover LINE ajustável contínuo 50–150 Hz no furo CROSSOVER original,
+  substituindo LR4 fixo 80 Hz de D-004/REQ-006. Fase 0°/180° por chave, LEVEL e RCA
+  LFE/L/R mantêm a interface do painel. Estudo LR4 80 Hz vira ponto da faixa,
+  não projeto final; topologia de sintonia (potenciômetro multi-gang/state-variable)
+  e tracking entre seções ficam TBD em ELEC-002. Aprovada pelo proprietário em
+  2026-10-09.

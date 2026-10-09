@@ -5,7 +5,7 @@ schematic de estudo e componentes efetivamente colocados na PCB.
 
 ```text
 FUNÇÕES PLANEJADAS (ainda não integradas)
-RCA L/R → soma resistiva → buffer → LR4 80 Hz ─┐
+RCA L/R → soma resistiva → buffer → LR4 50–150 Hz ┐
 RCA LFE → buffer ────────────────────────────┴→ seleção/volume/fase
  → drivers diferenciais → C20/C21 → isolamento/pré-carga D-019 [TBD]
  → INPUT_A/B → TPA3255 PBTL → dois ramos LC → SPK±

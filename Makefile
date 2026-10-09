@@ -1,4 +1,4 @@
-.PHONY: check core-check analog-check doctor simulate simulate-input-order simulate-opa simulate-vmid simulate-vmid-protected analog-protected-check render-3d eda-smoke erc drc fetch-reference
+.PHONY: check core-check analog-check doctor simulate simulate-input-order simulate-opa simulate-vmid simulate-vmid-protected simulate-power analog-protected-check render-3d eda-smoke erc drc fetch-reference
 
 check:
 	python3 scripts/validate.py
@@ -21,6 +21,9 @@ simulate-vmid-protected:
 
 analog-protected-check:
 	python3 scripts/check_vmid_protection.py --integrated
+
+simulate-power:
+	python3 scripts/simulate_power_d021.py
 
 simulate-vmid:
 	python3 scripts/simulate_vmid.py
