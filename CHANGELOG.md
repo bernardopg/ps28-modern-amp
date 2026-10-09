@@ -4,7 +4,35 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 
 ## [Unreleased]
 
+### Removed
+- `kicad/jlcpcb/`: Gerber/BOM/CPL obsoletos do draft A (`A-core-draft`, sem
+  roteamento, sem LCSC), removidos para evitar pedido acidental. Release futuro
+  segue `docs/manufacturing.md` (gerar em `build/`, liberar só após G3).
+
+### Fixed
+- `analog-protected.svg` restaurado ao export nativo KiCad registrado no manifesto;
+  o commit de lint o havia reformatado e quebrado `make check`. Marcado `binary`
+  em `.gitattributes` como `system-candidate.svg`.
+
 ### Added
+- Conector do chicote de T1 documentado por foto: 3 vias vermelho–preto–vermelho,
+  CT no centro, coincide com J301; passo/família/rating TBD, com risco de corrente
+  registrado em `docs/transformer-reuse.md`.
+- D-021: `make simulate-power` (54 casos ngspice com T1 medido) e captura isolada
+  `kicad/power-d021/` (retificador CT, fusível, bulk, bleeder, TVS; ERC0, MPNs TBD).
+  TPA3255 não tem OVP de PVDD: supervisor externo especificado, não capturado.
+- Woofer `20PR10DAG-FW06-E` sem T/S públicos; limiter provisório 100 W e
+  limites de DC/transitório do manual como piso de REQ-007.
+- Woofer Re medido 4,4 Ω (pontas 0,6 Ω descontadas), dentro do manual; correção
+  da resistência das meias-bobinas de T1 para ≈0,2 Ω.
+- D-021: PVDD não regulado ≈42–50 V por retificação CT de dois diodos de T1
+  (34,35 VAC/metade medido), substituindo o buck 36 V de D-010. D-022: crossover
+  ajustável 50–150 Hz no controle original. Requisitos, README e AGENTS atualizados.
+- Confirmação física de T1 e do painel original em `docs/transformer-reuse.md`
+  (etiqueta, secundário de 3 fios, fusível, controles); sem medição de VAC/VA.
+- Headroom MCP por projeto para Claude Code, Codex, Pi e Hermes, com banco
+  compartilhado `.headroom/memory.db`, configurações locais fora do Git e
+  instruções de acesso independentes do provedor em `docs/headroom.md`.
 - D-020: candidata separada core+analógico76 componentes/212 pads, passivos/
 footprints candidatos e CAD oficial Würth CC com atribuição; ponte de sinal aberta,
 analógico fora do contorno em banco de importação, sem fit/proteção física completos.

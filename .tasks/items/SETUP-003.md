@@ -5,7 +5,7 @@ status: In Progress
 milestone: M0
 sprint: S01
 depends_on: SETUP-002
-updated: 2026-10-07
+updated: 2026-10-09
 ---
 
 # SETUP-003 — GitHub e revisão do setup
@@ -18,6 +18,7 @@ GitHub e revisão do setup, atendendo docs/requirements.md e gates docs/safety.m
 
 - [x] Repositório privado e main enviados
 - [x] Workflow remoto confirmado
+- [x] Headroom local compartilhado entre Claude Code, Codex, Pi e Hermes
 - [ ] Proprietário revisou escopo, backlog e pendências
 
 ## Evidência
@@ -32,6 +33,13 @@ Docs/tasks e galeria nativa regenerada com separação explícita entre core e
 capturas/contrato analógicos ainda sem PCB. Histórico/revisões preservados;
 nenhum review humano inferido desse pedido de atualização. WIP permanece2,
 S03 planejada e gates G0–G5 pendentes. Ver `docs/development-status.md`.
+
+Atualização de 2026-10-09: acesso MCP dos quatro harnesses configurado para o
+mesmo banco `.headroom/memory.db`, independente do provedor de modelo.
+Carregadores nativos e consultas de memória validados; configuração privada
+fora do Git. Ver [relatório Headroom](../../tests/reports/headroom-harnesses.md)
+e [instruções de uso](../../docs/headroom.md). Review do proprietário e gates
+de hardware continuam pendentes; nenhuma task adicional entrou em WIP.
 
 ## Risco / aprovação
 

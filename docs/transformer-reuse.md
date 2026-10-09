@@ -77,8 +77,20 @@ ensaio, multímetro V AC escala 200 (2026-10-09):
 - Os 6800 µF/50 V originais não servem nesse rail (pico ≈ 50 V); C14/C15 63 V sim.
 - O "34-0-34 VAC" antigo do starter coincide com esta medição; seguia sem fonte até aqui.
 
-Continuam sem medição: VAC por meia-bobina e total, regulação sob carga, VA e
-tensão da rede local. Essas evidências não alteram D-010 nem aprovam gate algum.
+Conector do chicote do secundário (fotos do proprietário, 2026-10-09, fora do Git):
+
+- Housing branco de 3 vias, uma fileira, com trava de rampa; ordem na face de
+  encaixe vermelho–preto–vermelho, CT no centro. Coincide com J301 (1 = vermelho,
+  2 = preto CT, 3 = vermelho); as pontas são simétricas, então inverter 1/3 não
+  altera o circuito.
+- Família, passo e bitola do fio **não identificados** pela foto. Pendente: passo
+  entre centros com paquímetro e a inscrição impressa no fio vermelho.
+- Risco: o estudo D-021 prevê 4,3–5,7 A RMS por meia-bobina a 150 W contínuos.
+  Housing de passo 2,5 mm costuma ter rating de ~3 A; confirmar o rating antes de
+  reutilizar o chicote ou trocar o conector.
+
+Continuam sem medição: regulação sob carga, VA e indutância de dispersão.
+Essas evidências não alteram D-010 nem aprovam gate algum.
 
 **O manual não informa tensão VAC do secundário, corrente nominal ou potência VA.**
 A afirmação antiga de 34-0-34 VAC no starter não tem comprovação neste documento.

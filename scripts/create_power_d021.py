@@ -23,7 +23,7 @@ def parts():
     # (ref, lib_id, value, MPN or requirement, footprint, pin->net)
     specs = [
         ("J301", "Connector_Generic:Conn_01x03", "T1_SECONDARY",
-         "TBD: mate original T1 harness; >=8 A/pin", "",
+         "TBD: mate original T1 harness (3-way, red-black-red, pitch unmeasured); >=8 A/pin", "",
          {"1": "T1_A", "2": "T1_CT", "3": "T1_B"}),
         ("F301", "Device:Fuse", "T8A slow",
          "TBD: time-lag, I2t >= 60 A2s inrush margin, >=63 VDC", "",
@@ -73,7 +73,7 @@ def generate(out):
             power_flags=("PVDD", "GND"),
         )
         manifest["interface_contract"] = {
-            "J301": "1=red A, 2=black CT, 3=red B; verify harness pinout before mating",
+            "J301": "1=red A, 2=black CT, 3=red B; order photo-confirmed 2026-10-09; housing family/pitch/rating TBD",
             "J302": "PVDD 40-50 V unregulated to core J1; core C14/C15 3000 uF add to C301/C302",
             "not_captured": ["AUX 12 V buck (Vin>=65 V)", "PVDD OVP to RESET/relay supervisor"],
             "new_physical_board": False,

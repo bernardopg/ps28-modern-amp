@@ -6,13 +6,24 @@ Leia README.md, docs/README.md, docs/safety.md e .tasks/PLANNING.md.
 Consulte a task e a skill pertinente antes de editar. CLAUDE.md aponta para este arquivo.
 Originais em docs/archive/chatgpt são histórico não confiável, não especificação.
 
+## Headroom por projeto
+
+Claude Code, Codex, Pi e Hermes devem usar o mesmo banco local
+`.headroom/memory.db`, com o mesmo usuário, para memória deste projeto.
+Antes de responder sobre decisões/contexto de sessões anteriores, consultar
+`headroom_memory.memory_search`. Registrar decisões duráveis com `memory_save`
+quando solicitado pelo usuário. Nome da ferramenta pode ter prefixo do harness.
+Não substituir esse banco pelo global nem importar memórias de outros projetos.
+Configuração, comandos e limites: [docs/headroom.md](docs/headroom.md).
+
 ## Regras de engenharia
 
 - Distinguir hipótese, proposta, cálculo, simulação e medida. Não inventar pinagem,
   estoque, preço, MPN, limites ou resultados. Ausência de evidência significa TBD.
 - Fontes primárias: datasheet TI e TPA3255EVM. Citar documento, revisão e página/figura.
-- Baseline D-010: reaproveitar T1 original e projetar fonte secundária nova com alvo
-  PVDD regulado 36 V/auxiliar 12 V; TPA3255 PBTL, sem MCU nem primário AC na PCB nova.
+- Baseline D-010/D-021: reaproveitar T1 original; PVDD não regulado ≈42–50 V por
+  retificação CT dois diodos, auxiliar 12 V; TPA3255 PBTL, sem MCU nem primário AC na PCB nova.
+  Nunca ligar vermelho–vermelho de T1 em ponte. Crossover ajustável 50–150 Hz (D-022).
   Fonte externa somente bancada/fallback. Saúde de T1/capacitores informada pelo proprietário;
   ratings e componentes dependem das medições, sem inferir VAC/VA do manual.
   Não ampliar escopo sem decisão registrada em docs/decisions.md.

@@ -6,7 +6,7 @@
       "ref": "J301",
       "lib_id": "Connector_Generic:Conn_01x03",
       "value": "T1_SECONDARY",
-      "mpn": "TBD: mate original T1 harness; >=8 A/pin",
+      "mpn": "TBD: mate original T1 harness (3-way, red-black-red, pitch unmeasured); >=8 A/pin",
       "footprint": "",
       "nets": {
         "1": "T1_A",
@@ -181,7 +181,7 @@
     "J302"
   ],
   "interface_contract": {
-    "J301": "1=red A, 2=black CT, 3=red B; verify harness pinout before mating",
+    "J301": "1=red A, 2=black CT, 3=red B; order photo-confirmed 2026-10-09; housing family/pitch/rating TBD",
     "J302": "PVDD 40-50 V unregulated to core J1; core C14/C15 3000 uF add to C301/C302",
     "not_captured": [
       "AUX 12 V buck (Vin>=65 V)",
