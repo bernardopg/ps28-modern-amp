@@ -83,11 +83,15 @@ Conector do chicote do secundário (fotos do proprietário, 2026-10-09, fora do 
   encaixe vermelho–preto–vermelho, CT no centro. Coincide com J301 (1 = vermelho,
   2 = preto CT, 3 = vermelho); as pontas são simétricas, então inverter 1/3 não
   altera o circuito.
-- Família, passo e bitola do fio **não identificados** pela foto. Pendente: passo
-  entre centros com paquímetro e a inscrição impressa no fio vermelho.
+- Fio (inscrição lida pelo proprietário): UL AWM 1015, VW-1, 105 °C, 600 V,
+  E191230, 20 AWG.
+- Passo medido ≈ 4 mm entre centros (régua/paquímetro, resolução não informada):
+  consistente com a família 3,96 mm (0,156"). Fabricante/série do housing não
+  identificados; o header da placa nova é TBD até casar com um housing medido.
 - Risco: o estudo D-021 prevê 4,3–5,7 A RMS por meia-bobina a 150 W contínuos.
-  Housing de passo 2,5 mm costuma ter rating de ~3 A; confirmar o rating antes de
-  reutilizar o chicote ou trocar o conector.
+  O rating por pino depende da série escolhida e da bitola 20 AWG; conferir no
+  datasheet do header antes de fixar o footprint. A placa original operou este
+  chicote, mas isso não comprova margem térmica.
 
 Continuam sem medição: regulação sob carga, VA e indutância de dispersão.
 Essas evidências não alteram D-010 nem aprovam gate algum.

@@ -41,7 +41,7 @@ auditado e não serve de prova.
 `python3 scripts/create_power_d021.py` gera; recusa sobrescrever.
 
 - J301: T1 1 = vermelho A, 2 = preto CT, 3 = vermelho B. Ordem confirmada por foto
-  do chicote (CT no centro); família/passo do housing e rating de corrente TBD
+  do chicote (CT no centro); passo ≈ 4 mm (família 3,96 mm), fio 20 AWG UL1015; série do header e rating TBD
   (ver `transformer-reuse.md`).
 - F301 no retorno CT, antes do GND: lento, I²t com margem sobre 63,6 A²s, ≥ 63 VDC.
 - D301/D302: anodo no vermelho, catodo em PVDD. VRRM ≥ 400 V (2× margem sobre

@@ -16,7 +16,7 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 
 ### Added
 - Conector do chicote de T1 documentado por foto: 3 vias vermelho–preto–vermelho,
-  CT no centro, coincide com J301; passo/família/rating TBD, com risco de corrente
+  CT no centro, coincide com J301; passo ≈ 4 mm (família 3,96 mm), fio 20 AWG UL1015; série/rating TBD, com risco de corrente
   registrado em `docs/transformer-reuse.md`.
 - D-021: `make simulate-power` (54 casos ngspice com T1 medido) e captura isolada
   `kicad/power-d021/` (retificador CT, fusível, bulk, bleeder, TVS; ERC0, MPNs TBD).
