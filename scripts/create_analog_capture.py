@@ -174,9 +174,10 @@ def build(
     warning="STUDY ONLY - ALL INPUTS BIASED TO EXTERNAL VMID - NO RCA/LINE-LFE/VOLUME/DC PROTECTION - PASSIVE MPN/FOOTPRINT TBD",
     power_flags=("AUX_12V", "VMID_EXTERNAL", "GND"),
     paper="A3",
+    extra_symbols=None,
 ):
     inventory = parts() if inventory is None else inventory
-    symbols = {"PS28_ANALOG:OPA1656ID": opamp_symbol()}
+    symbols = {"PS28_ANALOG:OPA1656ID": opamp_symbol(), **(extra_symbols or {})}
     for p in inventory:
         if p["lib_id"] not in symbols:
             symbols[p["lib_id"]] = stock_symbol(*p["lib_id"].split(":"))

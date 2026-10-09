@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
-from create_power_d021 import generate, parts
+from create_power_d021 import aux_output, generate, ovp_window, parts
 from simulate_power_d021 import MAINS, PVDD_MAX, RATIO
 
 R = json.loads((ROOT / "tests/reports/power-d021-study.json").read_text())
@@ -35,6 +35,27 @@ class PowerD021Tests(unittest.TestCase):
         def worst(c_uf):
             return max(c["ripple_vpp"] for c in R["cases"] if c["bulk_uf"] == c_uf and c["load_a"] == 3.9)
         self.assertGreater(worst(3000), 3 * worst(10000))
+
+    def test_pvdd_window_trips_between_worst_idle_and_tpa_limit(self):
+        w = ovp_window()
+        self.assertGreater(w["ov_trip_v"][0], R["worst_pvdd_max_v"])  # no nuisance trip at 133 V idle
+        self.assertLess(w["ov_trip_v"][2], PVDD_MAX)
+        self.assertGreater(w["uv_trip_falling_v"][0], 18.0)  # SLASEA8A p.6 PVDD min
+        self.assertLess(w["uv_trip_falling_v"][2], 32.0)  # below 10 mF / 108 V / 3.9 A valley
+
+    def test_aux_within_tpa_vdd_gvdd_range(self):
+        lo, _, hi = aux_output()
+        self.assertGreaterEqual(lo, 10.8)  # SLASEA8A sec.7.3
+        self.assertLessEqual(hi, 13.2)
+
+    def test_supervisor_and_buck_wiring(self):
+        nets = {p["ref"]: p["nets"] for p in parts()}
+        self.assertEqual(nets["U303"], {"1": "RAILS_OK", "2": "GND", "3": "PVDD_UV_SENSE",
+                                        "4": "PVDD_OV_SENSE", "5": "AUX_RAW", "6": "RAILS_OK"})
+        self.assertEqual(nets["U302"]["6"], "RAILS_OK")
+        self.assertEqual((nets["U302"]["2"], nets["U302"]["8"]), ("PVDD", "BUCK_SW"))
+        self.assertEqual(nets["L301"], {"1": "BUCK_SW", "2": "AUX_RAW"})
+        self.assertNotIn("RESET", {n for p in parts() for n in p["nets"].values()})
 
     def test_generator_refuses_overwrite(self):
         with tempfile.TemporaryDirectory() as tmp:

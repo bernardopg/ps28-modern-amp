@@ -36,9 +36,11 @@ o woofer/limiter (REQ-002), não a fonte. A placa original operava o mesmo T1 co
 2 × 6800 µF; ordem de inrush comparável, mas o circuito de partida original não foi
 auditado e não serve de prova.
 
-## Captura `kicad/power-d021/` (ERC 0, sem exclusões)
+## Captura `kicad/power-d021/` (ERC 0, sem exclusões, 29 componentes)
 
 `python3 scripts/create_power_d021.py` gera; recusa sobrescrever.
+
+### Retificador e bulk
 
 - J301: T1 1 = vermelho A, 2 = preto CT, 3 = vermelho B. Ordem confirmada por foto
   do chicote (CT no centro); passo ≈ 4 mm (família 3,96 mm), fio 20 AWG UL1015; série do header e rating TBD
@@ -54,19 +56,59 @@ auditado e não serve de prova.
   especificado. Cobre transitório rápido; não substitui o OVP sustentado abaixo.
 - J302: interface lógica para J1 do core, mesma PCB, não conector novo.
 
-Todos os MPNs e footprints estão **TBD**. Nenhum valor acima é rating de peça escolhida.
+### AUX 12 V — U302 LM5164DDA (capturado)
+
+Fonte: TI LM5164 **SNVSAU4D** (fev/2026), p.3 pinagem, p.5 VREF, p.16–19 Fig 7-1 e
+Table 7-1 (VIN 15–100 V, 12 V/1 A, 300 kHz). Valores copiados do exemplo TI, não
+otimizados: CIN 2 × 2,2 µF/100 V, CBST 2,2 nF (faixa absoluta 1,5–2,5 nF, p.4),
+L 68 µH, RRON 100 kΩ, RFB 453 k/49,9 k, ripple tipo 3 (RA 453 k, CA 3,3 nF,
+CB 56 pF), COUT 2 × 22 µF. EN/UVLO ligado em VIN (opção p.14); UV de PVDD fica
+no supervisor. PGOOD open-drain em RAILS_OK.
+
+- Calculado: AUX_RAW 11,69 / 12,09 / 12,50 V (VREF mín/típ/máx, RFB 1 %), dentro de
+  10,8–13,2 V (SLASEA8A §7.3). VIN abs máx 100 V > Vc do TVS (< 69 V).
+- Inconsistência TI: Table 7-1 lista RFB1 = RT0603BRD07**448**KL para 453 kΩ; R311
+  fica com MPN TBD até resolver.
+- MPNs da Table 7-1 são do exemplo TI; disponibilidade/LCSC não verificada.
+- Não simulado: estabilidade COT com C1–C3 do core em AUX_RAW; layout do loop
+  de comutação e térmico do HSOP-8 (RθJA 43,4 °C/W, p.5) a revisar.
+
+### Janela de PVDD — U303 TPS3700DDC (capturado)
+
+Fonte: TI TPS3700 **SBVS187G** (fev/2019), p.4 pinagem DDC, p.6 §6.5. Sem símbolo
+KiCad oficial: símbolo local `PS28_POWER:TPS3700DDC` com a pinagem da p.4.
+Divisor PVDD–R320 931 k–UV–R321 6,04 k–OV–R322 7,32 k–GND, 0,1 %. OUTA (UV) e
+OUTB (OV) open-drain unidos a RAILS_OK com PGOOD do buck; baixo = falha.
+
+| Limiar (pior caso: VIT, 0,1 %, corrente de entrada) | mín | típ | máx |
+|---|---|---|---|
+| OV, PVDD subindo | 50,97 V | 51,60 V | 52,24 V |
+| UV, PVDD descendo | 27,28 V | 27,89 V | 28,35 V |
+
+- OV mín 50,97 V > 49,84 V (pior vazio simulado); OV máx 52,24 V < 53,5 V.
+- UV máx 28,35 V < vale 32,4 V (10 mF, 108 V, 3,9 A); UV mín > 18 V.
+- Histerese interna só 5,5 mV típ (≈ 1,4 %): RAILS_OK pode oscilar perto do
+  limiar. Filtrado pelo contrato D-020: queda de rails_valid leva a SAFE, com novo
+  hold ≥ 360 ms e nova borda humana; não depende da histerese.
+- VDD do TPS3700 vem de AUX_RAW. Sem AUX, OUTA vai baixo abaixo do UVLO e R9
+  (4,7 k) já mantém RESET baixo: falha segura por padrão.
+- RAILS_OK **não** vai direto ao RESET: o pull-up R323 usa SEQ_LOGIC_VCC
+  (≤ 14 V pelo PGOOD) da lógica de sequência, ainda TBD.
+
+### Interfaces lógicas
+
+J302 = PVDD/GND para J1 do core. J303 = AUX_RAW (J2 do core), RAILS_OK,
+SEQ_LOGIC_VCC, GND. Mesma PCB, não conectores novos.
+
+Footprints de todos e MPNs dos passivos de potência/divisor estão **TBD**.
 
 ## Não capturado — próximo incremento
 
-1. **Buck AUX 12 V:** Vin ≥ 65 V (preferível ≥ 70 V), saída 12 V dentro de
-   10,8–13,2 V (SLASEA8A §7.3), Iout ≥ 0,5 A. Orçamento: VDD 30 mA + GVDD
-   2 × 24 mA (SLASEA8A §7.5) + analógico ≤ 50 mA (D-018) + relé/supervisor TBD.
-2. **OVP/brownout de PVDD:** comparador com referência, disparo ≈ 52 V com
-   histerese, que segura RESET baixo e abre o relé de saída. Integra com o contrato
-   de sequência D-019/D-020, sem MCU. Tolerância da referência e do divisor entra
-   no cálculo para nunca disparar abaixo de 49,8 V nem passar de 53,5 V.
-3. **Inrush:** decidir NTC ou relé de bypass após medir o I²t real do fusível de
+1. **Inrush:** decidir NTC ou relé de bypass após medir o I²t real do fusível de
    rede T2.5AL e a corrente de partida na bancada.
+2. **SEQ_LOGIC_VCC e sequenciador:** a lógica D-020 (TPS3808 em cascata, relé)
+   ainda não tem alimentação nem captura.
+3. **Integração** de `power-d021` ao `system-candidate` (AUX_RAW, PVDD, RAILS_OK).
 4. **Bancada (PWR-001/BENCH-001):** medir regulação sob carga resistiva, ripple e
    temperatura de T1; substituem os parâmetros não medidos deste estudo.
 

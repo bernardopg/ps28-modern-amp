@@ -15,6 +15,10 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
   em `.gitattributes` como `system-candidate.svg`.
 
 ### Added
+- D-021: AUX 12 V (LM5164, exemplo TI SNVSAU4D Fig 7-1) e janela de PVDD
+  (TPS3700, OV 50,97–52,24 V, UV 27,3–28,4 V pior caso) capturados em
+  `kicad/power-d021/`; saída RAILS_OK open-drain para rails_valid D-020, não
+  direto no RESET. ERC 0; footprints e parte dos MPNs TBD.
 - Conector do chicote de T1 documentado por foto: 3 vias vermelho–preto–vermelho,
   CT no centro, coincide com J301; passo ≈ 4 mm (família 3,96 mm), fio 20 AWG UL1015; série/rating TBD, com risco de corrente
   registrado em `docs/transformer-reuse.md`.

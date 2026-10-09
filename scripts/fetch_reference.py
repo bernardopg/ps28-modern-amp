@@ -14,6 +14,8 @@ SOURCES = {
     "slou441": "https://www.ti.com/lit/pdf/slou441",
     "slar129a": "https://www.ti.com/lit/df/slar129a/slar129a.pdf",
     "slar130a": "https://www.ti.com/lit/df/slar130a/slar130a.pdf",
+    "lm5164": "https://www.ti.com/lit/ds/symlink/lm5164.pdf",
+    "tps3700": "https://www.ti.com/lit/ds/symlink/tps3700.pdf",
 }
 
 

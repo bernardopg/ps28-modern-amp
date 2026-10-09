@@ -161,5 +161,25 @@
     "sha256": "62c57abf3394c86e6e6ff8fb25760ae9a7f65709c9bb485d521edcf9186d7f5d",
     "license": "Third-party copyright; local engineering reference only",
     "review_status": "Section6.1 p.4: source+-65V differs from drain VFN-0.7..VFP+0.7; section6.5 p.5 typical fault threshold0.7V not a -0.3V TPA clamp guarantee. Not selected for D019; whole-interface qualification required"
+  },
+  {
+    "file": "reference/ti/lm5164.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/lm5164.pdf",
+    "resolved_url": "https://www.ti.com/lit/ds/symlink/lm5164.pdf",
+    "accessed": "2026-10-09T23:29:11.468143+00:00",
+    "sha256": "cce03619fbe13951eea47458cd45e140361637d8fef32ae143b82b16d597e32d",
+    "document": "SNVSAU4D Feb 2026",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Pinout, thresholds and typical application read for D-021 capture; layout/thermal not reviewed"
+  },
+  {
+    "file": "reference/ti/tps3700.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/tps3700.pdf",
+    "resolved_url": "https://www.ti.com/lit/ds/symlink/tps3700.pdf",
+    "accessed": "2026-10-09T23:29:11.470408+00:00",
+    "sha256": "3bb7daed20b154bf22ded78e23269c6437eb587400b89bce0f543813df94ebf0",
+    "document": "SBVS187G Feb 2019",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Pinout, thresholds and typical application read for D-021 capture; layout/thermal not reviewed"
   }
 ]
