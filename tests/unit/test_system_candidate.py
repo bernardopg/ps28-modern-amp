@@ -57,6 +57,29 @@ class SystemCandidateTests(unittest.TestCase):
         pcb = (ROOT / "kicad/system-candidate/system-candidate.kicad_pcb").read_text()
         self.assertNotIn("PVDD_36V", pcb)
 
+    def test_measured_oem_outline_holes_and_profile_keepout(self):
+        m = candidate.oem_mechanics()
+        self.assertEqual(m["outline"], (20.0, 20.0, 174.0, 101.0))  # 154 x 81 mm measured
+        self.assertEqual(sorted(m["holes"]), [(24.5, 48.0), (24.5, 91.0), (169.5, 48.0), (169.5, 91.0)])
+        self.assertEqual(m["profile_keepout"], (58.0, 68.0, 123.0, 101.0))  # 65 x 33 at 38 mm
+        pcb = (ROOT / "kicad/system-candidate/system-candidate.kicad_pcb").read_text()
+        self.assertIn('"OEM_U_PROFILE"', pcb)
+        self.assertEqual(pcb.count('(footprint "MountingHole:MountingHole_3.2mm_M3"'), 4)
+
+    def test_every_footprint_inside_outline_and_none_on_profile(self):
+        import re
+        m = candidate.oem_mechanics()
+        x0, y0, x1, y1 = m["outline"]
+        kx0, ky0, kx1, ky1 = m["profile_keepout"]
+        pcb = (ROOT / "kicad/system-candidate/system-candidate.kicad_pcb").read_text()
+        blocks = re.findall(r'\(footprint "[^"]+"\s*\(layer "([FB])\.Cu"\)(?:.|\n)*?\(at ([-\d.]+) ([-\d.]+)', pcb)
+        self.assertEqual(len(blocks), 208)
+        for side, x, y in blocks:
+            x, y = float(x), float(y)
+            self.assertTrue(x0 < x < x1 and y0 < y < y1, (x, y))
+            if side == "F":
+                self.assertFalse(kx0 < x < kx1 and ky0 < y < ky1, (x, y))
+
     def test_native_capture_and_actual_pad_nets_are_equal(self):
         folder = ROOT / "kicad/system-candidate"
         xml = ET.parse(folder / "candidate.xml")
@@ -112,6 +135,8 @@ class SystemCandidateTests(unittest.TestCase):
                 for p in fp
                 if isinstance(p, list) and p[:2] == ["property", '"Reference"']
             )
+            if ref.startswith("H") and ref[1:].isdigit():
+                continue  # board-only OEM mounting holes
             self.assertEqual(
                 candidate.child(fp, "path")[1].strip('"'),
                 "/" + rootid + "/" + symbols[ref],

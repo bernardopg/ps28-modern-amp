@@ -13,7 +13,7 @@ Estado detalhado em [development-status.md](development-status.md).
 | Sequenciador D-020/D-023 | Capturado, modelo lógico com mutações |
 | Interface D-019/D-024/D-024a (relé, mute, janelas, clamp) | Capturada, 1566 casos ngspice |
 | Front-end de áudio D-022 (RCA, crossover, LEVEL, fase) | **Não capturado** (ELEC-004) |
-| Placement no contorno OEM | **Não feito**: 118 footprints fora do contorno |
+| Placement no contorno OEM | **Estudo**: 204 peças no contorno medido 154 × 81, DRC só silkscreen; revisão de layout pendente |
 | Roteamento | **Não feito**: 470 conexões |
 | BOM/CPL JLCPCB com LCSC | **Não feito** |
 
@@ -21,7 +21,7 @@ Estado detalhado em [development-status.md](development-status.md).
 
 | # | Task | Entrega | Bloqueia | Precisa do proprietário |
 |---|---|---|---|---|
-| 1 | MECH-001 | Dissipador/perfil U medidos (2026-10-10); faltam distância perfil→PCB, contorno 154 × 81, furos e perfil medidos; falta gabarito 1:1 | 6, 7 | Foto do perfil montado e 3 cotas |
+| 1 | MECH-001 ✓ geometria | Dissipador/perfil U medidos (2026-10-10); faltam distância perfil→PCB, contorno 154 × 81, furos e perfil medidos; falta gabarito 1:1 | 6, 7 | Foto do perfil montado e 3 cotas |
 | 2 | ELEC-004 | Front-end D-022 capturado e simulado com tolerâncias | 4, 6 | Fotos/cotas dos pots e chaves do painel |
 | 3 | PWR-001 | MPNs de diodos, bulk, TVS, fusível, conector JST VH; decisão de inrush | 4, 8 | — |
 | 4 | ELEC-003 | Schematic único completo, ERC sem erros novos, revisão G1 | 6 | **Gate G1** |

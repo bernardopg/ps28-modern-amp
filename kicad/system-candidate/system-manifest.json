@@ -1128,7 +1128,8 @@
       ],
       "footprint": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
       "mpn": "OPA1656ID",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "U3",
@@ -1163,7 +1164,8 @@
       ],
       "footprint": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
       "mpn": "OPA1656ID",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "R101",
@@ -1182,7 +1184,8 @@
       ],
       "footprint": "Resistor_SMD:R_0805_2012Metric",
       "mpn": "TBD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "R102",
@@ -1201,7 +1204,8 @@
       ],
       "footprint": "Resistor_SMD:R_0805_2012Metric",
       "mpn": "TBD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "R103",
@@ -1220,7 +1224,8 @@
       ],
       "footprint": "Resistor_SMD:R_0805_2012Metric",
       "mpn": "TBD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "R104",
@@ -1239,7 +1244,8 @@
       ],
       "footprint": "Resistor_SMD:R_0805_2012Metric",
       "mpn": "TBD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "R105",
@@ -1258,7 +1264,8 @@
       ],
       "footprint": "Resistor_SMD:R_0805_2012Metric",
       "mpn": "TBD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "R106",
@@ -1277,7 +1284,8 @@
       ],
       "footprint": "Resistor_SMD:R_0805_2012Metric",
       "mpn": "TBD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "R107",
@@ -1296,7 +1304,8 @@
       ],
       "footprint": "Resistor_SMD:R_0805_2012Metric",
       "mpn": "TBD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "R108",
@@ -1315,7 +1324,8 @@
       ],
       "footprint": "Resistor_SMD:R_0805_2012Metric",
       "mpn": "TBD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "C101",
@@ -1334,7 +1344,8 @@
       ],
       "footprint": "Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm",
       "mpn": "MKP2D031001F00JSSD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "C102",
@@ -1353,7 +1364,8 @@
       ],
       "footprint": "Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm",
       "mpn": "MKP2D031001F00JSSD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "C103",
@@ -1372,7 +1384,8 @@
       ],
       "footprint": "Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm",
       "mpn": "MKP2D031001F00JSSD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "C104",
@@ -1391,7 +1404,8 @@
       ],
       "footprint": "Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm",
       "mpn": "MKP2D031001F00JSSD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "C105",
@@ -1410,7 +1424,8 @@
       ],
       "footprint": "Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm",
       "mpn": "MKP2D031001F00JSSD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "C106",
@@ -1429,7 +1444,8 @@
       ],
       "footprint": "Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm",
       "mpn": "MKP2D031001F00JSSD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "C107",
@@ -1448,7 +1464,8 @@
       ],
       "footprint": "Capacitor_SMD:C_0805_2012Metric",
       "mpn": "TBD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "C108",
@@ -1467,7 +1484,8 @@
       ],
       "footprint": "Capacitor_SMD:C_0805_2012Metric",
       "mpn": "TBD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "D201",
@@ -1486,7 +1504,8 @@
           40.64
         ]
       ],
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "R201",
@@ -1505,7 +1524,8 @@
           40.64
         ]
       ],
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "R202",
@@ -1524,7 +1544,8 @@
           78.74000000000001
         ]
       ],
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "R203",
@@ -1543,7 +1564,8 @@
           78.74000000000001
         ]
       ],
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "R204",
@@ -1562,7 +1584,8 @@
           116.84
         ]
       ],
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "R205",
@@ -1581,7 +1604,8 @@
           116.84
         ]
       ],
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "R206",
@@ -1600,7 +1624,8 @@
           154.94
         ]
       ],
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "R207",
@@ -1619,7 +1644,8 @@
           154.94
         ]
       ],
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "C201",
@@ -1638,7 +1664,8 @@
           193.04000000000002
         ]
       ],
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "C202",
@@ -1657,7 +1684,8 @@
           193.04000000000002
         ]
       ],
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "C203",
@@ -1676,7 +1704,8 @@
           231.14
         ]
       ],
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
+      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
+      "group": "analog"
     },
     {
       "ref": "J301",
@@ -4354,7 +4383,7 @@
   "source_sha256": {
     "kicad/core-oem-refined/ps28-modern.kicad_sch": "134bdf8fa93e3a66d99a5d556bd45cb9c5289ed5c3b126273db16ef3ad38a2ce",
     "kicad/analog-protected/analog-protected.kicad_sch": "f46adefe0383358837e4eb49a41fe21b8017f39b549f789c10675ca4ac277303",
-    "scripts/integrate_candidate.py": "fb68b4fe77f8502ad5b2326c54fb97bca379797d0069f9d0e7efcbd0bf775c3a",
+    "scripts/integrate_candidate.py": "afed5c00d1f7b9e3fb1a04cc7c9474f202d432588ebd68e8e9691a102c930c7d",
     "kicad/power-d021/power-d021.kicad_sch": "f51a7dd3d74d0c360b514180a4d9918f63d2e364aee3d35d2c0c834e4029aea0",
     "kicad/seq-d020/seq-d020.kicad_sch": "0d6a219fd97f4594ea756f839a9c2f616b1174abb3ba09accabca21839d0b884",
     "scripts/create_power_d021.py": "a92f643237b2d08071228584ba9d4406920f4206935f18f66ba84db1a71d03b9",

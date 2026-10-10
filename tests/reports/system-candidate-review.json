@@ -127,5 +127,23 @@
     "hardware_validated": false,
     "manufacturing_approved": false,
     "single_fault_clamp": "BAT54 + 3.3k (D-024a)"
+  },
+  "pcb001_update": {
+    "date": "2026-10-10",
+    "outline_mm": [
+      154,
+      81
+    ],
+    "mounting_holes": "4 x M3 board-only",
+    "profile_keepout_mm": [
+      65,
+      33
+    ],
+    "drc_violations": 105,
+    "drc_unrouted": 470,
+    "note": "violations are real placement conflicts with measured OEM mechanics",
+    "orientation": "x=20 relay (upper) end, x=174 transformer (lower) end; owner-confirmed",
+    "placement": "study: all 204 parts inside outline, 4 holes board-only",
+    "drc_violation_kinds": "silkscreen only (overlap/clipping); 0 courtyard, 0 short, 0 keepout"
   }
 }

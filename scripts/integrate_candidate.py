@@ -90,6 +90,7 @@ def candidates():
         p["selection"] = (
             "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
         )
+        p["group"] = "analog"
     return parts
 
 
@@ -252,10 +253,106 @@ def tnpw_footprint():
 (model "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_1206_3216Metric.step" (offset(xyz 0 0 0))(scale(xyz 1 1 1))(rotate(xyz 0 0 0))))\n"""
 
 
+def oem_mechanics():
+    """Measured OEM main-PCB frame (MECH-001, owner tape measurements, ~1 mm error).
+
+    KiCad frame: origin (20, 20); x along the backplate from the UPPER board edge
+    (OEM relay/woofer end) to the lower edge (transformer end); y from the free edge
+    to the backplate edge. Orientation confirmed by the owner (2026-10-10).
+    """
+    m = json.loads((ROOT / "mechanical/oem-heatsink-measurements.json").read_text())
+    pcb, u = m["main_pcb"], m["u_profile"]
+    x0, y0 = 20.0, 20.0
+    w, h = pcb["length_mm"], pcb["depth_mm"]
+    back = y0 + h  # backplate edge
+    edge = pcb["mounting_holes"]["from_edge_mm"]
+    holes = [(x, back - d) for x in (x0 + edge, x0 + w - edge)
+             for d in pcb["mounting_holes"]["from_backplate_mm"]]
+    top_gap = pcb["profile_gaps_mm"]["top"]
+    keepout = (x0 + top_gap, back - u["outer_width"], x0 + top_gap + u["length"], back)
+    to3p = [(x0 + top_gap + d, back - u["outer_width"]) for d in
+            (u["to3p_holes"]["from_profile_ends_mm"], u["length"] - u["to3p_holes"]["from_profile_ends_mm"])]
+    return {"outline": (x0, y0, x0 + w, back), "holes": holes, "profile_keepout": keepout,
+            "to3p_holes_at_leg_face": to3p, "hole_thread": pcb["mounting_holes"]["thread"]}
+
+
+def apply_oem_mechanics(pcb, pcbnew):
+    """Replace the inferred 153 x 79.1 study outline and reservations with measured data."""
+    mech = oem_mechanics()
+    # Delete (not Remove): Remove leaves orphaned C++ items that corrupt later SWIG calls.
+    for zone in [pcb.GetArea(i) for i in range(pcb.GetAreaCount())]:
+        if zone.GetIsRuleArea():
+            pcb.Delete(zone)
+    for obj in list(pcb.GetDrawings()):
+        pcb.Delete(obj)
+
+    def point(x, y):
+        return pcbnew.VECTOR2I(pcbnew.FromMM(x), pcbnew.FromMM(y))
+
+    def rect(box, layer, width=0.05):
+        x1, y1, x2, y2 = box
+        corners = [(x1, y1), (x2, y1), (x2, y2), (x1, y2)]
+        for a, b in zip(corners, corners[1:] + corners[:1]):
+            seg = pcbnew.PCB_SHAPE(pcb)
+            seg.SetShape(pcbnew.SHAPE_T_SEGMENT)
+            seg.SetStart(point(*a))
+            seg.SetEnd(point(*b))
+            seg.SetLayer(layer)
+            seg.SetWidth(pcbnew.FromMM(width))
+            pcb.Add(seg)
+
+    def note(text, x, y):
+        t = pcbnew.PCB_TEXT(pcb)
+        t.SetText(text)
+        t.SetPosition(point(x, y))
+        t.SetLayer(pcbnew.Dwgs_User)
+        t.SetTextSize(point(1, 1))
+        t.SetTextThickness(pcbnew.FromMM(0.15))
+        pcb.Add(t)
+
+    rect(mech["outline"], pcbnew.Edge_Cuts)
+    # Aluminium U-profile base rests on the component side: no parts/pads/copper on top.
+    x1, y1, x2, y2 = mech["profile_keepout"]
+    zone = pcbnew.ZONE(pcb)
+    zone.SetLayer(pcbnew.F_Cu)
+    zone.SetIsRuleArea(True)
+    zone.SetZoneName("OEM_U_PROFILE")
+    zone.SetDoNotAllowFootprints(True)
+    zone.SetDoNotAllowPads(True)
+    zone.SetDoNotAllowTracks(True)
+    zone.SetDoNotAllowVias(True)
+    zone.SetDoNotAllowZoneFills(True)
+    poly = pcbnew.SHAPE_POLY_SET()
+    poly.NewOutline()
+    for x, y in [(x1, y1), (x2, y1), (x2, y2), (x1, y2)]:
+        poly.Append(point(x, y))
+    zone.SetOutline(poly)
+    poly.thisown = False  # ZONE takes ownership of the polygon.
+    pcb.Add(zone)
+    rect(mech["profile_keepout"], pcbnew.Dwgs_User, 0.15)
+    note("OEM U PROFILE 65x33 - BASE ON PCB - NO TOP PARTS", (x1 + x2) / 2, y1 - 2)
+    for x, y in mech["to3p_holes_at_leg_face"]:
+        note("TO-3P M3 (LEG FACE)", x, y - 5)
+    library = "/usr/share/kicad/footprints/MountingHole.pretty"
+    for i, (x, y) in enumerate(mech["holes"], 1):
+        hole = pcbnew.FootprintLoad(library, "MountingHole_3.2mm_M3")
+        hole.SetReference(f"H{i}")
+        hole.SetValue("OEM L-bracket M3")
+        hole.SetFPID(pcbnew.LIB_ID("MountingHole", "MountingHole_3.2mm_M3"))
+        hole.SetPosition(point(x, y))
+        hole.SetBoardOnly(True)
+        hole.SetExcludedFromBOM(True)
+        hole.SetExcludedFromPosFiles(True)
+        pcb.Add(hole)
+    note("MEASURED OEM 154x81 (TAPE, ~1 mm) - NOT FABRICATION", 97, 16)
+    return mech
+
+
 def board(staged, parts, inventory):
     import pcbnew
 
     pcb = pcbnew.LoadBoard(str(SOURCE / "ps28-modern.kicad_pcb"))
+    apply_oem_mechanics(pcb, pcbnew)
     for net in list(pcb.GetNetsByName().values()):
         name = net.GetNetname().lstrip("/")
         if name in RENAMES:
@@ -348,6 +445,8 @@ def board(staged, parts, inventory):
     sch = parse((staged / (PROJECT + ".kicad_sch")).read_text())
     for fp in pcb.GetFootprints():
         ref = fp.GetReference()
+        if fp.IsBoardOnly():
+            continue
         unit = next(
             n
             for n in sch
@@ -375,6 +474,9 @@ def board(staged, parts, inventory):
         for field in components[ref].findall("property"):
             fp.SetField(field.get("name"), field.get("value") or "")
             fp.GetField(field.get("name")).SetVisible(False)
+    from place_system_candidate import place
+
+    place(pcb, pcbnew, oem_mechanics(), inventory)
     pcbnew.SaveBoard(str(staged / (PROJECT + ".kicad_pcb")), pcb)
     # Add manufacturer models without replacing audited pads or assigning HCF tab.
     tree = parse((staged / (PROJECT + ".kicad_pcb")).read_text())
@@ -426,6 +528,8 @@ def validate_staged(staged, inventory):
             for p in fp
             if isinstance(p, list) and p[:2] == ["property", q("Reference")]
         )
+        if ref.startswith("H") and ref[1:].isdigit():
+            continue  # board-only OEM mounting holes, not in the schematic
         if ref in seen:
             raise ValueError("Duplicate footprint " + ref)
         seen.add(ref)
