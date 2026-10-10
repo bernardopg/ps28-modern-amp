@@ -5,7 +5,7 @@ status: Blocked
 milestone: M1
 sprint: S02
 depends_on: SYS-001
-updated: 2026-10-08
+updated: 2026-10-10
 ---
 
 # MECH-001 — Medir plate e modelar envelope

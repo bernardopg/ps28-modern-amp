@@ -1,0 +1,103 @@
+{
+  "source": "Owner manual measurements on the original unit, 2026-10-10; ruler/caliper, resolution not stated",
+  "frame": "Backplate seen from OUTSIDE (heatsink side); origin top-left; x right, y down; mm",
+  "backplate": {
+    "w": 200,
+    "h": 300,
+    "status": "measured"
+  },
+  "external_heatsink": {
+    "x": [
+      39,
+      111
+    ],
+    "y": [
+      48,
+      166
+    ],
+    "depth": 25,
+    "fins": 8,
+    "grooves": 7,
+    "edges_to_backplate": {
+      "left": 39,
+      "top": 48,
+      "right": 89,
+      "bottom": 134
+    },
+    "status": "measured"
+  },
+  "central_holes": {
+    "x": 75.0,
+    "x_status": "hypothesis: equal fin pitch 9 mm, 4th groove center",
+    "upper_y": {
+      "from_heatsink_top": 40,
+      "calculated": 88.0,
+      "measured_from_backplate_top": 88.9
+    },
+    "lower_y": {
+      "from_heatsink_top": 75,
+      "measured_from_backplate_top": 123
+    },
+    "pitch": 35,
+    "role": "U-profile anchoring"
+  },
+  "fin_holes": {
+    "fins": [
+      2,
+      6
+    ],
+    "x_hypothesis": [
+      52.5,
+      88.5
+    ],
+    "y_from_heatsink_top": [
+      15,
+      "58 from top or bottom (unknown)",
+      103
+    ],
+    "y_backplate": [
+      63,
+      [
+        106,
+        108
+      ],
+      151
+    ],
+    "count": 6
+  },
+  "u_profile": {
+    "length": 65,
+    "leg_height": 30,
+    "inner_gap": 21,
+    "leg_thickness": 6,
+    "outer_width": 33,
+    "holes": 2,
+    "hole_to_end": 15,
+    "hole_pitch": 35,
+    "oem_bom": "323-AL-00020-0LAE 65x32x31 (manual p.15)",
+    "y_span_calculated": [
+      73.0,
+      138.0
+    ],
+    "status": "measured"
+  },
+  "orientation": {
+    "pcb_to_backplate_deg": 90,
+    "base": "contacts PCB / power-device region",
+    "one_leg": "on backplate inner face",
+    "anchors": "coincide with heatsink central holes"
+  },
+  "checks": {
+    "heatsink_x_sum": 200,
+    "heatsink_y_sum": 300,
+    "upper_hole_discrepancy_mm": 0.9
+  },
+  "inference": "Manual p.17: TO-3P Q107/Q108 stand edge-on in a ~65 mm row, so the profile contact face is perpendicular to the PCB; TPA3255 DDV top PowerPAD is parallel to the PCB. To be confirmed by photo.",
+  "open": [
+    "photo of profile with original PCB",
+    "profile contact face to PCB surface distance",
+    "PCB outline and mounting points vs profile",
+    "anchor thread size"
+  ],
+  "fabrication_approved": false
+}

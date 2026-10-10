@@ -15,6 +15,9 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
   em `.gitattributes` como `system-candidate.svg`.
 
 ### Added
+- MECH-001: medidas do proprietário de backplate, dissipador externo e perfil U em
+  `mechanical/oem-heatsink-measurements.{md,json}`, conferidas contra a BOM do manual;
+  achado de que o adaptador térmico D-013 precisa ser em L.
 - `docs/production-roadmap.md`, ELEC-004 (front-end D-022, issue #20), estado do
   projeto reescrito para a candidata de sistema; auditoria dos footprints DGK0008A e
   G6K-2F contra os desenhos de fabricante.
