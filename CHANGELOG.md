@@ -15,6 +15,9 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
   em `.gitattributes` como `system-candidate.svg`.
 
 ### Added
+- `docs/production-roadmap.md`, ELEC-004 (front-end D-022, issue #20), estado do
+  projeto reescrito para a candidata de sistema; auditoria dos footprints DGK0008A e
+  G6K-2F contra os desenhos de fabricante.
 - D-024a: clamp BAT54 + 3,3 kΩ série nos pinos de entrada do TPA (falha simples para
   GND ≈ −5,9 V → ≤ −0,351 V no VF máximo), casos de falha simples na simulação,
   footprint TI DGK0008A para o TMUX6219 e tabela de tratamento dos riscos D-019.

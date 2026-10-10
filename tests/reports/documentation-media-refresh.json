@@ -47,6 +47,7 @@
     "ELEC-001": "To Do",
     "ELEC-002": "Blocked",
     "ELEC-003": "To Do",
+    "ELEC-004": "To Do",
     "FAB-001": "To Do",
     "MECH-001": "Blocked",
     "PCB-001": "To Do",
@@ -65,7 +66,7 @@
   "hardware_validated": false,
   "manufacturing_approved": false,
   "source_sha256": {
-    ".tasks/github-mirror.json": "5e6c85106acd04fe9317e3c47380b17e70a8e652ccc43cc9806ac649e6b16bef",
+    ".tasks/github-mirror.json": "a3c886a8ed714a758d7965d216e72d70e912d2993697799e4db915c53e257a04",
     "docs/images/kicad-3d/manifest.json": "ecd1a7ea44e427c83fac012aca604ce123d0445c79ef3f230c903459c70ebf6e",
     "kicad/analog-protected/analog-protected.kicad_sch": "f46adefe0383358837e4eb49a41fe21b8017f39b549f789c10675ca4ac277303",
     "kicad/analog-protected/vmid-manifest.json": "f4ab47cd848ccf1d1e14ed1c0d52f7ccb51eb6b55bfe189640ab7730778ff119",

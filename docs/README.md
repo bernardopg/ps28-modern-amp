@@ -21,7 +21,9 @@ Transversais: [segurança](safety.md), [decisões](decisions.md), [referências]
 
 [D-023 — sequenciador discreto D-020](seq-d020.md),
 
-[D-024 — isolamento D-019 por relé, mute e DC](iso-d019.md).
+[D-024 — isolamento D-019 por relé, mute e DC](iso-d019.md),
+
+[caminho até produção](production-roadmap.md).
 [D-020 — integração candidata, CAD e sequência executável](integration-protection-review.md):
 76 componentes importados, proteção física ainda aberta; não hardware completo.
 

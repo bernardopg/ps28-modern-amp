@@ -27,10 +27,10 @@ make erc         # apenas quando houver schematic não vazio
 make drc         # apenas quando houver PCB não vazia
 ```
 
-[Estado consolidado e próximos bloqueios](docs/development-status.md):
-D-018 é schematic analógico com alimentação/VMID, **sem PCB**; D-019 é contrato
-não implementado. A galeria B/OEM foi regenerada, mas a geometria não mudou e
-não representa integração do preamp/supervisor/proteção ao núcleo.
+[Estado consolidado](docs/development-status.md) · [Caminho até produção](docs/production-roadmap.md):
+a candidata `kicad/system-candidate/` integra núcleo, analógico, fonte D-021,
+sequenciador D-023 e interface D-019/D-024 (204 footprints, DRC 0), ainda **sem
+placement no contorno OEM, sem roteamento e sem front-end D-022**.
 
 Abrir **`kicad/core-selected/ps28-modern.kicad_pro`** no KiCad (revisão atual B).
 [Peças, integração ao gabinete e revisão ERC/DRC](docs/selected-core.md).

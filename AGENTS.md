@@ -52,7 +52,9 @@ Tasks têm ID estável, dependências e critérios verificáveis; WIP máximo 2.
 Use Conventional Commits e atualize CHANGELOG.md para mudanças relevantes.
 
 ## EDA atual
-Revisão atual em kicad/core-selected/ps28-modern.kicad_pro; anterior preservada em kicad/.
+Candidata de sistema em kicad/system-candidate/ (204 footprints, sem placement OEM/rota);
+gerada por scripts/integrate_candidate.py, não editar à mão. Ler docs/development-status.md
+e docs/production-roadmap.md. Núcleo B em kicad/core-selected/ps28-modern.kicad_pro.
 47 footprints/142 pads, ainda sem roteamento. Ler docs/selected-core.md.
 D-014 fixa montagem/dissipação OEM e os mesmos mounting points por decisão do usuário.
 Usar mechanical/original-board-reference.md: manual p.15–16 tem cotas nominais de
