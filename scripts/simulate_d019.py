@@ -26,17 +26,20 @@ R_IN = (10e3, 20e3, 40e3)  # 20 k typical (SLASEA8A sec.7.5), not guaranteed
 WIN = windows()["pin_dc"]
 BIAS = (WIN["uv_trip_falling_v"][0], 3.875, WIN["ov_trip_v"][2])  # DC window corners
 VMID = (4.36, 6.25)  # ANALOG_12V UV min / AUX max, divided by 2
+ANALOG_MAX = 12.5  # driver stuck at ANALOG_12V (AUX max)
 AUDIO_PK = 1.41421 * 1.1  # contract 1.414 V pk per branch + 10 % LR4 mute-step overshoot
 F_AUDIO = 20.0  # lowest band after the required subsonic HPF
 # ANALOG_12V storage decay after AUX loss: (95 mA) / (2 x 470 uF -20 %) / 2 for VMID.
 VMID_SLOPE = 0.095 / (2 * 470e-6 * 0.8) / 2
 T_OPEN = (RELAY_RELEASE_MAX_S, 10e-3)  # datasheet max; pessimistic logic/coil delay
-C_PIN, R_DIV, R_DIS = 4.7e-9, 980.7e3, 1e3
+C_PIN, R_DIV, R_DIS, R_SER = 4.7e-9, 980.7e3, 1e3, 3.3e3
 T_FAULT = 1e-3
 
 
 def netlist(c, rin, bias, vm, data, kind, t_open=None, phase=0.0, t_audio=None, slope=0.0):
-    sw = ".model SWR SW(VT=0.5 VH=0.1 RON=0.1 ROFF=1e12)"
+    sw = (".model SWR SW(VT=0.5 VH=0.1 RON=0.1 ROFF=1e12)\n"
+          # BAT54 fitted to DS11005 p.2 MAXIMUM VF (0.24 V/0.1 mA, 0.32 V/1 mA, 0.4 V/10 mA, 0.5 V/30 mA).
+          f".model DCLAMP D(IS=1e-7 N=1.344 RS=2 BV=30 CJO=10p)\nRSER no pin {R_SER}\nDCL 0 pin DCLAMP")
     if kind == "startup":
         # Relay command at 0, NO closes at operate max; RESET 12 ms later; bias step via RIN.
         t_no = RELAY_OPERATE_MAX_S
@@ -47,7 +50,7 @@ B1 drv 0 V={vm}+{audio}
 C1 drv plate {c} IC={vm}
 VCNO cno 0 PWL(0 0 {t_no} 0 {t_no + 1e-6} 1)
 VCNC cnc 0 PWL(0 1 {t_no - 1e-4} 1 {t_no - 1e-4 + 1e-6} 0)
-SNO plate pin cno 0 SWR
+SNO plate no cno 0 SWR
 SNC plate dis cnc 0 SWR
 RDIS dis 0 {R_DIS}
 CPIN pin 0 {C_PIN} IC=0
@@ -63,6 +66,30 @@ quit
 .endc
 .end
 """
+    if kind == "single":
+        # Single fault with relay CLOSED throughout: driver output jumps to `slope` volts
+        # (0 = shorted low, ANALOG_12V max = stuck high); TPA bias held (worst for low).
+        return f"""* D-019 single fault
+B1 drv 0 V=({vm}+{AUDIO_PK}*sin(2*pi*{F_AUDIO}*time+{phase}))*(time<{T_FAULT})+{slope}*(time>={T_FAULT})
+C1 drv plate {c} IC={vm - bias}
+VCNO cno 0 1
+VCNC cnc 0 0
+SNO plate no cno 0 SWR
+SNC plate dis cnc 0 SWR
+RDIS dis 0 {R_DIS}
+CPIN pin 0 {C_PIN} IC={bias}
+RDIV pin 0 {R_DIV}
+RIN pin b {rin}
+VB b 0 {bias}
+{sw}
+.tran 20u 0.3 0 20u UIC
+.control
+run
+wrdata {data} v(pin) v(plate) i(VB)
+quit
+.endc
+.end
+"""
     # Running fault: steady state at t=0, bias -> 0 at T_FAULT, relay opens t_open later.
     t_o = T_FAULT + t_open
     vm_expr = f"max({vm}-{slope}*max(time-{T_FAULT},0),0)"
@@ -71,7 +98,7 @@ B1 drv 0 V={vm_expr}+{AUDIO_PK}*sin(2*pi*{F_AUDIO}*time+{phase})
 C1 drv plate {c} IC={vm - bias}
 VCNO cno 0 PWL(0 1 {t_o} 1 {t_o + 1e-6} 0)
 VCNC cnc 0 PWL(0 0 {t_o + 1e-4} 0 {t_o + 1e-4 + 1e-6} 1)
-SNO plate pin cno 0 SWR
+SNO plate no cno 0 SWR
 SNC plate dis cnc 0 SWR
 RDIS dis 0 {R_DIS}
 CPIN pin 0 {C_PIN} IC={bias}
@@ -135,6 +162,16 @@ def fault(c, rin, bias, vm, slope, t_open, phase):
             "ok": PIN_MIN <= min(pin) and max(pin) <= PIN_MAX and max(map(abs, plate)) <= PLATE_MAX}
 
 
+def single_fault(c, rin, bias, vm, level, phase):
+    name = case_name("sf", c, rin, bias, vm, level, round(phase, 3))
+    t, pin, plate = simulate(name, netlist(c, rin, bias, vm, BUILD / f"{name}.dat", "single",
+                                           phase=phase, slope=level))
+    return {"kind": "single_fault_low" if level == 0 else "single_fault_high", "c_f": c, "rin": rin,
+            "bias": bias, "vmid": vm, "driver_after_v": level, "audio_phase_rad": round(phase, 3),
+            "pin_min_v": round(min(pin), 4), "pin_max_v": round(max(pin), 4),
+            "ok": PIN_MIN <= min(pin) and max(pin) <= PIN_MAX}
+
+
 def main():
     grid = list(itertools.product(C_COUPLE, R_IN, BIAS, VMID))
     cases = [startup(*g) for g in grid]
@@ -145,6 +182,7 @@ def main():
             cases.append(fault(*g, 0.0, T_OPEN[0], ph))
             for t_open in T_OPEN:
                 cases.append(fault(*g, VMID_SLOPE, t_open, ph))
+    single = [single_fault(*g, level, ph) for g in grid for level in (0.0, ANALOG_MAX) for ph in phases[::2]]
     ripple = AUDIO_PK / math.sqrt(1 + (2 * math.pi * F_AUDIO * max(TAP_TAU_S.values())) ** 2)
     report = {
         "study": "D-024 relay isolation of TPA INPUT_x, ngspice transient",
@@ -164,9 +202,18 @@ def main():
             for k, t in sorted({(c["kind"], c.get("t_open_s")) for c in cases}, key=str)
         },
         "all_ok": all(c["ok"] for c in cases),
+        "single_fault": {
+            "note": "relay closed, driver shorted low or stuck high; BAT54 at datasheet MAX VF; "
+                    "TPA internal input clamp not modelled (would only share current)",
+            "low_pin_min_v": min(c["pin_min_v"] for c in single if c["driver_after_v"] == 0),
+            "high_pin_max_v": max(c["pin_max_v"] for c in single if c["driver_after_v"] > 0),
+            "low_ok": all(c["ok"] for c in single if c["driver_after_v"] == 0),
+            "high_ok": all(c["ok"] for c in single if c["driver_after_v"] > 0),
+            "cases": single,
+        },
         "cases": cases,
         "not_covered": [
-            "single fault: preamp rail short or driver failing low while connected",
+            "single fault high side: driver stuck at ANALOG_12V while connected (no upper clamp)",
             "real TPA input circuit unpowered/in reset (only RIN to ideal bias)",
             "relay contact bounce, stuck contact, coil drive failure",
             "audio below 20 Hz (front-end subsonic HPF required, ELEC-002)",

@@ -39,7 +39,7 @@ class RenderGalleryTests(unittest.TestCase):
                 if name.endswith(".png")
                 else content.startswith(b"GIF89a")
             )
-        footprints = {"selected": 47, "oem": 47, "system": 200}
+        footprints = {"selected": 47, "oem": 47, "system": 204}
         self.assertEqual(set(manifest["designs"]), set(footprints))
         for name, entry in manifest["designs"].items():
             content = (ROOT / entry["pcb"]).read_bytes()

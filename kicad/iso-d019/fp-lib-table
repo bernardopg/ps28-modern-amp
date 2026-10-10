@@ -1,0 +1,1 @@
+(fp_lib_table (version 7) (lib (name "PS28_ANALOG") (type "KiCad") (uri "${KIPRJMOD}/libraries/PS28_ANALOG.pretty") (options "") (descr "TI DGK0008A SCDS420E p.50")))

@@ -16,14 +16,17 @@ class D019InterfaceTests(unittest.TestCase):
         nets = {p["ref"]: p["nets"] for p in parts()}
         k = nets["K501"]
         # Omron K106-E1-11 p.6: COM 3/6, NC 2/7, NO 4/5, coil 1(+)/8(-).
-        self.assertEqual((k["3"], k["2"], k["4"]), ("INA_ISO", "INA_DIS", "INPUT_A_AC"))
-        self.assertEqual((k["6"], k["7"], k["5"]), ("INB_ISO", "INB_DIS", "INPUT_B_AC"))
+        self.assertEqual((k["3"], k["2"], k["4"]), ("INA_ISO", "INA_DIS", "INA_NO"))
+        self.assertEqual((k["6"], k["7"], k["5"]), ("INB_ISO", "INB_DIS", "INB_NO"))
+        self.assertEqual(nets["R517"], {"1": "INA_NO", "2": "INPUT_A_AC"})
+        # BAT54 DS11005: anode pin 1 to GND, cathode pin 3 on the TPA pin (negative clamp).
+        self.assertEqual(nets["D503"], {"1": "GND", "2": None, "3": "INPUT_A_AC"})
         self.assertEqual((k["1"], k["8"]), ("AUX_RAW", "RELAY_DRV"))
         self.assertEqual(nets["R503"], {"1": "INA_DIS", "2": "GND"})
         # The pin never has a direct path to GND below the ~1 Mohm window divider.
         for p in parts():
             if p["ref"].startswith("R") and "INPUT_A_AC" in p["nets"].values():
-                self.assertEqual(p["ref"], "R505")
+                self.assertIn(p["ref"], ("R505", "R517"))
         self.assertEqual(nets["R502"]["2"], "GND")  # relay off without logic
 
     def test_mute_defaults_on_and_shunts_divided_to_vmid(self):
@@ -51,6 +54,13 @@ class D019InterfaceTests(unittest.TestCase):
         self.assertEqual(R["inputs"]["relay_operate_release_max_s"][1], RELAY_RELEASE_MAX_S)
         self.assertIn(0.01, R["inputs"]["t_open_s"])  # pessimistic beyond datasheet
         self.assertFalse(R["hardware_validated"])
+
+    def test_single_fault_low_is_clamped_high_is_not(self):
+        sf = R["single_fault"]
+        # Unclamped this case reaches about bias - VMID - audio = -5.9 V; clamp at max VF.
+        self.assertGreaterEqual(sf["low_pin_min_v"], -0.36)
+        self.assertFalse(sf["low_ok"])  # still beyond -0.3 V at datasheet max VF: documented
+        self.assertFalse(sf["high_ok"])  # no upper clamp: documented residual risk
 
     def test_generator_refuses_overwrite(self):
         with tempfile.TemporaryDirectory() as tmp:

@@ -146,3 +146,9 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   ERC/DRC, modelo lógico da netlist com mutações, simulação, `make check`. Ver
   `iso-d019.md`; 2026-10-09. Proposta do agente sob autorização do proprietário,
   pendente de revisão G1. Não libera fabricação nem energização.
+- D-024a — Mitigação de falha simples na interface D-019: R 3,3 kΩ em série após o
+  NO do relé e BAT54 (catodo no pino, anodo em GND). Driver em curto para GND com
+  relé fechado: ≈ −5,9 V sem clamp → ≤ −0,351 V no VF máximo de catálogo (ainda
+  51 mV além de −0,3 V). Custo −1,33 dB típico. Driver preso alto continua aberto.
+  Footprint TI DGK0008A local para o TMUX6219. Validação: simulação de 216 casos de
+  falha simples, ERC/DRC. 2026-10-10; pendente de revisão G1.

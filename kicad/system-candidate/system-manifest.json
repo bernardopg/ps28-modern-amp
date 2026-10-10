@@ -1,8 +1,8 @@
 {
   "staged_validation": {
-    "native_pad_net_matches": 570,
-    "copper_pads_checked": 570,
-    "footprints": 200,
+    "native_pad_net_matches": 580,
+    "copper_pads_checked": 580,
+    "footprints": 204,
     "signal_bridge_open": false,
     "signal_bridge_via_relay_only": true
   },
@@ -3553,15 +3553,97 @@
         "8": "RELAY_DRV",
         "3": "INA_ISO",
         "2": "INA_DIS",
-        "4": "INPUT_A_AC",
+        "4": "INA_NO",
         "6": "INB_ISO",
         "7": "INB_DIS",
-        "5": "INPUT_B_AC"
+        "5": "INB_NO"
       },
       "units": [
         [
           1,
           38.1,
+          45.72
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R517",
+      "lib_id": "Device:R",
+      "value": "3.3k",
+      "mpn": "TBD: 1 %, thin film; RIN 10/20/40k => -2.48/-1.33/-0.69 dB",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "INA_NO",
+        "2": "INPUT_A_AC"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          45.72
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R518",
+      "lib_id": "Device:R",
+      "value": "3.3k",
+      "mpn": "TBD: 1 %, thin film; RIN 10/20/40k => -2.48/-1.33/-0.69 dB",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "INB_NO",
+        "2": "INPUT_B_AC"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          45.72
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "D503",
+      "lib_id": "PS28_ISO:BAT54",
+      "value": "BAT54",
+      "mpn": "BAT54-7-F (Diodes DS11005 Rev.34)",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "nets": {
+        "1": "GND",
+        "2": null,
+        "3": "INPUT_A_AC"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          45.72
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "D504",
+      "lib_id": "PS28_ISO:BAT54",
+      "value": "BAT54",
+      "mpn": "BAT54-7-F (Diodes DS11005 Rev.34)",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "nets": {
+        "1": "GND",
+        "2": null,
+        "3": "INPUT_B_AC"
+      },
+      "units": [
+        [
+          1,
+          292.1,
           45.72
         ]
       ],
@@ -3582,7 +3664,7 @@
       "units": [
         [
           1,
-          101.6,
+          355.6,
           45.72
         ]
       ],
@@ -3602,8 +3684,8 @@
       "units": [
         [
           1,
-          165.1,
-          45.72
+          38.1,
+          86.36
         ]
       ],
       "group": "iso",
@@ -3622,8 +3704,8 @@
       "units": [
         [
           1,
-          228.6,
-          45.72
+          101.6,
+          86.36
         ]
       ],
       "group": "iso",
@@ -3642,8 +3724,8 @@
       "units": [
         [
           1,
-          292.1,
-          45.72
+          165.1,
+          86.36
         ]
       ],
       "group": "iso",
@@ -3662,8 +3744,8 @@
       "units": [
         [
           1,
-          355.6,
-          45.72
+          228.6,
+          86.36
         ]
       ],
       "group": "iso",
@@ -3682,7 +3764,7 @@
       "units": [
         [
           1,
-          38.1,
+          292.1,
           86.36
         ]
       ],
@@ -3702,7 +3784,7 @@
       "units": [
         [
           1,
-          101.6,
+          355.6,
           86.36
         ]
       ],
@@ -3722,8 +3804,8 @@
       "units": [
         [
           1,
-          165.1,
-          86.36
+          38.1,
+          127.0
         ]
       ],
       "group": "iso",
@@ -3742,8 +3824,8 @@
       "units": [
         [
           1,
-          228.6,
-          86.36
+          101.6,
+          127.0
         ]
       ],
       "group": "iso",
@@ -3766,8 +3848,8 @@
       "units": [
         [
           1,
-          292.1,
-          86.36
+          165.1,
+          127.0
         ]
       ],
       "group": "iso",
@@ -3790,8 +3872,8 @@
       "units": [
         [
           1,
-          355.6,
-          86.36
+          228.6,
+          127.0
         ]
       ],
       "group": "iso",
@@ -3810,7 +3892,7 @@
       "units": [
         [
           1,
-          38.1,
+          292.1,
           127.0
         ]
       ],
@@ -3830,7 +3912,7 @@
       "units": [
         [
           1,
-          101.6,
+          355.6,
           127.0
         ]
       ],
@@ -3850,8 +3932,8 @@
       "units": [
         [
           1,
-          165.1,
-          127.0
+          38.1,
+          167.64
         ]
       ],
       "group": "iso",
@@ -3870,8 +3952,8 @@
       "units": [
         [
           1,
-          228.6,
-          127.0
+          101.6,
+          167.64
         ]
       ],
       "group": "iso",
@@ -3890,8 +3972,8 @@
       "units": [
         [
           1,
-          292.1,
-          127.0
+          165.1,
+          167.64
         ]
       ],
       "group": "iso",
@@ -3910,8 +3992,8 @@
       "units": [
         [
           1,
-          355.6,
-          127.0
+          228.6,
+          167.64
         ]
       ],
       "group": "iso",
@@ -3930,7 +4012,7 @@
       "units": [
         [
           1,
-          38.1,
+          292.1,
           167.64
         ]
       ],
@@ -3950,7 +4032,7 @@
       "units": [
         [
           1,
-          101.6,
+          355.6,
           167.64
         ]
       ],
@@ -3970,8 +4052,8 @@
       "units": [
         [
           1,
-          165.1,
-          167.64
+          38.1,
+          208.28
         ]
       ],
       "group": "iso",
@@ -3990,8 +4072,8 @@
       "units": [
         [
           1,
-          228.6,
-          167.64
+          101.6,
+          208.28
         ]
       ],
       "group": "iso",
@@ -4014,8 +4096,8 @@
       "units": [
         [
           1,
-          292.1,
-          167.64
+          165.1,
+          208.28
         ]
       ],
       "group": "iso",
@@ -4034,8 +4116,8 @@
       "units": [
         [
           1,
-          355.6,
-          167.64
+          228.6,
+          208.28
         ]
       ],
       "group": "iso",
@@ -4054,7 +4136,7 @@
       "units": [
         [
           1,
-          38.1,
+          292.1,
           208.28
         ]
       ],
@@ -4074,7 +4156,7 @@
       "units": [
         [
           1,
-          101.6,
+          355.6,
           208.28
         ]
       ],
@@ -4086,7 +4168,7 @@
       "lib_id": "PS28_ISO:TMUX6219DGK",
       "value": "TMUX6219",
       "mpn": "TMUX6219DGKR (TI SCDS420E p.39); RON <=7.5 ohm at 12 V single supply (p.10)",
-      "footprint": "Package_SO:MSOP-8_3x3mm_P0.65mm",
+      "footprint": "PS28_ANALOG:TI_DGK0008A",
       "nets": {
         "1": "DIVIDED",
         "2": "VMID",
@@ -4100,8 +4182,8 @@
       "units": [
         [
           1,
-          165.1,
-          208.28
+          38.1,
+          248.92
         ]
       ],
       "group": "iso",
@@ -4120,8 +4202,8 @@
       "units": [
         [
           1,
-          228.6,
-          208.28
+          101.6,
+          248.92
         ]
       ],
       "group": "iso",
@@ -4141,8 +4223,8 @@
       "units": [
         [
           1,
-          292.1,
-          208.28
+          165.1,
+          248.92
         ]
       ],
       "group": "iso",
@@ -4161,8 +4243,8 @@
       "units": [
         [
           1,
-          355.6,
-          208.28
+          228.6,
+          248.92
         ]
       ],
       "group": "iso",
@@ -4181,7 +4263,7 @@
       "units": [
         [
           1,
-          38.1,
+          292.1,
           248.92
         ]
       ],
@@ -4201,7 +4283,7 @@
       "units": [
         [
           1,
-          101.6,
+          355.6,
           248.92
         ]
       ],
@@ -4221,8 +4303,8 @@
       "units": [
         [
           1,
-          165.1,
-          248.92
+          38.1,
+          289.56
         ]
       ],
       "group": "iso",
@@ -4241,8 +4323,8 @@
       "units": [
         [
           1,
-          228.6,
-          248.92
+          101.6,
+          289.56
         ]
       ],
       "group": "iso",
@@ -4261,8 +4343,8 @@
       "units": [
         [
           1,
-          292.1,
-          248.92
+          165.1,
+          289.56
         ]
       ],
       "group": "iso",
@@ -4272,7 +4354,7 @@
   "source_sha256": {
     "kicad/core-oem-refined/ps28-modern.kicad_sch": "134bdf8fa93e3a66d99a5d556bd45cb9c5289ed5c3b126273db16ef3ad38a2ce",
     "kicad/analog-protected/analog-protected.kicad_sch": "f46adefe0383358837e4eb49a41fe21b8017f39b549f789c10675ca4ac277303",
-    "scripts/integrate_candidate.py": "defc726eabffcd021679b8ea76e56f4e83b004e344585c85ceb9c18750ab3915",
+    "scripts/integrate_candidate.py": "fb68b4fe77f8502ad5b2326c54fb97bca379797d0069f9d0e7efcbd0bf775c3a",
     "kicad/power-d021/power-d021.kicad_sch": "f51a7dd3d74d0c360b514180a4d9918f63d2e364aee3d35d2c0c834e4029aea0",
     "kicad/seq-d020/seq-d020.kicad_sch": "0d6a219fd97f4594ea756f839a9c2f616b1174abb3ba09accabca21839d0b884",
     "scripts/create_power_d021.py": "a92f643237b2d08071228584ba9d4406920f4206935f18f66ba84db1a71d03b9",

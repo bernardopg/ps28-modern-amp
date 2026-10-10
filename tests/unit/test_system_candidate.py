@@ -17,7 +17,7 @@ class SystemCandidateTests(unittest.TestCase):
         d = json.loads(
             (ROOT / "kicad/system-candidate/system-manifest.json").read_text()
         )
-        self.assertEqual(len(d["parts"]), 200)
+        self.assertEqual(len(d["parts"]), 204)
         self.assertEqual(d["unassigned_footprints"], [])
         self.assertTrue(d["signal_bridge_connected"])  # only via K501, checked below
         self.assertTrue(d["isolation_mute_supervisor_implemented"])
@@ -32,7 +32,9 @@ class SystemCandidateTests(unittest.TestCase):
         self.assertEqual(refs["C20"]["nets"], {"1": "DIFF_P", "2": "INA_ISO"})
         self.assertEqual(refs["C20"]["nets"]["1"], refs["U3"]["nets"]["1"])
         self.assertEqual(refs["K501"]["nets"]["3"], "INA_ISO")
-        self.assertEqual(refs["K501"]["nets"]["4"], refs["U1"]["nets"]["5"])
+        self.assertEqual(refs["K501"]["nets"]["4"], refs["R517"]["nets"]["1"])
+        self.assertEqual(refs["R517"]["nets"]["2"], refs["U1"]["nets"]["5"])
+        self.assertEqual(refs["D503"]["nets"], {"1": "GND", "2": None, "3": refs["U1"]["nets"]["5"]})
         self.assertNotEqual(refs["C20"]["nets"]["2"], refs["U1"]["nets"]["5"])
         self.assertNotEqual(refs["C21"]["nets"]["2"], refs["U1"]["nets"]["6"])
         for name, expected in d["source_sha256"].items():
@@ -84,7 +86,7 @@ class SystemCandidateTests(unittest.TestCase):
                 ].strip('"')
                 self.assertEqual(net, nets[ref, number], ref + "." + number)
                 checked += 1
-        self.assertEqual(checked, 570)
+        self.assertEqual(checked, 580)
 
     def test_multiunit_paths_and_no_replace_publication(self):
         folder = ROOT / "kicad/system-candidate"

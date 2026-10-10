@@ -16,7 +16,7 @@ from pathlib import Path
 
 from create_analog_capture import build, child
 from create_core_draft import parse, q, render, uid, walk
-from create_iso_d019 import local_symbols as iso_symbols, parts as iso_parts
+from create_iso_d019 import dgk_footprint, local_symbols as iso_symbols, parts as iso_parts
 from create_power_d021 import parts as power_parts, tps3700_symbol, write_local_library
 from create_seq_d020 import lp2985_symbol, parts as seq_parts
 from create_vmid_protection import integrated_parts
@@ -455,7 +455,9 @@ def validate_staged(staged, inventory):
         # Drivers -> C20/C21 -> relay COM; NO -> TPA pins; NC -> discharge. Never plate-to-pin.
         joins = [(("U3", "1"), ("C20", "1")), (("U3", "7"), ("C21", "1")),
                  (("C20", "2"), ("K501", "3")), (("C21", "2"), ("K501", "6")),
-                 (("K501", "4"), ("U1", "5")), (("K501", "5"), ("U1", "6")),
+                 (("R517", "2"), ("U1", "5")), (("R518", "2"), ("U1", "6")),
+                 (("K501", "4"), ("R517", "1")), (("K501", "5"), ("R518", "1")),
+                 (("D503", "3"), ("U1", "5")), (("D504", "3"), ("U1", "6")),
                  (("U503", "1"), ("R101", "2")), (("U503", "2"), ("U3", "5"))]
         for a, b in joins:
             if native[a] != native[b]:
@@ -553,6 +555,7 @@ def generate(out):
         extra = stage / "libraries/PS28_ANALOG.pretty"
         extra.mkdir()
         (extra / "TNPW1206_IPC_Reflow.kicad_mod").write_text(tnpw_footprint())
+        (extra / "TI_DGK0008A.kicad_mod").write_text(dgk_footprint())
         shutil.copy(
             ROOT / "kicad/analog-protected/libraries/PS28_ANALOG.kicad_sym",
             stage / "libraries",

@@ -15,6 +15,9 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
   em `.gitattributes` como `system-candidate.svg`.
 
 ### Added
+- D-024a: clamp BAT54 + 3,3 kΩ série nos pinos de entrada do TPA (falha simples para
+  GND ≈ −5,9 V → ≤ −0,351 V no VF máximo), casos de falha simples na simulação,
+  footprint TI DGK0008A para o TMUX6219 e tabela de tratamento dos riscos D-019.
 - D-024: interface D-019 em `kicad/iso-d019/` — relé Omron G6K-2F Form C após
   C20/C21 (NO no pino, NC descarga), mute TMUX6219, janelas DC dos pinos e de AUX
   (TPS3700); lógica de RESET pós-conexão, dwell DC e latch de áudio no sequenciador.

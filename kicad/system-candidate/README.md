@@ -1,10 +1,10 @@
 # Core + D-018 + D-021 + D-020 — candidata de revisão INCOMPLETA
 
 Abrir `system-candidate.kicad_pro`. **Não energizar/fabricar.** Não é substituta
-aprovada de B/OEM. `system-manifest.json` registra 200 componentes/footprints,
-570 pinos elétricos casados netlist↔PCB, sem footprints vazios nessa candidata.
+aprovada de B/OEM. `system-manifest.json` registra 204 componentes/footprints,
+580 pinos elétricos casados netlist↔PCB, sem footprints vazios nessa candidata.
 
-- D-024 (2026-10-09): banco `iso` (relé K501, mute U503, janelas DC/AUX). Ponte
+- D-024/D-024a: banco `iso` (relé K501, série 3,3k + clamp BAT54, mute U503, janelas DC/AUX). Ponte
   DIFF_POS/NEG→DIFF_P/N **fechada só via K501**: C20/C21.2 = INA_ISO/INB_ISO (COM),
   U1.5/6 no NO. J3 DNP. Ver `docs/iso-d019.md`.
 

@@ -104,10 +104,10 @@
     "manufacturing_approved": false
   },
   "d024_update": {
-    "date": "2026-10-09",
-    "parts": 200,
-    "native_pins_matched": 570,
-    "new_footprints_iso_d019": 35,
+    "date": "2026-10-10",
+    "parts": 204,
+    "native_pins_matched": 580,
+    "new_footprints_iso_d019": 39,
     "new_footprints_seq_d020": 62,
     "new_footprints_placed_inside_oem": 0,
     "dnp": [
@@ -122,9 +122,10 @@
     "erc_warnings_unexcluded": 1,
     "drc_geometry": 0,
     "drc_footprint_errors": 0,
-    "drc_unrouted": 464,
+    "drc_unrouted": 470,
     "d019_simulation": "tests/reports/d019-interface-study.json",
     "hardware_validated": false,
-    "manufacturing_approved": false
+    "manufacturing_approved": false,
+    "single_fault_clamp": "BAT54 + 3.3k (D-024a)"
   }
 }

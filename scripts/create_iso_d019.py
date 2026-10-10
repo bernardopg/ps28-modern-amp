@@ -47,6 +47,25 @@ def windows():
     return {"pin_dc": window3(*PIN_DIVIDER, digits=3), "aux_raw": window3(*AUX_DIVIDER, digits=3)}
 
 
+def dgk_footprint():
+    # TI DGK0008A land pattern, SCDS420E p.50: 8x 1.4 x 0.45 mm, pitch 0.65, centers 4.4 mm.
+    pads = "\n".join(
+        f'(pad "{n}" smd roundrect(at {x} {y})(size 1.4 0.45)(layers "F.Cu" "F.Paste" "F.Mask")(roundrect_rratio 0.11))'
+        for n, x, y in [(1, -2.2, -0.975), (2, -2.2, -0.325), (3, -2.2, 0.325), (4, -2.2, 0.975),
+                        (5, 2.2, 0.975), (6, 2.2, 0.325), (7, 2.2, -0.325), (8, 2.2, -0.975)]
+    )
+    return f"""(footprint "TI_DGK0008A" (version 20241229) (generator "ps28")
+(layer "F.Cu") (attr smd)
+(descr "TI DGK0008A VSSOP-8 example board layout, SCDS420E p.50; nominal body 3x3 mm")
+(property "Reference" "REF**" (at 0 -2.6 0) (layer "F.SilkS") (effects(font(size 1 1)(thickness 0.15))))
+(property "Value" "TI_DGK0008A" (at 0 2.6 0) (layer "F.Fab") (effects(font(size 1 1)(thickness 0.15))))
+(fp_rect(start -1.5 -1.5)(end 1.5 1.5)(stroke(width 0.1)(type default))(fill none)(layer "F.Fab"))
+(fp_rect(start -3.15 -1.75)(end 3.15 1.75)(stroke(width 0.05)(type default))(fill none)(layer "F.CrtYd"))
+(fp_circle(center -1.0 -1.0)(end -0.85 -1.0)(stroke(width 0.1)(type default))(fill none)(layer "F.Fab"))
+{pads}
+(model "${{KICAD10_3DMODEL_DIR}}/Package_SO.3dshapes/MSOP-8_3x3mm_P0.65mm.step" (offset(xyz 0 0 0))(scale(xyz 1 1 1))(rotate(xyz 0 0 0))))\n"""
+
+
 def tmux6219_symbol():
     # TI SCDS420E p.3 Table 4-1, DGK (VSSOP-8).
     return local_symbol("PS28_ISO:TMUX6219DGK", [
@@ -90,8 +109,18 @@ def parts():
         ("K501", "Relay:G6K-2", "G6K-2F DC12",
          "G6K-2F DC12 (Omron K106-E1-11 p.2-3: 1315 ohm, 3 ms operate/release max, Au alloy)",
          "Relay_SMD:Relay_DPDT_Omron_G6K-2F",
-         {"1": "AUX_RAW", "8": "RELAY_DRV", "3": "INA_ISO", "2": "INA_DIS", "4": "INPUT_A_AC",
-          "6": "INB_ISO", "7": "INB_DIS", "5": "INPUT_B_AC"}),
+         {"1": "AUX_RAW", "8": "RELAY_DRV", "3": "INA_ISO", "2": "INA_DIS", "4": "INA_NO",
+          "6": "INB_ISO", "7": "INB_DIS", "5": "INB_NO"}),
+        # Single-fault mitigation: series R + Schottky clamp at the TPA pin bounds a driver
+        # failing low to about -VF (BAT54 DS11005 p.2: <=240 mV at 0.1 mA, <=320 mV at 1 mA).
+        ("R517", "Device:R", "3.3k", "TBD: 1 %, thin film; RIN 10/20/40k => -2.48/-1.33/-0.69 dB", R0603,
+         {"1": "INA_NO", "2": "INPUT_A_AC"}),
+        ("R518", "Device:R", "3.3k", "TBD: 1 %, thin film; RIN 10/20/40k => -2.48/-1.33/-0.69 dB", R0603,
+         {"1": "INB_NO", "2": "INPUT_B_AC"}),
+        ("D503", "PS28_ISO:BAT54", "BAT54", "BAT54-7-F (Diodes DS11005 Rev.34)", SOT23,
+         {"1": "GND", "2": None, "3": "INPUT_A_AC"}),
+        ("D504", "PS28_ISO:BAT54", "BAT54", "BAT54-7-F (Diodes DS11005 Rev.34)", SOT23,
+         {"1": "GND", "2": None, "3": "INPUT_B_AC"}),
         ("Q501", "PS28_ISO:MMBT3904", "MMBT3904",
          "MMBT3904-7-F (Diodes DS30036): VCEsat <=0.2 V at 10 mA/1 mA, VCEO 40 V", SOT23,
          {"1": "RELAY_BASE", "2": "GND", "3": "RELAY_DRV"}),
@@ -129,7 +158,7 @@ def parts():
         # Analog mute: EN high (default, internal 4 M pull-up + R511) shunts DIVIDED to VMID.
         ("U503", "PS28_ISO:TMUX6219DGK", "TMUX6219",
          "TMUX6219DGKR (TI SCDS420E p.39); RON <=7.5 ohm at 12 V single supply (p.10)",
-         "Package_SO:MSOP-8_3x3mm_P0.65mm",  # DGK = MO-187; 0.4 mm pads keep 0.25 mm gap
+         "PS28_ANALOG:TI_DGK0008A",  # TI SCDS420E p.50 land pattern
          {"1": "DIVIDED", "2": "VMID", "3": "GND", "4": "ANALOG_12V", "5": "MUTE_EN", "6": "GND",
           "7": "GND", "8": "GND"}),
         ("R511", "Device:R", "100k", "TBD: EN pull-up to ANALOG_12V (default muted)", R0603,
@@ -157,8 +186,17 @@ def parts():
     ]
 
 
+def bat54_symbol():
+    # Diodes DS11005 Rev.34 p.1 SOT23 (standard) top view: 1 anode, 3 cathode, 2 NC.
+    return local_symbol("PS28_ISO:BAT54", [
+        ("1", "A", "passive", -10.16, 0, 0),
+        ("2", "NC", "no_connect", 0, -7.62, 90),
+        ("3", "K", "passive", 10.16, 0, 180),
+    ], "https://www.diodes.com/assets/Datasheets/ds11005.pdf", half_width=5.08)
+
+
 def local_symbols():
-    return [tmux6219_symbol(), mmbt3904_symbol()]
+    return [tmux6219_symbol(), mmbt3904_symbol(), bat54_symbol()]
 
 
 def generate(out):
@@ -201,6 +239,12 @@ def generate(out):
             (staged / "sym-lib-table").read_text().rstrip()[:-1]
             + '(lib (name "PS28_POWER") (type "KiCad") (uri "${KIPRJMOD}/libraries/PS28_POWER.kicad_sym") '
             '(options "") (descr "Local symbol; TI TPS3700 SBVS187G p.4")))\n'
+        )
+        (staged / "libraries/PS28_ANALOG.pretty").mkdir()
+        (staged / "libraries/PS28_ANALOG.pretty/TI_DGK0008A.kicad_mod").write_text(dgk_footprint())
+        (staged / "fp-lib-table").write_text(
+            '(fp_lib_table (version 7) (lib (name "PS28_ANALOG") (type "KiCad") '
+            '(uri "${KIPRJMOD}/libraries/PS28_ANALOG.pretty") (options "") (descr "TI DGK0008A SCDS420E p.50")))\n'
         )
         (staged / "iso-manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
         staged.rename(out)

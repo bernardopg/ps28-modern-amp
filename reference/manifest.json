@@ -298,5 +298,14 @@
     "document": "Diodes DS18004 Rev.38",
     "license": "Third-party copyright; local engineering reference only",
     "review_status": "Pinout/limits read for D-023/D-024 captures; layout/thermal not reviewed"
+  },
+  {
+    "file": "reference/parts/diodes-bat54.pdf",
+    "url": "https://www.diodes.com/assets/Datasheets/ds11005.pdf",
+    "accessed": "2026-10-10T09:44:33.780137+00:00",
+    "sha256": "50b04e4e17bcf5db62164f6e5422e91546d0cace0ab2efed61660c3044b4fef0",
+    "document": "Diodes DS11005 Rev.34",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Pinout and VF/IR limits read for D-024a clamp"
   }
 ]

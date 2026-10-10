@@ -1,6 +1,6 @@
 # Candidata D-020 — mídia nativa, incompleta
 
-- [Schematic nativo SVG](system-candidate.svg): 200 componentes na mesma captura
+- [Schematic nativo SVG](system-candidate.svg): 204 componentes na mesma captura
   (D-023/D-024: blocos D-021, D-020 e D-019 à direita); ponte de sinal só via relé;
   front-end de áudio (RCA/crossover/volume) ainda incompleto. Nets AUX_RAW/GND
   compartilhadas não significam roteamento; saída de sinal permanece aberta.
