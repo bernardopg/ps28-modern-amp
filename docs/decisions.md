@@ -119,3 +119,14 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   não projeto final; topologia de sintonia (potenciômetro multi-gang/state-variable)
   e tracking entre seções ficam TBD em ELEC-002. Aprovada pelo proprietário em
   2026-10-09.
+- D-023 — Implementar em lógica discreta (sem MCU) o subconjunto de D-020 que não
+  depende de D-019: hold ≥360 ms por dois TPS3808, partida por borda humana com
+  CLIP_OTW alto, arme por borda de FAULT, latch com rearme humano, timeout
+  0,62–1,44 s e janelas TPS3700 de PVDD, ANALOG_12V e VMID em RAILS_OK
+  (open-drain). Integrar `power-d021` e `seq-d020` ao `system-candidate` como
+  bancos fora do contorno; `PVDD_36V` vira `PVDD`; J4/R7/R8 ficam DNP para não
+  realimentar 3V3 externa. Objetivo: tirar RESET/FAULT do controle externo.
+  Risco: footprints não auditados, latências/níveis reais e UX do botão não
+  validados; isolamento/mute D-019 continuam abertos. Validação: ERC/DRC nativos,
+  modelo lógico da netlist capturada com mutações, `make check`. Ver
+  `seq-d020.md`; 2026-10-09. Não libera fabricação nem energização.

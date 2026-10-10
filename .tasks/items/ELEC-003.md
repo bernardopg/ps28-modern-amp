@@ -21,6 +21,10 @@ Capturar schematic e revisar ERC, atendendo docs/requirements.md e gates docs/sa
 
 ## Evidência
 
+D-023 (2026-10-09): sequenciador discreto capturado (`kicad/seq-d020`, ERC0) e
+integrado à candidata com D-021; ver `docs/seq-d020.md`. Pin mapping conferido
+contra datasheets TI; footprints não auditados, sem revisão G1. Critérios abertos.
+
 Captura integrada pendente. Contrato preparatório do supervisor em
 `docs/reset-supervisor-contract.md`, contra TI SLASEA8A p.20–21/30–31:
 RESET baixo apaga FAULT; startup normalmente leva FAULT baixo. Proibido AND

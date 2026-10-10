@@ -67,31 +67,54 @@ def aux_output():
     return [round(lo, 3), round(VREF[1] * (1 + R_FB1 / R_FB2), 3), round(hi, 3)]
 
 
+def local_symbol(name, pins, datasheet, half_width=7.62, half_height=5.08):
+    """Local symbol from a datasheet pin table: (number, name, type, x, y, angle)."""
+    font = "(effects (font (size 1.27 1.27)))"
+    hide = "(effects (font (size 1.27 1.27)) (hide yes))"
+    body = " ".join(
+        f'(pin {kind} line (at {x} {y} {a}) (length 2.54) (name "{label}" {font}) (number "{n}" {font}))'
+        for n, label, kind, x, y, a in pins
+    )
+    return parse(
+        f'(symbol "{name}" (pin_names (offset 1.016)) (in_bom yes) (on_board yes) '
+        f'(property "Reference" "U" (at 0 {half_height + 5.08} 0) {font}) '
+        f'(property "Value" "{name.split(":")[-1]}" (at 0 {-half_height - 5.08} 0) {font}) '
+        f'(property "Footprint" "" (at 0 0 0) {hide}) '
+        f'(property "Datasheet" "{datasheet}" (at 0 0 0) {hide}) '
+        f'(symbol "{name.split(":")[-1]}_0_1" (rectangle (start {-half_width} {half_height}) '
+        f'(end {half_width} {-half_height}) (stroke (width 0.254) (type default)) (fill (type background)))) '
+        f'(symbol "{name.split(":")[-1]}_1_1" {body}))'
+    )
+
+
+def write_local_library(staged, nickname, symbols, descr):
+    (staged / "libraries").mkdir()
+    lib = []
+    for s in symbols:
+        s = list(s)
+        s[1] = q(s[1].strip('"').split(":")[-1])
+        lib.append(render(s))
+    (staged / f"libraries/{nickname}.kicad_sym").write_text(
+        '(kicad_symbol_lib (version 20241209) (generator "kicad_symbol_editor") '
+        + " ".join(lib) + ")\n"
+    )
+    (staged / "sym-lib-table").write_text(
+        f'(sym_lib_table (version 7) (lib (name "{nickname}") (type "KiCad") '
+        f'(uri "${{KIPRJMOD}}/libraries/{nickname}.kicad_sym") (options "") '
+        f'(descr "{descr}")))\n'
+    )
+
+
 def tps3700_symbol():
     # No KiCad stock symbol; pins from TI SBVS187G p.4 (DDC SOT-6).
-    pins = [
+    return local_symbol("PS28_POWER:TPS3700DDC", [
         ("1", "OUTA", "open_collector", 10.16, 2.54, 180),
         ("2", "GND", "power_in", 0, -7.62, 90),
         ("3", "INA+", "input", -10.16, 2.54, 0),
         ("4", "INB-", "input", -10.16, -2.54, 0),
         ("5", "VDD", "power_in", 0, 7.62, 270),
         ("6", "OUTB", "open_collector", 10.16, -2.54, 180),
-    ]
-    font = "(effects (font (size 1.27 1.27)))"
-    body = " ".join(
-        f'(pin {kind} line (at {x} {y} {a}) (length 2.54) (name "{name}" {font}) (number "{n}" {font}))'
-        for n, name, kind, x, y, a in pins
-    )
-    return parse(
-        '(symbol "PS28_POWER:TPS3700DDC" (pin_names (offset 1.016)) (in_bom yes) (on_board yes) '
-        f'(property "Reference" "U" (at 0 10.16 0) {font}) '
-        f'(property "Value" "TPS3700DDC" (at 0 -10.16 0) {font}) '
-        f'(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) '
-        f'(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps3700.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) '
-        '(symbol "TPS3700DDC_0_1" (rectangle (start -7.62 5.08) (end 7.62 -5.08) '
-        '(stroke (width 0.254) (type default)) (fill (type background)))) '
-        f'(symbol "TPS3700DDC_1_1" {body}))'
-    )
+    ], "https://www.ti.com/lit/ds/symlink/tps3700.pdf")
 
 
 def parts():
@@ -167,17 +190,50 @@ def parts():
          {"1": "PVDD_OV_SENSE", "2": "GND"}),
         ("C320", "Device:C", "100n", "TBD: X7R >=25 V (SBVS187G p.4 VDD bypass)", "",
          {"1": "AUX_RAW", "2": "GND"}),
-        ("R323", "Device:R", "100k", "TBD: pull-up; SEQ_LOGIC_VCC <=14 V (LM5164 PGOOD abs max)", "",
-         {"1": "SEQ_LOGIC_VCC", "2": "RAILS_OK"}),
+        ("R323", "Device:R", "100k", "TBD: pull-up to SEQ_3V3 (seq-d020 LP2985); <=14 V LM5164 PGOOD abs max", "",
+         {"1": "SEQ_3V3", "2": "RAILS_OK"}),
         ("J303", "Connector_Generic:Conn_01x04", "AUX_TO_CORE",
-         "Logical interface: AUX_RAW to core J2, RAILS_OK into D-020 rails_valid; same PCB", "",
-         {"1": "AUX_RAW", "2": "RAILS_OK", "3": "SEQ_LOGIC_VCC", "4": "GND"}),
+         "Logical interface: AUX_RAW to core, RAILS_OK/SEQ_3V3 to seq-d020; same PCB", "",
+         {"1": "AUX_RAW", "2": "RAILS_OK", "3": "SEQ_3V3", "4": "GND"}),
     ]
     return [
-        {"ref": r, "lib_id": lib, "value": v, "mpn": m, "footprint": fp, "nets": n,
-         "units": [(1, 38.1 + (i % 6) * 63.5, 45.72 + (i // 6) * 40.64)]}
+        {"ref": r, "lib_id": lib, "value": v, "mpn": m, "footprint": fp or FOOTPRINTS.get(r, ""),
+         "nets": n, "units": [(1, 38.1 + (i % 6) * 63.5, 45.72 + (i // 6) * 40.64)]}
         for i, (r, lib, v, m, fp, n) in enumerate(specs)
     ]
+
+
+# Candidate stock footprints from package/body of the listed MPN or requirement.
+# shortcut: nominal KiCad lands, not audited against final MPN drawings; audit before G3.
+FOOTPRINTS = {
+    "J301": "Connector_JST:JST_VH_B3P-VH_1x03_P3.96mm_Vertical",
+    "F301": "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open",
+    "D301": "Diode_THT:D_P600_R-6_P12.70mm_Horizontal",
+    "D302": "Diode_THT:D_P600_R-6_P12.70mm_Horizontal",
+    "C301": "Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn",
+    "C302": "Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn",
+    "R301": "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal",
+    "D303": "Diode_SMD:D_SMC",
+    "U302": "Package_SO:HSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.1mm",
+    "C310": "Capacitor_SMD:C_1210_3225Metric",
+    "C311": "Capacitor_SMD:C_1210_3225Metric",
+    "C312": "Capacitor_SMD:C_0402_1005Metric",
+    "L301": "Inductor_SMD:L_Coilcraft_MSS1246T-XXX",
+    "R310": "Resistor_SMD:R_0603_1608Metric",
+    "R311": "Resistor_SMD:R_0603_1608Metric",
+    "R312": "Resistor_SMD:R_0603_1608Metric",
+    "R313": "Resistor_SMD:R_0603_1608Metric",
+    "C313": "Capacitor_SMD:C_0603_1608Metric",
+    "C314": "Capacitor_SMD:C_0603_1608Metric",
+    "C315": "Capacitor_SMD:C_1210_3225Metric",
+    "C316": "Capacitor_SMD:C_1210_3225Metric",
+    "U303": "Package_TO_SOT_SMD:SOT-23-6",
+    "R320": "Resistor_SMD:R_1206_3216Metric",
+    "R321": "Resistor_SMD:R_0603_1608Metric",
+    "R322": "Resistor_SMD:R_0603_1608Metric",
+    "C320": "Capacitor_SMD:C_0603_1608Metric",
+    "R323": "Resistor_SMD:R_0603_1608Metric",
+}
 
 
 def generate(out):
@@ -192,7 +248,7 @@ def generate(out):
             namespace="power-d021",
             source=SOURCE,
             title="PS28 D-021 POWER - STUDY ONLY",
-            warning="NEVER BRIDGE T1_A-T1_B (~97 V). FOOTPRINTS AND MOST PASSIVE MPNs TBD. RAILS_OK IS NOT A DIRECT RESET DRIVE.",
+            warning="NEVER BRIDGE T1_A-T1_B (~97 V). FOOTPRINTS AND MOST PASSIVE MPNs TBD. RAILS_OK FEEDS seq-d020, NOT A DIRECT RESET DRIVE.",
             power_flags=("PVDD", "GND", "AUX_RAW"),
             extra_symbols={"PS28_POWER:TPS3700DDC": tps3700_symbol()},
         )
@@ -200,7 +256,7 @@ def generate(out):
             "J301": "1=red A, 2=black CT, 3=red B; order photo-confirmed 2026-10-09; ~3.96 mm pitch measured; header series/rating TBD",
             "J302": "PVDD 40-50 V unregulated to core J1; core C14/C15 3000 uF add to C301/C302",
             "J303": "AUX_RAW 12 V to core J2; RAILS_OK open-drain wired-AND (buck PGOOD, PVDD UV, PVDD OV), low = fault, feeds D-020 rails_valid",
-            "not_captured": ["inrush limiting (NTC or bypass relay)", "sequencer logic supply SEQ_LOGIC_VCC"],
+            "not_captured": ["inrush limiting (NTC or bypass relay)"],
             "new_physical_board": False,
         }
         manifest["calculated"] = {
@@ -210,18 +266,8 @@ def generate(out):
         }
         (staged / "power-d021.kicad_sch").write_text(sch)
         (staged / "power-d021.kicad_pro").write_text("{}\n")
-        library = tps3700_symbol()
-        library[1] = q("TPS3700DDC")
-        (staged / "libraries").mkdir()
-        (staged / "libraries/PS28_POWER.kicad_sym").write_text(
-            '(kicad_symbol_lib (version 20241209) (generator "kicad_symbol_editor") '
-            + render(library) + ")\n"
-        )
-        (staged / "sym-lib-table").write_text(
-            '(sym_lib_table (version 7) (lib (name "PS28_POWER") (type "KiCad") '
-            '(uri "${KIPRJMOD}/libraries/PS28_POWER.kicad_sym") (options "") '
-            '(descr "Local symbol; TI TPS3700 SBVS187G p.4 DDC pinout")))\n'
-        )
+        write_local_library(staged, "PS28_POWER", [tps3700_symbol()],
+                            "Local symbol; TI TPS3700 SBVS187G p.4 DDC pinout")
         (staged / "power-manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
         staged.rename(out)
     except BaseException:

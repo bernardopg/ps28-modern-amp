@@ -92,23 +92,23 @@ OUTB (OV) open-drain unidos a RAILS_OK com PGOOD do buck; baixo = falha.
   hold ≥ 360 ms e nova borda humana; não depende da histerese.
 - VDD do TPS3700 vem de AUX_RAW. Sem AUX, OUTA vai baixo abaixo do UVLO e R9
   (4,7 k) já mantém RESET baixo: falha segura por padrão.
-- RAILS_OK **não** vai direto ao RESET: o pull-up R323 usa SEQ_LOGIC_VCC
-  (≤ 14 V pelo PGOOD) da lógica de sequência, ainda TBD.
+- RAILS_OK **não** vai direto ao RESET: entra no sequenciador D-020
+  ([seq-d020.md](seq-d020.md)); o pull-up R323 vai para SEQ_3V3.
 
 ### Interfaces lógicas
 
 J302 = PVDD/GND para J1 do core. J303 = AUX_RAW (J2 do core), RAILS_OK,
-SEQ_LOGIC_VCC, GND. Mesma PCB, não conectores novos.
+SEQ_3V3, GND. Mesma PCB, não conectores novos.
 
-Footprints de todos e MPNs dos passivos de potência/divisor estão **TBD**.
+Footprints são candidatos KiCad não auditados; MPNs dos passivos de potência/divisor
+estão **TBD**.
 
 ## Não capturado — próximo incremento
 
 1. **Inrush:** decidir NTC ou relé de bypass após medir o I²t real do fusível de
    rede T2.5AL e a corrente de partida na bancada.
-2. **SEQ_LOGIC_VCC e sequenciador:** a lógica D-020 (TPS3808 em cascata, relé)
-   ainda não tem alimentação nem captura.
-3. **Integração** de `power-d021` ao `system-candidate` (AUX_RAW, PVDD, RAILS_OK).
+2. **Integração:** feita em `system-candidate` (D-023), bancos fora do contorno.
+3. **Footprints:** candidatos KiCad atribuídos, não auditados contra os MPNs.
 4. **Bancada (PWR-001/BENCH-001):** medir regulação sob carga resistiva, ripple e
    temperatura de T1; substituem os parâmetros não medidos deste estudo.
 

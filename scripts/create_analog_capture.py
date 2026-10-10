@@ -229,6 +229,11 @@ def build(
             wx, wy = round(x + px, 4), round(y - py, 4)
             if number not in p["nets"]:
                 raise ValueError("Unassigned analog pin: " + p["ref"] + "." + number)
+            if p["nets"][number] is None:  # explicit datasheet NC pin
+                out.append(
+                    f"(no_connect (at {wx} {wy}) (uuid {q(uid(namespace + ':' + pid + ':nc:' + number))}))"
+                )
+                continue
             rad = math.radians(angle + 180)
             lx = round(wx + 3.81 * math.cos(rad), 4)
             ly = round(wy - 3.81 * math.sin(rad), 4)

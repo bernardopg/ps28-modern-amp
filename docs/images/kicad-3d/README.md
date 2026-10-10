@@ -9,6 +9,19 @@ preservada; faixas e manifesto agora tornam essa separação explícita.
 Saída real: PNG1264×882; GIF784×578,
 16frames,140ms/frame, loop. O KiCad ajustou as dimensões solicitadas ao renderizar.
 
+## Candidata de sistema D-023 — núcleo + bancos fora do contorno
+
+![Candidata de sistema — vista isométrica](system-isometric.png)
+
+![Candidata de sistema — órbita KiCad](system-orbit.gif)
+
+[Vista superior](system-top.png) · [Vista inferior](system-bottom.png)
+
+`kicad/system-candidate/`: núcleo OEM no contorno e, **à direita, fora dele**, os
+bancos de importação D-018 (analógico), D-021 (fonte) e D-020 (sequenciador).
+Os bancos não têm placement, fit nem roteamento; só tornam visíveis os corpos e
+footprints candidatos. Câmera com zoom/pan para enquadrar os bancos.
+
 ## OEM refinada — candidata de estudo
 
 ![OEM refinada — vista isométrica](oem-isometric.png)
@@ -35,7 +48,7 @@ sem inventar geometria ou alterar mounts OEM.
 
 ## Limites — não omitir ao compartilhar
 
-- As duas placas estão **sem roteamento**. Galeria não é gerber, prova de fit,
+- As três placas estão **sem roteamento**. Galeria não é gerber, prova de fit,
   montagem aprovada, teste térmico, nem evidência de funcionamento.
 - C1/J1/J5/L1/L2 não têm modelos associados aos footprints customizados. U1
   referencia um STEP indisponível nesta instalação; por isso seu corpo não aparece.

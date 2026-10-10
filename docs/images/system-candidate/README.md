@@ -1,9 +1,12 @@
 # Candidata D-020 — mídia nativa, incompleta
 
-- [Schematic nativo SVG](system-candidate.svg): 76 componentes na mesma captura,
-  fonte/controle/proteção/interface de áudio ainda incompletos. Nets AUX_RAW/GND
+- [Schematic nativo SVG](system-candidate.svg): 150 componentes na mesma captura
+  (D-023: blocos D-021 e D-020 à direita), isolamento/mute D-019 e interface de
+  áudio ainda incompletos. Nets AUX_RAW/GND
   compartilhadas não significam roteamento; saída de sinal permanece aberta.
-- [Núcleo com CAD Würth](core-with-vendor-cad.png): render nativo KiCad, pixels
+- Render 3D completo da candidata, com bancos fora do contorno:
+  [galeria](../kicad-3d/README.md) (`system-*`).
+- [Núcleo com CAD Würth](core-with-vendor-cad.png) (2026-10-08, anterior a D-023): render nativo KiCad, pixels
   preservados e faixa de status acrescentada. O enquadramento mostra o núcleo;
   os29 footprints analógicos estão FORA do contorno/recorte, não escondidos como
   se integrados fisicamente. Não representa layout completo nem fit OEM.

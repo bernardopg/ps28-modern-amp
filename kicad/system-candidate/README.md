@@ -1,8 +1,13 @@
-# Core + D-018 — candidata de revisão INCOMPLETA
+# Core + D-018 + D-021 + D-020 — candidata de revisão INCOMPLETA
 
 Abrir `system-candidate.kicad_pro`. **Não energizar/fabricar.** Não é substituta
-aprovada de B/OEM. `system-manifest.json` registra 76 componentes/footprints,
-212 pads elétricos, sem footprints vazios nessa candidata.
+aprovada de B/OEM. `system-manifest.json` registra 150 componentes/footprints,
+421 pinos elétricos casados netlist↔PCB, sem footprints vazios nessa candidata.
+
+- D-023 (2026-10-09): bancos `power` (retificador T1, bulk, LM5164, TPS3700) e
+  `seq` (sequenciador discreto) à direita do contorno, sem placement/fit.
+  `PVDD_36V` agora é `PVDD`; J4/R7/R8 DNP. Ver `docs/seq-d020.md` e
+  `docs/power-d021.md`. Itens abaixo descrevem a base D-020.
 
 - Núcleo OEM refinado + 29 componentes analógicos/alimentação, GND e AUX_RAW
   compartilhados; todos os amps em ANALOG_12V, VMID passivo. Schematics anteriores

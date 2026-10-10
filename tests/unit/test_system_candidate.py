@@ -17,7 +17,7 @@ class SystemCandidateTests(unittest.TestCase):
         d = json.loads(
             (ROOT / "kicad/system-candidate/system-manifest.json").read_text()
         )
-        self.assertEqual(len(d["parts"]), 76)
+        self.assertEqual(len(d["parts"]), 150)
         self.assertEqual(d["unassigned_footprints"], [])
         self.assertFalse(d["signal_bridge_connected"])
         self.assertFalse(d["isolation_mute_supervisor_implemented"])
@@ -34,6 +34,21 @@ class SystemCandidateTests(unittest.TestCase):
             self.assertEqual(
                 hashlib.sha256((ROOT / name).read_bytes()).hexdigest(), expected
             )
+
+    def test_power_and_sequencer_join_core_without_external_control(self):
+        d = json.loads((ROOT / "kicad/system-candidate/system-manifest.json").read_text())
+        refs = {p["ref"]: p for p in d["parts"]}
+        self.assertTrue(d["power_d021_integrated"] and d["seq_d020_subset_integrated"])
+        self.assertFalse({"J302", "J303", "J402"} & set(refs))
+        self.assertNotIn("PVDD_36V", {n for p in d["parts"] for n in p["nets"].values()})
+        self.assertEqual(refs["D301"]["nets"]["1"], refs["U1"]["nets"]["36"])
+        self.assertEqual(refs["R408"]["nets"]["2"], refs["U1"]["nets"]["18"])
+        self.assertEqual(refs["L301"]["nets"]["2"], refs["C1"]["nets"]["1"])
+        self.assertNotEqual(refs["D301"]["nets"]["2"], refs["D302"]["nets"]["2"])
+        for ref in ("J4", "R7", "R8"):
+            self.assertTrue(refs[ref]["dnp"], ref)
+        pcb = (ROOT / "kicad/system-candidate/system-candidate.kicad_pcb").read_text()
+        self.assertNotIn("PVDD_36V", pcb)
 
     def test_native_capture_and_actual_pad_nets_are_equal(self):
         folder = ROOT / "kicad/system-candidate"
@@ -64,7 +79,7 @@ class SystemCandidateTests(unittest.TestCase):
                 ].strip('"')
                 self.assertEqual(net, nets[ref, number], ref + "." + number)
                 checked += 1
-        self.assertEqual(checked, 212)
+        self.assertEqual(checked, 421)
 
     def test_multiunit_paths_and_no_replace_publication(self):
         folder = ROOT / "kicad/system-candidate"

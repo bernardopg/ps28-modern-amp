@@ -62,6 +62,7 @@ class PowerD021Tests(unittest.TestCase):
             out = Path(tmp) / "p"
             generate(out)
             self.assertTrue((out / "power-d021.kicad_sch").exists())
+            self.assertTrue((out / "power-manifest.json").exists())
             with self.assertRaises(FileExistsError):
                 generate(out)
 

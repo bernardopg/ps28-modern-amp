@@ -23,6 +23,21 @@ VIEWS = {
 DESIGNS = {
     "selected": ROOT / "kicad/core-selected/ps28-modern.kicad_pcb",
     "oem": ROOT / "kicad/core-oem-refined/ps28-modern.kicad_pcb",
+    "system": ROOT / "kicad/system-candidate/system-candidate.kicad_pcb",
+}
+# Camera framing so the off-outline import banks of the system candidate are visible.
+CAMERA = {
+    "system": {
+        "isometric": ["--zoom", "0.34", "--pan", "-14,-3,0"],
+        "top": ["--zoom", "0.40", "--pan", "-13,7,0"],
+        "bottom": ["--zoom", "0.40", "--pan", "13,7,0"],
+        "orbit": ["--zoom", "0.26"],
+    }
+}
+FOOTERS = {
+    "selected": "NUCLEO APENAS | D-018/D-019 SEM PCB INTEGRADA",
+    "oem": "NUCLEO APENAS | D-018/D-019 SEM PCB INTEGRADA",
+    "system": "NUCLEO NO CONTORNO + BANCOS D-018/D-021/D-020 FORA DO CONTORNO, SEM FIT | D-019 ABERTA",
 }
 
 
@@ -75,14 +90,17 @@ def electrical_context():
         ROOT / "simulation/analog/input-power-order.json",
     ]
     return {
-        "scope": "POWER_CORE_ONLY",
+        "scope": "POWER_CORE_PLUS_SYSTEM_CANDIDATE_IMPORT_BANKS",
         "analog_protection_integrated_in_rendered_pcbs": False,
+        "system_candidate_rendered": True,
+        "system_candidate_banks_inside_oem_outline": False,
         "protected_analog_capture_components": len(parts),
         "protected_analog_unassigned_footprints": sorted(
             p["ref"] for p in parts if not p.get("footprint")
         ),
         "notes": [
             "D-018 captured separately; no analog PCB",
+            "system-candidate: D-018/D-021/D-020 footprints in unplaced banks outside OEM outline",
             "D-019 isolation/precharge contract not implemented",
             "No added mounts, routing or fabricated 3D substitutes",
         ],
@@ -162,7 +180,7 @@ def render(frame_count, output):
         "designs": {},
     }
 
-    def native(board, path, side, rotation, perspective, width, height):
+    def native(board, path, side, rotation, perspective, width, height, camera=()):
         command = [
             "kicad-cli",
             "pcb",
@@ -184,6 +202,7 @@ def render(frame_count, output):
         ]
         if perspective:
             command.append("--perspective")
+        command.extend(camera)
         command.append(str(board))
         path.unlink(missing_ok=True)
         result = subprocess.run(
@@ -195,7 +214,7 @@ def render(frame_count, output):
         # Record portable replay commands relative to the repository root.
         return [arg.replace(str(ROOT) + "/", "") for arg in command]
 
-    def labelled(path, title, unavailable, target):
+    def labelled(path, title, unavailable, target, footer):
         with Image.open(path) as raw:
             image = raw.convert("RGB")
         canvas = Image.new("RGB", (image.width, image.height + 98), "#101821")
@@ -210,13 +229,14 @@ def render(frame_count, output):
         )
         draw.text(
             (18, image.height + 54),
-            "3D ausente: " + ", ".join(unavailable),
+            "3D ausente: " + (", ".join(unavailable) if len(unavailable) <= 12
+                              else ", ".join(unavailable[:12]) + f" +{len(unavailable) - 12}"),
             font=small,
             fill="#ffcf78",
         )
         draw.text(
             (18, image.height + 74),
-            "NUCLEO APENAS | D-018/D-019 SEM PCB INTEGRADA",
+            footer,
             font=small,
             fill="#ffcf78",
         )
@@ -245,11 +265,13 @@ def render(frame_count, output):
         for view, (side, rotation, perspective) in VIEWS.items():
             path = build / f"{name}-{view}.png"
             entry["native_commands"].append(
-                native(board, path, side, rotation, perspective, 1280, 800)
+                native(board, path, side, rotation, perspective, 1280, 800,
+                       CAMERA.get(name, {}).get(view, ()))
             )
             target = output / path.name
             labelled(
-                path, f"PS28 | {name.upper()} | KiCad 3D | {view}", unavailable, target
+                path, f"PS28 | {name.upper()} | KiCad 3D | {view}", unavailable, target,
+                FOOTERS[name],
             )
             entry["images"].append(target.name)
         frames = []
@@ -257,10 +279,11 @@ def render(frame_count, output):
             path = build / f"{name}-frame-{i:03d}.png"
             angle = 360 * i / frame_count
             entry["native_commands"].append(
-                native(board, path, "top", f"325,0,{angle:g}", True, 800, 500)
+                native(board, path, "top", f"325,0,{angle:g}", True, 800, 500,
+                       CAMERA.get(name, {}).get("orbit", ()))
             )
             frames.append(
-                labelled(path, f"PS28 | {name.upper()} | KiCad 3D", unavailable, None)
+                labelled(path, f"PS28 | {name.upper()} | KiCad 3D", unavailable, None, FOOTERS[name])
             )
         # Every frame above is an independent KiCad camera render, not a 2D image rotation.
         frames[0].save(

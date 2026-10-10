@@ -15,6 +15,12 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
   em `.gitattributes` como `system-candidate.svg`.
 
 ### Added
+- D-023: sequenciador discreto D-020 (subconjunto sem D-019) em `kicad/seq-d020/`:
+  LP2985 3,3 V, 2× TPS3808 (hold ≥360 ms), latches 74LVC2G74 para partida humana e
+  arme/latch de FAULT, timeout 0,62–1,44 s, janelas TPS3700 de ANALOG_12V/VMID.
+  Modelo lógico da netlist capturada com testes de mutação.
+- `system-candidate` integra D-021 e D-020: 150 footprints, `PVDD_36V` vira `PVDD`,
+  J4/R7/R8 DNP; ERC igual à base, DRC 0 violações. Galeria 3D inclui a candidata.
 - D-021: AUX 12 V (LM5164, exemplo TI SNVSAU4D Fig 7-1) e janela de PVDD
   (TPS3700, OV 50,97–52,24 V, UV 27,3–28,4 V pior caso) capturados em
   `kicad/power-d021/`; saída RAILS_OK open-drain para rails_valid D-020, não

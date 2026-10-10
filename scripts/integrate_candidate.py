@@ -15,12 +15,44 @@ from pathlib import Path
 
 from create_analog_capture import build, child
 from create_core_draft import parse, q, render, uid, walk
+from create_power_d021 import parts as power_parts, tps3700_symbol, write_local_library
+from create_seq_d020 import lp2985_symbol, parts as seq_parts
 from create_vmid_protection import integrated_parts
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "kicad/core-oem-refined"
 MODELS = ROOT / "kicad/models/vendor-wurth"
 PROJECT = "system-candidate"
+# D-021: core PVDD_36V is no longer a 36 V regulated rail.
+RENAMES = {"AUX_12V": "AUX_RAW", "PVDD_36V": "PVDD"}
+# Bench/external control access stays on the board but is not populated: the on-board
+# D-020 subset drives RESET and the TPA FAULT/CLIP_OTW internal pull-ups suffice.
+DNP = {"J4", "R7", "R8"}
+LOGICAL = {"J302", "J303", "J402"}  # same-PCB interfaces, not connectors
+
+
+def system_parts():
+    """D-021 power and D-020 sequencing captures, minus logical interfaces."""
+    out = []
+    for group, source in (("power", power_parts()), ("seq", seq_parts())):
+        for p in source:
+            if p["ref"] in LOGICAL:
+                continue
+            p["group"] = group
+            p["selection"] = "STUDY CANDIDATE; footprint not audited; MPN per capture"
+            out.append(p)
+    return out
+
+
+def bank_position(p, index):
+    """Import banks OUTSIDE the OEM outline: unplaced, never a fit claim."""
+    group = p.get("group", "analog")
+    x0, y0, dx, dy, cols = {
+        "analog": (190, 25, 30, 22, 6),
+        "power": (190, 130, 40, 32, 6),
+        "seq": (390, 25, 22, 18, 8),
+    }[group]
+    return x0 + (index % cols) * dx, y0 + (index // cols) * dy
 
 
 def candidates():
@@ -61,10 +93,28 @@ def replace_strings(node, mapping):
             node[i] = mapping[value]
 
 
-def move(node, dy):
+def move(node, dy, dx=0):
     for item in walk(node):
         if item[0] in ("at", "xy") and len(item) >= 3:
+            item[1] = str(round(float(item[1]) + dx, 4))
             item[2] = str(round(float(item[2]) + dy, 4))
+
+
+def block(parts, namespace, warning):
+    sch, _ = build(
+        parts,
+        project=PROJECT,
+        namespace=namespace,
+        source="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md",
+        power_flags=(),
+        paper="A0",
+        warning=warning,
+        extra_symbols={
+            "PS28_POWER:TPS3700DDC": tps3700_symbol(),
+            "PS28_SEQ:LP2985-33DBV": lp2985_symbol(),
+        },
+    )
+    return parse(sch)
 
 
 def set_property(symbol, name, value):
@@ -76,7 +126,7 @@ def set_property(symbol, name, value):
     prop[2] = q(value)
 
 
-def schematic(parts):
+def schematic(parts, extra=()):
     root = parse((SOURCE / "ps28-modern.kicad_sch").read_text())
     analog, _ = build(
         parts,
@@ -91,14 +141,16 @@ def schematic(parts):
     original_root = child(root, "uuid")[1]
     new_root = q(uid(PROJECT + ":root"))
     child(root, "uuid")[1] = new_root
-    child(root, "paper")[1] = q("A1")
+    child(root, "paper")[1] = q("A0" if extra else "A1")
     child(child(root, "title_block"), "title")[1] = q(
-        "PS28 CORE + PROTECTED ANALOG - INCOMPLETE SAFETY REVIEW CANDIDATE"
+        "PS28 CORE + ANALOG + D-021 POWER + D-020 SEQ SUBSET - INCOMPLETE SAFETY REVIEW"
+        if extra
+        else "PS28 CORE + PROTECTED ANALOG - INCOMPLETE SAFETY REVIEW CANDIDATE"
     )
     replace_strings(
         root,
         {
-            q("AUX_12V"): q("AUX_RAW"),
+            **{q(a): q(b) for a, b in RENAMES.items()},
             q("ps28-modern"): q(PROJECT),
             q("/" + original_root.strip('"')): q("/" + new_root.strip('"')),
         },
@@ -127,6 +179,25 @@ def schematic(parts):
                 item[0] = "global_label"
                 item.insert(2, ["shape", "input"])
             root.append(item)
+    for group, dx, dy, warning in (
+        ("power", 558.8, 0, "D-021 POWER: FOOTPRINTS NOT AUDITED; NEVER BRIDGE T1_A-T1_B"),
+        ("seq", 558.8, 330.2, "D-020 DISCRETE SUBSET: NO ISOLATION/DISCHARGE/DC/MUTE (D-019 OPEN)"),
+    ):
+        members = [p for p in extra if p["group"] == group]
+        if not members:
+            continue
+        sub = block(members, "system-" + group, warning)
+        replace_strings(
+            sub, {q("/" + child(sub, "uuid")[1].strip('"')): q("/" + new_root.strip('"'))}
+        )
+        known = {x[1] for x in symbols[1:]}
+        symbols.extend(x for x in child(sub, "lib_symbols")[1:] if x[1] not in known)
+        for item in sub:
+            if isinstance(item, list) and item[0] in (
+                "symbol", "wire", "label", "text", "junction", "no_connect",
+            ):
+                move(item, dy, dx)
+                root.append(item)
     for item in root:
         if isinstance(item, list) and item[0] == "symbol":
             ref = next(
@@ -137,6 +208,9 @@ def schematic(parts):
             if ref == "R9":
                 set_property(item, "Value", "4.7k 1%")
                 set_property(item, "MPN", "CRCW06034K70FKEA")
+            if ref in DNP and extra:
+                flags = [x for x in item if isinstance(x, list) and x[0] == "on_board"]
+                item.insert(item.index(flags[0]) + 1, ["dnp", "yes"])
             if ref in {p["ref"] for p in parts}:
                 set_property(
                     item,
@@ -163,12 +237,17 @@ def board(staged, parts, inventory):
     import pcbnew
 
     pcb = pcbnew.LoadBoard(str(SOURCE / "ps28-modern.kicad_pcb"))
-    for net in pcb.GetNetsByName().values():
-        if net.GetNetname() == "/AUX_12V":
-            net.SetNetname("/AUX_RAW")
+    for net in list(pcb.GetNetsByName().values()):
+        name = net.GetNetname().lstrip("/")
+        if name in RENAMES:
+            net.SetNetname("/" + RENAMES[name])
     nets = dict(pcb.GetNetsByName())
+    counters = {}
+    for fp in pcb.GetFootprints():
+        if fp.GetReference() in DNP and any(p.get("group") for p in parts):
+            fp.SetDNP(True)
     for p in parts:
-        for plain_name in p["nets"].values():
+        for plain_name in filter(None, p["nets"].values()):
             name = plain_name if plain_name == "MONO_BIASED" else "/" + plain_name
             if name not in nets:
                 n = pcbnew.NETINFO_ITEM(pcb, name)
@@ -192,15 +271,13 @@ def board(staged, parts, inventory):
         fp.SetValue(p["value"])
         fp.SetFPID(pcbnew.LIB_ID(nick, name))
         # Import bank OUTSIDE OEM outline: intentionally unplaced, never claim fit.
-        i = parts.index(p)
-        fp.SetPosition(
-            pcbnew.VECTOR2I(
-                pcbnew.FromMM(35 + (i % 5) * 35), pcbnew.FromMM(125 + (i // 5) * 25)
-            )
-        )
+        group = p.get("group", "analog")
+        i = counters[group] = counters.get(group, -1) + 1
+        x, y = bank_position(p, i)
+        fp.SetPosition(pcbnew.VECTOR2I(pcbnew.FromMM(x), pcbnew.FromMM(y)))
         for pad in fp.Pads():
             number = pad.GetNumber()
-            if number and number in p["nets"]:
+            if number and p["nets"].get(number):
                 plain = p["nets"][number]
                 pad.SetNet(nets[plain if plain == "MONO_BIASED" else "/" + plain])
         pcb.Add(fp)
@@ -226,6 +303,22 @@ def board(staged, parts, inventory):
         c.get("ref"): c
         for c in ET.parse(staged / "candidate.xml").findall(".//components/comp")
     }
+    native_nets = {
+        (node.get("ref"), node.get("pin")): net.get("name")
+        for net in ET.parse(staged / "candidate.xml").findall(".//nets/net")
+        for node in net.findall("node")
+    }
+    by_ref = {p["ref"]: p for p in parts}
+    for fp in pcb.GetFootprints():
+        p = by_ref.get(fp.GetReference())
+        for pad in fp.Pads() if p else ():
+            number = pad.GetNumber()
+            if number in p["nets"] and p["nets"][number] is None:
+                name = native_nets[(p["ref"], number)]
+                if name not in nets:
+                    nets[name] = pcbnew.NETINFO_ITEM(pcb, name)
+                    pcb.Add(nets[name])
+                pad.SetNet(nets[name])
     sch = parse((staged / (PROJECT + ".kicad_sch")).read_text())
     for fp in pcb.GetFootprints():
         ref = fp.GetReference()
@@ -297,6 +390,7 @@ def validate_staged(staged, inventory):
     }
     pcb = parse((staged / (PROJECT + ".kicad_pcb")).read_text())
     seen = set()
+    checked = set()
     pads = 0
     for fp in pcb:
         if not isinstance(fp, list) or fp[0] != "footprint":
@@ -317,10 +411,14 @@ def validate_staged(staged, inventory):
                 continue
             actual = child(pad, "net")[-1].strip('"')
             if actual != native[key]:
-                raise ValueError("Native pad-net mismatch " + str(key))
+                raise ValueError(f"Native pad-net mismatch {key}: {actual} != {native[key]}")
             pads += 1
-    if seen != {p["ref"] for p in inventory} or pads != len(native):
-        raise ValueError("Incomplete staged import")
+            checked.add(key)
+    if seen != {p["ref"] for p in inventory} or checked != set(native):
+        raise ValueError(
+            f"Incomplete staged import: refs {seen ^ {p['ref'] for p in inventory}}, pads {pads}/{len(native)} "
+            f"{sorted(set(native) - checked)[:12]}"
+        )
     if native["U2", "8"] != "/ANALOG_12V" or native["U3", "8"] != "/ANALOG_12V":
         raise ValueError("OPA rail changed")
     if (
@@ -328,8 +426,20 @@ def validate_staged(staged, inventory):
         or native["U3", "7"] == native["C21", "1"]
     ):
         raise ValueError("Safety bridge must remain OPEN")
+    refs = {r for r, _ in native}
+    if {"U302", "U303", "U401"} <= refs:
+        # D-021/D-020 joins: rectifier feeds core PVDD, buck feeds AUX_RAW, seq drives RESET.
+        joins = [(("D301", "1"), ("U1", "36")), (("L301", "2"), ("C1", "1")),
+                 (("R408", "2"), ("U1", "18")), (("U407", "1"), ("U1", "19")),
+                 (("U406", "2"), ("U1", "21"))]
+        for a, b in joins:
+            if native[a] != native[b]:
+                raise ValueError(f"Integration join missing {a}-{b}")
+        if native["D301", "2"] == native["D302", "2"]:
+            raise ValueError("T1 ends bridged")
     return {
-        "native_pad_net_matches": pads,
+        "native_pad_net_matches": len(checked),
+        "copper_pads_checked": pads,
         "footprints": len(seen),
         "signal_bridge_open": True,
     }
@@ -363,18 +473,26 @@ def generate(out):
     stage = Path(tempfile.mkdtemp(prefix=".system-stage-", dir=out.parent))
     try:
         parts = candidates()
+        added = system_parts()
         core = copy.deepcopy(
             json.loads((SOURCE / "core-manifest.json").read_text())["parts"]
         )
         for p in core:
-            p["nets"] = {
-                k: ("AUX_RAW" if v == "AUX_12V" else v) for k, v in p["nets"].items()
-            }
+            p["nets"] = {k: RENAMES.get(v, v) for k, v in p["nets"].items()}
             if p["ref"] == "R9":
                 p.update(value="4.7k 1%", mpn="CRCW06034K70FKEA")
-        inventory = core + parts
-        (stage / (PROJECT + ".kicad_sch")).write_text(schematic(parts))
+            if p["ref"] in DNP:
+                p["dnp"] = True
+        inventory = core + parts + added
+        (stage / (PROJECT + ".kicad_sch")).write_text(schematic(parts, added))
         shutil.copytree(SOURCE / "libraries", stage / "libraries")
+        for nickname, symbol in (("PS28_POWER", tps3700_symbol()), ("PS28_SEQ", lp2985_symbol())):
+            library = list(symbol)
+            library[1] = q(symbol[1].strip('"').split(":")[-1])
+            (stage / f"libraries/{nickname}.kicad_sym").write_text(
+                '(kicad_symbol_lib (version 20241209) (generator "kicad_symbol_editor") '
+                + render(library) + ")\n"
+            )
         for filename, model_name, rotation in [
             ("WE_860020575014.kicad_mod", "CP_Wurth_WCAP-ATG5-P5D10L16.step", 0),
             ("WE_HCF2013_7443631000.kicad_mod", "L_Wurth_WE-HCF-2013.step", 90),
@@ -400,7 +518,7 @@ def generate(out):
             stage / "libraries",
         )
         (stage / "sym-lib-table").write_text(
-            '(sym_lib_table(version 7)(lib(name "PS28")(type "KiCad")(uri "${KIPRJMOD}/libraries/PS28.kicad_sym")(options "")(descr "Existing core"))(lib(name "PS28_ANALOG")(type "KiCad")(uri "${KIPRJMOD}/libraries/PS28_ANALOG.kicad_sym")(options "")(descr "Existing flattened OPA")))\n'
+            '(sym_lib_table(version 7)(lib(name "PS28")(type "KiCad")(uri "${KIPRJMOD}/libraries/PS28.kicad_sym")(options "")(descr "Existing core"))(lib(name "PS28_ANALOG")(type "KiCad")(uri "${KIPRJMOD}/libraries/PS28_ANALOG.kicad_sym")(options "")(descr "Existing flattened OPA"))(lib(name "PS28_POWER")(type "KiCad")(uri "${KIPRJMOD}/libraries/PS28_POWER.kicad_sym")(options "")(descr "TI TPS3700 SBVS187G p.4"))(lib(name "PS28_SEQ")(type "KiCad")(uri "${KIPRJMOD}/libraries/PS28_SEQ.kicad_sym")(options "")(descr "TI LP2985 SLVS522S Table 4-1")))\n'
         )
         (stage / "fp-lib-table").write_text(
             '(fp_lib_table(version 7)(lib(name "PS28")(type "KiCad")(uri "${KIPRJMOD}/libraries/PS28.pretty")(options "")(descr "Existing audited core lands"))(lib(name "PS28_ANALOG")(type "KiCad")(uri "${KIPRJMOD}/libraries/PS28_ANALOG.pretty")(options "")(descr "Candidate passives")))\n'
@@ -446,7 +564,7 @@ def generate(out):
         (stage / (PROJECT + ".kicad_pro")).write_text(
             json.dumps(project, indent=2) + "\n"
         )
-        board(stage, parts, inventory)
+        board(stage, parts + added, inventory)
         validation = validate_staged(stage, inventory)
         manifest = {
             "staged_validation": validation,
@@ -457,12 +575,21 @@ def generate(out):
                     SOURCE / "ps28-modern.kicad_sch",
                     ROOT / "kicad/analog-protected/analog-protected.kicad_sch",
                     ROOT / "scripts/integrate_candidate.py",
+                    ROOT / "kicad/power-d021/power-d021.kicad_sch",
+                    ROOT / "kicad/seq-d020/seq-d020.kicad_sch",
+                    ROOT / "scripts/create_power_d021.py",
+                    ROOT / "scripts/create_seq_d020.py",
                 ]
             },
-            "status": "CORE + D018 CAPTURE/IMPORT BANK; SIGNAL SAFETY BRIDGE OPEN",
+            "status": "CORE + D018 + D021 POWER + D020 SEQ SUBSET IMPORT BANKS; SIGNAL SAFETY BRIDGE OPEN",
+            "power_d021_integrated": True,
+            "seq_d020_subset_integrated": True,
+            "dnp": sorted(DNP),
+            "logical_interfaces_removed": sorted(LOGICAL),
             "physical_interfaces_removed": ["J101", "J102", "J103"],
             "signal_bridge_connected": False,
-            "isolation_mute_supervisor_implemented": False,
+            "isolation_mute_supervisor_implemented": False,  # D-019 isolation/mute still open
+            "rails_fault_supervisor_implemented": True,
             "analog_placement_inside_oem": False,
             "unassigned_footprints": [
                 p["ref"] for p in inventory if not p.get("footprint")

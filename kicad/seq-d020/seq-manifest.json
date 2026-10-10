@@ -1,0 +1,976 @@
+{
+  "status": "ISOLATED CAPTURE STUDY",
+  "source": "D-020 discrete sequencing subset; study only; D-019 bridge still open",
+  "parts": [
+    {
+      "ref": "U401",
+      "lib_id": "PS28_SEQ:LP2985-33DBV",
+      "value": "LP2985-33",
+      "mpn": "LP2985-33DBVR (TI SLVS522S p.33 orderable); VIN 16 V max",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "GND",
+        "3": "AUX_RAW",
+        "4": "SEQ_BYP",
+        "5": "SEQ_3V3"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          45.72
+        ]
+      ]
+    },
+    {
+      "ref": "C401",
+      "lib_id": "Device:C",
+      "value": "1u 25V",
+      "mpn": "TBD: X7R >=25 V; CIN >=1 uF (SLVS522S Table 4-1)",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          45.72
+        ]
+      ]
+    },
+    {
+      "ref": "C402",
+      "lib_id": "Device:C",
+      "value": "10n",
+      "mpn": "TBD: X7R; CBYPASS 10 nF (SLVS522S)",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_BYP",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          45.72
+        ]
+      ]
+    },
+    {
+      "ref": "C403",
+      "lib_id": "Device:C",
+      "value": "2.2u 10V",
+      "mpn": "TBD: X7R, >=1 uF effective, ESR <=1 ohm new die",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          45.72
+        ]
+      ]
+    },
+    {
+      "ref": "U402",
+      "lib_id": "Power_Supervisor:TPS3808DBV",
+      "value": "TPS3808G33",
+      "mpn": "TPS3808G33DBVR (TI SBVS050N); hold stage 1, CT to VDD",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "nets": {
+        "1": "SEQ_HOLD1",
+        "2": "GND",
+        "3": "RAILS_OK",
+        "4": "SEQ_CT1",
+        "5": "SEQ_3V3",
+        "6": "SEQ_3V3"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          45.72
+        ]
+      ]
+    },
+    {
+      "ref": "R401",
+      "lib_id": "Device:R",
+      "value": "100k",
+      "mpn": "TBD: 1 %; CT to VDD 40-200k => 180/300/420 ms",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "SEQ_CT1"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          45.72
+        ]
+      ]
+    },
+    {
+      "ref": "R402",
+      "lib_id": "Device:R",
+      "value": "100k",
+      "mpn": "TBD: RESET pull-up 10k-1M (SBVS050N Table 5-1)",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "SEQ_HOLD1"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          86.36
+        ]
+      ]
+    },
+    {
+      "ref": "U403",
+      "lib_id": "Power_Supervisor:TPS3808DBV",
+      "value": "TPS3808G33",
+      "mpn": "TPS3808G33DBVR (TI SBVS050N); hold stage 2, CT to VDD",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "nets": {
+        "1": "RAILS_QUAL",
+        "2": "GND",
+        "3": "SEQ_HOLD1",
+        "4": "SEQ_CT2",
+        "5": "SEQ_3V3",
+        "6": "SEQ_3V3"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          86.36
+        ]
+      ]
+    },
+    {
+      "ref": "R403",
+      "lib_id": "Device:R",
+      "value": "100k",
+      "mpn": "TBD: 1 %; CT to VDD",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "SEQ_CT2"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          86.36
+        ]
+      ]
+    },
+    {
+      "ref": "R404",
+      "lib_id": "Device:R",
+      "value": "100k",
+      "mpn": "TBD: RESET pull-up",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "RAILS_QUAL"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          86.36
+        ]
+      ]
+    },
+    {
+      "ref": "U404",
+      "lib_id": "Power_Supervisor:TPS3808DBV",
+      "value": "TPS3808G33",
+      "mpn": "TPS3808G33DBVR (TI SBVS050N); start timeout, CT 180 nF",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "nets": {
+        "1": "START_TIMEOUT",
+        "2": "GND",
+        "3": "START_WIN",
+        "4": "SEQ_CT3",
+        "5": "SEQ_3V3",
+        "6": "SEQ_3V3"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          86.36
+        ]
+      ]
+    },
+    {
+      "ref": "C404",
+      "lib_id": "Device:C",
+      "value": "180n",
+      "mpn": "TBD: C0G/X7R low leakage; CT 180 nF => 0.62-1.44 s",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_CT3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          86.36
+        ]
+      ]
+    },
+    {
+      "ref": "R405",
+      "lib_id": "Device:R",
+      "value": "100k",
+      "mpn": "TBD: RESET pull-up",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "START_TIMEOUT"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          127.0
+        ]
+      ]
+    },
+    {
+      "ref": "J401",
+      "lib_id": "Connector_Generic:Conn_01x02",
+      "value": "START_BUTTON",
+      "mpn": "TBD: panel momentary switch harness; location/mechanics not decided",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "nets": {
+        "1": "START_BTN",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          127.0
+        ]
+      ]
+    },
+    {
+      "ref": "R406",
+      "lib_id": "Device:R",
+      "value": "100k",
+      "mpn": "TBD: button pull-up",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "START_BTN"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          127.0
+        ]
+      ]
+    },
+    {
+      "ref": "R407",
+      "lib_id": "Device:R",
+      "value": "10k",
+      "mpn": "TBD: debounce series; press tau 10 ms",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "START_BTN",
+        "2": "START_DEB"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          127.0
+        ]
+      ]
+    },
+    {
+      "ref": "C405",
+      "lib_id": "Device:C",
+      "value": "1u",
+      "mpn": "TBD: X7R; release tau ~110 ms",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "START_DEB",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          127.0
+        ]
+      ]
+    },
+    {
+      "ref": "U405",
+      "lib_id": "74xGxx:74LVC1G14",
+      "value": "74LVC1G14",
+      "mpn": "SN74LVC1G14DBVR (TI SCES218AA)",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "nets": {
+        "3": "GND",
+        "5": "SEQ_3V3",
+        "1": null,
+        "2": "START_DEB",
+        "4": "START_EDGE"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          127.0
+        ]
+      ]
+    },
+    {
+      "ref": "U406",
+      "lib_id": "74xGxx:74LVC2G74",
+      "value": "74LVC2G74",
+      "mpn": "SN74LVC2G74DCTR (TI SCES203Q); RUN latch",
+      "footprint": "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm",
+      "nets": {
+        "1": "START_EDGE",
+        "2": "CLIP_OTW",
+        "3": null,
+        "4": "GND",
+        "5": "RUN",
+        "6": "RAILS_QUAL",
+        "7": "SEQ_3V3",
+        "8": "SEQ_3V3"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          167.64
+        ]
+      ]
+    },
+    {
+      "ref": "R408",
+      "lib_id": "Device:R",
+      "value": "1k",
+      "mpn": "TBD: series to TPA RESET; with R9 4.7k gives >=2.6 V (VIH 1.9 V)",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "RUN",
+        "2": "RESET"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          167.64
+        ]
+      ]
+    },
+    {
+      "ref": "U407",
+      "lib_id": "74xGxx:74LVC2G74",
+      "value": "74LVC2G74",
+      "mpn": "SN74LVC2G74DCTR (TI SCES203Q); FAULT arming",
+      "footprint": "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm",
+      "nets": {
+        "1": "FAULT",
+        "2": "RUN",
+        "3": "NOT_ARMED",
+        "4": "GND",
+        "5": null,
+        "6": "RUN",
+        "7": "SEQ_3V3",
+        "8": "SEQ_3V3"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          167.64
+        ]
+      ]
+    },
+    {
+      "ref": "U408",
+      "lib_id": "74xGxx:74LVC1G32",
+      "value": "74LVC1G32",
+      "mpn": "SN74LVC1G32DBVR (TI SCES219W)",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "nets": {
+        "3": "GND",
+        "5": "SEQ_3V3",
+        "1": "NOT_ARMED",
+        "2": "FAULT",
+        "4": "FAULT_TRIP_N"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          167.64
+        ]
+      ]
+    },
+    {
+      "ref": "U409",
+      "lib_id": "74xGxx:74LVC1G07",
+      "value": "74LVC1G07",
+      "mpn": "SN74LVC1G07DBVR (TI SCES296AG); open-drain trip into RAILS_OK",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "nets": {
+        "3": "GND",
+        "5": "SEQ_3V3",
+        "1": null,
+        "2": "FAULT_TRIP_N",
+        "4": "RAILS_OK"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          167.64
+        ]
+      ]
+    },
+    {
+      "ref": "U410",
+      "lib_id": "74xGxx:74LVC1G08",
+      "value": "74LVC1G08",
+      "mpn": "SN74LVC1G08DBVR (TI SCES217AA)",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "nets": {
+        "3": "GND",
+        "5": "SEQ_3V3",
+        "1": "RUN",
+        "2": "NOT_ARMED",
+        "4": "START_WIN"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          167.64
+        ]
+      ]
+    },
+    {
+      "ref": "U411",
+      "lib_id": "74xGxx:74LVC1G06",
+      "value": "74LVC1G06",
+      "mpn": "SN74LVC1G06DBVR (TI SCES295AB); open-drain timeout trip",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "nets": {
+        "3": "GND",
+        "5": "SEQ_3V3",
+        "2": "START_TIMEOUT",
+        "4": "RAILS_OK"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          208.28
+        ]
+      ]
+    },
+    {
+      "ref": "C406",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=10 V; U402",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          208.28
+        ]
+      ]
+    },
+    {
+      "ref": "C407",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=10 V; U403",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          208.28
+        ]
+      ]
+    },
+    {
+      "ref": "C408",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=10 V; U404",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          208.28
+        ]
+      ]
+    },
+    {
+      "ref": "C409",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=10 V; U405",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          208.28
+        ]
+      ]
+    },
+    {
+      "ref": "C410",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=10 V; U406",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          208.28
+        ]
+      ]
+    },
+    {
+      "ref": "C411",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=10 V; U407",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          248.92
+        ]
+      ]
+    },
+    {
+      "ref": "C412",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=10 V; U408",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          248.92
+        ]
+      ]
+    },
+    {
+      "ref": "C413",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=10 V; U409",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          248.92
+        ]
+      ]
+    },
+    {
+      "ref": "C414",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=10 V; U410",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          248.92
+        ]
+      ]
+    },
+    {
+      "ref": "C415",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=10 V; U411",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          248.92
+        ]
+      ]
+    },
+    {
+      "ref": "U412",
+      "lib_id": "PS28_POWER:TPS3700DDC",
+      "value": "TPS3700DDC",
+      "mpn": "TPS3700DDCR (TI SBVS187G); ANALOG_12V window",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "nets": {
+        "1": "RAILS_OK",
+        "2": "GND",
+        "3": "ANALOG_UV",
+        "4": "ANALOG_OV",
+        "5": "AUX_RAW",
+        "6": "RAILS_OK"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          248.92
+        ]
+      ]
+    },
+    {
+      "ref": "U413",
+      "lib_id": "PS28_POWER:TPS3700DDC",
+      "value": "TPS3700DDC",
+      "mpn": "TPS3700DDCR (TI SBVS187G); VMID window",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "nets": {
+        "1": "RAILS_OK",
+        "2": "GND",
+        "3": "VMID_UV",
+        "4": "VMID_OV",
+        "5": "AUX_RAW",
+        "6": "RAILS_OK"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          289.56
+        ]
+      ]
+    },
+    {
+      "ref": "R420",
+      "lib_id": "Device:R",
+      "value": "1M",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "ANALOG_12V",
+        "2": "ANALOG_UV"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          289.56
+        ]
+      ]
+    },
+    {
+      "ref": "R421",
+      "lib_id": "Device:R",
+      "value": "46.4k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "ANALOG_UV",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          289.56
+        ]
+      ]
+    },
+    {
+      "ref": "R422",
+      "lib_id": "Device:R",
+      "value": "1M",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "ANALOG_12V",
+        "2": "ANALOG_OV"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          289.56
+        ]
+      ]
+    },
+    {
+      "ref": "R423",
+      "lib_id": "Device:R",
+      "value": "30.1k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "ANALOG_OV",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          289.56
+        ]
+      ]
+    },
+    {
+      "ref": "R424",
+      "lib_id": "Device:R",
+      "value": "909k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "VMID",
+        "2": "VMID_UV"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          289.56
+        ]
+      ]
+    },
+    {
+      "ref": "R425",
+      "lib_id": "Device:R",
+      "value": "101k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "VMID_UV",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          330.20000000000005
+        ]
+      ]
+    },
+    {
+      "ref": "R426",
+      "lib_id": "Device:R",
+      "value": "1M",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "VMID",
+        "2": "VMID_OV"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          330.20000000000005
+        ]
+      ]
+    },
+    {
+      "ref": "R427",
+      "lib_id": "Device:R",
+      "value": "64.9k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "VMID_OV",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          330.20000000000005
+        ]
+      ]
+    },
+    {
+      "ref": "C416",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=25 V; U412 VDD",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          330.20000000000005
+        ]
+      ]
+    },
+    {
+      "ref": "C417",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=25 V; U413 VDD",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          330.20000000000005
+        ]
+      ]
+    },
+    {
+      "ref": "J402",
+      "lib_id": "Connector_Generic:Conn_01x07",
+      "value": "SEQ_TO_SYSTEM",
+      "mpn": "Logical interface to power-d021/core; same PCB, not a connector",
+      "footprint": "",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "RAILS_OK",
+        "3": "SEQ_3V3",
+        "4": "RESET",
+        "5": "FAULT",
+        "6": "CLIP_OTW",
+        "7": "GND"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          330.20000000000005
+        ]
+      ]
+    }
+  ],
+  "hardware_validated": false,
+  "manufacturing_approved": false,
+  "integrated_with_core": false,
+  "unassigned_footprints": [
+    "J402"
+  ],
+  "interface_contract": {
+    "J402": "logical: RAILS_OK wired-AND input/trip output, RESET drive via R408, FAULT/CLIP_OTW TPA open-drain inputs",
+    "J401": "physical start button harness; panel location TBD",
+    "implemented_contract_subset": [
+      "rails hold >=360 ms (BOOT_HOLD_US)",
+      "new human edge, held button ignored",
+      "otw_high at request",
+      "FAULT armed by rising edge after RESET release",
+      "FAULT low after arming latches off, human re-arm after new hold",
+      "start timeout 0.62-1.44 s (START_TIMEOUT_US 1.44 s max)",
+      "ANALOG_12V and VMID windows (reference_valid / vmid_valid) into RAILS_OK"
+    ],
+    "not_implemented_d019": [
+      "input_connect / open_confirmed / close_confirmed",
+      "discharge",
+      "drivers_quiet / preclose_match",
+      "dc_a_valid / dc_b_valid / DC dwell",
+      "audio_enable mute"
+    ],
+    "new_physical_board": false
+  },
+  "calculated": {
+    "analog_windows_v": {
+      "ANALOG_UV": [
+        8.711,
+        8.897,
+        9.038
+      ],
+      "ANALOG_OV": [
+        13.526,
+        13.689,
+        13.853
+      ],
+      "VMID_UV": [
+        3.863,
+        3.945,
+        4.007
+      ],
+      "VMID_OV": [
+        6.486,
+        6.563,
+        6.641
+      ]
+    },
+    "source": "TI SBVS187G p.6 sec.6.5 VIT limits; 0.1 % dividers"
+  }
+}
