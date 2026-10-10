@@ -17,3 +17,17 @@ reference/**/*.pdf
 reference/**/*.zip
 .DS_Store
 .mypy_cache/
+
+# Headroom memory and harness settings belong to the local workspace.
+.headroom/
+.mcp.json
+.claude/settings.local.json
+.codex/config.toml
+.codex/hooks.json
+.pi/mcp-adapter.json
+
+# Saída local do plugin JLCPCB; release revisado vai para manufacturing/releases/
+kicad/**/jlcpcb/
+
+# Estado de runtime do wrapper Headroom (pid/porta locais).
+.claude/.headroom_wrap_*

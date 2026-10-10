@@ -1,8 +1,41 @@
-# Estado de desenvolvimento — atualização de 2026-10-08
+# Estado de desenvolvimento — atualização de 2026-10-10
 
-Snapshot técnico após D-018/D-019, com galeria nativa regenerada.
 Planejamento canônico: `.tasks/items/`; este resumo não muda estados ou gates.
 Não é release de hardware, montagem completa ou autorização de fabricação.
+Próximos passos até produção: [production-roadmap.md](production-roadmap.md).
+
+## Estado atual — candidata de sistema
+
+Abrir **`kicad/system-candidate/system-candidate.kicad_pro`**. Contém núcleo OEM +
+analógico D-018 + fonte D-021 + sequenciador D-020/D-023 + interface D-019/D-024:
+**204 footprints, 580 pinos** casados netlist↔PCB. ERC: os 4 conflitos PBTL OUT_x
+e 1 aviso MONO_BIASED da base, nada novo. DRC: 0 violações, 0 erro de footprint,
+470 conexões sem roteamento. 118 footprints estão em bancos **fora do contorno**.
+
+| Decisão | Bloco | Documento | Evidência |
+|---|---|---|---|
+| D-021 | Retificador CT de T1, bulk 2×4700 µF, LM5164 12 V, janela PVDD TPS3700 | [power-d021.md](power-d021.md) | 54 casos ngspice, PVDD máx. 49,84 V |
+| D-022 | Crossover ajustável 50–150 Hz | [decisions.md](decisions.md) | não capturado (ELEC-004) |
+| D-023 | Sequenciador discreto: hold ≥ 360 ms, partida humana, latch de FAULT, timeout | [seq-d020.md](seq-d020.md) | modelo lógico da netlist, testes de mutação |
+| D-024 | Relé G6K-2F Form C após C20/C21, mute TMUX6219, janelas DC/AUX | [iso-d019.md](iso-d019.md) | 1350 casos, pino −0,158…6,47 V |
+| D-024a | Série 3,3 kΩ + BAT54 contra falha simples | [iso-d019.md](iso-d019.md) | 216 casos, ≤ −0,351 V no VF máximo |
+
+Footprints auditados contra fabricante nesta rodada: TI DGK0008A (TMUX6219,
+SCDS420E p.50) e Omron G6K-2F (K106-E1-11 p.6). Os demais blocos novos usam
+footprints candidatos KiCad, a auditar quando os MPNs de potência forem fechados.
+
+Galeria 3D com a vista `system-*` (núcleo + bancos), regenerada nesta data:
+[images/kicad-3d](images/kicad-3d/README.md). Os bancos aparecem soltos ao lado da
+placa porque **não há placement**; não é prova de encaixe.
+
+Riscos abertos: entrada do TPA desligado não publicada pela TI; driver do preamp
+preso em nível alto com relé fechado; regulação/inrush de T1 só simulados; térmica
+do dissipador OEM sem medida. Detalhes em `iso-d019.md` e `power-d021.md`.
+
+## Histórico — snapshot de 2026-10-08 (D-018/D-019)
+
+As seções abaixo descrevem o estado antes de D-021…D-024a e são mantidas para
+rastreabilidade; números e "não implementado" se referem àquela data.
 
 ## Incremento posterior D-020 — candidata incompleta
 

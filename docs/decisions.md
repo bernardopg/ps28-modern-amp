@@ -98,3 +98,57 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   Ver `integration-protection-review.md` e `system-candidate-review.json`; reversível,
   2026-10-08. G0–G5, tasks, WIP e S03 inalterados.
   Não confundir decisão de arquitetura com liberação de fabricação/energização.
+- D-021 — Substitui o alvo "PVDD regulado 36 V" de D-010; mantém reuso de T1.
+  PVDD **não regulado** por retificação full-wave CT com dois diodos: cada fio
+  vermelho via diodo para +PVDD, fio preto (CT) para GND. Evidência do proprietário
+  2026-10-09: 34,35 VAC por metade e 69,2 VAC total a vazio com rede 126,6 VAC;
+  CT confirmado por resistência e tensão (`transformer-reuse.md`). Calculado, não
+  medido: ≈47,7 V a vazio em 126,6 V, ≈50,1 V a vazio em 133 V, ≈42–46 V sob carga
+  conforme bulk. Dentro de PVDD 18–53,5 V (SLASEA8A p.6 §7.3), margem ≈3,4 V.
+  Proibido ligar vermelho–vermelho em ponte (≈97 V). Consequências obrigatórias:
+  bulk ≥63 V redimensionado por ripple de 120 Hz (estimativa 10–15 mF; 6800 µF/50 V
+  originais não reutilizáveis nesse rail), proteção de sobretensão/TVS abaixo de
+  53,5 V, inrush, fusível no secundário, buck 48→12 V para auxiliar e limiter/teto
+  de ganho porque a potência disponível excede o woofer original. Objetivo: eliminar
+  o buck 36 V/5–6 A. Risco: margem pequena em rede alta/vazio, ripple e regulação
+  sob carga não medidos. Validação: PWR-001/BENCH-001 com carga resistiva. Aprovada
+  pelo proprietário em 2026-10-09; não libera fabricação nem energização.
+- D-022 — Crossover LINE ajustável contínuo 50–150 Hz no furo CROSSOVER original,
+  substituindo LR4 fixo 80 Hz de D-004/REQ-006. Fase 0°/180° por chave, LEVEL e RCA
+  LFE/L/R mantêm a interface do painel. Estudo LR4 80 Hz vira ponto da faixa,
+  não projeto final; topologia de sintonia (potenciômetro multi-gang/state-variable)
+  e tracking entre seções ficam TBD em ELEC-002. Aprovada pelo proprietário em
+  2026-10-09.
+- D-023 — Implementar em lógica discreta (sem MCU) o subconjunto de D-020 que não
+  depende de D-019: hold ≥360 ms por dois TPS3808, partida por borda humana com
+  CLIP_OTW alto, arme por borda de FAULT, latch com rearme humano, timeout
+  0,62–1,44 s e janelas TPS3700 de PVDD, ANALOG_12V e VMID em RAILS_OK
+  (open-drain). Integrar `power-d021` e `seq-d020` ao `system-candidate` como
+  bancos fora do contorno; `PVDD_36V` vira `PVDD`; J4/R7/R8 ficam DNP para não
+  realimentar 3V3 externa. Objetivo: tirar RESET/FAULT do controle externo.
+  Risco: footprints não auditados, latências/níveis reais e UX do botão não
+  validados; isolamento/mute D-019 continuam abertos. Validação: ERC/DRC nativos,
+  modelo lógico da netlist capturada com mutações, `make check`. Ver
+  `seq-d020.md`; 2026-10-09. Não libera fabricação nem energização.
+- D-024 — Concluir a interface D-019 com **relé de sinal Form C** (Omron G6K-2F DC12)
+  depois de C20/C21: COM na placa isolada, NO no pino do TPA, NC em descarga de 1 kΩ.
+  Mute analógico real por TMUX6219 em DIVIDED→VMID, janelas DC 2…5 V nos dois pinos
+  (TPS3700, média τ≈50 ms), janela de AUX_RAW e lógica discreta: RESET 12–28 ms
+  depois do fechamento, dwell DC 12–28 ms antes de desmutar, trip por perda de DC.
+  Substitui o requisito proposto "detecção + abertura ≤ 100 µs" pela grandeza que
+  ele protegia: pino em −0,3…7 V. A troca vale porque todo gatilho dispara com os
+  trilhos do preamp ainda válidos e o relé abre em ≤ 3 ms (catálogo). Simulação
+  ngspice com 1350 casos: pino ≥ 0 V com 3 ms e ≥ −0,262 V com 10 ms pessimista.
+  Ponte DIFF_POS/NEG→DIFF_P/N fechada só através do relé; J3 DNP. Objetivo:
+  remover o bloqueio de integração do sinal. Risco: falha simples (curto de
+  ANALOG_12V/driver) não coberta, entrada real do TPA desligado não caracterizada,
+  bounce/contato colado, conteúdo < 20 Hz exige passa-altas no front-end. Validação:
+  ERC/DRC, modelo lógico da netlist com mutações, simulação, `make check`. Ver
+  `iso-d019.md`; 2026-10-09. Proposta do agente sob autorização do proprietário,
+  pendente de revisão G1. Não libera fabricação nem energização.
+- D-024a — Mitigação de falha simples na interface D-019: R 3,3 kΩ em série após o
+  NO do relé e BAT54 (catodo no pino, anodo em GND). Driver em curto para GND com
+  relé fechado: ≈ −5,9 V sem clamp → ≤ −0,351 V no VF máximo de catálogo (ainda
+  51 mV além de −0,3 V). Custo −1,33 dB típico. Driver preso alto continua aberto.
+  Footprint TI DGK0008A local para o TMUX6219. Validação: simulação de 216 casos de
+  falha simples, ERC/DRC. 2026-10-10; pendente de revisão G1.

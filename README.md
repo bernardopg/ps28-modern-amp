@@ -9,9 +9,9 @@ preservando gabinete, dutos e woofer. Projeto de engenharia em fase de requisito
 ## Baseline proposta — não congelada
 
 TPA3255 PBTL mono; transformador original T1 reaproveitado com fonte secundária
-nova, alvo regulado 36 V / 5–6 A; auxiliar 12 V; fonte externa apenas bancada/fallback;
-ver [D-010](docs/transformer-reuse.md).
-RCA L/R somadas resistivamente e LFE selecionável; LINE com LR4 80 Hz;
+nova: PVDD não regulado ≈42–50 V por retificação CT de dois diodos (D-021);
+auxiliar 12 V; fonte externa apenas bancada/fallback; ver [T1](docs/transformer-reuse.md).
+RCA L/R somadas resistivamente e LFE selecionável; LINE com LR4 ajustável 50–150 Hz (D-022);
 volume e fase 0°/180°. Woofer 4 Ω e alvo 120–150 W dependem de identificação,
 medições, excursão, clipping e térmica. Não há fonte de rede na PCB nem MCU na Rev. A.
 
@@ -27,10 +27,10 @@ make erc         # apenas quando houver schematic não vazio
 make drc         # apenas quando houver PCB não vazia
 ```
 
-[Estado consolidado e próximos bloqueios](docs/development-status.md):
-D-018 é schematic analógico com alimentação/VMID, **sem PCB**; D-019 é contrato
-não implementado. A galeria B/OEM foi regenerada, mas a geometria não mudou e
-não representa integração do preamp/supervisor/proteção ao núcleo.
+[Estado consolidado](docs/development-status.md) · [Caminho até produção](docs/production-roadmap.md):
+a candidata `kicad/system-candidate/` integra núcleo, analógico, fonte D-021,
+sequenciador D-023 e interface D-019/D-024 (204 footprints, DRC 0), ainda **sem
+placement no contorno OEM, sem roteamento e sem front-end D-022**.
 
 Abrir **`kicad/core-selected/ps28-modern.kicad_pro`** no KiCad (revisão atual B).
 [Peças, integração ao gabinete e revisão ERC/DRC](docs/selected-core.md).

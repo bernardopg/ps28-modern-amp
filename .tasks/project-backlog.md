@@ -14,6 +14,7 @@ Ordem por dependência/risco; estado canônico nos arquivos de task.
 - [BENCH-001 — Inventariar bancada e aprovar limites](items/BENCH-001.md) (M1, S02)
 - [ELEC-002 — Simular front-end físico e tolerâncias](items/ELEC-002.md) (M2, S03)
 - [ELEC-003 — Capturar schematic e revisar ERC](items/ELEC-003.md) (M2, S03)
+- [ELEC-004 — Front-end completo D-022 e interface de áudio](items/ELEC-004.md) (M2, S03)
 - [PCB-003 — Spike de captura e placement do core](items/PCB-003.md) (M2, S03; exploratório, não fecha gates)
 - [PCB-001 — Stackup, placement e térmica](items/PCB-001.md) (M3, S04)
 - [PCB-002 — Rotear e revisar layout](items/PCB-002.md) (M3, S04)
@@ -23,15 +24,11 @@ Ordem por dependência/risco; estado canônico nos arquivos de task.
 
 - [TOOL-001 — Investigar warnings KiCad](items/TOOL-001.md) (M1, backlog; avaliar antes de captura prolongada)
 
-## Prioridade técnica após D-018/D-019
+## Prioridade técnica após D-021…D-024a (2026-10-10)
 
-- [ELEC-002](items/ELEC-002.md)/[PWR-001](items/PWR-001.md): qualificar
-  envelope/parts D-018, proteger RCA/INPUT_A/B e demonstrar power-order/pré-carga.
-- [ELEC-003](items/ELEC-003.md): integrar mute/isolation/supervisor e funções
-  pendentes no schematic; resolver 13 footprints, sem fechar G1 por ERC0.
-- [MECH-001](items/MECH-001.md)/[PCB-003](items/PCB-003.md): cotas/contacto OEM,
-  revisão independente e posterior integração/roteamento. Galeria só do core.
-  [Estado/evidências](../docs/development-status.md); esta ordem não altera status,
-  dependências, WIP ou ativação de sprint, nem autoriza produção/energização.
+Caminho até produção em [docs/production-roadmap.md](../docs/production-roadmap.md).
+Ordem: MECH-001 (cotas OEM) e ELEC-004 (front-end) destravam PCB-001; PWR-001 fecha
+MPNs de potência e inrush; depois PCB-002, FAB-001 e gates G1–G3. Esta ordem não
+altera status, WIP ou ativação de sprint, nem autoriza produção/energização.
 
 Backlog futuro não comprometido: auto-standby, EMI formal e revisão B de crossover; criar tasks apenas após priorização.

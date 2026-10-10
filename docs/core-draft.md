@@ -28,7 +28,7 @@ TI SLASEA8A §10.2.4, figura31/tabela11, p.28; p.3–4 pinout/tabela de modos.
   Sequenciamento/mute e geração de 3V3 externos ainda faltam; header não é controlador.
 - Áudio diferencial entra por J3 com AC coupling de 10 µF; front-end/fase/LR4 ainda faltam.
 
-O core recebe PVDD 36 V regulado e 12 V, nunca AC ou ±Vcc original. D-010 da fonte
+O core recebe PVDD (36 V regulado no draft; D-021 passou a ≈42–50 V não regulado) e 12 V, nunca AC ou ±Vcc original. D-010 da fonte
 permanece válida, mas seu circuito não está nesta PCB. Estudo modular permite desenvolver
 núcleo sem inventar tensão/VA do transformador. Nenhum alvo de potência foi demonstrado.
 

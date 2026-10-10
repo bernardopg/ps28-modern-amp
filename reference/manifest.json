@@ -161,5 +161,151 @@
     "sha256": "62c57abf3394c86e6e6ff8fb25760ae9a7f65709c9bb485d521edcf9186d7f5d",
     "license": "Third-party copyright; local engineering reference only",
     "review_status": "Section6.1 p.4: source+-65V differs from drain VFN-0.7..VFP+0.7; section6.5 p.5 typical fault threshold0.7V not a -0.3V TPA clamp guarantee. Not selected for D019; whole-interface qualification required"
+  },
+  {
+    "file": "reference/ti/lm5164.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/lm5164.pdf",
+    "resolved_url": "https://www.ti.com/lit/ds/symlink/lm5164.pdf",
+    "accessed": "2026-10-09T23:29:11.468143+00:00",
+    "sha256": "cce03619fbe13951eea47458cd45e140361637d8fef32ae143b82b16d597e32d",
+    "document": "SNVSAU4D Feb 2026",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Pinout, thresholds and typical application read for D-021 capture; layout/thermal not reviewed"
+  },
+  {
+    "file": "reference/ti/tps3700.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/tps3700.pdf",
+    "resolved_url": "https://www.ti.com/lit/ds/symlink/tps3700.pdf",
+    "accessed": "2026-10-09T23:29:11.470408+00:00",
+    "sha256": "3bb7daed20b154bf22ded78e23269c6437eb587400b89bce0f543813df94ebf0",
+    "document": "SBVS187G Feb 2019",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Pinout, thresholds and typical application read for D-021 capture; layout/thermal not reviewed"
+  },
+  {
+    "file": "reference/ti/tps3808.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/tps3808.pdf",
+    "accessed": "2026-10-10T00:57:17.077576+00:00",
+    "sha256": "74d889c0f68af88032f1633c26381817cc03e10d9fd3b4c177a044ad3ed86eed",
+    "document": "SBVS050N Aug 2026",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Pinout/limits read for D-023/D-024 captures; layout/thermal not reviewed"
+  },
+  {
+    "file": "reference/ti/lp2985.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/lp2985.pdf",
+    "accessed": "2026-10-10T00:57:17.108983+00:00",
+    "sha256": "29a9758cb28a12c1990cb8dba96cb792554906f00fe625aa310bc6cd6ea3f26f",
+    "document": "SLVS522S May 2025",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Pinout/limits read for D-023/D-024 captures; layout/thermal not reviewed"
+  },
+  {
+    "file": "reference/ti/sn74lvc2g74.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/sn74lvc2g74.pdf",
+    "accessed": "2026-10-10T00:57:17.124983+00:00",
+    "sha256": "19bc881b14bac1dd02c9a5c9a184d09b2482eab053fb5e7706897ab42c023bea",
+    "document": "SCES203Q Sep 2021",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Pinout/limits read for D-023/D-024 captures; layout/thermal not reviewed"
+  },
+  {
+    "file": "reference/ti/sn74lvc1g08.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g08.pdf",
+    "accessed": "2026-10-10T00:57:17.133448+00:00",
+    "sha256": "30b963cc44233cf3ca35c891ff987c8323a2244ecc765e23296ec96ca4b42666",
+    "document": "SCES217AA Aug 2026",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Pinout/limits read for D-023/D-024 captures; layout/thermal not reviewed"
+  },
+  {
+    "file": "reference/ti/sn74lvc1g32.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g32.pdf",
+    "accessed": "2026-10-10T00:57:17.142864+00:00",
+    "sha256": "b64786a568abe6a715c6f15dbc8ab1ffde3ad1017a1128a98931200e12c4c416",
+    "document": "SCES219W Aug 2026",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Pinout/limits read for D-023/D-024 captures; layout/thermal not reviewed"
+  },
+  {
+    "file": "reference/ti/sn74lvc1g14.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g14.pdf",
+    "accessed": "2026-10-10T00:57:17.154668+00:00",
+    "sha256": "c21067b4f4119d0981fb2e8d73b987b0e661c86f7bb0ed161f23a4b599fd68a7",
+    "document": "SCES218AA Oct 2025",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Pinout/limits read for D-023/D-024 captures; layout/thermal not reviewed"
+  },
+  {
+    "file": "reference/ti/sn74lvc1g07.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g07.pdf",
+    "accessed": "2026-10-10T00:57:17.164005+00:00",
+    "sha256": "1e175728fccf85295e744a60420f48b1feb23f7f0061b8c73d70f81a6903f59e",
+    "document": "SCES296AG Oct 2025",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Pinout/limits read for D-023/D-024 captures; layout/thermal not reviewed"
+  },
+  {
+    "file": "reference/ti/sn74lvc1g06.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g06.pdf",
+    "accessed": "2026-10-10T00:57:17.171611+00:00",
+    "sha256": "44dbca33c92d677ed71f99c2d1a2eb28f12d6fdb512e13fdf485444a3a42b4a4",
+    "document": "SCES295AB Oct 2025",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Pinout/limits read for D-023/D-024 captures; layout/thermal not reviewed"
+  },
+  {
+    "file": "reference/ti/tmux6219.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/tmux6219.pdf",
+    "accessed": "2026-10-10T00:57:17.177740+00:00",
+    "sha256": "216e5fe55ce423e3d2e4702dd88ad203e7550e57d3b306ac7d1f31dae06394c0",
+    "document": "SCDS420E Jul 2024",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Pinout/limits read for D-023/D-024 captures; layout/thermal not reviewed"
+  },
+  {
+    "file": "reference/parts/omron-g6k.pdf",
+    "url": "https://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf",
+    "accessed": "2026-10-10T00:57:17.185333+00:00",
+    "sha256": "25d2046127b3ffa7e7a2047b7467c67587559e8e05111347260d5a892c0bec57",
+    "document": "Omron Cat. No. K106-E1-11",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Pinout/limits read for D-023/D-024 captures; layout/thermal not reviewed"
+  },
+  {
+    "file": "reference/parts/diodes-mmbt3904.pdf",
+    "url": "https://www.diodes.com/assets/Datasheets/MMBT3904.pdf",
+    "accessed": "2026-10-10T00:57:17.187301+00:00",
+    "sha256": "483284b10e2a58c8ddafea3c1c3f77388edf9efd394ca30f9559e605f644f2dc",
+    "document": "Diodes DS30036 Rev.27",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Pinout/limits read for D-023/D-024 captures; layout/thermal not reviewed"
+  },
+  {
+    "file": "reference/parts/diodes-1n4148w.pdf",
+    "url": "https://www.diodes.com/assets/Datasheets/BAV16W_1N4148W.pdf",
+    "accessed": "2026-10-10T00:57:17.188707+00:00",
+    "sha256": "39c16a6888bdab22418e93e17182174aad763a66957a4632e70c944194e3fc08",
+    "document": "Diodes DS30086 Rev.31",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Pinout/limits read for D-023/D-024 captures; layout/thermal not reviewed"
+  },
+  {
+    "file": "reference/parts/diodes-bzt52.pdf",
+    "url": "https://www.diodes.com/assets/Datasheets/ds18004.pdf",
+    "accessed": "2026-10-10T00:57:17.190297+00:00",
+    "sha256": "0fbd7d137524820f0160594065cbceb8c6b3188757c328416d08fceb7418202f",
+    "document": "Diodes DS18004 Rev.38",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Pinout/limits read for D-023/D-024 captures; layout/thermal not reviewed"
+  },
+  {
+    "file": "reference/parts/diodes-bat54.pdf",
+    "url": "https://www.diodes.com/assets/Datasheets/ds11005.pdf",
+    "accessed": "2026-10-10T09:44:33.780137+00:00",
+    "sha256": "50b04e4e17bcf5db62164f6e5422e91546d0cace0ab2efed61660c3044b4fef0",
+    "document": "Diodes DS11005 Rev.34",
+    "license": "Third-party copyright; local engineering reference only",
+    "review_status": "Pinout and VF/IR limits read for D-024a clamp"
   }
 ]

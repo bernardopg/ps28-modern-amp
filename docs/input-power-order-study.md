@@ -198,3 +198,10 @@ executa regressões offline. Relatório reproduzido em
 `tests/reports/input-power-order-study.json`. Logs ficam em `build/`, com
 artefato de CI, sem PDFs/modelos de terceiros. Fonte primária presente é
 verificada por hash; ausência local é registrada, não vira nova revisão de PDF.
+
+## Atualização D-024 (2026-10-09)
+
+O contrato acima foi implementado com relé Form C, mute e observação DC, e o
+requisito de 100 µs foi substituído pelo limite do pino. Detalhes, simulação e o
+que continua sem cobertura em [iso-d019.md](iso-d019.md). As contraprovas desta
+página seguem válidas como casos que a topologia precisa evitar.

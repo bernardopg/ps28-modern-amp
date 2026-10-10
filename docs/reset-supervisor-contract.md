@@ -85,6 +85,18 @@ R7/R8 podem realimentar controle morto. Não unir nova3V3 automaticamente.
 Supervisor/mute/proteção físicos ainda não capturados; latência100 µs não provada.
 Ver [sequência e pesquisa](integration-protection-review.md).
 
+## Incremento D-023 — subconjunto capturado
+
+Hold, partida humana, arme/latch de FAULT, timeout e janelas de rails estão
+capturados em `kicad/seq-d020/` e integrados na candidata. Detalhes, limites e o
+que continua aberto: [seq-d020.md](seq-d020.md). Os itens de D-019 acima seguem
+como bloqueio.
+
+## Incremento D-024 — interface D-019 capturada
+
+Relé de isolamento, descarga NC, mute, janelas DC dos pinos, janela de AUX e a
+lógica de conexão/dwell/áudio: [iso-d019.md](iso-d019.md).
+
 ## Testes futuros obrigatórios
 
 Fonte faltante/em ordem invertida; VMID fora de faixa; FAULT inicial normal;

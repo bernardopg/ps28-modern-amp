@@ -21,6 +21,10 @@ Simular front-end físico e tolerâncias, atendendo docs/requirements.md e gates
 
 ## Evidência
 
+D-024 (2026-10-09) acrescenta requisitos ao front-end: passa-altas subsônico
+(conteúdo < 20 Hz pode disparar a janela DC dos pinos), fase/volume sem degrau DC
+e RCA ativa com OPA desligado. Mute fica em DIVIDED (TMUX6219). Ver `docs/iso-d019.md`.
+
 Preparação de estudo realizada, sem fechar os critérios acima:
 - Circuito SPICE com R/C explícitos: duas SK unitárias14k/200nF feedback/100nF referência,
   divisor10k/10k e inversor diferencial10k/10k; fn80,385Hz/Q0,7071.

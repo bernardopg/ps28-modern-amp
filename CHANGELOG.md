@@ -4,7 +4,56 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 
 ## [Unreleased]
 
+### Removed
+- `kicad/jlcpcb/`: Gerber/BOM/CPL obsoletos do draft A (`A-core-draft`, sem
+  roteamento, sem LCSC), removidos para evitar pedido acidental. Release futuro
+  segue `docs/manufacturing.md` (gerar em `build/`, liberar só após G3).
+
+### Fixed
+- `analog-protected.svg` restaurado ao export nativo KiCad registrado no manifesto;
+  o commit de lint o havia reformatado e quebrado `make check`. Marcado `binary`
+  em `.gitattributes` como `system-candidate.svg`.
+
 ### Added
+- `docs/production-roadmap.md`, ELEC-004 (front-end D-022, issue #20), estado do
+  projeto reescrito para a candidata de sistema; auditoria dos footprints DGK0008A e
+  G6K-2F contra os desenhos de fabricante.
+- D-024a: clamp BAT54 + 3,3 kΩ série nos pinos de entrada do TPA (falha simples para
+  GND ≈ −5,9 V → ≤ −0,351 V no VF máximo), casos de falha simples na simulação,
+  footprint TI DGK0008A para o TMUX6219 e tabela de tratamento dos riscos D-019.
+- D-024: interface D-019 em `kicad/iso-d019/` — relé Omron G6K-2F Form C após
+  C20/C21 (NO no pino, NC descarga), mute TMUX6219, janelas DC dos pinos e de AUX
+  (TPS3700); lógica de RESET pós-conexão, dwell DC e latch de áudio no sequenciador.
+  `make simulate-d019`: 1350 casos ngspice, pino −0,262…6,61 V. Ponte de sinal
+  fechada só via relé na candidata (200 footprints, DRC 0).
+- D-023: sequenciador discreto D-020 (subconjunto sem D-019) em `kicad/seq-d020/`:
+  LP2985 3,3 V, 2× TPS3808 (hold ≥360 ms), latches 74LVC2G74 para partida humana e
+  arme/latch de FAULT, timeout 0,62–1,44 s, janelas TPS3700 de ANALOG_12V/VMID.
+  Modelo lógico da netlist capturada com testes de mutação.
+- `system-candidate` integra D-021 e D-020: 150 footprints, `PVDD_36V` vira `PVDD`,
+  J4/R7/R8 DNP; ERC igual à base, DRC 0 violações. Galeria 3D inclui a candidata.
+- D-021: AUX 12 V (LM5164, exemplo TI SNVSAU4D Fig 7-1) e janela de PVDD
+  (TPS3700, OV 50,97–52,24 V, UV 27,3–28,4 V pior caso) capturados em
+  `kicad/power-d021/`; saída RAILS_OK open-drain para rails_valid D-020, não
+  direto no RESET. ERC 0; footprints e parte dos MPNs TBD.
+- Conector do chicote de T1 documentado por foto: 3 vias vermelho–preto–vermelho,
+  CT no centro, coincide com J301; passo ≈ 4 mm (família 3,96 mm), fio 20 AWG UL1015; série/rating TBD, com risco de corrente
+  registrado em `docs/transformer-reuse.md`.
+- D-021: `make simulate-power` (54 casos ngspice com T1 medido) e captura isolada
+  `kicad/power-d021/` (retificador CT, fusível, bulk, bleeder, TVS; ERC0, MPNs TBD).
+  TPA3255 não tem OVP de PVDD: supervisor externo especificado, não capturado.
+- Woofer `20PR10DAG-FW06-E` sem T/S públicos; limiter provisório 100 W e
+  limites de DC/transitório do manual como piso de REQ-007.
+- Woofer Re medido 4,4 Ω (pontas 0,6 Ω descontadas), dentro do manual; correção
+  da resistência das meias-bobinas de T1 para ≈0,2 Ω.
+- D-021: PVDD não regulado ≈42–50 V por retificação CT de dois diodos de T1
+  (34,35 VAC/metade medido), substituindo o buck 36 V de D-010. D-022: crossover
+  ajustável 50–150 Hz no controle original. Requisitos, README e AGENTS atualizados.
+- Confirmação física de T1 e do painel original em `docs/transformer-reuse.md`
+  (etiqueta, secundário de 3 fios, fusível, controles); sem medição de VAC/VA.
+- Headroom MCP por projeto para Claude Code, Codex, Pi e Hermes, com banco
+  compartilhado `.headroom/memory.db`, configurações locais fora do Git e
+  instruções de acesso independentes do provedor em `docs/headroom.md`.
 - D-020: candidata separada core+analógico76 componentes/212 pads, passivos/
 footprints candidatos e CAD oficial Würth CC com atribuição; ponte de sinal aberta,
 analógico fora do contorno em banco de importação, sem fit/proteção física completos.

@@ -76,5 +76,56 @@
   "manufacturing_approved": false,
   "purchase_approved": false,
   "energization_approved": false,
-  "tasks_gates_s03_states_unchanged": true
+  "tasks_gates_s03_states_unchanged": true,
+  "d023_update": {
+    "date": "2026-10-09",
+    "note": "Fields above describe the 2026-10-08 D-020 candidate; superseded counts below. sha256 above is historical.",
+    "parts": 150,
+    "native_pins_matched": 421,
+    "new_footprints_power_d021": 27,
+    "new_footprints_seq_d020": 47,
+    "new_footprints_placed_inside_oem": 0,
+    "renamed_nets": {
+      "PVDD_36V": "PVDD"
+    },
+    "dnp": [
+      "J4",
+      "R7",
+      "R8"
+    ],
+    "erc_errors_unexcluded": 4,
+    "erc_warnings_unexcluded": 1,
+    "drc_geometry": 0,
+    "drc_footprint_errors": 0,
+    "drc_unrouted": 338,
+    "signal_bridge_connected": false,
+    "rails_fault_supervisor_captured": true,
+    "hardware_validated": false,
+    "manufacturing_approved": false
+  },
+  "d024_update": {
+    "date": "2026-10-10",
+    "parts": 204,
+    "native_pins_matched": 580,
+    "new_footprints_iso_d019": 39,
+    "new_footprints_seq_d020": 62,
+    "new_footprints_placed_inside_oem": 0,
+    "dnp": [
+      "J3",
+      "J4",
+      "R7",
+      "R8"
+    ],
+    "signal_bridge_connected": true,
+    "signal_bridge_via_relay_only": true,
+    "erc_errors_unexcluded": 4,
+    "erc_warnings_unexcluded": 1,
+    "drc_geometry": 0,
+    "drc_footprint_errors": 0,
+    "drc_unrouted": 470,
+    "d019_simulation": "tests/reports/d019-interface-study.json",
+    "hardware_validated": false,
+    "manufacturing_approved": false,
+    "single_fault_clamp": "BAT54 + 3.3k (D-024a)"
+  }
 }

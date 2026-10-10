@@ -5,7 +5,7 @@ status: To Do
 milestone: M2
 sprint: S03
 depends_on: ELEC-002
-updated: 2026-10-08
+updated: 2026-10-10
 ---
 
 # ELEC-003 — Capturar schematic e revisar ERC
@@ -20,6 +20,16 @@ Capturar schematic e revisar ERC, atendendo docs/requirements.md e gates docs/sa
 - [ ] ERC sem erros não justificados e revisão humana G1
 
 ## Evidência
+
+2026-10-10: D-024a (clamp BAT54 + 3,3 kΩ), footprint DGK local e auditoria do
+G6K-2F. Front-end completo passou para ELEC-004.
+
+D-024 (2026-10-09): interface D-019 capturada (`kicad/iso-d019`, ERC0) e ponte de
+sinal fechada só via relé na candidata; ver `docs/iso-d019.md`. Critérios abertos.
+
+D-023 (2026-10-09): sequenciador discreto capturado (`kicad/seq-d020`, ERC0) e
+integrado à candidata com D-021; ver `docs/seq-d020.md`. Pin mapping conferido
+contra datasheets TI; footprints não auditados, sem revisão G1. Critérios abertos.
 
 Captura integrada pendente. Contrato preparatório do supervisor em
 `docs/reset-supervisor-contract.md`, contra TI SLASEA8A p.20–21/30–31:

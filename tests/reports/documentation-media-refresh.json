@@ -4,8 +4,8 @@
   "scope": "Documentation/tasks/native media refresh; no PCB or schematic integration",
   "native_renderer": "10.0.7",
   "native_media": {
-    "pngs": 6,
-    "gifs": 2,
+    "pngs": 9,
+    "gifs": 3,
     "frames_per_gif": 16
   },
   "native_core_checks": {
@@ -47,6 +47,7 @@
     "ELEC-001": "To Do",
     "ELEC-002": "Blocked",
     "ELEC-003": "To Do",
+    "ELEC-004": "To Do",
     "FAB-001": "To Do",
     "MECH-001": "Blocked",
     "PCB-001": "To Do",
@@ -65,20 +66,21 @@
   "hardware_validated": false,
   "manufacturing_approved": false,
   "source_sha256": {
-    ".tasks/github-mirror.json": "5e6c85106acd04fe9317e3c47380b17e70a8e652ccc43cc9806ac649e6b16bef",
-    "docs/images/kicad-3d/manifest.json": "174e180f59871ee89a0bf841bda01560052401307b3864d6fab6dbadd8f9cb09",
+    ".tasks/github-mirror.json": "a3c886a8ed714a758d7965d216e72d70e912d2993697799e4db915c53e257a04",
+    "docs/images/kicad-3d/manifest.json": "ecd1a7ea44e427c83fac012aca604ce123d0445c79ef3f230c903459c70ebf6e",
     "kicad/analog-protected/analog-protected.kicad_sch": "f46adefe0383358837e4eb49a41fe21b8017f39b549f789c10675ca4ac277303",
     "kicad/analog-protected/vmid-manifest.json": "f4ab47cd848ccf1d1e14ed1c0d52f7ccb51eb6b55bfe189640ab7730778ff119",
     "kicad/core-oem-refined/ps28-modern.kicad_pcb": "a411e0b47843fb179f5d3bf621118539ccafcd4fc8e6c0617c5bc5c397222215",
     "kicad/core-oem-refined/ps28-modern.kicad_sch": "134bdf8fa93e3a66d99a5d556bd45cb9c5289ed5c3b126273db16ef3ad38a2ce",
     "kicad/core-selected/ps28-modern.kicad_pcb": "2f3ab1f1667a714c892b0e1c31d9a7447c1772f695b11268b348edec311aed99",
     "kicad/core-selected/ps28-modern.kicad_sch": "63ab6dc33d89510fd536616a62e29561d68b5bd0ccdd6294df5f34f85825e7e9",
-    "scripts/render_kicad_gallery.py": "3a714ded8d2ca4a8b33ed50e19039d57b5b7ff3129ccf611742534deab737a8a",
+    "scripts/render_kicad_gallery.py": "c2b5b0663a3aeecceb7bc621163f38fac279f3167f67faec1d45e4964d7f7690",
     "simulation/analog/input-power-order.json": "9cd67b003a855e4b8f1b8e3176daf64a800a9d8a904eaf2a46301c160d4791b7",
     "simulation/analog/vmid-protection.json": "c44c0878556a9034e0764a2635e3768964bccd538d14dec7185f44749946e62a",
     "kicad/core-selected/ps28-modern.kicad_pro": "6b368fee5215bb145795b3889eac20abed249211ac5030186b7798eadb9646cc",
     "kicad/core-oem-refined/ps28-modern.kicad_pro": "6b368fee5215bb145795b3889eac20abed249211ac5030186b7798eadb9646cc",
     "kicad/analog-protected/analog-protected.kicad_pro": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
   },
-  "unit_tests_passed": 60
+  "unit_tests_passed": 60,
+  "update_2026_10_09": "Gallery regenerated with system-candidate (D-023/D-024 import banks outside OEM outline); core B/OEM PCBs unchanged."
 }

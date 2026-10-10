@@ -27,7 +27,7 @@ class ProjectStatusTests(unittest.TestCase):
         self.assertFalse(report["manufacturing_approved"])
         self.assertFalse(report["pcb_geometry_or_schematic_changed"])
         self.assertEqual(
-            report["native_media"], {"pngs": 6, "gifs": 2, "frames_per_gif": 16}
+            report["native_media"], {"pngs": 9, "gifs": 3, "frames_per_gif": 16}
         )
         for filename, expected in report["source_sha256"].items():
             self.assertEqual(
