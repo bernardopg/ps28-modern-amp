@@ -49,24 +49,61 @@ backplate por fora.
   paralela ao backplate, a ≈ 33 mm dele.
 - Os transistores de potência ficam entre a placa e o perfil, presos ao perfil.
 
-## Implicação para o TPA3255
+## Placa principal e perfil U — medidas do proprietário (2026-10-10, 2ª rodada)
 
-A base do perfil é **paralela à PCB e voltada para o lado dos componentes**, igual ao
-PowerPAD superior do TPA3255 DDV. O adaptador D-013 pode ser um **bloco reto** (cobre
-ou alumínio) entre o PowerPAD e a base, sem dobra em L, desde que o TPA fique na
-faixa da PCB em frente à base (65 mm ao longo do perfil × até 33 mm a partir do
-backplate). A espessura do bloco é a distância PCB→base menos a altura do
-encapsulamento DDV e a camada de interface térmica.
+Referencial da placa principal: em pé, perpendicular ao backplate; "superior" e
+"inferior" são as bordas perpendiculares ao backplate (instalado).
 
-Correção: a versão anterior deste arquivo, baseada só no desenho da p.17, concluía
-que a face do perfil era perpendicular à PCB e pedia adaptador em L. As fotos
-mostram a base paralela à PCB.
+| Medida | Valor | Situação |
+|---|---|---|
+| Base do perfil U | face externa **apoiada na PCB** (lado dos componentes); face interna a 6 mm | coerente: base 6 mm = espessura das pernas |
+| Perfil ao longo da placa | 38 mm da borda superior, 55 mm da inferior | ⇒ comprimento da placa **158 mm** (38 + 65 + 55) |
+| Furos de fixação da placa | M3, centros a 10 e 53 mm do backplate, 4,5 mm da borda, nas duas bordas (4 furos) | coerente com dois suportes L (BOM 2 × 89 × 9 × 1,6) |
+| Furos de ancoragem do perfil | M3 | — |
+| "111 mm" | ver abaixo | **ambígua** |
+
+Conferências que fecham:
+
+- Seção do U: 21 + 2 × 6 = 33 (largura externa) e base de 6 mm igual às pernas.
+- Posição no backplate: perfil em y 73…138 (furos 88/123 menos 15) ⇒ borda superior
+  da placa em y ≈ 35 e inferior em y ≈ 193 (y = 0 no topo do backplate).
+- Comprimento 158 mm contra o contorno inferido do `core-oem-refined` (153 mm, a
+  partir do desenho da p.17): diferença de 5 mm (3 %). O contorno inferido deve ser
+  substituído pelo medido.
+
+A medida "111 mm" não fecha em nenhuma leitura:
+
+1. Borda inferior da placa a 111 mm do backplate: impossível, os furos estão a 10 mm
+   do backplate e a base do perfil encosta na placa até 33 mm dele.
+2. Profundidade da placa (do backplate até a borda oposta) = 111 mm: excede a
+   carcaça traseira de 102 mm (BOM p.16) e a proporção do desenho da p.17 indica
+   ≈ 80 mm (o contorno inferido usou 79,1).
+3. Borda inferior da placa até a borda inferior do backplate: o cálculo pelos furos
+   do dissipador dá 107 mm; 111 deixaria o perfil 4 mm fora dos furos centrais.
+
+**Pedido:** medir a profundidade da placa principal, do backplate até a borda
+oposta, e dizer o que os 111 mm mediam.
+
+## Implicação para o TPA3255 — corrigida
+
+Com a base do perfil **encostada** na PCB, não há folga entre placa e base para o TPA.
+Os TO-3P originais ficam deitados sobre a perna externa (a 27…33 mm do backplate),
+cuja face fica **perpendicular à PCB**, como no desenho da p.17. A leitura da 1ª
+rodada de fotos (base paralela com folga) estava errada.
+
+Consequências para o layout:
+
+- **Keepout** na PCB: faixa de 33 mm a partir do backplate × 65 mm (y 73…138 no
+  backplate, 38…103 mm da borda superior da placa), sem componentes no lado de cima.
+- Contato térmico do TPA3255 DDV (PowerPAD no topo): TPA logo além da perna externa,
+  eixo longo ao longo do perfil, e **bloco de alumínio/cobre** apoiado no PowerPAD com
+  uma face lateral prensada na face da perna (onde ficavam os TO-3P). O calor sai pela
+  face de cima do TPA e entra na perna pela lateral do bloco: um bloco retangular
+  basta, sem dobra, desde que encoste nas duas faces. Fixação pelos furos M3 que
+  prendiam os TO-3P (a medir) ou por grampo; folga de terminais ≥ 1 mm da perna.
+- Altura da face da perna: 0…30 mm acima da PCB; comprimento útil 65 mm.
 
 ## Ainda falta (só cotas locais)
 
-1. Distância da superfície da placa principal (lado dos componentes) até a face
-   externa da base do perfil U.
-2. Altura da borda inferior da placa principal acima da face interna do backplate.
-3. Posição do perfil ao longo da placa: distância de uma borda da placa até uma
-   ponta do perfil.
-4. Rosca dos dois furos de ancoragem (M3 ou M4) e contorno/furos da placa principal.
+1. Profundidade da placa principal (backplate → borda oposta) e o que eram os 111 mm.
+2. Furos dos TO-3P na perna externa: quantidade, rosca e posição ao longo do perfil.
