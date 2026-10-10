@@ -137,4 +137,4 @@ livre da perna (a mais longe da PCB). Rosca **M3** (proprietário).
 
 ## Ainda falta
 
-1. Chicotes e vedação (critério do MECH-001), a registrar com o gabarito impresso 1:1.
+1. Gabarito impresso 1:1. Chicotes e vedação em `oem-harness-sealing.md`.

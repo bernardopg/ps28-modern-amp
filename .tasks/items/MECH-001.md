@@ -28,8 +28,8 @@ somas fecham com 200 × 300 e com a BOM do manual (≤ 1 mm). Placa principal 15
 backplate, 4,5 mm da borda). Base do perfil encostada na PCB: keepout 33 × 65 mm e TPA com bloco
 térmico prensado na perna externa. Posição: placa y 35…189 no backplate, perfil 38/51 mm das bordas (fita, ~1 mm).
 Furos TO-3P: 2, a 12,7 mm das pontas e 6,35 mm da borda livre da perna
-(39,6 mm entre centros; 50,7/90,3 mm da borda superior da placa). Rosca M3.
-Pendente: chicotes/vedação e gabarito 1:1.
+(39,6 mm entre centros; 50,7/90,3 mm da borda superior da placa). Rosca M3. Chicotes/vedação em `mechanical/oem-harness-sealing.md`.
+Pendente: passos dos conectores de 7 e 2 vias, polaridade do woofer e gabarito 1:1.
 Critérios seguem abertos.
 
 ## Incremento de integração original
