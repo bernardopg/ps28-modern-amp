@@ -94,14 +94,17 @@ mesmos valores, então o SPK− original é GND — não vale para a placa nova,
 - V AC: flutua de 0 a 30 V.
 - V DC com as três RCA em curto: flutua de −13 a +14 V.
 
-Sem entrada, a saída do preamp vai quase de trilho a trilho (±15,6 V) devagar o
-bastante para o multímetro DC acompanhar: **oscilação de baixa frequência
-(motorboating) no preamp original**, não zumbido de RCA aberta. Causa provável:
-eletrolíticos secos/desacoplamento (unidade de 2007), não diagnosticada.
-Consequência: o preamp original **não serve** para reaproveitamento sem reparo;
-reforça ELEC-004 (preamp novo). Não energizar com o woofer ligado e LEVEL alto:
-oscilação de poucos Hz vira excursão de cone.
+Contexto informado depois pelo proprietário: a unidade **já estava queimada**:
+Q108 (TO-3P de saída) com o encapsulamento estourado e R112 derretido. As tensões
+foram medidas com o estágio de potência danificado ligado ao mesmo nó. Portanto a
+oscilação do pino 1 **não isola o defeito no preamp**: pode vir do amplificador
+de potência em falha (realimentação/DC) carregando a linha. Estado do preamp
+original: **desconhecido**. ELEC-004 (preamp novo) continua sendo o caminho,
+porque o preamp exige ±15 V e não pode ser validado isoladamente sem bancada.
+**Não energizar mais a placa original**: Q108 em curto pode descarregar os
+trilhos ±48 V sem controle.
+
 ## Falta medir
 
 1. Qual fio do woofer é o + (marca no terminal do woofer).
-2. Se o subwoofer funcionava normalmente antes (som, ruído, "pulsos" do cone).
+2. Woofer: conferir raspagem da bobina (empurrar o cone devagar com as duas mãos).
