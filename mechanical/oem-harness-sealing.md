@@ -43,7 +43,13 @@ principal (J101), escala 2000 Ω. "1" no display = acima da escala (> 2 kΩ).
 | 6 | preto | pico de 150 Ω, depois > 2 kΩ | capacitor carregando: trilho com bulk menor |
 | 7 | preto | > 2 kΩ | alta impedância: controle ou sinal |
 
-Hipótese, não conclusão: 4 = GND, 5 e 6 = alimentações do preamp (provavelmente
+Escala 20 kΩ: pinos 1, 3 e 5 sobem continuamente (capacitor em série ou para GND);
+pino 2 > 20 kΩ (aberto); pino 4 0,00; pino 6 começa **negativo** e sobe para zero
+(capacitor com carga residual negativa: trilho negativo); pino 7 flutua ao toque
+(entrada de alta impedância, ex.: base/CMOS de controle).
+
+Hipótese revisada: 4 = GND, 5 = +V, 6 = −V, 1 e 3 = áudio acoplado por capacitor,
+2 e 7 = controle/sinal de alta impedância. Ainda 4 = GND, 5 e 6 = alimentações do preamp (provavelmente
 ±), 1 = áudio. Confirmação depende das tensões ligado.
 ## Falta medir
 
