@@ -23,9 +23,10 @@ Medir plate e modelar envelope, atendendo docs/requirements.md e gates docs/safe
 
 2026-10-10: medidas do proprietário de backplate, dissipador externo (posição, 8 furos)
 e perfil U (65 × 33 × 30, furos a 35 mm) em `mechanical/oem-heatsink-measurements.md`;
-somas fecham com 200 × 300 e com a BOM do manual (≤ 1 mm). Placa principal: 158 mm de comprimento, 4 furos M3 (10/53 mm do backplate,
-4,5 mm da borda). Base do perfil encostada na PCB: keepout 33 × 65 mm e TPA com bloco
-térmico prensado na perna externa. Profundidade da placa pendente ("111 mm" ambígua).
+somas fecham com 200 × 300 e com a BOM do manual (≤ 1 mm). Placa principal 154 × 81 × 1 mm, face dos componentes a 90 mm da borda lateral
+(fecha 200 mm e põe os furos do perfil no meio da perna), 4 furos M3 (10/53 mm do
+backplate, 4,5 mm da borda). Base do perfil encostada na PCB: keepout 33 × 65 mm e TPA com bloco
+térmico prensado na perna externa. Pendente: folga 38 ou 55 mm (soma dá 158, não 154) e furos dos TO-3P.
 Critérios seguem abertos.
 
 ## Incremento de integração original

@@ -28,7 +28,7 @@
   },
   "central_holes": {
     "x": 75.0,
-    "x_status": "hypothesis: equal fin pitch 9 mm, 4th groove center",
+    "x_status": "confirmed by geometry: component face x=90, legs 30 mm toward x=60, holes mid-leg at 75",
     "upper_y": {
       "from_heatsink_top": 40,
       "calculated": 88.0,
@@ -99,19 +99,24 @@
   "checks": {
     "heatsink_x_sum": 200,
     "heatsink_y_sum": 300,
-    "upper_hole_discrepancy_mm": 0.9
+    "upper_hole_discrepancy_mm": 0.9,
+    "backplate_width_sum": 200,
+    "profile_gap_sum_vs_length": [
+      158,
+      154
+    ]
   },
   "inference": "Base rests on the PCB, so the TO-3P sat on the outer leg face, perpendicular to the PCB (as in manual p.17). TPA3255 DDV goes just beyond the outer leg with a rectangular block touching the PowerPAD and the leg face. Supersedes the 'straight block under the base' reading.",
   "open": [
-    "main PCB depth and meaning of 111 mm",
+    "which profile gap is right (38 top or 55 bottom)",
     "TO-3P holes on the outer leg"
   ],
   "fabrication_approved": false,
   "main_pcb": {
-    "length_mm": 158,
-    "length_basis": "38 + 65 + 55 (profile to edges)",
-    "depth_mm": null,
-    "depth_note": "owner value 111 ambiguous: conflicts with 102 mm housing, holes and heatsink alignment",
+    "length_mm": 154,
+    "length_basis": "owner measurement; 38+65+55=158 disagrees by 4 mm (open)",
+    "depth_mm": 81,
+    "depth_note": "81 mm fits the 102 mm rear housing; inferred outline was 153 x 79.1",
     "mounting_holes": {
       "thread": "M3",
       "from_backplate_mm": [
@@ -121,9 +126,9 @@
       "from_edge_mm": 4.5,
       "edges": "both (4 holes)"
     },
-    "edges_on_backplate_y_mm": [
-      35,
-      193
-    ]
+    "edges_on_backplate_y_mm": "35..189 if 38 mm gap is right, 39..193 if 55 mm gap is right",
+    "thickness_mm": 1.0,
+    "component_face_x_outside_frame_mm": 90,
+    "opposite_side_to_edge_mm": 109
   }
 }

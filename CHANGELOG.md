@@ -17,7 +17,7 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 ### Added
 - MECH-001: medidas do proprietário de backplate, dissipador externo e perfil U em
   `mechanical/oem-heatsink-measurements.{md,json}`, conferidas contra a BOM do manual;
-  placa principal 158 mm com 4 furos M3, base do perfil apoiada na PCB (keepout 33 × 65 mm, bloco térmico do TPA na perna externa).
+  placa principal 154 × 81 × 1 mm com 4 furos M3, base do perfil apoiada na PCB (keepout 33 × 65 mm, bloco térmico do TPA na perna externa).
 - `docs/production-roadmap.md`, ELEC-004 (front-end D-022, issue #20), estado do
   projeto reescrito para a candidata de sistema; auditoria dos footprints DGK0008A e
   G6K-2F contra os desenhos de fabricante.

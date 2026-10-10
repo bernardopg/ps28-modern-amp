@@ -71,18 +71,35 @@ Conferências que fecham:
   partir do desenho da p.17): diferença de 5 mm (3 %). O contorno inferido deve ser
   substituído pelo medido.
 
-A medida "111 mm" não fecha em nenhuma leitura:
+### 3ª rodada — contorno e posição da placa
 
-1. Borda inferior da placa a 111 mm do backplate: impossível, os furos estão a 10 mm
-   do backplate e a base do perfil encosta na placa até 33 mm dele.
-2. Profundidade da placa (do backplate até a borda oposta) = 111 mm: excede a
-   carcaça traseira de 102 mm (BOM p.16) e a proporção do desenho da p.17 indica
-   ≈ 80 mm (o contorno inferido usou 79,1).
-3. Borda inferior da placa até a borda inferior do backplate: o cálculo pelos furos
-   do dissipador dá 107 mm; 111 deixaria o perfil 4 mm fora dos furos centrais.
+| Medida | Valor |
+|---|---|
+| Placa principal | **154 × 81 mm** (ao longo do backplate × profundidade), 1 mm de espessura |
+| Face dos componentes → borda lateral do backplate | 90 mm de um lado, 109 mm do outro |
 
-**Pedido:** medir a profundidade da placa principal, do backplate até a borda
-oposta, e dizer o que os 111 mm mediam.
+Conferências:
+
+- 90 + 1 + 109 = 200 mm: fecha com a largura do backplate.
+- Lado dos 90 mm: no referencial de fora, a face dos componentes fica em x = 90. As
+  pernas do perfil (30 mm) vão da face até x = 60, e os furos centrais em x = 75
+  caem **no meio da perna** (15 mm da face). O outro lado (x = 110) deixaria os furos
+  a 35 mm da face, fora da perna de 30 mm. Isso confirma a hipótese x = 75 e mostra
+  que os 90 mm são medidos da borda do lado do dissipador (39 mm).
+- Profundidade 81 mm: cabe na carcaça traseira de 102 mm (BOM p.16); furos de fixação
+  a 10 e 53 mm do backplate ficam dentro. O contorno inferido do desenho (79,1 mm)
+  errou por 1,9 mm.
+- Comprimento 154 mm contra o inferido 153 mm: 1 mm.
+- A medida "111 mm" da rodada anterior fica substituída por estas.
+
+**Única discrepância:** 38 + 65 + 55 = 158 mm, mas a placa tem 154 mm. Faltam 4 mm
+nas folgas do perfil até as bordas. Pelos furos do dissipador (perfil em y 73…138),
+borda superior a 38 mm do perfil ⇒ placa em y 35…189 e folga inferior 51 mm; ou folga
+inferior 55 mm ⇒ placa em y 39…193 e folga superior 34 mm. Conferir qual das duas
+folgas (38 ou 55) está certa.
+
+Espessura de 1 mm é incomum (padrão 1,6 mm): a placa nova pode usar 1,6 mm se a
+fixação nos suportes L e a altura dos terminais permitirem; conferir na montagem.
 
 ## Implicação para o TPA3255 — corrigida
 
@@ -105,5 +122,5 @@ Consequências para o layout:
 
 ## Ainda falta (só cotas locais)
 
-1. Profundidade da placa principal (backplate → borda oposta) e o que eram os 111 mm.
+1. Qual folga está certa: 38 mm (borda superior) ou 55 mm (borda inferior).
 2. Furos dos TO-3P na perna externa: quantidade, rosca e posição ao longo do perfil.
