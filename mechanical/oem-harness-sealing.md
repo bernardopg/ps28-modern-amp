@@ -51,6 +51,23 @@ pino 2 > 20 kΩ (aberto); pino 4 0,00; pino 6 começa **negativo** e sobe para z
 Hipótese revisada: 4 = GND, 5 = +V, 6 = −V, 1 e 3 = áudio acoplado por capacitor,
 2 e 7 = controle/sinal de alta impedância. Ainda 4 = GND, 5 e 6 = alimentações do preamp (provavelmente
 ±), 1 = áudio. Confirmação depende das tensões ligado.
+## Chicote de 7 vias — tensões ligado (2026-10-10)
+
+V DC contra o pino 4, volume no mínimo, sem sinal.
+
+| Pino | Fio | V DC | Função provável |
+|---|---|---|---|
+| 1 | branco | 0,01–0,02 | áudio (acoplado, 0 V DC) |
+| 2 | preto | −12,5 | controle (mute/standby?) ou trilho derivado — a confirmar |
+| 3 | preto | −15,8 | **−15 V** do preamp |
+| 4 | preto | 0 | **GND** |
+| 5 | preto | +15,5 | **+15 V** do preamp |
+| 6 | preto | 0,01 | áudio ou retorno de sinal (acoplado) |
+| 7 | preto | 0,00 | controle de alta impedância (auto-on/mute?) |
+
+Conclusão: o preamp original é alimentado em **±15 V** pela placa principal. A placa
+nova (D-021) só tem PVDD ≈ 42–50 V e AUX 12 V; reaproveitar o preamp exige gerar ±15 V.
+
 ## Falta medir
 
 1. Qual fio do woofer é o + (marca no terminal do woofer).
