@@ -89,7 +89,19 @@ mesmos valores, então o SPK− original é GND — não vale para a placa nova,
   DC lendo ruído/zumbido de RCA aberta amplificado, ou offset DC real na saída do
   preamp. A primeira medida (0,01 V) não teve esse efeito. **A confirmar** com V AC
   e com as RCA em curto.
+### Pino 1 — confirmação (LEVEL médio)
+
+- V AC: flutua de 0 a 30 V.
+- V DC com as três RCA em curto: flutua de −13 a +14 V.
+
+Sem entrada, a saída do preamp vai quase de trilho a trilho (±15,6 V) devagar o
+bastante para o multímetro DC acompanhar: **oscilação de baixa frequência
+(motorboating) no preamp original**, não zumbido de RCA aberta. Causa provável:
+eletrolíticos secos/desacoplamento (unidade de 2007), não diagnosticada.
+Consequência: o preamp original **não serve** para reaproveitamento sem reparo;
+reforça ELEC-004 (preamp novo). Não energizar com o woofer ligado e LEVEL alto:
+oscilação de poucos Hz vira excursão de cone.
 ## Falta medir
 
 1. Qual fio do woofer é o + (marca no terminal do woofer).
-2. Pino 1 em V AC (escala 20 V AC) e em V DC com as entradas RCA em curto.
+2. Se o subwoofer funcionava normalmente antes (som, ruído, "pulsos" do cone).
