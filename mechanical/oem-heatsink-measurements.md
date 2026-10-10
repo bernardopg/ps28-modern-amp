@@ -124,7 +124,7 @@ Consequências para o layout:
 ## Furos dos TO-3P na perna externa (5ª rodada)
 
 Dois furos, a 1/2" (12,7 mm) de cada ponta do perfil e a 1/4" (6,35 mm) da borda
-livre da perna (a mais longe da PCB). Rosca não informada.
+livre da perna (a mais longe da PCB). Rosca **M3** (proprietário).
 
 - Ao longo do perfil: 12,7 / 52,3 mm de uma ponta; entre centros **39,6 mm**;
   12,7 + 39,6 + 12,7 = 65 ✓.
@@ -137,5 +137,4 @@ livre da perna (a mais longe da PCB). Rosca não informada.
 
 ## Ainda falta
 
-1. Rosca dos furos dos TO-3P (M3 provável, não informada).
-2. Chicotes e vedação (critério do MECH-001), a registrar com o gabarito impresso 1:1.
+1. Chicotes e vedação (critério do MECH-001), a registrar com o gabarito impresso 1:1.

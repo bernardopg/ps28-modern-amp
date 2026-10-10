@@ -94,7 +94,7 @@
         90.3
       ],
       "height_above_pcb_mm": 23.65,
-      "thread": null
+      "thread": "M3"
     }
   },
   "orientation": {
@@ -120,7 +120,6 @@
   },
   "inference": "Base rests on the PCB, so the TO-3P sat on the outer leg face, perpendicular to the PCB (as in manual p.17). TPA3255 DDV goes just beyond the outer leg with a rectangular block touching the PowerPAD and the leg face. Supersedes the 'straight block under the base' reading.",
   "open": [
-    "TO-3P hole thread",
     "harness and acoustic sealing"
   ],
   "fabrication_approved": false,
