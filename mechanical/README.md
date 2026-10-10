@@ -5,7 +5,7 @@ para PowerPAD superior se necessário. **D-014 fixa os mounting points e sistema
 a placa nova se adapta à original, sem nova furação no plate. O manual fornece cotas
 nominais de plate, carcaça, dissipadores e suportes; não entrecentros/escala1:1 da PCB.
 Ver [referência original](original-board-reference.md), [conferência final](measurement-request.md),
-[parâmetros/limites](ps28-original-integration.json), [envelopes](ps28-core-envelope.scad)
+[parâmetros/limites](ps28-original-integration.json), [medidas do dissipador e perfil U](oem-heatsink-measurements.md), [chicotes e vedação](oem-harness-sealing.md), [envelopes](ps28-core-envelope.scad)
 e [revisão atual](../docs/selected-core.md).
 
 MECH-001: medir plate, furos, profundidade, chicotes, dissipador e vedação acústica.

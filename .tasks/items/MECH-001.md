@@ -5,7 +5,7 @@ status: Blocked
 milestone: M1
 sprint: S02
 depends_on: SYS-001
-updated: 2026-10-08
+updated: 2026-10-10
 ---
 
 # MECH-001 — Medir plate e modelar envelope
@@ -21,7 +21,17 @@ Medir plate e modelar envelope, atendendo docs/requirements.md e gates docs/safe
 
 ## Evidência
 
-Pendente. Não marcar critérios sem evidência.
+2026-10-10: medidas do proprietário de backplate, dissipador externo (posição, 8 furos)
+e perfil U (65 × 33 × 30, furos a 35 mm) em `mechanical/oem-heatsink-measurements.md`;
+somas fecham com 200 × 300 e com a BOM do manual (≤ 1 mm). Placa principal 154 × 81 × 1 mm, face dos componentes a 90 mm da borda lateral
+(fecha 200 mm e põe os furos do perfil no meio da perna), 4 furos M3 (10/53 mm do
+backplate, 4,5 mm da borda). Base do perfil encostada na PCB: keepout 33 × 65 mm e TPA com bloco
+térmico prensado na perna externa. Posição: placa y 35…189 no backplate, perfil 38/51 mm das bordas (fita, ~1 mm).
+Furos TO-3P: 2, a 12,7 mm das pontas e 6,35 mm da borda livre da perna
+(39,6 mm entre centros; 50,7/90,3 mm da borda superior da placa). Rosca M3. Chicotes/vedação em `mechanical/oem-harness-sealing.md`.
+Passos: 7 vias 2,5 mm, woofer 4 mm. Pendente: polaridade do woofer, pinagem
+do 7 vias e gabarito 1:1.
+Critérios seguem abertos.
 
 ## Incremento de integração original
 D-013 seleciona gabinete/plate/dissipador originais com adaptador de cobre superior.

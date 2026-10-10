@@ -1,0 +1,153 @@
+{
+  "source": "Owner manual measurements on the original unit, 2026-10-10; ruler/caliper, resolution not stated; tape measure, about 1 mm error",
+  "frame": "Backplate seen from OUTSIDE (heatsink side); origin top-left; x right, y down; mm",
+  "backplate": {
+    "w": 200,
+    "h": 300,
+    "status": "measured"
+  },
+  "external_heatsink": {
+    "x": [
+      39,
+      111
+    ],
+    "y": [
+      48,
+      166
+    ],
+    "depth": 25,
+    "fins": 8,
+    "grooves": 7,
+    "edges_to_backplate": {
+      "left": 39,
+      "top": 48,
+      "right": 89,
+      "bottom": 134
+    },
+    "status": "measured"
+  },
+  "central_holes": {
+    "x": 75.0,
+    "x_status": "confirmed by geometry: component face x=90, legs 30 mm toward x=60, holes mid-leg at 75",
+    "upper_y": {
+      "from_heatsink_top": 40,
+      "calculated": 88.0,
+      "measured_from_backplate_top": 88.9
+    },
+    "lower_y": {
+      "from_heatsink_top": 75,
+      "measured_from_backplate_top": 123
+    },
+    "pitch": 35,
+    "role": "U-profile anchoring"
+  },
+  "fin_holes": {
+    "fins": [
+      2,
+      6
+    ],
+    "x_hypothesis": [
+      52.5,
+      88.5
+    ],
+    "y_from_heatsink_top": [
+      15,
+      "58 from top or bottom (unknown)",
+      103
+    ],
+    "y_backplate": [
+      63,
+      [
+        106,
+        108
+      ],
+      151
+    ],
+    "count": 6
+  },
+  "u_profile": {
+    "length": 65,
+    "leg_height": 30,
+    "inner_gap": 21,
+    "leg_thickness": 6,
+    "outer_width": 33,
+    "holes": 2,
+    "hole_to_end": 15,
+    "hole_pitch": 35,
+    "oem_bom": "323-AL-00020-0LAE 65x32x31 (manual p.15)",
+    "y_span_calculated": [
+      73.0,
+      138.0
+    ],
+    "status": "measured",
+    "base_thickness_mm": 6,
+    "base_outer_face": "rests on PCB component side",
+    "anchor_thread": "M3",
+    "pcb_keepout": "33 mm from backplate x 65 mm, 38..103 mm from PCB upper edge",
+    "to3p_holes": {
+      "count": 2,
+      "from_profile_ends_mm": 12.7,
+      "from_leg_free_edge_mm": 6.35,
+      "pitch_mm": 39.6,
+      "from_pcb_upper_edge_mm": [
+        50.7,
+        90.3
+      ],
+      "height_above_pcb_mm": 23.65,
+      "thread": "M3"
+    }
+  },
+  "orientation": {
+    "pcb_to_backplate_deg": 90,
+    "base": "contacts PCB / power-device region",
+    "one_leg": "on backplate inner face",
+    "anchors": "coincide with heatsink central holes",
+    "photo_confirmed": "2026-10-10, 4 owner photos (not in Git)",
+    "main_pcb": "vertical, perpendicular to backplate, held by aluminium L bracket",
+    "boards": "two: main power PCB next to the U profile, preamp PCB behind the panel controls",
+    "u_base": "parallel to the main PCB and resting on its component side (no gap)",
+    "u_legs": "one on backplate (thermal paste), the other parallel to it at about 33 mm"
+  },
+  "checks": {
+    "heatsink_x_sum": 200,
+    "heatsink_y_sum": 300,
+    "upper_hole_discrepancy_mm": 0.9,
+    "backplate_width_sum": 200,
+    "profile_gap_sum_vs_length": [
+      158,
+      154
+    ]
+  },
+  "inference": "Base rests on the PCB, so the TO-3P sat on the outer leg face, perpendicular to the PCB (as in manual p.17). TPA3255 DDV goes just beyond the outer leg with a rectangular block touching the PowerPAD and the leg face. Supersedes the 'straight block under the base' reading.",
+  "open": [
+    "harness and acoustic sealing"
+  ],
+  "fabrication_approved": false,
+  "main_pcb": {
+    "length_mm": 154,
+    "length_basis": "owner 154 mm; backplate edges 35 top / 110 bottom give 155 (1 mm, tape)",
+    "depth_mm": 81,
+    "depth_note": "81 mm fits the 102 mm rear housing; inferred outline was 153 x 79.1",
+    "mounting_holes": {
+      "thread": "M3",
+      "from_backplate_mm": [
+        10,
+        53
+      ],
+      "from_edge_mm": 4.5,
+      "edges": "both (4 holes)"
+    },
+    "edges_on_backplate_y_mm": [
+      35,
+      189
+    ],
+    "thickness_mm": 1.0,
+    "component_face_x_outside_frame_mm": 90,
+    "opposite_side_to_edge_mm": 109,
+    "profile_gaps_mm": {
+      "top": 38,
+      "bottom": 51,
+      "note": "earlier 55 was ~3 mm high"
+    }
+  }
+}
