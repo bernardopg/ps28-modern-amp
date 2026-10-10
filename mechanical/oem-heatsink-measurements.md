@@ -35,26 +35,38 @@ ranhura cai em 75, no meio do dissipador. Conferir com régua.
 - Furo intermediário das aletas: 58 mm de uma das bordas, sem saber qual. Com 15 e
   103 nas pontas, o meio exato seria 59; fica 106 ou 108 do topo do backplate.
 
-## Implicação para o TPA3255 — achado
+## Orientação confirmada por fotos (2026-10-10)
 
-No desenho de componentes da placa original (manual p.17), Q107/Q108 (TO-3P) aparecem
-de perfil, em pé, numa fila de ≈ 65 mm: **a face do perfil U onde eles encostam é
-perpendicular à PCB**. O TPA3255 DDV tem o PowerPAD **no topo do encapsulamento**, que
-fica paralelo à PCB. Ele **não encosta direto** no perfil U com a placa na orientação
-original. Isso é inferência do desenho e da descrição, a confirmar por foto.
+Quatro fotos do proprietário, fora do Git: unidade aberta de lado, de cima e
+backplate por fora.
 
-Isso é compatível com D-013 (adaptador de cobre no PowerPAD superior), mas o
-adaptador precisa **virar 90°**: uma face plana sobre o TPA, paralela à PCB, e outra
-parafusada na face do perfil U, perpendicular à PCB. Não muda backplate nem
-dissipador (D-014). Alternativa, se o adaptador em L não couber: placa-filha
-vertical só com o TPA e seu desacoplamento, PowerPAD direto no perfil.
+- A placa principal fica **em pé**, perpendicular ao backplate, presa por suporte
+  em L de alumínio (BOM 362-FE-00013) aparafusado no backplate.
+- Há **duas placas**: a principal (potência), junto do perfil U, e a do preamp, do
+  outro lado, atrás dos controles LEVEL/CROSSOVER/PHASE e das RCA.
+- O perfil U fica deitado no backplate, com pasta térmica: uma perna no backplate e
+  a base em pé, **paralela à placa principal**, voltada para ela. A outra perna fica
+  paralela ao backplate, a ≈ 33 mm dele.
+- Os transistores de potência ficam entre a placa e o perfil, presos ao perfil.
+
+## Implicação para o TPA3255
+
+A base do perfil é **paralela à PCB e voltada para o lado dos componentes**, igual ao
+PowerPAD superior do TPA3255 DDV. O adaptador D-013 pode ser um **bloco reto** (cobre
+ou alumínio) entre o PowerPAD e a base, sem dobra em L, desde que o TPA fique na
+faixa da PCB em frente à base (65 mm ao longo do perfil × até 33 mm a partir do
+backplate). A espessura do bloco é a distância PCB→base menos a altura do
+encapsulamento DDV e a camada de interface térmica.
+
+Correção: a versão anterior deste arquivo, baseada só no desenho da p.17, concluía
+que a face do perfil era perpendicular à PCB e pedia adaptador em L. As fotos
+mostram a base paralela à PCB.
 
 ## Ainda falta (só cotas locais)
 
-- Foto do perfil U montado com a placa original, mostrando qual face toca os TO-3P
-  e qual perna toca o backplate.
-- Distância da face do perfil (onde estão os TO-3P) até a superfície da PCB e a
-  borda da PCB mais próxima do backplate.
-- Contorno e furos de fixação da placa original (suportes L 89 × 9 × 1,6 e suporte
-  11,75 × 8,5 × 12,5 da BOM): posição em relação ao perfil U.
-- Rosca/diâmetro dos dois furos de ancoragem do perfil (M3 ou M4).
+1. Distância da superfície da placa principal (lado dos componentes) até a face
+   externa da base do perfil U.
+2. Altura da borda inferior da placa principal acima da face interna do backplate.
+3. Posição do perfil ao longo da placa: distância de uma borda da placa até uma
+   ponta do perfil.
+4. Rosca dos dois furos de ancoragem (M3 ou M4) e contorno/furos da placa principal.

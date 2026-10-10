@@ -85,19 +85,24 @@
     "pcb_to_backplate_deg": 90,
     "base": "contacts PCB / power-device region",
     "one_leg": "on backplate inner face",
-    "anchors": "coincide with heatsink central holes"
+    "anchors": "coincide with heatsink central holes",
+    "photo_confirmed": "2026-10-10, 4 owner photos (not in Git)",
+    "main_pcb": "vertical, perpendicular to backplate, held by aluminium L bracket",
+    "boards": "two: main power PCB next to the U profile, preamp PCB behind the panel controls",
+    "u_base": "parallel to the main PCB, facing its component side",
+    "u_legs": "one on backplate (thermal paste), the other parallel to it at about 33 mm"
   },
   "checks": {
     "heatsink_x_sum": 200,
     "heatsink_y_sum": 300,
     "upper_hole_discrepancy_mm": 0.9
   },
-  "inference": "Manual p.17: TO-3P Q107/Q108 stand edge-on in a ~65 mm row, so the profile contact face is perpendicular to the PCB; TPA3255 DDV top PowerPAD is parallel to the PCB. To be confirmed by photo.",
+  "inference": "Photos: U base is parallel to the main PCB and faces its component side, like the TPA3255 DDV top PowerPAD; D-013 adapter can be a straight block (thickness = PCB-to-base gap minus package height and TIM). Supersedes the earlier perpendicular-face inference from manual p.17.",
   "open": [
-    "photo of profile with original PCB",
-    "profile contact face to PCB surface distance",
-    "PCB outline and mounting points vs profile",
-    "anchor thread size"
+    "PCB component surface to U base outer face distance",
+    "PCB lower edge height above backplate inner face",
+    "profile position along the PCB",
+    "anchor thread size; main PCB outline and mounting holes"
   ],
   "fabrication_approved": false
 }
