@@ -28,6 +28,23 @@ principal só pelo chicote de 7 vias. AC e chave POWER não entram na placa prin
   filtro LC ao header (ou por relé novo de proteção DC, REQ-007).
 - Não abrir furos novos na carcaça nem mexer na vedação (D-014).
 
+## Chicote de 7 vias — resistência para GND (2026-10-10)
+
+Unidade desligada, chicote desconectado, ponta preta no CT de T1, lado da placa
+principal (J101), escala 2000 Ω. "1" no display = acima da escala (> 2 kΩ).
+
+| Pino | Fio | Leitura | Interpretação provável |
+|---|---|---|---|
+| 1 | branco | 755 Ω | sinal (entrada de áudio do amplificador?) |
+| 2 | preto | > 2 kΩ | alta impedância: controle ou sinal |
+| 3 | preto | 475 Ω | sinal ou alimentação via resistor |
+| 4 | preto | 0,5 Ω | **GND** |
+| 5 | preto | sobe de ~1900 até > 2 kΩ | capacitor carregando: **trilho de alimentação** com bulk grande |
+| 6 | preto | pico de 150 Ω, depois > 2 kΩ | capacitor carregando: trilho com bulk menor |
+| 7 | preto | > 2 kΩ | alta impedância: controle ou sinal |
+
+Hipótese, não conclusão: 4 = GND, 5 e 6 = alimentações do preamp (provavelmente
+±), 1 = áudio. Confirmação depende das tensões ligado.
 ## Falta medir
 
 1. Qual fio do woofer é o + (marca no terminal do woofer).
