@@ -83,7 +83,19 @@
     "base_thickness_mm": 6,
     "base_outer_face": "rests on PCB component side",
     "anchor_thread": "M3",
-    "pcb_keepout": "33 mm from backplate x 65 mm, 38..103 mm from PCB upper edge"
+    "pcb_keepout": "33 mm from backplate x 65 mm, 38..103 mm from PCB upper edge",
+    "to3p_holes": {
+      "count": 2,
+      "from_profile_ends_mm": 12.7,
+      "from_leg_free_edge_mm": 6.35,
+      "pitch_mm": 39.6,
+      "from_pcb_upper_edge_mm": [
+        50.7,
+        90.3
+      ],
+      "height_above_pcb_mm": 23.65,
+      "thread": null
+    }
   },
   "orientation": {
     "pcb_to_backplate_deg": 90,
@@ -108,7 +120,8 @@
   },
   "inference": "Base rests on the PCB, so the TO-3P sat on the outer leg face, perpendicular to the PCB (as in manual p.17). TPA3255 DDV goes just beyond the outer leg with a rectangular block touching the PowerPAD and the leg face. Supersedes the 'straight block under the base' reading.",
   "open": [
-    "TO-3P holes on the outer leg"
+    "TO-3P hole thread",
+    "harness and acoustic sealing"
   ],
   "fabrication_approved": false,
   "main_pcb": {

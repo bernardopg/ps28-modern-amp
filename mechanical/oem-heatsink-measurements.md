@@ -121,6 +121,21 @@ Consequências para o layout:
   prendiam os TO-3P (a medir) ou por grampo; folga de terminais ≥ 1 mm da perna.
 - Altura da face da perna: 0…30 mm acima da PCB; comprimento útil 65 mm.
 
-## Ainda falta (só cotas locais)
+## Furos dos TO-3P na perna externa (5ª rodada)
 
-1. Furos dos TO-3P na perna externa: quantidade, rosca e posição ao longo do perfil.
+Dois furos, a 1/2" (12,7 mm) de cada ponta do perfil e a 1/4" (6,35 mm) da borda
+livre da perna (a mais longe da PCB). Rosca não informada.
+
+- Ao longo do perfil: 12,7 / 52,3 mm de uma ponta; entre centros **39,6 mm**;
+  12,7 + 39,6 + 12,7 = 65 ✓.
+- Na placa: 38 + 12,7 = **50,7 mm** e 38 + 52,3 = **90,3 mm** da borda superior.
+- Altura acima da PCB: 30 − 6,35 = **23,65 mm**; no eixo do backplate, a perna vai
+  de 27 a 33 mm.
+- Uso para o TPA3255: o bloco térmico pode ser preso por um desses furos, ou pelos
+  dois com o bloco cobrindo 39,6 mm. O TPA (corpo 14 mm, HTSSOP-44) cabe entre ou sob
+  um furo; centro do PowerPAD a ≈ 38 mm do backplate (perna em 33 + folga de terminais).
+
+## Ainda falta
+
+1. Rosca dos furos dos TO-3P (M3 provável, não informada).
+2. Chicotes e vedação (critério do MECH-001), a registrar com o gabarito impresso 1:1.
