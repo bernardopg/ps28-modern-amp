@@ -13,7 +13,7 @@ Estado detalhado em [development-status.md](development-status.md).
 | Sequenciador D-020/D-023 | Capturado, modelo lógico com mutações |
 | Interface D-019/D-024/D-024a (relé, mute, janelas, clamp) | Capturada, 1566 casos ngspice |
 | Front-end de áudio D-022 (RCA, crossover, LEVEL, fase) | **Não capturado** (ELEC-004) |
-| Placement no contorno OEM | **Não feito**: contorno medido 154 × 81 aplicado; 34 conflitos DRC + 118 footprints fora |
+| Placement no contorno OEM | **Estudo**: 204 peças no contorno medido 154 × 81, DRC só silkscreen; revisão de layout pendente |
 | Roteamento | **Não feito**: 470 conexões |
 | BOM/CPL JLCPCB com LCSC | **Não feito** |
 

@@ -6,6 +6,14 @@ Substituição do plate amplifier do Infinity Primus PS28 por um amplificador Cl
 preservando gabinete, dutos e woofer. Projeto de engenharia em fase de requisitos,
 **não um circuito pronto para fabricar**.
 
+## Estado atual em 3D
+
+![Candidata de sistema — render KiCad mais recente](docs/images/kicad-3d/system-isometric.png)
+
+Candidata `kicad/system-candidate/` com todos os componentes posicionados no contorno OEM
+medido (154 × 81 mm): estudo de placement, **sem roteamento e sem aprovação de
+fabricação**. Mais vistas em [docs/images/kicad-3d](docs/images/kicad-3d/README.md).
+
 ## Baseline proposta — não congelada
 
 TPA3255 PBTL mono; transformador original T1 reaproveitado com fonte secundária

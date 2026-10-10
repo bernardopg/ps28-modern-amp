@@ -25,19 +25,11 @@ DESIGNS = {
     "oem": ROOT / "kicad/core-oem-refined/ps28-modern.kicad_pcb",
     "system": ROOT / "kicad/system-candidate/system-candidate.kicad_pcb",
 }
-# Camera framing so the off-outline import banks of the system candidate are visible.
-CAMERA = {
-    "system": {
-        "isometric": ["--zoom", "0.31", "--pan", "-10,-1,0"],
-        "top": ["--zoom", "0.36", "--pan", "-14,1,0"],
-        "bottom": ["--zoom", "0.36", "--pan", "16,1,0"],
-        "orbit": ["--zoom", "0.20"],
-    }
-}
+CAMERA = {}  # per-design kicad-cli camera overrides, none needed now
 FOOTERS = {
     "selected": "NUCLEO APENAS | D-018/D-019 SEM PCB INTEGRADA",
     "oem": "NUCLEO APENAS | D-018/D-019 SEM PCB INTEGRADA",
-    "system": "CONTORNO OEM MEDIDO 154x81 + PERFIL U; BANCOS FORA DO CONTORNO; SEM PLACEMENT/ROTA",
+    "system": "CONTORNO OEM MEDIDO 154x81 + PERFIL U; 204 PECAS POSICIONADAS (ESTUDO); SEM ROTEAMENTO",
 }
 
 

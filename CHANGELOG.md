@@ -17,7 +17,8 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 ### Added
 - PCB-001: candidata usa o contorno OEM medido 154 × 81 mm, 4 furos M3 e área
   proibida do perfil U (65 × 33 mm) no lugar do contorno inferido 153 × 79,1;
-  DRC expõe 34 conflitos de placement a resolver.
+  placement de estudo de todos os 204 componentes (topo/fundo), DRC só com silkscreen;
+  README mostra o render 3D mais recente.
 - MECH-001: medidas do proprietário de backplate, dissipador externo e perfil U em
   `mechanical/oem-heatsink-measurements.{md,json}`, conferidas contra a BOM do manual;
   placa principal 154 × 81 × 1 mm com 4 furos M3, base do perfil apoiada na PCB (keepout 33 × 65 mm, bloco térmico do TPA na perna externa).

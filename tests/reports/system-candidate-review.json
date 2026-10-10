@@ -139,8 +139,11 @@
       65,
       33
     ],
-    "drc_violations": 34,
+    "drc_violations": 105,
     "drc_unrouted": 470,
-    "note": "violations are real placement conflicts with measured OEM mechanics"
+    "note": "violations are real placement conflicts with measured OEM mechanics",
+    "orientation": "x=20 relay (upper) end, x=174 transformer (lower) end; owner-confirmed",
+    "placement": "study: all 204 parts inside outline, 4 holes board-only",
+    "drc_violation_kinds": "silkscreen only (overlap/clipping); 0 courtyard, 0 short, 0 keepout"
   }
 }

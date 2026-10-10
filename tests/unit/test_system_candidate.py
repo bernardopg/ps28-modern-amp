@@ -66,6 +66,20 @@ class SystemCandidateTests(unittest.TestCase):
         self.assertIn('"OEM_U_PROFILE"', pcb)
         self.assertEqual(pcb.count('(footprint "MountingHole:MountingHole_3.2mm_M3"'), 4)
 
+    def test_every_footprint_inside_outline_and_none_on_profile(self):
+        import re
+        m = candidate.oem_mechanics()
+        x0, y0, x1, y1 = m["outline"]
+        kx0, ky0, kx1, ky1 = m["profile_keepout"]
+        pcb = (ROOT / "kicad/system-candidate/system-candidate.kicad_pcb").read_text()
+        blocks = re.findall(r'\(footprint "[^"]+"\s*\(layer "([FB])\.Cu"\)(?:.|\n)*?\(at ([-\d.]+) ([-\d.]+)', pcb)
+        self.assertEqual(len(blocks), 208)
+        for side, x, y in blocks:
+            x, y = float(x), float(y)
+            self.assertTrue(x0 < x < x1 and y0 < y < y1, (x, y))
+            if side == "F":
+                self.assertFalse(kx0 < x < kx1 and ky0 < y < ky1, (x, y))
+
     def test_native_capture_and_actual_pad_nets_are_equal(self):
         folder = ROOT / "kicad/system-candidate"
         xml = ET.parse(folder / "candidate.xml")

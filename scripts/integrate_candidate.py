@@ -90,6 +90,7 @@ def candidates():
         p["selection"] = (
             "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
         )
+        p["group"] = "analog"
     return parts
 
 
@@ -256,8 +257,8 @@ def oem_mechanics():
     """Measured OEM main-PCB frame (MECH-001, owner tape measurements, ~1 mm error).
 
     KiCad frame: origin (20, 20); x along the backplate from the UPPER board edge
-    (T1 end) to the lower edge (relay/woofer end); y from the free edge to the
-    backplate edge. Orientation inferred from the OEM photos/placement, to confirm.
+    (OEM relay/woofer end) to the lower edge (transformer end); y from the free edge
+    to the backplate edge. Orientation confirmed by the owner (2026-10-10).
     """
     m = json.loads((ROOT / "mechanical/oem-heatsink-measurements.json").read_text())
     pcb, u = m["main_pcb"], m["u_profile"]
@@ -473,6 +474,9 @@ def board(staged, parts, inventory):
         for field in components[ref].findall("property"):
             fp.SetField(field.get("name"), field.get("value") or "")
             fp.GetField(field.get("name")).SetVisible(False)
+    from place_system_candidate import place
+
+    place(pcb, pcbnew, oem_mechanics(), inventory)
     pcbnew.SaveBoard(str(staged / (PROJECT + ".kicad_pcb")), pcb)
     # Add manufacturer models without replacing audited pads or assigning HCF tab.
     tree = parse((staged / (PROJECT + ".kicad_pcb")).read_text())
