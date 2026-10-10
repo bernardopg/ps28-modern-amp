@@ -1,6 +1,6 @@
 # Dissipador, perfil U e backplate — medidas do proprietário (2026-10-10)
 
-Medidas manuais do proprietário na unidade original, em mm. Dados estruturados em
+Medidas manuais do proprietário na unidade original, em mm, com fita métrica (erro ~1 mm). Dados estruturados em
 `oem-heatsink-measurements.json`. **Medida**, salvo quando marcado *calculado* ou
 *hipótese*. Não libera furação nem fabricação.
 
@@ -92,11 +92,12 @@ Conferências:
 - Comprimento 154 mm contra o inferido 153 mm: 1 mm.
 - A medida "111 mm" da rodada anterior fica substituída por estas.
 
-**Única discrepância:** 38 + 65 + 55 = 158 mm, mas a placa tem 154 mm. Faltam 4 mm
-nas folgas do perfil até as bordas. Pelos furos do dissipador (perfil em y 73…138),
-borda superior a 38 mm do perfil ⇒ placa em y 35…189 e folga inferior 51 mm; ou folga
-inferior 55 mm ⇒ placa em y 39…193 e folga superior 34 mm. Conferir qual das duas
-folgas (38 ou 55) está certa.
+**Posição vertical (4ª rodada, fita métrica, erro de ~1 mm):** borda superior da
+placa a 35 mm da borda superior do backplate e borda inferior a 110 mm da borda
+inferior ⇒ placa em y 35…190, ou seja 155 mm contra 154 medidos (1 mm). Com o perfil
+em y 73…138 (furos do dissipador), as folgas são **38 mm** em cima (confere com a 2ª
+rodada) e **52 mm** embaixo (a medida anterior de 55 tinha 3 mm a mais). Adotado:
+placa y 35…189 (154 mm), perfil 38 mm da borda superior e 51 mm da inferior.
 
 Espessura de 1 mm é incomum (padrão 1,6 mm): a placa nova pode usar 1,6 mm se a
 fixação nos suportes L e a altura dos terminais permitirem; conferir na montagem.
@@ -122,5 +123,4 @@ Consequências para o layout:
 
 ## Ainda falta (só cotas locais)
 
-1. Qual folga está certa: 38 mm (borda superior) ou 55 mm (borda inferior).
-2. Furos dos TO-3P na perna externa: quantidade, rosca e posição ao longo do perfil.
+1. Furos dos TO-3P na perna externa: quantidade, rosca e posição ao longo do perfil.

@@ -26,7 +26,8 @@ e perfil U (65 × 33 × 30, furos a 35 mm) em `mechanical/oem-heatsink-measureme
 somas fecham com 200 × 300 e com a BOM do manual (≤ 1 mm). Placa principal 154 × 81 × 1 mm, face dos componentes a 90 mm da borda lateral
 (fecha 200 mm e põe os furos do perfil no meio da perna), 4 furos M3 (10/53 mm do
 backplate, 4,5 mm da borda). Base do perfil encostada na PCB: keepout 33 × 65 mm e TPA com bloco
-térmico prensado na perna externa. Pendente: folga 38 ou 55 mm (soma dá 158, não 154) e furos dos TO-3P.
+térmico prensado na perna externa. Posição: placa y 35…189 no backplate, perfil 38/51 mm das bordas (fita, ~1 mm).
+Pendente: furos dos TO-3P na perna externa.
 Critérios seguem abertos.
 
 ## Incremento de integração original

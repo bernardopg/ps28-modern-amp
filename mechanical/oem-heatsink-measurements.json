@@ -1,5 +1,5 @@
 {
-  "source": "Owner manual measurements on the original unit, 2026-10-10; ruler/caliper, resolution not stated",
+  "source": "Owner manual measurements on the original unit, 2026-10-10; ruler/caliper, resolution not stated; tape measure, about 1 mm error",
   "frame": "Backplate seen from OUTSIDE (heatsink side); origin top-left; x right, y down; mm",
   "backplate": {
     "w": 200,
@@ -108,13 +108,12 @@
   },
   "inference": "Base rests on the PCB, so the TO-3P sat on the outer leg face, perpendicular to the PCB (as in manual p.17). TPA3255 DDV goes just beyond the outer leg with a rectangular block touching the PowerPAD and the leg face. Supersedes the 'straight block under the base' reading.",
   "open": [
-    "which profile gap is right (38 top or 55 bottom)",
     "TO-3P holes on the outer leg"
   ],
   "fabrication_approved": false,
   "main_pcb": {
     "length_mm": 154,
-    "length_basis": "owner measurement; 38+65+55=158 disagrees by 4 mm (open)",
+    "length_basis": "owner 154 mm; backplate edges 35 top / 110 bottom give 155 (1 mm, tape)",
     "depth_mm": 81,
     "depth_note": "81 mm fits the 102 mm rear housing; inferred outline was 153 x 79.1",
     "mounting_holes": {
@@ -126,9 +125,17 @@
       "from_edge_mm": 4.5,
       "edges": "both (4 holes)"
     },
-    "edges_on_backplate_y_mm": "35..189 if 38 mm gap is right, 39..193 if 55 mm gap is right",
+    "edges_on_backplate_y_mm": [
+      35,
+      189
+    ],
     "thickness_mm": 1.0,
     "component_face_x_outside_frame_mm": 90,
-    "opposite_side_to_edge_mm": 109
+    "opposite_side_to_edge_mm": 109,
+    "profile_gaps_mm": {
+      "top": 38,
+      "bottom": 51,
+      "note": "earlier 55 was ~3 mm high"
+    }
   }
 }
