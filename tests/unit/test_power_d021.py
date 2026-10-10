@@ -57,6 +57,7 @@ class PowerD021Tests(unittest.TestCase):
         self.assertEqual(nets["L301"], {"1": "BUCK_SW", "2": "AUX_RAW"})
         self.assertNotIn("RESET", {n for p in parts() for n in p["nets"].values()})
 
+    @unittest.skipUnless(Path("/usr/share/kicad/symbols").is_dir(), "needs KiCad stock symbol libraries")
     def test_generator_refuses_overwrite(self):
         with tempfile.TemporaryDirectory() as tmp:
             out = Path(tmp) / "p"

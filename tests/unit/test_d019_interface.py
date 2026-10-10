@@ -62,6 +62,7 @@ class D019InterfaceTests(unittest.TestCase):
         self.assertFalse(sf["low_ok"])  # still beyond -0.3 V at datasheet max VF: documented
         self.assertFalse(sf["high_ok"])  # no upper clamp: documented residual risk
 
+    @unittest.skipUnless(Path("/usr/share/kicad/symbols").is_dir(), "needs KiCad stock symbol libraries")
     def test_generator_refuses_overwrite(self):
         with tempfile.TemporaryDirectory() as tmp:
             out = Path(tmp) / "i"

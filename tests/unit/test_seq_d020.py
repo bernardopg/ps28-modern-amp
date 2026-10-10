@@ -177,6 +177,7 @@ class SeqD020Tests(unittest.TestCase):
             self.assertIsNone(first(tr, "AUDIO_EN"))
             self.assertLessEqual(off - on, Sequencer.START_TIMEOUT_US + 1_000)
 
+    @unittest.skipUnless(Path("/usr/share/kicad/symbols").is_dir(), "needs KiCad stock symbol libraries")
     def test_generator_refuses_overwrite(self):
         with tempfile.TemporaryDirectory() as tmp:
             out = Path(tmp) / "s"
