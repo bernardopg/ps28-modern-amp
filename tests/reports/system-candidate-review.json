@@ -127,5 +127,20 @@
     "hardware_validated": false,
     "manufacturing_approved": false,
     "single_fault_clamp": "BAT54 + 3.3k (D-024a)"
+  },
+  "pcb001_update": {
+    "date": "2026-10-10",
+    "outline_mm": [
+      154,
+      81
+    ],
+    "mounting_holes": "4 x M3 board-only",
+    "profile_keepout_mm": [
+      65,
+      33
+    ],
+    "drc_violations": 34,
+    "drc_unrouted": 470,
+    "note": "violations are real placement conflicts with measured OEM mechanics"
   }
 }
