@@ -68,7 +68,28 @@ V DC contra o pino 4, volume no mínimo, sem sinal.
 Conclusão: o preamp original é alimentado em **±15 V** pela placa principal. A placa
 nova (D-021) só tem PVDD ≈ 42–50 V e AUX 12 V; reaproveitar o preamp exige gerar ±15 V.
 
+### 2ª série ligado — LEVEL mínimo/médio/máximo (escala 200 V DC, sem sinal nas RCA)
+
+Referência no GND da PCB (série 2; a série 1, no terminal preto do woofer, deu os
+mesmos valores, então o SPK− original é GND — não vale para a placa nova, D-024).
+
+| Pino | Mín. | Médio | Máx. | Leitura |
+|---|---|---|---|---|
+| 1 branco | −6,0…−7,8 | −6,9…−7,8 | −10,0…+9,4 | oscila; depende do LEVEL: **saída de áudio do preamp** |
+| 2 | −12,6 | −12,6…−12,7 | −12,7 | estável: −12 V auxiliar ou bias de controle |
+| 3 | −15,9 | −16,0 | −16,0 | **−15 V** |
+| 4 | 0 | 0 | 0 | **GND** |
+| 5 | +15,6 | +15,6 | +15,6 | **+15 V** |
+| 6 | +0,01 | +0,1 | +0,1 | ≈ 0: retorno/entrada sem uso |
+| 7 | 0 | 0 | 0 | ≈ 0: controle inativo |
+
+- Pino 6 = +46,8 V uma vez (série 1, LEVEL médio), não reproduzido: provável ponta
+  escorregando para um trilho do amplificador original (≈ ±48 V). Não é função do pino.
+- Pino 1 com −6…−8 V "DC" e oscilação crescente com LEVEL, sem sinal: o multímetro
+  DC lendo ruído/zumbido de RCA aberta amplificado, ou offset DC real na saída do
+  preamp. A primeira medida (0,01 V) não teve esse efeito. **A confirmar** com V AC
+  e com as RCA em curto.
 ## Falta medir
 
 1. Qual fio do woofer é o + (marca no terminal do woofer).
-2. Pinagem do chicote de 7 vias (resistência e tensão por pino).
+2. Pino 1 em V AC (escala 20 V AC) e em V DC com as entradas RCA em curto.
