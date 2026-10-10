@@ -28,16 +28,16 @@ DESIGNS = {
 # Camera framing so the off-outline import banks of the system candidate are visible.
 CAMERA = {
     "system": {
-        "isometric": ["--zoom", "0.34", "--pan", "-14,-3,0"],
-        "top": ["--zoom", "0.40", "--pan", "-13,7,0"],
-        "bottom": ["--zoom", "0.40", "--pan", "13,7,0"],
-        "orbit": ["--zoom", "0.26"],
+        "isometric": ["--zoom", "0.31", "--pan", "-10,-1,0"],
+        "top": ["--zoom", "0.36", "--pan", "-14,1,0"],
+        "bottom": ["--zoom", "0.36", "--pan", "16,1,0"],
+        "orbit": ["--zoom", "0.20"],
     }
 }
 FOOTERS = {
     "selected": "NUCLEO APENAS | D-018/D-019 SEM PCB INTEGRADA",
     "oem": "NUCLEO APENAS | D-018/D-019 SEM PCB INTEGRADA",
-    "system": "NUCLEO NO CONTORNO + BANCOS D-018/D-021/D-020 FORA DO CONTORNO, SEM FIT | D-019 ABERTA",
+    "system": "NUCLEO NO CONTORNO + BANCOS D-018/D-021/D-020/D-024 FORA DO CONTORNO, SEM FIT, SEM ROTEAMENTO",
 }
 
 

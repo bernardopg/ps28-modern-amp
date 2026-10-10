@@ -2,9 +2,9 @@
 """Capture the discrete (no-MCU) D-020 sequencing subset; never overwrite.
 
 Implements rails qualification hold (two TPS3808 stages, >=360 ms), human start edge,
-CLIP_OTW start permission, FAULT arming/latching with human re-arm and a start
-timeout. Input isolation, discharge, DC observation and mute (D-019) are NOT here:
-no qualified switch exists. Primary sources in docs/seq-d020.md.
+CLIP_OTW start permission, FAULT arming/latching with human re-arm, a start timeout
+and (D-024) connect-before-RESET delay, DC dwell and audio latch. The relay, mute
+and DC windows themselves live in kicad/iso-d019. Sources in docs/seq-d020.md.
 """
 
 import argparse
@@ -62,7 +62,7 @@ def lp2985_symbol():
 def supervisor(ref, mr, ct_net, reset, role):
     return (ref, "Power_Supervisor:TPS3808DBV", "TPS3808G33",
             f"TPS3808G33DBVR (TI SBVS050N); {role}", SOT6,
-            {"1": reset, "2": "GND", "3": mr, "4": ct_net, "5": "SEQ_3V3", "6": "SEQ_3V3"})
+            {"1": reset, "2": "GND", "3": mr, "4": ct_net, "5": "SEQ_3V3", "6": "SEQ_3V3"})  # ct_net None = open
 
 
 def flip_flop(ref, clk, d, q, qn, clr, role):
@@ -120,22 +120,40 @@ def parts():
              {"1": None, "2": "START_DEB", "4": "START_EDGE"}),
         # RUN flip-flop: start edge latches CLIP_OTW (contract: otw_high) while RAILS_QUAL high.
         flip_flop("U406", "START_EDGE", "CLIP_OTW", "RUN", None, "RAILS_QUAL", "RUN latch"),
+        # D-024: RESET released 12-28 ms (CT open) after RUN closes the relay (3 ms max).
+        supervisor("U414", "RUN", None, "RESET_GO", "connect-before-reset delay, CT open"),
+        ("R428", "Device:R", "100k", "TBD: RESET pull-up", R0603, {"1": "SEQ_3V3", "2": "RESET_GO"}),
         ("R408", "Device:R", "1k", "TBD: series to TPA RESET; with R9 4.7k gives >=2.6 V (VIH 1.9 V)", R0603,
-         {"1": "RUN", "2": "RESET"}),
+         {"1": "RESET_GO", "2": "RESET"}),
         # ARMED flip-flop: FAULT rising edge after RESET release (contract START_AVDD).
-        flip_flop("U407", "FAULT", "RUN", None, "NOT_ARMED", "RUN", "FAULT arming"),
+        flip_flop("U407", "FAULT", "RUN", "ARMED", "NOT_ARMED", "RUN", "FAULT arming"),
         gate("U408", "74LVC1G32", "SN74LVC1G32DBVR (TI SCES219W)",
              {"1": "NOT_ARMED", "2": "FAULT", "4": "FAULT_TRIP_N"}),
         gate("U409", "74LVC1G07", "SN74LVC1G07DBVR (TI SCES296AG); open-drain trip into RAILS_OK",
              {"1": None, "2": "FAULT_TRIP_N", "4": "RAILS_OK"}),
         gate("U410", "74LVC1G08", "SN74LVC1G08DBVR (TI SCES217AA)",
-             {"1": "RUN", "2": "NOT_ARMED", "4": "START_WIN"}),
+             {"1": "RUN", "2": "NOT_AUDIO", "4": "START_WIN"}),
         gate("U411", "74LVC1G06", "SN74LVC1G06DBVR (TI SCES295AB); open-drain timeout trip",
              {"2": "START_TIMEOUT", "4": "RAILS_OK"}),
         bypass("C406", "U402"), bypass("C407", "U403"), bypass("C408", "U404"),
         bypass("C409", "U405"), bypass("C410", "U406"), bypass("C411", "U407"),
         bypass("C412", "U408"), bypass("C413", "U409"), bypass("C414", "U410"),
         bypass("C415", "U411"),
+        # D-024 precharge observation: both pins in the 2-5 V window, after arming, for
+        # 12-28 ms continuous (CT open), latches AUDIO_EN (unmute). DC loss after that trips.
+        ("R429", "Device:R", "100k", "TBD: DC_OK pull-up (open-drain from iso-d019 U501/U502)", R0603,
+         {"1": "SEQ_3V3", "2": "DC_OK"}),
+        gate("U415", "74LVC1G08", "SN74LVC1G08DBVR (TI SCES217AA)",
+             {"1": "ARMED", "2": "DC_OK", "4": "DC_GATE"}),
+        supervisor("U416", "DC_GATE", None, "DWELL_OK", "DC dwell, CT open"),
+        ("R430", "Device:R", "100k", "TBD: RESET pull-up", R0603, {"1": "SEQ_3V3", "2": "DWELL_OK"}),
+        flip_flop("U417", "DWELL_OK", "SEQ_3V3", "AUDIO_EN", "NOT_AUDIO", "RUN", "AUDIO latch"),
+        gate("U418", "74LVC1G32", "SN74LVC1G32DBVR (TI SCES219W)",
+             {"1": "NOT_AUDIO", "2": "DC_OK", "4": "DC_TRIP_N"}),
+        gate("U419", "74LVC1G07", "SN74LVC1G07DBVR (TI SCES296AG); open-drain DC trip into RAILS_OK",
+             {"1": None, "2": "DC_TRIP_N", "4": "RAILS_OK"}),
+        bypass("C418", "U414"), bypass("C419", "U415"), bypass("C420", "U416"),
+        bypass("C421", "U417"), bypass("C422", "U418"), bypass("C423", "U419"),
         # Analog rails into RAILS_OK: OUTA low below UV, OUTB low above OV (SBVS187G p.4).
         ("U412", "PS28_POWER:TPS3700DDC", "TPS3700DDC", "TPS3700DDCR (TI SBVS187G); ANALOG_12V window", SOT6,
          {"1": "RAILS_OK", "2": "GND", "3": "ANALOG_UV", "4": "ANALOG_OV", "5": "AUX_RAW", "6": "RAILS_OK"}),
@@ -156,10 +174,10 @@ def parts():
         ],
         ("C416", "Device:C", "100n", "TBD: X7R >=25 V; U412 VDD", C0603, {"1": "AUX_RAW", "2": "GND"}),
         ("C417", "Device:C", "100n", "TBD: X7R >=25 V; U413 VDD", C0603, {"1": "AUX_RAW", "2": "GND"}),
-        ("J402", "Connector_Generic:Conn_01x07", "SEQ_TO_SYSTEM",
-         "Logical interface to power-d021/core; same PCB, not a connector", "",
+        ("J402", "Connector_Generic:Conn_01x10", "SEQ_TO_SYSTEM",
+         "Logical interface to power-d021/iso-d019/core; same PCB, not a connector", "",
          {"1": "AUX_RAW", "2": "RAILS_OK", "3": "SEQ_3V3", "4": "RESET", "5": "FAULT",
-          "6": "CLIP_OTW", "7": "GND"}),
+          "6": "CLIP_OTW", "7": "GND", "8": "RUN", "9": "AUDIO_EN", "10": "DC_OK"}),
     ]
     return [
         {"ref": r, "lib_id": lib, "value": v, "mpn": m, "footprint": fp, "nets": n,
@@ -180,7 +198,7 @@ def generate(out):
             namespace="seq-d020",
             source=SOURCE,
             title="PS28 D-020 DISCRETE SEQUENCER SUBSET - STUDY ONLY",
-            warning="NO INPUT ISOLATION/DISCHARGE/DC SENSE/MUTE (D-019 OPEN). FOOTPRINTS NOT AUDITED. DO NOT ENERGIZE.",
+            warning="RELAY/MUTE/DC WINDOWS IN iso-d019. FOOTPRINTS NOT AUDITED. DO NOT ENERGIZE.",
             power_flags=("GND", "AUX_RAW"),
             extra_symbols={"PS28_SEQ:LP2985-33DBV": lp2985_symbol(),
                            "PS28_POWER:TPS3700DDC": tps3700_symbol()},
@@ -195,10 +213,14 @@ def generate(out):
                 "start timeout 0.62-1.44 s (START_TIMEOUT_US 1.44 s max)",
                 "ANALOG_12V and VMID windows (reference_valid / vmid_valid) into RAILS_OK",
             ],
-            "not_implemented_d019": [
-                "input_connect / open_confirmed / close_confirmed", "discharge",
-                "drivers_quiet / preclose_match", "dc_a_valid / dc_b_valid / DC dwell",
-                "audio_enable mute",
+            "d019_logic_d024": [
+                "RESET released 12-28 ms after RUN (relay operate 3 ms max)",
+                "DC_OK (both pins 2-5 V) after arming, continuous 12-28 ms, latches AUDIO_EN",
+                "DC_OK loss after AUDIO_EN trips RAILS_OK; start timeout covers arming + dwell",
+            ],
+            "by_design_not_observed": [
+                "open/close_confirmed: relay datasheet timing, no auxiliary contact",
+                "preclose_match: isolated plate and unpowered pin both near 0 V",
             ],
             "new_physical_board": False,
         }

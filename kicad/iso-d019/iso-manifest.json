@@ -1,0 +1,738 @@
+{
+  "status": "ISOLATED CAPTURE STUDY",
+  "source": "D-024: D-019 relay isolation, mute and DC observation; study only",
+  "parts": [
+    {
+      "ref": "K501",
+      "lib_id": "Relay:G6K-2",
+      "value": "G6K-2F DC12",
+      "mpn": "G6K-2F DC12 (Omron K106-E1-11 p.2-3: 1315 ohm, 3 ms operate/release max, Au alloy)",
+      "footprint": "Relay_SMD:Relay_DPDT_Omron_G6K-2F",
+      "nets": {
+        "1": "AUX_RAW",
+        "8": "RELAY_DRV",
+        "3": "INA_ISO",
+        "2": "INA_DIS",
+        "4": "INPUT_A_AC",
+        "6": "INB_ISO",
+        "7": "INB_DIS",
+        "5": "INPUT_B_AC"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          45.72
+        ]
+      ]
+    },
+    {
+      "ref": "Q501",
+      "lib_id": "PS28_ISO:MMBT3904",
+      "value": "MMBT3904",
+      "mpn": "MMBT3904-7-F (Diodes DS30036): VCEsat <=0.2 V at 10 mA/1 mA, VCEO 40 V",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "nets": {
+        "1": "RELAY_BASE",
+        "2": "GND",
+        "3": "RELAY_DRV"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          45.72
+        ]
+      ]
+    },
+    {
+      "ref": "R501",
+      "lib_id": "Device:R",
+      "value": "2.2k",
+      "mpn": "TBD: 1 %; IB >=1.0 mA from 3.3 V (VBEsat 0.85 V max)",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "RUN",
+        "2": "RELAY_BASE"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          45.72
+        ]
+      ]
+    },
+    {
+      "ref": "R502",
+      "lib_id": "Device:R",
+      "value": "100k",
+      "mpn": "TBD: base pull-down, relay off without logic",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "RELAY_BASE",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          45.72
+        ]
+      ]
+    },
+    {
+      "ref": "D501",
+      "lib_id": "Device:D",
+      "value": "1N4148W",
+      "mpn": "1N4148W-7-F (Diodes DS30086)",
+      "footprint": "Diode_SMD:D_SOD-123",
+      "nets": {
+        "1": "RELAY_FLY",
+        "2": "RELAY_DRV"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          45.72
+        ]
+      ]
+    },
+    {
+      "ref": "D502",
+      "lib_id": "Device:D_Zener",
+      "value": "BZT52C15",
+      "mpn": "BZT52C15-7-F (Diodes DS18004): 13.8-15.6 V; faster release",
+      "footprint": "Diode_SMD:D_SOD-123",
+      "nets": {
+        "1": "RELAY_FLY",
+        "2": "AUX_RAW"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          45.72
+        ]
+      ]
+    },
+    {
+      "ref": "R503",
+      "lib_id": "Device:R",
+      "value": "1k",
+      "mpn": "TBD: 1 %, >=0.1 W; tau 10 ms with 10 uF",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "INA_DIS",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          86.36
+        ]
+      ]
+    },
+    {
+      "ref": "R504",
+      "lib_id": "Device:R",
+      "value": "1k",
+      "mpn": "TBD: 1 %, >=0.1 W; tau 10 ms with 10 uF",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "INB_DIS",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          86.36
+        ]
+      ]
+    },
+    {
+      "ref": "C503",
+      "lib_id": "Device:C",
+      "value": "4.7n C0G",
+      "mpn": "TBD: C0G/NP0 >=50 V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "INPUT_A_AC",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          86.36
+        ]
+      ]
+    },
+    {
+      "ref": "C504",
+      "lib_id": "Device:C",
+      "value": "4.7n C0G",
+      "mpn": "TBD: C0G/NP0 >=50 V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "INPUT_B_AC",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          86.36
+        ]
+      ]
+    },
+    {
+      "ref": "U501",
+      "lib_id": "PS28_POWER:TPS3700DDC",
+      "value": "TPS3700DDC",
+      "mpn": "TPS3700DDCR (TI SBVS187G); INPUT_A DC window",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "nets": {
+        "1": "DC_OK",
+        "2": "GND",
+        "3": "INA_UV",
+        "4": "INA_OV",
+        "5": "AUX_RAW",
+        "6": "DC_OK"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          86.36
+        ]
+      ]
+    },
+    {
+      "ref": "U502",
+      "lib_id": "PS28_POWER:TPS3700DDC",
+      "value": "TPS3700DDC",
+      "mpn": "TPS3700DDCR (TI SBVS187G); INPUT_B DC window",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "nets": {
+        "1": "DC_OK",
+        "2": "GND",
+        "3": "INB_UV",
+        "4": "INB_OV",
+        "5": "AUX_RAW",
+        "6": "DC_OK"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          86.36
+        ]
+      ]
+    },
+    {
+      "ref": "R505",
+      "lib_id": "Device:R",
+      "value": "787k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K; pin DC window and return",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "INPUT_A_AC",
+        "2": "INA_UV"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          127.0
+        ]
+      ]
+    },
+    {
+      "ref": "R506",
+      "lib_id": "Device:R",
+      "value": "115k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K; pin DC window and return",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "INA_UV",
+        "2": "INA_OV"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          127.0
+        ]
+      ]
+    },
+    {
+      "ref": "R507",
+      "lib_id": "Device:R",
+      "value": "78.7k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K; pin DC window and return",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "INA_OV",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          127.0
+        ]
+      ]
+    },
+    {
+      "ref": "R508",
+      "lib_id": "Device:R",
+      "value": "787k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K; pin DC window and return",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "INPUT_B_AC",
+        "2": "INB_UV"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          127.0
+        ]
+      ]
+    },
+    {
+      "ref": "R509",
+      "lib_id": "Device:R",
+      "value": "115k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K; pin DC window and return",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "INB_UV",
+        "2": "INB_OV"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          127.0
+        ]
+      ]
+    },
+    {
+      "ref": "R510",
+      "lib_id": "Device:R",
+      "value": "78.7k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K; pin DC window and return",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "INB_OV",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          127.0
+        ]
+      ]
+    },
+    {
+      "ref": "C509",
+      "lib_id": "Device:C",
+      "value": "330n",
+      "mpn": "TBD: X7R >=16 V; UV tap filter",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "INA_UV",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          167.64
+        ]
+      ]
+    },
+    {
+      "ref": "C510",
+      "lib_id": "Device:C",
+      "value": "680n",
+      "mpn": "TBD: X7R >=16 V; OV tap filter",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "INA_OV",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          167.64
+        ]
+      ]
+    },
+    {
+      "ref": "C511",
+      "lib_id": "Device:C",
+      "value": "330n",
+      "mpn": "TBD: X7R >=16 V; UV tap filter",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "INB_UV",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          167.64
+        ]
+      ]
+    },
+    {
+      "ref": "C512",
+      "lib_id": "Device:C",
+      "value": "680n",
+      "mpn": "TBD: X7R >=16 V; OV tap filter",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "INB_OV",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          167.64
+        ]
+      ]
+    },
+    {
+      "ref": "U504",
+      "lib_id": "PS28_POWER:TPS3700DDC",
+      "value": "TPS3700DDC",
+      "mpn": "TPS3700DDCR (TI SBVS187G); AUX_RAW window",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "nets": {
+        "1": "RAILS_OK",
+        "2": "GND",
+        "3": "AUX_UV",
+        "4": "AUX_OV",
+        "5": "AUX_RAW",
+        "6": "RAILS_OK"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          167.64
+        ]
+      ]
+    },
+    {
+      "ref": "R514",
+      "lib_id": "Device:R",
+      "value": "357k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K; AUX window",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "AUX_UV"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          167.64
+        ]
+      ]
+    },
+    {
+      "ref": "R515",
+      "lib_id": "Device:R",
+      "value": "1.5k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K; AUX window",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "AUX_UV",
+        "2": "AUX_OV"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          208.28
+        ]
+      ]
+    },
+    {
+      "ref": "R516",
+      "lib_id": "Device:R",
+      "value": "11.5k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K; AUX window",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "AUX_OV",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          208.28
+        ]
+      ]
+    },
+    {
+      "ref": "U503",
+      "lib_id": "PS28_ISO:TMUX6219DGK",
+      "value": "TMUX6219",
+      "mpn": "TMUX6219DGKR (TI SCDS420E p.39); RON <=7.5 ohm at 12 V single supply (p.10)",
+      "footprint": "Package_SO:MSOP-8_3x3mm_P0.65mm",
+      "nets": {
+        "1": "DIVIDED",
+        "2": "VMID",
+        "3": "GND",
+        "4": "ANALOG_12V",
+        "5": "MUTE_EN",
+        "6": "GND",
+        "7": "GND",
+        "8": "GND"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          208.28
+        ]
+      ]
+    },
+    {
+      "ref": "R511",
+      "lib_id": "Device:R",
+      "value": "100k",
+      "mpn": "TBD: EN pull-up to ANALOG_12V (default muted)",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "ANALOG_12V",
+        "2": "MUTE_EN"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          208.28
+        ]
+      ]
+    },
+    {
+      "ref": "Q502",
+      "lib_id": "PS28_ISO:MMBT3904",
+      "value": "MMBT3904",
+      "mpn": "MMBT3904-7-F (Diodes DS30036); unmute pull-down",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "nets": {
+        "1": "MUTE_BASE",
+        "2": "GND",
+        "3": "MUTE_EN"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          208.28
+        ]
+      ]
+    },
+    {
+      "ref": "R512",
+      "lib_id": "Device:R",
+      "value": "10k",
+      "mpn": "TBD: 1 %",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "AUDIO_EN",
+        "2": "MUTE_BASE"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          208.28
+        ]
+      ]
+    },
+    {
+      "ref": "R513",
+      "lib_id": "Device:R",
+      "value": "100k",
+      "mpn": "TBD: base pull-down, muted without logic",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "MUTE_BASE",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          248.92
+        ]
+      ]
+    },
+    {
+      "ref": "C505",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=25 V; U503 VDD (SCDS420E Table 4-1)",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "ANALOG_12V",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          248.92
+        ]
+      ]
+    },
+    {
+      "ref": "C506",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=25 V; U501 VDD",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          248.92
+        ]
+      ]
+    },
+    {
+      "ref": "C507",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=25 V; U502 VDD",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          248.92
+        ]
+      ]
+    },
+    {
+      "ref": "C508",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=25 V; U504 VDD",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          248.92
+        ]
+      ]
+    },
+    {
+      "ref": "J501",
+      "lib_id": "Connector_Generic:Conn_01x13",
+      "value": "ISO_TO_SYSTEM",
+      "mpn": "Logical interface to core/analog/seq; same PCB, not a connector",
+      "footprint": "",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "ANALOG_12V",
+        "3": "VMID",
+        "4": "DIVIDED",
+        "5": "RUN",
+        "6": "AUDIO_EN",
+        "7": "DC_OK",
+        "8": "RAILS_OK",
+        "9": "INA_ISO",
+        "10": "INB_ISO",
+        "11": "INPUT_A_AC",
+        "12": "INPUT_B_AC",
+        "13": "GND"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          248.92
+        ]
+      ]
+    }
+  ],
+  "hardware_validated": false,
+  "manufacturing_approved": false,
+  "integrated_with_core": false,
+  "unassigned_footprints": [
+    "J501"
+  ],
+  "calculated": {
+    "windows_v": {
+      "pin_dc": {
+        "ov_trip_v": [
+          4.912,
+          4.984,
+          5.057
+        ],
+        "uv_trip_falling_v": [
+          1.937,
+          1.997,
+          2.048
+        ]
+      },
+      "aux_raw": {
+        "ov_trip_v": [
+          12.711,
+          12.87,
+          13.029
+        ],
+        "uv_trip_falling_v": [
+          10.984,
+          11.228,
+          11.416
+        ]
+      }
+    },
+    "relay_operate_release_max_s": [
+      0.003,
+      0.003
+    ],
+    "sources": "TI SBVS187G p.6; Omron K106-E1-11 p.3; TI SLASEA8A sec.7.3"
+  },
+  "interface_contract": {
+    "C20/C21": "plate side becomes INA_ISO/INB_ISO (relay COM); TPA pins stay INPUT_A_AC/INPUT_B_AC (relay NO)",
+    "RUN": "relay drive (seq-d020 U406 Q)",
+    "AUDIO_EN": "unmute (seq-d020 audio latch)",
+    "DC_OK": "open-drain from U501/U502 into seq-d020 dwell; pull-up in seq",
+    "RAILS_OK": "U504 AUX window joins the wired-AND",
+    "new_physical_board": false
+  }
+}

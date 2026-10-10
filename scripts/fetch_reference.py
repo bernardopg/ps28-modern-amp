@@ -16,6 +16,15 @@ SOURCES = {
     "slar130a": "https://www.ti.com/lit/df/slar130a/slar130a.pdf",
     "lm5164": "https://www.ti.com/lit/ds/symlink/lm5164.pdf",
     "tps3700": "https://www.ti.com/lit/ds/symlink/tps3700.pdf",
+    "tps3808": "https://www.ti.com/lit/ds/symlink/tps3808.pdf",
+    "lp2985": "https://www.ti.com/lit/ds/symlink/lp2985.pdf",
+    "sn74lvc2g74": "https://www.ti.com/lit/ds/symlink/sn74lvc2g74.pdf",
+    "sn74lvc1g08": "https://www.ti.com/lit/ds/symlink/sn74lvc1g08.pdf",
+    "sn74lvc1g32": "https://www.ti.com/lit/ds/symlink/sn74lvc1g32.pdf",
+    "sn74lvc1g14": "https://www.ti.com/lit/ds/symlink/sn74lvc1g14.pdf",
+    "sn74lvc1g07": "https://www.ti.com/lit/ds/symlink/sn74lvc1g07.pdf",
+    "sn74lvc1g06": "https://www.ti.com/lit/ds/symlink/sn74lvc1g06.pdf",
+    "tmux6219": "https://www.ti.com/lit/ds/symlink/tmux6219.pdf",
 }
 
 

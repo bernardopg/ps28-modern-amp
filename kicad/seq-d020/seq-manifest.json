@@ -369,19 +369,59 @@
       ]
     },
     {
+      "ref": "U414",
+      "lib_id": "Power_Supervisor:TPS3808DBV",
+      "value": "TPS3808G33",
+      "mpn": "TPS3808G33DBVR (TI SBVS050N); connect-before-reset delay, CT open",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "nets": {
+        "1": "RESET_GO",
+        "2": "GND",
+        "3": "RUN",
+        "4": null,
+        "5": "SEQ_3V3",
+        "6": "SEQ_3V3"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          167.64
+        ]
+      ]
+    },
+    {
+      "ref": "R428",
+      "lib_id": "Device:R",
+      "value": "100k",
+      "mpn": "TBD: RESET pull-up",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "RESET_GO"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          167.64
+        ]
+      ]
+    },
+    {
       "ref": "R408",
       "lib_id": "Device:R",
       "value": "1k",
       "mpn": "TBD: series to TPA RESET; with R9 4.7k gives >=2.6 V (VIH 1.9 V)",
       "footprint": "Resistor_SMD:R_0603_1608Metric",
       "nets": {
-        "1": "RUN",
+        "1": "RESET_GO",
         "2": "RESET"
       },
       "units": [
         [
           1,
-          101.6,
+          228.6,
           167.64
         ]
       ]
@@ -397,7 +437,7 @@
         "2": "RUN",
         "3": "NOT_ARMED",
         "4": "GND",
-        "5": null,
+        "5": "ARMED",
         "6": "RUN",
         "7": "SEQ_3V3",
         "8": "SEQ_3V3"
@@ -405,7 +445,7 @@
       "units": [
         [
           1,
-          165.1,
+          292.1,
           167.64
         ]
       ]
@@ -426,7 +466,7 @@
       "units": [
         [
           1,
-          228.6,
+          355.6,
           167.64
         ]
       ]
@@ -447,8 +487,8 @@
       "units": [
         [
           1,
-          292.1,
-          167.64
+          38.1,
+          208.28
         ]
       ]
     },
@@ -462,14 +502,14 @@
         "3": "GND",
         "5": "SEQ_3V3",
         "1": "RUN",
-        "2": "NOT_ARMED",
+        "2": "NOT_AUDIO",
         "4": "START_WIN"
       },
       "units": [
         [
           1,
-          355.6,
-          167.64
+          101.6,
+          208.28
         ]
       ]
     },
@@ -488,7 +528,7 @@
       "units": [
         [
           1,
-          38.1,
+          165.1,
           208.28
         ]
       ]
@@ -506,7 +546,7 @@
       "units": [
         [
           1,
-          101.6,
+          228.6,
           208.28
         ]
       ]
@@ -524,7 +564,7 @@
       "units": [
         [
           1,
-          165.1,
+          292.1,
           208.28
         ]
       ]
@@ -542,7 +582,7 @@
       "units": [
         [
           1,
-          228.6,
+          355.6,
           208.28
         ]
       ]
@@ -560,8 +600,8 @@
       "units": [
         [
           1,
-          292.1,
-          208.28
+          38.1,
+          248.92
         ]
       ]
     },
@@ -578,8 +618,8 @@
       "units": [
         [
           1,
-          355.6,
-          208.28
+          101.6,
+          248.92
         ]
       ]
     },
@@ -596,7 +636,7 @@
       "units": [
         [
           1,
-          38.1,
+          165.1,
           248.92
         ]
       ]
@@ -614,7 +654,7 @@
       "units": [
         [
           1,
-          101.6,
+          228.6,
           248.92
         ]
       ]
@@ -632,7 +672,7 @@
       "units": [
         [
           1,
-          165.1,
+          292.1,
           248.92
         ]
       ]
@@ -650,7 +690,7 @@
       "units": [
         [
           1,
-          228.6,
+          355.6,
           248.92
         ]
       ]
@@ -668,8 +708,261 @@
       "units": [
         [
           1,
+          38.1,
+          289.56
+        ]
+      ]
+    },
+    {
+      "ref": "R429",
+      "lib_id": "Device:R",
+      "value": "100k",
+      "mpn": "TBD: DC_OK pull-up (open-drain from iso-d019 U501/U502)",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "DC_OK"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          289.56
+        ]
+      ]
+    },
+    {
+      "ref": "U415",
+      "lib_id": "74xGxx:74LVC1G08",
+      "value": "74LVC1G08",
+      "mpn": "SN74LVC1G08DBVR (TI SCES217AA)",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "nets": {
+        "3": "GND",
+        "5": "SEQ_3V3",
+        "1": "ARMED",
+        "2": "DC_OK",
+        "4": "DC_GATE"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          289.56
+        ]
+      ]
+    },
+    {
+      "ref": "U416",
+      "lib_id": "Power_Supervisor:TPS3808DBV",
+      "value": "TPS3808G33",
+      "mpn": "TPS3808G33DBVR (TI SBVS050N); DC dwell, CT open",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "nets": {
+        "1": "DWELL_OK",
+        "2": "GND",
+        "3": "DC_GATE",
+        "4": null,
+        "5": "SEQ_3V3",
+        "6": "SEQ_3V3"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          289.56
+        ]
+      ]
+    },
+    {
+      "ref": "R430",
+      "lib_id": "Device:R",
+      "value": "100k",
+      "mpn": "TBD: RESET pull-up",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "DWELL_OK"
+      },
+      "units": [
+        [
+          1,
           292.1,
-          248.92
+          289.56
+        ]
+      ]
+    },
+    {
+      "ref": "U417",
+      "lib_id": "74xGxx:74LVC2G74",
+      "value": "74LVC2G74",
+      "mpn": "SN74LVC2G74DCTR (TI SCES203Q); AUDIO latch",
+      "footprint": "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm",
+      "nets": {
+        "1": "DWELL_OK",
+        "2": "SEQ_3V3",
+        "3": "NOT_AUDIO",
+        "4": "GND",
+        "5": "AUDIO_EN",
+        "6": "RUN",
+        "7": "SEQ_3V3",
+        "8": "SEQ_3V3"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          289.56
+        ]
+      ]
+    },
+    {
+      "ref": "U418",
+      "lib_id": "74xGxx:74LVC1G32",
+      "value": "74LVC1G32",
+      "mpn": "SN74LVC1G32DBVR (TI SCES219W)",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "nets": {
+        "3": "GND",
+        "5": "SEQ_3V3",
+        "1": "NOT_AUDIO",
+        "2": "DC_OK",
+        "4": "DC_TRIP_N"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          330.20000000000005
+        ]
+      ]
+    },
+    {
+      "ref": "U419",
+      "lib_id": "74xGxx:74LVC1G07",
+      "value": "74LVC1G07",
+      "mpn": "SN74LVC1G07DBVR (TI SCES296AG); open-drain DC trip into RAILS_OK",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "nets": {
+        "3": "GND",
+        "5": "SEQ_3V3",
+        "1": null,
+        "2": "DC_TRIP_N",
+        "4": "RAILS_OK"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          330.20000000000005
+        ]
+      ]
+    },
+    {
+      "ref": "C418",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=10 V; U414",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          330.20000000000005
+        ]
+      ]
+    },
+    {
+      "ref": "C419",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=10 V; U415",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          330.20000000000005
+        ]
+      ]
+    },
+    {
+      "ref": "C420",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=10 V; U416",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          330.20000000000005
+        ]
+      ]
+    },
+    {
+      "ref": "C421",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=10 V; U417",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          330.20000000000005
+        ]
+      ]
+    },
+    {
+      "ref": "C422",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=10 V; U418",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          370.84000000000003
+        ]
+      ]
+    },
+    {
+      "ref": "C423",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=10 V; U419",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          370.84000000000003
         ]
       ]
     },
@@ -690,8 +983,8 @@
       "units": [
         [
           1,
-          355.6,
-          248.92
+          165.1,
+          370.84000000000003
         ]
       ]
     },
@@ -712,8 +1005,8 @@
       "units": [
         [
           1,
-          38.1,
-          289.56
+          228.6,
+          370.84000000000003
         ]
       ]
     },
@@ -730,8 +1023,8 @@
       "units": [
         [
           1,
-          101.6,
-          289.56
+          292.1,
+          370.84000000000003
         ]
       ]
     },
@@ -748,8 +1041,8 @@
       "units": [
         [
           1,
-          165.1,
-          289.56
+          355.6,
+          370.84000000000003
         ]
       ]
     },
@@ -766,8 +1059,8 @@
       "units": [
         [
           1,
-          228.6,
-          289.56
+          38.1,
+          411.48
         ]
       ]
     },
@@ -784,8 +1077,8 @@
       "units": [
         [
           1,
-          292.1,
-          289.56
+          101.6,
+          411.48
         ]
       ]
     },
@@ -802,8 +1095,8 @@
       "units": [
         [
           1,
-          355.6,
-          289.56
+          165.1,
+          411.48
         ]
       ]
     },
@@ -820,8 +1113,8 @@
       "units": [
         [
           1,
-          38.1,
-          330.20000000000005
+          228.6,
+          411.48
         ]
       ]
     },
@@ -838,8 +1131,8 @@
       "units": [
         [
           1,
-          101.6,
-          330.20000000000005
+          292.1,
+          411.48
         ]
       ]
     },
@@ -856,8 +1149,8 @@
       "units": [
         [
           1,
-          165.1,
-          330.20000000000005
+          355.6,
+          411.48
         ]
       ]
     },
@@ -874,8 +1167,8 @@
       "units": [
         [
           1,
-          228.6,
-          330.20000000000005
+          38.1,
+          452.12
         ]
       ]
     },
@@ -892,16 +1185,16 @@
       "units": [
         [
           1,
-          292.1,
-          330.20000000000005
+          101.6,
+          452.12
         ]
       ]
     },
     {
       "ref": "J402",
-      "lib_id": "Connector_Generic:Conn_01x07",
+      "lib_id": "Connector_Generic:Conn_01x10",
       "value": "SEQ_TO_SYSTEM",
-      "mpn": "Logical interface to power-d021/core; same PCB, not a connector",
+      "mpn": "Logical interface to power-d021/iso-d019/core; same PCB, not a connector",
       "footprint": "",
       "nets": {
         "1": "AUX_RAW",
@@ -910,13 +1203,16 @@
         "4": "RESET",
         "5": "FAULT",
         "6": "CLIP_OTW",
-        "7": "GND"
+        "7": "GND",
+        "8": "RUN",
+        "9": "AUDIO_EN",
+        "10": "DC_OK"
       },
       "units": [
         [
           1,
-          355.6,
-          330.20000000000005
+          165.1,
+          452.12
         ]
       ]
     }
@@ -939,12 +1235,14 @@
       "start timeout 0.62-1.44 s (START_TIMEOUT_US 1.44 s max)",
       "ANALOG_12V and VMID windows (reference_valid / vmid_valid) into RAILS_OK"
     ],
-    "not_implemented_d019": [
-      "input_connect / open_confirmed / close_confirmed",
-      "discharge",
-      "drivers_quiet / preclose_match",
-      "dc_a_valid / dc_b_valid / DC dwell",
-      "audio_enable mute"
+    "d019_logic_d024": [
+      "RESET released 12-28 ms after RUN (relay operate 3 ms max)",
+      "DC_OK (both pins 2-5 V) after arming, continuous 12-28 ms, latches AUDIO_EN",
+      "DC_OK loss after AUDIO_EN trips RAILS_OK; start timeout covers arming + dwell"
+    ],
+    "by_design_not_observed": [
+      "open/close_confirmed: relay datasheet timing, no auxiliary contact",
+      "preclose_match: isolated plate and unpowered pin both near 0 V"
     ],
     "new_physical_board": false
   },

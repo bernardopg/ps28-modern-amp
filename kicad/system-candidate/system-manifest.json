@@ -1,9 +1,10 @@
 {
   "staged_validation": {
-    "native_pad_net_matches": 421,
-    "copper_pads_checked": 421,
-    "footprints": 150,
-    "signal_bridge_open": true
+    "native_pad_net_matches": 570,
+    "copper_pads_checked": 570,
+    "footprints": 200,
+    "signal_bridge_open": false,
+    "signal_bridge_via_relay_only": true
   },
   "parts": [
     {
@@ -558,7 +559,7 @@
       "value": "10uF 16V X5R",
       "nets": {
         "1": "DIFF_P",
-        "2": "INPUT_A_AC"
+        "2": "INA_ISO"
       },
       "footprint": "Capacitor_SMD:C_0805_2012Metric",
       "pcb_position": [
@@ -578,7 +579,7 @@
       "value": "10uF 16V X5R",
       "nets": {
         "1": "DIFF_N",
-        "2": "INPUT_B_AC"
+        "2": "INB_ISO"
       },
       "footprint": "Capacitor_SMD:C_0805_2012Metric",
       "pcb_position": [
@@ -1015,7 +1016,8 @@
       "manufacturer": "Sullins",
       "source": "TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified",
       "rotation": 0,
-      "in_bom": true
+      "in_bom": true,
+      "dnp": true
     },
     {
       "ref": "J4",
@@ -1133,13 +1135,13 @@
       "lib_id": "PS28_ANALOG:OPA1656ID",
       "value": "OPA1656ID",
       "nets": {
-        "1": "DIFF_POS",
-        "2": "DIFF_POS",
+        "1": "DIFF_P",
+        "2": "DIFF_P",
         "3": "Y2",
         "4": "GND",
         "5": "VMID",
         "6": "MINUS",
-        "7": "DIFF_NEG",
+        "7": "DIFF_N",
         "8": "ANALOG_12V"
       },
       "units": [
@@ -1282,7 +1284,7 @@
       "lib_id": "Device:R",
       "value": "10k",
       "nets": {
-        "1": "DIFF_POS",
+        "1": "DIFF_P",
         "2": "MINUS"
       },
       "units": [
@@ -1301,7 +1303,7 @@
       "lib_id": "Device:R",
       "value": "10k",
       "nets": {
-        "1": "DIFF_NEG",
+        "1": "DIFF_N",
         "2": "MINUS"
       },
       "units": [
@@ -1378,7 +1380,7 @@
       "value": "100n",
       "nets": {
         "1": "X2",
-        "2": "DIFF_POS"
+        "2": "DIFF_P"
       },
       "units": [
         [
@@ -1397,7 +1399,7 @@
       "value": "100n",
       "nets": {
         "1": "X2",
-        "2": "DIFF_POS"
+        "2": "DIFF_P"
       },
       "units": [
         [
@@ -2633,19 +2635,63 @@
       "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
     },
     {
+      "ref": "U414",
+      "lib_id": "Power_Supervisor:TPS3808DBV",
+      "value": "TPS3808G33",
+      "mpn": "TPS3808G33DBVR (TI SBVS050N); connect-before-reset delay, CT open",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "nets": {
+        "1": "RESET_GO",
+        "2": "GND",
+        "3": "RUN",
+        "4": null,
+        "5": "SEQ_3V3",
+        "6": "SEQ_3V3"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          167.64
+        ]
+      ],
+      "group": "seq",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R428",
+      "lib_id": "Device:R",
+      "value": "100k",
+      "mpn": "TBD: RESET pull-up",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "RESET_GO"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          167.64
+        ]
+      ],
+      "group": "seq",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
       "ref": "R408",
       "lib_id": "Device:R",
       "value": "1k",
       "mpn": "TBD: series to TPA RESET; with R9 4.7k gives >=2.6 V (VIH 1.9 V)",
       "footprint": "Resistor_SMD:R_0603_1608Metric",
       "nets": {
-        "1": "RUN",
+        "1": "RESET_GO",
         "2": "RESET"
       },
       "units": [
         [
           1,
-          101.6,
+          228.6,
           167.64
         ]
       ],
@@ -2663,7 +2709,7 @@
         "2": "RUN",
         "3": "NOT_ARMED",
         "4": "GND",
-        "5": null,
+        "5": "ARMED",
         "6": "RUN",
         "7": "SEQ_3V3",
         "8": "SEQ_3V3"
@@ -2671,7 +2717,7 @@
       "units": [
         [
           1,
-          165.1,
+          292.1,
           167.64
         ]
       ],
@@ -2694,7 +2740,7 @@
       "units": [
         [
           1,
-          228.6,
+          355.6,
           167.64
         ]
       ],
@@ -2717,8 +2763,8 @@
       "units": [
         [
           1,
-          292.1,
-          167.64
+          38.1,
+          208.28
         ]
       ],
       "group": "seq",
@@ -2734,14 +2780,14 @@
         "3": "GND",
         "5": "SEQ_3V3",
         "1": "RUN",
-        "2": "NOT_ARMED",
+        "2": "NOT_AUDIO",
         "4": "START_WIN"
       },
       "units": [
         [
           1,
-          355.6,
-          167.64
+          101.6,
+          208.28
         ]
       ],
       "group": "seq",
@@ -2762,7 +2808,7 @@
       "units": [
         [
           1,
-          38.1,
+          165.1,
           208.28
         ]
       ],
@@ -2782,7 +2828,7 @@
       "units": [
         [
           1,
-          101.6,
+          228.6,
           208.28
         ]
       ],
@@ -2802,7 +2848,7 @@
       "units": [
         [
           1,
-          165.1,
+          292.1,
           208.28
         ]
       ],
@@ -2822,7 +2868,7 @@
       "units": [
         [
           1,
-          228.6,
+          355.6,
           208.28
         ]
       ],
@@ -2842,8 +2888,8 @@
       "units": [
         [
           1,
-          292.1,
-          208.28
+          38.1,
+          248.92
         ]
       ],
       "group": "seq",
@@ -2862,8 +2908,8 @@
       "units": [
         [
           1,
-          355.6,
-          208.28
+          101.6,
+          248.92
         ]
       ],
       "group": "seq",
@@ -2882,7 +2928,7 @@
       "units": [
         [
           1,
-          38.1,
+          165.1,
           248.92
         ]
       ],
@@ -2902,7 +2948,7 @@
       "units": [
         [
           1,
-          101.6,
+          228.6,
           248.92
         ]
       ],
@@ -2922,7 +2968,7 @@
       "units": [
         [
           1,
-          165.1,
+          292.1,
           248.92
         ]
       ],
@@ -2942,7 +2988,7 @@
       "units": [
         [
           1,
-          228.6,
+          355.6,
           248.92
         ]
       ],
@@ -2962,8 +3008,287 @@
       "units": [
         [
           1,
+          38.1,
+          289.56
+        ]
+      ],
+      "group": "seq",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R429",
+      "lib_id": "Device:R",
+      "value": "100k",
+      "mpn": "TBD: DC_OK pull-up (open-drain from iso-d019 U501/U502)",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "DC_OK"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          289.56
+        ]
+      ],
+      "group": "seq",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "U415",
+      "lib_id": "74xGxx:74LVC1G08",
+      "value": "74LVC1G08",
+      "mpn": "SN74LVC1G08DBVR (TI SCES217AA)",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "nets": {
+        "3": "GND",
+        "5": "SEQ_3V3",
+        "1": "ARMED",
+        "2": "DC_OK",
+        "4": "DC_GATE"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          289.56
+        ]
+      ],
+      "group": "seq",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "U416",
+      "lib_id": "Power_Supervisor:TPS3808DBV",
+      "value": "TPS3808G33",
+      "mpn": "TPS3808G33DBVR (TI SBVS050N); DC dwell, CT open",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "nets": {
+        "1": "DWELL_OK",
+        "2": "GND",
+        "3": "DC_GATE",
+        "4": null,
+        "5": "SEQ_3V3",
+        "6": "SEQ_3V3"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          289.56
+        ]
+      ],
+      "group": "seq",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R430",
+      "lib_id": "Device:R",
+      "value": "100k",
+      "mpn": "TBD: RESET pull-up",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "DWELL_OK"
+      },
+      "units": [
+        [
+          1,
           292.1,
-          248.92
+          289.56
+        ]
+      ],
+      "group": "seq",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "U417",
+      "lib_id": "74xGxx:74LVC2G74",
+      "value": "74LVC2G74",
+      "mpn": "SN74LVC2G74DCTR (TI SCES203Q); AUDIO latch",
+      "footprint": "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm",
+      "nets": {
+        "1": "DWELL_OK",
+        "2": "SEQ_3V3",
+        "3": "NOT_AUDIO",
+        "4": "GND",
+        "5": "AUDIO_EN",
+        "6": "RUN",
+        "7": "SEQ_3V3",
+        "8": "SEQ_3V3"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          289.56
+        ]
+      ],
+      "group": "seq",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "U418",
+      "lib_id": "74xGxx:74LVC1G32",
+      "value": "74LVC1G32",
+      "mpn": "SN74LVC1G32DBVR (TI SCES219W)",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "nets": {
+        "3": "GND",
+        "5": "SEQ_3V3",
+        "1": "NOT_AUDIO",
+        "2": "DC_OK",
+        "4": "DC_TRIP_N"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          330.20000000000005
+        ]
+      ],
+      "group": "seq",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "U419",
+      "lib_id": "74xGxx:74LVC1G07",
+      "value": "74LVC1G07",
+      "mpn": "SN74LVC1G07DBVR (TI SCES296AG); open-drain DC trip into RAILS_OK",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "nets": {
+        "3": "GND",
+        "5": "SEQ_3V3",
+        "1": null,
+        "2": "DC_TRIP_N",
+        "4": "RAILS_OK"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          330.20000000000005
+        ]
+      ],
+      "group": "seq",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "C418",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=10 V; U414",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          330.20000000000005
+        ]
+      ],
+      "group": "seq",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "C419",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=10 V; U415",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          330.20000000000005
+        ]
+      ],
+      "group": "seq",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "C420",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=10 V; U416",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          330.20000000000005
+        ]
+      ],
+      "group": "seq",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "C421",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=10 V; U417",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          330.20000000000005
+        ]
+      ],
+      "group": "seq",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "C422",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=10 V; U418",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          370.84000000000003
+        ]
+      ],
+      "group": "seq",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "C423",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=10 V; U419",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          370.84000000000003
         ]
       ],
       "group": "seq",
@@ -2986,8 +3311,8 @@
       "units": [
         [
           1,
-          355.6,
-          248.92
+          165.1,
+          370.84000000000003
         ]
       ],
       "group": "seq",
@@ -3010,8 +3335,8 @@
       "units": [
         [
           1,
-          38.1,
-          289.56
+          228.6,
+          370.84000000000003
         ]
       ],
       "group": "seq",
@@ -3030,8 +3355,8 @@
       "units": [
         [
           1,
-          101.6,
-          289.56
+          292.1,
+          370.84000000000003
         ]
       ],
       "group": "seq",
@@ -3050,8 +3375,8 @@
       "units": [
         [
           1,
-          165.1,
-          289.56
+          355.6,
+          370.84000000000003
         ]
       ],
       "group": "seq",
@@ -3070,8 +3395,8 @@
       "units": [
         [
           1,
-          228.6,
-          289.56
+          38.1,
+          411.48
         ]
       ],
       "group": "seq",
@@ -3090,8 +3415,8 @@
       "units": [
         [
           1,
-          292.1,
-          289.56
+          101.6,
+          411.48
         ]
       ],
       "group": "seq",
@@ -3110,8 +3435,8 @@
       "units": [
         [
           1,
-          355.6,
-          289.56
+          165.1,
+          411.48
         ]
       ],
       "group": "seq",
@@ -3130,8 +3455,8 @@
       "units": [
         [
           1,
-          38.1,
-          330.20000000000005
+          228.6,
+          411.48
         ]
       ],
       "group": "seq",
@@ -3150,8 +3475,8 @@
       "units": [
         [
           1,
-          101.6,
-          330.20000000000005
+          292.1,
+          411.48
         ]
       ],
       "group": "seq",
@@ -3170,8 +3495,8 @@
       "units": [
         [
           1,
-          165.1,
-          330.20000000000005
+          355.6,
+          411.48
         ]
       ],
       "group": "seq",
@@ -3190,8 +3515,8 @@
       "units": [
         [
           1,
-          228.6,
-          330.20000000000005
+          38.1,
+          452.12
         ]
       ],
       "group": "seq",
@@ -3210,27 +3535,754 @@
       "units": [
         [
           1,
-          292.1,
-          330.20000000000005
+          101.6,
+          452.12
         ]
       ],
       "group": "seq",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "K501",
+      "lib_id": "Relay:G6K-2",
+      "value": "G6K-2F DC12",
+      "mpn": "G6K-2F DC12 (Omron K106-E1-11 p.2-3: 1315 ohm, 3 ms operate/release max, Au alloy)",
+      "footprint": "Relay_SMD:Relay_DPDT_Omron_G6K-2F",
+      "nets": {
+        "1": "AUX_RAW",
+        "8": "RELAY_DRV",
+        "3": "INA_ISO",
+        "2": "INA_DIS",
+        "4": "INPUT_A_AC",
+        "6": "INB_ISO",
+        "7": "INB_DIS",
+        "5": "INPUT_B_AC"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          45.72
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "Q501",
+      "lib_id": "PS28_ISO:MMBT3904",
+      "value": "MMBT3904",
+      "mpn": "MMBT3904-7-F (Diodes DS30036): VCEsat <=0.2 V at 10 mA/1 mA, VCEO 40 V",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "nets": {
+        "1": "RELAY_BASE",
+        "2": "GND",
+        "3": "RELAY_DRV"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          45.72
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R501",
+      "lib_id": "Device:R",
+      "value": "2.2k",
+      "mpn": "TBD: 1 %; IB >=1.0 mA from 3.3 V (VBEsat 0.85 V max)",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "RUN",
+        "2": "RELAY_BASE"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          45.72
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R502",
+      "lib_id": "Device:R",
+      "value": "100k",
+      "mpn": "TBD: base pull-down, relay off without logic",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "RELAY_BASE",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          45.72
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "D501",
+      "lib_id": "Device:D",
+      "value": "1N4148W",
+      "mpn": "1N4148W-7-F (Diodes DS30086)",
+      "footprint": "Diode_SMD:D_SOD-123",
+      "nets": {
+        "1": "RELAY_FLY",
+        "2": "RELAY_DRV"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          45.72
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "D502",
+      "lib_id": "Device:D_Zener",
+      "value": "BZT52C15",
+      "mpn": "BZT52C15-7-F (Diodes DS18004): 13.8-15.6 V; faster release",
+      "footprint": "Diode_SMD:D_SOD-123",
+      "nets": {
+        "1": "RELAY_FLY",
+        "2": "AUX_RAW"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          45.72
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R503",
+      "lib_id": "Device:R",
+      "value": "1k",
+      "mpn": "TBD: 1 %, >=0.1 W; tau 10 ms with 10 uF",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "INA_DIS",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          86.36
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R504",
+      "lib_id": "Device:R",
+      "value": "1k",
+      "mpn": "TBD: 1 %, >=0.1 W; tau 10 ms with 10 uF",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "INB_DIS",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          86.36
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "C503",
+      "lib_id": "Device:C",
+      "value": "4.7n C0G",
+      "mpn": "TBD: C0G/NP0 >=50 V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "INPUT_A_AC",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          86.36
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "C504",
+      "lib_id": "Device:C",
+      "value": "4.7n C0G",
+      "mpn": "TBD: C0G/NP0 >=50 V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "INPUT_B_AC",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          86.36
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "U501",
+      "lib_id": "PS28_POWER:TPS3700DDC",
+      "value": "TPS3700DDC",
+      "mpn": "TPS3700DDCR (TI SBVS187G); INPUT_A DC window",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "nets": {
+        "1": "DC_OK",
+        "2": "GND",
+        "3": "INA_UV",
+        "4": "INA_OV",
+        "5": "AUX_RAW",
+        "6": "DC_OK"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          86.36
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "U502",
+      "lib_id": "PS28_POWER:TPS3700DDC",
+      "value": "TPS3700DDC",
+      "mpn": "TPS3700DDCR (TI SBVS187G); INPUT_B DC window",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "nets": {
+        "1": "DC_OK",
+        "2": "GND",
+        "3": "INB_UV",
+        "4": "INB_OV",
+        "5": "AUX_RAW",
+        "6": "DC_OK"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          86.36
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R505",
+      "lib_id": "Device:R",
+      "value": "787k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K; pin DC window and return",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "INPUT_A_AC",
+        "2": "INA_UV"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          127.0
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R506",
+      "lib_id": "Device:R",
+      "value": "115k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K; pin DC window and return",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "INA_UV",
+        "2": "INA_OV"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          127.0
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R507",
+      "lib_id": "Device:R",
+      "value": "78.7k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K; pin DC window and return",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "INA_OV",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          127.0
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R508",
+      "lib_id": "Device:R",
+      "value": "787k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K; pin DC window and return",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "INPUT_B_AC",
+        "2": "INB_UV"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          127.0
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R509",
+      "lib_id": "Device:R",
+      "value": "115k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K; pin DC window and return",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "INB_UV",
+        "2": "INB_OV"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          127.0
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R510",
+      "lib_id": "Device:R",
+      "value": "78.7k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K; pin DC window and return",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "INB_OV",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          127.0
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "C509",
+      "lib_id": "Device:C",
+      "value": "330n",
+      "mpn": "TBD: X7R >=16 V; UV tap filter",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "INA_UV",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          167.64
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "C510",
+      "lib_id": "Device:C",
+      "value": "680n",
+      "mpn": "TBD: X7R >=16 V; OV tap filter",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "INA_OV",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          167.64
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "C511",
+      "lib_id": "Device:C",
+      "value": "330n",
+      "mpn": "TBD: X7R >=16 V; UV tap filter",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "INB_UV",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          167.64
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "C512",
+      "lib_id": "Device:C",
+      "value": "680n",
+      "mpn": "TBD: X7R >=16 V; OV tap filter",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "INB_OV",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          167.64
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "U504",
+      "lib_id": "PS28_POWER:TPS3700DDC",
+      "value": "TPS3700DDC",
+      "mpn": "TPS3700DDCR (TI SBVS187G); AUX_RAW window",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "nets": {
+        "1": "RAILS_OK",
+        "2": "GND",
+        "3": "AUX_UV",
+        "4": "AUX_OV",
+        "5": "AUX_RAW",
+        "6": "RAILS_OK"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          167.64
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R514",
+      "lib_id": "Device:R",
+      "value": "357k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K; AUX window",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "AUX_UV"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          167.64
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R515",
+      "lib_id": "Device:R",
+      "value": "1.5k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K; AUX window",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "AUX_UV",
+        "2": "AUX_OV"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          208.28
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R516",
+      "lib_id": "Device:R",
+      "value": "11.5k",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K; AUX window",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "AUX_OV",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          208.28
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "U503",
+      "lib_id": "PS28_ISO:TMUX6219DGK",
+      "value": "TMUX6219",
+      "mpn": "TMUX6219DGKR (TI SCDS420E p.39); RON <=7.5 ohm at 12 V single supply (p.10)",
+      "footprint": "Package_SO:MSOP-8_3x3mm_P0.65mm",
+      "nets": {
+        "1": "DIVIDED",
+        "2": "VMID",
+        "3": "GND",
+        "4": "ANALOG_12V",
+        "5": "MUTE_EN",
+        "6": "GND",
+        "7": "GND",
+        "8": "GND"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          208.28
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R511",
+      "lib_id": "Device:R",
+      "value": "100k",
+      "mpn": "TBD: EN pull-up to ANALOG_12V (default muted)",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "ANALOG_12V",
+        "2": "MUTE_EN"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          208.28
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "Q502",
+      "lib_id": "PS28_ISO:MMBT3904",
+      "value": "MMBT3904",
+      "mpn": "MMBT3904-7-F (Diodes DS30036); unmute pull-down",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "nets": {
+        "1": "MUTE_BASE",
+        "2": "GND",
+        "3": "MUTE_EN"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          208.28
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R512",
+      "lib_id": "Device:R",
+      "value": "10k",
+      "mpn": "TBD: 1 %",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "AUDIO_EN",
+        "2": "MUTE_BASE"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          208.28
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R513",
+      "lib_id": "Device:R",
+      "value": "100k",
+      "mpn": "TBD: base pull-down, muted without logic",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "MUTE_BASE",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          248.92
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "C505",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=25 V; U503 VDD (SCDS420E Table 4-1)",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "ANALOG_12V",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          248.92
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "C506",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=25 V; U501 VDD",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          248.92
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "C507",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=25 V; U502 VDD",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          248.92
+        ]
+      ],
+      "group": "iso",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "C508",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=25 V; U504 VDD",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          248.92
+        ]
+      ],
+      "group": "iso",
       "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
     }
   ],
   "source_sha256": {
     "kicad/core-oem-refined/ps28-modern.kicad_sch": "134bdf8fa93e3a66d99a5d556bd45cb9c5289ed5c3b126273db16ef3ad38a2ce",
     "kicad/analog-protected/analog-protected.kicad_sch": "f46adefe0383358837e4eb49a41fe21b8017f39b549f789c10675ca4ac277303",
-    "scripts/integrate_candidate.py": "d3b06695bb02462a24fd64d6a5db211c0d0e6c4462c6e09d3f15e8ebf42df8e5",
+    "scripts/integrate_candidate.py": "defc726eabffcd021679b8ea76e56f4e83b004e344585c85ceb9c18750ab3915",
     "kicad/power-d021/power-d021.kicad_sch": "f51a7dd3d74d0c360b514180a4d9918f63d2e364aee3d35d2c0c834e4029aea0",
-    "kicad/seq-d020/seq-d020.kicad_sch": "53ce7cd154cfc8cb95eb73798a766134730612ef82e1e483ddfcb0d4627531cd",
-    "scripts/create_power_d021.py": "aed565b8e50f606c080c717ac26dc144024624fa149afd1473abe9edad46b0a6",
-    "scripts/create_seq_d020.py": "375a04e39bf9bffec22cd02aba053c723be519cb0b4e2f535683b9eaed7a69bb"
+    "kicad/seq-d020/seq-d020.kicad_sch": "0d6a219fd97f4594ea756f839a9c2f616b1174abb3ba09accabca21839d0b884",
+    "scripts/create_power_d021.py": "a92f643237b2d08071228584ba9d4406920f4206935f18f66ba84db1a71d03b9",
+    "scripts/create_seq_d020.py": "683a80d4acd83d68d237ab158e8d85e75f21aa51c66dc17d71a0b56d595e5760"
   },
   "status": "CORE + D018 + D021 POWER + D020 SEQ SUBSET IMPORT BANKS; SIGNAL SAFETY BRIDGE OPEN",
   "power_d021_integrated": true,
   "seq_d020_subset_integrated": true,
   "dnp": [
+    "J3",
     "J4",
     "R7",
     "R8"
@@ -3238,15 +4290,16 @@
   "logical_interfaces_removed": [
     "J302",
     "J303",
-    "J402"
+    "J402",
+    "J501"
   ],
   "physical_interfaces_removed": [
     "J101",
     "J102",
     "J103"
   ],
-  "signal_bridge_connected": false,
-  "isolation_mute_supervisor_implemented": false,
+  "signal_bridge_connected": true,
+  "isolation_mute_supervisor_implemented": true,
   "rails_fault_supervisor_implemented": true,
   "analog_placement_inside_oem": false,
   "unassigned_footprints": [],

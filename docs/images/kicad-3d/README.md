@@ -18,7 +18,8 @@ Saída real: PNG1264×882; GIF784×578,
 [Vista superior](system-top.png) · [Vista inferior](system-bottom.png)
 
 `kicad/system-candidate/`: núcleo OEM no contorno e, **à direita, fora dele**, os
-bancos de importação D-018 (analógico), D-021 (fonte) e D-020 (sequenciador).
+bancos de importação D-018 (analógico), D-021 (fonte), D-020 (sequenciador) e
+D-024 (relé/mute/janelas D-019).
 Os bancos não têm placement, fit nem roteamento; só tornam visíveis os corpos e
 footprints candidatos. Câmera com zoom/pan para enquadrar os bancos.
 

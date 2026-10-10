@@ -11,7 +11,7 @@ from create_seq_d020 import parts
 
 # TPS3808 SBVS050N p.7 sec.6.6: CT to VDD 180/300/420 ms, CT 180 nF 0.62/1.03/1.44 s.
 TD_US = {"SEQ_CT1": (180_000, 420_000), "SEQ_CT2": (180_000, 420_000),
-         "SEQ_CT3": (620_000, 1_440_000)}
+         "SEQ_CT3": (620_000, 1_440_000), None: (12_000, 28_000)}  # None = CT open
 
 
 class SeqLogic:
@@ -48,6 +48,8 @@ class SeqLogic:
                 elif clk and not self.clk[ref]:
                     self.ff[ref] = nets.get(n["2"], False)
                 self.clk[ref] = clk
+                if not nets.get(n["7"], True):  # PRE low sets (never driven low here)
+                    self.ff[ref] = True
                 if n["5"]:
                     new[n["5"]] = self.ff[ref]
                 if n["3"]:
@@ -63,20 +65,21 @@ class SeqLogic:
             elif p["value"] == "74LVC1G06" and nets.get(n["2"], False):
                 od_low[n["4"]] = True
             elif p["ref"] == "R408":  # series resistor into TPA RESET (R9 pull-down)
-                new["RESET"] = nets.get("RUN", False)
+                new["RESET"] = nets.get(n["1"], False)
         for net, low in od_low.items():
             if net in ext and not ext[net]:
                 low = True  # external open-drain (power-good) pulls low
             new[net] = not low
         return new
 
-    def step(self, t, power_ok, button_pressed, fault, otw, nets=None):
-        """power_ok: LM5164 PGOOD and TPS3700 window (open-drain into RAILS_OK).
-        fault/otw: TPA open-drain outputs. Returns settled nets."""
+    def step(self, t, power_ok, button_pressed, fault, otw, nets=None, dc_ok=True):
+        """power_ok: PGOOD and TPS3700 windows (open-drain into RAILS_OK).
+        fault/otw: TPA open-drain outputs; dc_ok: iso-d019 pin windows (open-drain).
+        Returns settled nets."""
         ext = {"RAILS_OK": power_ok, "START_DEB": not button_pressed,
-               "FAULT": fault, "CLIP_OTW": otw}
+               "FAULT": fault, "CLIP_OTW": otw, "DC_OK": dc_ok, "SEQ_3V3": True}
         nets = dict(nets or {})
-        nets.update({k: v for k, v in ext.items() if k != "RAILS_OK"})
+        nets.update({k: v for k, v in ext.items() if k not in ("RAILS_OK", "DC_OK")})
         for _ in range(64):
             new = self._eval(t, ext, nets)
             if new == nets:
@@ -86,10 +89,11 @@ class SeqLogic:
 
 
 def run(script, corner=0, dt=1_000, end=4_000_000):
-    """script(t, nets) -> (power_ok, button, fault, otw). Returns [(t, nets)]."""
+    """script(t, nets) -> (power_ok, button, fault, otw[, dc_ok]). Returns [(t, nets)]."""
     model = SeqLogic(corner)
     nets, trace = {}, []
     for t in range(0, end + 1, dt):
-        nets = model.step(t, *script(t, nets), nets)
+        stim = script(t, nets)
+        nets = model.step(t, *stim[:4], nets, *stim[4:])
         trace.append((t, nets))
     return trace

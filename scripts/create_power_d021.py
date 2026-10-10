@@ -31,34 +31,31 @@ VREF = (1.181, 1.2, 1.218)
 R_FB1, R_FB2, R_FB_TOL = 453e3, 49.9e3, 0.01
 
 
-def _extremes(f):
-    return min(f(*c) for c in _corners()), max(f(*c) for c in _corners())
+def window3(top, mid, bot, tol=R_TOL, digits=2):
+    """Worst-case trips of a TOP-UV-MID-OV-BOT divider on a TPS3700 (VIT, tolerance,
+    INA+/INB- input currents). Returns OV rising and UV falling [min, typ, max]."""
+    corners = [(top * t, mid * m, bot * b) for t in (1 - tol, 1 + tol)
+               for m in (1 - tol, 1 + tol) for b in (1 - tol, 1 + tol)]
 
+    def ov(vit, i_in, t, m, b):
+        return (vit + i_in * b * (t + m) / (t + m + b)) * (t + m + b) / b
 
-def _corners():
-    for t in (1 - R_TOL, 1 + R_TOL):
-        for m in (1 - R_TOL, 1 + R_TOL):
-            for b in (1 - R_TOL, 1 + R_TOL):
-                yield R_TOP * t, R_MID * m, R_BOT * b
+    def uv(vit, i_in, t, m, b):
+        return (vit + i_in * (m + b) * t / (t + m + b)) * (t + m + b) / (m + b)
+
+    ovs = [ov(VIT_POS[k], i, *c) for k in (0, 2) for i in (-15e-9, 15e-9) for c in corners]
+    uvs = [uv(VIT_NEG[k], i, *c) for k in (0, 2) for i in (-25e-9, 25e-9) for c in corners]
+    total = top + mid + bot
+    return {
+        "ov_trip_v": [round(min(ovs), digits), round(VIT_POS[1] * total / bot, digits), round(max(ovs), digits)],
+        "uv_trip_falling_v": [round(min(uvs), digits), round(VIT_NEG[1] * total / (mid + bot), digits),
+                              round(max(uvs), digits)],
+    }
 
 
 def ovp_window():
     """Worst-case PVDD trip points from datasheet threshold limits and resistor tolerance."""
-    def ov(vit, i_in):
-        return lambda t, m, b: (vit + i_in * b * (t + m) / (t + m + b)) * (t + m + b) / b
-
-    def uv(vit, i_in):
-        return lambda t, m, b: (vit + i_in * (m + b) * t / (t + m + b)) * (t + m + b) / (m + b)
-
-    ov_lo = min(_extremes(ov(VIT_POS[0], i))[0] for i in (-15e-9, 15e-9))
-    ov_hi = max(_extremes(ov(VIT_POS[2], i))[1] for i in (-15e-9, 15e-9))
-    uv_lo = min(_extremes(uv(VIT_NEG[0], i))[0] for i in (-25e-9, 25e-9))
-    uv_hi = max(_extremes(uv(VIT_NEG[2], i))[1] for i in (-25e-9, 25e-9))
-    total = R_TOP + R_MID + R_BOT
-    return {
-        "ov_trip_v": [round(ov_lo, 2), round(VIT_POS[1] * total / R_BOT, 2), round(ov_hi, 2)],
-        "uv_trip_falling_v": [round(uv_lo, 2), round(VIT_NEG[1] * total / (R_MID + R_BOT), 2), round(uv_hi, 2)],
-    }
+    return window3(R_TOP, R_MID, R_BOT)
 
 
 def aux_output():

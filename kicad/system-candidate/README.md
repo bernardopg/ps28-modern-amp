@@ -1,8 +1,12 @@
 # Core + D-018 + D-021 + D-020 — candidata de revisão INCOMPLETA
 
 Abrir `system-candidate.kicad_pro`. **Não energizar/fabricar.** Não é substituta
-aprovada de B/OEM. `system-manifest.json` registra 150 componentes/footprints,
-421 pinos elétricos casados netlist↔PCB, sem footprints vazios nessa candidata.
+aprovada de B/OEM. `system-manifest.json` registra 200 componentes/footprints,
+570 pinos elétricos casados netlist↔PCB, sem footprints vazios nessa candidata.
+
+- D-024 (2026-10-09): banco `iso` (relé K501, mute U503, janelas DC/AUX). Ponte
+  DIFF_POS/NEG→DIFF_P/N **fechada só via K501**: C20/C21.2 = INA_ISO/INB_ISO (COM),
+  U1.5/6 no NO. J3 DNP. Ver `docs/iso-d019.md`.
 
 - D-023 (2026-10-09): bancos `power` (retificador T1, bulk, LM5164, TPS3700) e
   `seq` (sequenciador discreto) à direita do contorno, sem placement/fit.
@@ -13,7 +17,7 @@ aprovada de B/OEM. `system-manifest.json` registra 150 componentes/footprints,
   compartilhados; todos os amps em ANALOG_12V, VMID passivo. Schematics anteriores
   permanecem intactos. J101/J102/J103 eram interfaces lógicas de estudos separados:
   removidos, não transformados em três novos conectores na placa OEM.
-- **Ponte de sinal aberta:** DIFF_POS/NEG NÃO ligam DIFF_P/N do TPA. Falta proteção,
+- (Base D-020, superado por D-024) **Ponte de sinal aberta:** DIFF_POS/NEG NÃO ligam DIFF_P/N do TPA. Falta proteção,
   mute físico, supervisor, RCA/soma/LINE-LFE/volume/fase/limiter/DC/fonte integrada.
   MONO_BIASED é porto de entrada de estudo, não RCA direta protegida.
 - Os 29 footprints novos estão em **banco de importação fora do contorno**,

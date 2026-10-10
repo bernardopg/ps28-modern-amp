@@ -17,10 +17,11 @@ class SystemCandidateTests(unittest.TestCase):
         d = json.loads(
             (ROOT / "kicad/system-candidate/system-manifest.json").read_text()
         )
-        self.assertEqual(len(d["parts"]), 150)
+        self.assertEqual(len(d["parts"]), 200)
         self.assertEqual(d["unassigned_footprints"], [])
-        self.assertFalse(d["signal_bridge_connected"])
-        self.assertFalse(d["isolation_mute_supervisor_implemented"])
+        self.assertTrue(d["signal_bridge_connected"])  # only via K501, checked below
+        self.assertTrue(d["isolation_mute_supervisor_implemented"])
+        self.assertTrue(d["staged_validation"]["signal_bridge_via_relay_only"])
         self.assertFalse(d["analog_placement_inside_oem"])
         self.assertFalse(d["hardware_validated"])
         refs = {p["ref"]: p for p in d["parts"]}
@@ -28,8 +29,12 @@ class SystemCandidateTests(unittest.TestCase):
         for ref in ["U2", "U3"]:
             self.assertEqual(refs[ref]["nets"]["8"], "ANALOG_12V")
         self.assertEqual(refs["R9"]["value"], "4.7k 1%")
-        self.assertEqual(refs["C20"]["nets"]["1"], "DIFF_P")
-        self.assertNotEqual(refs["C20"]["nets"]["1"], refs["U3"]["nets"]["1"])
+        self.assertEqual(refs["C20"]["nets"], {"1": "DIFF_P", "2": "INA_ISO"})
+        self.assertEqual(refs["C20"]["nets"]["1"], refs["U3"]["nets"]["1"])
+        self.assertEqual(refs["K501"]["nets"]["3"], "INA_ISO")
+        self.assertEqual(refs["K501"]["nets"]["4"], refs["U1"]["nets"]["5"])
+        self.assertNotEqual(refs["C20"]["nets"]["2"], refs["U1"]["nets"]["5"])
+        self.assertNotEqual(refs["C21"]["nets"]["2"], refs["U1"]["nets"]["6"])
         for name, expected in d["source_sha256"].items():
             self.assertEqual(
                 hashlib.sha256((ROOT / name).read_bytes()).hexdigest(), expected
@@ -39,13 +44,13 @@ class SystemCandidateTests(unittest.TestCase):
         d = json.loads((ROOT / "kicad/system-candidate/system-manifest.json").read_text())
         refs = {p["ref"]: p for p in d["parts"]}
         self.assertTrue(d["power_d021_integrated"] and d["seq_d020_subset_integrated"])
-        self.assertFalse({"J302", "J303", "J402"} & set(refs))
+        self.assertFalse({"J302", "J303", "J402", "J501"} & set(refs))
         self.assertNotIn("PVDD_36V", {n for p in d["parts"] for n in p["nets"].values()})
         self.assertEqual(refs["D301"]["nets"]["1"], refs["U1"]["nets"]["36"])
         self.assertEqual(refs["R408"]["nets"]["2"], refs["U1"]["nets"]["18"])
         self.assertEqual(refs["L301"]["nets"]["2"], refs["C1"]["nets"]["1"])
         self.assertNotEqual(refs["D301"]["nets"]["2"], refs["D302"]["nets"]["2"])
-        for ref in ("J4", "R7", "R8"):
+        for ref in ("J3", "J4", "R7", "R8"):
             self.assertTrue(refs[ref]["dnp"], ref)
         pcb = (ROOT / "kicad/system-candidate/system-candidate.kicad_pcb").read_text()
         self.assertNotIn("PVDD_36V", pcb)
@@ -79,7 +84,7 @@ class SystemCandidateTests(unittest.TestCase):
                 ].strip('"')
                 self.assertEqual(net, nets[ref, number], ref + "." + number)
                 checked += 1
-        self.assertEqual(checked, 421)
+        self.assertEqual(checked, 570)
 
     def test_multiunit_paths_and_no_replace_publication(self):
         folder = ROOT / "kicad/system-candidate"

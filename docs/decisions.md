@@ -130,3 +130,19 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   validados; isolamento/mute D-019 continuam abertos. Validação: ERC/DRC nativos,
   modelo lógico da netlist capturada com mutações, `make check`. Ver
   `seq-d020.md`; 2026-10-09. Não libera fabricação nem energização.
+- D-024 — Concluir a interface D-019 com **relé de sinal Form C** (Omron G6K-2F DC12)
+  depois de C20/C21: COM na placa isolada, NO no pino do TPA, NC em descarga de 1 kΩ.
+  Mute analógico real por TMUX6219 em DIVIDED→VMID, janelas DC 2…5 V nos dois pinos
+  (TPS3700, média τ≈50 ms), janela de AUX_RAW e lógica discreta: RESET 12–28 ms
+  depois do fechamento, dwell DC 12–28 ms antes de desmutar, trip por perda de DC.
+  Substitui o requisito proposto "detecção + abertura ≤ 100 µs" pela grandeza que
+  ele protegia: pino em −0,3…7 V. A troca vale porque todo gatilho dispara com os
+  trilhos do preamp ainda válidos e o relé abre em ≤ 3 ms (catálogo). Simulação
+  ngspice com 1350 casos: pino ≥ 0 V com 3 ms e ≥ −0,262 V com 10 ms pessimista.
+  Ponte DIFF_POS/NEG→DIFF_P/N fechada só através do relé; J3 DNP. Objetivo:
+  remover o bloqueio de integração do sinal. Risco: falha simples (curto de
+  ANALOG_12V/driver) não coberta, entrada real do TPA desligado não caracterizada,
+  bounce/contato colado, conteúdo < 20 Hz exige passa-altas no front-end. Validação:
+  ERC/DRC, modelo lógico da netlist com mutações, simulação, `make check`. Ver
+  `iso-d019.md`; 2026-10-09. Proposta do agente sob autorização do proprietário,
+  pendente de revisão G1. Não libera fabricação nem energização.

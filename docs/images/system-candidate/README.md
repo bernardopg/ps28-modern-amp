@@ -1,8 +1,8 @@
 # Candidata D-020 — mídia nativa, incompleta
 
-- [Schematic nativo SVG](system-candidate.svg): 150 componentes na mesma captura
-  (D-023: blocos D-021 e D-020 à direita), isolamento/mute D-019 e interface de
-  áudio ainda incompletos. Nets AUX_RAW/GND
+- [Schematic nativo SVG](system-candidate.svg): 200 componentes na mesma captura
+  (D-023/D-024: blocos D-021, D-020 e D-019 à direita); ponte de sinal só via relé;
+  front-end de áudio (RCA/crossover/volume) ainda incompleto. Nets AUX_RAW/GND
   compartilhadas não significam roteamento; saída de sinal permanece aberta.
 - Render 3D completo da candidata, com bancos fora do contorno:
   [galeria](../kicad-3d/README.md) (`system-*`).

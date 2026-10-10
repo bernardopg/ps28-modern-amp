@@ -15,6 +15,11 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
   em `.gitattributes` como `system-candidate.svg`.
 
 ### Added
+- D-024: interface D-019 em `kicad/iso-d019/` — relé Omron G6K-2F Form C após
+  C20/C21 (NO no pino, NC descarga), mute TMUX6219, janelas DC dos pinos e de AUX
+  (TPS3700); lógica de RESET pós-conexão, dwell DC e latch de áudio no sequenciador.
+  `make simulate-d019`: 1350 casos ngspice, pino −0,262…6,61 V. Ponte de sinal
+  fechada só via relé na candidata (200 footprints, DRC 0).
 - D-023: sequenciador discreto D-020 (subconjunto sem D-019) em `kicad/seq-d020/`:
   LP2985 3,3 V, 2× TPS3808 (hold ≥360 ms), latches 74LVC2G74 para partida humana e
   arme/latch de FAULT, timeout 0,62–1,44 s, janelas TPS3700 de ANALOG_12V/VMID.

@@ -21,6 +21,9 @@ Capturar schematic e revisar ERC, atendendo docs/requirements.md e gates docs/sa
 
 ## Evidência
 
+D-024 (2026-10-09): interface D-019 capturada (`kicad/iso-d019`, ERC0) e ponte de
+sinal fechada só via relé na candidata; ver `docs/iso-d019.md`. Critérios abertos.
+
 D-023 (2026-10-09): sequenciador discreto capturado (`kicad/seq-d020`, ERC0) e
 integrado à candidata com D-021; ver `docs/seq-d020.md`. Pin mapping conferido
 contra datasheets TI; footprints não auditados, sem revisão G1. Critérios abertos.

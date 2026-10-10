@@ -102,5 +102,29 @@
     "rails_fault_supervisor_captured": true,
     "hardware_validated": false,
     "manufacturing_approved": false
+  },
+  "d024_update": {
+    "date": "2026-10-09",
+    "parts": 200,
+    "native_pins_matched": 570,
+    "new_footprints_iso_d019": 35,
+    "new_footprints_seq_d020": 62,
+    "new_footprints_placed_inside_oem": 0,
+    "dnp": [
+      "J3",
+      "J4",
+      "R7",
+      "R8"
+    ],
+    "signal_bridge_connected": true,
+    "signal_bridge_via_relay_only": true,
+    "erc_errors_unexcluded": 4,
+    "erc_warnings_unexcluded": 1,
+    "drc_geometry": 0,
+    "drc_footprint_errors": 0,
+    "drc_unrouted": 464,
+    "d019_simulation": "tests/reports/d019-interface-study.json",
+    "hardware_validated": false,
+    "manufacturing_approved": false
   }
 }

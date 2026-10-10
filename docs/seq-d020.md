@@ -2,8 +2,9 @@
 
 Captura `kicad/seq-d020/` (ERC 0) e integração em `kicad/system-candidate/`.
 **Estudo; não é hardware validado, não libera compra, fabricação nem energização.**
-A ponte de sinal D-019 continua aberta: isolamento de entrada, descarga, observação
-de DC, mute e `audio_enable` **não** estão implementados (nenhuma chave qualificada).
+D-024 acrescentou a lógica da interface D-019 (RESET depois do relé, dwell DC,
+latch de áudio, trip por DC) e o relé/mute/janelas em `kicad/iso-d019/`; ver
+[iso-d019.md](iso-d019.md). A seção abaixo descreve o subconjunto D-023 original.
 
 ## Fontes primárias
 
@@ -31,7 +32,7 @@ PDFs em `reference/ti/` (fora do Git), hashes em `reference/manifest.json`.
    soltura) e Schmitt inversor U405. A borda de aperto registra CLIP_OTW em U406
    (RUN). Botão mantido não gera borda: não enfileira partida. Borda com
    RAILS_QUAL baixo é ignorada (CLR assíncrono).
-5. **RESET:** RUN → R408 1 kΩ → RESET; com R9 4,7 kΩ dá ≥ 2,6 V (VIH 1,9 V) e
+5. **RESET:** (D-024: RUN → U414, 12–28 ms → RESET_GO) → R408 1 kΩ → RESET; com R9 4,7 kΩ dá ≥ 2,6 V (VIH 1,9 V) e
    ≤ 3,35 V (< 4,2 V).
 6. **Arme de FAULT:** U407 registra RUN na borda de subida de FAULT depois da
    liberação de RESET (assinatura de startup §11.2). Antes disso, FAULT baixo é
@@ -40,7 +41,7 @@ PDFs em `reference/ti/` (fora do Git), hashes em `reference/manifest.json`.
    aciona U409 open-drain em RAILS_OK. O hold reinicia, RUN cai, RESET cai e o
    pulso se autoencerra quando ARMED zera. Rearme exige novo hold ≥ 360 ms
    (> 4 ms de §9.4.1.8 e > 12 ms de `REARM_US`) e nova borda humana.
-8. **Timeout de partida:** U410 = RUN AND NOT_ARMED no MR de U404 (CT 180 nF,
+8. **Timeout de partida:** U410 = RUN AND NOT_AUDIO (D-024; antes NOT_ARMED) no MR de U404 (CT 180 nF,
    0,62–1,44 s). Sem arme dentro da janela, U411 open-drain derruba RAILS_OK.
    Máximo 1,44 s = `START_TIMEOUT_US`.
 
@@ -86,8 +87,8 @@ RAILS_OK perto dos limiares (histerese do TPS3700 de só 5,5 mV típ.).
 
 ## Pendências
 
-- D-019: isolamento, descarga, DC, mute (contrato `drivers_quiet`, `preclose_match`,
-  `dc_*`, `close/open_confirmed`, `audio_enable`).
+- D-019 resolvido como estudo por D-024 ([iso-d019.md](iso-d019.md)); confirmação
+  de aberto/fechado e casamento prévio são por projeto/tempo, não observados.
 - Footprints candidatos não auditados contra desenhos dos MPNs; layout, placement
   OEM e roteamento.
 - Localização mecânica do botão de partida (J401) no painel original; UX de

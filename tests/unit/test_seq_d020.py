@@ -28,6 +28,24 @@ def first(trace, net, value=True, after=0):
     return next((t for t, n in trace if t >= after and n.get(net) == value), None)
 
 
+def precharge_dc(delay_us=150_000, state=None):
+    """Pin windows valid delay_us after RESET release (TPA Fig.32 stand-in), else invalid."""
+    state = {} if state is None else state
+
+    def dc(t, nets):
+        if not nets.get("RESET", False):
+            state.pop("rel", None)
+            return False
+        return t - state.setdefault("rel", t) >= delay_us
+    return dc
+
+
+def d019_script(press, fault, dc, power=lambda t: True):
+    def s(t, nets):
+        return (power(t), any(a <= t < b for a, b in press), fault(t, nets), True, dc(t, nets))
+    return s
+
+
 def started_tpa(start_us):
     """FAULT low during start, high 200 ms later (contract START_AVDD), stays high."""
     state = {}
@@ -100,7 +118,8 @@ class SeqD020Tests(unittest.TestCase):
         self.assertEqual(nets["U406"]["6"], "RAILS_QUAL")
         self.assertEqual(nets["U406"]["2"], "CLIP_OTW")
         self.assertEqual((nets["U407"]["1"], nets["U407"]["6"]), ("FAULT", "RUN"))
-        self.assertEqual(nets["R408"], {"1": "RUN", "2": "RESET"})
+        self.assertEqual(nets["R408"], {"1": "RESET_GO", "2": "RESET"})
+        self.assertEqual((nets["U414"]["3"], nets["U414"]["4"]), ("RUN", None))  # CT open
         rails = {n for p in parts() for n in p["nets"].values()}
         self.assertFalse({"INPUT_A", "INPUT_B", "DIFF_P", "SPK_P"} & rails)
         self.assertNotIn("PVDD", rails)  # logic never touches PVDD directly
@@ -118,6 +137,45 @@ class SeqD020Tests(unittest.TestCase):
         nets = {p["ref"]: p["nets"] for p in parts()}
         for ref in ("U412", "U413"):
             self.assertEqual((nets[ref]["1"], nets[ref]["6"]), ("RAILS_OK", "RAILS_OK"))
+
+    def test_d019_order_relay_then_reset_then_dc_dwell_then_audio(self):
+        for corner in (0, 1):
+            tr = run(d019_script([(900_000, 950_000)], started_tpa(0), precharge_dc()), corner,
+                     end=2_500_000)
+            run_on = first(tr, "RUN")
+            reset_on = first(tr, "RESET")
+            audio_on = first(tr, "AUDIO_EN")
+            # RESET 12-28 ms after the relay command (relay operate 3 ms max, Omron K106).
+            self.assertGreaterEqual(reset_on - run_on, 12_000)
+            self.assertLessEqual(reset_on - run_on, 28_000 + 1_000)
+            # Audio only after arming (FAULT rise 200 ms after RESET) and DC dwell >= 12 ms.
+            dc_valid = reset_on + 150_000
+            armed = first(tr, "NOT_ARMED", False, after=run_on)
+            self.assertGreaterEqual(audio_on - max(dc_valid, armed), 12_000)
+            for t, n in tr:
+                if n.get("AUDIO_EN"):
+                    self.assertTrue(n["RUN"] and n["RESET"] and not n["NOT_ARMED"], t)
+
+    def test_dc_loss_after_unmute_latches_off_and_mutes(self):
+        state = {}
+        base = precharge_dc(state=state)
+
+        def dc(t, nets):
+            return base(t, nets) and not (1_600_000 <= t < 1_700_000)
+        tr = run(d019_script([(900_000, 950_000)], started_tpa(0), dc), 1, end=2_200_000)
+        nets = dict(tr)
+        self.assertTrue(nets[1_599_000]["AUDIO_EN"])
+        self.assertFalse(nets[1_600_000]["AUDIO_EN"] or nets[1_600_000]["RUN"] or nets[1_600_000]["RESET"])
+        self.assertFalse(nets[2_200_000]["RUN"])  # no auto-restart when DC returns
+
+    def test_precharge_never_valid_times_out(self):
+        for corner in (0, 1):
+            tr = run(d019_script([(900_000, 950_000)], started_tpa(0), lambda t, n: False), corner,
+                     end=3_500_000)
+            on = first(tr, "RUN")
+            off = first(tr, "RUN", False, after=on)
+            self.assertIsNone(first(tr, "AUDIO_EN"))
+            self.assertLessEqual(off - on, Sequencer.START_TIMEOUT_US + 1_000)
 
     def test_generator_refuses_overwrite(self):
         with tempfile.TemporaryDirectory() as tmp:
