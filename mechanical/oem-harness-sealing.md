@@ -107,4 +107,3 @@ trilhos ±48 V sem controle.
 ## Falta medir
 
 1. Qual fio do woofer é o + (marca no terminal do woofer).
-2. Woofer: conferir raspagem da bobina (empurrar o cone devagar com as duas mãos).
