@@ -21,7 +21,13 @@ Medir plate e modelar envelope, atendendo docs/requirements.md e gates docs/safe
 
 ## Evidência
 
-Pendente. Não marcar critérios sem evidência.
+2026-10-10: medidas do proprietário de backplate, dissipador externo (posição, 8 furos)
+e perfil U (65 × 33 × 30, furos a 35 mm) em `mechanical/oem-heatsink-measurements.md`;
+somas fecham com 200 × 300 e com a BOM do manual (≤ 1 mm). Fotos confirmam placa
+principal em pé e base do perfil U paralela a ela: adaptador D-013 pode ser bloco reto.
+Duas placas no OEM (potência e preamp). Faltam distância PCB→base, altura da borda
+inferior da placa, posição do perfil ao longo da placa, rosca e contorno/furos.
+Critérios seguem abertos.
 
 ## Incremento de integração original
 D-013 seleciona gabinete/plate/dissipador originais com adaptador de cobre superior.

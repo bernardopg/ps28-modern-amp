@@ -21,7 +21,7 @@ Estado detalhado em [development-status.md](development-status.md).
 
 | # | Task | Entrega | Bloqueia | Precisa do proprietário |
 |---|---|---|---|---|
-| 1 | MECH-001 | Dissipador/perfil U medidos (2026-10-10); faltam distância perfil→PCB, contorno/furos da placa, adaptador em L | 6, 7 | Foto do perfil montado e 3 cotas |
+| 1 | MECH-001 | Dissipador/perfil U medidos (2026-10-10); faltam distância perfil→PCB, contorno/furos da placa; bloco térmico reto D-013 | 6, 7 | Foto do perfil montado e 3 cotas |
 | 2 | ELEC-004 | Front-end D-022 capturado e simulado com tolerâncias | 4, 6 | Fotos/cotas dos pots e chaves do painel |
 | 3 | PWR-001 | MPNs de diodos, bulk, TVS, fusível, conector JST VH; decisão de inrush | 4, 8 | — |
 | 4 | ELEC-003 | Schematic único completo, ERC sem erros novos, revisão G1 | 6 | **Gate G1** |
