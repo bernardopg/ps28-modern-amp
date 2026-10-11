@@ -276,6 +276,18 @@ def oem_mechanics():
             "to3p_holes_at_leg_face": to3p, "hole_thread": pcb["mounting_holes"]["thread"]}
 
 
+BODY_MODELS = {"U1": "HTSSOP-44_TopEP_DDV.wrl", "J301": "JST_VH_B3P-VH.wrl",
+               "J1": "WE_WR-TBL_691137710002.wrl", "J5": "WE_WR-TBL_691137710002.wrl"}
+
+
+def set_body_model(fp, pcbnew, name):
+    """Replace a missing/absent model with a datasheet envelope (scripts/make_body_models.py)."""
+    fp.Models().clear()
+    model = pcbnew.FP_3DMODEL()
+    model.m_Filename = "${KIPRJMOD}/../models/ps28-bodies/" + name
+    fp.Models().push_back(model)
+
+
 def apply_oem_mechanics(pcb, pcbnew):
     """Replace the inferred 153 x 79.1 study outline and reservations with measured data."""
     mech = oem_mechanics()
@@ -343,6 +355,7 @@ def apply_oem_mechanics(pcb, pcbnew):
         hole.SetBoardOnly(True)
         hole.SetExcludedFromBOM(True)
         hole.SetExcludedFromPosFiles(True)
+        set_body_model(hole, pcbnew, "M3_pan_head.wrl")
         pcb.Add(hole)
     note("MEASURED OEM 154x81 (TAPE, ~1 mm) - NOT FABRICATION", 97, 16)
     return mech
@@ -477,6 +490,9 @@ def board(staged, parts, inventory):
     from place_system_candidate import place
 
     place(pcb, pcbnew, oem_mechanics(), inventory)
+    for fp in pcb.GetFootprints():
+        if fp.GetReference() in BODY_MODELS:
+            set_body_model(fp, pcbnew, BODY_MODELS[fp.GetReference()])
     pcbnew.SaveBoard(str(staged / (PROJECT + ".kicad_pcb")), pcb)
     # Add manufacturer models without replacing audited pads or assigning HCF tab.
     tree = parse((staged / (PROJECT + ".kicad_pcb")).read_text())

@@ -80,6 +80,12 @@ class SystemCandidateTests(unittest.TestCase):
             if side == "F":
                 self.assertFalse(kx0 < x < kx1 and ky0 < y < ky1, (x, y))
 
+    def test_autorouted_study_has_ground_plane_and_tracks(self):
+        pcb = (ROOT / "kicad/system-candidate/system-candidate.kicad_pcb").read_text()
+        self.assertIn('"GND_PLANE"', pcb)
+        self.assertGreater(pcb.count("(segment"), 2000)
+        self.assertGreater(pcb.count("(via"), 200)
+
     def test_native_capture_and_actual_pad_nets_are_equal(self):
         folder = ROOT / "kicad/system-candidate"
         xml = ET.parse(folder / "candidate.xml")

@@ -4,6 +4,8 @@ Abrir `system-candidate.kicad_pro`. **Não energizar/fabricar.** Não é substit
 aprovada de B/OEM. `system-manifest.json` registra 204 componentes/footprints (+4 furos M3 board-only),
 580 pinos elétricos casados netlist↔PCB, sem footprints vazios nessa candidata.
 
+- PCB-002 (2026-10-10): autoroteado com `make route-system` depois de gerar; 463/470.
+  Regenerar com `integrate_candidate.py` apaga o roteamento: rodar o make de novo.
 - PCB-001 (2026-10-10): contorno OEM medido 154 × 81, furos M3 e área do perfil U;
   placement de estudo de todos os componentes; DRC só silkscreen; 470 sem rota.
 - D-024/D-024a: banco `iso` (relé K501, série 3,3k + clamp BAT54, mute U503, janelas DC/AUX). Ponte
