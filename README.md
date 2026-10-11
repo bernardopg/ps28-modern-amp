@@ -10,9 +10,9 @@ preservando gabinete, dutos e woofer. Projeto de engenharia em fase de requisito
 
 ![Candidata de sistema — render KiCad mais recente](docs/images/kicad-3d/system-isometric.png)
 
-Candidata `kicad/system-candidate/` com todos os componentes posicionados no contorno OEM
-medido (154 × 81 mm): estudo de placement, **sem roteamento e sem aprovação de
-fabricação**. Mais vistas em [docs/images/kicad-3d](docs/images/kicad-3d/README.md).
+Candidata `kicad/system-candidate/` com todos os componentes no contorno OEM medido
+(154 × 81 mm) e autoroteamento de estudo (463/470 conexões, plano GND em In1): **sem
+revisão de layout e sem aprovação de fabricação**. Mais vistas em [docs/images/kicad-3d](docs/images/kicad-3d/README.md).
 
 ## Baseline proposta — não congelada
 

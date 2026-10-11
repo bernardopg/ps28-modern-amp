@@ -14,7 +14,7 @@ Estado detalhado em [development-status.md](development-status.md).
 | Interface D-019/D-024/D-024a (relé, mute, janelas, clamp) | Capturada, 1566 casos ngspice |
 | Front-end de áudio D-022 (RCA, crossover, LEVEL, fase) | **Não capturado** (ELEC-004) |
 | Placement no contorno OEM | **Estudo**: 204 peças no contorno medido 154 × 81, DRC só silkscreen; revisão de layout pendente |
-| Roteamento | **Não feito**: 470 conexões |
+| Roteamento | **Autoroteamento de estudo**: 463/470, sem revisão de loops/pours/EMI |
 | BOM/CPL JLCPCB com LCSC | **Não feito** |
 
 ## Sequência proposta

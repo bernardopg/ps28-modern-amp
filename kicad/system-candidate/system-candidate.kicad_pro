@@ -622,7 +622,7 @@
       "include_excluded_from_bom": true,
       "name": "Default Editing",
       "sort_asc": true,
-      "sort_field": "Refer\u00eancia"
+      "sort_field": "Referência"
     },
     "bus_aliases": {},
     "connection_grid_size": 50.0,
@@ -660,8 +660,8 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "ps28-modern.kicad_sch",
-        "name": "ps28-modern",
+        "filename": "system-candidate.kicad_sch",
+        "name": "system-candidate",
         "uuid": "00000000-0000-0000-0000-000000000000"
       }
     ],

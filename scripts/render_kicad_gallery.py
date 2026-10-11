@@ -26,10 +26,11 @@ DESIGNS = {
     "system": ROOT / "kicad/system-candidate/system-candidate.kicad_pcb",
 }
 CAMERA = {}  # per-design kicad-cli camera overrides, none needed now
+STATUS = {"system": "ESTUDO / AUTOROTEAMENTO NAO REVISADO / SEM APROVACAO PARA FABRICACAO"}
 FOOTERS = {
     "selected": "NUCLEO APENAS | D-018/D-019 SEM PCB INTEGRADA",
     "oem": "NUCLEO APENAS | D-018/D-019 SEM PCB INTEGRADA",
-    "system": "CONTORNO OEM MEDIDO 154x81 + PERFIL U; 204 PECAS POSICIONADAS (ESTUDO); SEM ROTEAMENTO",
+    "system": "CONTORNO OEM MEDIDO 154x81; 204 PECAS; AUTOROTEADA 463/470 (FREEROUTING), SEM REVISAO DE LAYOUT",
 }
 
 
@@ -215,7 +216,8 @@ def render(frame_count, output):
         draw.text((18, 8), title, font=font, fill="#eef4f8")
         draw.text(
             (18, 30),
-            "ESTUDO / NAO ROTEADA / SEM APROVACAO PARA FABRICACAO",
+            STATUS.get(target.stem.split("-")[0] if target else title.split(" | ")[1].lower(),
+                       "ESTUDO / NAO ROTEADA / SEM APROVACAO PARA FABRICACAO"),
             font=small,
             fill="#ffcf78",
         )

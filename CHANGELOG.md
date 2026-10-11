@@ -15,6 +15,9 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
   em `.gitattributes` como `system-candidate.svg`.
 
 ### Added
+- `make route-system`: autoroteamento Freerouting da candidata (463/470 conexões, plano
+  GND em In1, DRC sem clearance/curto) e modelos 3D de envelope (TPA3255 DDV, JST VH,
+  WR-TBL, parafuso M3) a partir dos datasheets; render 3D sem corpos faltando exceto J6.
 - PCB-001: candidata usa o contorno OEM medido 154 × 81 mm, 4 furos M3 e área
   proibida do perfil U (65 × 33 mm) no lugar do contorno inferido 153 × 79,1;
   placement de estudo de todos os 204 componentes (topo/fundo), DRC só com silkscreen;

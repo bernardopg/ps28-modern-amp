@@ -1,4 +1,4 @@
-.PHONY: check core-check analog-check doctor simulate simulate-input-order simulate-opa simulate-vmid simulate-vmid-protected simulate-power simulate-d019 analog-protected-check render-3d eda-smoke erc drc fetch-reference
+.PHONY: check core-check analog-check doctor simulate simulate-input-order simulate-opa simulate-vmid simulate-vmid-protected simulate-power simulate-d019 route-system analog-protected-check render-3d eda-smoke erc drc fetch-reference
 
 check:
 	python3 scripts/validate.py
@@ -53,3 +53,7 @@ fetch-reference:
 
 simulate-d019:
 	python3 scripts/simulate_d019.py
+
+route-system:
+	python3 scripts/make_body_models.py
+	python3 scripts/route_system_candidate.py

@@ -145,5 +145,23 @@
     "orientation": "x=20 relay (upper) end, x=174 transformer (lower) end; owner-confirmed",
     "placement": "study: all 204 parts inside outline, 4 holes board-only",
     "drc_violation_kinds": "silkscreen only (overlap/clipping); 0 courtyard, 0 short, 0 keepout"
+  },
+  "pcb002_autoroute": {
+    "date": "2026-10-10",
+    "tool": "Freerouting 1.9.0 (sha256 9084a488...3102), Xvfb, 1 thread",
+    "connections_routed": "463/470",
+    "vias": 242,
+    "drc": "0 clearance/short; silkscreen + 3 dangling only",
+    "open_nets": [
+      "PWM_AC",
+      "PWM_BD",
+      "PVDD",
+      "AUX_RAW",
+      "ANALOG_12V",
+      "INPUT_A_AC",
+      "ISO_FEED"
+    ],
+    "reviewed": false,
+    "fabrication_approved": false
   }
 }
