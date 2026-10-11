@@ -15,6 +15,10 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
   em `.gitattributes` como `system-candidate.svg`.
 
 ### Added
+- README reescrito como índice/wiki visual: hero com o render 3D da candidata de
+  sistema (D-023), faixa de estado, renders funcionais (schematics nativos KiCad
+  embedados) e tabelas de navegação recolhíveis por área; detalhamento textual
+  movido para `<details>`. Sem novos assets — apenas links aos exports existentes.
 - `make route-system`: autoroteamento Freerouting da candidata (463/470 conexões, plano
   GND em In1, DRC sem clearance/curto) e modelos 3D de envelope (TPA3255 DDV, JST VH,
   WR-TBL, parafuso M3) a partir dos datasheets; render 3D sem corpos faltando exceto J6.
