@@ -17,7 +17,6 @@ reference/**/*.pdf
 reference/**/*.zip
 .DS_Store
 .mypy_cache/
-<<<<<<< Updated upstream
 
 # Headroom memory and harness settings belong to the local workspace.
 .headroom/
@@ -32,10 +31,6 @@ kicad/**/jlcpcb/
 
 # Estado de runtime do wrapper Headroom (pid/porta locais).
 .claude/.headroom_wrap_*
-||||||| Stash base
-.mypy_cache/
-=======
-.mcp.json
-.claude
-.codex
->>>>>>> Stashed changes
+
+# Backups automáticos do KiCad (.history); nunca versionar.
+.history/

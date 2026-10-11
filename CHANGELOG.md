@@ -15,6 +15,12 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
   em `.gitattributes` como `system-candidate.svg`.
 
 ### Added
+- `.gitignore`: ignora `.history/` (backups do KiCad) e remove do índice o gitlink
+  órfão `kicad/.history` (repo aninhado, ausente de `.gitmodules`). Resolve marcadores
+  de conflito de merge/stash commitados em 3412f04, mantendo a variante comentada
+  (Upstream) para não ignorar `.claude`/`.codex` por inteiro e preservar os symlinks
+  versionados `.claude/skills`, `.agents/skills` e `CLAUDE.md`.
+
 - README reescrito como índice/wiki visual: hero com o render 3D da candidata de
   sistema (D-023), faixa de estado, renders funcionais (schematics nativos KiCad
   embedados) e tabelas de navegação recolhíveis por área; detalhamento textual
