@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>/home/bitter/development/ps28-modern-amp-starter/kicad/.system-stage-drouv50t/system-candidate.kicad_sch</source>
-    <date>2026-10-12T17:36:24</date>
+    <source>/home/bitter/development/ps28-modern-amp-starter/kicad/.system-stage-ajlp99y8/system-candidate.kicad_sch</source>
+    <date>2026-10-12T18:44:35</date>
     <tool>Eeschema 10.0.7</tool>
     <textvar name="PROJECT_STATUS">CORE DRAFT - UNROUTED - NOT FOR FABRICATION</textvar>
     <sheet number="1" name="/" tstamps="/">
@@ -442,14 +442,14 @@
       </units>
     </comp>
     <comp ref="C14">
-      <value>1500uF 63V</value>
-      <footprint>Capacitor_THT:CP_Radial_D18.0mm_P7.50mm</footprint>
+      <value>680uF 63V</value>
+      <footprint>Capacitor_THT:CP_Radial_D12.5mm_P5.00mm</footprint>
       <fields>
         <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
         <field name="Source">Nichicon UHE CAT.8100M p.1/p.6: UHE1J152MHD 1500uF 63V D18 H40+2 P7.5; Zmax36mOhm/100kHz/20C; ripple2470mA/100kHz/105C (x0.8 at120Hz); 10000h/105C</field>
         <field name="MPN">UHE1J152MHD</field>
         <field name="Manufacturer">Nichicon</field>
-        <field name="Footprint">Capacitor_THT:CP_Radial_D18.0mm_P7.50mm</field>
+        <field name="Footprint">Capacitor_THT:CP_Radial_D12.5mm_P5.00mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -474,14 +474,14 @@
       </units>
     </comp>
     <comp ref="C15">
-      <value>1500uF 63V</value>
-      <footprint>Capacitor_THT:CP_Radial_D18.0mm_P7.50mm</footprint>
+      <value>680uF 63V</value>
+      <footprint>Capacitor_THT:CP_Radial_D12.5mm_P5.00mm</footprint>
       <fields>
         <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
         <field name="Source">Nichicon UHE CAT.8100M p.1/p.6: UHE1J152MHD 1500uF 63V D18 H40+2 P7.5; Zmax36mOhm/100kHz/20C; ripple2470mA/100kHz/105C (x0.8 at120Hz); 10000h/105C</field>
         <field name="MPN">UHE1J152MHD</field>
         <field name="Manufacturer">Nichicon</field>
-        <field name="Footprint">Capacitor_THT:CP_Radial_D18.0mm_P7.50mm</field>
+        <field name="Footprint">Capacitor_THT:CP_Radial_D12.5mm_P5.00mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -2979,14 +2979,14 @@
       </units>
     </comp>
     <comp ref="J5">
-      <value>691137710002 2P 5.00mm</value>
-      <footprint>PS28:WE_WR_TBL_691137710002</footprint>
+      <value>B2P-VH(LF)(SN)</value>
+      <footprint>Connector_JST:JST_VH_B2P-VH_1x02_P3.96mm_Vertical</footprint>
       <fields>
         <field name="SelectionStatus">Selected for engineering validation; NO procurement/release approval</field>
         <field name="Source">WE WR-TBL1377 rev001.003 2021-07-30 p.1-2: pitch5.00 NOT5.08; 2pins, D1.3 drill, 16A UL/24A VDE</field>
         <field name="MPN">691137710002</field>
         <field name="Manufacturer">Wurth Elektronik</field>
-        <field name="Footprint">PS28:WE_WR_TBL_691137710002</field>
+        <field name="Footprint">Connector_JST:JST_VH_B2P-VH_1x02_P3.96mm_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>

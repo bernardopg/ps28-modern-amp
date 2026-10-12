@@ -123,6 +123,14 @@ porque o preamp exige ±15 V e não pode ser validado isoladamente sem bancada.
 **Não energizar mais a placa original**: Q108 em curto pode descarregar os
 trilhos ±48 V sem controle.
 
-## Falta medir
+## Medido em 2026-10-12 (proprietário, ET-1000)
 
-1. Qual fio do woofer é o + (marca no terminal do woofer).
+- Woofer: vermelho = +, preto = −. Teste do cone (DC 200 mV, cone empurrado para
+  dentro) deu tensão positiva com vermelho no terminal marcado. No header original o
+  preto fica do lado da borda da placa e o vermelho do lado do perfil U.
+- T1 (fora da tomada, escala 200 Ω, pontas ≈0,6 Ω): vermelho1–vermelho2 1,1 Ω;
+  cada vermelho–preto 0,8 Ω. Descontadas as pontas: ≈0,2 Ω por meia-bobina, ≈0,5 Ω
+  total. Preto = CT no pino central. No conector: vermelho1 para o centro da placa,
+  vermelho2 para a borda do lado de T1. J301 1=T1_A, 2=T1_CT, 3=T1_B confere.
+
+Nada mais a medir antes do layout.

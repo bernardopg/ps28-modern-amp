@@ -50,7 +50,7 @@ class RenderGalleryTests(unittest.TestCase):
             if name != "system":  # system candidate carries datasheet envelope models
                 self.assertIn("U1", entry["without_available_model"])
             else:
-                self.assertEqual(entry["without_available_model"], ["J6", "TP101"])  # GND bond pad, test pad
+                self.assertEqual(entry["without_available_model"], ["J5", "J6", "TP101"])  # no stock 3D model, GND bond pad, test pad
             if name != "system":  # system candidate carries Wurth CAD for C1/L1/L2
                 self.assertIn("L1", entry["without_available_model"])
             self.assertEqual(len(entry["model_audit"]), footprints[name])

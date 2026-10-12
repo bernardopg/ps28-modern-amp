@@ -4,6 +4,12 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 
 ## [Unreleased]
 
+### Placement com bloco térmico (D-031) — 2026-10-12
+- Medidas finais do proprietário registradas (perfil, woofer, T1); nenhuma pendente.
+- Keepout do bloco térmico do TPA3255 no placer; J6 ao lado para trança GND.
+- J5 → JST B2P-VH (chicote original do woofer); C14/C15 → UHE1J681MHD D12,5.
+- `system-candidate`: ERC 0, DRC 0, paridade 0; 471 conexões para rota manual.
+
 ### Placa única e regras pragmáticas (D-030) — 2026-10-12
 - D-029 (Rev A/Rev B) revogada; `kicad/rev-a-bench/` e seu gerador removidos.
 - Potência fechada com a placa original como referência (manual PS28 p.14):

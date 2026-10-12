@@ -32,6 +32,16 @@ RENAMES = {"AUX_12V": "AUX_RAW", "PVDD_36V": "PVDD"}
 # J3 (bench differential input) would parallel the OPA drivers once the bridge closes.
 DNP = {"J3", "J4", "R7", "R8"}
 LOGICAL = {"J302", "J303", "J402", "J501"}  # same-PCB interfaces, not connectors
+# D-031: woofer harness is a 2-way JST VH plug (P102 in the PS28 manual p.14); the
+# header replaces the core screw terminal so the OEM harness plugs in without splicing.
+# C14/C15 shrink to D12.5 so the thermal block area stays free; bulk stays >= 10 mF
+# with C301/C302 (Nichicon UHE CAT.8100M: UHE1J681MHD 680 uF/63 V 12.5x40, 0.071 ohm).
+SWAPS = {
+    "J5": ("Connector_JST", "JST_VH_B2P-VH_1x02_P3.96mm_Vertical", "B2P-VH(LF)(SN)",
+           "B2P-VH(LF)(SN) (JST VH 2 pos, mates OEM woofer harness)"),
+    "C14": ("Capacitor_THT", "CP_Radial_D12.5mm_P5.00mm", "680uF 63V", "UHE1J681MHD"),
+    "C15": ("Capacitor_THT", "CP_Radial_D12.5mm_P5.00mm", "680uF 63V", "UHE1J681MHD"),
+}
 # D-024: preamp drivers reach C20/C21; their TPA-side plates go to the relay COM.
 BRIDGE = {"DIFF_POS": "DIFF_P", "DIFF_NEG": "DIFF_N"}
 PLATES = {("C20", "2"): "INA_ISO", ("C21", "2"): "INB_ISO"}
@@ -291,7 +301,7 @@ def oem_mechanics():
 
 
 BODY_MODELS = {"U1": "HTSSOP-44_TopEP_DDV.wrl", "J301": "JST_VH_B3P-VH.wrl",
-               "J1": "WE_WR-TBL_691137710002.wrl", "J5": "WE_WR-TBL_691137710002.wrl"}
+               "J1": "WE_WR-TBL_691137710002.wrl"}
 
 
 def set_body_model(fp, pcbnew, name):
@@ -385,6 +395,17 @@ def board(staged, parts, inventory):
         if name in RENAMES:
             net.SetNetname("/" + RENAMES[name])
     nets = dict(pcb.GetNetsByName())
+    for ref, (nick, name, value, _) in SWAPS.items():
+        old = pcb.FindFootprintByReference(ref)
+        fp = pcbnew.FootprintLoad(f"/usr/share/kicad/footprints/{nick}.pretty", name)
+        fp.SetReference(ref)
+        fp.SetValue(value)
+        fp.SetFPID(pcbnew.LIB_ID(nick, name))
+        for pad in fp.Pads():
+            pad.SetNet(next(x for x in old.Pads() if x.GetNumber() == pad.GetNumber()).GetNet())
+        fp.SetPosition(old.GetPosition())
+        pcb.Remove(old)
+        pcb.Add(fp)
     counters = {}
     for fp in pcb.GetFootprints():
         if fp.GetReference() in DNP and any(p.get("group") for p in parts):
@@ -660,8 +681,17 @@ def generate(out):
                 p.update(value="4.7k 1%", mpn="CRCW06034K70FKEA")
             if p["ref"] in DNP:
                 p["dnp"] = True
+            if p["ref"] in SWAPS:
+                nick, name, value, mpn = SWAPS[p["ref"]]
+                p.update(value=value, mpn=mpn, footprint=f"{nick}:{name}")
         inventory = core + parts + added
-        (stage / (PROJECT + ".kicad_sch")).write_text(schematic(parts, added))
+        tree = parse(schematic(parts, added))
+        for ref, (nick, name, value, _) in SWAPS.items():
+            symbol = next(n for n in tree if isinstance(n, list) and n[0] == "symbol" and any(
+                isinstance(x, list) and x[:3] == ["property", q("Reference"), q(ref)] for x in n))
+            set_property(symbol, "Footprint", f"{nick}:{name}")
+            set_property(symbol, "Value", value)
+        (stage / (PROJECT + ".kicad_sch")).write_text(render(tree) + "\n")
         shutil.copytree(SOURCE / "libraries", stage / "libraries")
         for nickname, symbols in (("PS28_POWER", [tps3700_symbol()]), ("PS28_SEQ", [lp2985_symbol()]),
                                   ("PS28_ISO", iso_symbols())):

@@ -28,6 +28,8 @@ FIXED = {
     "C301": (72.0, 33.0, 0), "C302": (110.0, 33.0, 0),
     "C14": (71.0, 56.0, 0), "C15": (110.0, 56.0, 0),
     "C1": (91.0, 27.0, 0), "K501": (91.0, 42.0, 0),
+    # Ground strap pad for the thermal block / profile (TPA3255 PowerPAD = GND).
+    "J6": (61.0, 60.0, 0),
     # Transformer (lower) end: harness, CT fuse, rectifier, AUX buck, analog rail.
     "J301": (155.0, 96.0, 0), "F301": (130.0, 85.0, 90),
     "D301": (148.0, 82.0, 0), "D302": (148.0, 72.0, 0),
@@ -35,6 +37,11 @@ FIXED = {
     "C201": (135.0, 30.0, 0), "C202": (135.0, 44.0, 0), "R201": (160.0, 33.0, 90),
     "C203": (148.0, 30.0, 0), "J4": (150.0, 45.0, 0),
 }
+# D-031 thermal block: aluminium bar on the U1 PowerPAD, screwed into the two tapped M3
+# TO-3P holes of the profile leg (x 70.7 / 110.3), relieved 3 mm above the board except
+# on the pad. Only low SMD parts (R/C/D/U, < 2.5 mm) may sit under it on top.
+BLOCK = (64.0, 52.0, 117.0, 68.0)
+LOW_UNDER_BLOCK = ("R", "C", "D", "U")
 # Packing targets per group: (top x, top y), preferred side.
 TARGETS = {None: ((90.5, 55.0), "top"), "power": ((150.0, 55.0), "top"),
            "seq": ((60.0, 45.0), "bottom"), "iso": ((90.0, 62.0), "bottom"),
@@ -55,6 +62,8 @@ def place(pcb, pcbnew, mech, parts):
             occ[side] |= (cx - hx) ** 2 + (cy - hy) ** 2 < HOLE_KEEP ** 2
     kx0, ky0, kx1, ky1 = mech["profile_keepout"]
     occ["top"] |= (cx >= kx0) & (cx <= kx1) & (cy >= ky0) & (cy <= ky1)
+    bx0, by0, bx1, by1 = BLOCK
+    block = (cx >= bx0) & (cx <= bx1) & (cy >= by0) & (cy <= by1)
 
     def mm(v):
         return pcbnew.ToMM(v)
@@ -85,8 +94,9 @@ def place(pcb, pcbnew, mech, parts):
         fp.SetOrientationDegrees(rot)
         fp.SetPosition(pcbnew.VECTOR2I(pcbnew.FromMM(x), pcbnew.FromMM(y)))
 
-    def fits(side, w, h, target):
-        sat = np.pad(occ[side].astype(np.int32).cumsum(0).cumsum(1), ((1, 0), (1, 0)))
+    def fits(side, w, h, target, tall=False):
+        grid = occ[side] | block if tall and side == "top" else occ[side]
+        sat = np.pad(grid.astype(np.int32).cumsum(0).cumsum(1), ((1, 0), (1, 0)))
         kh, kw = int(np.ceil((h + 2 * GAP) / GRID)), int(np.ceil((w + 2 * GAP) / GRID))
         if kh > ny or kw > nx:
             return None
@@ -103,12 +113,14 @@ def place(pcb, pcbnew, mech, parts):
 
     def pack(fp, target, sides, rotations):
         ref = fp.GetReference()
+        smd = all(p.GetAttribute() == pcbnew.PAD_ATTRIB_SMD for p in fp.Pads())
+        tall = ref != "U1" and not (smd and ref.startswith(LOW_UNDER_BLOCK))
         for side in sides:
             options = []
             for rot in rotations:
                 put(fp, 0, 0, rot, side)
                 l, t, r, b = box(fp)
-                pos = fits(side, r - l, b - t, target)
+                pos = fits(side, r - l, b - t, target, tall)
                 if pos:
                     options.append((pos, rot))
             if options:

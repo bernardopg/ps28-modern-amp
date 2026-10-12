@@ -138,3 +138,18 @@ livre da perna (a mais longe da PCB). Rosca **M3** (proprietário).
 ## Ainda falta
 
 1. Gabarito impresso 1:1. Chicotes e vedação em `oem-harness-sealing.md`.
+
+## 6ª rodada — 2026-10-12 (proprietário, multímetro ET-1000)
+
+| Item | Resultado |
+|---|---|
+| Fixação dos TO-3P na perna | parafusos M3 ≈18 mm **sem porca**: furos roscados na perna |
+| Isolante TO-3P/perfil | filme muito fino, transparente fosco (tipo fita) |
+| Face da perna sem os TO-3P | plana e limpa |
+| Continuidade perfil–backplate e perfil–GND (C121−) | **nenhuma**: perfil isolado/flutuante |
+
+Uso no projeto (D-031): bloco de alumínio sobre o PowerPAD do U1, parafusado nos dois
+furos M3 roscados (x 70,7 e 110,3 no referencial da PCB), pasta térmica nas duas faces,
+**sem** o filme isolante. SLASEA8A tabela de pinos: "PowerPad — Ground, connect to
+grounded heat sink" → bloco/perfil ligados ao GND da placa pela trança em J6.
+

@@ -259,3 +259,16 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   Capturas `kicad/power-package-review/` e `kicad/power-researched/` ficam como
   histórico. Risco aceito: margens baseadas na placa original e em simulação, confirmadas
   na energização controlada (BENCH-002), não em ensaio prévio de inrush.
+
+- D-031 — **Bloco térmico do TPA3255, aterramento e conectores OEM.** 2026-10-12,
+  com medidas do proprietário (6ª rodada). Bloco de alumínio sobre o PowerPAD de U1,
+  apoiado na face da perna do perfil U e parafusado nos dois furos M3 roscados dos
+  TO-3P (x 70,7/110,3); alívio de 3 mm por baixo, exceto no pedestal do PowerPAD.
+  Pasta térmica (SLASEA8A §7.4 usa 0,7 W/m·K, 2 mil); sem o filme isolante. Perfil é
+  flutuante hoje; SLASEA8A pede heat sink aterrado → trança de J6 liga bloco/perfil
+  ao GND. Keepout na PCB x 64–117, y 52–68 (top): só SMD baixo (R/C/D/U).
+  Para caber: C14/C15 passam a Nichicon UHE1J681MHD (680 µF/63 V, D12,5×40,
+  0,071 Ω; CAT.8100M) → bulk PVDD 10,76 mF (≥10 mF D-021). J5 passa a JST
+  B2P-VH: chicote do woofer é 2 vias VH (P102 no manual p.14), pluga sem emenda;
+  vermelho = SPK_P (+), preto = SPK_N. Desenho do bloco: a fazer com a rota (PCB-002).
+
