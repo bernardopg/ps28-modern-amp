@@ -24,15 +24,16 @@ Ordem por dependência/risco; estado canônico nos arquivos de task.
 
 - [TOOL-001 — Investigar warnings KiCad](items/TOOL-001.md) (M1, backlog; avaliar antes de captura prolongada)
 
-## Prioridade após D-029 (2026-10-12)
+## Caminho até a fabricação — placa única (D-030, 2026-10-12)
 
-Caminho para a primeira fabricação (Rev A de bancada, `kicad/rev-a-bench/`):
-1. ERC limpo: pinos PBTL e MONO_IN (reaproveitar `fix/pcb-route-drc-erc`).
-2. ELEC-004: front-end D-022 na captura, ou registrar entrada de teste para Rev A.
-3. MECH-001: cotas locais faltantes para fit/dissipador do TPA3255.
-4. PCB-001/PCB-002: placement manual de potência/Classe D e rota manual com pours.
-5. BENCH-001: fonte de bancada e limites; FAB-001: BOM/CPL/estoque e gates G1–G3.
-Em paralelo, fora da PCB: medir inrush/I²t de T1 para a Rev B (PWR-001).
+Placa: `kicad/system-candidate/` (ERC 0, DRC 0, 471 conexões a rotear).
+1. MECH-001 — cotas locais do contato TPA3255/perfil U (proprietário, multímetro/paquímetro).
+2. ELEC-004 — front-end D-022 (crossover 50–150 Hz, nível, fase) na captura.
+3. PCB-001 — placement manual de potência/Classe D com o dissipador definido.
+4. PCB-002 — rota manual com planos; DRC 0 e revisão do proprietário (G1/G2).
+5. BUY-001 + FAB-001 — BOM/CPL, cotação e pedido com "ok" do proprietário (G3).
+6. BENCH-001/002 — energização controlada, carga resistiva; ACOU-001 com o woofer.
+SYS-002/ELEC-002/ELEC-003 fecham junto com ELEC-004 e a revisão final (G0/G1).
 
 ## Prioridade técnica após D-021…D-024a (2026-10-10)
 

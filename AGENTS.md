@@ -16,24 +16,40 @@ quando solicitado pelo usuário. Nome da ferramenta pode ter prefixo do harness.
 Não substituir esse banco pelo global nem importar memórias de outros projetos.
 Configuração, comandos e limites: [docs/headroom.md](docs/headroom.md).
 
-## Regras de engenharia
+## Objetivo e modo de trabalho (D-030, 2026-10-12)
 
-- Distinguir hipótese, proposta, cálculo, simulação e medida. Não inventar pinagem,
-  estoque, preço, MPN, limites ou resultados. Ausência de evidência significa TBD.
-- Fontes primárias: datasheet TI e TPA3255EVM. Citar documento, revisão e página/figura.
-- Baseline D-010/D-021: reaproveitar T1 original; PVDD não regulado ≈42–50 V por
-  retificação CT dois diodos, auxiliar 12 V; TPA3255 PBTL, sem MCU nem primário AC na PCB nova.
+Objetivo único: **um subwoofer funcionando com uma placa nova** no gabinete PS28,
+reaproveitando T1, dissipação, mounting points e chicotes OEM, modernizando o resto
+(TPA3255 PBTL). Uma placa só, sem revisões intermediárias. Avançar sempre para a
+fabricação; documentação serve ao projeto, não o substitui.
+
+## Política de evidência — pragmática
+
+- Ordem de fontes aceitas: medida do proprietário > manual de serviço PS28
+  (`reference/infinity/`) > datasheet/catálogo do fabricante > nota de aplicação/EVM >
+  prática consolidada de engenharia. Citar a fonte em uma linha; não exigir PDF arquivado
+  para peças comuns (diodos, capacitores, fusíveis, conectores padrão).
+- **A placa original é evidência válida:** o que ela fez por anos com o mesmo T1
+  (KBL405, 2×6800 µF/50 V, JST VH 3 vias, fusível 2,5 A no primário) define margens
+  mínimas razoáveis. Escolher componente igual ou melhor que o OEM com margem.
+- Na falta de dado, **decidir com margem conservadora e registrar** a premissa em
+  `docs/decisions.md` (uma linha: escolha, motivo, como confirmar). Não bloquear task
+  por TBD que se resolve na primeira energização controlada.
+- Não inventar pinagem nem resultado de medida. Pinagem vem de datasheet/footprint
+  padrão KiCad; resultados só de medição real ou simulação identificada como tal.
+- Antes de buscar na internet ou pedir medida, procurar no manual PS28 e em
+  `mechanical/`, `docs/`, `tests/reports/`. Pedir ao proprietário só o que falta.
+
+## Regras de segurança — inegociáveis
+
+- Baseline D-010/D-021: T1 original; PVDD não regulado ≈42–50 V por retificação CT
+  com dois diodos; auxiliar 12 V; TPA3255 PBTL; sem MCU nem primário AC na PCB nova.
   Nunca ligar vermelho–vermelho de T1 em ponte. Crossover ajustável 50–150 Hz (D-022).
-  Fonte externa somente bancada/fallback. Saúde de T1/capacitores informada pelo proprietário;
-  ratings e componentes dependem das medições, sem inferir VAC/VA do manual.
-  Não ampliar escopo sem decisão registrada em docs/decisions.md.
-- Modo PBTL: verificar M1/M2, INPUT_C/D e ligação dos quatro OUTs contra referência.
-  Não existe M3 de modo neste CI. Não misturar LC/paralelamento do datasheet com EVM.
+- Modo PBTL: conferir M1/M2, INPUT_C/D e ligação dos quatro OUTs (SLASEA8A Fig. 31).
 - SPK+ e SPK- são ativos. Nunca ligar ao GND nem à garra terra do osciloscópio.
-- Revisar RESET, FAULT, CLIP_OTW, power sequencing, VMID, estabilidade/headroom,
-  PowerPAD, proteção DC e limites do transdutor. Proteção interna não garante o sistema.
-- Não usar AVDD/DVDD como alimentação genérica. Não improvisar bootstrap/OC_ADJ/FREQ_ADJ.
-- Nenhuma fabricação, compra ou energização automática. Gate humano e evidências obrigatórios.
+- Não usar AVDD/DVDD como alimentação genérica; não improvisar bootstrap/OC_ADJ/FREQ_ADJ.
+- Nenhuma compra, fabricação ou energização sem o "ok" explícito do proprietário.
+  Primeira energização sempre com Variac ou lâmpada-série no primário e sem woofer.
 
 ## Trabalho e segurança digital
 
@@ -52,10 +68,9 @@ Tasks têm ID estável, dependências e critérios verificáveis; WIP máximo 2.
 Use Conventional Commits e atualize CHANGELOG.md para mudanças relevantes.
 
 ## EDA atual
-Candidata de sistema em kicad/system-candidate/ (204 footprints, sem placement OEM/rota);
-gerada por scripts/integrate_candidate.py, não editar à mão.
-Rev A de bancada (D-029) em kicad/rev-a-bench/, gerada por scripts/create_rev_a_bench.py:
-sem bloco T1 (Rev B), PVDD via J1, placement de estudo sem rota. Ler docs/development-status.md
+**Placa única do produto: kicad/system-candidate/** (205 footprints, placement de estudo no
+contorno OEM, ERC 0/DRC 0, rota manual pendente), gerada por scripts/integrate_candidate.py;
+não editar à mão. Demais pastas kicad/ são histórico/insumo dos geradores. Ler docs/development-status.md
 e docs/production-roadmap.md. Núcleo B em kicad/core-selected/ps28-modern.kicad_pro.
 47 footprints/142 pads, ainda sem roteamento. Ler docs/selected-core.md.
 D-014 fixa montagem/dissipação OEM e os mesmos mounting points por decisão do usuário.
@@ -67,12 +82,14 @@ completo. Fit/furação final e capacidade térmica permanecem sujeitos a valida
 Terminais 691137710002 são 5,00mm (não5,08); tab HCF2013 é mecânico sem net.
 Não sobrescrever documentos GUI abertos; IPC atual indisponível.
 
-## Validação
+## Validação e fechamento de tasks
 
-Execute make check; make simulate para modelos; make erc/make drc após EDA existir.
-Containers vazios não são hardware validado. Guarde relatórios em build/ (não versionado)
-e resumos/evidências em tests/reports/. Nunca marcar Done com base em expectativa.
-Defina limites de bancada numericamente e aprove-os antes de energizar.
+`make check` antes de commit; `make erc`/`make drc` quando mexer na EDA. Relatórios em
+build/ (não versionado); resumos em tests/reports/. Uma task é **Done** quando o
+trabalho de projeto dela está feito e verificado (ERC/DRC/teste/medida, o que couber).
+Pendências de bancada viram critério da task de bring-up (BENCH-002), não bloqueio.
+Fechar a issue GitHub espelho junto com a task. Limites de bancada numéricos e aprovados
+pelo proprietário antes de energizar.
 
 ## Skills locais
 

@@ -1,11 +1,11 @@
 ---
 id: SETUP-003
 title: GitHub e revisão do setup
-status: In Progress
+status: Done
 milestone: M0
 sprint: S01
 depends_on: SETUP-002
-updated: 2026-10-09
+updated: 2026-10-12
 ---
 
 # SETUP-003 — GitHub e revisão do setup
@@ -19,9 +19,11 @@ GitHub e revisão do setup, atendendo docs/requirements.md e gates docs/safety.m
 - [x] Repositório privado e main enviados
 - [x] Workflow remoto confirmado
 - [x] Headroom local compartilhado entre Claude Code, Codex, Pi e Hermes
-- [ ] Proprietário revisou escopo, backlog e pendências
+- [x] Proprietário revisou escopo, backlog e pendências
 
 ## Evidência
+
+2026-10-12 (D-030): proprietário revisou escopo/backlog e pediu placa única e regras pragmáticas; registrado em AGENTS.md e docs/decisions.md.
 
 GitHub privado: <https://github.com/bernardopg/ps28-modern-amp>.
 CI inicial aprovado: <https://github.com/bernardopg/ps28-modern-amp/actions/runs/37654550846>

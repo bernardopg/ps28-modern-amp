@@ -80,7 +80,7 @@ def candidates():
         elif ref == "R201":
             p.update(
                 mpn="AC03000001509JAC00",
-                footprint="Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P20.32mm_Horizontal",
+                footprint="Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P5.08mm_Vertical",
             )
         elif ref in ("R202", "R203"):
             p.update(
@@ -91,6 +91,12 @@ def candidates():
             "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
         )
         p["group"] = "analog"
+    # Mono input boundary of the analog study until the D-022 front-end (ELEC-004) exists:
+    # a test pad gives the global label a pin and a bench injection point.
+    parts.append({"ref": "TP101", "lib_id": "Connector:TestPoint", "value": "MONO_IN",
+                  "mpn": "PCB test pad, no part", "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+                  "nets": {"1": "MONO_BIASED"}, "units": [(1, 15.24, 215.9)], "group": "analog",
+                  "selection": "PCB feature until ELEC-004"})
     return parts
 
 
@@ -184,6 +190,14 @@ def schematic(parts, extra=()):
     symbols = child(root, "lib_symbols")
     known = {x[1] for x in symbols[1:]}
     symbols.extend(x for x in child(analog, "lib_symbols")[1:] if x[1] not in known)
+    if extra:
+        # PBTL (TI SLASEA8A Fig 31): OUT_A/OUT_C and OUT_B/OUT_D are paralleled per bridge and
+        # each output has two package pins. One driver pin per bridge net stays power_out;
+        # the paralleled/duplicate pins become passive so ERC does not flag the intended tie.
+        tpa = next(x for x in symbols[1:] if x[1] == q("PS28:TPA3255DDV"))
+        for pin in walk(tpa):
+            if pin[0] == "pin" and child(pin, "number")[1] in (q("27"), q("28"), q("32"), q("40")):
+                pin[1] = "passive"
     for item in analog:
         if isinstance(item, list) and item[0] in (
             "symbol",
@@ -490,6 +504,11 @@ def board(staged, parts, inventory):
     from place_system_candidate import place
 
     place(pcb, pcbnew, oem_mechanics(), inventory)
+    for fp in pcb.GetFootprints():
+        if fp.GetReference() == "TP101":
+            fp.SetExcludedFromBOM(False)  # follow the symbol (stock TestPoint footprint is BOM-excluded)
+        # Dense board: reference designators go to the assembly (Fab) layer, not silkscreen.
+        fp.Reference().SetLayer(pcbnew.B_Fab if fp.IsFlipped() else pcbnew.F_Fab)
     for fp in pcb.GetFootprints():
         if fp.GetReference() in BODY_MODELS:
             set_body_model(fp, pcbnew, BODY_MODELS[fp.GetReference()])

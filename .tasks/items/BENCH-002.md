@@ -18,6 +18,7 @@ Bring-up e carga resistiva, atendendo docs/requirements.md e gates docs/safety.m
 
 - [ ] Rails/DC/repouso/FAULT e potência progressiva registrados
 - [ ] Térmica/THD dentro dos limites e G4 humano
+- [ ] D-030: primeira energização com Variac/lâmpada-série, sem woofer; medir PVDD em vazio/carga, temperatura de D301/D302 e confirmar F301 6,3 A
 
 ## Evidência
 

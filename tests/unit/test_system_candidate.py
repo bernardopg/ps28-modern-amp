@@ -17,7 +17,7 @@ class SystemCandidateTests(unittest.TestCase):
         d = json.loads(
             (ROOT / "kicad/system-candidate/system-manifest.json").read_text()
         )
-        self.assertEqual(len(d["parts"]), 204)
+        self.assertEqual(len(d["parts"]), 205)
         self.assertEqual(d["unassigned_footprints"], [])
         self.assertTrue(d["signal_bridge_connected"])  # only via K501, checked below
         self.assertTrue(d["isolation_mute_supervisor_implemented"])
@@ -73,18 +73,23 @@ class SystemCandidateTests(unittest.TestCase):
         kx0, ky0, kx1, ky1 = m["profile_keepout"]
         pcb = (ROOT / "kicad/system-candidate/system-candidate.kicad_pcb").read_text()
         blocks = re.findall(r'\(footprint "[^"]+"\s*\(layer "([FB])\.Cu"\)(?:.|\n)*?\(at ([-\d.]+) ([-\d.]+)', pcb)
-        self.assertEqual(len(blocks), 208)
+        self.assertEqual(len(blocks), 209)
         for side, x, y in blocks:
             x, y = float(x), float(y)
             self.assertTrue(x0 < x < x1 and y0 < y < y1, (x, y))
             if side == "F":
                 self.assertFalse(kx0 < x < kx1 and ky0 < y < ky1, (x, y))
 
-    def test_autorouted_study_has_ground_plane_and_tracks(self):
+    def test_d030_power_parts_and_unrouted_board_for_manual_layout(self):
+        d = json.loads((ROOT / "kicad/system-candidate/system-manifest.json").read_text())
+        refs = {p["ref"]: p for p in d["parts"]}
+        self.assertIn("B3P-VH", refs["J301"]["mpn"])
+        self.assertEqual(refs["D301"]["value"], "P600J")
+        self.assertIn("D30.0mm", refs["C301"]["footprint"])
+        self.assertEqual(refs["TP101"]["nets"], {"1": "MONO_BIASED"})
+        # D-030: autoroute study discarded; routing is manual (PCB-002).
         pcb = (ROOT / "kicad/system-candidate/system-candidate.kicad_pcb").read_text()
-        self.assertIn('"GND_PLANE"', pcb)
-        self.assertGreater(pcb.count("(segment"), 2000)
-        self.assertGreater(pcb.count("(via"), 200)
+        self.assertEqual(pcb.count("(segment"), 0)
 
     def test_native_capture_and_actual_pad_nets_are_equal(self):
         folder = ROOT / "kicad/system-candidate"
@@ -115,7 +120,7 @@ class SystemCandidateTests(unittest.TestCase):
                 ].strip('"')
                 self.assertEqual(net, nets[ref, number], ref + "." + number)
                 checked += 1
-        self.assertEqual(checked, 580)
+        self.assertEqual(checked, 581)
 
     def test_multiunit_paths_and_no_replace_publication(self):
         folder = ROOT / "kicad/system-candidate"

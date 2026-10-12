@@ -1,7 +1,7 @@
 ---
 id: MECH-001
 title: Medir plate e modelar envelope
-status: Blocked
+status: In Progress
 milestone: M1
 sprint: S02
 depends_on: SYS-001
@@ -20,6 +20,8 @@ Medir plate e modelar envelope, atendendo docs/requirements.md e gates docs/safe
 - [ ] CAD/desenho 1:1 e espaço dissipador confirmados
 
 ## Evidência
+
+2026-10-12: medidas OEM das rodadas 1–5 cobrem contorno 154×81, furos, perfil U e furos dos TO-3P. Faltam só as cotas locais listadas na última conversa (furos dos TO-3P roscados ou passantes, parafuso, planicidade/isolante, polaridade do woofer).
 2026-10-12: proprietário informou capacitor de 45 mm + pouco mais de 30 mm
 até a moldura plástica. Cerca de 75 mm locais; envelope de 52 mm deixa ~23 mm.
 Altura nessa região original resolvida para estudo, sem extrapolar à placa toda

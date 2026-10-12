@@ -4,6 +4,19 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 
 ## [Unreleased]
 
+### Placa única e regras pragmáticas (D-030) — 2026-10-12
+- D-029 (Rev A/Rev B) revogada; `kicad/rev-a-bench/` e seu gerador removidos.
+- Potência fechada com a placa original como referência (manual PS28 p.14):
+  J301 JST B3P-VH, D301/D302 P600J, C301/C302 63USC4700 em footprint D30,
+  F301 Littelfuse 02186.3MXP. R201 em DIN0617 vertical.
+- ERC: pinos PBTL paralelos passive e TP101 MONO_IN trazidos de
+  `fix/pcb-route-drc-erc`. `kicad/system-candidate/` regenerada: 205 footprints,
+  581 pads netlist↔PCB, ERC 0, DRC 0, paridade 0, 471 conexões para rota manual.
+  Autoroute de estudo descartado.
+- `AGENTS.md`, `docs/safety.md` e `.tasks/PLANNING.md`: política de evidência
+  pragmática, segurança inegociável, critério de Done objetivo.
+- Tasks fechadas: SETUP-003, PCB-003, PWR-001, ELEC-001, SYS-001.
+
 ### Rev A de bancada (D-029) — 2026-10-12
 - Decisão D-029: primeira fabricação passa a ser placa de bring-up com PVDD de
   fonte de bancada limitada via J1; bloco T1 (J301/F301/D301/D302/C301/C302)

@@ -28,9 +28,11 @@ R5: erro scope → curto/instrumento; BENCH-001 e técnica diferencial aprovada.
 R6: excesso de excursão no gabinete → woofer danificado; SYS-001 e ACOU-001.
 R7: preço/MPN falsos → retrabalho/fraude; BUY-001 e rastreabilidade de fornecedor.
 
-## Gates (todos exigem responsável humano, data, commit e evidência)
+## Gates (D-030: aprovação = "ok" do proprietário registrado na task/decisão com data e commit)
 
 G0 requisitos e baseline aprovados; G1 captura+SPICE+ERC revisados;
 G2 layout+DRC+paridade+fit/térmica revisados; G3 BOM/CPL/DFM+cotação aprovados;
 G4 carga resistiva/rails/DC/FAULT/térmica aprovados; G5 teste acústico e integração.
 Status inicial: todos PENDENTES. ERC vazio não muda status. IA recomenda, humano aprova.
+Gates são marcos curtos, não auditorias: G0–G2 podem ser aprovados juntos na revisão
+final do layout; G3 antes do pedido; G4/G5 na bancada.

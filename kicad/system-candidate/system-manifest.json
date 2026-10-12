@@ -1,8 +1,8 @@
 {
   "staged_validation": {
-    "native_pad_net_matches": 580,
-    "copper_pads_checked": 580,
-    "footprints": 204,
+    "native_pad_net_matches": 581,
+    "copper_pads_checked": 581,
+    "footprints": 205,
     "signal_bridge_open": false,
     "signal_bridge_via_relay_only": true
   },
@@ -1512,7 +1512,7 @@
       "lib_id": "Device:R",
       "value": "15",
       "mpn": "AC03000001509JAC00",
-      "footprint": "Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P20.32mm_Horizontal",
+      "footprint": "Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P5.08mm_Vertical",
       "nets": {
         "1": "ISO_FEED",
         "2": "ANALOG_12V"
@@ -1708,10 +1708,29 @@
       "group": "analog"
     },
     {
+      "ref": "TP101",
+      "lib_id": "Connector:TestPoint",
+      "value": "MONO_IN",
+      "mpn": "PCB test pad, no part",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "MONO_BIASED"
+      },
+      "units": [
+        [
+          1,
+          15.24,
+          215.9
+        ]
+      ],
+      "group": "analog",
+      "selection": "PCB feature until ELEC-004"
+    },
+    {
       "ref": "J301",
       "lib_id": "Connector_Generic:Conn_01x03",
       "value": "T1_SECONDARY",
-      "mpn": "JST VH SVH-41T-P1.1 terminals (20-16 AWG, 10 A) on VHR-4N housing; pitch 3.96 mm (D-025). Housing/header MPN TBD",
+      "mpn": "JST B3P-VH(LF)(SN) header 3 pos 3.96 mm; mates OEM T1 harness (PS28 service manual p.14: 175-1d03v01-e 3 PIN 3.96 mm JST-VH) (D-030)",
       "footprint": "Connector_JST:JST_VH_B3P-VH_1x03_P3.96mm_Vertical",
       "nets": {
         "1": "T1_A",
@@ -1732,7 +1751,7 @@
       "ref": "F301",
       "lib_id": "Device:Fuse",
       "value": "T6.3A slow",
-      "mpn": "Time-lag (T) 5x20 mm; I2t melt above measured inrush, >=63 VDC; rating by operating RMS not inrush (D-027 precharge). Family Littelfuse 218/892",
+      "mpn": "Littelfuse 02186.3MXP, 218 series T 6.3 A 5x20 mm, in Schurter 0031.8201 holder; confirm at first power-up with variac/bulb limiter (D-030)",
       "footprint": "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open",
       "nets": {
         "1": "T1_CT",
@@ -1751,8 +1770,8 @@
     {
       "ref": "D301",
       "lib_id": "Device:D",
-      "value": "MUR3040WTG",
-      "mpn": "onsemi MUR3040WTG (MUR3020WT/D Rev.7): VRRM 400 V, IF(AV) 15 A @145 C, IFSM 200 A, TJ 175 C (D-025)",
+      "value": "P600J",
+      "mpn": "P600J (Diodes Inc./Vishay), R-6 axial: 600 V, 6 A, IFSM 400 A; > OEM KBL405 4 A/200 A (D-030)",
       "footprint": "Diode_THT:D_P600_R-6_P12.70mm_Horizontal",
       "nets": {
         "1": "PVDD",
@@ -1771,8 +1790,8 @@
     {
       "ref": "D302",
       "lib_id": "Device:D",
-      "value": "MUR3040WTG",
-      "mpn": "onsemi MUR3040WTG (MUR3020WT/D Rev.7): VRRM 400 V, IF(AV) 15 A @145 C, IFSM 200 A, TJ 175 C (D-025)",
+      "value": "P600J",
+      "mpn": "P600J (Diodes Inc./Vishay), R-6 axial: 600 V, 6 A, IFSM 400 A; > OEM KBL405 4 A/200 A (D-030)",
       "footprint": "Diode_THT:D_P600_R-6_P12.70mm_Horizontal",
       "nets": {
         "1": "PVDD",
@@ -1792,8 +1811,8 @@
       "ref": "C301",
       "lib_id": "Device:C_Polarized",
       "value": "4700u 63V snap-in",
-      "mpn": "Rubycon 63USC4700MEFCSN30X30 (LCSC C1498587): 4700 uF/63 V, 3.49 A rms @120 Hz, D30xL30, 3000 h @85 C (D-025)",
-      "footprint": "Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn",
+      "mpn": "Rubycon 63USC4700MEFCSN30X30 (LCSC C1498587): 4700 uF/63 V, 3.49 A rms @120 Hz, D30xL30; with C14/C15 3000 uF >= OEM 2x6800 uF/50 V margin on voltage (D-030)",
+      "footprint": "Capacitor_THT:CP_Radial_D30.0mm_P10.00mm_SnapIn",
       "nets": {
         "1": "PVDD",
         "2": "GND"
@@ -1812,8 +1831,8 @@
       "ref": "C302",
       "lib_id": "Device:C_Polarized",
       "value": "4700u 63V snap-in",
-      "mpn": "Rubycon 63USC4700MEFCSN30X30 (LCSC C1498587): 4700 uF/63 V, 3.49 A rms @120 Hz, D30xL30, 3000 h @85 C (D-025)",
-      "footprint": "Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn",
+      "mpn": "Rubycon 63USC4700MEFCSN30X30 (LCSC C1498587): 4700 uF/63 V, 3.49 A rms @120 Hz, D30xL30; with C14/C15 3000 uF >= OEM 2x6800 uF/50 V margin on voltage (D-030)",
+      "footprint": "Capacitor_THT:CP_Radial_D30.0mm_P10.00mm_SnapIn",
       "nets": {
         "1": "PVDD",
         "2": "GND"
@@ -4383,10 +4402,10 @@
   "source_sha256": {
     "kicad/core-oem-refined/ps28-modern.kicad_sch": "134bdf8fa93e3a66d99a5d556bd45cb9c5289ed5c3b126273db16ef3ad38a2ce",
     "kicad/analog-protected/analog-protected.kicad_sch": "f46adefe0383358837e4eb49a41fe21b8017f39b549f789c10675ca4ac277303",
-    "scripts/integrate_candidate.py": "6be0acf8608793a8fb2f7cf4699efe581923cc05876d66f21f6e149de19a4191",
-    "kicad/power-d021/power-d021.kicad_sch": "1e8a74ad3fd2437e0bc25d62cebc6b4368894606a436dd5f033eea92fe5fc675",
+    "scripts/integrate_candidate.py": "92af77c627656d54b0bf2d5b906041941c587d431dcfa758036377bec0a8124e",
+    "kicad/power-d021/power-d021.kicad_sch": "b27d4cc1ab8930527ff147b3d1488ca8c04037574b6009157686842a3d801e83",
     "kicad/seq-d020/seq-d020.kicad_sch": "0d6a219fd97f4594ea756f839a9c2f616b1174abb3ba09accabca21839d0b884",
-    "scripts/create_power_d021.py": "56a220a5cefd51a1fdf2090dbf631c5b264c7112b7eeebbe929932eddd2e27b2",
+    "scripts/create_power_d021.py": "fe24c26c60ad080f2117b629c4b9ec7f864ad851574cc90914d95e1e8cfe3162",
     "scripts/create_seq_d020.py": "683a80d4acd83d68d237ab158e8d85e75f21aa51c66dc17d71a0b56d595e5760"
   },
   "status": "CORE + D018 + D021 POWER + D020 SEQ SUBSET IMPORT BANKS; SIGNAL SAFETY BRIDGE OPEN",

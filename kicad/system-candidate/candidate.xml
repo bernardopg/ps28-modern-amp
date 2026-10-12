@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>/home/bitter/development/ps28-modern-amp-starter/kicad/.system-stage-urvsgyap/system-candidate.kicad_sch</source>
-    <date>2026-10-11T17:18:30</date>
+    <source>/home/bitter/development/ps28-modern-amp-starter/kicad/.system-stage-drouv50t/system-candidate.kicad_sch</source>
+    <date>2026-10-12T17:36:24</date>
     <tool>Eeschema 10.0.7</tool>
     <textvar name="PROJECT_STATUS">CORE DRAFT - UNROUTED - NOT FOR FABRICATION</textvar>
     <sheet number="1" name="/" tstamps="/">
@@ -1285,17 +1285,17 @@
     </comp>
     <comp ref="C301">
       <value>4700u 63V snap-in</value>
-      <footprint>Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn</footprint>
+      <footprint>Capacitor_THT:CP_Radial_D30.0mm_P10.00mm_SnapIn</footprint>
       <fields>
-        <field name="MPN">Rubycon 63USC4700MEFCSN30X30 (LCSC C1498587): 4700 uF/63 V, 3.49 A rms @120 Hz, D30xL30, 3000 h @85 C (D-025)</field>
+        <field name="MPN">Rubycon 63USC4700MEFCSN30X30 (LCSC C1498587): 4700 uF/63 V, 3.49 A rms @120 Hz, D30xL30; with C14/C15 3000 uF &gt;= OEM 2x6800 uF/50 V margin on voltage (D-030)</field>
         <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
         <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
-        <field name="Footprint">Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn</field>
+        <field name="Footprint">Capacitor_THT:CP_Radial_D30.0mm_P10.00mm_SnapIn</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
-      <property name="MPN" value="Rubycon 63USC4700MEFCSN30X30 (LCSC C1498587): 4700 uF/63 V, 3.49 A rms @120 Hz, D30xL30, 3000 h @85 C (D-025)"/>
+      <property name="MPN" value="Rubycon 63USC4700MEFCSN30X30 (LCSC C1498587): 4700 uF/63 V, 3.49 A rms @120 Hz, D30xL30; with C14/C15 3000 uF &gt;= OEM 2x6800 uF/50 V margin on voltage (D-030)"/>
       <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
       <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
       <property name="Sheetname" value="system-candidate"/>
@@ -1315,17 +1315,17 @@
     </comp>
     <comp ref="C302">
       <value>4700u 63V snap-in</value>
-      <footprint>Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn</footprint>
+      <footprint>Capacitor_THT:CP_Radial_D30.0mm_P10.00mm_SnapIn</footprint>
       <fields>
-        <field name="MPN">Rubycon 63USC4700MEFCSN30X30 (LCSC C1498587): 4700 uF/63 V, 3.49 A rms @120 Hz, D30xL30, 3000 h @85 C (D-025)</field>
+        <field name="MPN">Rubycon 63USC4700MEFCSN30X30 (LCSC C1498587): 4700 uF/63 V, 3.49 A rms @120 Hz, D30xL30; with C14/C15 3000 uF &gt;= OEM 2x6800 uF/50 V margin on voltage (D-030)</field>
         <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
         <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
-        <field name="Footprint">Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn</field>
+        <field name="Footprint">Capacitor_THT:CP_Radial_D30.0mm_P10.00mm_SnapIn</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
-      <property name="MPN" value="Rubycon 63USC4700MEFCSN30X30 (LCSC C1498587): 4700 uF/63 V, 3.49 A rms @120 Hz, D30xL30, 3000 h @85 C (D-025)"/>
+      <property name="MPN" value="Rubycon 63USC4700MEFCSN30X30 (LCSC C1498587): 4700 uF/63 V, 3.49 A rms @120 Hz, D30xL30; with C14/C15 3000 uF &gt;= OEM 2x6800 uF/50 V margin on voltage (D-030)"/>
       <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
       <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
       <property name="Sheetname" value="system-candidate"/>
@@ -2604,10 +2604,10 @@
       </units>
     </comp>
     <comp ref="D301">
-      <value>MUR3040WTG</value>
+      <value>P600J</value>
       <footprint>Diode_THT:D_P600_R-6_P12.70mm_Horizontal</footprint>
       <fields>
-        <field name="MPN">onsemi MUR3040WTG (MUR3020WT/D Rev.7): VRRM 400 V, IF(AV) 15 A @145 C, IFSM 200 A, TJ 175 C (D-025)</field>
+        <field name="MPN">P600J (Diodes Inc./Vishay), R-6 axial: 600 V, 6 A, IFSM 400 A; &gt; OEM KBL405 4 A/200 A (D-030)</field>
         <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
         <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
         <field name="Footprint">Diode_THT:D_P600_R-6_P12.70mm_Horizontal</field>
@@ -2615,7 +2615,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
-      <property name="MPN" value="onsemi MUR3040WTG (MUR3020WT/D Rev.7): VRRM 400 V, IF(AV) 15 A @145 C, IFSM 200 A, TJ 175 C (D-025)"/>
+      <property name="MPN" value="P600J (Diodes Inc./Vishay), R-6 axial: 600 V, 6 A, IFSM 400 A; &gt; OEM KBL405 4 A/200 A (D-030)"/>
       <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
       <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
       <property name="Sheetname" value="system-candidate"/>
@@ -2634,10 +2634,10 @@
       </units>
     </comp>
     <comp ref="D302">
-      <value>MUR3040WTG</value>
+      <value>P600J</value>
       <footprint>Diode_THT:D_P600_R-6_P12.70mm_Horizontal</footprint>
       <fields>
-        <field name="MPN">onsemi MUR3040WTG (MUR3020WT/D Rev.7): VRRM 400 V, IF(AV) 15 A @145 C, IFSM 200 A, TJ 175 C (D-025)</field>
+        <field name="MPN">P600J (Diodes Inc./Vishay), R-6 axial: 600 V, 6 A, IFSM 400 A; &gt; OEM KBL405 4 A/200 A (D-030)</field>
         <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
         <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
         <field name="Footprint">Diode_THT:D_P600_R-6_P12.70mm_Horizontal</field>
@@ -2645,7 +2645,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
-      <property name="MPN" value="onsemi MUR3040WTG (MUR3020WT/D Rev.7): VRRM 400 V, IF(AV) 15 A @145 C, IFSM 200 A, TJ 175 C (D-025)"/>
+      <property name="MPN" value="P600J (Diodes Inc./Vishay), R-6 axial: 600 V, 6 A, IFSM 400 A; &gt; OEM KBL405 4 A/200 A (D-030)"/>
       <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
       <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
       <property name="Sheetname" value="system-candidate"/>
@@ -2815,7 +2815,7 @@
       <value>T6.3A slow</value>
       <footprint>Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open</footprint>
       <fields>
-        <field name="MPN">Time-lag (T) 5x20 mm; I2t melt above measured inrush, &gt;=63 VDC; rating by operating RMS not inrush (D-027 precharge). Family Littelfuse 218/892</field>
+        <field name="MPN">Littelfuse 02186.3MXP, 218 series T 6.3 A 5x20 mm, in Schurter 0031.8201 holder; confirm at first power-up with variac/bulb limiter (D-030)</field>
         <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
         <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
         <field name="Footprint">Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open</field>
@@ -2823,7 +2823,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="Fuse" description="Fuse"/>
-      <property name="MPN" value="Time-lag (T) 5x20 mm; I2t melt above measured inrush, &gt;=63 VDC; rating by operating RMS not inrush (D-027 precharge). Family Littelfuse 218/892"/>
+      <property name="MPN" value="Littelfuse 02186.3MXP, 218 series T 6.3 A 5x20 mm, in Schurter 0031.8201 holder; confirm at first power-up with variac/bulb limiter (D-030)"/>
       <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
       <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
       <property name="Sheetname" value="system-candidate"/>
@@ -3046,7 +3046,7 @@
       <value>T1_SECONDARY</value>
       <footprint>Connector_JST:JST_VH_B3P-VH_1x03_P3.96mm_Vertical</footprint>
       <fields>
-        <field name="MPN">JST VH SVH-41T-P1.1 terminals (20-16 AWG, 10 A) on VHR-4N housing; pitch 3.96 mm (D-025). Housing/header MPN TBD</field>
+        <field name="MPN">JST B3P-VH(LF)(SN) header 3 pos 3.96 mm; mates OEM T1 harness (PS28 service manual p.14: 175-1d03v01-e 3 PIN 3.96 mm JST-VH) (D-030)</field>
         <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
         <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
         <field name="Footprint">Connector_JST:JST_VH_B3P-VH_1x03_P3.96mm_Vertical</field>
@@ -3054,7 +3054,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="MPN" value="JST VH SVH-41T-P1.1 terminals (20-16 AWG, 10 A) on VHR-4N housing; pitch 3.96 mm (D-025). Housing/header MPN TBD"/>
+      <property name="MPN" value="JST B3P-VH(LF)(SN) header 3 pos 3.96 mm; mates OEM T1 harness (PS28 service manual p.14: 175-1d03v01-e 3 PIN 3.96 mm JST-VH) (D-030)"/>
       <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
       <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
       <property name="Sheetname" value="system-candidate"/>
@@ -3823,12 +3823,12 @@
     </comp>
     <comp ref="R201">
       <value>15</value>
-      <footprint>Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P20.32mm_Horizontal</footprint>
+      <footprint>Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P5.08mm_Vertical</footprint>
       <fields>
         <field name="MPN">AC03000001509JAC00</field>
         <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
         <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
-        <field name="Footprint">Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P20.32mm_Horizontal</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P5.08mm_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -5411,6 +5411,35 @@
         </unit>
       </units>
     </comp>
+    <comp ref="TP101">
+      <value>MONO_IN</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB test pad, no part</field>
+        <field name="SelectionStatus">CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED</field>
+        <field name="Source">D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test pad, no part"/>
+      <property name="SelectionStatus" value="CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"/>
+      <property name="Source" value="D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c389bf00-b49a-5b11-b112-9f26f8d8cc28</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="U1">
       <value>TPA3255DDV</value>
       <footprint>Package_SO:HTSSOP-44_6.1x14mm_P0.635mm_TopEP4.14x7.01mm</footprint>
@@ -6546,6 +6575,23 @@
         <pin num="8" name="VCC" type="power_in"/>
       </pins>
     </libpart>
+    <libpart lib="Connector" part="TestPoint">
+      <description>test point</description>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">test point</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Connector_Generic" part="Conn_01x01">
       <description>Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
       <footprints>
@@ -6806,12 +6852,12 @@
         <pin num="24" name="BST_C" type="power_in"/>
         <pin num="25" name="GND" type="power_in"/>
         <pin num="26" name="GND" type="power_in"/>
-        <pin num="27" name="OUT_D" type="power_out"/>
-        <pin num="28" name="OUT_D" type="power_out"/>
+        <pin num="27" name="OUT_D" type="passive"/>
+        <pin num="28" name="OUT_D" type="passive"/>
         <pin num="29" name="PVDD_CD" type="power_in"/>
         <pin num="30" name="PVDD_CD" type="power_in"/>
         <pin num="31" name="PVDD_CD" type="power_in"/>
-        <pin num="32" name="OUT_C" type="power_out"/>
+        <pin num="32" name="OUT_C" type="passive"/>
         <pin num="33" name="GND" type="power_in"/>
         <pin num="34" name="GND" type="power_in"/>
         <pin num="35" name="OUT_B" type="power_out"/>
@@ -6819,7 +6865,7 @@
         <pin num="37" name="PVDD_AB" type="power_in"/>
         <pin num="38" name="PVDD_AB" type="power_in"/>
         <pin num="39" name="OUT_A" type="power_out"/>
-        <pin num="40" name="OUT_A" type="power_out"/>
+        <pin num="40" name="OUT_A" type="passive"/>
         <pin num="41" name="GND" type="power_in"/>
         <pin num="42" name="GND" type="power_in"/>
         <pin num="43" name="BST_B" type="power_in"/>
@@ -7020,6 +7066,9 @@
   <libraries>
     <library logical="74xGxx">
       <uri>${KICAD10_SYMBOL_DIR}/74xGxx.kicad_sym</uri>
+    </library>
+    <library logical="Connector">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector.kicad_sym</uri>
     </library>
     <library logical="Connector_Generic">
       <uri>${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym</uri>
@@ -7559,16 +7608,16 @@
       <node ref="C16" pin="2" pintype="passive"/>
       <node ref="C18" pin="2" pintype="passive"/>
       <node ref="L1" pin="1" pinfunction="1_1" pintype="passive"/>
-      <node ref="U1" pin="32" pinfunction="OUT_C_32" pintype="power_out"/>
+      <node ref="U1" pin="32" pinfunction="OUT_C_32" pintype="passive"/>
       <node ref="U1" pin="39" pinfunction="OUT_A_39" pintype="power_out"/>
-      <node ref="U1" pin="40" pinfunction="OUT_A_40" pintype="power_out"/>
+      <node ref="U1" pin="40" pinfunction="OUT_A_40" pintype="passive"/>
     </net>
     <net code="62" name="/PWM_BD" class="Default">
       <node ref="C17" pin="2" pintype="passive"/>
       <node ref="C19" pin="2" pintype="passive"/>
       <node ref="L2" pin="2" pinfunction="2_2" pintype="passive"/>
-      <node ref="U1" pin="27" pinfunction="OUT_D_27" pintype="power_out"/>
-      <node ref="U1" pin="28" pinfunction="OUT_D_28" pintype="power_out"/>
+      <node ref="U1" pin="27" pinfunction="OUT_D_27" pintype="passive"/>
+      <node ref="U1" pin="28" pinfunction="OUT_D_28" pintype="passive"/>
       <node ref="U1" pin="35" pinfunction="OUT_B_35" pintype="power_out"/>
     </net>
     <net code="63" name="/RAILS_OK" class="Default">
@@ -7816,6 +7865,7 @@
     </net>
     <net code="98" name="MONO_BIASED" class="Default">
       <node ref="R101" pin="1" pintype="passive"/>
+      <node ref="TP101" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
     <net code="99" name="unconnected-(D503-NC-Pad2)" class="Default">
       <node ref="D503" pin="2" pinfunction="NC_2" pintype="no_connect"/>

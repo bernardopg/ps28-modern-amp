@@ -1,11 +1,11 @@
 ---
 id: ELEC-002
 title: Simular front-end físico e tolerâncias
-status: Blocked
+status: To Do
 milestone: M2
 sprint: S03
 depends_on: ELEC-001, PWR-001
-updated: 2026-10-08
+updated: 2026-10-12
 ---
 
 # ELEC-002 — Simular front-end físico e tolerâncias
@@ -20,6 +20,8 @@ Simular front-end físico e tolerâncias, atendendo docs/requirements.md e gates
 - [ ] LR4/ganho/headroom/impedância/startup/fase e tolerâncias verificados
 
 ## Evidência
+
+2026-10-12: desbloqueada (ELEC-001 e PWR-001 Done).
 
 D-024 (2026-10-09) acrescenta requisitos ao front-end: passa-altas subsônico
 (conteúdo < 20 Hz pode disparar a janela DC dos pinos), fase/volume sem degrau DC

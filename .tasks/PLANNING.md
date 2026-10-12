@@ -10,10 +10,11 @@ Milestone→epic (prefixo da área)→task; sprint é timebox, não gate.
 
 Frontmatter obrigatório: id, title, status (To Do/In Progress/Blocked/Done),
 milestone, sprint (backlog se não alocada), depends_on (IDs ou none), updated.
-Ready: evidência de entrada, critérios testáveis, dependências Done, risco conhecido.
-Done: todos critérios [x] com evidência, make check e validações pertinentes,
-CHANGELOG atualizado, gate humano quando necessário. Não exigir sign-off hardware
-para uma task apenas documental; não usar Done documental para aprovar o circuito.
+Ready: objetivo claro e dependências não bloqueantes. Done (D-030): trabalho de projeto
+feito e verificado (ERC/DRC/teste/medida, o que couber), CHANGELOG atualizado e issue
+espelho fechada. Pendências de bancada migram para BENCH-002; "ok" do proprietário
+registrado quando a task for gate (G0–G5). Não segurar task aberta por TBD resolvível
+na primeira energização controlada.
 
 Fim de sessão: atualizar task/log de sprint. Fim do sprint: review/retro e realocar
 pendentes. Fim de milestone: evidência explícita e atualizar roadmap. GitHub issues

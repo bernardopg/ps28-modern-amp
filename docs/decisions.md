@@ -212,7 +212,8 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   escolhido, reavaliar NTC (aí sim, com o espaço já conhecido). 2026-10-11; pendente
   de G1. Não libera fabricação nem energização.
 
-- D-029 — **Rev A = placa de bring-up de bancada; retificador T1 adiado para Rev B.**
+- D-029 — **REVOGADA em 2026-10-12 por D-030** (proprietário: uma placa só).
+  Texto original: Rev A = placa de bring-up de bancada; retificador T1 adiado para Rev B.
   Selecionada em 2026-10-12 por delegação do proprietário ("tomar as melhores
   decisões"); G1 pendente. Motivo: J301/F301/D301/D302/C301/C302 são os únicos
   itens do estágio de potência sem MPN/footprint qualificados
@@ -230,3 +231,31 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   Gerador `scripts/create_rev_a_bench.py` → `kicad/rev-a-bench/` (placement de
   estudo, sem rota). Risco: Rev A não valida T1/inrush/retificador, só o restante.
   Não libera fabricação, compra nem energização.
+
+- D-030 — **Uma placa só e política de evidência pragmática.** Aprovada pelo
+  proprietário em 2026-10-12. Revoga D-029; substitui as escolhas de potência de
+  D-025/D-027/D-028 e as pendências da revisão de prontidão. Objetivo: subwoofer
+  funcionando com a placa nova; regras de trabalho em `AGENTS.md`.
+  Escolhas, com a placa original como referência (manual PS28 p.14):
+  - J301: JST **B3P-VH(LF)(SN)**, 3 vias 3,96 mm — o manual lista "3 PIN
+    PITCH=3.96mm JST-VH" (175-1d03v01-e); casa com o chicote vermelho–preto–vermelho.
+  - D301/D302: **P600J** axial R-6 (600 V, 6 A, IFSM 400 A). OEM usava KBL405
+    (4 A/500 V, IFSM 200 A) para a mesma corrente de T1; P600J tem mais margem e
+    mantém o footprint D_P600 já no projeto. Corrente média por diodo ≤ ~2 A em potência
+    contínua máxima; dissipação ~2 W cada, no ar, com terminais longos.
+  - C301/C302: **Rubycon 63USC4700MEFCSN30X30** em footprint correto D30 snap-in.
+    Com C14/C15 (2×1500 µF/63 V): 12,4 mF a 63 V, contra 13,6 mF a 50 V no OEM; PVDD
+    máximo simulado 49,84 V, margem de tensão maior que a do OEM.
+  - F301: **Littelfuse 02186.3MXP** (T 6,3 A 5×20) em suporte Schurter 0031.8201,
+    no retorno CT. Confirmar na primeira energização (Variac/lâmpada-série); trocar por
+    8 A se abrir só na partida. Fusível original de 2,5 A no primário permanece no gabinete.
+  - Sobretensão: rede 127 V nominal + T1 medido dão ≤ 49,84 V no pior caso simulado,
+    abaixo de 53,5 V de operação do TPA3255; TPS3700 desarma o áudio na janela
+    50,97–52,24 V e SMCJ51A absorve transientes. Sem limitador série (D-028 arquivada).
+  - R201 passa a DIN0617 vertical (mesmo resistor, ocupa menos placa).
+  - ERC: pinos PBTL paralelos marcados passive e TP101 MONO_IN (da branch
+    `fix/pcb-route-drc-erc`). Resultado: ERC 0, DRC 0, paridade 0; 471 conexões a rotear.
+  - Autoroute de estudo descartado; rota manual com planos (PCB-002).
+  Capturas `kicad/power-package-review/` e `kicad/power-researched/` ficam como
+  histórico. Risco aceito: margens baseadas na placa original e em simulação, confirmadas
+  na energização controlada (BENCH-002), não em ensaio prévio de inrush.
