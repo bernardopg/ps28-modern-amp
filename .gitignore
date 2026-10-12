@@ -34,3 +34,6 @@ kicad/**/jlcpcb/
 
 # Backups automáticos do KiCad (.history); nunca versionar.
 .history/
+
+# Logs locais de roteamento (Freerouting).
+logs/

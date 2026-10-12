@@ -1,0 +1,157 @@
+{
+  "study": "PWR-001 power-part selection for D-021 CT two-diode supply",
+  "date": "2026-10-11",
+  "status": "DECIDED per D-025/026/027 (2026-10-11). MPNs selected by primary source; footprints still to audit before G3; LCSC/stock/price TBD. NOT a purchase, NOT a gate sign-off.",
+  "sources_note": "Ratings read from manufacturer datasheets archived in reference/parts/ with SHA256 in reference/manifest.json. Local nichicon-uhe.pdf and panasonic-nhg-a.pdf used for bulk caps. No MPN/stock/price invented.",
+  "requirements_source": "docs/power-d021.md (D-021), derived from T1 measured 34.35 VAC/half and TI SLASEA8A limits",
+  "categories": {
+    "D301_D302_rectifier": {
+      "requirement": "VRRM >= 400 V (2x margin over 102.1 V PIV), IF(AV) >= 6 A, IFSM >= 200 A, CT full-wave 2 diodes",
+      "candidates": [
+        {
+          "mpn": "MUR3040WTG",
+          "family": "onsemi MUR3020/3040/3060WTG",
+          "source": "reference/parts/onsemi-mur3020wtg.pdf (MUR3020WT/D Rev.7 Jul-2014 p.1 Max Ratings)",
+          "vrrm_v": 400,
+          "if_av_a_at_tc": {
+            "value": 15,
+            "tc_c": 145
+          },
+          "ifsm_a": 200,
+          "tj_tstg_c": [
+            -65,
+            175
+          ],
+          "verdict": "PASS all requirements (VRRM 400>=400, IF(AV) 15>=6, IFSM 200>=200). Confirm 400 V variant picks the 200 A IFSM leg (600 V leg is 150 A). Tab/DPAK package; footprint/thermal not yet selected.",
+          "open": "PIV worst case 102.1 V at 133 VAC gives 3.9x margin; verify derating at real case temp; footprint audit pending"
+        },
+        {
+          "mpn": "STTH8L06G-TR",
+          "family": "ST STTH8L06",
+          "source": "distributor page (hotenda) citing ST datasheet; NOT archived locally",
+          "vrrm_v": 600,
+          "if_av_a": 8,
+          "ifsm_a": 120,
+          "verdict": "FAIL: IFSM 120 A < 200 A required. Rejected; listed to document the rejection."
+        }
+      ],
+      "recommendation": "MUR3040WTG (400 V variant) meets all D-021 diode requirements with margin; footprint/thermal derating still to audit before any board commit.",
+      "decision": "D-025: MUR3040WTG x2 (VRRM 400V, IF(AV) 15A @145C, IFSM 200A). Footprint TO-247/DPAK to audit."
+    },
+    "C301_C302_bulk": {
+      "requirement": "2 x 4700 uF/63 V/105 C, ripple >= 3.5 A RMS @120 Hz per piece (D-021), total ~12.4 mF with core caps",
+      "findings": [
+        {
+          "family": "Nichicon UHE (1J = 63 V)",
+          "source": "reference/parts/nichicon-uhe.pdf (CAT.8100M)",
+          "max_cap_uf_63v": 1500,
+          "max_part": "UHE1J152MHD",
+          "verdict": "FAIL: UHE 63 V line tops out at 1500 uF; no 4700 uF/63 V."
+        },
+        {
+          "family": "Panasonic NHG-A (1J = 63 V)",
+          "source": "reference/parts/panasonic-nhg-a.pdf",
+          "max_cap_uf_63v": 2200,
+          "max_part": "ECA1JHG222 (1610 mA rms @120 Hz)",
+          "verdict": "FAIL: max 2200 uF (not 4700) and ripple 1.61 A < 3.5 A required."
+        }
+      ],
+      "analysis": "The D-021 target of 2 x 4700 uF/63 V with >=3.5 A rms/120 Hz is not met by any 63 V aluminum electrolytic in the local reference set. 4700 uF is common at <=35 V but not at 63 V; high-ripple 63 V parts of that capacitance need low-ESR snap-in types (e.g. Panasonic EEU-EB1J) NOT in the local set. Ripple current and capacitance/voltage trade against each other in Al electrolytics.",
+      "severity": "RESOLVED (D-025): Rubycon 63USC4700MEFCSN30X30 selected; footprint snap-in D30 still to audit",
+      "tbd": [
+        "Source low-ESR 63 V snap-in electrolytics (Panasonic EEU-EB, Rubycon, Nichicon HE/PW) with 4700 uF and ripple >=3.5 A @120 Hz",
+        "Confirm ripple: D-021 estimates ~6.7 A rms bank at 3.9 A continuous; per-cap >=3.5 A @120 Hz may need >=18 mm can",
+        "Or revisit budget: 2 x 2200 uF may suffice if ripple relaxed; re-run D-021 ngspice",
+        "Endurance 105 C, ESR, aging/temperature derating, frequency coefficient TBD"
+      ],
+      "recommendation": "Do NOT pick a bulk MPN yet. Re-open the capacitance/ripple requirement: find a 63 V low-ESR 4700 uF snap-in (>=18 mm) or reduce per-cap ripple need. Needs owner input on can size vs OEM envelope.",
+      "decision": "Rubycon 63USC4700MEFCSN30X30 x2 (LCSC C1498587): 4700uF/63V, 3.49A rms @120Hz, D30xL30, 3000h @85C. Footprint CP_Radial D30 snap-in to audit; Nichicon UHE/Panasonic NHG-A had no 4700uF/63V."
+    },
+    "D303_tvs": {
+      "requirement": "VWM >= 51 V, Vc < 69 V (below TPA3255 absolute max) at specified pulse",
+      "candidates": [
+        {
+          "mpn": "SMCJ51A",
+          "family": "Littelfuse SMCJ (1500 W)",
+          "source": "reference/parts/littelfuse-smcj51a.pdf (2020-10-29)",
+          "vwm_v": 51.0,
+          "vc_v_at_ipp": {
+            "vc": 82.4,
+            "ipp_a": 18.2
+          },
+          "ppp_w": 1500,
+          "pulse": "10/1000 us",
+          "verdict": "FAIL: Vc 82.4 V >= 69 V required. Clamping exceeds TPA3255 53.5 V absolute max by a wide margin."
+        }
+      ],
+      "analysis": "Standard TVS families (SMCJ/SMBJ) clamp ~1.6x VWM; for VWM 51 V, Vc ~82 V is inherent. Vc < 69 V at meaningful current needs a higher-power part, bidirectional/series scheme, or an active crowbar. The D-021 Vc<69 V requirement is likely physically incompatible with a simple 51 V standoff TVS.",
+      "severity": "RESOLVED (D-026): Vc<69V infeasible with passive 51V TVS; OVP by TPS3700 sustained window + SMCJ51A as energy absorber",
+      "tbd": [
+        "Re-evaluate feasibility of Vc<69 V: higher-power SMC (clamp at larger Ipp), MOV+TVS hybrid, or active OVP/crowbar via the TPS3700 OV window already captured",
+        "Confirm actual transient energy and required Vc at that current",
+        "D-021 already notes TVS covers fast transient; sustained OVP is the TPS3700 OV (50.97-52.24 V)"
+      ],
+      "recommendation": "TVS selection BLOCKED by a requirement conflict. Revisit Vc<69 V spec vs the sustained TPS3700 OVP before selecting. Do not force SMCJ51A (fails Vc).",
+      "decision": "Keep SMCJ51A (VWM 51V, Vc 82.4V) as fast-transient energy absorber only. Primary OVP = TPS3700 window 50.97-52.24V (sustained). Do NOT rely on TVS clamp."
+    },
+    "F301_fuse": {
+      "requirement": "Slow-blow (time-lag), I2t > 63.6 A^2s margin, >= 63 VDC, in CT return before GND (D-021)",
+      "note": "D-021 defers inrush strategy: decide NTC or bypass relay after measuring real I2t of mains fuse T2.5AL and bench start current. No fuse MPN selected without bench data.",
+      "tbd": [
+        "Measure real inrush I2t on bench (D-021 estimated 45-169 A peak, I2t <= 63.6 A^2s first 100 ms)",
+        "Select fuse with I2t melt above measured inrush but below transformer/bulk damage threshold",
+        "Confirm voltage rating (63 VDC min) and time-lag curve"
+      ],
+      "recommendation": "TBD - blocked on bench measurement. Candidate family (not selected): 5x20 mm time-lag T series (Littelfuse 218/892). No MPN committed.",
+      "decision": "D-027: time-lag (T) 5x20mm >=63VDC; rating by operating RMS (~4.3-5.7A) not inrush. Family Littelfuse 218/892. Exact I2t/ampere after BENCH-001."
+    },
+    "J301_J302_connector": {
+      "requirement": "T1 secondary interface, ~4 mm pitch, 20 AWG wire (J301); JST VH family per D-021",
+      "candidates": [
+        {
+          "mpn": "SVH-41T-P1.1 / VHR-4N",
+          "family": "JST VH (3.96 mm Disconnectable Crimp style)",
+          "source": "reference/parts/jst-vh-connector.pdf (local)",
+          "pitch_mm": 3.96,
+          "wire_awg": "22 to 16 (SVH-41T-P1.1: 20 to 16)",
+          "current_a": 10,
+          "voltage_v": 250,
+          "resistance_mohm_max": 10,
+          "verdict": "PASS: pitch 3.96 mm ~= 4 mm, 20 AWG in range, 10 A rating. Terminal SVH-41T-P1.1; housing VHR-4N.",
+          "open": "J301 is 3-position (T1 redA/blackCT/redB); confirm circuit count and header (B3P-VH / VHR-3N). Header/housing MPN TBD."
+        }
+      ],
+      "recommendation": "JST VH SVH-41T-P1.1 terminals fit 20 AWG/3.96 mm; header/housing part number and exact circuit count TBD pending T1 pinout confirmation."
+    },
+    "inrush_strategy": {
+      "requirement": "decide NTC vs bypass relay (D-021 item 1)",
+      "note": "Deferred by D-021 pending bench measurement of T2.5AL mains fuse I2t and actual start current.",
+      "analysis": {
+        "inrush_peak_a": "45-169 A (D-021 ngspice, liga no pico, bulk 0 V)",
+        "inrush_i2t_a2s_first_100ms": "<= 63.6",
+        "options": [
+          "NTC inrush limiter in series before bulk - simple, steady-state power loss and thermal; size for 3.9 A load",
+          "Bypass relay closing after precharge - efficient steady state, adds relay + control (sequencer D-020 could drive it)"
+        ],
+        "recommendation": "Defer to bench. Do not select NTC or relay without measured inrush. Sequencer D-020/D-023 already provides hold/timing to gate a bypass relay."
+      },
+      "decision": "D-027: handled by time-lag fuse; NTC+relay rejected (NTC I2R loss at 3.9A; relay 17x23mm no room). Matches original board approach."
+    }
+  },
+  "summary_findings": [
+    "D301/D302: DECIDED MUR3040WTG (D-025); STTH8L06 rejected (IFSM 120A<200A).",
+    "C301/C302: DECIDED Rubycon 63USC4700MEFCSN30X30 x2 (D-025); snap-in footprint to audit.",
+    "D303 TVS: DECIDED by architecture (D-026) - OVP via TPS3700 sustained window; SMCJ51A energy absorber only (Vc 82.4V infeasible as clamp).",
+    "F301 fuse: DECIDED time-lag by operating RMS (D-027); exact I2t/ampere after bench.",
+    "Inrush: DECIDED via time-lag fuse, no NTC/relay (D-027).",
+    "J301/J302: JST VH SVH-41T-P1.1 fits 20 AWG/3.96mm; housing/header MPN TBD."
+  ],
+  "not_done": [
+    "LCSC codes, stock, price, landed cost NOT verified (no invented stock/price)",
+    "No purchase, fabrication, or energization authorized",
+    "Footprint audit for MUR3040WTG (TO-247), Rubycon snap-in (D30), fuse holder still pending before G3",
+    "Fuse ampere rating and inrush I2t to confirm on bench (BENCH-001)",
+    "G0-G5 gates remain PENDING"
+  ],
+  "decisions": "D-025 (MPNs), D-026 (OVP architecture, not TVS clamp), D-027 (inrush by time-lag fuse, no NTC/relay)"
+}

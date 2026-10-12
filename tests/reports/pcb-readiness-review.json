@@ -1,0 +1,540 @@
+{
+  "manufacturing_approved": false,
+  "scope": "Auditoria parcial; não sign-off G1/G2/G3",
+  "drc_command": [
+    "kicad-cli",
+    "pcb",
+    "drc",
+    "--format",
+    "json",
+    "--severity-all",
+    "--schematic-parity",
+    "--refill-zones",
+    "--output",
+    "/home/bitter/development/ps28-modern-amp-starter/build/readiness/native-drc.json",
+    "/home/bitter/development/ps28-modern-amp-starter/kicad/system-candidate/system-candidate.kicad_pcb"
+  ],
+  "blockers": [
+    {
+      "code": "unqualified_mpn",
+      "ref": "R101",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R102",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R103",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R104",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R105",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R106",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R107",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R108",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C107",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C108",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "J301",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "connector_positions_mismatch",
+      "ref": "J301",
+      "message": "Housing VHR-4N informado com header de 3 posições; terminal de crimp não define o header da PCB."
+    },
+    {
+      "code": "fuse_rating_unqualified",
+      "ref": "F301",
+      "message": "6,3 A apresentado como valor, mas I²t/inrush e MPN exato continuam pendentes."
+    },
+    {
+      "code": "rectifier_package_mismatch",
+      "ref": "D301",
+      "message": "MPN MUR3040WTG atribuído a diodo axial P600; auditar símbolo, pads, encapsulamento e térmica antes de rotear."
+    },
+    {
+      "code": "rectifier_package_mismatch",
+      "ref": "D302",
+      "message": "MPN MUR3040WTG atribuído a diodo axial P600; auditar símbolo, pads, encapsulamento e térmica antes de rotear."
+    },
+    {
+      "code": "bulk_body_mismatch",
+      "ref": "C301",
+      "message": "Corpo declarado Ø30 mm associado a footprint Ø25 mm; refazer courtyard/fit após auditoria do fabricante."
+    },
+    {
+      "code": "bulk_body_mismatch",
+      "ref": "C302",
+      "message": "Corpo declarado Ø30 mm associado a footprint Ø25 mm; refazer courtyard/fit após auditoria do fabricante."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R301",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "U302",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R311",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "U303",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R320",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R321",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R322",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C320",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R323",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C401",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C402",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C403",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R401",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R402",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R403",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R404",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C404",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R405",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "J401",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R406",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R407",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C405",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R428",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R408",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C406",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C407",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C408",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C409",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C410",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C411",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C412",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C413",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C414",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C415",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R429",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R430",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C418",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C419",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C420",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C421",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C422",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C423",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R420",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R421",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R422",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R423",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R424",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R425",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R426",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R427",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C416",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C417",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R517",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R518",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R501",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R502",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R503",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R504",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C503",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C504",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R505",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R506",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R507",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R508",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R509",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R510",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C509",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C510",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C511",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C512",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R514",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R515",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R516",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R511",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R512",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "R513",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C505",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C506",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C507",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "unqualified_mpn",
+      "ref": "C508",
+      "message": "MPN/qualificação pendente; não é linha de BOM liberada."
+    },
+    {
+      "code": "violations",
+      "count": 109,
+      "types": {
+        "silk_overlap": 90,
+        "silk_over_copper": 12,
+        "silk_edge_clearance": 3,
+        "track_dangling": 4
+      }
+    },
+    {
+      "code": "unconnected_items",
+      "count": 18,
+      "types": {
+        "unconnected_items": 18
+      }
+    },
+    {
+      "code": "human_review_required",
+      "message": "Auditar OVP/transientes, inrush, D-022 completo, placement crítico, térmica e BOM; G0–G5 continuam pendentes."
+    }
+  ],
+  "source_sha256": {
+    "kicad/system-candidate/system-candidate.kicad_pcb": "da801146c7913f43288b1a83439cd043f2f6a4bfcde275f7068870521762bc2f",
+    "kicad/system-candidate/system-candidate.kicad_sch": "c037330c79a0a957281aa88f1e85ca9ffa207126d57922ab7bc71d88c06dda90",
+    "kicad/system-candidate/system-candidate.kicad_pro": "25460ef17ead490ef17f477405f78c7a610060c323ef47adffc5eb4ed3d48d68",
+    "kicad/system-candidate/system-manifest.json": "4425e37301ba151fc1e9706cdc9a5dd8f1847f6a4135dc7345deda76a003845c",
+    "scripts/check_pcb_readiness.py": "547b20e305949a9f18fa0f943e0df85160a17606167b8c9e3fbf85bbf95792f8",
+    "build/readiness/native-drc.json": "80ebe4871d5bdfd8656ad1b17fb2deb5a64927c3e995e0d943b97c2139912d2d"
+  },
+  "status": "BLOCKED",
+  "evidence_note": "Auditoria parcial do inventário e DRC; sem alteração de EDA. Ver docs/pcb-readiness-review.md.",
+  "validation": {
+    "make_check_tests": 109,
+    "make_check_passed": true,
+    "manufacturing_approved": false
+  }
+}

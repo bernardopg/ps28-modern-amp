@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-12",
+  "source": "Owner statement and ten local photographs; originals remain outside Git",
+  "owner_reported": {
+    "existing_capacitor_height_mm": 45,
+    "clearance_above_existing_capacitor": "a little more than 30 mm to internal plastic frame"
+  },
+  "derived": {
+    "approximate_available_height_mm": 75,
+    "candidate_height_envelope_mm": 52,
+    "approximate_remaining_clearance_mm": 23,
+    "scope": "Only at original capacitor locations with same board mounting and orientation; approximate, not tolerance-controlled"
+  },
+  "observations": [
+    "Three-position transformer connector; red-black-red wires; latch visible",
+    "Appearance consistent with JST VH hypothesis, not confirmed manufacturer/MPN or exact pitch"
+  ],
+  "manufacturing_approved": false,
+  "photos": [
+    {
+      "file": "WhatsApp Image 2026-10-12 at 16.44.42 (1).jpeg",
+      "sha256": "2503cb53f192c2a9033b9b63e2665e6144b0649b32cfce22de178aa8f01cd871"
+    },
+    {
+      "file": "WhatsApp Image 2026-10-12 at 16.44.42 (2).jpeg",
+      "sha256": "a4ad47bc05a038cd427225f32687b2aeed6464d1a2f4c1fd4bf451d62311d487"
+    },
+    {
+      "file": "WhatsApp Image 2026-10-12 at 16.44.42 (3).jpeg",
+      "sha256": "9eb99af494e170b343fc81f0e338e247ad94798dd0172d1ad2236fbe7468ad5c"
+    },
+    {
+      "file": "WhatsApp Image 2026-10-12 at 16.44.42 (4).jpeg",
+      "sha256": "104c248f3df4bf3982274295ff0c9132a398f19f3e6c3073abf10746d81c21c2"
+    },
+    {
+      "file": "WhatsApp Image 2026-10-12 at 16.44.42 (5).jpeg",
+      "sha256": "1496971f534568e6ebb4c888138d76aec5133c1c75901c8c0f59d356b84675de"
+    },
+    {
+      "file": "WhatsApp Image 2026-10-12 at 16.44.42 (6).jpeg",
+      "sha256": "19be6b9816247987a21b8c92af536bdea16c61fd50c9c5690d8199bbbbd19cfd"
+    },
+    {
+      "file": "WhatsApp Image 2026-10-12 at 16.44.42 (7).jpeg",
+      "sha256": "0d4e3fb47cb45744d54a0b222bd1f3dca7e45aae0f9a7f6536d739922c1be584"
+    },
+    {
+      "file": "WhatsApp Image 2026-10-12 at 16.44.42 (8).jpeg",
+      "sha256": "a291fd1e6e1297f1299da901b48d421a3993d78081b716756706732f9833a811"
+    },
+    {
+      "file": "WhatsApp Image 2026-10-12 at 16.44.42 (9).jpeg",
+      "sha256": "99461cc38c637a0396dcf6e2216f8bd5e550ea95475283b6dacf1f4678c0de2b"
+    },
+    {
+      "file": "WhatsApp Image 2026-10-12 at 16.44.42.jpeg",
+      "sha256": "1fbcb37accec9f5531182de8a4f9f753475a545d1cfd1ac7ab203f488397d40e"
+    }
+  ]
+}

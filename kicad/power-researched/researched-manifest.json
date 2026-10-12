@@ -1,0 +1,559 @@
+{
+  "status": "Electrical candidates only; NO PCB/OVP disconnect/approved fit",
+  "source": "onsemi RHRP1560/D Rev.3; Nichicon LGU CAT.8100M; electrical candidates only",
+  "parts": [
+    {
+      "ref": "J301",
+      "lib_id": "Connector_Generic:Conn_01x03",
+      "value": "T1_SECONDARY",
+      "mpn": "TBD: exact three-position header mating OEM harness; pin order 1=T1_A, 2=T1_CT, 3=T1_B preserved. VHR-4N not selected; SVH terminal alone does not identify PCB header.",
+      "footprint": "",
+      "nets": {
+        "1": "T1_A",
+        "2": "T1_CT",
+        "3": "T1_B"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          45.72
+        ]
+      ]
+    },
+    {
+      "ref": "F301",
+      "lib_id": "Device:Fuse",
+      "value": "T TBD",
+      "mpn": "TBD: exact time-lag fuse, DC breaking rating and I2t coordination; CT branch RMS and measured inrush required. 6.3 A not selected.",
+      "footprint": "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open",
+      "nets": {
+        "1": "T1_CT",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          45.72
+        ]
+      ]
+    },
+    {
+      "ref": "D301",
+      "lib_id": "Device:D",
+      "value": "RHRP1560 candidate",
+      "mpn": "RHRP1560; onsemi RHRP1560/D Oct-2017 Rev.3 p.1-2: 600 V, 15 A at Tc=140 C, IFSM=200 A halfwave 60 Hz. TO-220AC; cathode flange LIVE PVDD. TBD physical pad mapping/land pattern and thermal. Functional symbol only.",
+      "footprint": "",
+      "nets": {
+        "1": "PVDD",
+        "2": "T1_A"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          45.72
+        ]
+      ]
+    },
+    {
+      "ref": "D302",
+      "lib_id": "Device:D",
+      "value": "RHRP1560 candidate",
+      "mpn": "RHRP1560; onsemi RHRP1560/D Oct-2017 Rev.3 p.1-2: 600 V, 15 A at Tc=140 C, IFSM=200 A halfwave 60 Hz. TO-220AC; cathode flange LIVE PVDD. TBD physical pad mapping/land pattern and thermal. Functional symbol only.",
+      "footprint": "",
+      "nets": {
+        "1": "PVDD",
+        "2": "T1_B"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          45.72
+        ]
+      ]
+    },
+    {
+      "ref": "C301",
+      "lib_id": "Device:C_Polarized",
+      "value": "4700u 100V candidate",
+      "mpn": "LGU2A472MELC; Nichicon LGU CAT.8100M p.1/3: 4700 uF 100 V 105 C, 4.14 A rms at 120 Hz, D35 L50, 3000 h; TBD fit/ESR/ripple sharing/stock",
+      "footprint": "PS28_POWER:LGU_D35_L50_P10_Study",
+      "nets": {
+        "1": "PVDD",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          45.72
+        ]
+      ]
+    },
+    {
+      "ref": "C302",
+      "lib_id": "Device:C_Polarized",
+      "value": "4700u 100V candidate",
+      "mpn": "LGU2A472MELC; Nichicon LGU CAT.8100M p.1/3: 4700 uF 100 V 105 C, 4.14 A rms at 120 Hz, D35 L50, 3000 h; TBD fit/ESR/ripple sharing/stock",
+      "footprint": "PS28_POWER:LGU_D35_L50_P10_Study",
+      "nets": {
+        "1": "PVDD",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          45.72
+        ]
+      ]
+    },
+    {
+      "ref": "R301",
+      "lib_id": "Device:R",
+      "value": "4.7k 2W",
+      "mpn": "TBD: >=1 W continuous at 50 V (0.53 W), >=100 V",
+      "footprint": "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal",
+      "nets": {
+        "1": "PVDD",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          86.36
+        ]
+      ]
+    },
+    {
+      "ref": "D303",
+      "lib_id": "Device:D_TVS",
+      "value": "SMCJ51A",
+      "mpn": "Littelfuse SMCJ51A candidate only: Vc=82.4 V exceeds TPA3255 PVDD abs max 69 V; NOT qualified OVP. RAILS_OK/RESET do not disconnect PVDD; transient/OVP design TBD.",
+      "footprint": "Diode_SMD:D_SMC",
+      "nets": {
+        "1": "PVDD",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          86.36
+        ]
+      ]
+    },
+    {
+      "ref": "J302",
+      "lib_id": "Connector_Generic:Conn_01x02",
+      "value": "PVDD_TO_CORE",
+      "mpn": "Logical interface to core J1; same PCB, not a new connector",
+      "footprint": "",
+      "nets": {
+        "1": "PVDD",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          86.36
+        ]
+      ]
+    },
+    {
+      "ref": "U302",
+      "lib_id": "Regulator_Switching:LM5164DDA",
+      "value": "LM5164DDA",
+      "mpn": "LM5164DDAR (TI SNVSAU4D Table 7-1); HSOP-8 EP footprint not audited",
+      "footprint": "Package_SO:HSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.1mm",
+      "nets": {
+        "1": "GND",
+        "2": "PVDD",
+        "3": "PVDD",
+        "4": "BUCK_RON",
+        "5": "BUCK_FB",
+        "6": "RAILS_OK",
+        "7": "BUCK_BST",
+        "8": "BUCK_SW",
+        "9": "GND"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          86.36
+        ]
+      ]
+    },
+    {
+      "ref": "C310",
+      "lib_id": "Device:C",
+      "value": "2.2u 100V X7R",
+      "mpn": "CGA6N3X7R2A225K230AB (TI Table 7-1)",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "nets": {
+        "1": "PVDD",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          86.36
+        ]
+      ]
+    },
+    {
+      "ref": "C311",
+      "lib_id": "Device:C",
+      "value": "2.2u 100V X7R",
+      "mpn": "CGA6N3X7R2A225K230AB (TI Table 7-1)",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "nets": {
+        "1": "PVDD",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          86.36
+        ]
+      ]
+    },
+    {
+      "ref": "C312",
+      "lib_id": "Device:C",
+      "value": "2.2n 50V X7R",
+      "mpn": "GCM155R71H222KA37D (TI Table 7-1); 1.5-2.5 nF abs range",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "nets": {
+        "1": "BUCK_BST",
+        "2": "BUCK_SW"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          127.0
+        ]
+      ]
+    },
+    {
+      "ref": "L301",
+      "lib_id": "Device:L",
+      "value": "68u",
+      "mpn": "MSS1246T-683MLB (TI Table 7-1); Isat above 1.5 A limit",
+      "footprint": "Inductor_SMD:L_Coilcraft_MSS1246T-XXX",
+      "nets": {
+        "1": "BUCK_SW",
+        "2": "AUX_RAW"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          127.0
+        ]
+      ]
+    },
+    {
+      "ref": "R310",
+      "lib_id": "Device:R",
+      "value": "100k 1%",
+      "mpn": "RG1608P-1053-B-T5 (TI Table 7-1); FSW 300 kHz",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "BUCK_RON",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          127.0
+        ]
+      ]
+    },
+    {
+      "ref": "R311",
+      "lib_id": "Device:R",
+      "value": "453k 1%",
+      "mpn": "TBD: TI Table 7-1 lists RT0603BRD07448KL (448k) against value 453k; resolve before BOM",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "BUCK_FB"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          127.0
+        ]
+      ]
+    },
+    {
+      "ref": "R312",
+      "lib_id": "Device:R",
+      "value": "49.9k 1%",
+      "mpn": "RG1608P-4992-B-T5 (TI Table 7-1)",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "BUCK_FB",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          127.0
+        ]
+      ]
+    },
+    {
+      "ref": "R313",
+      "lib_id": "Device:R",
+      "value": "453k 1%",
+      "mpn": "RT0603BRD07453KL (TI Table 7-1); RA type-3 ripple",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "BUCK_SW",
+        "2": "BUCK_RAMP"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          127.0
+        ]
+      ]
+    },
+    {
+      "ref": "C313",
+      "lib_id": "Device:C",
+      "value": "3.3n",
+      "mpn": "CGA3E2X7R2A332K080AA (TI Table 7-1); CA",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "BUCK_RAMP",
+        "2": "AUX_RAW"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          167.64
+        ]
+      ]
+    },
+    {
+      "ref": "C314",
+      "lib_id": "Device:C",
+      "value": "56p",
+      "mpn": "C0603C560J5GACTU (TI Table 7-1); CB",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "BUCK_RAMP",
+        "2": "BUCK_FB"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          167.64
+        ]
+      ]
+    },
+    {
+      "ref": "C315",
+      "lib_id": "Device:C",
+      "value": "22u 25V X7R",
+      "mpn": "TMK325B7226KMHT (TI Table 7-1)",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          167.64
+        ]
+      ]
+    },
+    {
+      "ref": "C316",
+      "lib_id": "Device:C",
+      "value": "22u 25V X7R",
+      "mpn": "TMK325B7226KMHT (TI Table 7-1)",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          167.64
+        ]
+      ]
+    },
+    {
+      "ref": "U303",
+      "lib_id": "PS28_POWER:TPS3700DDC",
+      "value": "TPS3700DDC",
+      "mpn": "TPS3700DDCR (TI SBVS187G p.23 package option addendum); SOT-23-6 footprint not audited",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "nets": {
+        "1": "RAILS_OK",
+        "2": "GND",
+        "3": "PVDD_UV_SENSE",
+        "4": "PVDD_OV_SENSE",
+        "5": "AUX_RAW",
+        "6": "RAILS_OK"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          167.64
+        ]
+      ]
+    },
+    {
+      "ref": "R320",
+      "lib_id": "Device:R",
+      "value": "931k 0.1%",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K, >=100 V working (sees ~50 V)",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "nets": {
+        "1": "PVDD",
+        "2": "PVDD_UV_SENSE"
+      },
+      "units": [
+        [
+          1,
+          355.6,
+          167.64
+        ]
+      ]
+    },
+    {
+      "ref": "R321",
+      "lib_id": "Device:R",
+      "value": "6.04k 0.1%",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "PVDD_UV_SENSE",
+        "2": "PVDD_OV_SENSE"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          208.28
+        ]
+      ]
+    },
+    {
+      "ref": "R322",
+      "lib_id": "Device:R",
+      "value": "7.32k 0.1%",
+      "mpn": "TBD: 0.1 %, <=25 ppm/K",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "PVDD_OV_SENSE",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          101.6,
+          208.28
+        ]
+      ]
+    },
+    {
+      "ref": "C320",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "TBD: X7R >=25 V (SBVS187G p.4 VDD bypass)",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          165.1,
+          208.28
+        ]
+      ]
+    },
+    {
+      "ref": "R323",
+      "lib_id": "Device:R",
+      "value": "100k",
+      "mpn": "TBD: pull-up to SEQ_3V3 (seq-d020 LP2985); <=14 V LM5164 PGOOD abs max",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "RAILS_OK"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          208.28
+        ]
+      ]
+    },
+    {
+      "ref": "J303",
+      "lib_id": "Connector_Generic:Conn_01x04",
+      "value": "AUX_TO_CORE",
+      "mpn": "Logical interface: AUX_RAW to core, RAILS_OK/SEQ_3V3 to seq-d020; same PCB",
+      "footprint": "",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "RAILS_OK",
+        "3": "SEQ_3V3",
+        "4": "GND"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          208.28
+        ]
+      ]
+    }
+  ],
+  "hardware_validated": false,
+  "manufacturing_approved": false,
+  "integrated_with_core": false,
+  "unassigned_footprints": [
+    "J301",
+    "D301",
+    "D302",
+    "J302",
+    "J303"
+  ],
+  "bulk_height_envelope_mm": 52,
+  "source_sha256": {
+    "scripts/create_power_researched.py": "06a0b96dacc82bd8ce5194fcd1ba5ea106bbd949bf0722e4b0ec6d412401203a",
+    "scripts/create_power_package_review.py": "6215bb0313a2b163aa847b9927a71a279dba41bd0abd0d2b190b93232b345906",
+    "reference/parts/onsemi-rhrp1560.pdf": "2bb9f4c035f518f3d0aa7a120acd1316a95a3b2592b116e5aa0f921dcc659efe",
+    "reference/parts/nichicon-lgu.pdf": "ff7e07fdc3959fb4b878f97590eba3d5e5275605b76b9229e75fbbb7b9c18035"
+  }
+}
