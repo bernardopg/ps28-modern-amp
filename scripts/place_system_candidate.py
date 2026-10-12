@@ -124,7 +124,8 @@ def place(pcb, pcbnew, mech, parts):
 
     # Anchors keep their intended rotation and take the nearest free spot to the target.
     for ref, (x, y, rot) in FIXED.items():
-        pack(fps[ref], (x, y), ["top"], [rot])
+        if ref in fps:  # D-029 Rev A omits the deferred T1 rectifier anchors
+            pack(fps[ref], (x, y), ["top"], [rot])
     rest = [fp for ref, fp in fps.items() if ref not in FIXED]
 
     def area(fp):

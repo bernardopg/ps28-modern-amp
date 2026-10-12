@@ -24,6 +24,16 @@ Ordem por dependência/risco; estado canônico nos arquivos de task.
 
 - [TOOL-001 — Investigar warnings KiCad](items/TOOL-001.md) (M1, backlog; avaliar antes de captura prolongada)
 
+## Prioridade após D-029 (2026-10-12)
+
+Caminho para a primeira fabricação (Rev A de bancada, `kicad/rev-a-bench/`):
+1. ERC limpo: pinos PBTL e MONO_IN (reaproveitar `fix/pcb-route-drc-erc`).
+2. ELEC-004: front-end D-022 na captura, ou registrar entrada de teste para Rev A.
+3. MECH-001: cotas locais faltantes para fit/dissipador do TPA3255.
+4. PCB-001/PCB-002: placement manual de potência/Classe D e rota manual com pours.
+5. BENCH-001: fonte de bancada e limites; FAB-001: BOM/CPL/estoque e gates G1–G3.
+Em paralelo, fora da PCB: medir inrush/I²t de T1 para a Rev B (PWR-001).
+
 ## Prioridade técnica após D-021…D-024a (2026-10-10)
 
 Caminho até produção em [docs/production-roadmap.md](../docs/production-roadmap.md).

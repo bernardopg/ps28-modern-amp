@@ -53,7 +53,9 @@ Use Conventional Commits e atualize CHANGELOG.md para mudanças relevantes.
 
 ## EDA atual
 Candidata de sistema em kicad/system-candidate/ (204 footprints, sem placement OEM/rota);
-gerada por scripts/integrate_candidate.py, não editar à mão. Ler docs/development-status.md
+gerada por scripts/integrate_candidate.py, não editar à mão.
+Rev A de bancada (D-029) em kicad/rev-a-bench/, gerada por scripts/create_rev_a_bench.py:
+sem bloco T1 (Rev B), PVDD via J1, placement de estudo sem rota. Ler docs/development-status.md
 e docs/production-roadmap.md. Núcleo B em kicad/core-selected/ps28-modern.kicad_pro.
 47 footprints/142 pads, ainda sem roteamento. Ler docs/selected-core.md.
 D-014 fixa montagem/dissipação OEM e os mesmos mounting points por decisão do usuário.

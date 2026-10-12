@@ -211,3 +211,22 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   Risco: pico de partida real não medido — se a bancada mostrar I²t acima do fusível
   escolhido, reavaliar NTC (aí sim, com o espaço já conhecido). 2026-10-11; pendente
   de G1. Não libera fabricação nem energização.
+
+- D-029 — **Rev A = placa de bring-up de bancada; retificador T1 adiado para Rev B.**
+  Selecionada em 2026-10-12 por delegação do proprietário ("tomar as melhores
+  decisões"); G1 pendente. Motivo: J301/F301/D301/D302/C301/C302 são os únicos
+  itens do estágio de potência sem MPN/footprint qualificados
+  (`docs/pcb-readiness-review.md`), e D-027 já exige medir inrush/I²t de T1 na
+  bancada (BENCH-001) antes de fixar fusível e retificador. O desenho mecânico do
+  TO-220AC do RHRP1560 não está no datasheet arquivado e o download onsemi foi
+  negado; não se inventa land pattern. Rev A mantém todo o resto da candidata
+  (core PBTL, bulk C14/C15 UHE 3000 µF/63 V, buck LM5164, TPS3700, sequenciador,
+  D-019/D-024, R301, D303) e recebe PVDD pelo terminal auditado J1 (WR-TBL
+  691137710002) a partir de fonte de bancada com limite de corrente/tensão. A
+  janela OV do TPS3700 continua só desabilitando áudio; na Rev A a proteção
+  sustentada de sobretensão é o limite da fonte de bancada, ajustado ≤ janela
+  aprovada em BENCH-001. Não muda a baseline D-010/D-021 do produto final: a Rev B
+  reintegra o retificador CT com dados medidos, mesmo contorno/fixação D-014.
+  Gerador `scripts/create_rev_a_bench.py` → `kicad/rev-a-bench/` (placement de
+  estudo, sem rota). Risco: Rev A não valida T1/inrush/retificador, só o restante.
+  Não libera fabricação, compra nem energização.

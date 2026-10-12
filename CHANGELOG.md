@@ -4,6 +4,17 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 
 ## [Unreleased]
 
+### Rev A de bancada (D-029) — 2026-10-12
+- Decisão D-029: primeira fabricação passa a ser placa de bring-up com PVDD de
+  fonte de bancada limitada via J1; bloco T1 (J301/F301/D301/D302/C301/C302)
+  adiado para Rev B, após medir inrush/I²t de T1 (BENCH-001).
+- `scripts/create_rev_a_bench.py` gera `kicad/rev-a-bench/` sem alterar
+  `integrate_candidate.py`: 198 footprints, 567 pads netlist↔PCB, joins J1→U1/C14/
+  U302 verificados. ERC igual à candidata (4 pin_to_pin PBTL + MONO_BIASED);
+  DRC 0 geometria/0 paridade, 460 conexões não roteadas (sem rota). Três testes.
+- `place_system_candidate.py` ignora âncoras de refs ausentes (saída da
+  candidata atual inalterada). Não libera fabricação.
+
 ### Medidas OEM — 2026-10-12
 - Registrada altura de capacitor 45 mm + folga superior pouco maior que 30 mm,
   informada pelo proprietário: envelope 52 mm deixa ~23 mm na região original.
