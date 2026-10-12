@@ -3,6 +3,12 @@
 Estudo ngspice e captura KiCad isolada. **Não é hardware validado, não libera compra,
 fabricação nem energização.** Gates G1–G4 continuam pendentes.
 
+> **Revisão posterior:** as seleções D-025/D-026/D-027 descritas abaixo não
+> estão qualificadas. MUR3040WTG tem IFSM=150 A, não 200 A; supervisor não
+> desconecta PVDD; F301 conduz a soma dos diodos. Ver
+> [remediação com fontes primárias e budgets](power-remediation.md), D-028
+> proposta, e `kicad/power-researched/`. O histórico abaixo não libera BOM/PCB.
+
 ## Entradas
 
 - Medido pelo proprietário (2026-10-09): 34,35 VAC por meia-bobina a vazio com rede
@@ -43,17 +49,27 @@ auditado e não serve de prova.
 ### Retificador e bulk
 
 - J301: T1 1 = vermelho A, 2 = preto CT, 3 = vermelho B. Ordem confirmada por foto
-  do chicote (CT no centro); passo ≈ 4 mm (família 3,96 mm), fio 20 AWG UL1015; série do header e rating TBD
-  (ver `transformer-reuse.md`).
-- F301 no retorno CT, antes do GND: lento, I²t com margem sobre 63,6 A²s, ≥ 63 VDC.
-- D301/D302: anodo no vermelho, catodo em PVDD. VRRM ≥ 400 V (2× margem sobre
-  102 V), IF(AV) ≥ 6 A, IFSM ≥ 200 A.
-- C301/C302: 2 × 4700 µF/63 V, 105 °C. Com C14/C15 do core (2 × 1500 µF) somam
-  12,4 mF, entre os casos de 10 e 15 mF. Ripple estimado no banco ≈ 6,7 A RMS a
-  3,9 A contínuos; especificar ≥ 3,5 A a 120 Hz por peça e verificar partilha/ESR.
+  do chicote (CT no centro); passo ≈ 4 mm (família 3,96 mm), fio 20 AWG UL1015.
+  **D-025**: terminais JST VH SVH-41T-P1.1 (20–16 AWG, 10 A) em housing VHR; header
+  exato e nº de vias TBD (ver `transformer-reuse.md`).
+- F301 no retorno CT, antes do GND: lento. **D-027**: fusível **time-lag (T)** 5×20 mm
+  ≥ 63 VDC, rating pela corrente de operação (≈4,3–5,7 A rms por meia-bobina) e não
+  pelo inrush; I²t exato/ampere aconfirmar em BENCH-001. Família Littelfuse 218/892.
+  Sem NTC/relé de bypass (D-027).
+- D301/D302: anodo no vermelho, catodo em PVDD. **D-025**: **MUR3040WTG** — VRRM 400 V,
+  IF(AV) 15 A @145 °C, IFSM 200 A, TJ −65…+175 °C (MUR3020WT/D Rev.7). Cobre folgado
+  VRRM ≥ 400 V, IF(AV) ≥ 6 A, IFSM ≥ 200 A; STTH8L06 rejeitado (IFSM 120 A).
+- C301/C302: 2 × 4700 µF/63 V. **D-025**: **Rubycon 63USC4700MEFCSN30X30** (LCSC
+  C1498587), 3,49 A rms @120 Hz, Ø30×30, 3000 h @85 °C — única família com 4700 µF a
+  63 V e ripple ≈3,5 A (Nichicon UHE/Panasonic NHG-A não têm 4700 µF/63 V). Com C14/C15
+  do core (2 × 1500 µF) somam 12,4 mF, entre os casos de 10 e 15 mF. Ripple estimado no
+  banco ≈ 6,7 A RMS a 3,9 A contínuos; verificar partilha/ESR. Footprint snap-in Ø30 TBD.
 - R301: bleeder 4,7 kΩ; 0,53 W a 50 V; τ ≈ 58 s com 12,4 mF. Peça ≥ 1 W.
-- D303: TVS em PVDD com VWM ≥ 51 V e Vc abaixo de 69 V (máximo absoluto) no pulso
-  especificado. Cobre transitório rápido; não substitui o OVP sustentado abaixo.
+- D303: TVS em PVDD. **D-026**: proteção de sobretensão é **por arquitetura**, não por
+  clamp — Vc < 69 V é inviável com TVS passivo de 51 V. **SMCJ51A** (VWM 51,0 V, Vc
+  82,4 V @IPP 18,2 A, 1500 W) fica como **absorvedor de energia de transiente rápido**;
+  a proteção sustentada é o OV do TPS3700 abaixo (50,97–52,24 V). Cobre transitório
+  rápido; não substitui o OVP sustentado abaixo.
 - J302: interface lógica para J1 do core, mesma PCB, não conector novo.
 
 ### AUX 12 V — U302 LM5164DDA (capturado)

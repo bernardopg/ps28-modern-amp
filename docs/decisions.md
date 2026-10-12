@@ -152,3 +152,62 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   51 mV além de −0,3 V). Custo −1,33 dB típico. Driver preso alto continua aberto.
   Footprint TI DGK0008A local para o TMUX6219. Validação: simulação de 216 casos de
   falha simples, ERC/DRC. 2026-10-10; pendente de revisão G1.
+> **Revisão 2026-10-11 — D-025/D-026/D-027 não qualificadas:** a tabela
+> onsemi MUR3020WT/D Rev.7 p.2 especifica **150 A** para MUR3040WTG;
+> 200 A pertence ao MUR3020WTG. A seleção MUR3040WTG abaixo está **reprovada
+> contra o requisito IFSM≥200 A**, não apenas aguardando footprint.
+> RAILS_OK/RESET não desconectam PVDD; fusível time-lag não limita inrush por si.
+> Captura corrigida de revisão: `kicad/power-package-review/`, sem substituir a
+> candidata roteada. Não constitui nova aprovação de arquitetura/MPN.
+
+- D-025 — Fechar os MPNs de potência do retificador CT D-021 por fonte primária.
+  Diodos D301/D302: **onsemi MUR3040WTG** (MUR3020WT/D Rev.7): VRRM 400 V (≈3,9× o
+  PIV 102,1 V a 133 VAC), IF(AV) 15 A @145 °C, IFSM 200 A, TJ −65…+175 °C — atende
+  folgado a todos os requisitos; STTH8L06 foi **rejeitado** (IFSM 120 A < 200 A).
+  Bulk C301/C302: **Rubycon 63USC4700MEFCSN30X30** (LCSC C1498587): 4700 µF/63 V,
+  3,49 A rms @120 Hz, Ø30×30, 3000 h @85 °C — a única família que entrega 4700 µF a
+  63 V com ripple próximo de 3,5 A; Nichicon UHE e Panasonic NHG-A **não têm**
+  4700 µF/63 V (máx. 1500/2200 µF). J301/J302: terminais **JST VH SVH-41T-P1.1**
+  (20–16 AWG, 10 A) em housing VHR (pitch 3,96 mm), casa com o fio 20 AWG do chicote.
+  Datasheets arquivados em `reference/parts/` com SHA256 no manifesto. Footprints
+  ainda candidatos (snap-in Ø30, TO-247, relé) a auditar antes de G3. LCSC/estoque/
+  preço não verificados. 2026-10-11; pendente de revisão G1. Não libera fabricação.
+- D-026 — Proteção de sobretensão de PVDD por **arquitetura**, não por clamp de TVS.
+  O requisito anterior "TVS com Vc < 69 V" é **inviável** com TVS passivo de 51 V:
+  SMCJ51A confirma VWM 51,0 V mas Vc 82,4 V @IPP 18,2 A (PPP 1500 W, 10/1000 µs),
+  acima do máximo absoluto do TPA3255 (PVDD 69 V, SLASEA8A p.5 §7.1; operação
+  ≤53,5 V §7.3). Como todo TVS grampeia ≈1,6× VWM, nenhum passivo de 51 V protege o
+  CI. Decisão: (1) proteção **sustentada** fica no supervisor **TPS3700** — janela OV
+  50,97–52,24 V já capturada, que desarma RAILS_OK antes de qualquer dano; (2) o
+  **TVS SMCJ51A** fica como **absorvedor de energia de transiente rápido** (não como
+  clamp primário), compondo com o bulk de 12,4 mF, que por Xc já suprima transientes
+  de alta frequência. Objetivo: parar de buscar clamp passivo inexistente e ancorar a
+  proteção no OV sustentado + absorção. Risco: transiente mais rápido que a resposta
+  do supervisor ainda vê até ~82 V no nodo — mitigado pelo bulk e pela natureza CT do
+  secundário (sem comutação). Validação: ERC/DRC, janela OV do TPS3700, `make check`;
+  caracterização de transiente real fica para a bancada. 2026-10-11; pendente de G1.
+- D-028 — **Proposta em revisão, não aprovada:** RHRP1560 e LGU2A472MELC como
+  alternativas elétricas por fonte primária; estudar desconexão série/pré-carga
+  com detector OVP preciso. LM5069 com OVLO interno apenas foi reprovado por
+  tolerância (2,4–2,6 V não cabe em 49,84–53,5 V). CT recalculado até 8,014 A RMS,
+  não usar RMS de meia-bobina para F301. Evidência, riscos/SOA/fit e pendências:
+  `docs/power-remediation.md`. Captura separada `kicad/power-researched`, ERC 0,
+  não integrada à PCB roteada. 2026-10-11; G1/G2/G3 pendentes.
+
+- D-027 — Inrush do bulk tratado pelo **fusível time-lag**, sem NTC nem relé de
+  bypass. A alternativa NTC+relé (bypass por G5LE-1) foi avaliada e **descartada**:
+  (a) um NTC dimensionado para o pico de partida (45–169 A, D-021) dissipa I²R
+  relevante em regime a 3,9 A contínuos e varia com a temperatura; (b) o relé de
+  bypass Ø17×23 mm não cabe no placement de estudo do contorno OEM sem rearranjo, e
+  exigiria mais um driver do sequenciador. A solução escolhida replica o que a placa
+  original já fazia (D-021: "a placa original operava o mesmo T1 com 2 × 6800 µF;
+  ordem de inrush comparável") — um **fusível time-lag T** absorve o I²t de partida
+  por definição, e o bulk de 12,4 mF + o secundário CT (sem comutação) limitam o
+  pico. F301: time-lag (T) 5×20 mm, ≥63 VDC; rating pela corrente de operação
+  (≈4,3–5,7 A rms por meia-bobina, D-021) com margem, **não** pelo inrush. O I²t
+  exato de fusão e a corrente de partida seguem a medir na bancada (BENCH-001) antes
+  de travar o ampere rating; a família (Littelfuse 218/892) e a lógica estão fixadas.
+  Objetivo: eliminar 2 componentes e a complexidade de controle sem perder proteção.
+  Risco: pico de partida real não medido — se a bancada mostrar I²t acima do fusível
+  escolhido, reavaliar NTC (aí sim, com o espaço já conhecido). 2026-10-11; pendente
+  de G1. Não libera fabricação nem energização.

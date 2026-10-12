@@ -6,7 +6,7 @@
       "ref": "J301",
       "lib_id": "Connector_Generic:Conn_01x03",
       "value": "T1_SECONDARY",
-      "mpn": "TBD: mate original T1 harness (3-way, red-black-red, ~3.96 mm pitch, 20 AWG UL1015); >=8 A/pin",
+      "mpn": "JST VH SVH-41T-P1.1 terminals (20-16 AWG, 10 A) on VHR-4N housing; pitch 3.96 mm (D-025). Housing/header MPN TBD",
       "footprint": "Connector_JST:JST_VH_B3P-VH_1x03_P3.96mm_Vertical",
       "nets": {
         "1": "T1_A",
@@ -24,8 +24,8 @@
     {
       "ref": "F301",
       "lib_id": "Device:Fuse",
-      "value": "T8A slow",
-      "mpn": "TBD: time-lag, I2t >= 60 A2s inrush margin, >=63 VDC",
+      "value": "T6.3A slow",
+      "mpn": "Time-lag (T) 5x20 mm; I2t melt above measured inrush, >=63 VDC; rating by operating RMS not inrush (D-027 precharge). Family Littelfuse 218/892",
       "footprint": "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open",
       "nets": {
         "1": "T1_CT",
@@ -42,8 +42,8 @@
     {
       "ref": "D301",
       "lib_id": "Device:D",
-      "value": "RECT >=400V",
-      "mpn": "TBD: VRRM>=400 V, IF(AV)>=6 A, IFSM>=200 A",
+      "value": "MUR3040WTG",
+      "mpn": "onsemi MUR3040WTG (MUR3020WT/D Rev.7): VRRM 400 V, IF(AV) 15 A @145 C, IFSM 200 A, TJ 175 C (D-025)",
       "footprint": "Diode_THT:D_P600_R-6_P12.70mm_Horizontal",
       "nets": {
         "1": "PVDD",
@@ -60,8 +60,8 @@
     {
       "ref": "D302",
       "lib_id": "Device:D",
-      "value": "RECT >=400V",
-      "mpn": "TBD: VRRM>=400 V, IF(AV)>=6 A, IFSM>=200 A",
+      "value": "MUR3040WTG",
+      "mpn": "onsemi MUR3040WTG (MUR3020WT/D Rev.7): VRRM 400 V, IF(AV) 15 A @145 C, IFSM 200 A, TJ 175 C (D-025)",
       "footprint": "Diode_THT:D_P600_R-6_P12.70mm_Horizontal",
       "nets": {
         "1": "PVDD",
@@ -78,8 +78,8 @@
     {
       "ref": "C301",
       "lib_id": "Device:C_Polarized",
-      "value": "4700u 63V",
-      "mpn": "TBD: >=63 V, 105 C, ripple >=3.5 A at 120 Hz each",
+      "value": "4700u 63V snap-in",
+      "mpn": "Rubycon 63USC4700MEFCSN30X30 (LCSC C1498587): 4700 uF/63 V, 3.49 A rms @120 Hz, D30xL30, 3000 h @85 C (D-025)",
       "footprint": "Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn",
       "nets": {
         "1": "PVDD",
@@ -96,8 +96,8 @@
     {
       "ref": "C302",
       "lib_id": "Device:C_Polarized",
-      "value": "4700u 63V",
-      "mpn": "TBD: >=63 V, 105 C, ripple >=3.5 A at 120 Hz each",
+      "value": "4700u 63V snap-in",
+      "mpn": "Rubycon 63USC4700MEFCSN30X30 (LCSC C1498587): 4700 uF/63 V, 3.49 A rms @120 Hz, D30xL30, 3000 h @85 C (D-025)",
       "footprint": "Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn",
       "nets": {
         "1": "PVDD",
@@ -132,8 +132,8 @@
     {
       "ref": "D303",
       "lib_id": "Device:D_TVS",
-      "value": "TVS VWM>=51V",
-      "mpn": "TBD: VWM>=51 V (above 49.8 V worst idle), Vc below 69 V abs max at rated pulse",
+      "value": "SMCJ51A",
+      "mpn": "Littelfuse SMCJ51A: VWM 51.0 V, Vc 82.4 V @IPP 18.2 A, PPP 1500 W, 10/1000 us. Energy absorber for fast transient; NOT primary OVP (D-026). Sustained OVP = TPS3700 window 50.97-52.24 V",
       "footprint": "Diode_SMD:D_SMC",
       "nets": {
         "1": "PVDD",
@@ -551,7 +551,8 @@
     "J302": "PVDD 40-50 V unregulated to core J1; core C14/C15 3000 uF add to C301/C302",
     "J303": "AUX_RAW 12 V to core J2; RAILS_OK open-drain wired-AND (buck PGOOD, PVDD UV, PVDD OV), low = fault, feeds D-020 rails_valid",
     "not_captured": [
-      "inrush limiting (NTC or bypass relay)"
+      "bulk snap-in footprint audit",
+      "inrush bench measurement (D-021 study only); inrush handled by time-lag fuse F301 per D-027"
     ],
     "new_physical_board": false
   },

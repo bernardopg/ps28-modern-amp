@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>/home/bitter/development/ps28-mech-wt/kicad/.system-stage-dkqsrb1o/system-candidate.kicad_sch</source>
-    <date>2026-10-10T19:12:01</date>
+    <source>/home/bitter/development/ps28-modern-amp-starter/kicad/.system-stage-urvsgyap/system-candidate.kicad_sch</source>
+    <date>2026-10-11T17:18:30</date>
     <tool>Eeschema 10.0.7</tool>
     <textvar name="PROJECT_STATUS">CORE DRAFT - UNROUTED - NOT FOR FABRICATION</textvar>
     <sheet number="1" name="/" tstamps="/">
@@ -1284,10 +1284,10 @@
       </units>
     </comp>
     <comp ref="C301">
-      <value>4700u 63V</value>
+      <value>4700u 63V snap-in</value>
       <footprint>Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn</footprint>
       <fields>
-        <field name="MPN">TBD: &gt;=63 V, 105 C, ripple &gt;=3.5 A at 120 Hz each</field>
+        <field name="MPN">Rubycon 63USC4700MEFCSN30X30 (LCSC C1498587): 4700 uF/63 V, 3.49 A rms @120 Hz, D30xL30, 3000 h @85 C (D-025)</field>
         <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
         <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
         <field name="Footprint">Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn</field>
@@ -1295,7 +1295,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
-      <property name="MPN" value="TBD: &gt;=63 V, 105 C, ripple &gt;=3.5 A at 120 Hz each"/>
+      <property name="MPN" value="Rubycon 63USC4700MEFCSN30X30 (LCSC C1498587): 4700 uF/63 V, 3.49 A rms @120 Hz, D30xL30, 3000 h @85 C (D-025)"/>
       <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
       <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
       <property name="Sheetname" value="system-candidate"/>
@@ -1314,10 +1314,10 @@
       </units>
     </comp>
     <comp ref="C302">
-      <value>4700u 63V</value>
+      <value>4700u 63V snap-in</value>
       <footprint>Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn</footprint>
       <fields>
-        <field name="MPN">TBD: &gt;=63 V, 105 C, ripple &gt;=3.5 A at 120 Hz each</field>
+        <field name="MPN">Rubycon 63USC4700MEFCSN30X30 (LCSC C1498587): 4700 uF/63 V, 3.49 A rms @120 Hz, D30xL30, 3000 h @85 C (D-025)</field>
         <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
         <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
         <field name="Footprint">Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn</field>
@@ -1325,7 +1325,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
-      <property name="MPN" value="TBD: &gt;=63 V, 105 C, ripple &gt;=3.5 A at 120 Hz each"/>
+      <property name="MPN" value="Rubycon 63USC4700MEFCSN30X30 (LCSC C1498587): 4700 uF/63 V, 3.49 A rms @120 Hz, D30xL30, 3000 h @85 C (D-025)"/>
       <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
       <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
       <property name="Sheetname" value="system-candidate"/>
@@ -2604,10 +2604,10 @@
       </units>
     </comp>
     <comp ref="D301">
-      <value>RECT &gt;=400V</value>
+      <value>MUR3040WTG</value>
       <footprint>Diode_THT:D_P600_R-6_P12.70mm_Horizontal</footprint>
       <fields>
-        <field name="MPN">TBD: VRRM&gt;=400 V, IF(AV)&gt;=6 A, IFSM&gt;=200 A</field>
+        <field name="MPN">onsemi MUR3040WTG (MUR3020WT/D Rev.7): VRRM 400 V, IF(AV) 15 A @145 C, IFSM 200 A, TJ 175 C (D-025)</field>
         <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
         <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
         <field name="Footprint">Diode_THT:D_P600_R-6_P12.70mm_Horizontal</field>
@@ -2615,7 +2615,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
-      <property name="MPN" value="TBD: VRRM&gt;=400 V, IF(AV)&gt;=6 A, IFSM&gt;=200 A"/>
+      <property name="MPN" value="onsemi MUR3040WTG (MUR3020WT/D Rev.7): VRRM 400 V, IF(AV) 15 A @145 C, IFSM 200 A, TJ 175 C (D-025)"/>
       <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
       <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
       <property name="Sheetname" value="system-candidate"/>
@@ -2634,10 +2634,10 @@
       </units>
     </comp>
     <comp ref="D302">
-      <value>RECT &gt;=400V</value>
+      <value>MUR3040WTG</value>
       <footprint>Diode_THT:D_P600_R-6_P12.70mm_Horizontal</footprint>
       <fields>
-        <field name="MPN">TBD: VRRM&gt;=400 V, IF(AV)&gt;=6 A, IFSM&gt;=200 A</field>
+        <field name="MPN">onsemi MUR3040WTG (MUR3020WT/D Rev.7): VRRM 400 V, IF(AV) 15 A @145 C, IFSM 200 A, TJ 175 C (D-025)</field>
         <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
         <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
         <field name="Footprint">Diode_THT:D_P600_R-6_P12.70mm_Horizontal</field>
@@ -2645,7 +2645,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
-      <property name="MPN" value="TBD: VRRM&gt;=400 V, IF(AV)&gt;=6 A, IFSM&gt;=200 A"/>
+      <property name="MPN" value="onsemi MUR3040WTG (MUR3020WT/D Rev.7): VRRM 400 V, IF(AV) 15 A @145 C, IFSM 200 A, TJ 175 C (D-025)"/>
       <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
       <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
       <property name="Sheetname" value="system-candidate"/>
@@ -2664,10 +2664,10 @@
       </units>
     </comp>
     <comp ref="D303">
-      <value>TVS VWM&gt;=51V</value>
+      <value>SMCJ51A</value>
       <footprint>Diode_SMD:D_SMC</footprint>
       <fields>
-        <field name="MPN">TBD: VWM&gt;=51 V (above 49.8 V worst idle), Vc below 69 V abs max at rated pulse</field>
+        <field name="MPN">Littelfuse SMCJ51A: VWM 51.0 V, Vc 82.4 V @IPP 18.2 A, PPP 1500 W, 10/1000 us. Energy absorber for fast transient; NOT primary OVP (D-026). Sustained OVP = TPS3700 window 50.97-52.24 V</field>
         <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
         <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
         <field name="Footprint">Diode_SMD:D_SMC</field>
@@ -2675,7 +2675,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="D_TVS" description="Bidirectional transient-voltage-suppression diode"/>
-      <property name="MPN" value="TBD: VWM&gt;=51 V (above 49.8 V worst idle), Vc below 69 V abs max at rated pulse"/>
+      <property name="MPN" value="Littelfuse SMCJ51A: VWM 51.0 V, Vc 82.4 V @IPP 18.2 A, PPP 1500 W, 10/1000 us. Energy absorber for fast transient; NOT primary OVP (D-026). Sustained OVP = TPS3700 window 50.97-52.24 V"/>
       <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
       <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
       <property name="Sheetname" value="system-candidate"/>
@@ -2812,10 +2812,10 @@
       </units>
     </comp>
     <comp ref="F301">
-      <value>T8A slow</value>
+      <value>T6.3A slow</value>
       <footprint>Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open</footprint>
       <fields>
-        <field name="MPN">TBD: time-lag, I2t &gt;= 60 A2s inrush margin, &gt;=63 VDC</field>
+        <field name="MPN">Time-lag (T) 5x20 mm; I2t melt above measured inrush, &gt;=63 VDC; rating by operating RMS not inrush (D-027 precharge). Family Littelfuse 218/892</field>
         <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
         <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
         <field name="Footprint">Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open</field>
@@ -2823,7 +2823,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="Fuse" description="Fuse"/>
-      <property name="MPN" value="TBD: time-lag, I2t &gt;= 60 A2s inrush margin, &gt;=63 VDC"/>
+      <property name="MPN" value="Time-lag (T) 5x20 mm; I2t melt above measured inrush, &gt;=63 VDC; rating by operating RMS not inrush (D-027 precharge). Family Littelfuse 218/892"/>
       <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
       <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
       <property name="Sheetname" value="system-candidate"/>
@@ -3046,7 +3046,7 @@
       <value>T1_SECONDARY</value>
       <footprint>Connector_JST:JST_VH_B3P-VH_1x03_P3.96mm_Vertical</footprint>
       <fields>
-        <field name="MPN">TBD: mate original T1 harness (3-way, red-black-red, ~3.96 mm pitch, 20 AWG UL1015); &gt;=8 A/pin</field>
+        <field name="MPN">JST VH SVH-41T-P1.1 terminals (20-16 AWG, 10 A) on VHR-4N housing; pitch 3.96 mm (D-025). Housing/header MPN TBD</field>
         <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
         <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
         <field name="Footprint">Connector_JST:JST_VH_B3P-VH_1x03_P3.96mm_Vertical</field>
@@ -3054,7 +3054,7 @@
         <field name="Description"/>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="MPN" value="TBD: mate original T1 harness (3-way, red-black-red, ~3.96 mm pitch, 20 AWG UL1015); &gt;=8 A/pin"/>
+      <property name="MPN" value="JST VH SVH-41T-P1.1 terminals (20-16 AWG, 10 A) on VHR-4N housing; pitch 3.96 mm (D-025). Housing/header MPN TBD"/>
       <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
       <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
       <property name="Sheetname" value="system-candidate"/>

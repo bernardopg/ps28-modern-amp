@@ -1711,7 +1711,7 @@
       "ref": "J301",
       "lib_id": "Connector_Generic:Conn_01x03",
       "value": "T1_SECONDARY",
-      "mpn": "TBD: mate original T1 harness (3-way, red-black-red, ~3.96 mm pitch, 20 AWG UL1015); >=8 A/pin",
+      "mpn": "JST VH SVH-41T-P1.1 terminals (20-16 AWG, 10 A) on VHR-4N housing; pitch 3.96 mm (D-025). Housing/header MPN TBD",
       "footprint": "Connector_JST:JST_VH_B3P-VH_1x03_P3.96mm_Vertical",
       "nets": {
         "1": "T1_A",
@@ -1731,8 +1731,8 @@
     {
       "ref": "F301",
       "lib_id": "Device:Fuse",
-      "value": "T8A slow",
-      "mpn": "TBD: time-lag, I2t >= 60 A2s inrush margin, >=63 VDC",
+      "value": "T6.3A slow",
+      "mpn": "Time-lag (T) 5x20 mm; I2t melt above measured inrush, >=63 VDC; rating by operating RMS not inrush (D-027 precharge). Family Littelfuse 218/892",
       "footprint": "Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open",
       "nets": {
         "1": "T1_CT",
@@ -1751,8 +1751,8 @@
     {
       "ref": "D301",
       "lib_id": "Device:D",
-      "value": "RECT >=400V",
-      "mpn": "TBD: VRRM>=400 V, IF(AV)>=6 A, IFSM>=200 A",
+      "value": "MUR3040WTG",
+      "mpn": "onsemi MUR3040WTG (MUR3020WT/D Rev.7): VRRM 400 V, IF(AV) 15 A @145 C, IFSM 200 A, TJ 175 C (D-025)",
       "footprint": "Diode_THT:D_P600_R-6_P12.70mm_Horizontal",
       "nets": {
         "1": "PVDD",
@@ -1771,8 +1771,8 @@
     {
       "ref": "D302",
       "lib_id": "Device:D",
-      "value": "RECT >=400V",
-      "mpn": "TBD: VRRM>=400 V, IF(AV)>=6 A, IFSM>=200 A",
+      "value": "MUR3040WTG",
+      "mpn": "onsemi MUR3040WTG (MUR3020WT/D Rev.7): VRRM 400 V, IF(AV) 15 A @145 C, IFSM 200 A, TJ 175 C (D-025)",
       "footprint": "Diode_THT:D_P600_R-6_P12.70mm_Horizontal",
       "nets": {
         "1": "PVDD",
@@ -1791,8 +1791,8 @@
     {
       "ref": "C301",
       "lib_id": "Device:C_Polarized",
-      "value": "4700u 63V",
-      "mpn": "TBD: >=63 V, 105 C, ripple >=3.5 A at 120 Hz each",
+      "value": "4700u 63V snap-in",
+      "mpn": "Rubycon 63USC4700MEFCSN30X30 (LCSC C1498587): 4700 uF/63 V, 3.49 A rms @120 Hz, D30xL30, 3000 h @85 C (D-025)",
       "footprint": "Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn",
       "nets": {
         "1": "PVDD",
@@ -1811,8 +1811,8 @@
     {
       "ref": "C302",
       "lib_id": "Device:C_Polarized",
-      "value": "4700u 63V",
-      "mpn": "TBD: >=63 V, 105 C, ripple >=3.5 A at 120 Hz each",
+      "value": "4700u 63V snap-in",
+      "mpn": "Rubycon 63USC4700MEFCSN30X30 (LCSC C1498587): 4700 uF/63 V, 3.49 A rms @120 Hz, D30xL30, 3000 h @85 C (D-025)",
       "footprint": "Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn",
       "nets": {
         "1": "PVDD",
@@ -1851,8 +1851,8 @@
     {
       "ref": "D303",
       "lib_id": "Device:D_TVS",
-      "value": "TVS VWM>=51V",
-      "mpn": "TBD: VWM>=51 V (above 49.8 V worst idle), Vc below 69 V abs max at rated pulse",
+      "value": "SMCJ51A",
+      "mpn": "Littelfuse SMCJ51A: VWM 51.0 V, Vc 82.4 V @IPP 18.2 A, PPP 1500 W, 10/1000 us. Energy absorber for fast transient; NOT primary OVP (D-026). Sustained OVP = TPS3700 window 50.97-52.24 V",
       "footprint": "Diode_SMD:D_SMC",
       "nets": {
         "1": "PVDD",
@@ -4383,10 +4383,10 @@
   "source_sha256": {
     "kicad/core-oem-refined/ps28-modern.kicad_sch": "134bdf8fa93e3a66d99a5d556bd45cb9c5289ed5c3b126273db16ef3ad38a2ce",
     "kicad/analog-protected/analog-protected.kicad_sch": "f46adefe0383358837e4eb49a41fe21b8017f39b549f789c10675ca4ac277303",
-    "scripts/integrate_candidate.py": "d6181e00bd65cc71e81cb6509bca83ce87983ebc045493ffec3727da5ddfce8a",
-    "kicad/power-d021/power-d021.kicad_sch": "f51a7dd3d74d0c360b514180a4d9918f63d2e364aee3d35d2c0c834e4029aea0",
+    "scripts/integrate_candidate.py": "6be0acf8608793a8fb2f7cf4699efe581923cc05876d66f21f6e149de19a4191",
+    "kicad/power-d021/power-d021.kicad_sch": "1e8a74ad3fd2437e0bc25d62cebc6b4368894606a436dd5f033eea92fe5fc675",
     "kicad/seq-d020/seq-d020.kicad_sch": "0d6a219fd97f4594ea756f839a9c2f616b1174abb3ba09accabca21839d0b884",
-    "scripts/create_power_d021.py": "a92f643237b2d08071228584ba9d4406920f4206935f18f66ba84db1a71d03b9",
+    "scripts/create_power_d021.py": "56a220a5cefd51a1fdf2090dbf631c5b264c7112b7eeebbe929932eddd2e27b2",
     "scripts/create_seq_d020.py": "683a80d4acd83d68d237ab158e8d85e75f21aa51c66dc17d71a0b56d595e5760"
   },
   "status": "CORE + D018 + D021 POWER + D020 SEQ SUBSET IMPORT BANKS; SIGNAL SAFETY BRIDGE OPEN",

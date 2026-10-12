@@ -5,7 +5,7 @@ status: Blocked
 milestone: M1
 sprint: S02
 depends_on: SYS-001
-updated: 2026-10-10
+updated: 2026-10-12
 ---
 
 # MECH-001 — Medir plate e modelar envelope
@@ -20,6 +20,13 @@ Medir plate e modelar envelope, atendendo docs/requirements.md e gates docs/safe
 - [ ] CAD/desenho 1:1 e espaço dissipador confirmados
 
 ## Evidência
+2026-10-12: proprietário informou capacitor de 45 mm + pouco mais de 30 mm
+até a moldura plástica. Cerca de 75 mm locais; envelope de 52 mm deixa ~23 mm.
+Altura nessa região original resolvida para estudo, sem extrapolar à placa toda
+ou liberar fit/térmica. Dez fotos adicionais mostram conector T1 de três vias
+vermelho–preto–vermelho e trava; fabricante/MPN ainda não confirmados. Registro:
+`mechanical/owner-clearance-20261012.json`, `mechanical/oem-harness-sealing.md`.
+Não repetir pedido dessas fotos/folga; critérios restantes continuam abertos.
 
 2026-10-10: medidas do proprietário de backplate, dissipador externo (posição, 8 furos)
 e perfil U (65 × 33 × 30, furos a 35 mm) em `mechanical/oem-heatsink-measurements.md`;

@@ -54,6 +54,10 @@ fetch-reference:
 simulate-d019:
 	python3 scripts/simulate_d019.py
 
+.PHONY: pcb-readiness
+pcb-readiness:
+	python3 scripts/check_pcb_readiness.py
+
 route-system:
 	python3 scripts/make_body_models.py
 	python3 scripts/route_system_candidate.py

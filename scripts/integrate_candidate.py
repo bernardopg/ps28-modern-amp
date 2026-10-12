@@ -724,6 +724,11 @@ def generate(out):
             (stage / table).write_text(render(tree) + "\n")
         project = json.loads((SOURCE / "ps28-modern.kicad_pro").read_text())
         project["meta"]["filename"] = PROJECT + ".kicad_pro"
+        # top_level_sheets is copied from the source project; retarget it to the
+        # candidate schematic or the generated .kicad_pro points at ps28-modern.
+        for sheet in project.get("schematic", {}).get("top_level_sheets", []):
+            sheet["filename"] = PROJECT + ".kicad_sch"
+            sheet["name"] = PROJECT
         (stage / (PROJECT + ".kicad_pro")).write_text(
             json.dumps(project, indent=2) + "\n"
         )

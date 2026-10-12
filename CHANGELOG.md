@@ -4,6 +4,67 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 
 ## [Unreleased]
 
+### Medidas OEM — 2026-10-12
+- Registrada altura de capacitor 45 mm + folga superior pouco maior que 30 mm,
+  informada pelo proprietário: envelope 52 mm deixa ~23 mm na região original.
+  Resolve altura local do estudo, não fit global/térmica.
+- Inventariadas dez fotos locais por hash; conector T1 de três vias e trava,
+  hipótese JST VH sem atribuir fabricante/MPN pela aparência. Originais fora do Git.
+
+### Pesquisa e remediação D-028 (proposta)
+- Captura isolada `kicad/power-researched`: candidatos RHRP1560 e LGU2A472MELC
+  por fonte primária, footprint de estudo do bulk; ERC 0, não integra PCB.
+- Reanálise de 54 transientes D-021: corrente CT pela soma dos diodos, máximo
+  8,014 A RMS e 63,640 A²s/100ms. Contraprova reprova OVLO interno LM5069 para
+  janela 49,84–53,5 V. Scripts e sete testes novos; 118 testes totais OK.
+- Fontes oficiais e limites em `docs/power-remediation.md`; fit/OVP/SOA/ratings
+  ainda bloqueiam placement e fabricação. Candidata roteada preservada.
+
+### Captura de revisão de potência
+- Criada `kicad/power-package-review/` e gerador sem sobrescrita: remove seleções
+  falsas/incompatíveis mantendo nets D-021. ERC 0; 111 testes de infraestrutura.
+- Fonte primária onsemi MUR3020WT/D Rev.7 p.2 reprova MUR3040WTG: IFSM é 150 A,
+  não 200 A. Seleção D-025 bloqueada independentemente do footprint.
+- PCB roteada preservada; captura nova não possui placement, não libera produção.
+
+### Revisão de prontidão da candidata
+- Adicionado `make pcb-readiness`: auditoria parcial bloqueante de inventário e
+  DRC nativo com paridade/refill, sem salvar a PCB; quatro testes de regressão.
+- Corrigida interpretação do ratsnest: há 18 itens desconectados, inclusive
+  potência; revisão rastreável em `docs/pcb-readiness-review.md` registra também
+  incompatibilidades MPN/footprint, inrush e OVP não qualificados. Não libera fab.
+
+### Added
+- PWR-001 fechado por fonte primária com decisões formais **D-025/D-026/D-027**:
+  diodos **MUR3040WTG** (VRRM 400 V, IF(AV) 15 A, IFSM 200 A; STTH8L06 rejeitado por
+  IFSM 120 A); bulk **Rubycon 63USC4700MEFCSN30X30** 2× (4700 µF/63 V, 3,49 A rms
+  @120 Hz, LCSC C1498587 — única família que entrega 4700 µF/63 V com ripple ≈3,5 A);
+  conector **JST VH SVH-41T-P1.1** (20 AWG). Datasheets arquivados em `reference/parts/`
+  com SHA256; relatório `tests/reports/power-pwr001-parts.json`.
+- D-026: proteção de sobretensão de PVDD **por arquitetura** — o requisito "TVS Vc<69 V"
+  é inviável com TVS passivo de 51 V (SMCJ51A grampeia 82,4 V > 69 V abs max do TPA3255,
+  SLASEA8A p.5 §7.1). Proteção sustentada pelo OV do TPS3700 (50,97–52,24 V); SMCJ51A
+  apenas absorve transiente rápido.
+- D-027: inrush do bulk tratado pelo **fusível time-lag** (rating por corrente de
+  operação), sem NTC/relé de bypass — replicando a abordagem da placa original.
+  I²t exato/ampere a confirmar em BENCH-001.
+
+### Changed
+- `power-d021` e `system-candidate` regenerados com os MPNs D-025 (D301/D302=MUR3040WTG,
+  C301/C302=Rubycon 63USC, D303=SMCJ51A, F301=T time-lag, J301=JST VH). ERC power-d021
+  0 erro (2 warnings de interface). Conectividade inalterada; NTC/relé de pré-carga
+  (N301/K301) **não** implementados (D-027).
+- PCB-002: autoroteamento de estudo **retomado da sessão interrompida** — import do
+  `system.ses` (2.348 trilhas/208 vias) + 2ª passada Freerouting `--resume`
+  (2.430 trilhas/212 vias). 6 pares abertos em 4 nets (AUDIO_EN, C_START, caudas de
+  FAULT, 3 pads de VMID), bloqueados pelo fanout do TPA3255 + keepout do perfil U;
+  fechamento fica para a revisão manual com pours. DRC kicad-cli: 0 erros elétricos
+  (clearance/curto/furo), 105 avisos de silkscreen, 4 stubs dangling. Tentativa de
+  rota manual de FAULT via PNS violou keepout/curto e foi revertida por rip-up.
+- `integrate_candidate.py`: corrigido `.kicad_pro` gerado que herdava
+  `top_level_sheets` da fonte (apontava `ps28-modern.kicad_sch`).
+- Renders 3D da galeria regenerados com a candidata roteada (`make render-3d`).
+
 ### Removed
 - `kicad/jlcpcb/`: Gerber/BOM/CPL obsoletos do draft A (`A-core-draft`, sem
   roteamento, sem LCSC), removidos para evitar pedido acidental. Release futuro

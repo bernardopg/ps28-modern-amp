@@ -2,6 +2,25 @@
 
 Dez fotos fora do Git. Leitura visual; passos sem paquímetro ficam como *provável*.
 
+## Complemento do proprietário — 2026-10-12
+
+- **Medida informada:** capacitor existente com 45 mm de altura; pouco mais de
+  30 mm entre seu topo e a moldura plástica interna.
+- **Cálculo aproximado:** cerca de 75 mm disponíveis na região original;
+  candidato de envelope 52 mm deixa aproximadamente 23 mm de sobra. A dúvida
+  de altura nessa região está resolvida para o estudo, mantendo plano/posição
+  e orientação da PCB. Não extrapolar a folga para toda a placa nem considerar
+  tolerância certificada. Diâmetro, deslocamentos, cabos e térmica ainda são
+  verificações distintas; espaço livre não demonstra fluxo de ar.
+- **Fotos novas:** dez imagens `WhatsApp Image 2026-10-12 at 16.44.42*.jpeg`,
+  originais fora do Git; inventário/hash em `owner-clearance-20261012.json`.
+  Vistas frontal/lateral e com fita mostram três vias, fios vermelho–preto–vermelho,
+  preto central e trava. Aparência compatível com hipótese JST VH, sem marcação
+  legível para confirmar fabricante/MPN. Perspectiva/fita não certificam passo
+  exato. Contagem exclui VHR-4N; não atribuir numeração de cavidades por cor.
+- Não é necessário repetir o pedido de folga superior ou das mesmas fotos.
+  Comparação com desenho oficial do header continua trabalho de engenharia.
+
 ## Conectores da placa principal
 
 | Chicote | Conector | Lado da placa | Situação |
