@@ -4,6 +4,14 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 
 ## [Unreleased]
 
+### PCB-004 — test points, LEDs e fan — 2026-10-13
+- 21 test points com nome no silk, 6 LEDs de status (PVDD, RAILS_OK, RUN, AUDIO,
+  FAULT, CLIP_OTW) e saída de fan 12 V chaveada com jumper de modo.
+- Tabela de medidas e LEDs em `docs/bringup.md`.
+- Re-rota: 2.973 trilhas, 404 vias; ERC 0, paridade 0; 59 conexões abertas e 3
+  starved_thermal para fechamento manual; 3 trechos PVDD/T1_A com isolamento
+  0,118 mm removidos. PCB-001 e PCB-004 concluídas.
+
 ### Front-end, placement final, bloco térmico e cobre (D-032/D-033) — 2026-10-12
 - J5: modelo 3D JST B2P-VH feito no Blender (`scripts/blender_jst_vh_b2p.py`).
 - D-032: front-end = placas originais de preamp/limiter; J7 JST XH 7 vias,

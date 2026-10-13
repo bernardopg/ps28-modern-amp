@@ -17,7 +17,7 @@ class SystemCandidateTests(unittest.TestCase):
         d = json.loads(
             (ROOT / "kicad/system-candidate/system-manifest.json").read_text()
         )
-        self.assertEqual(len(d["parts"]), 217)
+        self.assertEqual(len(d["parts"]), 263)
         self.assertEqual(d["unassigned_footprints"], [])
         self.assertTrue(d["signal_bridge_connected"])  # only via K501, checked below
         self.assertTrue(d["isolation_mute_supervisor_implemented"])
@@ -73,7 +73,7 @@ class SystemCandidateTests(unittest.TestCase):
         kx0, ky0, kx1, ky1 = m["profile_keepout"]
         pcb = (ROOT / "kicad/system-candidate/system-candidate.kicad_pcb").read_text()
         blocks = re.findall(r'\(footprint "[^"]+"\s*\(layer "([FB])\.Cu"\)(?:.|\n)*?\(at ([-\d.]+) ([-\d.]+)', pcb)
-        self.assertEqual(len(blocks), 223)  # + 4 OEM holes + 2 block clamps
+        self.assertEqual(len(blocks), 269)  # + 4 OEM holes + 2 block clamps
         for side, x, y in blocks:
             x, y = float(x), float(y)
             self.assertTrue(x0 < x < x1 and y0 < y < y1, (x, y))
@@ -97,6 +97,13 @@ class SystemCandidateTests(unittest.TestCase):
             self.assertIn(f'"{plane}"', pcb)
         self.assertGreater(pcb.count("(segment"), 500)
         self.assertIn("thermal_block.wrl", pcb)
+        # PCB-004: probes never on SPK+/-, status LEDs drive no TPA pin directly.
+        probes = {p["nets"]["1"] for r, p in refs.items() if r.startswith("TP1")}
+        self.assertFalse({"SPK_P", "SPK_N"} & probes)
+        self.assertTrue({"PVDD", "GND", "FAULT", "CLIP_OTW", "VMID"} <= probes)
+        for r in ("Q703", "Q705"):
+            self.assertEqual(refs[r]["nets"]["1"], refs["U1"]["nets"]["19" if r == "Q703" else "21"])
+        self.assertEqual(refs["J8"]["nets"], {"1": "AUX_RAW", "2": "FAN_N"})
 
     def test_native_capture_and_actual_pad_nets_are_equal(self):
         folder = ROOT / "kicad/system-candidate"
@@ -127,7 +134,7 @@ class SystemCandidateTests(unittest.TestCase):
                 ].strip('"')
                 self.assertEqual(net, nets[ref, number], ref + "." + number)
                 checked += 1
-        self.assertEqual(checked, 614)
+        self.assertEqual(checked, 693)
 
     def test_multiunit_paths_and_no_replace_publication(self):
         folder = ROOT / "kicad/system-candidate"

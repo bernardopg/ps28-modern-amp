@@ -17,6 +17,7 @@ from pathlib import Path
 from create_analog_capture import build, child
 from create_core_draft import parse, q, render, uid, walk
 from create_pre_interface import analog_changes, parts as pre_parts, symbols as pre_symbols
+from create_debug_io import parts as debug_parts, symbols as debug_symbols
 from create_iso_d019 import dgk_footprint, local_symbols as iso_symbols, parts as iso_parts
 from create_power_d021 import parts as power_parts, tps3700_symbol, write_local_library
 from create_seq_d020 import lp2985_symbol, parts as seq_parts
@@ -52,7 +53,7 @@ def system_parts():
     """D-021 power and D-020 sequencing captures, minus logical interfaces."""
     out = []
     for group, source in (("power", power_parts()), ("seq", seq_parts()), ("iso", iso_parts()),
-                          ("pre", pre_parts())):
+                          ("pre", pre_parts()), ("dbg", debug_parts())):
         for p in source:
             if p["ref"] in LOGICAL:
                 continue
@@ -71,6 +72,7 @@ def bank_position(p, index):
         "seq": (420, 25, 22, 18, 8),
         "iso": (420, 185, 22, 20, 8),
         "pre": (420, 300, 22, 20, 8),
+        "dbg": (600, 25, 18, 16, 8),
     }[group]
     return x0 + (index % cols) * dx, y0 + (index // cols) * dy
 
@@ -137,6 +139,7 @@ def block(parts, namespace, warning):
             "PS28_SEQ:LP2985-33DBV": lp2985_symbol(),
             **{x[1].strip('"'): x for x in iso_symbols()},
             **pre_symbols(),
+            **debug_symbols(),
         },
     )
     return parse(sch)
@@ -223,6 +226,7 @@ def schematic(parts, extra=()):
         ("seq", 558.8, 330.2, "D-020/D-024 DISCRETE SEQUENCER"),
         ("iso", 990.6, 0, "D-024 INPUT ISOLATION RELAY / MUTE / DC WINDOWS"),
         ("pre", 990.6, 381, "D-032 OEM PREAMP/LIMITER INTERFACE: P101, +/-15 V, LIMIT FROM CLIP_OTW"),
+        ("dbg", 1270, 0, "PCB-004 TEST POINTS, STATUS LEDS, FAN OUTPUT (NO LOAD ON TPA/AUDIO NODES)"),
     ):
         members = [p for p in extra if p["group"] == group]
         if not members:
@@ -546,6 +550,12 @@ def board(staged, parts, inventory):
     for fp in pcb.GetFootprints():
         if fp.GetReference().startswith("TP"):
             fp.SetExcludedFromBOM(False)  # follow the symbol (stock TestPoint footprint is BOM-excluded)
+        if fp.GetReference().startswith("TP1") or fp.GetFPID().GetLibItemName().wx_str().startswith("LED_"):
+            # PCB-004: probe/LED name readable on the board (value = net label).
+            fp.Value().SetLayer(pcbnew.B_SilkS if fp.IsFlipped() else pcbnew.F_SilkS)
+            fp.Value().SetVisible(True)
+            fp.Value().SetTextSize(pcbnew.VECTOR2I(pcbnew.FromMM(0.8), pcbnew.FromMM(0.8)))
+            fp.Value().SetTextThickness(pcbnew.FromMM(0.12))
         # Dense board: reference designators go to the assembly (Fab) layer, not silkscreen.
         fp.Reference().SetLayer(pcbnew.B_Fab if fp.IsFlipped() else pcbnew.F_Fab)
     for fp in pcb.GetFootprints():
@@ -713,7 +723,7 @@ def generate(out):
         shutil.copytree(SOURCE / "libraries", stage / "libraries")
         for nickname, symbols in (("PS28_POWER", [tps3700_symbol()]), ("PS28_SEQ", [lp2985_symbol()]),
                                   ("PS28_ISO", iso_symbols()),
-                                  ("PS28_PRE", list(pre_symbols().values()))):
+                                  ("PS28_PRE", list(pre_symbols().values()) + list(debug_symbols().values()))):
             libs = []
             for symbol in symbols:
                 library = list(symbol)

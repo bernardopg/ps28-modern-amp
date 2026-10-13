@@ -39,6 +39,8 @@ FIXED = {
     "C301": (140.5, 36.5, 0), "C302": (140.5, 68.5, 0),
     "D301": (165.0, 30.0, 90), "D302": (165.0, 61.0, 90), "L301": (166.0, 77.0, 0),
     "F301": (137.0, 93.0, 0), "J301": (158.0, 95.5, 0),
+    # PCB-004 fan header and mode jumper by the T1 end (fan would sit near the profile).
+    "J8": (170.0, 22.5, 90), "JP701": (148.0, 24.0, 90),
 }
 # D-031 thermal block: aluminium bar on the U1 PowerPAD, screwed into the two tapped M3
 # TO-3P holes of the profile leg (x 70.7 / 110.3), relieved 3 mm above the board except
@@ -48,7 +50,8 @@ LOW_UNDER_BLOCK = ("R", "C", "D", "U")
 # Packing targets per group: (top x, top y), preferred side.
 TARGETS = {None: ((90.5, 55.0), "top"), "power": ((150.0, 55.0), "top"),
            "seq": ((60.0, 45.0), "bottom"), "iso": ((90.0, 62.0), "bottom"),
-           "analog": ((40.0, 50.0), "bottom"), "pre": ((60.0, 30.0), "bottom")}
+           "analog": ((40.0, 50.0), "bottom"), "pre": ((60.0, 30.0), "bottom"),
+           "dbg": ((100.0, 75.0), "top")}  # probes/LEDs on the component side when room
 # LM5164 buck loop stays under its inductor L301 (switch node/input caps short).
 BUCK = ((160.0, 77.0), "bottom")
 

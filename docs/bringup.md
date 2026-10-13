@@ -21,3 +21,27 @@ termopar/termômetro, ESD e extintor apropriado. Inventário físico ainda desco
 
 Parar por corrente/temperatura/DC acima dos limites, FAULT, cheiro, oscilação ou
 ringing anormal. Desligar, medir descarga e diagnosticar; não continuar por tentativa.
+
+## Pontos de medida e LEDs da placa (PCB-004)
+
+Ponta preta do multímetro sempre em um TP **GND** (há um em cada ponta da placa).
+Nunca usar SPK+/SPK− como referência: são saídas ativas.
+
+| TP | Esperado (aparelho ligado, em repouso) |
+|---|---|
+| PVDD | 42–50 V DC |
+| 12V | 12 V | 
+| +15V / −15V | +15 V / −15 V (±1 V) |
+| A12V | ~11 V | 
+| VMID | metade de A12V |
+| 3V3 | 3,3 V |
+| GVDD | ~11 V (gerado pelo TPA) |
+| RST, ROK | 3,3 V quando operando |
+| FLT, OTW | alto = normal; baixo = falha / clip-térmico |
+| DCOK | alto quando sem DC na saída |
+| IN, D+, D−, INA, INB, CT | sinais: medir com osciloscópio, referência GND |
+
+LEDs: **PVDD** aceso = bulk carregado (não mexer na placa enquanto aceso);
+**RAILS_OK** trilhos na janela; **RUN** TPA liberado; **AUDIO** relé de entrada
+fechado; **FAULT** e **CLIP_OTW** acesos = falha / clip ou aviso térmico.
+Fan (J8): jumper JP701 em 1-2 sempre ligada; 2-3 liga com CLIP_OTW.

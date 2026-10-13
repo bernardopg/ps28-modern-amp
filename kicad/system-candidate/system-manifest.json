@@ -1,8 +1,8 @@
 {
   "staged_validation": {
-    "native_pad_net_matches": 612,
-    "copper_pads_checked": 614,
-    "footprints": 217,
+    "native_pad_net_matches": 691,
+    "copper_pads_checked": 693,
+    "footprints": 263,
     "signal_bridge_open": false,
     "signal_bridge_via_relay_only": true
   },
@@ -4644,12 +4644,919 @@
       ],
       "group": "pre",
       "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP110",
+      "lib_id": "Connector:TestPoint",
+      "value": "GND",
+      "mpn": "PCB test pad, no part",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "GND"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          45.72
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP111",
+      "lib_id": "Connector:TestPoint",
+      "value": "PVDD",
+      "mpn": "PCB test pad, no part",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "PVDD"
+      },
+      "units": [
+        [
+          1,
+          76.2,
+          45.72
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP112",
+      "lib_id": "Connector:TestPoint",
+      "value": "12V",
+      "mpn": "PCB test pad, no part",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "AUX_RAW"
+      },
+      "units": [
+        [
+          1,
+          114.30000000000001,
+          45.72
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP113",
+      "lib_id": "Connector:TestPoint",
+      "value": "+15V",
+      "mpn": "PCB test pad, no part",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "P15V"
+      },
+      "units": [
+        [
+          1,
+          152.4,
+          45.72
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP114",
+      "lib_id": "Connector:TestPoint",
+      "value": "-15V",
+      "mpn": "PCB test pad, no part",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "N15V"
+      },
+      "units": [
+        [
+          1,
+          190.5,
+          45.72
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP115",
+      "lib_id": "Connector:TestPoint",
+      "value": "A12V",
+      "mpn": "PCB test pad, no part",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "ANALOG_12V"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          45.72
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP116",
+      "lib_id": "Connector:TestPoint",
+      "value": "VMID",
+      "mpn": "PCB test pad, no part",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "VMID"
+      },
+      "units": [
+        [
+          1,
+          266.70000000000005,
+          45.72
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP117",
+      "lib_id": "Connector:TestPoint",
+      "value": "3V3",
+      "mpn": "PCB test pad, no part",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "SEQ_3V3"
+      },
+      "units": [
+        [
+          1,
+          304.8,
+          45.72
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP118",
+      "lib_id": "Connector:TestPoint",
+      "value": "GVDD",
+      "mpn": "PCB test pad, no part",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "GVDD_AB"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          83.82
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP119",
+      "lib_id": "Connector:TestPoint",
+      "value": "RST",
+      "mpn": "PCB test pad, no part",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "RESET"
+      },
+      "units": [
+        [
+          1,
+          76.2,
+          83.82
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP120",
+      "lib_id": "Connector:TestPoint",
+      "value": "FLT",
+      "mpn": "PCB test pad, no part",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "FAULT"
+      },
+      "units": [
+        [
+          1,
+          114.30000000000001,
+          83.82
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP121",
+      "lib_id": "Connector:TestPoint",
+      "value": "OTW",
+      "mpn": "PCB test pad, no part",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "CLIP_OTW"
+      },
+      "units": [
+        [
+          1,
+          152.4,
+          83.82
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP122",
+      "lib_id": "Connector:TestPoint",
+      "value": "ROK",
+      "mpn": "PCB test pad, no part",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "RAILS_OK"
+      },
+      "units": [
+        [
+          1,
+          190.5,
+          83.82
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP123",
+      "lib_id": "Connector:TestPoint",
+      "value": "DCOK",
+      "mpn": "PCB test pad, no part",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "DC_OK"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          83.82
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP124",
+      "lib_id": "Connector:TestPoint",
+      "value": "IN",
+      "mpn": "PCB test pad, no part",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "PRE_IN"
+      },
+      "units": [
+        [
+          1,
+          266.70000000000005,
+          83.82
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP125",
+      "lib_id": "Connector:TestPoint",
+      "value": "D+",
+      "mpn": "PCB test pad, no part",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "DIFF_P"
+      },
+      "units": [
+        [
+          1,
+          304.8,
+          83.82
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP126",
+      "lib_id": "Connector:TestPoint",
+      "value": "D-",
+      "mpn": "PCB test pad, no part",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "DIFF_N"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          121.92
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP127",
+      "lib_id": "Connector:TestPoint",
+      "value": "INA",
+      "mpn": "PCB test pad, no part",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "INPUT_A_AC"
+      },
+      "units": [
+        [
+          1,
+          76.2,
+          121.92
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP128",
+      "lib_id": "Connector:TestPoint",
+      "value": "INB",
+      "mpn": "PCB test pad, no part",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "INPUT_B_AC"
+      },
+      "units": [
+        [
+          1,
+          114.30000000000001,
+          121.92
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP129",
+      "lib_id": "Connector:TestPoint",
+      "value": "CT",
+      "mpn": "PCB test pad, no part",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "T1_CT"
+      },
+      "units": [
+        [
+          1,
+          152.4,
+          121.92
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP130",
+      "lib_id": "Connector:TestPoint",
+      "value": "GND",
+      "mpn": "PCB test pad, no part",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "GND"
+      },
+      "units": [
+        [
+          1,
+          190.5,
+          121.92
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "D701",
+      "lib_id": "Device:LED",
+      "value": "PVDD",
+      "mpn": "Green 0805 LED (e.g. Lite-On LTST-C171GKT)",
+      "footprint": "LED_SMD:LED_0805_2012Metric",
+      "nets": {
+        "1": "GND",
+        "2": "LED701_A"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          121.92
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R701",
+      "lib_id": "Device:R",
+      "value": "47k",
+      "mpn": "SMD:R 1 %",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "nets": {
+        "1": "PVDD",
+        "2": "LED701_A"
+      },
+      "units": [
+        [
+          1,
+          266.70000000000005,
+          121.92
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "D702",
+      "lib_id": "Device:LED",
+      "value": "RAILS_OK",
+      "mpn": "Green 0805 LED (e.g. Lite-On LTST-C171GKT)",
+      "footprint": "LED_SMD:LED_0805_2012Metric",
+      "nets": {
+        "1": "LED_ROK_K",
+        "2": "LED702_A"
+      },
+      "units": [
+        [
+          1,
+          304.8,
+          121.92
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R702",
+      "lib_id": "Device:R",
+      "value": "2.2k",
+      "mpn": "SMD:R 1 %",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "LED702_A"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          160.02
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "Q701",
+      "lib_id": "PS28_PRE:BSS138",
+      "value": "BSS138",
+      "mpn": "onsemi BSS138",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "nets": {
+        "1": "RAILS_OK",
+        "2": "GND",
+        "3": "LED_ROK_K"
+      },
+      "units": [
+        [
+          1,
+          76.2,
+          160.02
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "D703",
+      "lib_id": "Device:LED",
+      "value": "RUN",
+      "mpn": "Green 0805 LED (e.g. Lite-On LTST-C171GKT)",
+      "footprint": "LED_SMD:LED_0805_2012Metric",
+      "nets": {
+        "1": "LED_RUN_K",
+        "2": "LED703_A"
+      },
+      "units": [
+        [
+          1,
+          114.30000000000001,
+          160.02
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R703",
+      "lib_id": "Device:R",
+      "value": "2.2k",
+      "mpn": "SMD:R 1 %",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "LED703_A"
+      },
+      "units": [
+        [
+          1,
+          152.4,
+          160.02
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "Q702",
+      "lib_id": "PS28_PRE:BSS138",
+      "value": "BSS138",
+      "mpn": "onsemi BSS138",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "nets": {
+        "1": "RESET",
+        "2": "GND",
+        "3": "LED_RUN_K"
+      },
+      "units": [
+        [
+          1,
+          190.5,
+          160.02
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "D704",
+      "lib_id": "Device:LED",
+      "value": "AUDIO",
+      "mpn": "Green 0805 LED (e.g. Lite-On LTST-C171GKT)",
+      "footprint": "LED_SMD:LED_0805_2012Metric",
+      "nets": {
+        "1": "RELAY_DRV",
+        "2": "LED704_A"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          160.02
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R704",
+      "lib_id": "Device:R",
+      "value": "2.2k",
+      "mpn": "SMD:R 1 %",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "LED704_A"
+      },
+      "units": [
+        [
+          1,
+          266.70000000000005,
+          160.02
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "Q703",
+      "lib_id": "PS28_PRE:BSS138",
+      "value": "BSS138",
+      "mpn": "onsemi BSS138",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "nets": {
+        "1": "FAULT",
+        "2": "GND",
+        "3": "FAULT_N"
+      },
+      "units": [
+        [
+          1,
+          304.8,
+          160.02
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R715",
+      "lib_id": "Device:R",
+      "value": "10k",
+      "mpn": "0805 1 %",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "FAULT_N"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          198.12
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "D705",
+      "lib_id": "Device:LED",
+      "value": "FAULT",
+      "mpn": "Green 0805 LED (e.g. Lite-On LTST-C171GKT)",
+      "footprint": "LED_SMD:LED_0805_2012Metric",
+      "nets": {
+        "1": "LED705_K",
+        "2": "LED705_A"
+      },
+      "units": [
+        [
+          1,
+          76.2,
+          198.12
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R705",
+      "lib_id": "Device:R",
+      "value": "2.2k",
+      "mpn": "SMD:R 1 %",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "LED705_A"
+      },
+      "units": [
+        [
+          1,
+          114.30000000000001,
+          198.12
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "Q704",
+      "lib_id": "PS28_PRE:BSS138",
+      "value": "BSS138",
+      "mpn": "onsemi BSS138",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "nets": {
+        "1": "FAULT_N",
+        "2": "GND",
+        "3": "LED705_K"
+      },
+      "units": [
+        [
+          1,
+          152.4,
+          198.12
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "Q705",
+      "lib_id": "PS28_PRE:BSS138",
+      "value": "BSS138",
+      "mpn": "onsemi BSS138",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "nets": {
+        "1": "CLIP_OTW",
+        "2": "GND",
+        "3": "CLIP_N"
+      },
+      "units": [
+        [
+          1,
+          190.5,
+          198.12
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R716",
+      "lib_id": "Device:R",
+      "value": "10k",
+      "mpn": "0805 1 %",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "CLIP_N"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          198.12
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "D706",
+      "lib_id": "Device:LED",
+      "value": "CLIP_OTW",
+      "mpn": "Green 0805 LED (e.g. Lite-On LTST-C171GKT)",
+      "footprint": "LED_SMD:LED_0805_2012Metric",
+      "nets": {
+        "1": "LED706_K",
+        "2": "LED706_A"
+      },
+      "units": [
+        [
+          1,
+          266.70000000000005,
+          198.12
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R706",
+      "lib_id": "Device:R",
+      "value": "2.2k",
+      "mpn": "SMD:R 1 %",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "LED706_A"
+      },
+      "units": [
+        [
+          1,
+          304.8,
+          198.12
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "Q706",
+      "lib_id": "PS28_PRE:BSS138",
+      "value": "BSS138",
+      "mpn": "onsemi BSS138",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "nets": {
+        "1": "CLIP_N",
+        "2": "GND",
+        "3": "LED706_K"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          236.22
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "J8",
+      "lib_id": "Connector_Generic:Conn_01x02",
+      "value": "FAN 12V",
+      "mpn": "JST B2B-XH-A(LF)(SN); fan <= 200 mA",
+      "footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "FAN_N"
+      },
+      "units": [
+        [
+          1,
+          76.2,
+          236.22
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "D707",
+      "lib_id": "Device:D",
+      "value": "S1M",
+      "mpn": "S1M flyback across the fan",
+      "footprint": "Diode_SMD:D_SMA",
+      "nets": {
+        "1": "AUX_RAW",
+        "2": "FAN_N"
+      },
+      "units": [
+        [
+          1,
+          114.30000000000001,
+          236.22
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "JP701",
+      "lib_id": "Connector_Generic:Conn_01x03",
+      "value": "FAN MODE",
+      "mpn": "2.54 mm header + jumper: 1-2 ON, 2-3 OTW",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+      "nets": {
+        "1": "SEQ_3V3",
+        "2": "FAN_G",
+        "3": "CLIP_N"
+      },
+      "units": [
+        [
+          1,
+          152.4,
+          236.22
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R720",
+      "lib_id": "Device:R",
+      "value": "100k",
+      "mpn": "0805 1 %; fan off without jumper",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "nets": {
+        "1": "FAN_G",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          190.5,
+          236.22
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "Q707",
+      "lib_id": "PS28_PRE:AO3400A",
+      "value": "AO3400A",
+      "mpn": "AOS AO3400A",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "nets": {
+        "1": "FAN_G",
+        "2": "GND",
+        "3": "FAN_N"
+      },
+      "units": [
+        [
+          1,
+          228.6,
+          236.22
+        ]
+      ],
+      "group": "dbg",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
     }
   ],
   "source_sha256": {
     "kicad/core-oem-refined/ps28-modern.kicad_sch": "134bdf8fa93e3a66d99a5d556bd45cb9c5289ed5c3b126273db16ef3ad38a2ce",
     "kicad/analog-protected/analog-protected.kicad_sch": "f46adefe0383358837e4eb49a41fe21b8017f39b549f789c10675ca4ac277303",
-    "scripts/integrate_candidate.py": "9e9da0dd2a824e8c1657531de3820559f929353b4cc2e9660f5b0f99928e2f99",
+    "scripts/integrate_candidate.py": "558106e7e785ef6b02b73b20ebca7148df2ee265862db390de1552b1dd79f112",
     "kicad/power-d021/power-d021.kicad_sch": "b27d4cc1ab8930527ff147b3d1488ca8c04037574b6009157686842a3d801e83",
     "kicad/seq-d020/seq-d020.kicad_sch": "0d6a219fd97f4594ea756f839a9c2f616b1174abb3ba09accabca21839d0b884",
     "scripts/create_power_d021.py": "fe24c26c60ad080f2117b629c4b9ec7f864ad851574cc90914d95e1e8cfe3162",

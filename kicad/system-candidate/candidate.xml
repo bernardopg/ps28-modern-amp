@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>/home/bitter/development/ps28-modern-amp-starter/kicad/.system-stage-fbpgzf1h/system-candidate.kicad_sch</source>
-    <date>2026-10-12T22:43:44</date>
+    <source>/home/bitter/development/ps28-modern-amp-starter/kicad/.system-stage-yg6nuezv/system-candidate.kicad_sch</source>
+    <date>2026-10-13T00:40:35</date>
     <tool>Eeschema 10.0.7</tool>
     <textvar name="PROJECT_STATUS">CORE DRAFT - UNROUTED - NOT FOR FABRICATION</textvar>
     <sheet number="1" name="/" tstamps="/">
@@ -2931,6 +2931,216 @@
         </unit>
       </units>
     </comp>
+    <comp ref="D701">
+      <value>PVDD</value>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">Green 0805 LED (e.g. Lite-On LTST-C171GKT)</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">LED_SMD:LED_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="MPN" value="Green 0805 LED (e.g. Lite-On LTST-C171GKT)"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1a383cf6-7332-5e8a-847d-a9e9d86e7327</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D702">
+      <value>RAILS_OK</value>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">Green 0805 LED (e.g. Lite-On LTST-C171GKT)</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">LED_SMD:LED_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="MPN" value="Green 0805 LED (e.g. Lite-On LTST-C171GKT)"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e413f759-9f00-5057-af6a-28ad6d2adeb2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D703">
+      <value>RUN</value>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">Green 0805 LED (e.g. Lite-On LTST-C171GKT)</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">LED_SMD:LED_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="MPN" value="Green 0805 LED (e.g. Lite-On LTST-C171GKT)"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ff2290b4-29f9-5412-bbab-f373604c3bf3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D704">
+      <value>AUDIO</value>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">Green 0805 LED (e.g. Lite-On LTST-C171GKT)</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">LED_SMD:LED_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="MPN" value="Green 0805 LED (e.g. Lite-On LTST-C171GKT)"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>636f8861-98cb-5b72-8688-95b7811b5029</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D705">
+      <value>FAULT</value>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">Green 0805 LED (e.g. Lite-On LTST-C171GKT)</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">LED_SMD:LED_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="MPN" value="Green 0805 LED (e.g. Lite-On LTST-C171GKT)"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>725d9e57-92c7-5a18-8c37-b0ccec818ed6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D706">
+      <value>CLIP_OTW</value>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">Green 0805 LED (e.g. Lite-On LTST-C171GKT)</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">LED_SMD:LED_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="MPN" value="Green 0805 LED (e.g. Lite-On LTST-C171GKT)"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>497d1d6a-4ca7-5360-bad3-f56ddb597756</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D707">
+      <value>S1M</value>
+      <footprint>Diode_SMD:D_SMA</footprint>
+      <fields>
+        <field name="MPN">S1M flyback across the fan</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">Diode_SMD:D_SMA</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="MPN" value="S1M flyback across the fan"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="diode"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8fff1c99-407d-5b0e-b5ac-37f84a75b445</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="F301">
       <value>T6.3A slow</value>
       <footprint>Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open</footprint>
@@ -3197,6 +3407,36 @@
         </unit>
       </units>
     </comp>
+    <comp ref="J8">
+      <value>FAN 12V</value>
+      <footprint>Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</footprint>
+      <fields>
+        <field name="MPN">JST B2B-XH-A(LF)(SN); fan &lt;= 200 mA</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="JST B2B-XH-A(LF)(SN); fan &lt;= 200 mA"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0d2b6db0-a8ac-50e7-afb8-3b7f4839d1fc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="J301">
       <value>T1_SECONDARY</value>
       <footprint>Connector_JST:JST_VH_B3P-VH_1x03_P3.96mm_Vertical</footprint>
@@ -3254,6 +3494,37 @@
           <pins>
             <pin num="1"/>
             <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="JP701">
+      <value>FAN MODE</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="MPN">2.54 mm header + jumper: 1-2 ON, 2-3 OTW</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="2.54 mm header + jumper: 1-2 ON, 2-3 OTW"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a3b338bd-9ad0-5513-99a1-0c3162ae6190</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
           </pins>
         </unit>
       </units>
@@ -3523,6 +3794,209 @@
       <property name="Sheetfile" value="system-candidate.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>68b1cf26-27ec-5d67-87e0-3955d3eb1c41</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q701">
+      <value>BSS138</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <fields>
+        <field name="MPN">onsemi BSS138</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="PS28_PRE" part="BSS138" description=""/>
+      <property name="MPN" value="onsemi BSS138"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e9649de8-f905-519d-a11b-2889af5fd792</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q702">
+      <value>BSS138</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <fields>
+        <field name="MPN">onsemi BSS138</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="PS28_PRE" part="BSS138" description=""/>
+      <property name="MPN" value="onsemi BSS138"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7170751d-00af-55c1-95cb-69a9f5fb4e57</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q703">
+      <value>BSS138</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <fields>
+        <field name="MPN">onsemi BSS138</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="PS28_PRE" part="BSS138" description=""/>
+      <property name="MPN" value="onsemi BSS138"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6fc728c1-e1a7-5fc1-bd0a-f741a6531bd0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q704">
+      <value>BSS138</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <fields>
+        <field name="MPN">onsemi BSS138</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="PS28_PRE" part="BSS138" description=""/>
+      <property name="MPN" value="onsemi BSS138"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>000889d3-5618-50f2-8d17-dca2b341d584</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q705">
+      <value>BSS138</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <fields>
+        <field name="MPN">onsemi BSS138</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="PS28_PRE" part="BSS138" description=""/>
+      <property name="MPN" value="onsemi BSS138"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c9c6c298-2113-555a-ab3f-fe3d27bedcdb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q706">
+      <value>BSS138</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <fields>
+        <field name="MPN">onsemi BSS138</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="PS28_PRE" part="BSS138" description=""/>
+      <property name="MPN" value="onsemi BSS138"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>695c4205-22ec-5257-b263-47772fc335d2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q707">
+      <value>AO3400A</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <fields>
+        <field name="MPN">AOS AO3400A</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="PS28_PRE" part="AO3400A" description=""/>
+      <property name="MPN" value="AOS AO3400A"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c89a218c-bb1a-5c01-8deb-2d8a606be44c</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -5743,6 +6217,276 @@
         </unit>
       </units>
     </comp>
+    <comp ref="R701">
+      <value>47k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="MPN">SMD:R 1 %</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">Resistor_SMD:R_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="SMD:R 1 %"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>de44808e-eef7-5836-8619-d050417a9564</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R702">
+      <value>2.2k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">SMD:R 1 %</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="SMD:R 1 %"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ef4c20c2-e9ba-5e32-9c7b-3219562a3c23</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R703">
+      <value>2.2k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">SMD:R 1 %</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="SMD:R 1 %"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8302a294-caca-5b50-a459-fbd9dbe2fd71</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R704">
+      <value>2.2k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">SMD:R 1 %</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="SMD:R 1 %"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>79d98607-ed44-5c53-a544-89f0475c6e49</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R705">
+      <value>2.2k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">SMD:R 1 %</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="SMD:R 1 %"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e6aa9c60-e632-5b2f-8867-5ecbe8837419</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R706">
+      <value>2.2k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">SMD:R 1 %</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="SMD:R 1 %"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c6075d7d-e7ba-5d4d-ad35-01301f553124</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R715">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">0805 1 %</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="0805 1 %"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a97689c9-b6c5-5e32-89c3-914c38743c4e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R716">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">0805 1 %</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="0805 1 %"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0947947c-011f-55b8-a392-1e915d169fea</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R720">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">0805 1 %; fan off without jumper</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="0805 1 %; fan off without jumper"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>50609a74-a2a8-56c9-8823-35b01c6607df</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
     <comp ref="TP102">
       <value>STB</value>
       <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
@@ -5793,6 +6537,615 @@
       <property name="ki_fp_filters" value="Pin* Test*"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>f61a49fb-21fd-5e7d-b926-65d33ec8971e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP110">
+      <value>GND</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB test pad, no part</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test pad, no part"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>574f8e7a-5849-576f-93fb-707e93a41152</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP111">
+      <value>PVDD</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB test pad, no part</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test pad, no part"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1acdfbbd-3d3e-53c0-8b4b-9c1e41ee7dd2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP112">
+      <value>12V</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB test pad, no part</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test pad, no part"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>09b03ae4-a7aa-557b-a970-f855dd1382c6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP113">
+      <value>+15V</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB test pad, no part</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test pad, no part"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e29e1ae8-8234-50cd-8583-841bda834741</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP114">
+      <value>-15V</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB test pad, no part</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test pad, no part"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4ef4ccca-fdfd-56f3-99d6-36c876b75d53</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP115">
+      <value>A12V</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB test pad, no part</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test pad, no part"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>30100326-fc58-5bd7-989f-589743b6a150</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP116">
+      <value>VMID</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB test pad, no part</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test pad, no part"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8bfa7344-73cd-5101-a7ea-fd1278cd6369</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP117">
+      <value>3V3</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB test pad, no part</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test pad, no part"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fc9abdcd-8b40-54d3-bd17-526de95e267a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP118">
+      <value>GVDD</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB test pad, no part</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test pad, no part"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dc33e818-2aff-53fe-9d12-8cb82574a91f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP119">
+      <value>RST</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB test pad, no part</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test pad, no part"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>96c4137b-27a9-5f28-a8df-01eb2bf3abe1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP120">
+      <value>FLT</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB test pad, no part</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test pad, no part"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ecfaf7a6-d950-5cff-a31c-8ab25070ab22</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP121">
+      <value>OTW</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB test pad, no part</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test pad, no part"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4a78e311-144b-5a5f-b507-f48c1b2025e0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP122">
+      <value>ROK</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB test pad, no part</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test pad, no part"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0368f92c-394c-529f-b94b-846d6d9e316a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP123">
+      <value>DCOK</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB test pad, no part</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test pad, no part"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1511e031-be17-58bb-b801-11c9dc3f2b94</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP124">
+      <value>IN</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB test pad, no part</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test pad, no part"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1ced5e11-593d-5aed-bc05-fac1ad6ed60c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP125">
+      <value>D+</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB test pad, no part</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test pad, no part"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5d0717ee-7a21-5e34-b228-283eeed20935</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP126">
+      <value>D-</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB test pad, no part</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test pad, no part"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>949c3dd5-593e-5465-b694-8f47b9bb890a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP127">
+      <value>INA</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB test pad, no part</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test pad, no part"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>55cc5667-aa06-536c-8c58-a4c008d6c639</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP128">
+      <value>INB</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB test pad, no part</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test pad, no part"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cbcf5b16-a8a3-5f08-afea-837053dd7b59</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP129">
+      <value>CT</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB test pad, no part</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test pad, no part"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f9311186-16f5-52ac-a3e6-ece24bf10f7a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP130">
+      <value>GND</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <fields>
+        <field name="MPN">PCB test pad, no part</field>
+        <field name="SelectionStatus">STUDY; passives/interfaces not selected</field>
+        <field name="Source">D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test pad, no part"/>
+      <property name="SelectionStatus" value="STUDY; passives/interfaces not selected"/>
+      <property name="Source" value="D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md"/>
+      <property name="Sheetname" value="system-candidate"/>
+      <property name="Sheetfile" value="system-candidate.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cf851169-8a42-595d-9424-d9206b83d99f</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -7182,6 +8535,26 @@
         <pin num="2" name="2" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Light emitting diode</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Device" part="R">
       <description>Resistor</description>
       <footprints>
@@ -7355,6 +8728,21 @@
         <pin num="4" name="INB-" type="input"/>
         <pin num="5" name="VDD" type="power_in"/>
         <pin num="6" name="OUTB" type="open_collector"/>
+      </pins>
+    </libpart>
+    <libpart lib="PS28_PRE" part="AO3400A">
+      <docs>AOS AO3400A: SOT-23 1=G 2=S 3=D, 30 V 5.7 A</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AO3400A</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">AOS AO3400A: SOT-23 1=G 2=S 3=D, 30 V 5.7 A</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="PS28_PRE" part="BCP53">
@@ -7545,6 +8933,7 @@
       <node ref="R420" pin="1" pintype="passive"/>
       <node ref="R422" pin="1" pintype="passive"/>
       <node ref="R511" pin="1" pintype="passive"/>
+      <node ref="TP115" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U2" pin="8" pinfunction="V+_8" pintype="power_in"/>
       <node ref="U3" pin="8" pinfunction="V+_8" pintype="power_in"/>
       <node ref="U503" pin="4" pinfunction="VDD_4" pintype="power_in"/>
@@ -7588,7 +8977,9 @@
       <node ref="C508" pin="1" pintype="passive"/>
       <node ref="D201" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D502" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="D707" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="J2" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J8" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="K501" pin="1" pintype="passive"/>
       <node ref="L301" pin="2" pinfunction="2_2" pintype="passive"/>
       <node ref="R1" pin="1" pintype="passive"/>
@@ -7596,6 +8987,12 @@
       <node ref="R202" pin="1" pintype="passive"/>
       <node ref="R311" pin="1" pintype="passive"/>
       <node ref="R514" pin="1" pintype="passive"/>
+      <node ref="R702" pin="1" pintype="passive"/>
+      <node ref="R703" pin="1" pintype="passive"/>
+      <node ref="R704" pin="1" pintype="passive"/>
+      <node ref="R705" pin="1" pintype="passive"/>
+      <node ref="R706" pin="1" pintype="passive"/>
+      <node ref="TP112" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="2" pinfunction="VDD_2" pintype="power_in"/>
       <node ref="U303" pin="5" pinfunction="VDD_5" pintype="power_in"/>
       <node ref="U401" pin="1" pinfunction="VIN_1" pintype="power_in"/>
@@ -7661,23 +9058,32 @@
       <node ref="U2" pin="1" pintype="output"/>
       <node ref="U3" pin="3" pinfunction="+_3" pintype="input"/>
     </net>
-    <net code="20" name="/CLIP_OTW" class="Default">
+    <net code="20" name="/CLIP_N" class="Default">
+      <node ref="JP701" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="Q705" pin="3" pinfunction="D_3" pintype="passive"/>
+      <node ref="Q706" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="R716" pin="2" pintype="passive"/>
+    </net>
+    <net code="21" name="/CLIP_OTW" class="Default">
       <node ref="J4" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
       <node ref="Q603" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="Q705" pin="1" pinfunction="G_1" pintype="input"/>
       <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="TP121" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="21" pinfunction="~{CLIP_OTW}_21" pintype="open_collector"/>
       <node ref="U406" pin="2" pinfunction="D_2" pintype="input"/>
     </net>
-    <net code="21" name="/C_START" class="Default">
+    <net code="22" name="/C_START" class="Default">
       <node ref="C8" pin="1" pintype="passive"/>
       <node ref="U1" pin="15" pinfunction="C_START_15" pintype="output"/>
     </net>
-    <net code="22" name="/DC_GATE" class="Default">
+    <net code="23" name="/DC_GATE" class="Default">
       <node ref="U415" pin="4" pintype="output"/>
       <node ref="U416" pin="3" pinfunction="~{MR}_3" pintype="input"/>
     </net>
-    <net code="23" name="/DC_OK" class="Default">
+    <net code="24" name="/DC_OK" class="Default">
       <node ref="R429" pin="2" pintype="passive"/>
+      <node ref="TP123" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U415" pin="2" pintype="input"/>
       <node ref="U418" pin="2" pintype="input"/>
       <node ref="U501" pin="1" pinfunction="OUTA_1" pintype="open_collector"/>
@@ -7685,63 +9091,82 @@
       <node ref="U502" pin="1" pinfunction="OUTA_1" pintype="open_collector"/>
       <node ref="U502" pin="6" pinfunction="OUTB_6" pintype="open_collector"/>
     </net>
-    <net code="24" name="/DC_TRIP_N" class="Default">
+    <net code="25" name="/DC_TRIP_N" class="Default">
       <node ref="U418" pin="4" pintype="output"/>
       <node ref="U419" pin="2" pintype="input"/>
     </net>
-    <net code="25" name="/DIFF_N" class="Default">
+    <net code="26" name="/DIFF_N" class="Default">
       <node ref="C21" pin="1" pintype="passive"/>
       <node ref="J3" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="R108" pin="1" pintype="passive"/>
+      <node ref="TP126" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U3" pin="7" pintype="output"/>
     </net>
-    <net code="26" name="/DIFF_P" class="Default">
+    <net code="27" name="/DIFF_P" class="Default">
       <node ref="C20" pin="1" pintype="passive"/>
       <node ref="J3" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="R107" pin="1" pintype="passive"/>
+      <node ref="TP125" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U3" pin="1" pintype="output"/>
       <node ref="U3" pin="2" pinfunction="-_2" pintype="input"/>
     </net>
-    <net code="27" name="/DIVIDED" class="Default">
+    <net code="28" name="/DIVIDED" class="Default">
       <node ref="R101" pin="2" pintype="passive"/>
       <node ref="R102" pin="1" pintype="passive"/>
       <node ref="U2" pin="3" pinfunction="+_3" pintype="input"/>
       <node ref="U503" pin="1" pinfunction="D_1" pintype="passive"/>
     </net>
-    <net code="28" name="/DIV_BOTTOM" class="Default">
+    <net code="29" name="/DIV_BOTTOM" class="Default">
       <node ref="R206" pin="2" pintype="passive"/>
       <node ref="R207" pin="1" pintype="passive"/>
     </net>
-    <net code="29" name="/DIV_TOP" class="Default">
+    <net code="30" name="/DIV_TOP" class="Default">
       <node ref="R204" pin="2" pintype="passive"/>
       <node ref="R205" pin="1" pintype="passive"/>
     </net>
-    <net code="30" name="/DVDD_INTERNAL" class="Default">
+    <net code="31" name="/DVDD_INTERNAL" class="Default">
       <node ref="C6" pin="1" pintype="passive"/>
       <node ref="U1" pin="11" pinfunction="DVDD_11" pintype="power_out"/>
       <node ref="U1" pin="4" pinfunction="M2_4" pintype="input"/>
     </net>
-    <net code="31" name="/DWELL_OK" class="Default">
+    <net code="32" name="/DWELL_OK" class="Default">
       <node ref="R430" pin="2" pintype="passive"/>
       <node ref="U416" pin="1" pinfunction="~{RESET}_1" pintype="output"/>
       <node ref="U417" pin="1" pinfunction="C_1" pintype="input"/>
     </net>
-    <net code="32" name="/FAULT" class="Default">
+    <net code="33" name="/FAN_G" class="Default">
+      <node ref="JP701" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="Q707" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="R720" pin="1" pintype="passive"/>
+    </net>
+    <net code="34" name="/FAN_N" class="Default">
+      <node ref="D707" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="J8" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="Q707" pin="3" pinfunction="D_3" pintype="passive"/>
+    </net>
+    <net code="35" name="/FAULT" class="Default">
       <node ref="J4" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="Q703" pin="1" pinfunction="G_1" pintype="input"/>
       <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="TP120" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="19" pinfunction="~{FAULT}_19" pintype="open_collector"/>
       <node ref="U407" pin="1" pinfunction="C_1" pintype="input"/>
       <node ref="U408" pin="2" pintype="input"/>
     </net>
-    <net code="33" name="/FAULT_TRIP_N" class="Default">
+    <net code="36" name="/FAULT_N" class="Default">
+      <node ref="Q703" pin="3" pinfunction="D_3" pintype="passive"/>
+      <node ref="Q704" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="R715" pin="2" pintype="passive"/>
+    </net>
+    <net code="37" name="/FAULT_TRIP_N" class="Default">
       <node ref="U408" pin="4" pintype="output"/>
       <node ref="U409" pin="2" pintype="input"/>
     </net>
-    <net code="34" name="/FREQ_ADJ" class="Default">
+    <net code="38" name="/FREQ_ADJ" class="Default">
       <node ref="R4" pin="1" pintype="passive"/>
       <node ref="U1" pin="8" pinfunction="FREQ_ADJ_8" pintype="output"/>
     </net>
-    <net code="35" name="/GND" class="Default">
+    <net code="39" name="/GND" class="Default">
       <node ref="C1" pin="2" pintype="passive"/>
       <node ref="C10" pin="2" pintype="passive"/>
       <node ref="C107" pin="2" pintype="passive"/>
@@ -7818,6 +9243,7 @@
       <node ref="D504" pin="1" pinfunction="A_1" pintype="passive"/>
       <node ref="D601" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D604" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="D701" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="F301" pin="2" pintype="passive"/>
       <node ref="J1" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="J2" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
@@ -7830,6 +9256,13 @@
       <node ref="Q501" pin="2" pinfunction="E_2" pintype="passive"/>
       <node ref="Q502" pin="2" pinfunction="E_2" pintype="passive"/>
       <node ref="Q603" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="Q701" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="Q702" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="Q703" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="Q704" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="Q705" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="Q706" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="Q707" pin="2" pinfunction="S_2" pintype="passive"/>
       <node ref="R202" pin="2" pintype="passive"/>
       <node ref="R203" pin="2" pintype="passive"/>
       <node ref="R207" pin="2" pintype="passive"/>
@@ -7852,7 +9285,10 @@
       <node ref="R513" pin="2" pintype="passive"/>
       <node ref="R516" pin="2" pintype="passive"/>
       <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="R720" pin="2" pintype="passive"/>
       <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="TP110" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="TP130" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="12" pinfunction="GND_12" pintype="power_in"/>
       <node ref="U1" pin="13" pinfunction="GND_13" pintype="power_in"/>
       <node ref="U1" pin="16" pinfunction="INPUT_C_16" pintype="input"/>
@@ -7896,166 +9332,212 @@
       <node ref="U503" pin="8" pinfunction="S2_8" pintype="passive"/>
       <node ref="U504" pin="2" pinfunction="GND_2" pintype="power_in"/>
     </net>
-    <net code="36" name="/GVDD_AB" class="Default">
+    <net code="40" name="/GVDD_AB" class="Default">
       <node ref="C4" pin="1" pintype="passive"/>
       <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="TP118" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="1" pinfunction="GVDD_AB_1" pintype="power_in"/>
     </net>
-    <net code="37" name="/GVDD_CD" class="Default">
+    <net code="41" name="/GVDD_CD" class="Default">
       <node ref="C5" pin="1" pintype="passive"/>
       <node ref="R2" pin="2" pintype="passive"/>
       <node ref="U1" pin="22" pinfunction="GVDD_CD_22" pintype="power_in"/>
     </net>
-    <net code="38" name="/INA_DIS" class="Default">
+    <net code="42" name="/INA_DIS" class="Default">
       <node ref="K501" pin="2" pintype="passive"/>
       <node ref="R503" pin="1" pintype="passive"/>
     </net>
-    <net code="39" name="/INA_ISO" class="Default">
+    <net code="43" name="/INA_ISO" class="Default">
       <node ref="C20" pin="2" pintype="passive"/>
       <node ref="K501" pin="3" pintype="passive"/>
     </net>
-    <net code="40" name="/INA_NO" class="Default">
+    <net code="44" name="/INA_NO" class="Default">
       <node ref="K501" pin="4" pintype="passive"/>
       <node ref="R517" pin="1" pintype="passive"/>
     </net>
-    <net code="41" name="/INA_OV" class="Default">
+    <net code="45" name="/INA_OV" class="Default">
       <node ref="C510" pin="1" pintype="passive"/>
       <node ref="R506" pin="2" pintype="passive"/>
       <node ref="R507" pin="1" pintype="passive"/>
       <node ref="U501" pin="4" pinfunction="INB-_4" pintype="input"/>
     </net>
-    <net code="42" name="/INA_UV" class="Default">
+    <net code="46" name="/INA_UV" class="Default">
       <node ref="C509" pin="1" pintype="passive"/>
       <node ref="R505" pin="2" pintype="passive"/>
       <node ref="R506" pin="1" pintype="passive"/>
       <node ref="U501" pin="3" pinfunction="INA+_3" pintype="input"/>
     </net>
-    <net code="43" name="/INB_DIS" class="Default">
+    <net code="47" name="/INB_DIS" class="Default">
       <node ref="K501" pin="7" pintype="passive"/>
       <node ref="R504" pin="1" pintype="passive"/>
     </net>
-    <net code="44" name="/INB_ISO" class="Default">
+    <net code="48" name="/INB_ISO" class="Default">
       <node ref="C21" pin="2" pintype="passive"/>
       <node ref="K501" pin="6" pintype="passive"/>
     </net>
-    <net code="45" name="/INB_NO" class="Default">
+    <net code="49" name="/INB_NO" class="Default">
       <node ref="K501" pin="5" pintype="passive"/>
       <node ref="R518" pin="1" pintype="passive"/>
     </net>
-    <net code="46" name="/INB_OV" class="Default">
+    <net code="50" name="/INB_OV" class="Default">
       <node ref="C512" pin="1" pintype="passive"/>
       <node ref="R509" pin="2" pintype="passive"/>
       <node ref="R510" pin="1" pintype="passive"/>
       <node ref="U502" pin="4" pinfunction="INB-_4" pintype="input"/>
     </net>
-    <net code="47" name="/INB_UV" class="Default">
+    <net code="51" name="/INB_UV" class="Default">
       <node ref="C511" pin="1" pintype="passive"/>
       <node ref="R508" pin="2" pintype="passive"/>
       <node ref="R509" pin="1" pintype="passive"/>
       <node ref="U502" pin="3" pinfunction="INA+_3" pintype="input"/>
     </net>
-    <net code="48" name="/INPUT_A_AC" class="Default">
+    <net code="52" name="/INPUT_A_AC" class="Default">
       <node ref="C503" pin="1" pintype="passive"/>
       <node ref="D503" pin="3" pinfunction="K_3" pintype="passive"/>
       <node ref="R505" pin="1" pintype="passive"/>
       <node ref="R517" pin="2" pintype="passive"/>
+      <node ref="TP127" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="5" pinfunction="INPUT_A_5" pintype="input"/>
     </net>
-    <net code="49" name="/INPUT_B_AC" class="Default">
+    <net code="53" name="/INPUT_B_AC" class="Default">
       <node ref="C504" pin="1" pintype="passive"/>
       <node ref="D504" pin="3" pinfunction="K_3" pintype="passive"/>
       <node ref="R508" pin="1" pintype="passive"/>
       <node ref="R518" pin="2" pintype="passive"/>
+      <node ref="TP128" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="6" pinfunction="INPUT_B_6" pintype="input"/>
     </net>
-    <net code="50" name="/ISO_FEED" class="Default">
+    <net code="54" name="/ISO_FEED" class="Default">
       <node ref="D201" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="R201" pin="1" pintype="passive"/>
     </net>
-    <net code="51" name="/LIMIT" class="Default">
+    <net code="55" name="/LED701_A" class="Default">
+      <node ref="D701" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="R701" pin="2" pintype="passive"/>
+    </net>
+    <net code="56" name="/LED702_A" class="Default">
+      <node ref="D702" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="R702" pin="2" pintype="passive"/>
+    </net>
+    <net code="57" name="/LED703_A" class="Default">
+      <node ref="D703" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="R703" pin="2" pintype="passive"/>
+    </net>
+    <net code="58" name="/LED704_A" class="Default">
+      <node ref="D704" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="R704" pin="2" pintype="passive"/>
+    </net>
+    <net code="59" name="/LED705_A" class="Default">
+      <node ref="D705" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="R705" pin="2" pintype="passive"/>
+    </net>
+    <net code="60" name="/LED705_K" class="Default">
+      <node ref="D705" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="Q704" pin="3" pinfunction="D_3" pintype="passive"/>
+    </net>
+    <net code="61" name="/LED706_A" class="Default">
+      <node ref="D706" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="R706" pin="2" pintype="passive"/>
+    </net>
+    <net code="62" name="/LED706_K" class="Default">
+      <node ref="D706" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="Q706" pin="3" pinfunction="D_3" pintype="passive"/>
+    </net>
+    <net code="63" name="/LED_ROK_K" class="Default">
+      <node ref="D702" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="Q701" pin="3" pinfunction="D_3" pintype="passive"/>
+    </net>
+    <net code="64" name="/LED_RUN_K" class="Default">
+      <node ref="D703" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="Q702" pin="3" pinfunction="D_3" pintype="passive"/>
+    </net>
+    <net code="65" name="/LIMIT" class="Default">
       <node ref="J7" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="Q603" pin="3" pinfunction="D_3" pintype="passive"/>
       <node ref="R605" pin="2" pintype="passive"/>
     </net>
-    <net code="52" name="/MINUS" class="Default">
+    <net code="66" name="/MINUS" class="Default">
       <node ref="R107" pin="2" pintype="passive"/>
       <node ref="R108" pin="2" pintype="passive"/>
       <node ref="U3" pin="6" pinfunction="-_6" pintype="input"/>
     </net>
-    <net code="53" name="/MONO_BIASED" class="Default">
+    <net code="67" name="/MONO_BIASED" class="Default">
       <node ref="C109" pin="2" pintype="passive"/>
       <node ref="R101" pin="1" pintype="passive"/>
     </net>
-    <net code="54" name="/MUTE_BASE" class="Default">
+    <net code="68" name="/MUTE_BASE" class="Default">
       <node ref="Q502" pin="1" pinfunction="B_1" pintype="input"/>
       <node ref="R512" pin="2" pintype="passive"/>
       <node ref="R513" pin="1" pintype="passive"/>
     </net>
-    <net code="55" name="/MUTE_EN" class="Default">
+    <net code="69" name="/MUTE_EN" class="Default">
       <node ref="Q502" pin="3" pinfunction="C_3" pintype="passive"/>
       <node ref="R511" pin="2" pintype="passive"/>
       <node ref="U503" pin="5" pinfunction="EN_5" pintype="input"/>
     </net>
-    <net code="56" name="/N15V" class="Default">
+    <net code="70" name="/N15V" class="Default">
       <node ref="C604" pin="2" pintype="passive"/>
       <node ref="J7" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
       <node ref="Q602" pin="3" pinfunction="E_3" pintype="passive"/>
+      <node ref="TP114" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="57" name="/N15_BASE" class="Default">
+    <net code="71" name="/N15_BASE" class="Default">
       <node ref="C605" pin="2" pintype="passive"/>
       <node ref="D604" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="Q602" pin="1" pinfunction="B_1" pintype="input"/>
       <node ref="R604" pin="2" pintype="passive"/>
     </net>
-    <net code="58" name="/N15_COL" class="Default">
+    <net code="72" name="/N15_COL" class="Default">
       <node ref="Q602" pin="2" pinfunction="C_2" pintype="passive"/>
       <node ref="R603" pin="2" pintype="passive"/>
     </net>
-    <net code="59" name="/NOT_ARMED" class="Default">
+    <net code="73" name="/NOT_ARMED" class="Default">
       <node ref="U407" pin="3" pinfunction="~{Q}_3" pintype="output"/>
       <node ref="U408" pin="1" pintype="input"/>
     </net>
-    <net code="60" name="/NOT_AUDIO" class="Default">
+    <net code="74" name="/NOT_AUDIO" class="Default">
       <node ref="U410" pin="2" pintype="input"/>
       <node ref="U417" pin="3" pinfunction="~{Q}_3" pintype="output"/>
       <node ref="U418" pin="1" pintype="input"/>
     </net>
-    <net code="61" name="/NRAW" class="Default">
+    <net code="75" name="/NRAW" class="Default">
       <node ref="C603" pin="2" pintype="passive"/>
       <node ref="D602" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D603" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="R603" pin="1" pintype="passive"/>
       <node ref="R604" pin="1" pintype="passive"/>
     </net>
-    <net code="62" name="/OC_ADJ" class="Default">
+    <net code="76" name="/OC_ADJ" class="Default">
       <node ref="R3" pin="1" pintype="passive"/>
       <node ref="U1" pin="7" pinfunction="OC_ADJ_7" pintype="bidirectional"/>
     </net>
-    <net code="63" name="/P15V" class="Default">
+    <net code="77" name="/P15V" class="Default">
       <node ref="C601" pin="1" pintype="passive"/>
       <node ref="J7" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
       <node ref="Q601" pin="3" pinfunction="E_3" pintype="passive"/>
       <node ref="R605" pin="1" pintype="passive"/>
+      <node ref="TP113" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="64" name="/P15_BASE" class="Default">
+    <net code="78" name="/P15_BASE" class="Default">
       <node ref="C602" pin="1" pintype="passive"/>
       <node ref="D601" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="Q601" pin="1" pinfunction="B_1" pintype="input"/>
       <node ref="R602" pin="2" pintype="passive"/>
     </net>
-    <net code="65" name="/P15_COL" class="Default">
+    <net code="79" name="/P15_COL" class="Default">
       <node ref="Q601" pin="2" pinfunction="C_2" pintype="passive"/>
       <node ref="R601" pin="2" pintype="passive"/>
     </net>
-    <net code="66" name="/PRE_IN" class="Default">
+    <net code="80" name="/PRE_IN" class="Default">
       <node ref="C109" pin="1" pintype="passive"/>
       <node ref="J7" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+      <node ref="TP124" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="67" name="/PTC" class="Default">
+    <net code="81" name="/PTC" class="Default">
       <node ref="J7" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
       <node ref="TP103" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="68" name="/PVDD" class="Default">
+    <net code="82" name="/PVDD" class="Default">
       <node ref="C10" pin="1" pintype="passive"/>
       <node ref="C11" pin="1" pintype="passive"/>
       <node ref="C12" pin="1" pintype="passive"/>
@@ -8074,6 +9556,8 @@
       <node ref="R320" pin="1" pintype="passive"/>
       <node ref="R601" pin="1" pintype="passive"/>
       <node ref="R602" pin="1" pintype="passive"/>
+      <node ref="R701" pin="1" pintype="passive"/>
+      <node ref="TP111" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="29" pinfunction="PVDD_CD_29" pintype="power_in"/>
       <node ref="U1" pin="30" pinfunction="PVDD_CD_30" pintype="power_in"/>
       <node ref="U1" pin="31" pinfunction="PVDD_CD_31" pintype="power_in"/>
@@ -8083,17 +9567,17 @@
       <node ref="U302" pin="2" pinfunction="VIN_2" pintype="power_in"/>
       <node ref="U302" pin="3" pinfunction="EN/UVLO_3" pintype="input"/>
     </net>
-    <net code="69" name="/PVDD_OV_SENSE" class="Default">
+    <net code="83" name="/PVDD_OV_SENSE" class="Default">
       <node ref="R321" pin="2" pintype="passive"/>
       <node ref="R322" pin="1" pintype="passive"/>
       <node ref="U303" pin="4" pinfunction="INB-_4" pintype="input"/>
     </net>
-    <net code="70" name="/PVDD_UV_SENSE" class="Default">
+    <net code="84" name="/PVDD_UV_SENSE" class="Default">
       <node ref="R320" pin="2" pintype="passive"/>
       <node ref="R321" pin="1" pintype="passive"/>
       <node ref="U303" pin="3" pinfunction="INA+_3" pintype="input"/>
     </net>
-    <net code="71" name="/PWM_AC" class="Default">
+    <net code="85" name="/PWM_AC" class="Default">
       <node ref="C16" pin="2" pintype="passive"/>
       <node ref="C18" pin="2" pintype="passive"/>
       <node ref="L1" pin="1" pinfunction="1_1" pintype="passive"/>
@@ -8101,7 +9585,7 @@
       <node ref="U1" pin="39" pinfunction="OUT_A_39" pintype="power_out"/>
       <node ref="U1" pin="40" pinfunction="OUT_A_40" pintype="passive"/>
     </net>
-    <net code="72" name="/PWM_BD" class="Default">
+    <net code="86" name="/PWM_BD" class="Default">
       <node ref="C17" pin="2" pintype="passive"/>
       <node ref="C19" pin="2" pintype="passive"/>
       <node ref="L2" pin="2" pinfunction="2_2" pintype="passive"/>
@@ -8109,8 +9593,10 @@
       <node ref="U1" pin="28" pinfunction="OUT_D_28" pintype="passive"/>
       <node ref="U1" pin="35" pinfunction="OUT_B_35" pintype="power_out"/>
     </net>
-    <net code="73" name="/RAILS_OK" class="Default">
+    <net code="87" name="/RAILS_OK" class="Default">
+      <node ref="Q701" pin="1" pinfunction="G_1" pintype="input"/>
       <node ref="R323" pin="2" pintype="passive"/>
+      <node ref="TP122" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U302" pin="6" pinfunction="PGOOD_6" pintype="open_collector"/>
       <node ref="U303" pin="1" pinfunction="OUTA_1" pintype="open_collector"/>
       <node ref="U303" pin="6" pinfunction="OUTB_6" pintype="open_collector"/>
@@ -8125,37 +9611,40 @@
       <node ref="U504" pin="1" pinfunction="OUTA_1" pintype="open_collector"/>
       <node ref="U504" pin="6" pinfunction="OUTB_6" pintype="open_collector"/>
     </net>
-    <net code="74" name="/RAILS_QUAL" class="Default">
+    <net code="88" name="/RAILS_QUAL" class="Default">
       <node ref="R404" pin="2" pintype="passive"/>
       <node ref="U403" pin="1" pinfunction="~{RESET}_1" pintype="output"/>
       <node ref="U406" pin="6" pinfunction="~{CLR}_6" pintype="input"/>
     </net>
-    <net code="75" name="/RELAY_BASE" class="Default">
+    <net code="89" name="/RELAY_BASE" class="Default">
       <node ref="Q501" pin="1" pinfunction="B_1" pintype="input"/>
       <node ref="R501" pin="2" pintype="passive"/>
       <node ref="R502" pin="1" pintype="passive"/>
     </net>
-    <net code="76" name="/RELAY_DRV" class="Default">
+    <net code="90" name="/RELAY_DRV" class="Default">
       <node ref="D501" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="D704" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="K501" pin="8" pintype="passive"/>
       <node ref="Q501" pin="3" pinfunction="C_3" pintype="passive"/>
     </net>
-    <net code="77" name="/RELAY_FLY" class="Default">
+    <net code="91" name="/RELAY_FLY" class="Default">
       <node ref="D501" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="D502" pin="1" pinfunction="K_1" pintype="passive"/>
     </net>
-    <net code="78" name="/RESET" class="Default">
+    <net code="92" name="/RESET" class="Default">
       <node ref="J4" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="Q702" pin="1" pinfunction="G_1" pintype="input"/>
       <node ref="R408" pin="2" pintype="passive"/>
       <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="TP119" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U1" pin="18" pinfunction="~{RESET}_18" pintype="input"/>
     </net>
-    <net code="79" name="/RESET_GO" class="Default">
+    <net code="93" name="/RESET_GO" class="Default">
       <node ref="R408" pin="1" pintype="passive"/>
       <node ref="R428" pin="2" pintype="passive"/>
       <node ref="U414" pin="1" pinfunction="~{RESET}_1" pintype="output"/>
     </net>
-    <net code="80" name="/RUN" class="Default">
+    <net code="94" name="/RUN" class="Default">
       <node ref="R501" pin="1" pintype="passive"/>
       <node ref="U406" pin="5" pinfunction="Q_5" pintype="output"/>
       <node ref="U407" pin="2" pinfunction="D_2" pintype="input"/>
@@ -8164,7 +9653,7 @@
       <node ref="U414" pin="3" pinfunction="~{MR}_3" pintype="input"/>
       <node ref="U417" pin="6" pinfunction="~{CLR}_6" pintype="input"/>
     </net>
-    <net code="81" name="/SEQ_3V3" class="Default">
+    <net code="95" name="/SEQ_3V3" class="Default">
       <node ref="C403" pin="1" pintype="passive"/>
       <node ref="C406" pin="1" pintype="passive"/>
       <node ref="C407" pin="1" pintype="passive"/>
@@ -8182,6 +9671,7 @@
       <node ref="C421" pin="1" pintype="passive"/>
       <node ref="C422" pin="1" pintype="passive"/>
       <node ref="C423" pin="1" pintype="passive"/>
+      <node ref="JP701" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="R323" pin="1" pintype="passive"/>
       <node ref="R401" pin="1" pintype="passive"/>
       <node ref="R402" pin="1" pintype="passive"/>
@@ -8192,6 +9682,9 @@
       <node ref="R428" pin="1" pintype="passive"/>
       <node ref="R429" pin="1" pintype="passive"/>
       <node ref="R430" pin="1" pintype="passive"/>
+      <node ref="R715" pin="1" pintype="passive"/>
+      <node ref="R716" pin="1" pintype="passive"/>
+      <node ref="TP117" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U401" pin="5" pinfunction="VOUT_5" pintype="power_out"/>
       <node ref="U402" pin="5" pinfunction="SENSE_5" pintype="input"/>
       <node ref="U402" pin="6" pinfunction="VDD_6" pintype="power_in"/>
@@ -8219,28 +9712,28 @@
       <node ref="U418" pin="5" pinfunction="VCC_5" pintype="power_in"/>
       <node ref="U419" pin="5" pinfunction="VCC_5" pintype="power_in"/>
     </net>
-    <net code="82" name="/SEQ_BYP" class="Default">
+    <net code="96" name="/SEQ_BYP" class="Default">
       <node ref="C402" pin="1" pintype="passive"/>
       <node ref="U401" pin="4" pinfunction="BYPASS_4" pintype="passive"/>
     </net>
-    <net code="83" name="/SEQ_CT1" class="Default">
+    <net code="97" name="/SEQ_CT1" class="Default">
       <node ref="R401" pin="2" pintype="passive"/>
       <node ref="U402" pin="4" pinfunction="CT_4" pintype="input"/>
     </net>
-    <net code="84" name="/SEQ_CT2" class="Default">
+    <net code="98" name="/SEQ_CT2" class="Default">
       <node ref="R403" pin="2" pintype="passive"/>
       <node ref="U403" pin="4" pinfunction="CT_4" pintype="input"/>
     </net>
-    <net code="85" name="/SEQ_CT3" class="Default">
+    <net code="99" name="/SEQ_CT3" class="Default">
       <node ref="C404" pin="1" pintype="passive"/>
       <node ref="U404" pin="4" pinfunction="CT_4" pintype="input"/>
     </net>
-    <net code="86" name="/SEQ_HOLD1" class="Default">
+    <net code="100" name="/SEQ_HOLD1" class="Default">
       <node ref="R402" pin="2" pintype="passive"/>
       <node ref="U402" pin="1" pinfunction="~{RESET}_1" pintype="output"/>
       <node ref="U403" pin="3" pinfunction="~{MR}_3" pintype="input"/>
     </net>
-    <net code="87" name="/SPK_N" class="Default">
+    <net code="101" name="/SPK_N" class="Default">
       <node ref="C26" pin="1" pintype="passive"/>
       <node ref="C27" pin="1" pintype="passive"/>
       <node ref="C28" pin="1" pintype="passive"/>
@@ -8248,11 +9741,11 @@
       <node ref="J5" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="L2" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="88" name="/SPK_N_SNUB" class="Default">
+    <net code="102" name="/SPK_N_SNUB" class="Default">
       <node ref="C29" pin="2" pintype="passive"/>
       <node ref="R6" pin="1" pintype="passive"/>
     </net>
-    <net code="89" name="/SPK_P" class="Default">
+    <net code="103" name="/SPK_P" class="Default">
       <node ref="C22" pin="1" pintype="passive"/>
       <node ref="C23" pin="1" pintype="passive"/>
       <node ref="C24" pin="1" pintype="passive"/>
@@ -8260,70 +9753,71 @@
       <node ref="J5" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="L1" pin="2" pinfunction="2_2" pintype="passive"/>
     </net>
-    <net code="90" name="/SPK_P_SNUB" class="Default">
+    <net code="104" name="/SPK_P_SNUB" class="Default">
       <node ref="C25" pin="2" pintype="passive"/>
       <node ref="R5" pin="1" pintype="passive"/>
     </net>
-    <net code="91" name="/START_BTN" class="Default">
+    <net code="105" name="/START_BTN" class="Default">
       <node ref="J401" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="R406" pin="2" pintype="passive"/>
       <node ref="R407" pin="1" pintype="passive"/>
     </net>
-    <net code="92" name="/START_DEB" class="Default">
+    <net code="106" name="/START_DEB" class="Default">
       <node ref="C405" pin="1" pintype="passive"/>
       <node ref="R407" pin="2" pintype="passive"/>
       <node ref="U405" pin="2" pintype="input"/>
     </net>
-    <net code="93" name="/START_EDGE" class="Default">
+    <net code="107" name="/START_EDGE" class="Default">
       <node ref="U405" pin="4" pintype="output"/>
       <node ref="U406" pin="1" pinfunction="C_1" pintype="input"/>
     </net>
-    <net code="94" name="/START_TIMEOUT" class="Default">
+    <net code="108" name="/START_TIMEOUT" class="Default">
       <node ref="R405" pin="2" pintype="passive"/>
       <node ref="U404" pin="1" pinfunction="~{RESET}_1" pintype="output"/>
       <node ref="U411" pin="2" pintype="input"/>
     </net>
-    <net code="95" name="/START_WIN" class="Default">
+    <net code="109" name="/START_WIN" class="Default">
       <node ref="U404" pin="3" pinfunction="~{MR}_3" pintype="input"/>
       <node ref="U410" pin="4" pintype="output"/>
     </net>
-    <net code="96" name="/STB" class="Default">
+    <net code="110" name="/STB" class="Default">
       <node ref="J7" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
       <node ref="TP102" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="97" name="/T1_A" class="Default">
+    <net code="111" name="/T1_A" class="Default">
       <node ref="D301" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D602" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="J301" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
     </net>
-    <net code="98" name="/T1_B" class="Default">
+    <net code="112" name="/T1_B" class="Default">
       <node ref="D302" pin="2" pinfunction="A_2" pintype="passive"/>
       <node ref="D603" pin="1" pinfunction="K_1" pintype="passive"/>
       <node ref="J301" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
     </net>
-    <net code="99" name="/T1_CT" class="Default">
+    <net code="113" name="/T1_CT" class="Default">
       <node ref="F301" pin="1" pintype="passive"/>
       <node ref="J301" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="TP129" pin="1" pinfunction="1_1" pintype="passive"/>
     </net>
-    <net code="100" name="/U2B_PARK" class="Default">
+    <net code="114" name="/U2B_PARK" class="Default">
       <node ref="U2" pin="6" pinfunction="-_6" pintype="input"/>
       <node ref="U2" pin="7" pintype="output"/>
     </net>
-    <net code="101" name="/U2_FB" class="Default">
+    <net code="115" name="/U2_FB" class="Default">
       <node ref="R110" pin="2" pintype="passive"/>
       <node ref="R111" pin="1" pintype="passive"/>
       <node ref="U2" pin="2" pinfunction="-_2" pintype="input"/>
     </net>
-    <net code="102" name="/VBG" class="Default">
+    <net code="116" name="/VBG" class="Default">
       <node ref="C9" pin="1" pintype="passive"/>
       <node ref="U1" pin="20" pinfunction="VBG_20" pintype="power_out"/>
     </net>
-    <net code="103" name="/VIO_3V3_EXTERNAL" class="Default">
+    <net code="117" name="/VIO_3V3_EXTERNAL" class="Default">
       <node ref="J4" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
       <node ref="R7" pin="1" pintype="passive"/>
       <node ref="R8" pin="1" pintype="passive"/>
     </net>
-    <net code="104" name="/VMID" class="Default">
+    <net code="118" name="/VMID" class="Default">
       <node ref="C203" pin="1" pintype="passive"/>
       <node ref="R102" pin="2" pintype="passive"/>
       <node ref="R111" pin="2" pintype="passive"/>
@@ -8331,54 +9825,55 @@
       <node ref="R206" pin="1" pintype="passive"/>
       <node ref="R424" pin="1" pintype="passive"/>
       <node ref="R426" pin="1" pintype="passive"/>
+      <node ref="TP116" pin="1" pinfunction="1_1" pintype="passive"/>
       <node ref="U2" pin="5" pinfunction="+_5" pintype="input"/>
       <node ref="U3" pin="5" pinfunction="+_5" pintype="input"/>
       <node ref="U503" pin="2" pinfunction="S1_2" pintype="passive"/>
     </net>
-    <net code="105" name="/VMID_OV" class="Default">
+    <net code="119" name="/VMID_OV" class="Default">
       <node ref="R426" pin="2" pintype="passive"/>
       <node ref="R427" pin="1" pintype="passive"/>
       <node ref="U413" pin="4" pinfunction="INB-_4" pintype="input"/>
     </net>
-    <net code="106" name="/VMID_UV" class="Default">
+    <net code="120" name="/VMID_UV" class="Default">
       <node ref="R424" pin="2" pintype="passive"/>
       <node ref="R425" pin="1" pintype="passive"/>
       <node ref="U413" pin="3" pinfunction="INA+_3" pintype="input"/>
     </net>
-    <net code="107" name="unconnected-(D503-NC-Pad2)" class="Default">
+    <net code="121" name="unconnected-(D503-NC-Pad2)" class="Default">
       <node ref="D503" pin="2" pinfunction="NC_2" pintype="no_connect"/>
     </net>
-    <net code="108" name="unconnected-(D504-NC-Pad2)" class="Default">
+    <net code="122" name="unconnected-(D504-NC-Pad2)" class="Default">
       <node ref="D504" pin="2" pinfunction="NC_2" pintype="no_connect"/>
     </net>
-    <net code="109" name="unconnected-(J4-Pin_7-Pad7)" class="Default">
+    <net code="123" name="unconnected-(J4-Pin_7-Pad7)" class="Default">
       <node ref="J4" pin="7" pinfunction="Pin_7_7" pintype="passive+no_connect"/>
     </net>
-    <net code="110" name="unconnected-(J4-Pin_8-Pad8)" class="Default">
+    <net code="124" name="unconnected-(J4-Pin_8-Pad8)" class="Default">
       <node ref="J4" pin="8" pinfunction="Pin_8_8" pintype="passive+no_connect"/>
     </net>
-    <net code="111" name="unconnected-(U1-OSC_IOM-Pad9)" class="Default">
+    <net code="125" name="unconnected-(U1-OSC_IOM-Pad9)" class="Default">
       <node ref="U1" pin="9" pinfunction="OSC_IOM_9" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="112" name="unconnected-(U1-OSC_IOP-Pad10)" class="Default">
+    <net code="126" name="unconnected-(U1-OSC_IOP-Pad10)" class="Default">
       <node ref="U1" pin="10" pinfunction="OSC_IOP_10" pintype="output+no_connect"/>
     </net>
-    <net code="113" name="unconnected-(U405-NC-Pad1)" class="Default">
+    <net code="127" name="unconnected-(U405-NC-Pad1)" class="Default">
       <node ref="U405" pin="1" pinfunction="NC_1" pintype="no_connect"/>
     </net>
-    <net code="114" name="unconnected-(U406-~{Q}-Pad3)" class="Default">
+    <net code="128" name="unconnected-(U406-~{Q}-Pad3)" class="Default">
       <node ref="U406" pin="3" pinfunction="~{Q}_3" pintype="output+no_connect"/>
     </net>
-    <net code="115" name="unconnected-(U409-NC-Pad1)" class="Default">
+    <net code="129" name="unconnected-(U409-NC-Pad1)" class="Default">
       <node ref="U409" pin="1" pinfunction="NC_1" pintype="free+no_connect"/>
     </net>
-    <net code="116" name="unconnected-(U414-CT-Pad4)" class="Default">
+    <net code="130" name="unconnected-(U414-CT-Pad4)" class="Default">
       <node ref="U414" pin="4" pinfunction="CT_4" pintype="input+no_connect"/>
     </net>
-    <net code="117" name="unconnected-(U416-CT-Pad4)" class="Default">
+    <net code="131" name="unconnected-(U416-CT-Pad4)" class="Default">
       <node ref="U416" pin="4" pinfunction="CT_4" pintype="input+no_connect"/>
     </net>
-    <net code="118" name="unconnected-(U419-NC-Pad1)" class="Default">
+    <net code="132" name="unconnected-(U419-NC-Pad1)" class="Default">
       <node ref="U419" pin="1" pinfunction="NC_1" pintype="free+no_connect"/>
     </net>
   </nets>
