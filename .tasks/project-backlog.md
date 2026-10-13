@@ -18,6 +18,7 @@ Ordem por dependência/risco; estado canônico nos arquivos de task.
 - [PCB-003 — Spike de captura e placement do core](items/PCB-003.md) (M2, S03; exploratório, não fecha gates)
 - [PCB-001 — Stackup, placement e térmica](items/PCB-001.md) (M3, S04)
 - [PCB-002 — Rotear e revisar layout](items/PCB-002.md) (M3, S04)
+- [PCB-004 — Test points, LEDs de status/debug e conector de fan](items/PCB-004.md) (M3, S04)
 - [FAB-001 — Fechar BOM/CPL e aprovar fabricação](items/FAB-001.md) (M3, S04)
 - [BENCH-002 — Bring-up e carga resistiva](items/BENCH-002.md) (M4, S05)
 - [ACOU-001 — Integrar woofer e medir resposta](items/ACOU-001.md) (M4, S05)

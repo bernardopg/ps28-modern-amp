@@ -17,39 +17,48 @@ HOLE_KEEP = 4.0  # M3 head / L-bracket clearance radius
 
 # (x, y, rotation) footprint centers in mm, KiCad frame. Top side.
 FIXED = {
-    # TPA3255 just beyond the profile outer leg (y = 68); long axis along the leg so a
-    # thermal block can bridge the top PowerPAD and the leg face (TO-3P M3 holes).
+    # D-031/D-032/D-033 placement review (PCB-001), by functional zone. KiCad frame: x 20..174
+    # along the backplate, y 20 (free edge) .. 101 (backplate edge); profile U keepout
+    # x 58..123, y 68..101; thermal block x 64..117, y 52..68 (low SMD only).
+    # TPA3255 just beyond the profile outer leg, long axis along the leg (block contact).
     "U1": (90.5, 60.5, 90),
-    # Output LC and speaker at the upper (relay) end, as in the OEM.
-    "L1": (39.0, 32.0, 0), "L2": (39.0, 66.0, 180),
-    "C22": (54.0, 25.0, 0), "C23": (54.0, 35.0, 0), "C26": (54.0, 52.0, 0), "C27": (54.0, 62.0, 0),
-    "J5": (40.0, 94.0, 0), "J1": (50.0, 82.0, 0),
-    # PVDD bulk around U1.
-    "C301": (72.0, 33.0, 0), "C302": (110.0, 33.0, 0),
-    "C14": (71.0, 56.0, 0), "C15": (110.0, 56.0, 0),
-    "C1": (91.0, 27.0, 0), "K501": (91.0, 42.0, 0),
-    # Ground strap pad for the thermal block / profile (TPA3255 PowerPAD = GND).
-    "J6": (61.0, 60.0, 0),
-    # Transformer (lower) end: harness, CT fuse, rectifier, AUX buck, analog rail.
-    "J301": (155.0, 96.0, 0), "F301": (130.0, 85.0, 90),
-    "D301": (148.0, 82.0, 0), "D302": (148.0, 72.0, 0),
-    "L301": (160.0, 60.0, 0), "R301": (140.0, 60.0, 0),
-    "C201": (135.0, 30.0, 0), "C202": (135.0, 44.0, 0), "R201": (160.0, 33.0, 90),
-    "C203": (148.0, 30.0, 0), "J4": (150.0, 45.0, 0),
+    # Output LC straight above the TPA output pin row (y 56.7): PWM loops ~10 mm long.
+    "L1": (78.0, 40.75, 0), "L2": (103.0, 40.75, 180),
+    "C22": (61.5, 28.0, 0), "C23": (61.5, 38.5, 0), "C26": (119.5, 28.0, 0), "C27": (119.5, 38.5, 0),
+    # Woofer header at the OEM relay end, next to the L-bracket.
+    "J5": (40.0, 94.0, 0),
+    # OEM P101 harness to the preamp: centre of the free edge (oem-harness-sealing.md).
+    "J7": (97.0, 24.0, 0),
+    # PVDD/GVDD bulk on the left end of U1, relay and ground strap beside it.
+    "C14": (56.0, 49.0, 0), "C15": (51.0, 62.0, 0), "C1": (27.5, 71.5, 0),
+    "K501": (38.0, 60.0, 0), "J6": (121.0, 60.0, 0),
+    # Left (relay end): analog rail, film coupling cap.
+    "C201": (30.0, 28.0, 0), "C202": (42.0, 28.0, 0), "C603": (30.0, 41.0, 0), "C109": (42.0, 41.0, 0),
+    "D201": (48.0, 81.0, 0), "R201": (30.0, 82.0, 0), "C203": (52.0, 90.0, 0),
+    # Right (transformer end): bulk stack, rectifier column, buck inductor, CT fuse, T1 header.
+    "C301": (140.5, 36.5, 0), "C302": (140.5, 68.5, 0),
+    "D301": (165.0, 30.0, 90), "D302": (165.0, 61.0, 90), "L301": (166.0, 77.0, 0),
+    "F301": (137.0, 93.0, 0), "J301": (158.0, 95.5, 0),
 }
 # D-031 thermal block: aluminium bar on the U1 PowerPAD, screwed into the two tapped M3
 # TO-3P holes of the profile leg (x 70.7 / 110.3), relieved 3 mm above the board except
 # on the pad. Only low SMD parts (R/C/D/U, < 2.5 mm) may sit under it on top.
-BLOCK = (64.0, 52.0, 117.0, 68.0)
+BLOCK = (64.0, 53.5, 117.0, 68.0)  # block body y 54..67 + 0.5 mm
 LOW_UNDER_BLOCK = ("R", "C", "D", "U")
 # Packing targets per group: (top x, top y), preferred side.
 TARGETS = {None: ((90.5, 55.0), "top"), "power": ((150.0, 55.0), "top"),
            "seq": ((60.0, 45.0), "bottom"), "iso": ((90.0, 62.0), "bottom"),
-           "analog": ((130.0, 40.0), "bottom")}
+           "analog": ((40.0, 50.0), "bottom"), "pre": ((60.0, 30.0), "bottom")}
+# LM5164 buck loop stays under its inductor L301 (switch node/input caps short).
+BUCK = ((160.0, 77.0), "bottom")
 
 
 def place(pcb, pcbnew, mech, parts):
     groups = {p["ref"]: p.get("group") for p in parts}
+    # Buck parts: U302, anything on a BUCK_ net, and its 1210 input/output caps.
+    buck = {p["ref"] for p in parts if p["ref"] == "U302" or any(
+        str(n).startswith("BUCK_") for n in p["nets"].values()) or (
+        p.get("group") == "power" and "C_1210" in p.get("footprint", ""))}
     x0, y0, x1, y1 = mech["outline"]
     nx, ny = int(round((x1 - x0) / GRID)), int(round((y1 - y0) / GRID))
     occ = {"top": np.zeros((ny, nx), bool), "bottom": np.zeros((ny, nx), bool)}
@@ -60,6 +69,8 @@ def place(pcb, pcbnew, mech, parts):
         occ[side] |= margin
         for hx, hy in mech["holes"]:
             occ[side] |= (cx - hx) ** 2 + (cy - hy) ** 2 < HOLE_KEEP ** 2
+        for hx, hy in mech.get("block_holes", []):  # M3 clamp head (bottom) / block (top)
+            occ[side] |= (cx - hx) ** 2 + (cy - hy) ** 2 < 3.0 ** 2
     kx0, ky0, kx1, ky1 = mech["profile_keepout"]
     occ["top"] |= (cx >= kx0) & (cx <= kx1) & (cy >= ky0) & (cy <= ky1)
     bx0, by0, bx1, by1 = BLOCK
@@ -94,8 +105,10 @@ def place(pcb, pcbnew, mech, parts):
         fp.SetOrientationDegrees(rot)
         fp.SetPosition(pcbnew.VECTOR2I(pcbnew.FromMM(x), pcbnew.FromMM(y)))
 
-    def fits(side, w, h, target, tall=False):
+    def fits(side, w, h, target, tall=False, tht=False):
         grid = occ[side] | block if tall and side == "top" else occ[side]
+        if tht:  # through-hole leads also need the other side free
+            grid = grid | occ["bottom" if side == "top" else "top"]
         sat = np.pad(grid.astype(np.int32).cumsum(0).cumsum(1), ((1, 0), (1, 0)))
         kh, kw = int(np.ceil((h + 2 * GAP) / GRID)), int(np.ceil((w + 2 * GAP) / GRID))
         if kh > ny or kw > nx:
@@ -114,13 +127,13 @@ def place(pcb, pcbnew, mech, parts):
     def pack(fp, target, sides, rotations):
         ref = fp.GetReference()
         smd = all(p.GetAttribute() == pcbnew.PAD_ATTRIB_SMD for p in fp.Pads())
-        tall = ref != "U1" and not (smd and ref.startswith(LOW_UNDER_BLOCK))
+        tall = ref not in ("U1", "J6") and not (smd and ref.startswith(LOW_UNDER_BLOCK))
         for side in sides:
             options = []
             for rot in rotations:
                 put(fp, 0, 0, rot, side)
                 l, t, r, b = box(fp)
-                pos = fits(side, r - l, b - t, target, tall)
+                pos = fits(side, r - l, b - t, target, tall, not smd)
                 if pos:
                     options.append((pos, rot))
             if options:
@@ -146,7 +159,7 @@ def place(pcb, pcbnew, mech, parts):
         return (r - l) * (b - t)
     for fp in sorted(rest, key=lambda fp: -area(fp)):
         smd = all(p.GetAttribute() == pcbnew.PAD_ATTRIB_SMD for p in fp.Pads())
-        target, prefer = TARGETS[groups.get(fp.GetReference())]
+        target, prefer = BUCK if fp.GetReference() in buck else TARGETS[groups.get(fp.GetReference())]
         sides = [prefer, "bottom" if prefer == "top" else "top"] if smd else ["top"]
         pack(fp, target, sides, [0, 90])
     return {"anchors": len(FIXED), "top": sum(s == "top" for s in placed.values()),

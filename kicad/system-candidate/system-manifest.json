@@ -1,8 +1,8 @@
 {
   "staged_validation": {
-    "native_pad_net_matches": 581,
-    "copper_pads_checked": 581,
-    "footprints": 205,
+    "native_pad_net_matches": 612,
+    "copper_pads_checked": 614,
+    "footprints": 217,
     "signal_bridge_open": false,
     "signal_bridge_via_relay_only": true
   },
@@ -1101,12 +1101,12 @@
       "value": "OPA1656ID",
       "nets": {
         "1": "BUFFERED",
-        "2": "BUFFERED",
+        "2": "U2_FB",
         "3": "DIVIDED",
         "4": "GND",
-        "5": "Y1",
-        "6": "FILTERED1",
-        "7": "FILTERED1",
+        "5": "VMID",
+        "6": "U2B_PARK",
+        "7": "U2B_PARK",
         "8": "ANALOG_12V"
       },
       "units": [
@@ -1138,7 +1138,7 @@
       "nets": {
         "1": "DIFF_P",
         "2": "DIFF_P",
-        "3": "Y2",
+        "3": "BUFFERED",
         "4": "GND",
         "5": "VMID",
         "6": "MINUS",
@@ -1170,7 +1170,7 @@
     {
       "ref": "R101",
       "lib_id": "Device:R",
-      "value": "10k",
+      "value": "1k",
       "nets": {
         "1": "MONO_BIASED",
         "2": "DIVIDED"
@@ -1183,14 +1183,14 @@
         ]
       ],
       "footprint": "Resistor_SMD:R_0805_2012Metric",
-      "mpn": "TBD",
+      "mpn": "CRCW06031K00FKEA",
       "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
       "group": "analog"
     },
     {
       "ref": "R102",
       "lib_id": "Device:R",
-      "value": "10k",
+      "value": "100k",
       "nets": {
         "1": "DIVIDED",
         "2": "VMID"
@@ -1203,87 +1203,7 @@
         ]
       ],
       "footprint": "Resistor_SMD:R_0805_2012Metric",
-      "mpn": "TBD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
-      "group": "analog"
-    },
-    {
-      "ref": "R103",
-      "lib_id": "Device:R",
-      "value": "14k",
-      "nets": {
-        "1": "BUFFERED",
-        "2": "X1"
-      },
-      "units": [
-        [
-          1,
-          132.07999999999998,
-          198.12
-        ]
-      ],
-      "footprint": "Resistor_SMD:R_0805_2012Metric",
-      "mpn": "TBD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
-      "group": "analog"
-    },
-    {
-      "ref": "R104",
-      "lib_id": "Device:R",
-      "value": "14k",
-      "nets": {
-        "1": "X1",
-        "2": "Y1"
-      },
-      "units": [
-        [
-          1,
-          182.87999999999997,
-          198.12
-        ]
-      ],
-      "footprint": "Resistor_SMD:R_0805_2012Metric",
-      "mpn": "TBD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
-      "group": "analog"
-    },
-    {
-      "ref": "R105",
-      "lib_id": "Device:R",
-      "value": "14k",
-      "nets": {
-        "1": "FILTERED1",
-        "2": "X2"
-      },
-      "units": [
-        [
-          1,
-          30.48,
-          228.6
-        ]
-      ],
-      "footprint": "Resistor_SMD:R_0805_2012Metric",
-      "mpn": "TBD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
-      "group": "analog"
-    },
-    {
-      "ref": "R106",
-      "lib_id": "Device:R",
-      "value": "14k",
-      "nets": {
-        "1": "X2",
-        "2": "Y2"
-      },
-      "units": [
-        [
-          1,
-          81.28,
-          228.6
-        ]
-      ],
-      "footprint": "Resistor_SMD:R_0805_2012Metric",
-      "mpn": "TBD",
+      "mpn": "CRCW0603100KFKEA",
       "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
       "group": "analog"
     },
@@ -1324,126 +1244,6 @@
       ],
       "footprint": "Resistor_SMD:R_0805_2012Metric",
       "mpn": "TBD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
-      "group": "analog"
-    },
-    {
-      "ref": "C101",
-      "lib_id": "Device:C",
-      "value": "100n",
-      "nets": {
-        "1": "X1",
-        "2": "FILTERED1"
-      },
-      "units": [
-        [
-          1,
-          233.68,
-          198.12
-        ]
-      ],
-      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm",
-      "mpn": "MKP2D031001F00JSSD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
-      "group": "analog"
-    },
-    {
-      "ref": "C102",
-      "lib_id": "Device:C",
-      "value": "100n",
-      "nets": {
-        "1": "X1",
-        "2": "FILTERED1"
-      },
-      "units": [
-        [
-          1,
-          279.4,
-          198.12
-        ]
-      ],
-      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm",
-      "mpn": "MKP2D031001F00JSSD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
-      "group": "analog"
-    },
-    {
-      "ref": "C103",
-      "lib_id": "Device:C",
-      "value": "100n",
-      "nets": {
-        "1": "Y1",
-        "2": "VMID"
-      },
-      "units": [
-        [
-          1,
-          325.12,
-          198.12
-        ]
-      ],
-      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm",
-      "mpn": "MKP2D031001F00JSSD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
-      "group": "analog"
-    },
-    {
-      "ref": "C104",
-      "lib_id": "Device:C",
-      "value": "100n",
-      "nets": {
-        "1": "X2",
-        "2": "DIFF_P"
-      },
-      "units": [
-        [
-          1,
-          370.84000000000003,
-          198.12
-        ]
-      ],
-      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm",
-      "mpn": "MKP2D031001F00JSSD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
-      "group": "analog"
-    },
-    {
-      "ref": "C105",
-      "lib_id": "Device:C",
-      "value": "100n",
-      "nets": {
-        "1": "X2",
-        "2": "DIFF_P"
-      },
-      "units": [
-        [
-          1,
-          233.68,
-          228.6
-        ]
-      ],
-      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm",
-      "mpn": "MKP2D031001F00JSSD",
-      "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
-      "group": "analog"
-    },
-    {
-      "ref": "C106",
-      "lib_id": "Device:C",
-      "value": "100n",
-      "nets": {
-        "1": "Y2",
-        "2": "VMID"
-      },
-      "units": [
-        [
-          1,
-          279.4,
-          228.6
-        ]
-      ],
-      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W5.0mm_P5.00mm",
-      "mpn": "MKP2D031001F00JSSD",
       "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
       "group": "analog"
     },
@@ -1706,25 +1506,6 @@
       ],
       "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
       "group": "analog"
-    },
-    {
-      "ref": "TP101",
-      "lib_id": "Connector:TestPoint",
-      "value": "MONO_IN",
-      "mpn": "PCB test pad, no part",
-      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
-      "nets": {
-        "1": "MONO_BIASED"
-      },
-      "units": [
-        [
-          1,
-          15.24,
-          215.9
-        ]
-      ],
-      "group": "analog",
-      "selection": "PCB feature until ELEC-004"
     },
     {
       "ref": "J301",
@@ -4397,12 +4178,478 @@
       ],
       "group": "iso",
       "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "J7",
+      "lib_id": "Connector_Generic:Conn_01x07",
+      "value": "B7B-XH-A(LF)(SN)",
+      "mpn": "JST B7B-XH-A(LF)(SN), 2.5 mm: mates OEM 7-way preamp harness (P101, manual p.14/p.24)",
+      "footprint": "Connector_JST:JST_XH_B7B-XH-A_1x07_P2.50mm_Vertical",
+      "nets": {
+        "1": "LIMIT",
+        "2": "STB",
+        "3": "N15V",
+        "4": "GND",
+        "5": "P15V",
+        "6": "PTC",
+        "7": "PRE_IN"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          45.72
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP102",
+      "lib_id": "Connector:TestPoint",
+      "value": "STB",
+      "mpn": "PCB test pad, no part; preamp auto-on not used (D-032)",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "STB"
+      },
+      "units": [
+        [
+          1,
+          88.9,
+          45.72
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "TP103",
+      "lib_id": "Connector:TestPoint",
+      "value": "PTC",
+      "mpn": "PCB test pad, no part; OEM protection LED line not driven",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "PTC"
+      },
+      "units": [
+        [
+          1,
+          139.7,
+          45.72
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R601",
+      "lib_id": "Device:R",
+      "value": "470 1W",
+      "mpn": "2512 thick film 1 W; MPN at BOM",
+      "footprint": "Resistor_SMD:R_2512_6332Metric",
+      "nets": {
+        "1": "PVDD",
+        "2": "P15_COL"
+      },
+      "units": [
+        [
+          1,
+          190.49999999999997,
+          45.72
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R602",
+      "lib_id": "Device:R",
+      "value": "10k",
+      "mpn": "1206 0.25 W; 34 V max across",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "nets": {
+        "1": "PVDD",
+        "2": "P15_BASE"
+      },
+      "units": [
+        [
+          1,
+          241.29999999999998,
+          45.72
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "D601",
+      "lib_id": "Device:D_Zener",
+      "value": "BZT52C16",
+      "mpn": "Diodes BZT52C16 (DS18004): 15.3-17.1 V @5 mA",
+      "footprint": "Diode_SMD:D_SOD-123",
+      "nets": {
+        "1": "P15_BASE",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          45.72
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "Q601",
+      "lib_id": "PS28_PRE:BCP56",
+      "value": "BCP56",
+      "mpn": "onsemi BCP56T1G: 80 V, 1 A, SOT-223",
+      "footprint": "Package_TO_SOT_SMD:SOT-223-3_TabPin2",
+      "nets": {
+        "1": "P15_BASE",
+        "2": "P15_COL",
+        "3": "P15V"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          96.52
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "C601",
+      "lib_id": "Device:C",
+      "value": "10u 25V",
+      "mpn": "X7R 1206 >=25 V; MPN at BOM",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "nets": {
+        "1": "P15V",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          88.9,
+          96.52
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "C602",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "X7R 0603 50 V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "P15_BASE",
+        "2": "GND"
+      },
+      "units": [
+        [
+          1,
+          139.7,
+          96.52
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "D602",
+      "lib_id": "Device:D",
+      "value": "S1M",
+      "mpn": "S1M 1000 V 1 A SMA (Vishay/onsemi); light load",
+      "footprint": "Diode_SMD:D_SMA",
+      "nets": {
+        "1": "T1_A",
+        "2": "NRAW"
+      },
+      "units": [
+        [
+          1,
+          190.49999999999997,
+          96.52
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "D603",
+      "lib_id": "Device:D",
+      "value": "S1M",
+      "mpn": "S1M 1000 V 1 A SMA (Vishay/onsemi); light load",
+      "footprint": "Diode_SMD:D_SMA",
+      "nets": {
+        "1": "T1_B",
+        "2": "NRAW"
+      },
+      "units": [
+        [
+          1,
+          241.29999999999998,
+          96.52
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "C603",
+      "lib_id": "Device:C_Polarized",
+      "value": "120u 63V",
+      "mpn": "Nichicon UHE1J121MPD 120 uF/63 V 8x20 (CAT.8100M)",
+      "footprint": "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm",
+      "nets": {
+        "1": "GND",
+        "2": "NRAW"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          96.52
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R603",
+      "lib_id": "Device:R",
+      "value": "470 1W",
+      "mpn": "2512 thick film 1 W; MPN at BOM",
+      "footprint": "Resistor_SMD:R_2512_6332Metric",
+      "nets": {
+        "1": "NRAW",
+        "2": "N15_COL"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          147.32
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R604",
+      "lib_id": "Device:R",
+      "value": "10k",
+      "mpn": "1206 0.25 W",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "nets": {
+        "1": "NRAW",
+        "2": "N15_BASE"
+      },
+      "units": [
+        [
+          1,
+          88.9,
+          147.32
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "D604",
+      "lib_id": "Device:D_Zener",
+      "value": "BZT52C16",
+      "mpn": "Diodes BZT52C16 (DS18004)",
+      "footprint": "Diode_SMD:D_SOD-123",
+      "nets": {
+        "1": "GND",
+        "2": "N15_BASE"
+      },
+      "units": [
+        [
+          1,
+          139.7,
+          147.32
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "Q602",
+      "lib_id": "PS28_PRE:BCP53",
+      "value": "BCP53",
+      "mpn": "onsemi BCP53T1G: -80 V, -1 A, SOT-223",
+      "footprint": "Package_TO_SOT_SMD:SOT-223-3_TabPin2",
+      "nets": {
+        "1": "N15_BASE",
+        "2": "N15_COL",
+        "3": "N15V"
+      },
+      "units": [
+        [
+          1,
+          190.49999999999997,
+          147.32
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "C604",
+      "lib_id": "Device:C",
+      "value": "10u 25V",
+      "mpn": "X7R 1206 >=25 V; MPN at BOM",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "nets": {
+        "1": "GND",
+        "2": "N15V"
+      },
+      "units": [
+        [
+          1,
+          241.29999999999998,
+          147.32
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "C605",
+      "lib_id": "Device:C",
+      "value": "100n",
+      "mpn": "X7R 0603 50 V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "GND",
+        "2": "N15_BASE"
+      },
+      "units": [
+        [
+          1,
+          292.1,
+          147.32
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "Q603",
+      "lib_id": "PS28_PRE:BSS138",
+      "value": "BSS138",
+      "mpn": "onsemi BSS138: gate on CLIP_OTW, no DC load on the TPA pin",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "nets": {
+        "1": "CLIP_OTW",
+        "2": "GND",
+        "3": "LIMIT"
+      },
+      "units": [
+        [
+          1,
+          38.1,
+          198.11999999999998
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R605",
+      "lib_id": "Device:R",
+      "value": "10k",
+      "mpn": "0603 1 %",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "P15V",
+        "2": "LIMIT"
+      },
+      "units": [
+        [
+          1,
+          88.9,
+          198.11999999999998
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "C109",
+      "lib_id": "Device:C",
+      "value": "2.2u 63V film",
+      "mpn": "Film 2.2 uF >=63 V, P5 mm (WIMA MKS2 class); MPN at BOM",
+      "footprint": "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2",
+      "nets": {
+        "1": "PRE_IN",
+        "2": "MONO_BIASED"
+      },
+      "units": [
+        [
+          1,
+          139.7,
+          198.11999999999998
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R110",
+      "lib_id": "Device:R",
+      "value": "8.87k",
+      "mpn": "0603 1 % thin film; U2A gain 1+8.87k/10k = 1.887",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "BUFFERED",
+        "2": "U2_FB"
+      },
+      "units": [
+        [
+          1,
+          190.49999999999997,
+          198.11999999999998
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
+    },
+    {
+      "ref": "R111",
+      "lib_id": "Device:R",
+      "value": "10k",
+      "mpn": "0603 1 % thin film",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "U2_FB",
+        "2": "VMID"
+      },
+      "units": [
+        [
+          1,
+          241.29999999999998,
+          198.11999999999998
+        ]
+      ],
+      "group": "pre",
+      "selection": "STUDY CANDIDATE; footprint not audited; MPN per capture"
     }
   ],
   "source_sha256": {
     "kicad/core-oem-refined/ps28-modern.kicad_sch": "134bdf8fa93e3a66d99a5d556bd45cb9c5289ed5c3b126273db16ef3ad38a2ce",
     "kicad/analog-protected/analog-protected.kicad_sch": "f46adefe0383358837e4eb49a41fe21b8017f39b549f789c10675ca4ac277303",
-    "scripts/integrate_candidate.py": "2d0c8cc93b037c650e50f0cecadc71d62c01827cf2a60954c97a135fd3607a46",
+    "scripts/integrate_candidate.py": "9e9da0dd2a824e8c1657531de3820559f929353b4cc2e9660f5b0f99928e2f99",
     "kicad/power-d021/power-d021.kicad_sch": "b27d4cc1ab8930527ff147b3d1488ca8c04037574b6009157686842a3d801e83",
     "kicad/seq-d020/seq-d020.kicad_sch": "0d6a219fd97f4594ea756f839a9c2f616b1174abb3ba09accabca21839d0b884",
     "scripts/create_power_d021.py": "fe24c26c60ad080f2117b629c4b9ec7f864ad851574cc90914d95e1e8cfe3162",

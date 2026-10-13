@@ -4,6 +4,18 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 
 ## [Unreleased]
 
+### Front-end, placement final, bloco térmico e cobre (D-032/D-033) — 2026-10-12
+- J5: modelo 3D JST B2P-VH feito no Blender (`scripts/blender_jst_vh_b2p.py`).
+- D-032: front-end = placas originais de preamp/limiter; J7 JST XH 7 vias,
+  ±15 V discretos, LIMIT por CLIP_OTW, ganho 1,887 no U2A. LR4 onboard removido.
+- Placement revisado: LC colado ao U1 (laço PWM ~10 mm), buck sob L301, retificador
+  na coluna do transformador. Bloco térmico (`mechanical/thermal-block.md`, STL e
+  modelo 3D) com dois furos M3 metalizados em GND (H5/H6).
+- Cobre: planos GND (In1) e PVDD (In2), fills GND, fanout fixo do U1 e vias de GND.
+- Rota: 2.343 trilhas, 310 vias; ERC 0, paridade 0; 56 conexões abertas e 4
+  starved_thermal a fechar à mão. Nova task PCB-004 (test points, LEDs, fan).
+- ELEC-002 e ELEC-004 concluídas.
+
 ### Placement com bloco térmico (D-031) — 2026-10-12
 - Medidas finais do proprietário registradas (perfil, woofer, T1); nenhuma pendente.
 - Keepout do bloco térmico do TPA3255 no placer; J6 ao lado para trança GND.

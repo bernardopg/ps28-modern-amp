@@ -39,7 +39,7 @@ class RenderGalleryTests(unittest.TestCase):
                 if name.endswith(".png")
                 else content.startswith(b"GIF89a")
             )
-        footprints = {"selected": 47, "oem": 47, "system": 209}  # 205 parts + 4 board-only OEM holes
+        footprints = {"selected": 47, "oem": 47, "system": 223}  # 217 parts + 4 OEM holes + 2 block clamps
         self.assertEqual(set(manifest["designs"]), set(footprints))
         for name, entry in manifest["designs"].items():
             content = (ROOT / entry["pcb"]).read_bytes()
@@ -50,7 +50,7 @@ class RenderGalleryTests(unittest.TestCase):
             if name != "system":  # system candidate carries datasheet envelope models
                 self.assertIn("U1", entry["without_available_model"])
             else:
-                self.assertEqual(entry["without_available_model"], ["J5", "J6", "TP101"])  # no stock 3D model, GND bond pad, test pad
+                self.assertEqual(entry["without_available_model"], ["H6", "J6", "TP102", "TP103"])  # clamp hole (block model on H5), GND bond pad, test pads
             if name != "system":  # system candidate carries Wurth CAD for C1/L1/L2
                 self.assertIn("L1", entry["without_available_model"])
             self.assertEqual(len(entry["model_audit"]), footprints[name])

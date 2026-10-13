@@ -1,7 +1,7 @@
 ---
 id: ELEC-002
 title: Simular front-end físico e tolerâncias
-status: To Do
+status: Done
 milestone: M2
 sprint: S03
 depends_on: ELEC-001, PWR-001
@@ -16,10 +16,12 @@ Simular front-end físico e tolerâncias, atendendo docs/requirements.md e gates
 
 ## Critérios de aceite
 
-- [ ] Modelo do op-amp selecionado/VMID real com licença e compatibilidade (D-016: OPA1656 candidato)
-- [ ] LR4/ganho/headroom/impedância/startup/fase e tolerâncias verificados
+- [x] Modelo do op-amp selecionado/VMID real com licença e compatibilidade (D-016: OPA1656 candidato)
+- [x] LR4/ganho/headroom/impedância/startup/fase e tolerâncias verificados
 
 ## Evidência
+
+2026-10-12 (D-032): escopo reduzido — o filtro é o original. Restam VMID/ganho do caminho onboard, já simulados (OPA1656, `docs/analog-capture.md`) e conferidos no cálculo de ganho de D-032.
 
 2026-10-12: desbloqueada (ELEC-001 e PWR-001 Done).
 

@@ -17,7 +17,7 @@ class SystemCandidateTests(unittest.TestCase):
         d = json.loads(
             (ROOT / "kicad/system-candidate/system-manifest.json").read_text()
         )
-        self.assertEqual(len(d["parts"]), 205)
+        self.assertEqual(len(d["parts"]), 217)
         self.assertEqual(d["unassigned_footprints"], [])
         self.assertTrue(d["signal_bridge_connected"])  # only via K501, checked below
         self.assertTrue(d["isolation_mute_supervisor_implemented"])
@@ -73,23 +73,30 @@ class SystemCandidateTests(unittest.TestCase):
         kx0, ky0, kx1, ky1 = m["profile_keepout"]
         pcb = (ROOT / "kicad/system-candidate/system-candidate.kicad_pcb").read_text()
         blocks = re.findall(r'\(footprint "[^"]+"\s*\(layer "([FB])\.Cu"\)(?:.|\n)*?\(at ([-\d.]+) ([-\d.]+)', pcb)
-        self.assertEqual(len(blocks), 209)
+        self.assertEqual(len(blocks), 223)  # + 4 OEM holes + 2 block clamps
         for side, x, y in blocks:
             x, y = float(x), float(y)
             self.assertTrue(x0 < x < x1 and y0 < y < y1, (x, y))
             if side == "F":
                 self.assertFalse(kx0 < x < kx1 and ky0 < y < ky1, (x, y))
 
-    def test_d030_power_parts_and_unrouted_board_for_manual_layout(self):
+    def test_d030_d032_parts_and_layout_with_planes(self):
         d = json.loads((ROOT / "kicad/system-candidate/system-manifest.json").read_text())
         refs = {p["ref"]: p for p in d["parts"]}
         self.assertIn("B3P-VH", refs["J301"]["mpn"])
         self.assertEqual(refs["D301"]["value"], "P600J")
         self.assertIn("D30.0mm", refs["C301"]["footprint"])
-        self.assertEqual(refs["TP101"]["nets"], {"1": "MONO_BIASED"})
-        # D-030: autoroute study discarded; routing is manual (PCB-002).
+        # D-032: OEM preamp harness on J7 in manual p.24 order; IN reaches the driver via C109.
+        self.assertEqual(refs["J7"]["nets"], {"1": "LIMIT", "2": "STB", "3": "N15V", "4": "GND",
+                                              "5": "P15V", "6": "PTC", "7": "PRE_IN"})
+        self.assertEqual(refs["C109"]["nets"], {"1": "PRE_IN", "2": "MONO_BIASED"})
+        self.assertNotIn("R103", refs)  # onboard LR4 removed, OEM crossover used
+        self.assertEqual(refs["Q603"]["nets"]["1"], refs["U1"]["nets"]["21"])  # LIMIT from CLIP_OTW
         pcb = (ROOT / "kicad/system-candidate/system-candidate.kicad_pcb").read_text()
-        self.assertEqual(pcb.count("(segment"), 0)
+        for plane in ("GND_PLANE", "PVDD_PLANE", "GND_FILL_TOP", "GND_FILL_BOTTOM"):
+            self.assertIn(f'"{plane}"', pcb)
+        self.assertGreater(pcb.count("(segment"), 500)
+        self.assertIn("thermal_block.wrl", pcb)
 
     def test_native_capture_and_actual_pad_nets_are_equal(self):
         folder = ROOT / "kicad/system-candidate"
@@ -120,7 +127,7 @@ class SystemCandidateTests(unittest.TestCase):
                 ].strip('"')
                 self.assertEqual(net, nets[ref, number], ref + "." + number)
                 checked += 1
-        self.assertEqual(checked, 581)
+        self.assertEqual(checked, 614)
 
     def test_multiunit_paths_and_no_replace_publication(self):
         folder = ROOT / "kicad/system-candidate"

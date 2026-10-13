@@ -16,6 +16,7 @@ from pathlib import Path
 
 from create_analog_capture import build, child
 from create_core_draft import parse, q, render, uid, walk
+from create_pre_interface import analog_changes, parts as pre_parts, symbols as pre_symbols
 from create_iso_d019 import dgk_footprint, local_symbols as iso_symbols, parts as iso_parts
 from create_power_d021 import parts as power_parts, tps3700_symbol, write_local_library
 from create_seq_d020 import lp2985_symbol, parts as seq_parts
@@ -50,7 +51,8 @@ PLATES = {("C20", "2"): "INA_ISO", ("C21", "2"): "INB_ISO"}
 def system_parts():
     """D-021 power and D-020 sequencing captures, minus logical interfaces."""
     out = []
-    for group, source in (("power", power_parts()), ("seq", seq_parts()), ("iso", iso_parts())):
+    for group, source in (("power", power_parts()), ("seq", seq_parts()), ("iso", iso_parts()),
+                          ("pre", pre_parts())):
         for p in source:
             if p["ref"] in LOGICAL:
                 continue
@@ -68,6 +70,7 @@ def bank_position(p, index):
         "power": (190, 130, 40, 32, 6),
         "seq": (420, 25, 22, 18, 8),
         "iso": (420, 185, 22, 20, 8),
+        "pre": (420, 300, 22, 20, 8),
     }[group]
     return x0 + (index % cols) * dx, y0 + (index // cols) * dy
 
@@ -101,13 +104,8 @@ def candidates():
             "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending"
         )
         p["group"] = "analog"
-    # Mono input boundary of the analog study until the D-022 front-end (ELEC-004) exists:
-    # a test pad gives the global label a pin and a bench injection point.
-    parts.append({"ref": "TP101", "lib_id": "Connector:TestPoint", "value": "MONO_IN",
-                  "mpn": "PCB test pad, no part", "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
-                  "nets": {"1": "MONO_BIASED"}, "units": [(1, 15.24, 215.9)], "group": "analog",
-                  "selection": "PCB feature until ELEC-004"})
-    return parts
+    # D-032: the OEM preamp/limiter do the crossover; IN arrives via C109 (pre group).
+    return analog_changes(parts)
 
 
 def replace_strings(node, mapping):
@@ -138,6 +136,7 @@ def block(parts, namespace, warning):
             "PS28_POWER:TPS3700DDC": tps3700_symbol(),
             "PS28_SEQ:LP2985-33DBV": lp2985_symbol(),
             **{x[1].strip('"'): x for x in iso_symbols()},
+            **pre_symbols(),
         },
     )
     return parse(sch)
@@ -218,14 +217,12 @@ def schematic(parts, extra=()):
             "no_connect",
         ):
             move(item, 304.8)
-            if item[0] == "label" and item[1] == q("MONO_BIASED"):
-                item[0] = "global_label"
-                item.insert(2, ["shape", "input"])
             root.append(item)
     for group, dx, dy, warning in (
         ("power", 558.8, 0, "D-021 POWER: FOOTPRINTS NOT AUDITED; NEVER BRIDGE T1_A-T1_B"),
         ("seq", 558.8, 330.2, "D-020/D-024 DISCRETE SEQUENCER"),
         ("iso", 990.6, 0, "D-024 INPUT ISOLATION RELAY / MUTE / DC WINDOWS"),
+        ("pre", 990.6, 381, "D-032 OEM PREAMP/LIMITER INTERFACE: P101, +/-15 V, LIMIT FROM CLIP_OTW"),
     ):
         members = [p for p in extra if p["group"] == group]
         if not members:
@@ -296,12 +293,16 @@ def oem_mechanics():
     keepout = (x0 + top_gap, back - u["outer_width"], x0 + top_gap + u["length"], back)
     to3p = [(x0 + top_gap + d, back - u["outer_width"]) for d in
             (u["to3p_holes"]["from_profile_ends_mm"], u["length"] - u["to3p_holes"]["from_profile_ends_mm"])]
+    # D-031: two plated M3 holes at the pinless ends of U1 (90.5, 60.5) clamp the thermal
+    # block onto the PowerPAD from below, as on the TI EVM; block is GND (SLASEA8A pin table).
+    block_holes = [(79.0, 60.5), (102.0, 60.5)]
     return {"outline": (x0, y0, x0 + w, back), "holes": holes, "profile_keepout": keepout,
-            "to3p_holes_at_leg_face": to3p, "hole_thread": pcb["mounting_holes"]["thread"]}
+            "to3p_holes_at_leg_face": to3p, "hole_thread": pcb["mounting_holes"]["thread"],
+            "block_holes": block_holes}
 
 
 BODY_MODELS = {"U1": "HTSSOP-44_TopEP_DDV.wrl", "J301": "JST_VH_B3P-VH.wrl",
-               "J1": "WE_WR-TBL_691137710002.wrl"}
+               "J1": "WE_WR-TBL_691137710002.wrl", "J5": "JST_VH_B2P-VH.wrl"}
 
 
 def set_body_model(fp, pcbnew, name):
@@ -381,6 +382,23 @@ def apply_oem_mechanics(pcb, pcbnew):
         hole.SetExcludedFromPosFiles(True)
         set_body_model(hole, pcbnew, "M3_pan_head.wrl")
         pcb.Add(hole)
+    for i, (x, y) in enumerate(mech["block_holes"], len(mech["holes"]) + 1):
+        hole = pcbnew.FootprintLoad(library, "MountingHole_3.2mm_M3_Pad_Via")
+        hole.SetReference(f"H{i}")
+        hole.SetValue("Thermal block clamp M3 (GND)")
+        hole.SetFPID(pcbnew.LIB_ID("MountingHole", "MountingHole_3.2mm_M3_Pad_Via"))
+        hole.SetPosition(point(x, y))
+        hole.SetBoardOnly(True)
+        hole.SetExcludedFromBOM(True)
+        hole.SetExcludedFromPosFiles(True)
+        gnd = pcb.FindNet("/GND")
+        for pad in hole.Pads():
+            pad.SetNet(gnd)
+        if i == len(mech["holes"]) + 1:  # block model origin = H5 (scripts/blender_thermal_block.py)
+            set_body_model(hole, pcbnew, "thermal_block.wrl")
+        pcb.Add(hole)
+    rect((64.0, 52.0, 117.0, 68.0), pcbnew.Dwgs_User, 0.15)
+    note("THERMAL BLOCK (mechanical/thermal-block.md)", 90.5, 51)
     note("MEASURED OEM 154x81 (TAPE, ~1 mm) - NOT FABRICATION", 97, 16)
     return mech
 
@@ -419,7 +437,7 @@ def board(staged, parts, inventory):
             pad.SetNet(nets["/" + name])
     for p in parts:
         for plain_name in filter(None, p["nets"].values()):
-            name = plain_name if plain_name == "MONO_BIASED" else "/" + plain_name
+            name = "/" + plain_name
             if name not in nets:
                 n = pcbnew.NETINFO_ITEM(pcb, name)
                 pcb.Add(n)
@@ -450,7 +468,7 @@ def board(staged, parts, inventory):
             number = pad.GetNumber()
             if number and p["nets"].get(number):
                 plain = p["nets"][number]
-                pad.SetNet(nets[plain if plain == "MONO_BIASED" else "/" + plain])
+                pad.SetNet(nets["/" + plain])
         pcb.Add(fp)
     result = subprocess.run(
         [
@@ -526,7 +544,7 @@ def board(staged, parts, inventory):
 
     place(pcb, pcbnew, oem_mechanics(), inventory)
     for fp in pcb.GetFootprints():
-        if fp.GetReference() == "TP101":
+        if fp.GetReference().startswith("TP"):
             fp.SetExcludedFromBOM(False)  # follow the symbol (stock TestPoint footprint is BOM-excluded)
         # Dense board: reference designators go to the assembly (Fab) layer, not silkscreen.
         fp.Reference().SetLayer(pcbnew.B_Fab if fp.IsFlipped() else pcbnew.F_Fab)
@@ -694,7 +712,8 @@ def generate(out):
         (stage / (PROJECT + ".kicad_sch")).write_text(render(tree) + "\n")
         shutil.copytree(SOURCE / "libraries", stage / "libraries")
         for nickname, symbols in (("PS28_POWER", [tps3700_symbol()]), ("PS28_SEQ", [lp2985_symbol()]),
-                                  ("PS28_ISO", iso_symbols())):
+                                  ("PS28_ISO", iso_symbols()),
+                                  ("PS28_PRE", list(pre_symbols().values()))):
             libs = []
             for symbol in symbols:
                 library = list(symbol)
@@ -730,7 +749,7 @@ def generate(out):
             stage / "libraries",
         )
         (stage / "sym-lib-table").write_text(
-            '(sym_lib_table(version 7)(lib(name "PS28")(type "KiCad")(uri "${KIPRJMOD}/libraries/PS28.kicad_sym")(options "")(descr "Existing core"))(lib(name "PS28_ANALOG")(type "KiCad")(uri "${KIPRJMOD}/libraries/PS28_ANALOG.kicad_sym")(options "")(descr "Existing flattened OPA"))(lib(name "PS28_POWER")(type "KiCad")(uri "${KIPRJMOD}/libraries/PS28_POWER.kicad_sym")(options "")(descr "TI TPS3700 SBVS187G p.4"))(lib(name "PS28_SEQ")(type "KiCad")(uri "${KIPRJMOD}/libraries/PS28_SEQ.kicad_sym")(options "")(descr "TI LP2985 SLVS522S Table 4-1"))(lib(name "PS28_ISO")(type "KiCad")(uri "${KIPRJMOD}/libraries/PS28_ISO.kicad_sym")(options "")(descr "TI SCDS420E, Diodes DS30036")))\n'
+            '(sym_lib_table(version 7)(lib(name "PS28")(type "KiCad")(uri "${KIPRJMOD}/libraries/PS28.kicad_sym")(options "")(descr "Existing core"))(lib(name "PS28_ANALOG")(type "KiCad")(uri "${KIPRJMOD}/libraries/PS28_ANALOG.kicad_sym")(options "")(descr "Existing flattened OPA"))(lib(name "PS28_POWER")(type "KiCad")(uri "${KIPRJMOD}/libraries/PS28_POWER.kicad_sym")(options "")(descr "TI TPS3700 SBVS187G p.4"))(lib(name "PS28_SEQ")(type "KiCad")(uri "${KIPRJMOD}/libraries/PS28_SEQ.kicad_sym")(options "")(descr "TI LP2985 SLVS522S Table 4-1"))(lib(name "PS28_ISO")(type "KiCad")(uri "${KIPRJMOD}/libraries/PS28_ISO.kicad_sym")(options "")(descr "TI SCDS420E, Diodes DS30036"))(lib(name "PS28_PRE")(type "KiCad")(uri "${KIPRJMOD}/libraries/PS28_PRE.kicad_sym")(options "")(descr "onsemi BCP56/BCP53/BSS138")))\n'
         )
         (stage / "fp-lib-table").write_text(
             '(fp_lib_table(version 7)(lib(name "PS28")(type "KiCad")(uri "${KIPRJMOD}/libraries/PS28.pretty")(options "")(descr "Existing audited core lands"))(lib(name "PS28_ANALOG")(type "KiCad")(uri "${KIPRJMOD}/libraries/PS28_ANALOG.pretty")(options "")(descr "Candidate passives")))\n'

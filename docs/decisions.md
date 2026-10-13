@@ -272,3 +272,25 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   B2P-VH: chicote do woofer é 2 vias VH (P102 no manual p.14), pluga sem emenda;
   vermelho = SPK_P (+), preto = SPK_N. Desenho do bloco: a fazer com a rota (PCB-002).
 
+- D-032 — **Front-end = placas originais de preamp e limiter reaproveitadas.**
+  2026-10-12, ELEC-004, por delegação do proprietário ("aproveitar o que faz sentido").
+  As placas originais já entregam RCA L/R e LFE, LR4 24 dB/oit. 50–150 Hz contínuo
+  (VR202), LEVEL, PHASE, subsônico, limiter e auto-on nos furos originais do painel
+  (manual p.22–23), ligadas à principal só pelo chicote de 7 vias. A placa nova
+  substitui o lado P101 (manual p.24):
+  - J7 JST B7B-XH-A (2,5 mm), ordem do manual: 1 LIMIT, 2 STB, 3 −15 V, 4 GND,
+    5 +15 V, 6 PTC, 7 IN. Confere com as leituras de 2026-10-10 (pino 4 = GND,
+    5 = trilho com bulk, 7 = alta impedância).
+  - ±15 V: seguidores discretos como Q117/Q119 originais — BCP56/BCP53 com zener
+    BZT52C16; +15 V do PVDD, −15 V de semiciclos negativos de T1 (S1M + 120 µF/63 V).
+  - Áudio: IN → C109 2,2 µF filme → divisor 1k/100k em VMID → U2A ganho 1,887 →
+    U3 driver diferencial → K501 (D-019/D-024). Com a sensibilidade original
+    (0,670 Vrms em plena potência, ganho 1+56k/1,5k da p.24), chegam 2,505 Vrms
+    diferenciais contra 2,520 Vrms necessários (TPA 21,5 dB, −1,33 dB da série 3,3 kΩ).
+  - LIMIT: BSS138 com gate no CLIP_OTW; em clip/OTW o LIMIT sobe a +15 V (R605) e
+    sai da janela ±7 V do comparador U301 original. Hipótese funcional, confirmar na
+    bancada. STB e PTC ficam em pads de teste (auto-on e LED de proteção sem uso).
+  - O LR4 onboard (R103–R106, C101–C106) sai: o crossover é o original.
+  Risco: placas originais com 19 anos (eletrolíticos C2xx/C3xx); se falharem, ELEC-004
+  volta com front-end novo. Gerador `scripts/create_pre_interface.py`.
+

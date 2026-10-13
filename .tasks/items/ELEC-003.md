@@ -4,7 +4,7 @@ title: Capturar schematic e revisar ERC
 status: To Do
 milestone: M2
 sprint: S03
-depends_on: ELEC-002
+depends_on: ELEC-001
 updated: 2026-10-10
 ---
 
