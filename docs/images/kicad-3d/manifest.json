@@ -1,6 +1,6 @@
 {
   "renderer": "10.0.7",
-  "source_commit": "3d769fd66b2a714b6027b5c161a054bd30d50300",
+  "source_commit": "0ad2062d193066da5123a7cd5cdcaa9a89cf4c3b",
   "method": "kicad-cli pcb render; Pillow adds status bands and encodes GIFs only",
   "generator_sha256": "ad1c3e78c491e16f64791c9f51fd2618e85ab0d8353a03c4e4b0bc6e6dd1cacd",
   "electrical_context": {
@@ -1732,7 +1732,7 @@
     },
     "system": {
       "pcb": "kicad/system-candidate/system-candidate.kicad_pcb",
-      "pcb_sha256": "ee1b32c05cdf2e3173db706ca5a43002cb5a36ecec8a6e6da08f252c9f167679",
+      "pcb_sha256": "e876eefeea45aff0a4dc6a15c389612e446e88174bb145340225f2fa110dea5e",
       "footprints": 269,
       "without_available_model": [
         "H6",
@@ -4553,17 +4553,17 @@
     }
   },
   "asset_sha256": {
-    "oem-bottom.png": "184636e40706e9b306b9cf70b0f75ab21aff09a0751b1880015232e2e227e090",
-    "oem-isometric.png": "de1f82c8be97877ee482e4d16220be6243177dd2252b29ee9cbe08c032c9665a",
-    "oem-orbit.gif": "f44f2704439de1f5d9fd6bbe60147a88660ee49e8831caff072939eceee3d119",
-    "oem-top.png": "7b43f6402ef642855794209acaa8f81c6e59851a6674ee0f2f388e9b090f4ea3",
-    "selected-bottom.png": "1ba7694c179d4a8d7c8f9df45f57d0c4a5baaf4fb3e0b02a9ed81e57003be13b",
-    "selected-isometric.png": "a08ef8fd2f09dfd336c499a01bd2e0382fa63d533cc53137c0f28efbfedae9b0",
-    "selected-orbit.gif": "514a22ffd6e66fef31b7094b8d396719e0574be57e4d686415d73f73754df3a1",
-    "selected-top.png": "bc091af27bfb9efcad7a39d3c96e4ff017e0667f36c23e2b006b4e83231e2333",
-    "system-bottom.png": "eadff5747d57faa53affeee6d95177f32b58d67d59c6ab996dbf13284c793526",
-    "system-isometric.png": "69509b895cf2d7d01fba93f86bf097aa54138ddbe3f24fd263ca5f92648d9d89",
-    "system-orbit.gif": "b09e5ab979156edd32bf0786e0dc7a8cfb43f475c3ed84fb333e28e0d01565fe",
-    "system-top.png": "a04c422c8ee4b2feb2d82476ead1c6827bc564011b405fdc5eccf77ca3b251a4"
+    "oem-bottom.png": "8587be92c6c4b5d6b8bd267fa8546ed1df4c6f2413d2c62673f3b54a23164374",
+    "oem-isometric.png": "8b09fb1032b606a1f16fcc062ccee0ed8173d2c7ca9c79ec4cb9f71b161d9d58",
+    "oem-orbit.gif": "10a78bd74ab3b9e1ef05c030252f8a9390eafbbcb37712bd2422a613992cf605",
+    "oem-top.png": "10337f6822339a4f6424e261f8d172b55596beab209fdbc7baaab1e553ffc457",
+    "selected-bottom.png": "b450a75b21c189251bde70b829ad0bbe905fa1551da104aceb7679359d159a2e",
+    "selected-isometric.png": "d1084ab7b73dca3509631c7db5b993f214bd115eece22a3f8b4ef2a671b95433",
+    "selected-orbit.gif": "8981bf0b620441b621a2e6ac1340b12c444359246419b1bad42c2162634fbac3",
+    "selected-top.png": "c23d0ebe938d74fa84e5b4f85b801820321f6b12d96785461537299aa952e270",
+    "system-bottom.png": "1a51b070746e5f96ad83caa9a40b5dbc31460e401464c02a7d2db70ef0cfe864",
+    "system-isometric.png": "adb668f2023f6c153f3471dbb0354dc51d934957b012f97441708baf27de8fff",
+    "system-orbit.gif": "e4a4590b5ab04ad60f69021fe3c73337a94a97e20b3ad4c2da67e2340dd1868e",
+    "system-top.png": "b2afa11908a647dcd44847f1d638c27e47235b4be9cbb72731587de68058e5af"
   }
 }

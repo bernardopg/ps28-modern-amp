@@ -11,6 +11,7 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 - Re-rota: 2.973 trilhas, 404 vias; ERC 0, paridade 0; 59 conexões abertas e 3
   starved_thermal para fechamento manual; 3 trechos PVDD/T1_A com isolamento
   0,118 mm removidos. PCB-001 e PCB-004 concluídas.
+- 2ª passada `--resume`: 3.073 trilhas, 407 vias, DRC 0 violações; 58 abertas.
 
 ### Front-end, placement final, bloco térmico e cobre (D-032/D-033) — 2026-10-12
 - J5: modelo 3D JST B2P-VH feito no Blender (`scripts/blender_jst_vh_b2p.py`).

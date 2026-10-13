@@ -38,7 +38,9 @@ def zone(pcb, pcbnew, net, layer, points, priority, name, solid=False):
     z.SetAssignedPriority(priority)
     z.SetLocalClearance(pcbnew.FromMM(0.3))
     z.SetMinThickness(pcbnew.FromMM(0.25))
-    z.SetPadConnection(pcbnew.ZONE_CONNECTION_FULL if solid else pcbnew.ZONE_CONNECTION_THT_THERMAL)
+    # shortcut: outer GND fills connect THT pads solid (no spokes) so dense pads never
+    # starve; preheat/iron power for hand soldering, revisit if assembly complains.
+    z.SetPadConnection(pcbnew.ZONE_CONNECTION_FULL)
     poly = pcbnew.SHAPE_POLY_SET()
     poly.NewOutline()
     for x, y in points:
@@ -231,17 +233,22 @@ def main():
 
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--passes", type=int, default=20)
+    ap.add_argument("--resume", action="store_true",
+                    help="keep the existing copper and route only the open connections")
     args = ap.parse_args()
     WORK.mkdir(parents=True, exist_ok=True)
     pcb = pcbnew.LoadBoard(str(BOARD))
-    if any(True for _ in pcb.GetTracks()):
-        raise SystemExit("Board already has copper; regenerate the candidate first")
-    planes(pcb, pcbnew)
-    tpa = fanout_tpa(pcb, pcbnew)
-    placed, missed = gnd_pad_vias(pcb, pcbnew)
-    removed = prune(pcb, pcbnew)
-    print(f"fanout: {tpa} TPA vias, {placed} GND pad vias, {removed} pruned by DRC, "
-          f"no room for {missed}")
+    if args.resume:
+        pass  # existing tracks/vias go to the DSN as fixed wiring
+    elif any(True for _ in pcb.GetTracks()):
+        raise SystemExit("Board already has copper; regenerate the candidate or use --resume")
+    else:
+        planes(pcb, pcbnew)
+        tpa = fanout_tpa(pcb, pcbnew)
+        placed, missed = gnd_pad_vias(pcb, pcbnew)
+        removed = prune(pcb, pcbnew)
+        print(f"fanout: {tpa} TPA vias, {placed} GND pad vias, {removed} pruned by DRC, "
+              f"no room for {missed}")
     dsn, ses = WORK / "system.dsn", WORK / "system.ses"
     if not pcbnew.ExportSpecctraDSN(pcb, str(dsn)):
         raise SystemExit("DSN export failed")
