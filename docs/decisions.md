@@ -294,3 +294,9 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   Risco: placas originais com 19 anos (eletrolíticos C2xx/C3xx); se falharem, ELEC-004
   volta com front-end novo. Gerador `scripts/create_pre_interface.py`.
 
+- D-034 — **Placement afrouxado para rota.** 2026-10-13, pedido do proprietário.
+  Anel livre de 3 mm em volta do U1 nas duas faces (só capacitores do núcleo);
+  grupos iso → esquerda/fundo, seq → lado do T1/fundo, dbg → direita/topo. Folga entre
+  courtyards fica 0,5 mm (≥0,6 mm não cabe com as âncoras de potência). Conexões
+  abertas caíram de 58 para 6.
+

@@ -11,7 +11,7 @@ core and power parts near their block on top, logic/analog SMD on the bottom.
 import numpy as np
 
 GRID = 0.25
-GAP = 0.5  # courtyard-to-courtyard spacing
+GAP = 0.5  # courtyard-to-courtyard spacing (0.6+ no longer fits the fixed power anchors)
 EDGE = 0.75
 HOLE_KEEP = 4.0  # M3 head / L-bracket clearance radius
 
@@ -48,10 +48,13 @@ FIXED = {
 BLOCK = (64.0, 53.5, 117.0, 68.0)  # block body y 54..67 + 0.5 mm
 LOW_UNDER_BLOCK = ("R", "C", "D", "U")
 # Packing targets per group: (top x, top y), preferred side.
+# Routing room (D-034): logic groups kept away from U1 so its fanout and the PWM/INPUT
+# pins have channels; only the core group (U1 decoupling/bootstrap) packs next to it.
 TARGETS = {None: ((90.5, 55.0), "top"), "power": ((150.0, 55.0), "top"),
-           "seq": ((60.0, 45.0), "bottom"), "iso": ((90.0, 62.0), "bottom"),
+           "seq": ((140.0, 85.0), "bottom"), "iso": ((45.0, 75.0), "bottom"),
            "analog": ((40.0, 50.0), "bottom"), "pre": ((60.0, 30.0), "bottom"),
-           "dbg": ((100.0, 75.0), "top")}  # probes/LEDs on the component side when room
+           "dbg": ((140.0, 60.0), "top")}
+U1_RING = (80.0, 52.0, 101.0, 69.0)  # U1 courtyard + ~3 mm: core group only, both sides  # probes/LEDs on the component side when room
 # LM5164 buck loop stays under its inductor L301 (switch node/input caps short).
 BUCK = ((160.0, 77.0), "bottom")
 
@@ -78,6 +81,8 @@ def place(pcb, pcbnew, mech, parts):
     occ["top"] |= (cx >= kx0) & (cx <= kx1) & (cy >= ky0) & (cy <= ky1)
     bx0, by0, bx1, by1 = BLOCK
     block = (cx >= bx0) & (cx <= bx1) & (cy >= by0) & (cy <= by1)
+    rx0, ry0, rx1, ry1 = U1_RING
+    ring = (cx >= rx0) & (cx <= rx1) & (cy >= ry0) & (cy <= ry1)
 
     def mm(v):
         return pcbnew.ToMM(v)
@@ -108,8 +113,10 @@ def place(pcb, pcbnew, mech, parts):
         fp.SetOrientationDegrees(rot)
         fp.SetPosition(pcbnew.VECTOR2I(pcbnew.FromMM(x), pcbnew.FromMM(y)))
 
-    def fits(side, w, h, target, tall=False, tht=False):
+    def fits(side, w, h, target, tall=False, tht=False, core=True):
         grid = occ[side] | block if tall and side == "top" else occ[side]
+        if not core:
+            grid = grid | ring
         if tht:  # through-hole leads also need the other side free
             grid = grid | occ["bottom" if side == "top" else "top"]
         sat = np.pad(grid.astype(np.int32).cumsum(0).cumsum(1), ((1, 0), (1, 0)))
@@ -136,7 +143,7 @@ def place(pcb, pcbnew, mech, parts):
             for rot in rotations:
                 put(fp, 0, 0, rot, side)
                 l, t, r, b = box(fp)
-                pos = fits(side, r - l, b - t, target, tall, not smd)
+                pos = fits(side, r - l, b - t, target, tall, not smd, groups.get(ref) is None)
                 if pos:
                     options.append((pos, rot))
             if options:

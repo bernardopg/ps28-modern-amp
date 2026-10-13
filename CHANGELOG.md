@@ -4,6 +4,10 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 
 ## [Unreleased]
 
+### Placement afrouxado e nova rota (D-034) — 2026-10-13
+- Anel livre em volta do U1; lógica afastada. Rota: 3.343 trilhas, 448 vias,
+  ERC 0, DRC 0, paridade 0. Conexões abertas 58 → 6 (todas curtas, junto do U1).
+
 ### PCB-004 — test points, LEDs e fan — 2026-10-13
 - 21 test points com nome no silk, 6 LEDs de status (PVDD, RAILS_OK, RUN, AUDIO,
   FAULT, CLIP_OTW) e saída de fan 12 V chaveada com jumper de modo.
