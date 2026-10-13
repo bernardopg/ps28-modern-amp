@@ -61,3 +61,7 @@ pcb-readiness:
 route-system:
 	python3 scripts/make_body_models.py
 	python3 scripts/route_system_candidate.py
+
+.PHONY: fab
+fab:
+	python3 scripts/export_fab.py

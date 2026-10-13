@@ -1,6 +1,6 @@
 {
   "renderer": "10.0.7",
-  "source_commit": "b6f292ed84fc3f2745a35b5d89830e4e0e801c59",
+  "source_commit": "e4d7970018023a7facd58f885b7aa267a6ab52a4",
   "method": "kicad-cli pcb render; Pillow adds status bands and encodes GIFs only",
   "generator_sha256": "ad1c3e78c491e16f64791c9f51fd2618e85ab0d8353a03c4e4b0bc6e6dd1cacd",
   "electrical_context": {
@@ -1732,7 +1732,7 @@
     },
     "system": {
       "pcb": "kicad/system-candidate/system-candidate.kicad_pcb",
-      "pcb_sha256": "06fbad25c86c143d8d538eff70edbab3f0fe522632b373ed335e2b8b67ca108e",
+      "pcb_sha256": "daf0e74954e243a6a876fc6d0b216fe96fc8032d6fe2b674584974fea1627eeb",
       "footprints": 269,
       "without_available_model": [
         "H6",
@@ -2371,15 +2371,6 @@
           "footprint": "Resistor_SMD:R_0603_1608Metric",
           "models": [
             "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step"
-          ],
-          "missing_models": [],
-          "has_available_model": true
-        },
-        {
-          "reference": "C8",
-          "footprint": "Capacitor_SMD:C_0402_1005Metric",
-          "models": [
-            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
           ],
           "missing_models": [],
           "has_available_model": true
@@ -3438,6 +3429,15 @@
           "footprint": "Capacitor_SMD:C_0603_1608Metric",
           "models": [
             "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+          ],
+          "missing_models": [],
+          "has_available_model": true
+        },
+        {
+          "reference": "C8",
+          "footprint": "Capacitor_SMD:C_0402_1005Metric",
+          "models": [
+            "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
           ],
           "missing_models": [],
           "has_available_model": true
@@ -4553,17 +4553,17 @@
     }
   },
   "asset_sha256": {
-    "oem-bottom.png": "759a67c31cb8cda5a51a6a587da319bbda7b30ff9d5d4b7219a713aae71d7789",
-    "oem-isometric.png": "c36af115abf92f85129b2362787e1e22a98992e96673819075ba9c6571967f1d",
-    "oem-orbit.gif": "ee5cbd8a72820d34fb4c1cb6226db4096161a2775bbc828d869f420cba0dd046",
-    "oem-top.png": "c11b847ec85e77259ba042f7c4ffc7058f9c085e8251f23d9521e15cefc2b31c",
-    "selected-bottom.png": "365a31301f32ddc07d52a2600c3b8eace1e2064b82aff1dda86d1bfd79f6c20f",
-    "selected-isometric.png": "750440cb6cd192d8dd01a6ae7c5e188d230041dc899f63cbe70c4f4e72767221",
-    "selected-orbit.gif": "cdcbb8df5f6aa0b527c6f3373882a6b0e2f36120ce89e703ad2ca662b53b8bb6",
-    "selected-top.png": "66be38b11d7ea90fa5f73edb834b4ea3b0546a60c7d9d5373a41ff73c8b53822",
-    "system-bottom.png": "d057b55eebc87c7f867e394f407797acfd89f71c8aef50913894d4519d1c2d83",
-    "system-isometric.png": "f8f94e291e1a96599a17cdec1e9b0102a9f973d0b45c51bddfdba17542638b2d",
-    "system-orbit.gif": "b15814b0d8bd815f94e7aa833b1632d3ac1c5dc4f1fa51e12d82d47cda535078",
-    "system-top.png": "f5959b66622467f63765270e7720c93e8a0d78d9a04e5b32a0d0ccd0b231fa04"
+    "oem-bottom.png": "177aab79d2c8aca2a5bb83aabef3287e9652e5cc3cd43fe38f02b49b69f3404f",
+    "oem-isometric.png": "13ef0662c6c5754b63c787b6575ed9da24024903bbe41d1c1cd6c00997762a90",
+    "oem-orbit.gif": "7736443be18dc073a1133c73d5d975972a3644d3ab512777d4858f1f73bc5a9b",
+    "oem-top.png": "0a5a1256d7a84a666670ab0ed6c70dfc043832200b6a6161caa67b4520279ea7",
+    "selected-bottom.png": "ac36e79bea8f4e0062eff18e72519e7c28ce4eab17772ccb4233ea18905f0127",
+    "selected-isometric.png": "7a6896b194353aa0926e1bf68fa573c3155396e43e67adc27bcb3fcccc018ba1",
+    "selected-orbit.gif": "bc9b48cf8db8dd1fe1d2b373fc7cb8a198cfe00beab35c653c29d4f4740f3c07",
+    "selected-top.png": "68b2f28b97dfd1f3e5dfaf17248348917e8c6289042b690540a0f266b2351293",
+    "system-bottom.png": "59c5e20ea0a95dfdcc968e47b0ff3ba4ae98ad1a19178d85f080dbda9b6fa12f",
+    "system-isometric.png": "af555eb1e7716048e1c3eeb68aa22150a3bfbabf1362bfc642e59c0427e7e3c3",
+    "system-orbit.gif": "0ffd6fba80ecd8c79be981e534d792f5220d4c7ca5a6363c014f85167beef321",
+    "system-top.png": "c9d7508bbcf582380d63637fe719fceb13ebe5ea2fc629b853ac75a208af44a6"
   }
 }

@@ -4,6 +4,12 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 
 ## [Unreleased]
 
+### Saídas do TPA à mão e fechamento de conexões (D-035) — 2026-10-13
+- PWM_AC/BD: escapes 0,25 mm, barramentos e 1,5 mm até L1/L2; C8 sob o U1.
+- `scripts/close_open_connections.py` (A* com checagem DRC por ligação) e
+  `scripts/rework_tpa_outputs.py`; `make fab` gera o pacote em `build/fab/<commit>/`.
+- ERC 0, DRC 0 erros, paridade 0; 9 conexões de sinal fraco para fechar no KiCad.
+
 ### Placement afrouxado e nova rota (D-034) — 2026-10-13
 - Anel livre em volta do U1; lógica afastada. Rota: 3.343 trilhas, 448 vias,
   ERC 0, DRC 0, paridade 0. Conexões abertas 58 → 6 (todas curtas, junto do U1).

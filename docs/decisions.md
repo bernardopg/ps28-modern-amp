@@ -300,3 +300,10 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   courtyards fica 0,5 mm (≥0,6 mm não cabe com as âncoras de potência). Conexões
   abertas caíram de 58 para 6.
 
+- D-035 — **Saídas PWM do TPA3255 desenhadas à mão.** 2026-10-13. O Freerouting
+  levava PWM_AC/BD com trilhas finas e via única. Agora: escape 0,25 mm de cada
+  pino entre as vias de PVDD/GND (único ponto fino, ~4 mm), barramento por ponte
+  (AC 1,0 mm F.Cu; BD 0,6 mm B.Cu com via por pino) e 1,5 mm até L1/L2. C8 (C_START)
+  vai para B.Cu sob o corpo do U1. Risco: aquecimento do escape a plena potência;
+  medir com termopar no BENCH-002.
+

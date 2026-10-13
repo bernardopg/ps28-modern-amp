@@ -68,7 +68,7 @@
   "manufacturing_approved": false,
   "source_sha256": {
     ".tasks/github-mirror.json": "831c832540b6c608e89a18aafd19e954389fb682973808bb910659c2e1d8df7e",
-    "docs/images/kicad-3d/manifest.json": "7900bc4f7d720a0ec64c27344708d578f6ff83b7be427332921f0860cfe05dba",
+    "docs/images/kicad-3d/manifest.json": "eff6c32edb438d54ab1b8ae3719ca22752497c640e54d6844dce3a4d78745b45",
     "kicad/analog-protected/analog-protected.kicad_sch": "f46adefe0383358837e4eb49a41fe21b8017f39b549f789c10675ca4ac277303",
     "kicad/analog-protected/vmid-manifest.json": "f4ab47cd848ccf1d1e14ed1c0d52f7ccb51eb6b55bfe189640ab7730778ff119",
     "kicad/core-oem-refined/ps28-modern.kicad_pcb": "a411e0b47843fb179f5d3bf621118539ccafcd4fc8e6c0617c5bc5c397222215",
