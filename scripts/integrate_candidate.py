@@ -44,6 +44,11 @@ SWAPS = {
     "C14": ("Capacitor_THT", "CP_Radial_D12.5mm_P5.00mm", "680uF 63V", "UHE1J681MHD"),
     "C15": ("Capacitor_THT", "CP_Radial_D12.5mm_P5.00mm", "680uF 63V", "UHE1J681MHD"),
 }
+SWAP_SOURCES = {
+    "J5": "JST VH eVH-new p.3: B2P-VH(LF)(SN), 2 circuits, pitch3.96mm; D-031 OEM woofer harness",
+    "C14": "Nichicon UHE CAT.8100M: UHE1J681MHD 680uF 63V D12.5x40 P5; Zmax0.071ohm at100kHz/20C; ripple1280mA at100kHz/105C; D-031",
+    "C15": "Nichicon UHE CAT.8100M: UHE1J681MHD 680uF 63V D12.5x40 P5; Zmax0.071ohm at100kHz/20C; ripple1280mA at100kHz/105C; D-031",
+}
 # D-024: preamp drivers reach C20/C21; their TPA-side plates go to the relay COM.
 BRIDGE = {"DIFF_POS": "DIFF_P", "DIFF_NEG": "DIFF_N"}
 PLATES = {("C20", "2"): "INA_ISO", ("C21", "2"): "INB_ISO"}
@@ -712,6 +717,8 @@ def generate(out):
             if p["ref"] in SWAPS:
                 nick, name, value, mpn = SWAPS[p["ref"]]
                 p.update(value=value, mpn=mpn, footprint=f"{nick}:{name}")
+                p["source"] = SWAP_SOURCES[p["ref"]]
+                p["manufacturer"] = "JST" if p["ref"] == "J5" else "Nichicon"
         inventory = core + parts + added
         tree = parse(schematic(parts, added))
         for ref, (nick, name, value, mpn) in SWAPS.items():
@@ -721,6 +728,7 @@ def generate(out):
             set_property(symbol, "Value", value)
             set_property(symbol, "MPN", mpn)
             set_property(symbol, "Manufacturer", "JST" if ref == "J5" else "Nichicon")
+            set_property(symbol, "Source", SWAP_SOURCES[ref])
         (stage / (PROJECT + ".kicad_sch")).write_text(render(tree) + "\n")
         shutil.copytree(SOURCE / "libraries", stage / "libraries")
         for nickname, symbols in (("PS28_POWER", [tps3700_symbol()]), ("PS28_SEQ", [lp2985_symbol()]),

@@ -34053,7 +34053,7 @@
 				)
 			)
 		)
-		(property "Source" "Nichicon UHE CAT.8100M p.1/p.6: UHE1J152MHD 1500uF 63V D18 H40+2 P7.5; Zmax36mOhm/100kHz/20C; ripple2470mA/100kHz/105C (x0.8 at120Hz); 10000h/105C"
+		(property "Source" "Nichicon UHE CAT.8100M: UHE1J681MHD 680uF 63V D12.5x40 P5; Zmax0.071ohm at100kHz/20C; ripple1280mA at100kHz/105C; D-031"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -39728,7 +39728,7 @@
 				)
 			)
 		)
-		(property "Source" "WE WR-TBL1377 rev001.003 2021-07-30 p.1-2: pitch5.00 NOT5.08; 2pins, D1.3 drill, 16A UL/24A VDE"
+		(property "Source" "JST VH eVH-new p.3: B2P-VH(LF)(SN), 2 circuits, pitch3.96mm; D-031 OEM woofer harness"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -40315,7 +40315,7 @@
 				)
 			)
 		)
-		(property "Source" "Nichicon UHE CAT.8100M p.1/p.6: UHE1J152MHD 1500uF 63V D18 H40+2 P7.5; Zmax36mOhm/100kHz/20C; ripple2470mA/100kHz/105C (x0.8 at120Hz); 10000h/105C"
+		(property "Source" "Nichicon UHE CAT.8100M: UHE1J681MHD 680uF 63V D12.5x40 P5; Zmax0.071ohm at100kHz/20C; ripple1280mA at100kHz/105C; D-031"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)

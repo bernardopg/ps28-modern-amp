@@ -12,6 +12,7 @@ from pathlib import Path
 
 import bpy
 from mathutils import Vector
+from bpy_extras.object_utils import world_to_camera_view
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "build/studio"
@@ -101,6 +102,15 @@ def setup():
 def frame(scene, center, offset):
     scene.camera.location = center + Vector(offset)
     scene.camera.rotation_euler = (center - scene.camera.location).to_track_quat("-Z", "Y").to_euler()
+    points = [o.matrix_world @ Vector(p) for o in scene.objects if o.type == "MESH" for p in o.bound_box]
+    for _ in range(6):
+        bpy.context.view_layer.update()
+        projected = [world_to_camera_view(scene, scene.camera, p) for p in points]
+        span = max(abs(v - .5) * 2 for p in projected for v in (p.x, p.y))
+        if span <= .9 and min(p.z for p in projected) > 0:
+            return
+        scene.camera.location = center + (scene.camera.location - center) * max(1.1, span / .88)
+    raise ValueError("Board does not fit the camera with a 5 percent border")
 
 
 def render():

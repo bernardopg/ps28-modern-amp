@@ -29,6 +29,12 @@ class FinalInventoryTests(unittest.TestCase):
             self.assertEqual(parts["C14"]["MPN"], "UHE1J681MHD")
             self.assertEqual(parts["C15"]["MPN"], "UHE1J681MHD")
             self.assertEqual(parts["J5"]["MPN"], "B2P-VH(LF)(SN)")
+            self.assertIn("UHE1J681MHD", parts["C14"]["Source"])
+            self.assertIn("pitch3.96mm", parts["J5"]["Source"])
+            import json
+            manifest = json.loads((out / "system-manifest.json").read_text())
+            selected = {p["ref"]: p for p in manifest["parts"]}
+            self.assertEqual(selected["J5"]["manufacturer"], "JST")
 
     def test_missing_purchase_information_is_not_hidden_by_generic_mpn(self):
         rows = inventory('''<export><components>
@@ -55,7 +61,9 @@ class FinalInventoryTests(unittest.TestCase):
             self.assertEqual(fields[ref]["MPN"], "UHE1J681MHD")
             self.assertIn("680", fields[ref]["Value"])
             self.assertIn("D12.5mm", fields[ref]["Footprint"])
+            self.assertNotIn("UHE1J152MHD", fields[ref]["Source"])
         self.assertEqual(fields["J5"]["MPN"], "B2P-VH(LF)(SN)")
+        self.assertIn("pitch3.96mm", fields["J5"]["Source"])
         for ref in ("R101", "R102"):
             self.assertTrue(fields[ref]["MPN"].startswith("CRCW0805"))
             self.assertIn("0805", fields[ref]["Footprint"])

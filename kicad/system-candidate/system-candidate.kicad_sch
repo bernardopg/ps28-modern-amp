@@ -9495,7 +9495,7 @@
 
 (property "SelectionStatus" "Selected for engineering validation; NO procurement/release approval" (at 256.54 76.2 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-(property "Source" "Nichicon UHE CAT.8100M p.1/p.6: UHE1J152MHD 1500uF 63V D18 H40+2 P7.5; Zmax36mOhm/100kHz/20C; ripple2470mA/100kHz/105C (x0.8 at120Hz); 10000h/105C" (at 256.54 76.2 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+(property "Source" "Nichicon UHE CAT.8100M: UHE1J681MHD 680uF 63V D12.5x40 P5; Zmax0.071ohm at100kHz/20C; ripple1280mA at100kHz/105C; D-031" (at 256.54 76.2 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
 (property "MPN" "UHE1J681MHD" (at 256.54 72.2 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
@@ -9931,7 +9931,7 @@
 
 (property "SelectionStatus" "Selected for engineering validation; NO procurement/release approval" (at 314.96 175.26 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-(property "Source" "WE WR-TBL1377 rev001.003 2021-07-30 p.1-2: pitch5.00 NOT5.08; 2pins, D1.3 drill, 16A UL/24A VDE" (at 314.96 175.26 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+(property "Source" "JST VH eVH-new p.3: B2P-VH(LF)(SN), 2 circuits, pitch3.96mm; D-031 OEM woofer harness" (at 314.96 175.26 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
 (property "MPN" "B2P-VH(LF)(SN)" (at 314.96 171.26 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
@@ -11363,7 +11363,7 @@
 
 (property "SelectionStatus" "Selected for engineering validation; NO procurement/release approval" (at 292.1 76.2 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-(property "Source" "Nichicon UHE CAT.8100M p.1/p.6: UHE1J152MHD 1500uF 63V D18 H40+2 P7.5; Zmax36mOhm/100kHz/20C; ripple2470mA/100kHz/105C (x0.8 at120Hz); 10000h/105C" (at 292.1 76.2 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+(property "Source" "Nichicon UHE CAT.8100M: UHE1J681MHD 680uF 63V D12.5x40 P5; Zmax0.071ohm at100kHz/20C; ripple1280mA at100kHz/105C; D-031" (at 292.1 76.2 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
 (property "MPN" "UHE1J681MHD" (at 292.1 72.2 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 

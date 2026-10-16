@@ -431,7 +431,7 @@
       "selection": "Selected for engineering validation; NO procurement/release approval",
       "mpn": "UHE1J681MHD",
       "manufacturer": "Nichicon",
-      "source": "Nichicon UHE CAT.8100M p.1/p.6: UHE1J152MHD 1500uF 63V D18 H40+2 P7.5; Zmax36mOhm/100kHz/20C; ripple2470mA/100kHz/105C (x0.8 at120Hz); 10000h/105C",
+      "source": "Nichicon UHE CAT.8100M: UHE1J681MHD 680uF 63V D12.5x40 P5; Zmax0.071ohm at100kHz/20C; ripple1280mA at100kHz/105C; D-031",
       "geometry": {
         "diameter_max_mm": 18.5,
         "height_max_mm": 42,
@@ -460,7 +460,7 @@
       "selection": "Selected for engineering validation; NO procurement/release approval",
       "mpn": "UHE1J681MHD",
       "manufacturer": "Nichicon",
-      "source": "Nichicon UHE CAT.8100M p.1/p.6: UHE1J152MHD 1500uF 63V D18 H40+2 P7.5; Zmax36mOhm/100kHz/20C; ripple2470mA/100kHz/105C (x0.8 at120Hz); 10000h/105C",
+      "source": "Nichicon UHE CAT.8100M: UHE1J681MHD 680uF 63V D12.5x40 P5; Zmax0.071ohm at100kHz/20C; ripple1280mA at100kHz/105C; D-031",
       "geometry": {
         "diameter_max_mm": 18.5,
         "height_max_mm": 42,
@@ -1062,7 +1062,7 @@
       "selection": "Selected for engineering validation; NO procurement/release approval",
       "mpn": "B2P-VH(LF)(SN)",
       "manufacturer": "JST",
-      "source": "WE WR-TBL1377 rev001.003 2021-07-30 p.1-2: pitch5.00 NOT5.08; 2pins, D1.3 drill, 16A UL/24A VDE",
+      "source": "JST VH eVH-new p.3: B2P-VH(LF)(SN), 2 circuits, pitch3.96mm; D-031 OEM woofer harness",
       "geometry": {
         "body_mm": [
           10,
@@ -5556,7 +5556,7 @@
   "source_sha256": {
     "kicad/core-oem-refined/ps28-modern.kicad_sch": "134bdf8fa93e3a66d99a5d556bd45cb9c5289ed5c3b126273db16ef3ad38a2ce",
     "kicad/analog-protected/analog-protected.kicad_sch": "f46adefe0383358837e4eb49a41fe21b8017f39b549f789c10675ca4ac277303",
-    "scripts/integrate_candidate.py": "cb5debca0171b09bea05bb8d33c01f9dede7b624ec8e3b25dd4ab95368370fc8",
+    "scripts/integrate_candidate.py": "5103a4deabf0d619fee091ef5ebc4b22b2ea01610e0521a1d51a03f7d4ead21a",
     "kicad/power-d021/power-d021.kicad_sch": "b27d4cc1ab8930527ff147b3d1488ca8c04037574b6009157686842a3d801e83",
     "kicad/seq-d020/seq-d020.kicad_sch": "0d6a219fd97f4594ea756f839a9c2f616b1174abb3ba09accabca21839d0b884",
     "scripts/create_power_d021.py": "504881a3d7dda2553a70c04ec173ed3084e326b0b7107fc6bffed48275134689",

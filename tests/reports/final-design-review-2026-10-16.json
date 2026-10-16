@@ -1,6 +1,6 @@
 {
   "date": "2026-10-16",
-  "board_sha256": "2e180d6f245f7661eb276d67438203f1b9f0270a925ab8c68b90b3c5cdaace4c",
+  "board_sha256": "2b64c702cc6fd9cf36e10d6a096bfec36fc4057da05e54ea2635b3dd047cdb85",
   "hardware_validated": false,
   "manufacturing_approved": false,
   "pcb_geometry_or_schematic_changed": true,
@@ -13,9 +13,14 @@
   "scope": "Purchasing metadata corrections, complete inventory, studio rendering and draft blueprints; engineering closure NOT achieved",
   "metadata_only_board_comparison": {
     "baseline_pcb_sha256": "34cb8db01aa94263fe318f606735565567186f3d7a5112dea91a4a1b1123d0cf",
-    "pcb_sha256": "2e180d6f245f7661eb276d67438203f1b9f0270a925ab8c68b90b3c5cdaace4c",
+    "pcb_sha256": "2b64c702cc6fd9cf36e10d6a096bfec36fc4057da05e54ea2635b3dd047cdb85",
     "copper_and_geometry_unchanged": true,
-    "normalized_board_sha256": "9714e03f160d527e678ce66f51f08b0cc6986c2057b900020cdbce0a7365c87e"
+    "normalized_board_sha256": "86b3dcd38c9b4c4117da4adfa33c1c87af4ffdca587df241e116543503964696",
+    "excluded_fields": [
+      "MPN",
+      "Manufacturer",
+      "Source"
+    ]
   },
   "inventory": {
     "schematic_components": 263,
@@ -232,8 +237,8 @@
     "scope": "Inventory/parity and purchasing metadata, not full circuit or part qualification",
     "manufacturing_approved": false,
     "source_sha256": {
-      "kicad/system-candidate/system-candidate.kicad_sch": "6dadd2d5618995b88552eb81780005c92debb2d12ce7cf31ea694cc18414ce7d",
-      "kicad/system-candidate/system-candidate.kicad_pcb": "2e180d6f245f7661eb276d67438203f1b9f0270a925ab8c68b90b3c5cdaace4c",
+      "kicad/system-candidate/system-candidate.kicad_sch": "1a018a6636b48bce7477b9467100484ba4c2aef5d1f93fa089a6734fe90b2820",
+      "kicad/system-candidate/system-candidate.kicad_pcb": "2b64c702cc6fd9cf36e10d6a096bfec36fc4057da05e54ea2635b3dd047cdb85",
       "scripts/audit_final_design.py": "45c14c7c7866ed824543b874efc9f00cb61775fba246c275a98b3d1d8acb9ba8"
     }
   },
@@ -253,38 +258,38 @@
     "pth_objects": 591,
     "npth_objects": 5,
     "warnings": [
-      "/home/bitter/development/ps28-modern-amp-starter/build/fab/drafts/6e7ca081dd17-dirty-b9se1goe/gerber/system-candidate-NPTH.drl:14 \"G90\": G90 header statement found after end of header",
-      "/home/bitter/development/ps28-modern-amp-starter/build/fab/drafts/6e7ca081dd17-dirty-b9se1goe/gerber/system-candidate-PTH.drl:36 \"G90\": G90 header statement found after end of header",
+      "/home/bitter/development/ps28-modern-amp-starter/build/fab/drafts/8d28255887d3-dirty-ag7eon3z/gerber/system-candidate-NPTH.drl:14 \"G90\": G90 header statement found after end of header",
+      "/home/bitter/development/ps28-modern-amp-starter/build/fab/drafts/8d28255887d3-dirty-ag7eon3z/gerber/system-candidate-PTH.drl:36 \"G90\": G90 header statement found after end of header",
       "Aperture definition using macro RoundRect has more parameters than the macro uses."
     ],
     "scope": "File parsing, outline and layer inventory; not electrical/DFM sign-off",
     "manufacturing_approved": false,
     "source_sha256": {
-      "system-candidate-B_Cu.gbl": "15756f39960366f7f88c56214a8d795df26c6f426c1bb721355d324baa323094",
-      "system-candidate-B_Mask.gbs": "f885cb851cd375c2ed368f6bfd2e47a29c5decb10b906399d4f955bc8d0e621f",
-      "system-candidate-B_Paste.gbp": "55d287eca8eb898b228cc452a682dd8eafd359867c523dd04e2a03dc1fd4bf1e",
-      "system-candidate-B_Silkscreen.gbo": "ac38ba607b36267531d94a6bfe5165474404aa2b3883950e183edf7c3308bfa6",
-      "system-candidate-Edge_Cuts.gm1": "b494259e0888d391e2a8439def88f6f9eefa320b43f0c5aba9f8631ad294e22e",
-      "system-candidate-F_Cu.gtl": "5fb3aaca955e6c953984996dd899e313c871a8b579db7592c866c2ebe91a9a46",
-      "system-candidate-F_Mask.gts": "706c42625a63b32e2eae20f477915e0fbcb53434fd6299b0f01b2c606711e308",
-      "system-candidate-F_Paste.gtp": "d3ea1e2e6c2a72d61cf1b50a3ba655db09aa44324ba8dad2b30befc25802e241",
-      "system-candidate-F_Silkscreen.gto": "f0b5da21b8872a3516a4a051ab861330f647c27eec4eab3190e123cef8d2ac13",
-      "system-candidate-In1_Cu.g1": "8da68756fcca663058529cb5a5380b4b03a7b108f127999c6502880069170a70",
-      "system-candidate-In2_Cu.g2": "07cba5ea907c42db3767d4a9f92810e5b1b0777c066f59bf2f7ddc77d98b72e4",
-      "system-candidate-NPTH-drl_map.gbr": "8919dbcd790dad13893f817f1d303abc23d6c7db1ed600fd9f317be40bfecf90",
-      "system-candidate-NPTH.drl": "8d1e89a072c1a696e3e007be6bd883121657ea1cb342436a89b1d888900584d1",
-      "system-candidate-PTH-drl_map.gbr": "5f3afb23d32f181eb1d7998b0b010f37889aca47dec7268fba859a3e514047cc",
-      "system-candidate-PTH.drl": "d1cadd20fe3b410b7549bbe161d56ed4a8146446780d5c27cd714b2824c8b0c2",
-      "system-candidate-job.gbrjob": "aa53ee10f4acca443fc9d57a865617355cc6f5348f4399680f01fbc1f3976cfc"
+      "system-candidate-B_Cu.gbl": "5748b6a5a7c0adbed1f985d669a59c3317d034b3d2b51afe497e04d065e62f6c",
+      "system-candidate-B_Mask.gbs": "de8a5104dfdc6be5d370265105fc3262631a408d0ede03b574faf801c060a2d0",
+      "system-candidate-B_Paste.gbp": "ec5234257b51946a6051676ddd281b6b3ea858d9d0286553cb5103197ab733c3",
+      "system-candidate-B_Silkscreen.gbo": "6f3454f5ea4d1a1eb05bed6d8eed10415c1e13dd52c97f12ff2637cecbef953e",
+      "system-candidate-Edge_Cuts.gm1": "7e0416007f24b59e98f33bbe008ba95c6451cb090862963fee672751b3f38007",
+      "system-candidate-F_Cu.gtl": "28c0143d47ddcf72ee93b04e9f42b56e5bde650b76582a3d08898c08e2bba5da",
+      "system-candidate-F_Mask.gts": "b4c61a344ddfc14c52fd4dd24a6cfe30a23edff79ba447a6840eec48226d709e",
+      "system-candidate-F_Paste.gtp": "35fc4202c9b7550a8e435ce7c0d8577b2710edc48bda12486b8e483da9f598cb",
+      "system-candidate-F_Silkscreen.gto": "4610fd7d7372fc03abd8c3aef1b40f5e0a97c651a66603b995908dfd772705ac",
+      "system-candidate-In1_Cu.g1": "cc6aa69a490f8afcc5e46985093850efa8256c01fda91d8f10c7f0d209527759",
+      "system-candidate-In2_Cu.g2": "402aa20ac1be73233b5598f2d371bc4c1039b7e93b52d3ce112def3985521214",
+      "system-candidate-NPTH-drl_map.gbr": "283a385dcf890e3d2407af995d4164abd74fff553789a0ed992c1c7ef8b6fdc6",
+      "system-candidate-NPTH.drl": "a450359432261059794e549800c84197ba6bebfc74a647814b7f035acedecd98",
+      "system-candidate-PTH-drl_map.gbr": "9213f48365b3b340af0904791ffbc08ed06c71437e2b5d38fbea5693a3d4fc03",
+      "system-candidate-PTH.drl": "5d5a075271fb48e5b827dbd728be9d7a9f24c1c53b756329fe4fd46b042f51af",
+      "system-candidate-job.gbrjob": "99fd7bb67d7297873c232151d7f411b04bf4ae9b21aebf9ba3a1bbbd5bdc6e01"
     }
   },
-  "fabrication_draft": "build/fab/drafts/6e7ca081dd17-dirty-b9se1goe",
+  "fabrication_draft": "build/fab/drafts/8d28255887d3-dirty-ag7eon3z",
   "fab_summary": {
-    "commit": "6e7ca081dd17d365b4fa1523179ea31029e1e62e",
+    "commit": "8d28255887d3548e09afe7ce83630e8805a6a7c1",
     "working_tree_dirty": true,
     "source_sha256": {
-      "kicad/system-candidate/system-candidate.kicad_pcb": "2e180d6f245f7661eb276d67438203f1b9f0270a925ab8c68b90b3c5cdaace4c",
-      "kicad/system-candidate/system-candidate.kicad_sch": "6dadd2d5618995b88552eb81780005c92debb2d12ce7cf31ea694cc18414ce7d",
+      "kicad/system-candidate/system-candidate.kicad_pcb": "2b64c702cc6fd9cf36e10d6a096bfec36fc4057da05e54ea2635b3dd047cdb85",
+      "kicad/system-candidate/system-candidate.kicad_sch": "1a018a6636b48bce7477b9467100484ba4c2aef5d1f93fa089a6734fe90b2820",
       "kicad/system-candidate/system-candidate.kicad_pro": "080ed7cd2669eafd92bdbeb04aa9d0199568e7eff6101176d58cd59609fbd3cb",
       "scripts/export_fab.py": "f0e141d1e4d36e7513d8b5d39f050ddfcb404b1b4de492401bb051d73dabe43a",
       "scripts/export_mechanical_drawing.py": "405709f3c2db268379a0d55e7a5bf7de3d4e443d6342a331e8930a3ad754b6e1"
@@ -342,7 +347,7 @@
     "docs/functional-readiness.md": "6e5efc1a00dd5a1d5ed116daed2303e6f57d5eec2c9b1101de3a9e891e3088ee",
     "docs/github.md": "1fc0f1b4d4e1c951525312019afe0a2fcb761a14e7dccde3e7f25f9094f2c9b7",
     "docs/images/kicad-3d/README.md": "403d18a30fd864a17dc891581e02b743ca53f7ef297070e1b3a81a3a19609509",
-    "docs/images/kicad-3d/manifest.json": "fb538af3631e4e295ea07a0fd559e0f77c7c89621984517850eeba4b8cf24457",
+    "docs/images/kicad-3d/manifest.json": "d4e8d4a459cd265b2c3f87bc55cd37ae5e73ef6d514b59a230861dbd1dd24b8a",
     "docs/images/kicad-3d/oem-bottom.png": "9363939a410a4b876baa70bb2e3144383d4c1fc2fc2624e9c3b0e2c5ffff4003",
     "docs/images/kicad-3d/oem-isometric.png": "7e837b5132b862ccf73aef06edcac2fc2449f794994d8fb09a12a8f97af9a194",
     "docs/images/kicad-3d/oem-orbit.gif": "5f3cc6de97abb9b539d55c547e8be0d33c45e1863e71815ed8bbe4e063cdcfc6",
@@ -357,7 +362,7 @@
     "docs/images/kicad-3d/system-top.png": "4b02f4226ed3923271b07a3dfd201aaa49524df6bb66241e4f3f25ceac3f52ed",
     "docs/images/pcb-studio/README.md": "94fe1114e42a7974138a13db4b288df365593e54878a89b43acf5a10a6de31a1",
     "docs/images/system-candidate/README.md": "53b731d09afa3b2d3f1939a2db2b8b210c39a5c6b8b8f729abce143e4614f17d",
-    "docs/images/system-candidate/system-candidate.svg": "610156911eabedfb16900b25995e2c3d1591a54f85a32b0c21eb4b1b83518e7c",
+    "docs/images/system-candidate/system-candidate.svg": "6be9a8b72f6dc29dafbac42ea60d3b1d9df7769d481ca8743bbc13bd980d958b",
     "docs/images/thermal-block-bottom.png": "2d1d65ab643ecd8e311475bf168edb8cb400792cd85c49d29ef4ccabbd85d03d",
     "docs/images/thermal-block.png": "04c56262dd6ce27d7628c5616fbfbaba32b857f292b965015875feb16bd98b21",
     "docs/images/thermal-budget.png": "82286bc262a3a9d7e7e2640c6a698df0d3b211f51123c176cc3de06d5f6424cc",
@@ -381,10 +386,10 @@
     "kicad/core-selected/ps28-modern.kicad_pro": "6b368fee5215bb145795b3889eac20abed249211ac5030186b7798eadb9646cc",
     "kicad/core-selected/ps28-modern.kicad_sch": "63ab6dc33d89510fd536616a62e29561d68b5bd0ccdd6294df5f34f85825e7e9",
     "kicad/models/ps28-bodies/thermal_block.wrl": "abddee6c25ea789f96a8046f0ee46653f706aafcf3995fb505185a066e959090",
-    "kicad/system-candidate/system-candidate.kicad_pcb": "2e180d6f245f7661eb276d67438203f1b9f0270a925ab8c68b90b3c5cdaace4c",
+    "kicad/system-candidate/system-candidate.kicad_pcb": "2b64c702cc6fd9cf36e10d6a096bfec36fc4057da05e54ea2635b3dd047cdb85",
     "kicad/system-candidate/system-candidate.kicad_pro": "080ed7cd2669eafd92bdbeb04aa9d0199568e7eff6101176d58cd59609fbd3cb",
-    "kicad/system-candidate/system-candidate.kicad_sch": "6dadd2d5618995b88552eb81780005c92debb2d12ce7cf31ea694cc18414ce7d",
-    "kicad/system-candidate/system-manifest.json": "0d8723fdc79310dabc3af79579d03530e252063e780798836eb657b8f61dc1bc",
+    "kicad/system-candidate/system-candidate.kicad_sch": "1a018a6636b48bce7477b9467100484ba4c2aef5d1f93fa089a6734fe90b2820",
+    "kicad/system-candidate/system-manifest.json": "e8a5795ec696c521bd981948a600e69b47419c09893138299ec2ec8889b77336",
     "mechanical/README.md": "46047eab50dbac62a4f6fe11d796b6baaa94bbb2cc26e1e6ecc0c11efa0670a6",
     "mechanical/oem-heatsink-measurements.json": "ad3b03bb09a3cea3481f64998c24421e0055e53fddf212275483ced449e3460a",
     "mechanical/owner-clearance-20261012.json": "2544bf20cc8da09eb3ffe0cddc6324ca84f2f47d5a10b610fd5f6e4597dfb28e",
@@ -393,7 +398,7 @@
     "mechanical/thermal-fit.json": "6f565bf057cf8243dea57ed81229991e670c90178e32c0b3e1a3c185e8b0a466",
     "reference/manifest.json": "9ab57f8d832d309331ae86f686bc15c500f2fd5c1e74ea4f00f09a58025c3bff",
     "scripts/audit_final_design.py": "45c14c7c7866ed824543b874efc9f00cb61775fba246c275a98b3d1d8acb9ba8",
-    "scripts/blender_pcb_studio.py": "52cfe0c98babd5c32dff15365f57cdb045a1760d29b24f0c5b5b03c79b3049ff",
+    "scripts/blender_pcb_studio.py": "b02175500b258825442091fd626618f0b52ed47357721ba97086e008e552bca9",
     "scripts/blender_thermal_block.py": "7d818fa892298e8871ae5ace9d6432310e2513e9769725884dfd1b035fef96a3",
     "scripts/check_thermal_fit.py": "1470afcea0ecf7af260406efa2b237404e0080cd48c2803a795c49a3031c3219",
     "scripts/check_tpa_local_layout.py": "be9803d1e2de86bc46be31c61103442247d072931e1b728b1a82e52b8b03ebdc",
@@ -403,7 +408,7 @@
     "scripts/eda_check.py": "03f14ba47c49a9a7bebbed79b4c1e1d91ca1aa5a5c182d0a7d809e50275465b3",
     "scripts/export_fab.py": "f0e141d1e4d36e7513d8b5d39f050ddfcb404b1b4de492401bb051d73dabe43a",
     "scripts/export_mechanical_drawing.py": "405709f3c2db268379a0d55e7a5bf7de3d4e443d6342a331e8930a3ad754b6e1",
-    "scripts/integrate_candidate.py": "cb5debca0171b09bea05bb8d33c01f9dede7b624ec8e3b25dd4ab95368370fc8",
+    "scripts/integrate_candidate.py": "5103a4deabf0d619fee091ef5ebc4b22b2ea01610e0521a1d51a03f7d4ead21a",
     "scripts/organize_assembly_labels.py": "7bf6b597ec94b2a3e8c273f07be4957d56d407fde1822565e4786c0941fdb812",
     "scripts/render_kicad_gallery.py": "ea25d613326c5fb22febb4a3244950224a754158d1f0f125dea42568a94bab8a",
     "scripts/render_thermal_budget.py": "d79a423ca335e56b0f167137ad2e46512cccf4657887e21b5622a83693259e54",
@@ -422,7 +427,7 @@
     "tests/unit/test_debug_schematic.py": "d9d20e342fa40636559f34a10a37341ced955307c4ee3c56051a99e0262d0b54",
     "tests/unit/test_eda_candidate_dispatch.py": "5a66dcc155f52612d199d2774192caaa8ebae693f42218d824fe557bd7e66aa8",
     "tests/unit/test_fab_export.py": "15bd2d9220f3c616cb1b89745cb4ad2a10006103044ca192682b019c629b980b",
-    "tests/unit/test_final_inventory.py": "f8bbe6a913ecf89860c9ec204c6017f27f121d3d7477c3f8839165ddec41ef7d",
+    "tests/unit/test_final_inventory.py": "728e695b96782e999dee906c934a279dba25fd83030e3e19de89d1f4f25ca688",
     "tests/unit/test_project_status.py": "a8cb606c0d051fec8e7aeb7bc3466336b58c82d85897fef85d78b51c43e2694c",
     "tests/unit/test_render_gallery.py": "4081decfa603c456408c3863a6bff85f736aab60ec8bfdc85f93db886dded05e",
     "tests/unit/test_thermal_fit.py": "e8934df5697d98c506f90f84e41f0260e2b9f0256af9476e601a67991296955d",
@@ -432,7 +437,7 @@
     "command": "make check",
     "passed": 141,
     "failed": 0,
-    "log": "build/finalization/check-release.log"
+    "log": "build/finalization/check-final-source.log"
   },
   "studio_media_manifest": "docs/images/pcb-studio/manifest.json",
   "media_note": "Studio pixels and source hashes are bound by their own manifest, published only after all three renders",
@@ -442,5 +447,11 @@
   },
   "studio_render_complete": true,
   "studio_scene": "build/studio/ps28-studio.blend",
-  "studio_manifest_sha256": "9287c2fd73ade53c4903d6290cbdb787f9eae3447361a9530e3e3b99f5eb1b85"
+  "studio_manifest_sha256": "ec1d8b4afc6a30552ca3cb7875f66e03d78f33db5a2d8ae1d7db5a09ca2fc02a",
+  "camera_fit_check": "All mesh bounding-box corners projected into camera; >=5 percent image border required for every view",
+  "source_notes_corrections": [
+    "C14/C15 old 1500uF/18mm/P7.5 notes replaced by 680uF/12.5mm/P5 facts",
+    "J5 Wurth 5mm/16A notes replaced by JST VH 3.96mm facts"
+  ],
+  "schematic_topology_and_placement_unchanged": true
 }
