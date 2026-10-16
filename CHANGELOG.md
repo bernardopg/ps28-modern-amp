@@ -3,6 +3,18 @@
 Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 
 ## [Unreleased]
+
+### Fechamento das 190 posições da BOM — 2026-10-16
+
+- Seleção canônica de 235 posições com fabricante, MPN, footprint, fonte e notas;
+  zero pendências cadastrais no inventário derivado do esquema.
+- Esquema, PCB e gerador sincronizados; resistores de precisão verificados por
+  decodificação dos códigos e regeneração isolada. Corpo/courtyard/modelo de C109
+  corrigidos para W7,2 mm com pads e cobre preservados; ERC/DRC/paridade zero.
+- Porta-fusível e fusível separados, shunt e botão externo listados como acessórios;
+  exportador fab inclui BOM de compra filtrada e fontes. Renders/desenhos atualizados.
+- Não libera compra, estoque, DFM global, fit físico, bancada ou G3.
+
 ### Render Blender, BOM e desenhos técnicos — 2026-10-16
 - Estúdio Cycles reproduzível com três vistas da geometria KiCad real e cena editável.
 - Corrigidos seis MPNs divergentes do valor/package: C14/C15, J5, R101/R102 e R310;

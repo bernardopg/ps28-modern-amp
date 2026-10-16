@@ -24,7 +24,10 @@ def inventory(xml):
         mpn = fields.get("MPN", "")
         pending = []
         if purchase:
-            if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9().+/_-]+", mpn) or "TBD" in mpn.upper():
+            exact_code = re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9().+/_-]+", mpn)
+            # Omron includes the coil voltage after a space in its order code.
+            omron_relay = fields.get("Manufacturer") == "Omron" and mpn == "G6K-2F DC12"
+            if (not exact_code and not omron_relay) or "TBD" in mpn.upper():
                 pending.append("MPN ausente ou sem normalizacao")
             if not fields.get("Manufacturer"):
                 pending.append("fabricante ausente")
@@ -32,6 +35,8 @@ def inventory(xml):
                 pending.append("footprint ausente")
         rows.append({"Reference": ref, "Value": comp.findtext("value", ""), "Footprint": fp,
                      "Manufacturer": fields.get("Manufacturer", ""), "MPN": mpn,
+                     "Datasheet": fields.get("Datasheet", ""),
+                     "SelectionNotes": fields.get("SelectionNotes", ""),
                      "DNP": dnp, "Purchase": purchase,
                      "LCSC": fields.get("LCSC", ""), "Pending": "; ".join(pending)})
     return rows
@@ -53,7 +58,7 @@ def main():
     missing = sorted(refs - footprints)
     pending = [r for r in rows if r["Pending"]]
     with (ROOT / "bom/system-candidate-inventory.csv").open("w") as stream:
-        writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     report = {"schematic_components": len(rows), "board_footprints": len(footprints),

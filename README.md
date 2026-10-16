@@ -7,7 +7,8 @@ O preamp/limiter original é reaproveitado (D-032); a PCB nova substitui a princ
 ![Placa candidata — estúdio Blender](docs/images/pcb-studio/isometric.png)
 
 [Revisão final, inventário e desenhos técnicos](docs/final-design-review-2026-10-16.md) ·
-[Galeria Blender](docs/images/pcb-studio/README.md)
+[Galeria Blender](docs/images/pcb-studio/README.md) ·
+[190 posições da BOM resolvidas](docs/bom-closeout-2026-10-16.md)
 
 ## Estado atual — 2026-10-16
 
@@ -16,7 +17,7 @@ O preamp/limiter original é reaproveitado (D-032); a PCB nova substitui a princ
 - Placa única: [`kicad/system-candidate/`](kicad/system-candidate/), contorno OEM
   **154 × 81 mm**, **269 footprints**, 3.531 segmentos e 499 vias.
 - **ERC 0 · DRC 0 · conexões abertas 0 · divergências esquema/PCB 0.**
-- Placement local do TPA e retornos revistos; **138 testes automatizados aprovados**.
+- Placement local do TPA e retornos revistos; **143 testes automatizados aprovados**.
 - Bloco térmico corrigido e fit nominal em CAD verificado. **Não é fit físico
   nem ensaio térmico:** o caminho dissipador→ambiente continua sem medida.
 - Pendentes: revisão global e gates humanos G1/G2, qualificação BOM/CPL/JLCPCB,

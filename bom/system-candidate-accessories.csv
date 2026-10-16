@@ -1,0 +1,4 @@
+Association,Quantity,Manufacturer,MPN,Datasheet,AssemblyNotes
+F301-FUSE,1,Littelfuse,021806.3MXP,https://www.littelfuse.com/products/fuses-overcurrent-protection/fuses/cartridge-fuses/5x20mm-fuses-cartridge-fuses/218/021806-3,T6.3A 250V slow-blow 5x20mm; insert into F301 Schurter0031.8201; inrush confirmation at BENCH-002
+JP701-SHUNT,1,Sullins Connector Solutions,SPC02SYAN,https://www.sullinscorp.com/images/SPC02SYAN-0-3293.pdf,2.54mm shunt; install1-2 for fanON or2-3 forOTW; not both
+J401-SWITCH,1,E-Switch,PV6F240SS-311,https://www.e-switch.com/product/pv6-series-illuminated-anti-vandal-switch/?part-number=PV6F240SS-311,Momentary SPST-NO external dry-contact START; LED terminals intentionally unconnected; panel16mm fit requires owner mechanical review; no chassis drilling authorized

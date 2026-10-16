@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "current_media_evidence": "tests/reports/final-design-review-2026-10-16.json",
+  "current_media_evidence": "tests/reports/bom-closeout-2026-10-16.json",
   "source_parent_commit": "e26f61fb90a43af1aa1d69a0a768e10b21122e12",
   "scope": "Documentation/tasks/native media refresh; no PCB or schematic integration",
   "native_renderer": "10.0.7",

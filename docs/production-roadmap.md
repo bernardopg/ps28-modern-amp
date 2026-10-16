@@ -4,8 +4,8 @@
 
 [Revisão final](final-design-review-2026-10-16.md): conectividade confirmada,
 seis MPNs corrigidos, desenhos de montagem/cobre e gabarito cotado adicionados,
-Gerbonara instalado e arquivos fab conferidos com parser independente. Faltam
-normalizar/qualificar 190 registros de compra, revisar CPL e acessórios, fechar
+Gerbonara instalado e arquivos fab conferidos com parser independente. As [190 pendências de fabricante/MPN foram resolvidas](bom-closeout-2026-10-16.md).
+Faltam qualificar fornecimento/DFM da seleção, revisar CPL e montagem dos acessórios, fechar
 revisão global de potência/EMI e gates G1/G2/G3. Render melhorado não fecha esses itens.
 
 ## Atualização — 2026-10-16

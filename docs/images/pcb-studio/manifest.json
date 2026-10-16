@@ -9,19 +9,19 @@
     "GLB exporter warning is recorded in build/studio/export.log"
   ],
   "source_sha256": {
-    "build/studio/board.glb": "677f6ba6ff769d61b8b808cfb359d02e4fd53fb6bf8ad3c732f7c7b99fb9ffa5",
+    "build/studio/board.glb": "17ceae211f5d537474df0ff84a6b4056c35f6f1ff550bcc2a0e86373ca0ae7db",
     "scripts/blender_pcb_studio.py": "b02175500b258825442091fd626618f0b52ed47357721ba97086e008e552bca9",
-    "kicad/system-candidate/system-candidate.kicad_pcb": "2b64c702cc6fd9cf36e10d6a096bfec36fc4057da05e54ea2635b3dd047cdb85"
+    "kicad/system-candidate/system-candidate.kicad_pcb": "208b01279bb4931c4e7fe21d8753ae3d13a545c27a326bf394bc800612cbb65e"
   },
   "image_sha256": {
-    "isometric.png": "7df238d8da3104d7ca6ee7efa6658fce4ae1ec8c45e79ae60c604016c027ed19",
-    "top.png": "efa9a8c88ee816e940416bd70e3be7995690200585c4bb99441d6b6ac7bddff8",
-    "bottom.png": "34857ad02a800bbc072ee03fe6c5842c52c4164c3debc384a14354b0546130de"
+    "isometric.png": "44822bc090a039ffce3b5a2da79e8e469d90c55391d35b57073637a9a1b15db8",
+    "top.png": "d8ffc5af5afd7313d0a97c5dfa86e2899e17283188cceb0127f4dfcbeecf2947",
+    "bottom.png": "2aa7e4993f617b538c22d5252572a13f4dec845ecc0d13fbb915a2c89cfad125"
   },
   "metadata_refresh": {
-    "rendered_pcb_sha256": "2e180d6f245f7661eb276d67438203f1b9f0270a925ab8c68b90b3c5cdaace4c",
-    "current_pcb_sha256": "2b64c702cc6fd9cf36e10d6a096bfec36fc4057da05e54ea2635b3dd047cdb85",
-    "reason": "Only hidden Source descriptions corrected after rendering; full PCB AST equivalence excluding purchasing fields verified",
-    "evidence": "tests/reports/final-design-review-2026-10-16.json"
+    "rendered_pcb_sha256": "0da323ec279f35226040927c67065f3517109f6dec64e5d2d34a2e95689db80f",
+    "current_pcb_sha256": "208b01279bb4931c4e7fe21d8753ae3d13a545c27a326bf394bc800612cbb65e",
+    "reason": "Purchasing fields and non-rendered duplicate F.Fab reference only; current full GLTF scene graph/geometry/binary equals rendered GLB excluding asset filename/timestamp",
+    "evidence": "tests/reports/bom-closeout-2026-10-16.json"
   }
 }

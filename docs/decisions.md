@@ -315,3 +315,6 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   vai para B.Cu sob o corpo do U1. Risco: aquecimento do escape a plena potência;
   medir com termopar no BENCH-002.
 
+
+
+2026-10-16 — Fechamento BOM: selecionar códigos exatos nas 235 posições; usar RT 0,1%/25 ppm nas janelas, CRCW comuns no tamanho real, WIMA C109 W7,2 mm com pads P5 preservados; separar porta-fusível/fusível e acessórios; confirmar derating MLCC, fornecimento e montagem nos gates de compra/DFM e bancada. Evidência: `docs/bom-closeout-2026-10-16.md`.

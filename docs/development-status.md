@@ -4,15 +4,15 @@
 
 [Revisão final, BOM e blueprints](final-design-review-2026-10-16.md): seis MPNs
 incompatíveis corrigidos no esquema/PCB/geradores; cobre e placement preservados.
-Nenhum dos 263 componentes do esquema falta na PCB. Inventário de compra ainda
-tem 190 posições com fabricante ausente ou MPN não normalizado. Novos renders
+Nenhum dos 263 componentes do esquema falta na PCB. [Fechamento da BOM](bom-closeout-2026-10-16.md): as 190 pendências de
+fabricante/MPN foram resolvidas; 235 posições selecionadas e sincronizadas. Novos renders
 Cycles e desenhos de montagem/cobre/DXF/gabarito cotado disponíveis. Desenvolvimento
 não concluído para fabricação; revisão global, BOM/CPL e gates continuam pendentes.
 
 ## Revisão atual — 2026-10-16
 
 Abrir `kicad/system-candidate/system-candidate.kicad_pro`: única PCB de produto,
-com preamp/limiter OEM reaproveitado conforme D-032. 138 testes aprovados;
+com preamp/limiter OEM reaproveitado conforme D-032. 143 testes aprovados;
 cartuchos históricos das capturas não definem o estado de liberação.
 [Revisão local TPA e conectividade](tpa-local-layout-review.md): 269 footprints,
 3.531 segmentos/499 vias. **ERC 0, DRC 0, aberturas 0, paridade 0**. Bootstrap,

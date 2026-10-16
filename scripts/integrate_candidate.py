@@ -3,6 +3,7 @@
 D-019 relay (iso-d019), no overwrite."""
 
 import copy
+import csv
 import ctypes
 import hashlib
 import json
@@ -157,6 +158,45 @@ def set_property(symbol, name, value):
         if isinstance(p, list) and p[0] == "property" and p[1] == q(name)
     )
     prop[2] = q(value)
+
+
+def apply_purchase_selection(tree, parts):
+    """Apply the single-board purchasing choices without regenerating routed copper."""
+    with (ROOT / "bom/system-candidate-selection.csv").open() as stream:
+        rows = list(csv.DictReader(stream))
+    selected = {r["Reference"]: r for r in rows}
+    assert len(selected) == len(rows), "Duplicate purchasing reference"
+    seen = set()
+    for node in tree:
+        if not isinstance(node, list) or node[0] != "symbol":
+            continue
+        props = {x[1].strip('"'): x for x in node if isinstance(x, list) and x[0] == "property"}
+        ref = props["Reference"][2].strip('"')
+        if ref not in selected:
+            continue
+        row = selected[ref]
+        assert props["Value"][2] == q(row["Value"]), ref
+        for name in ("MPN", "Manufacturer", "Datasheet", "SelectionNotes", "Footprint"):
+            if name not in props:
+                prop = copy.deepcopy(props["MPN"])
+                prop[1] = q(name)
+                node.insert(node.index(props["MPN"]) + 1, prop)
+                props[name] = prop
+            props[name][2] = q(row[name])
+        if ref in ("C301", "C302"):
+            props["Source"][2] = q(row["Datasheet"] + "; " + row["SelectionNotes"])
+        props["SelectionStatus"][2] = q("MPN SELECTED; supply/DFM/bench release pending")
+        seen.add(ref)
+    assert seen == set(selected), "Purchase selection contains absent symbols"
+    for part in parts:
+        if part["ref"] in selected:
+            row = selected[part["ref"]]
+            part.update(mpn=row["MPN"], manufacturer=row["Manufacturer"],
+                        footprint=row["Footprint"], datasheet=row["Datasheet"],
+                        selection_notes=row["SelectionNotes"])
+            part["selection"] = "MPN SELECTED; supply/DFM/bench release pending"
+            if part["ref"] in ("C301", "C302"):
+                part["source"] = row["Datasheet"] + "; " + row["SelectionNotes"]
 
 
 def schematic(parts, extra=()):
@@ -729,6 +769,7 @@ def generate(out):
             set_property(symbol, "MPN", mpn)
             set_property(symbol, "Manufacturer", "JST" if ref == "J5" else "Nichicon")
             set_property(symbol, "Source", SWAP_SOURCES[ref])
+        apply_purchase_selection(tree, inventory)
         (stage / (PROJECT + ".kicad_sch")).write_text(render(tree) + "\n")
         shutil.copytree(SOURCE / "libraries", stage / "libraries")
         for nickname, symbols in (("PS28_POWER", [tps3700_symbol()]), ("PS28_SEQ", [lp2985_symbol()]),
@@ -831,6 +872,7 @@ def generate(out):
                     SOURCE / "ps28-modern.kicad_sch",
                     ROOT / "kicad/analog-protected/analog-protected.kicad_sch",
                     ROOT / "scripts/integrate_candidate.py",
+                    ROOT / "bom/system-candidate-selection.csv",
                     ROOT / "kicad/power-d021/power-d021.kicad_sch",
                     ROOT / "kicad/seq-d020/seq-d020.kicad_sch",
                     ROOT / "scripts/create_power_d021.py",

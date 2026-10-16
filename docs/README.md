@@ -1,5 +1,8 @@
 # Documentação técnica
 
+[Fechamento das 190 posições de compra](bom-closeout-2026-10-16.md): 235 posições
+com fabricante e MPN completos, fontes técnicas e acessórios separados.
+
 Começar pelo [estado consolidado D-018/D-019 e mapa das capturas/PCBs](development-status.md)
 pela [revisão local TPA/conectividade](tpa-local-layout-review.md) e pela
 [galeria 3D nativa atual](images/kicad-3d/README.md). Capturas/cores históricos não

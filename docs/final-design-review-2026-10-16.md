@@ -1,5 +1,8 @@
 # Revisão final solicitada — 2026-10-16
 
+**Complemento posterior:** [as 190 pendências de fabricante/MPN foram resolvidas](bom-closeout-2026-10-16.md).
+As contagens abaixo registram a auditoria anterior ao fechamento.
+
 **Roteamento completo; desenvolvimento ainda não concluído para fabricação.**
 Foi revisada a candidata única `kicad/system-candidate/`, preservando todo o cobre,
 placement, contorno, furação e valores elétricos. Snapshot em `build/finalization/snapshot/`.

@@ -4,8 +4,11 @@
 
 Fonte atual: `system-candidate-inventory.csv`, extraído do esquema único por
 `python3 scripts/audit_final_design.py`. Contém 263 referências, DNP e itens sem
-compra separados; 235 posições de compra, 190 com fabricante ausente ou MPN
-não normalizado. Não é BOM de compra aprovada nem CPL qualificado.
+compra separados; **235 posições de compra, zero com fabricante/MPN pendentes**.
+As 190 pendências anteriores foram resolvidas na seleção canônica
+`system-candidate-selection.csv`, sincronizada com esquema/PCB/gerador.
+Acessórios estão em `system-candidate-accessories.csv`. Não é compra aprovada
+nem CPL qualificado. Fechamento: [relatório](../docs/bom-closeout-2026-10-16.md).
 Correções de MPN, fontes e pendências em
 [`docs/final-design-review-2026-10-16.md`](../docs/final-design-review-2026-10-16.md).
 

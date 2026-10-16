@@ -6,8 +6,10 @@ template PDF (outline, holes, profile keepout, courtyards) for the physical fit 
 ERC/DRC reports and SHA-256 manifest. Generates files only: no upload, no order.
 """
 
+import csv
 import hashlib
 import json
+import shutil
 import subprocess
 import tempfile
 from pathlib import Path
@@ -37,7 +39,9 @@ def main():
     dirty = bool(subprocess.run(["git", "status", "--porcelain"], capture_output=True,
                                text=True, cwd=ROOT, check=True).stdout.strip())
     sources = [PCB, SCH, PRJ / "system-candidate.kicad_pro", Path(__file__),
-               Path(__file__).with_name("export_mechanical_drawing.py")]
+               Path(__file__).with_name("export_mechanical_drawing.py"),
+               Path(__file__).with_name("audit_final_design.py"),
+               ROOT / "bom/system-candidate-accessories.csv"]
     source_hashes = {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
                      for p in sources}
     drafts = ROOT / "build/fab/drafts"
@@ -45,7 +49,7 @@ def main():
     out = Path(tempfile.mkdtemp(prefix=commit[:12] + ("-dirty-" if dirty else "-"), dir=drafts))
     (out / "README.txt").write_text(
         "RASCUNHO NÃO LIBERADO — não enviar à fábrica.\n"
-        "BOM/CPL nativos ainda exigem seleção de peças, conversão e revisão JLCPCB.\n"
+        "Peças selecionadas; BOM/CPL ainda exigem cotação, conversão e revisão JLCPCB.\n"
         "Somente summary.json + SHA256SUMS indicam exportação concluída, não aprovação.\n")
     (out / "gerber").mkdir()
     layers = "F.Cu,In1.Cu,In2.Cu,B.Cu,F.Paste,B.Paste,F.SilkS,B.SilkS,F.Mask,B.Mask,Edge.Cuts"
@@ -55,8 +59,33 @@ def main():
     for side in ("front", "back"):
         run("pcb", "export", "pos", "--side", side, "--format", "csv", "--units", "mm",
             "--exclude-dnp", "-o", str(out / f"cpl-{side}.csv"), str(PCB))
-    run("sch", "export", "bom", "--fields", "Reference,Value,Footprint,MPN,${QUANTITY},${DNP}",
-        "--group-by", "Value,Footprint,MPN", "--exclude-dnp", "-o", str(out / "bom.csv"), str(SCH))
+    run("sch", "export", "bom", "--fields", "Reference,Value,Footprint,Manufacturer,MPN,Datasheet,SelectionNotes,${QUANTITY},${DNP}",
+        "--group-by", "Value,Footprint,Manufacturer,MPN", "--exclude-dnp", "-o", str(out / "bom.csv"), str(SCH))
+    run("sch", "export", "netlist", "--format", "kicadxml", "-o", str(out / "netlist.xml"), str(SCH))
+    from audit_final_design import inventory
+    purchase = [r for r in inventory((out / "netlist.xml").read_text()) if r["Purchase"]]
+    if any(r["Pending"] for r in purchase):
+        raise SystemExit("Incomplete purchasing metadata; draft incomplete.")
+    fields = ["Reference", "Quantity", "Value", "Footprint", "Manufacturer", "MPN", "Datasheet", "SelectionNotes"]
+    with (out / "purchase-bom.csv").open("w") as stream:
+        writer = csv.DictWriter(stream, fieldnames=fields, lineterminator="\n")
+        writer.writeheader()
+        writer.writerows({key: 1 if key == "Quantity" else r[key] for key in fields} for r in purchase)
+    shutil.copy2(ROOT / "bom/system-candidate-accessories.csv", out / "accessories.csv")
+    purchased_refs = {r["Reference"] for r in purchase}
+    placed = []
+    for side in ("front", "back"):
+        with (out / f"cpl-{side}.csv").open() as stream:
+            reader = csv.DictReader(stream)
+            headers = reader.fieldnames
+            positions = [r for r in reader if r["Ref"] in purchased_refs]
+        placed.extend(r["Ref"] for r in positions)
+        with (out / f"purchase-cpl-{side}.csv").open("w") as stream:
+            writer = csv.DictWriter(stream, fieldnames=headers, lineterminator="\n")
+            writer.writeheader()
+            writer.writerows(positions)
+    if len(placed) != len(set(placed)) or set(placed) != purchased_refs:
+        raise SystemExit("Purchasing BOM/CPL references differ; draft incomplete.")
     run("sch", "export", "pdf", "-o", str(out / "schematic.pdf"), str(SCH))
     # 1:1 template: print at 100 %, check against the original board/brackets (FAB-001).
     run("pcb", "export", "pdf", "--layers", "Edge.Cuts,Dwgs.User,F.CrtYd,F.Fab", "--mode-single",
@@ -92,6 +121,9 @@ def main():
         "drc_warnings": sum(v["severity"] == "warning" for v in drc["violations"]),
         "unconnected": len(drc["unconnected_items"]),
         "parity": len(drc.get("schematic_parity", [])),
+        "purchase_positions": len(purchase),
+        "purchasing_metadata_pending": 0,
+        "purchase_cpl_positions": len(placed),
         "ordered": False,
     }
     if any(hashlib.sha256(p.read_bytes()).hexdigest() != source_hashes[str(p.relative_to(ROOT))]

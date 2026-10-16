@@ -1,0 +1,236 @@
+Reference,Value,Footprint,Manufacturer,MPN,Datasheet,SelectionNotes
+C1,470uF 35V,PS28:WE_860020575014,Wurth Elektronik,860020575014,https://www.we-online.com/components/products/datasheet/860020575014.pdf,WE WCAP-ATG5 rev1.0 2014-11-11 p.1: 470uF 35V D10 H16+1.5 P5 drill0.9; ripple520mA/120Hz
+C2,100nF 50V X7R,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.ti.com/lit/ug/slou441/slou441.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified
+C3,10uF 16V X5R,Capacitor_SMD:C_0805_2012Metric,Taiyo Yuden,EMK212BJ106KG-T,https://www.ti.com/lit/ug/slou441/slou441.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified; effective capacitance/DC-bias check still required at VDD
+C4,100nF 50V X7R,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.ti.com/lit/ug/slou441/slou441.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified
+C5,100nF 50V X7R,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.ti.com/lit/ug/slou441/slou441.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified
+C6,1uF 16V X7R,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71C105KA12D,https://www.ti.com/lit/ug/slou441/slou441.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified
+C7,1uF 16V X7R,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71C105KA12D,https://www.ti.com/lit/ug/slou441/slou441.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified
+C8,47nF 25V X7R,Capacitor_SMD:C_0402_1005Metric,Murata,GRM155R71E473KA88D,https://www.ti.com/lit/ug/slou441/slou441.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified
+C9,1uF 16V X7R,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71C105KA12D,https://www.ti.com/lit/ug/slou441/slou441.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified
+C10,1uF 100V X7R,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR72A105KA01L,https://www.ti.com/lit/ug/slou441/slou441.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified
+C11,1uF 100V X7R,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR72A105KA01L,https://www.ti.com/lit/ug/slou441/slou441.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified
+C12,1uF 100V X7R,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR72A105KA01L,https://www.ti.com/lit/ug/slou441/slou441.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified
+C13,1uF 100V X7R,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR72A105KA01L,https://www.ti.com/lit/ug/slou441/slou441.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified
+C14,680uF 63V,Capacitor_THT:CP_Radial_D12.5mm_P5.00mm,Nichicon,UHE1J681MHD,https://www.nichicon.co.jp/english/series_items/catalog_pdf/e-uhe.pdf,Nichicon UHE CAT.8100M: UHE1J681MHD 680uF 63V D12.5x40 P5; Zmax0.071ohm at100kHz/20C; ripple1280mA at100kHz/105C; D-031
+C15,680uF 63V,Capacitor_THT:CP_Radial_D12.5mm_P5.00mm,Nichicon,UHE1J681MHD,https://www.nichicon.co.jp/english/series_items/catalog_pdf/e-uhe.pdf,Nichicon UHE CAT.8100M: UHE1J681MHD 680uF 63V D12.5x40 P5; Zmax0.071ohm at100kHz/20C; ripple1280mA at100kHz/105C; D-031
+C16,33nF 25V X7R,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71E333KA01D,https://www.ti.com/lit/ug/slou441/slou441.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified
+C17,33nF 25V X7R,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71E333KA01D,https://www.ti.com/lit/ug/slou441/slou441.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified
+C18,33nF 25V X7R,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71E333KA01D,https://www.ti.com/lit/ug/slou441/slou441.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified
+C19,33nF 25V X7R,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71E333KA01D,https://www.ti.com/lit/ug/slou441/slou441.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified
+C20,10uF 16V X5R,Capacitor_SMD:C_0805_2012Metric,Taiyo Yuden,EMK212BJ106KG-T,https://www.ti.com/lit/ug/slou441/slou441.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified; effective capacitance/DC-bias check still required at VDD
+C21,10uF 16V X5R,Capacitor_SMD:C_0805_2012Metric,Taiyo Yuden,EMK212BJ106KG-T,https://www.ti.com/lit/ug/slou441/slou441.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified; effective capacitance/DC-bias check still required at VDD
+C22,470nF 100V PP 5%,Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2,WIMA,MKP2D034701M00JSSD,https://www.wima.de/wp-content/uploads/media/e_WIMA_MKP_2.pdf,"WIMA MKP2 03.26 p.38-39: 470nF 100V, W8.5 H14 L7.2 PCM5; J S SD suffix"
+C23,470nF 100V PP 5%,Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2,WIMA,MKP2D034701M00JSSD,https://www.wima.de/wp-content/uploads/media/e_WIMA_MKP_2.pdf,"WIMA MKP2 03.26 p.38-39: 470nF 100V, W8.5 H14 L7.2 PCM5; J S SD suffix"
+C24,1nF 100V C0G,Capacitor_SMD:C_1206_3216Metric,KYOCERA AVX,12061A102JAT2A,https://catalogs.kyocera-avx.com/SurfaceMount.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified
+C25,10nF 100V X7R,Capacitor_SMD:C_0603_1608Metric,KYOCERA AVX,06031C103KAT2A,https://catalogs.kyocera-avx.com/SurfaceMount.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified
+C26,470nF 100V PP 5%,Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2,WIMA,MKP2D034701M00JSSD,https://www.wima.de/wp-content/uploads/media/e_WIMA_MKP_2.pdf,"WIMA MKP2 03.26 p.38-39: 470nF 100V, W8.5 H14 L7.2 PCM5; J S SD suffix"
+C27,470nF 100V PP 5%,Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2,WIMA,MKP2D034701M00JSSD,https://www.wima.de/wp-content/uploads/media/e_WIMA_MKP_2.pdf,"WIMA MKP2 03.26 p.38-39: 470nF 100V, W8.5 H14 L7.2 PCM5; J S SD suffix"
+C28,1nF 100V C0G,Capacitor_SMD:C_1206_3216Metric,KYOCERA AVX,12061A102JAT2A,https://catalogs.kyocera-avx.com/SurfaceMount.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified
+C29,10nF 100V X7R,Capacitor_SMD:C_0603_1608Metric,KYOCERA AVX,06031C103KAT2A,https://catalogs.kyocera-avx.com/SurfaceMount.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified
+C107,100n,Capacitor_SMD:C_0805_2012Metric,KEMET,C0805C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0805C104K5RACTU,100nF; 50V; X7R; 10%; 0805
+C108,100n,Capacitor_SMD:C_0805_2012Metric,KEMET,C0805C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0805C104K5RACTU,100nF; 50V; X7R; 10%; 0805
+C109,2.2u 63V film,Capacitor_THT:C_Rect_L7.2mm_W7.2mm_P5.00mm_FKS2_FKP2_MKS2_MKP2,WIMA,MKS2C042201K00JSSD,https://www.wima.de/wp-content/uploads/media/e_WIMA_MKS_2.pdf,2.2uF; 63V; 5%; PET film; W7.2 H13 L7.2mm; pitch5; body footprint corrected from W5.5
+C201,470u,PS28:WE_860020575014,Wurth Elektronik,860020575014,https://www.we-online.com/components/products/datasheet/860020575014.pdf,470uF; 35V; D10x16; pitch5; unchanged selected core capacitor
+C202,470u,PS28:WE_860020575014,Wurth Elektronik,860020575014,https://www.we-online.com/components/products/datasheet/860020575014.pdf,470uF; 35V; D10x16; pitch5; unchanged selected core capacitor
+C203,1u,Capacitor_THT:C_Rect_L7.2mm_W11.0mm_P5.00mm_FKS2_FKP2_MKS2_MKP2,WIMA,MKP2C041001N00JSSD,https://www.wima.de/wp-content/uploads/media/e_WIMA_MKP_2.pdf,1uF; 63V; 5%; PP film; W11 H21 L7.2mm; pitch5
+C301,4700u 63V snap-in,Capacitor_THT:CP_Radial_D30.0mm_P10.00mm_SnapIn,Rubycon,63USC4700MEFCSN30X30,https://www.rubycon.co.jp/wp-content/uploads/catalog-aluminum/USC.pdf,"4700uF; 63V; D30x30; pitch10; 3.49Arms/120Hz; total with C14/C15 = 10760uF, D031 >=10mF; below OEM 13600uF"
+C302,4700u 63V snap-in,Capacitor_THT:CP_Radial_D30.0mm_P10.00mm_SnapIn,Rubycon,63USC4700MEFCSN30X30,https://www.rubycon.co.jp/wp-content/uploads/catalog-aluminum/USC.pdf,"4700uF; 63V; D30x30; pitch10; 3.49Arms/120Hz; total with C14/C15 = 10760uF, D031 >=10mF; below OEM 13600uF"
+C310,2.2u 100V X7R,Capacitor_SMD:C_1210_3225Metric,TDK,CGA6N3X7R2A225K230AB,https://www.ti.com/lit/ds/symlink/lm5164.pdf,2.2uF; 100V; X7R; 1210; TI Table7-1; effective capacitance per bias curve
+C311,2.2u 100V X7R,Capacitor_SMD:C_1210_3225Metric,TDK,CGA6N3X7R2A225K230AB,https://www.ti.com/lit/ds/symlink/lm5164.pdf,2.2uF; 100V; X7R; 1210; TI Table7-1; effective capacitance per bias curve
+C312,2.2n 50V X7R,Capacitor_SMD:C_0402_1005Metric,Murata,GCM155R71H222KA37D,https://www.ti.com/lit/ds/symlink/lm5164.pdf,2.2nF; 50V; X7R; 0402; 10%; within TI bootstrap1.5-2.5nF at nominal tolerance
+C313,3.3n,Capacitor_SMD:C_0603_1608Metric,TDK,CGA3E2X7R2A332K080AA,https://www.ti.com/lit/ds/symlink/lm5164.pdf,3.3nF; 100V; X7R; 0603; TI Table7-1
+C314,56p,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C560J5GACTU,https://www.yageogroup.com/download/specsheet/C0603C560J5GACTU,56pF; 50V; C0G; 5%; 0603; TI Table7-1
+C315,22u 25V X7R,Capacitor_SMD:C_1210_3225Metric,Taiyo Yuden,TMK325B7226KMHT,https://www.ti.com/lit/ds/symlink/lm5164.pdf,22uF; 25V; X7R; 1210; TI Table7-1
+C316,22u 25V X7R,Capacitor_SMD:C_1210_3225Metric,Taiyo Yuden,TMK325B7226KMHT,https://www.ti.com/lit/ds/symlink/lm5164.pdf,22uF; 25V; X7R; 1210; TI Table7-1
+C320,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C401,1u 25V,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71E105KA12D,https://www.murata.com/products/productdetail?partno=GRM188R71E105KA12%23,1uF; 25V; X7R; 10%; 0603; C401 input at12V: bias derating applies
+C402,10n,Capacitor_SMD:C_0603_1608Metric,KYOCERA AVX,06031C103KAT2A,https://catalogs.kyocera-avx.com/SurfaceMount.pdf,10nF; 100V; X7R; 10%; 0603; same as selected C25/C29
+C403,2.2u 10V,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188Z71C225KE43D,https://www.ti.com/lit/ug/slou557a/slou557a.pdf,2.2uF; 16V; X7R(Murata); 10%; 0603; TI EVM C118; LP2985 output3.3V requires >=1uF effective incl bias/temp/age; confirm curve before procurement release
+C404,180n,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71E184KA88D,https://www.ti.com/lit/pdf/tidryc8,180nF; 25V; X7R; 10%; 0603; CT at low bias; specified timing remains tolerance dependent
+C405,1u,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71E105KA12D,https://www.murata.com/products/productdetail?partno=GRM188R71E105KA12%23,1uF; 25V; X7R; 10%; 0603; C401 input at12V: bias derating applies
+C406,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C407,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C408,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C409,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C410,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C411,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C412,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C413,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C414,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C415,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C416,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C417,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C418,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C419,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C420,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C421,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C422,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C423,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C503,4.7n C0G,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C472J5GACTU,https://www.yageogroup.com/download/specsheet/C0603C472J5GACTU,4.7nF; 50V; C0G; 5%; 0603
+C504,4.7n C0G,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C472J5GACTU,https://www.yageogroup.com/download/specsheet/C0603C472J5GACTU,4.7nF; 50V; C0G; 5%; 0603
+C505,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C506,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C507,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C508,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C509,330n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C334K4RACTU,https://search.kemet.com/component-documentation/download/specsheet/C0603C334K4RACTU,330nF; 16V; X7R; 10%; 0603; window tap <1V
+C510,680n,Capacitor_SMD:C_0603_1608Metric,YAGEO,CC0603KRX7R8BB684,https://www.yageogroup.com/download/specsheet/CC0603KRX7R8BB684,680nF; 25V; X7R; 10%; 0603; window tap <1V
+C511,330n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C334K4RACTU,https://search.kemet.com/component-documentation/download/specsheet/C0603C334K4RACTU,330nF; 16V; X7R; 10%; 0603; window tap <1V
+C512,680n,Capacitor_SMD:C_0603_1608Metric,YAGEO,CC0603KRX7R8BB684,https://www.yageogroup.com/download/specsheet/CC0603KRX7R8BB684,680nF; 25V; X7R; 10%; 0603; window tap <1V
+C601,10u 25V,Capacitor_SMD:C_1206_3216Metric,TDK,C3216X7R1E106K160AB,https://www.ti.com/lit/ug/slou557a/slou557a.pdf,10uF; 25V; X7R; 10%; 1206; OEM +/-15V interface bypass
+C602,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+C603,120u 63V,Capacitor_THT:CP_Radial_D8.0mm_P3.50mm,Nichicon,UHE1J121MPD,https://www.nichicon.co.jp/english/series_items/catalog_pdf/e-uhe.pdf,120uF; 63V; D8x20; pitch3.5
+C604,10u 25V,Capacitor_SMD:C_1206_3216Metric,TDK,C3216X7R1E106K160AB,https://www.ti.com/lit/ug/slou557a/slou557a.pdf,10uF; 25V; X7R; 10%; 1206; OEM +/-15V interface bypass
+C605,100n,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,https://www.yageogroup.com/download/specsheet/C0603C104K5RACTU,100nF; 50V; X7R; 10%; 0603
+D201,1N4007,Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal,Vishay,1N4007-E3/54,https://www.vishay.com/docs/88503/1n4001.pdf,1000V; 1A; DO41 axial; polarity per footprint cathode1
+D301,P600J,Diode_THT:D_P600_R-6_P12.70mm_Horizontal,Vishay,P600J-E3/54,https://www.vishay.com/docs/88692/p600a.pdf,600V; 6A; IFSM400A; P600/R6 axial; CT rectifier; manual leadforming; temperature/inrush to bench
+D302,P600J,Diode_THT:D_P600_R-6_P12.70mm_Horizontal,Vishay,P600J-E3/54,https://www.vishay.com/docs/88692/p600a.pdf,600V; 6A; IFSM400A; P600/R6 axial; CT rectifier; manual leadforming; temperature/inrush to bench
+D303,SMCJ51A,Diode_SMD:D_SMC,Littelfuse,SMCJ51A,https://www.littelfuse.com/assetdocs/tvs-diode-catalog?assetguid=5e26c1d4-63ea-4a4a-b528-cff4330cd7ff,51V standoff; 1500W10/1000us; Vclamp82.4V; not sustained rail OVP; D026
+D501,1N4148W,Diode_SMD:D_SOD-123,Diodes Incorporated,1N4148W-7-F,https://www.diodes.com/assets/Datasheets/ds30086.pdf,SOD123; fast signal diode
+D502,BZT52C15,Diode_SMD:D_SOD-123,Diodes Incorporated,BZT52C15-7-F,https://www.diodes.com/assets/Datasheets/ds18004.pdf,15V; SOD123; 13.8-15.6V at5mA
+D503,BAT54,Package_TO_SOT_SMD:SOT-23,Diodes Incorporated,BAT54-7-F,https://www.diodes.com/assets/Datasheets/ds11005.pdf,30V; SOT23; single Schottky; pin1 A pin3 K
+D504,BAT54,Package_TO_SOT_SMD:SOT-23,Diodes Incorporated,BAT54-7-F,https://www.diodes.com/assets/Datasheets/ds11005.pdf,30V; SOT23; single Schottky; pin1 A pin3 K
+D601,BZT52C16,Diode_SMD:D_SOD-123,Diodes Incorporated,BZT52C16-7-F,https://www.diodes.com/assets/Datasheets/ds18004.pdf,16V; SOD123; 15.3-17.1V at5mA
+D602,S1M,Diode_SMD:D_SMA,Vishay,S1M-E3/61T,https://www.vishay.com/docs/88711/s1a.pdf,1000V; 1A; SMA/DO214AC; cathode1; light-load rectification/fan flyback
+D603,S1M,Diode_SMD:D_SMA,Vishay,S1M-E3/61T,https://www.vishay.com/docs/88711/s1a.pdf,1000V; 1A; SMA/DO214AC; cathode1; light-load rectification/fan flyback
+D604,BZT52C16,Diode_SMD:D_SOD-123,Diodes Incorporated,BZT52C16-7-F,https://www.diodes.com/assets/Datasheets/ds18004.pdf,16V; SOD123; 15.3-17.1V at5mA
+D701,PVDD,LED_SMD:LED_0805_2012Metric,Lite-On,LTST-C171GKT,https://optoelectronics.liteon.com/upload/download/DS22-2000-019/LTST-C171GKT.pdf,green LED; 0805; polarity pin1 cathode; resistive current limit retained
+D702,RAILS_OK,LED_SMD:LED_0805_2012Metric,Lite-On,LTST-C171GKT,https://optoelectronics.liteon.com/upload/download/DS22-2000-019/LTST-C171GKT.pdf,green LED; 0805; polarity pin1 cathode; resistive current limit retained
+D703,RUN,LED_SMD:LED_0805_2012Metric,Lite-On,LTST-C171GKT,https://optoelectronics.liteon.com/upload/download/DS22-2000-019/LTST-C171GKT.pdf,green LED; 0805; polarity pin1 cathode; resistive current limit retained
+D704,AUDIO,LED_SMD:LED_0805_2012Metric,Lite-On,LTST-C171GKT,https://optoelectronics.liteon.com/upload/download/DS22-2000-019/LTST-C171GKT.pdf,green LED; 0805; polarity pin1 cathode; resistive current limit retained
+D705,FAULT,LED_SMD:LED_0805_2012Metric,Lite-On,LTST-C171GKT,https://optoelectronics.liteon.com/upload/download/DS22-2000-019/LTST-C171GKT.pdf,green LED; 0805; polarity pin1 cathode; resistive current limit retained
+D706,CLIP_OTW,LED_SMD:LED_0805_2012Metric,Lite-On,LTST-C171GKT,https://optoelectronics.liteon.com/upload/download/DS22-2000-019/LTST-C171GKT.pdf,green LED; 0805; polarity pin1 cathode; resistive current limit retained
+D707,S1M,Diode_SMD:D_SMA,Vishay,S1M-E3/61T,https://www.vishay.com/docs/88711/s1a.pdf,1000V; 1A; SMA/DO214AC; cathode1; light-load rectification/fan flyback
+F301,T6.3A slow,Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open,Schurter,0031.8201,https://www.schurter.com/en/datasheet/OGN,PCB fuse holder for5x20; P22.5mm; separate fuse F301-FUSE in accessories; not fuse order code
+J1,691137710002 2P 5.00mm,PS28:WE_WR_TBL_691137710002,Wurth Elektronik,691137710002,https://www.we-online.com/components/products/datasheet/691137710002.pdf,"WE WR-TBL1377 rev001.003 2021-07-30 p.1-2: pitch5.00 NOT5.08; 2pins, D1.3 drill, 16A UL/24A VDE"
+J2,Auxiliary 12V,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,Sullins,PBC02SAAN,https://www.sullinscorp.com/images/AllRoHSParts.pdf,TI SLOU441 July2016 Table8 p.14-16; nominal package geometry; sourcing/lifecycle not verified
+J5,B2P-VH(LF)(SN),Connector_JST:JST_VH_B2P-VH_1x02_P3.96mm_Vertical,JST,B2P-VH(LF)(SN),https://www.jst.com/wp-content/uploads/2021/08/eVH-new.pdf,"JST VH eVH-new p.3: B2P-VH(LF)(SN), 2 circuits, pitch3.96mm; D-031 OEM woofer harness"
+J7,B7B-XH-A(LF)(SN),Connector_JST:JST_XH_B7B-XH-A_1x07_P2.50mm_Vertical,JST,B7B-XH-A(LF)(SN),https://www.jst.com/wp-content/uploads/2021/01/eXH.pdf,"7way; 2.5mm; mates OEM P101 harness, pinout per current design"
+J8,FAN 12V,Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical,JST,B2B-XH-A(LF)(SN),https://www.jst.com/wp-content/uploads/2021/01/eXH.pdf,2way; 2.5mm; fan<=200mA
+J301,T1_SECONDARY,Connector_JST:JST_VH_B3P-VH_1x03_P3.96mm_Vertical,JST,B3P-VH(LF)(SN),https://www.jst.com/wp-content/uploads/2021/08/eVH-new.pdf,"3way; 3.96mm; CT T1 OEM harness, never bridge red-red"
+J401,START_BUTTON,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,Sullins Connector Solutions,PBC02SAAN,https://www.sullinscorp.com/images/AllRoHSParts.pdf,2pin straight header; P2.54mm; external momentary NO switch in accessories; panel mechanical fit remains external
+JP701,FAN MODE,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,Sullins Connector Solutions,PBC03SAAN,https://www.sullinscorp.com/images/AllRoHSParts.pdf,3pin straight header; P2.54mm; shunt separate accessory; 1-2ON/2-3OTW
+K501,G6K-2F DC12,Relay_SMD:Relay_DPDT_Omron_G6K-2F,Omron,G6K-2F DC12,https://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf,12V monostable DPDT; SMD; 1315ohm; operate/release3ms max; manufacturer code includes coil voltage space
+L1,10uH 16A 22A_Isat_typ,PS28:WE_HCF2013_7443631000,Wurth Elektronik,7443631000,https://www.we-online.com/components/products/datasheet/7443631000.pdf,WE 006.000 2025-07-08 p.1: 10uH/16A/22A typ/8.76mOhm max; stability land NOT electrical
+L2,10uH 16A 22A_Isat_typ,PS28:WE_HCF2013_7443631000,Wurth Elektronik,7443631000,https://www.we-online.com/components/products/datasheet/7443631000.pdf,WE 006.000 2025-07-08 p.1: 10uH/16A/22A typ/8.76mOhm max; stability land NOT electrical
+L301,68u,Inductor_SMD:L_Coilcraft_MSS1246T-XXX,Coilcraft,MSS1246T-683MLC,https://www.coilcraft.com/getmedia/dec41de3-f4b7-4c07-b144-cc21921ccfd5/mss1246t.pdf,68uH; 20%; Irms1.8A; Isat2.26A at10% drop; 12x12x4.6mm; current C reel code replaces historical B packaging; TI Table7-1 electrical selection unchanged
+Q501,MMBT3904,Package_TO_SOT_SMD:SOT-23,Diodes Incorporated,MMBT3904-7-F,https://www.diodes.com/assets/Datasheets/ds30036.pdf,NPN;40V;SOT23; pin1B2E3C; VCEsat0.2V max10mA/1mA
+Q502,MMBT3904,Package_TO_SOT_SMD:SOT-23,Diodes Incorporated,MMBT3904-7-F,https://www.diodes.com/assets/Datasheets/ds30036.pdf,NPN;40V;SOT23; pin1B2E3C; VCEsat0.2V max10mA/1mA
+Q601,BCP56,Package_TO_SOT_SMD:SOT-223-3_TabPin2,onsemi,BCP56T1G,https://www.onsemi.com/pdf/datasheet/bcp56-d.pdf,80V;1A; SOT223; pin1B2C3E tab2; NPN
+Q602,BCP53,Package_TO_SOT_SMD:SOT-223-3_TabPin2,onsemi,BCP53T1G,https://www.onsemi.com/pdf/datasheet/bcp53-d.pdf,-80V;-1A; SOT223; pin1B2C3E tab2; PNP
+Q603,BSS138,Package_TO_SOT_SMD:SOT-23,onsemi,BSS138LT1G,https://www.onsemi.com/pdf/datasheet/bss138lt1-d.pdf,50V N-MOS; SOT23; pin1G2S3D
+Q701,BSS138,Package_TO_SOT_SMD:SOT-23,onsemi,BSS138LT1G,https://www.onsemi.com/pdf/datasheet/bss138lt1-d.pdf,50V N-MOS; SOT23; pin1G2S3D
+Q702,BSS138,Package_TO_SOT_SMD:SOT-23,onsemi,BSS138LT1G,https://www.onsemi.com/pdf/datasheet/bss138lt1-d.pdf,50V N-MOS; SOT23; pin1G2S3D
+Q703,BSS138,Package_TO_SOT_SMD:SOT-23,onsemi,BSS138LT1G,https://www.onsemi.com/pdf/datasheet/bss138lt1-d.pdf,50V N-MOS; SOT23; pin1G2S3D
+Q704,BSS138,Package_TO_SOT_SMD:SOT-23,onsemi,BSS138LT1G,https://www.onsemi.com/pdf/datasheet/bss138lt1-d.pdf,50V N-MOS; SOT23; pin1G2S3D
+Q705,BSS138,Package_TO_SOT_SMD:SOT-23,onsemi,BSS138LT1G,https://www.onsemi.com/pdf/datasheet/bss138lt1-d.pdf,50V N-MOS; SOT23; pin1G2S3D
+Q706,BSS138,Package_TO_SOT_SMD:SOT-23,onsemi,BSS138LT1G,https://www.onsemi.com/pdf/datasheet/bss138lt1-d.pdf,50V N-MOS; SOT23; pin1G2S3D
+Q707,AO3400A,Package_TO_SOT_SMD:SOT-23,Alpha & Omega Semiconductor,AO3400A,https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf,30V N-MOS;SOT23;pin1G2S3D; fan<=200mA
+R1,3.3R 0.25W 1%,Resistor_SMD:R_1206_3216Metric,Vishay,CRCW12063R30FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,"Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system"
+R2,3.3R 0.25W 1%,Resistor_SMD:R_1206_3216Metric,Vishay,CRCW12063R30FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,"Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system"
+R3,22k 1%,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW060322K0FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,"Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system"
+R4,30k 1%,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW060330K0FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,"Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system"
+R5,3.3R 0.25W 1%,Resistor_SMD:R_1206_3216Metric,Vishay,CRCW12063R30FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,"Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system"
+R6,3.3R 0.25W 1%,Resistor_SMD:R_1206_3216Metric,Vishay,CRCW12063R30FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,"Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system"
+R9,4.7k 1%,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW06034K70FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,"Vishay D/CRCW e3 doc20035: 0603 0.1W, 1206 0.25W and ordering system"
+R101,1k,Resistor_SMD:R_0805_2012Metric,Vishay,CRCW08051K00FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md
+R102,100k,Resistor_SMD:R_0805_2012Metric,Vishay,CRCW0805100KFKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md
+R107,10k,Resistor_SMD:R_0805_2012Metric,Vishay,CRCW080510K0FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,10k; 1%; 0805; 0.125W; 150V
+R108,10k,Resistor_SMD:R_0805_2012Metric,Vishay,CRCW080510K0FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,10k; 1%; 0805; 0.125W; 150V
+R110,8.87k,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD078K87L,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,8.87k ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R111,10k,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD0710KL,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,10k ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R201,15,Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P5.08mm_Vertical,Vishay,AC03000001509JAC00,https://www.vishay.com/docs/28730/acseries.pdf,15 ohm; 3W; axial vertical; insulated lead and body spacing per assembly
+R202,1k,PS28_ANALOG:TNPW1206_IPC_Reflow,Vishay,TNPW12061K00BEEA,https://www.vishay.com/docs/28758/tnpw_e3.pdf,0.1%; 25ppm/K; custom IPC reflow land pattern per Vishay 28950
+R203,2.2k,PS28_ANALOG:TNPW1206_IPC_Reflow,Vishay,TNPW12062K20BEEA,https://www.vishay.com/docs/28758/tnpw_e3.pdf,0.1%; 25ppm/K; custom IPC reflow land pattern per Vishay 28950
+R204,75,Resistor_SMD:R_1206_3216Metric,Vishay,CRCW120675R0FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,75; 1%; 1206; 0.25W; 200V
+R205,75,Resistor_SMD:R_1206_3216Metric,Vishay,CRCW120675R0FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,75; 1%; 1206; 0.25W; 200V
+R206,75,Resistor_SMD:R_1206_3216Metric,Vishay,CRCW120675R0FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,75; 1%; 1206; 0.25W; 200V
+R207,75,Resistor_SMD:R_1206_3216Metric,Vishay,CRCW120675R0FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,75; 1%; 1206; 0.25W; 200V
+R301,4.7k 2W,Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal,Vishay,PR02000204701JA100,https://www.vishay.com/docs/28729/pr010203.pdf,4.7k; 5%; 2W Cu leads; 500V; axial L12 max/D4.5 max; form leads to P15.24; 50V gives 0.532W; ~40K rise nominal
+R310,100k 1%,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD07100KL,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md
+R311,453k 1%,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD07453KL,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,453k ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R312,49.9k 1%,Resistor_SMD:R_0603_1608Metric,Susumu,RG1608P-4992-B-T5,https://www.susumu.co.jp/common/pdf/n_catalog_partition04_en.pdf,49.9k; 0.1%; 25ppm/K; 0603; TI LM5164 Table7-1
+R313,453k 1%,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD07453KL,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,453k ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R320,931k 0.1%,Resistor_SMD:R_1206_3216Metric,YAGEO,RT1206BRD07931KL,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,931k ohm notation; 0.1%; 25 ppm/K; 1206; 0.25W; 200V
+R321,6.04k 0.1%,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD076K04L,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,6.04k ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R322,7.32k 0.1%,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD077K32L,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,7.32k ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R323,100k,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW0603100KFKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,100k; 1%; 0603; 0.1W; 75V
+R401,100k,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW0603100KFKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,100k; 1%; 0603; 0.1W; 75V
+R402,100k,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW0603100KFKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,100k; 1%; 0603; 0.1W; 75V
+R403,100k,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW0603100KFKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,100k; 1%; 0603; 0.1W; 75V
+R404,100k,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW0603100KFKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,100k; 1%; 0603; 0.1W; 75V
+R405,100k,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW0603100KFKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,100k; 1%; 0603; 0.1W; 75V
+R406,100k,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW0603100KFKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,100k; 1%; 0603; 0.1W; 75V
+R407,10k,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW060310K0FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,10k; 1%; 0603; 0.1W; 75V
+R408,1k,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW06031K00FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,1k; 1%; 0603; 0.1W; 75V
+R420,1M,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD071ML,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,1M ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R421,46.4k,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD0746K4L,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,46.4k ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R422,1M,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD071ML,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,1M ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R423,30.1k,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD0730K1L,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,30.1k ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R424,909k,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD07909KL,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,909k ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R425,101k,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD07101KL,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,101k ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R426,1M,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD071ML,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,1M ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R427,64.9k,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD0764K9L,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,64.9k ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R428,100k,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW0603100KFKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,100k; 1%; 0603; 0.1W; 75V
+R429,100k,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW0603100KFKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,100k; 1%; 0603; 0.1W; 75V
+R430,100k,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW0603100KFKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,100k; 1%; 0603; 0.1W; 75V
+R501,2.2k,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW06032K20FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,2.2k; 1%; 0603; 0.1W; 75V
+R502,100k,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW0603100KFKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,100k; 1%; 0603; 0.1W; 75V
+R503,1k,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW06031K00FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,1k; 1%; 0603; 0.1W; 75V
+R504,1k,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW06031K00FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,1k; 1%; 0603; 0.1W; 75V
+R505,787k,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD07787KL,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,787k ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R506,115k,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD07115KL,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,115k ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R507,78.7k,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD0778K7L,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,78.7k ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R508,787k,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD07787KL,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,787k ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R509,115k,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD07115KL,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,115k ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R510,78.7k,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD0778K7L,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,78.7k ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R511,100k,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW0603100KFKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,100k; 1%; 0603; 0.1W; 75V
+R512,10k,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW060310K0FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,10k; 1%; 0603; 0.1W; 75V
+R513,100k,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW0603100KFKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,100k; 1%; 0603; 0.1W; 75V
+R514,357k,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD07357KL,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,357k ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R515,1.5k,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD071K5L,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,1.5k ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R516,11.5k,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD0711K5L,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,11.5k ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R517,3.3k,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD073K3L,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,3.3k ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R518,3.3k,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD073K3L,https://www.yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L,3.3k ohm notation; 0.1%; 25 ppm/K; 0603; 0.1W; 75V
+R601,470 1W,Resistor_SMD:R_2512_6332Metric,Vishay,CRCW2512470RFKEG,https://www.vishay.com/docs/20035/dcrcwe3.pdf,470; 1%; 2512; 1W; 500V
+R602,10k,Resistor_SMD:R_1206_3216Metric,Vishay,CRCW120610K0FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,10k; 1%; 1206; 0.25W; 200V
+R603,470 1W,Resistor_SMD:R_2512_6332Metric,Vishay,CRCW2512470RFKEG,https://www.vishay.com/docs/20035/dcrcwe3.pdf,470; 1%; 2512; 1W; 500V
+R604,10k,Resistor_SMD:R_1206_3216Metric,Vishay,CRCW120610K0FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,10k; 1%; 1206; 0.25W; 200V
+R605,10k,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW060310K0FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,10k; 1%; 0603; 0.1W; 75V
+R701,47k,Resistor_SMD:R_1206_3216Metric,Vishay,CRCW120647K0FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,47k; 1%; 1206; 0.25W; 200V
+R702,2.2k,Resistor_SMD:R_0805_2012Metric,Vishay,CRCW08052K20FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,2.2k; 1%; 0805; 0.125W; 150V
+R703,2.2k,Resistor_SMD:R_0805_2012Metric,Vishay,CRCW08052K20FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,2.2k; 1%; 0805; 0.125W; 150V
+R704,2.2k,Resistor_SMD:R_0805_2012Metric,Vishay,CRCW08052K20FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,2.2k; 1%; 0805; 0.125W; 150V
+R705,2.2k,Resistor_SMD:R_0805_2012Metric,Vishay,CRCW08052K20FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,2.2k; 1%; 0805; 0.125W; 150V
+R706,2.2k,Resistor_SMD:R_0805_2012Metric,Vishay,CRCW08052K20FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,2.2k; 1%; 0805; 0.125W; 150V
+R715,10k,Resistor_SMD:R_0805_2012Metric,Vishay,CRCW080510K0FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,10k; 1%; 0805; 0.125W; 150V
+R716,10k,Resistor_SMD:R_0805_2012Metric,Vishay,CRCW080510K0FKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,10k; 1%; 0805; 0.125W; 150V
+R720,100k,Resistor_SMD:R_0805_2012Metric,Vishay,CRCW0805100KFKEA,https://www.vishay.com/docs/20035/dcrcwe3.pdf,100k; 1%; 0805; 0.125W; 150V
+U1,TPA3255DDV,Package_SO:HTSSOP-44_6.1x14mm_P0.635mm_TopEP4.14x7.01mm,Texas Instruments,TPA3255DDVR,https://www.ti.com/lit/ds/symlink/tpa3255.pdf,TI SLASEA8A DDV0044D / package addendum
+U2,OPA1656ID,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,Texas Instruments,OPA1656ID,https://www.ti.com/lit/ds/symlink/opa1656.pdf,OPA1656ID; package and pin numbering per current native footprint and cited datasheet; engineering selection
+U3,OPA1656ID,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,Texas Instruments,OPA1656ID,https://www.ti.com/lit/ds/symlink/opa1656.pdf,OPA1656ID; package and pin numbering per current native footprint and cited datasheet; engineering selection
+U302,LM5164DDA,Package_SO:HSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.1mm,Texas Instruments,LM5164DDAR,https://www.ti.com/lit/ds/symlink/lm5164.pdf,LM5164DDAR (TI SNVSAU4D Table 7-1); HSOP-8 EP footprint not audited; package and pin numbering per current native footprint and cited datasheet; engineering selection
+U303,TPS3700DDC,Package_TO_SOT_SMD:SOT-23-6,Texas Instruments,TPS3700DDCR,https://www.ti.com/lit/ds/symlink/tps3700.pdf,TPS3700DDCR (TI SBVS187G p.23 package option addendum); SOT-23-6 footprint not audited; package and pin numbering per current native footprint and cited datasheet; engineering selection
+U401,LP2985-33,Package_TO_SOT_SMD:SOT-23-5,Texas Instruments,LP2985-33DBVR,https://www.ti.com/lit/ds/symlink/lp2985.pdf,LP2985-33DBVR (TI SLVS522S p.33 orderable); VIN 16 V max; package and pin numbering per current native footprint and cited datasheet; engineering selection
+U402,TPS3808G33,Package_TO_SOT_SMD:SOT-23-6,Texas Instruments,TPS3808G33DBVR,https://www.ti.com/lit/ds/symlink/tps3808.pdf,"TPS3808G33DBVR (TI SBVS050N); hold stage 1, CT to VDD; package and pin numbering per current native footprint and cited datasheet; engineering selection"
+U403,TPS3808G33,Package_TO_SOT_SMD:SOT-23-6,Texas Instruments,TPS3808G33DBVR,https://www.ti.com/lit/ds/symlink/tps3808.pdf,"TPS3808G33DBVR (TI SBVS050N); hold stage 2, CT to VDD; package and pin numbering per current native footprint and cited datasheet; engineering selection"
+U404,TPS3808G33,Package_TO_SOT_SMD:SOT-23-6,Texas Instruments,TPS3808G33DBVR,https://www.ti.com/lit/ds/symlink/tps3808.pdf,"TPS3808G33DBVR (TI SBVS050N); start timeout, CT 180 nF; package and pin numbering per current native footprint and cited datasheet; engineering selection"
+U405,74LVC1G14,Package_TO_SOT_SMD:SOT-23-5,Texas Instruments,SN74LVC1G14DBVR,https://www.ti.com/lit/ds/symlink/sn74lvc1g14.pdf,SN74LVC1G14DBVR (TI SCES218AA); package and pin numbering per current native footprint and cited datasheet; engineering selection
+U406,74LVC2G74,Package_SO:SSOP-8_2.95x2.8mm_P0.65mm,Texas Instruments,SN74LVC2G74DCTR,https://www.ti.com/lit/ds/symlink/sn74lvc2g74.pdf,SN74LVC2G74DCTR (TI SCES203Q); RUN latch; package and pin numbering per current native footprint and cited datasheet; engineering selection
+U407,74LVC2G74,Package_SO:SSOP-8_2.95x2.8mm_P0.65mm,Texas Instruments,SN74LVC2G74DCTR,https://www.ti.com/lit/ds/symlink/sn74lvc2g74.pdf,SN74LVC2G74DCTR (TI SCES203Q); FAULT arming; package and pin numbering per current native footprint and cited datasheet; engineering selection
+U408,74LVC1G32,Package_TO_SOT_SMD:SOT-23-5,Texas Instruments,SN74LVC1G32DBVR,https://www.ti.com/lit/ds/symlink/sn74lvc1g32.pdf,SN74LVC1G32DBVR (TI SCES219W); package and pin numbering per current native footprint and cited datasheet; engineering selection
+U409,74LVC1G07,Package_TO_SOT_SMD:SOT-23-5,Texas Instruments,SN74LVC1G07DBVR,https://www.ti.com/lit/ds/symlink/sn74lvc1g07.pdf,SN74LVC1G07DBVR (TI SCES296AG); open-drain trip into RAILS_OK; package and pin numbering per current native footprint and cited datasheet; engineering selection
+U410,74LVC1G08,Package_TO_SOT_SMD:SOT-23-5,Texas Instruments,SN74LVC1G08DBVR,https://www.ti.com/lit/ds/symlink/sn74lvc1g08.pdf,SN74LVC1G08DBVR (TI SCES217AA); package and pin numbering per current native footprint and cited datasheet; engineering selection
+U411,74LVC1G06,Package_TO_SOT_SMD:SOT-23-5,Texas Instruments,SN74LVC1G06DBVR,https://www.ti.com/lit/ds/symlink/sn74lvc1g06.pdf,SN74LVC1G06DBVR (TI SCES295AB); open-drain timeout trip; package and pin numbering per current native footprint and cited datasheet; engineering selection
+U412,TPS3700DDC,Package_TO_SOT_SMD:SOT-23-6,Texas Instruments,TPS3700DDCR,https://www.ti.com/lit/ds/symlink/tps3700.pdf,TPS3700DDCR (TI SBVS187G); ANALOG_12V window; package and pin numbering per current native footprint and cited datasheet; engineering selection
+U413,TPS3700DDC,Package_TO_SOT_SMD:SOT-23-6,Texas Instruments,TPS3700DDCR,https://www.ti.com/lit/ds/symlink/tps3700.pdf,TPS3700DDCR (TI SBVS187G); VMID window; package and pin numbering per current native footprint and cited datasheet; engineering selection
+U414,TPS3808G33,Package_TO_SOT_SMD:SOT-23-6,Texas Instruments,TPS3808G33DBVR,https://www.ti.com/lit/ds/symlink/tps3808.pdf,"TPS3808G33DBVR (TI SBVS050N); connect-before-reset delay, CT open; package and pin numbering per current native footprint and cited datasheet; engineering selection"
+U415,74LVC1G08,Package_TO_SOT_SMD:SOT-23-5,Texas Instruments,SN74LVC1G08DBVR,https://www.ti.com/lit/ds/symlink/sn74lvc1g08.pdf,SN74LVC1G08DBVR (TI SCES217AA); package and pin numbering per current native footprint and cited datasheet; engineering selection
+U416,TPS3808G33,Package_TO_SOT_SMD:SOT-23-6,Texas Instruments,TPS3808G33DBVR,https://www.ti.com/lit/ds/symlink/tps3808.pdf,"TPS3808G33DBVR (TI SBVS050N); DC dwell, CT open; package and pin numbering per current native footprint and cited datasheet; engineering selection"
+U417,74LVC2G74,Package_SO:SSOP-8_2.95x2.8mm_P0.65mm,Texas Instruments,SN74LVC2G74DCTR,https://www.ti.com/lit/ds/symlink/sn74lvc2g74.pdf,SN74LVC2G74DCTR (TI SCES203Q); AUDIO latch; package and pin numbering per current native footprint and cited datasheet; engineering selection
+U418,74LVC1G32,Package_TO_SOT_SMD:SOT-23-5,Texas Instruments,SN74LVC1G32DBVR,https://www.ti.com/lit/ds/symlink/sn74lvc1g32.pdf,SN74LVC1G32DBVR (TI SCES219W); package and pin numbering per current native footprint and cited datasheet; engineering selection
+U419,74LVC1G07,Package_TO_SOT_SMD:SOT-23-5,Texas Instruments,SN74LVC1G07DBVR,https://www.ti.com/lit/ds/symlink/sn74lvc1g07.pdf,SN74LVC1G07DBVR (TI SCES296AG); open-drain DC trip into RAILS_OK; package and pin numbering per current native footprint and cited datasheet; engineering selection
+U501,TPS3700DDC,Package_TO_SOT_SMD:SOT-23-6,Texas Instruments,TPS3700DDCR,https://www.ti.com/lit/ds/symlink/tps3700.pdf,TPS3700DDCR (TI SBVS187G); INPUT_A DC window; package and pin numbering per current native footprint and cited datasheet; engineering selection
+U502,TPS3700DDC,Package_TO_SOT_SMD:SOT-23-6,Texas Instruments,TPS3700DDCR,https://www.ti.com/lit/ds/symlink/tps3700.pdf,TPS3700DDCR (TI SBVS187G); INPUT_B DC window; package and pin numbering per current native footprint and cited datasheet; engineering selection
+U503,TMUX6219,PS28_ANALOG:TI_DGK0008A,Texas Instruments,TMUX6219DGKR,https://www.ti.com/lit/ds/symlink/tmux6219.pdf,TMUX6219DGKR (TI SCDS420E p.39); RON <=7.5 ohm at 12 V single supply (p.10); package and pin numbering per current native footprint and cited datasheet; engineering selection
+U504,TPS3700DDC,Package_TO_SOT_SMD:SOT-23-6,Texas Instruments,TPS3700DDCR,https://www.ti.com/lit/ds/symlink/tps3700.pdf,TPS3700DDCR (TI SBVS187G); AUX_RAW window; package and pin numbering per current native footprint and cited datasheet; engineering selection

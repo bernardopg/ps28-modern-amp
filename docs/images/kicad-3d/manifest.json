@@ -8,7 +8,7 @@
     "analog_protection_integrated_in_rendered_pcbs": true,
     "system_candidate_rendered": true,
     "system_candidate_banks_inside_oem_outline": true,
-    "evidence_report": "tests/reports/final-design-review-2026-10-16.json",
+    "evidence_report": "tests/reports/bom-closeout-2026-10-16.json",
     "protected_analog_capture_components": 32,
     "protected_analog_unassigned_footprints": [
       "C101",
@@ -36,8 +36,8 @@
       "kicad/analog-protected/vmid-manifest.json": "f4ab47cd848ccf1d1e14ed1c0d52f7ccb51eb6b55bfe189640ab7730778ff119",
       "simulation/analog/vmid-protection.json": "c44c0878556a9034e0764a2635e3768964bccd538d14dec7185f44749946e62a",
       "simulation/analog/input-power-order.json": "9cd67b003a855e4b8f1b8e3176daf64a800a9d8a904eaf2a46301c160d4791b7",
-      "kicad/system-candidate/system-candidate.kicad_pcb": "2b64c702cc6fd9cf36e10d6a096bfec36fc4057da05e54ea2635b3dd047cdb85",
-      "kicad/system-candidate/system-candidate.kicad_sch": "1a018a6636b48bce7477b9467100484ba4c2aef5d1f93fa089a6734fe90b2820",
+      "kicad/system-candidate/system-candidate.kicad_pcb": "208b01279bb4931c4e7fe21d8753ae3d13a545c27a326bf394bc800612cbb65e",
+      "kicad/system-candidate/system-candidate.kicad_sch": "9068f09cc0bb77360bd3f10aef15e35a5935ce3737b864650b40de925d76eab1",
       "mechanical/thermal-fit.json": "6f565bf057cf8243dea57ed81229991e670c90178e32c0b3e1a3c185e8b0a466",
       "scripts/blender_thermal_block.py": "7d818fa892298e8871ae5ace9d6432310e2513e9769725884dfd1b035fef96a3",
       "kicad/models/ps28-bodies/thermal_block.wrl": "abddee6c25ea789f96a8046f0ee46653f706aafcf3995fb505185a066e959090"
@@ -1992,7 +1992,7 @@
     },
     "system": {
       "pcb": "kicad/system-candidate/system-candidate.kicad_pcb",
-      "pcb_sha256": "2b64c702cc6fd9cf36e10d6a096bfec36fc4057da05e54ea2635b3dd047cdb85",
+      "pcb_sha256": "208b01279bb4931c4e7fe21d8753ae3d13a545c27a326bf394bc800612cbb65e",
       "footprints": 269,
       "without_available_model": [
         "H6",
@@ -2224,12 +2224,12 @@
         },
         {
           "reference": "C109",
-          "footprint": "Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2",
+          "footprint": "Capacitor_THT:C_Rect_L7.2mm_W7.2mm_P5.00mm_FKS2_FKP2_MKS2_MKP2",
           "models": [
-            "${KICAD10_3DMODEL_DIR}/Capacitor_THT.3dshapes/C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2.step"
+            "${KICAD10_3DMODEL_DIR}/Capacitor_THT.3dshapes/C_Rect_L7.2mm_W7.2mm_P5.00mm_FKS2_FKP2_MKS2_MKP2.step"
           ],
           "model_sha256": {
-            "${KICAD10_3DMODEL_DIR}/Capacitor_THT.3dshapes/C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2.step": "820c3d53ee43de7b3d4f57cefc894db9e3dab68c5a741997e788ba9461f0fa82"
+            "${KICAD10_3DMODEL_DIR}/Capacitor_THT.3dshapes/C_Rect_L7.2mm_W7.2mm_P5.00mm_FKS2_FKP2_MKS2_MKP2.step": "f277d2cb2721caa1d48f684745a45aebe2d8f39921c726ca65dc84ff3f8bff7e"
           },
           "missing_models": [],
           "has_available_model": true
@@ -5578,15 +5578,15 @@
     "selected-isometric.png": "486d5bfa0fc8bd56cee907818b5bce6e2f46ff473ae13855071c46c4e5bf141f",
     "selected-orbit.gif": "09b23de28fbcaa18f128ef781faf6ba65e8a8a8f290f5ed952b02942376a53ab",
     "selected-top.png": "7fd57450887d7b3fdd8e47b7d8ac5d7e14c1fded0ea2bc8950801027f40e3a63",
-    "system-bottom.png": "1f2b13818f83553e4cc086582b4507727124817c2abe1be238d8af97f96cbe20",
-    "system-isometric.png": "1fd4d7ac9fad70c437ab9aa42ad8c83c955042fb603ac5947bb596dc6ecae8b4",
-    "system-orbit.gif": "faeffcf25ba1854a125488c606f5c21601459e1ecd38925c812344882ee0feb6",
-    "system-top.png": "4b02f4226ed3923271b07a3dfd201aaa49524df6bb66241e4f3f25ceac3f52ed"
+    "system-bottom.png": "e471f0250f20d509b61595da9446071bc5dbafc4912b17300f105199576f1bd1",
+    "system-isometric.png": "5b34660cd55c572904c5eef237a76bff00cba939a6c7e81a56ce2a36b54b6701",
+    "system-orbit.gif": "f94dcda006957a5ca636d2d70ad95c106c2f64979703fe6698635befecabe55b",
+    "system-top.png": "a99ffa6fee3d3d4002575f29fa31244e9a95177940dff2a330d0b29f7a2e0495"
   },
   "metadata_refresh": {
-    "date": "2026-10-16",
-    "reason": "Only hidden MPN/Manufacturer/Source fields changed; pixels retained after full PCB AST equivalence check",
-    "previous_pcb_sha256": "34cb8db01aa94263fe318f606735565567186f3d7a5112dea91a4a1b1123d0cf",
-    "evidence": "tests/reports/final-design-review-2026-10-16.json"
+    "rendered_pcb_sha256": "0da323ec279f35226040927c67065f3517109f6dec64e5d2d34a2e95689db80f",
+    "current_pcb_sha256": "208b01279bb4931c4e7fe21d8753ae3d13a545c27a326bf394bc800612cbb65e",
+    "reason": "Purchasing URL/status fields synchronized and duplicate F.Fab reference removed after rendering; full GLTF scene graph/geometry/binary equality verified, only asset export name/time differ",
+    "evidence": "tests/reports/bom-closeout-2026-10-16.json"
   }
 }
