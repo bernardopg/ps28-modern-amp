@@ -1,0 +1,65 @@
+{
+  "scope": "Independent CI rerun of existing electrical studies, not new electrical coverage",
+  "recorded_at": "2026-10-16T14:36:47.392570-03:00",
+  "run_id": 38930461712,
+  "url": "https://github.com/bernardopg/ps28-modern-amp/actions/runs/38930461712",
+  "source_commit": "43460094b8cee841b7ce4e00d5f2531a87ed39d4",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "name": "documentation-and-model",
+      "conclusion": "success"
+    },
+    {
+      "name": "official-opamp-model",
+      "conclusion": "success"
+    }
+  ],
+  "official_model_ngspice_version": 47,
+  "generic_model_ngspice_version": 42,
+  "comparison_to_existing_studies": [
+    {
+      "study": "opa1656",
+      "artifact_result_sha256": "b85f5875013acef0eab622771db8acff28b806acee207f735de064f6394676ae",
+      "versioned_report": "tests/reports/opa1656-model-study.json",
+      "versioned_report_sha256": "b85f5875013acef0eab622771db8acff28b806acee207f735de064f6394676ae",
+      "semantic_results_identical": true
+    },
+    {
+      "study": "vmid",
+      "artifact_result_sha256": "454d94e09da25f1303aa6e25fa60b39eef2fd1b1068a6aef6903d9d6e59e710e",
+      "versioned_report": "tests/reports/vmid-buffer-study.json",
+      "versioned_report_sha256": "454d94e09da25f1303aa6e25fa60b39eef2fd1b1068a6aef6903d9d6e59e710e",
+      "semantic_results_identical": true
+    },
+    {
+      "study": "vmid-protection",
+      "artifact_result_sha256": "bd4d315331e2a676deaf2d833240f8b06fe7733c3fda9073d13b0ecdc7aad0e7",
+      "versioned_report": "tests/reports/vmid-protection-study.json",
+      "versioned_report_sha256": "bd4d315331e2a676deaf2d833240f8b06fe7733c3fda9073d13b0ecdc7aad0e7",
+      "semantic_results_identical": true
+    }
+  ],
+  "results": {
+    "opa_cases": 9,
+    "opa_rms_range_v": [
+      1.992366179056814,
+      1.9923785997424048
+    ],
+    "opa_max_ac_error_db": 0.0003844634298079785,
+    "opa_convergence_warnings_preserved": true,
+    "vmid_return_ratio_cases": 32,
+    "vmid_minimum_modeled_phase_margin_deg": 60.671307957176936,
+    "protected_power_loss_cases": 30,
+    "protected_lr4_cases": 9,
+    "required_unsafe_input_order_hypotheses": 196,
+    "input_order_hypotheses": 288
+  },
+  "input_order_artifact_result_sha256": "8739bee7a955611cdda2f3bf00fe4981ccdb7a348f0e4e0246f8b4d75ed205c5",
+  "new_electrical_model_or_coverage": false,
+  "full_candidate_extracted_spice": false,
+  "pcb_parasitics_emi_and_measured_oem_thermal_model": false,
+  "recent_thermal_work": "Lumped junction-to-profile calculation + nominal CAD fit, not SPICE or FEM",
+  "hardware_validated": false,
+  "manufacturing_approved": false
+}

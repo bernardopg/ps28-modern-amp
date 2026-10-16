@@ -3,6 +3,15 @@
 Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 
 ## [Unreleased]
+### Publicação em main e cobertura de simulação — 2026-10-16
+- Política explícita do proprietário: trabalhar e publicar em main, sem branches
+  de trabalho; snapshots e validação permanecem obrigatórios, sem force-push.
+- Consolidação integrada por fast-forward; issues passam a apontar para main.
+- Renders parciais movidos para docs/archive, sem perda dos arquivos; staging
+  de renderização e backups Blender excluídos das próximas publicações.
+- CI de 4346009 aprovada nos dois jobs; artefatos comparados aos três relatórios
+  oficiais anteriores, com resultados idênticos. Não houve ampliação do modelo
+  elétrico; cobertura, contraprovas e limitações agora estão explícitas.
 ### Consolidação de documentação e planejamento — 2026-10-16
 - README reestruturado com candidata roteada, renders nativos, esquema e fit
   térmico; arquitetura/operacionalidade alinhadas ao reaproveitamento OEM D-032.

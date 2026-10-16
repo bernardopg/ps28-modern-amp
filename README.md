@@ -23,6 +23,9 @@ Os núcleos `core-selected` e `core-oem-refined` são **estudos históricos**,
 não placas alternativas do produto. Os renders atuais não mostram bancos de
 componentes fora do contorno; modelos ausentes/genéricos constam no manifesto.
 
+**Simulação:** CI de `4346009` aprovada nos dois jobs; resultados elétricos
+reproduzidos sem ampliar o modelo. [Cobertura e limites](docs/simulation.md).
+
 [Estado detalhado](docs/development-status.md) ·
 [Próximos passos até produção](docs/production-roadmap.md) ·
 [Revisão local TPA](docs/tpa-local-layout-review.md) ·
@@ -105,7 +108,8 @@ clipping, perdas, dissipação e validação com carga e woofer reais.
   [bloco térmico](mechanical/thermal-block.md).
 - **Produção/bancada:** [BOM/compras](docs/procurement.md),
   [fabricação](docs/manufacturing.md), [bring-up](docs/bringup.md).
-- **Trabalho:** [backlog canônico](.tasks/project-backlog.md),
+- **Trabalho:** commits e push sempre em **`main`**, com snapshot e validação;
+  [política Git e CI](docs/github.md), [backlog canônico](.tasks/project-backlog.md),
   [roadmap](.tasks/ROADMAP.md), [S04](.tasks/sprints/S04.md),
   [issues GitHub](https://github.com/bernardopg/ps28-modern-amp/issues),
   [AGENTS.md](AGENTS.md), [skills](skills/README.md), [toolchain](docs/toolchain.md).

@@ -1,34 +1,50 @@
 # GitHub e espelho do planejamento
 
 Repositório: <https://github.com/bernardopg/ps28-modern-amp>.
-Estado reconciliado em **2026-10-16**: 21 tasks/21 issues espelhadas,
-**12 concluídas e 9 abertas**. PCB-002 é a única In Progress; as outras oito
-abertas estão To Do. Estados oficiais e dependências em `.tasks/items/`;
-relações em [github-mirror.json](../.tasks/github-mirror.json).
+21 tasks/21 issues espelhadas: **12 concluídas e 9 abertas**. PCB-002 é a única
+In Progress; as outras oito abertas estão To Do. Estados e dependências em
+`.tasks/items/`; relações em [github-mirror.json](../.tasks/github-mirror.json).
 
-As issues recebem o corpo da task local, estado e evidência. Uma task de projeto
-Done não aprova bancada; G1/G2/G3 permanecem humanos e explícitos. Nenhuma issue
-foi fechada só por ERC/DRC zerado ou por um render.
+## Política de publicação — 2026-10-16
 
-## Publicação desta consolidação
+**Trabalhar, fazer commit e publicar diretamente em `main`**, por determinação
+explícita do proprietário. Não criar branches/PRs de trabalho sem novo pedido.
+Preservar segurança com snapshot local, revisão de diff e validações, não com
+branches permanentes. Não usar force-push nem reescrever histórico publicado.
 
-Branch: `fix/production-readiness-20261015`, com mudanças de placa, modelos,
-documentação, renders, testes e planejamento. O conteúdo da branch não se torna
-`main` por push; uma integração posterior exige revisão. Links relativos nos
-corpos das issues apontam para esta branch, não silenciosamente para `main` antigo.
+A consolidação `4346009`, inicialmente publicada em um branch temporário, foi
+integrada por **fast-forward**, sem descartar commits. O branch temporário é
+removido após confirmação do push em `main`. Links ativos nas issues apontam para
+`blob/main`; nomes de branches nos relatórios de snapshots antigos são históricos.
+
+## Issues e gates
+
+As issues espelham corpo/estado/evidência da task local; o backlog é canônico.
+Done refere-se ao trabalho da task, não a montagem/ensaio ou aprovação de gates.
+G1/G2/G3 permanecem humanos: nenhuma issue fecha só por ERC/DRC ou render.
 
 ```sh
-python3 scripts/publish_backlog.py          # dry-run: listar faltantes
+python3 scripts/publish_backlog.py          # dry-run do publicador inicial
 python3 scripts/publish_backlog.py --apply  # criar faltantes, com autorização
 ```
 
-Esse script não sobrescreve/reabre issues existentes e não é sincronização
-bidirecional. A reconciliação desta sessão é explícita, não mudança de ferramenta.
-Não há Projects board; milestones/issues e backlog local atendem ao planejamento.
-[Registro da sincronização](../tests/reports/publication-sync-2026-10-16.json):
-21 corpos/estados conferidos sem fechar ou reabrir issues por inferência.
+Esse script não sobrescreve/reabre issues existentes e não sincroniza em duas
+vias. Reconciliações são explícitas. Não há Projects board; milestones/issues e
+backlog local atendem ao planejamento.
 
-CI executa validações/testes da configuração versionada; conferir o resultado do
-run do commit antes de afirmar CI remoto aprovado. Validação nativa local de
-ERC/DRC e revisão de hardware continuam separadas. Nenhum push autoriza fabricar,
-comprar ou energizar a PCB.
+- [Primeira consolidação](../tests/reports/publication-sync-2026-10-16.json):
+  snapshot histórico ainda no branch temporário.
+- [Reconciliação em main](../tests/reports/main-sync-2026-10-16.json): estado atual
+  das 21 issues e destino dos links.
+
+## CI e organização
+
+[Run 38930461712](https://github.com/bernardopg/ps28-modern-amp/actions/runs/38930461712)
+**aprovado nos dois jobs**, sobre `4346009`. Resultado e escopo das simulações em
+[simulation.md](simulation.md); não confundir reexecução com ampliação do modelo.
+Cada novo push em `main` dispara sua própria CI; não herda o status do commit anterior.
+
+Galeria atual em `docs/images/kicad-3d/`; renders parciais preservados em
+`docs/archive/render-staging-2026-10-13/`. Staging/logs/cache ficam fora do Git.
+Validações nativas de ERC/DRC e revisão de hardware continuam separadas da CI.
+**Nenhum push autoriza fabricar, comprar ou energizar.**

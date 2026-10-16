@@ -37,3 +37,8 @@ kicad/**/jlcpcb/
 
 # Logs locais de roteamento (Freerouting).
 logs/
+
+# Staging interrompido de renders; só a galeria validada deve ser publicada.
+/docs/images/.ps28-gallery-*/
+*.blend1
+*.blend2

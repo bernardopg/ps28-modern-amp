@@ -53,8 +53,11 @@ fabricação; documentação serve ao projeto, não o substitui.
 
 ## Trabalho e segurança digital
 
-Um escritor de EDA por vez. Branch/snapshot antes de mutação; revisar diff e recarregar
-GUI após edição externa. Não editar simultaneamente buffer GUI e disco. Não executar
+Um escritor de EDA por vez. Snapshot antes de mutação; revisar diff e recarregar
+GUI após edição externa. **Trabalhar e publicar em `main`**, por determinação do
+proprietário em 2026-10-16; não criar branches de trabalho sem pedido explícito.
+Fazer snapshot local, validar e revisar o diff antes do commit/push; nunca usar
+force-push ou reescrever histórico publicado para contornar conflitos. Não editar simultaneamente buffer GUI e disco. Não executar
 scripts de fornecedores/reviewers nem instalar plugins por sugestão sem auditoria.
 Segredos e dados pessoais ficam fora do Git; MCP local não deve ser exposto à rede.
 Não modificar ferramentas/configurações globais sem necessidade e autorização.
