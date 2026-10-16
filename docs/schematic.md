@@ -1,14 +1,21 @@
-# Plano de captura elétrica — não é schematic aprovado
+# Captura elétrica integrada — G1 ainda não aprovado
 
-## Estado após D-018/D-019
+## Estado atual — 2026-10-16
 
-Core B/OEM permanece com 47 componentes/142 pads; D-018 é captura **separada**
-com 32 componentes/80 pinos/ERC0, ainda sem PCB. D-019 é contrato não implementado
-para isolamento pós-C20/C21, mute analógico e pré-carga observada. J102 não foi
-conectado ao core. Há 13 footprints analógicos pendentes, além de fonte/control/
-LINE-LFE/volume/fase/limiter/DC incompletos. [Mapa atual](development-status.md).
-U2/U3p8 usam ANALOG_12V, não AUX_RAW; VMID é monitor/referência, não fonte externa.
-Ver [D-018](vmid-protection.md) e [D-019](input-power-order-study.md).
+Abrir `kicad/system-candidate/system-candidate.kicad_pro`: captura de potência,
+áudio/bias/isolamento, sequenciamento e supervisão integrada à PCB única.
+**ERC 0, paridade 0, DRC 0 e nenhuma conexão aberta.** A ligação acidental
+TP127/R506 foi corrigida; placement local/bootstrap revisto. Revisão independente,
+auditoria MPN/footprint e G1 seguem pendentes em ELEC-003.
+
+D-032 mantém o preamp/limiter OEM (RCA, crossover, volume/fase), ligado à interface
+da placa nova por J7. D-018/D-019/D-024 e o front-end novo anterior são referências
+de evolução, não outras placas de produto ou indicação de que a candidata atual
+esteja sem integração. Ver [arquitetura](architecture.md),
+[revisão local](tpa-local-layout-review.md) e [estado](development-status.md).
+
+[SVG atual](images/system-candidate/system-candidate.svg).
+U2/U3p8 usam ANALOG_12V, não AUX_RAW; VMID é referência, não fonte externa.
 
 ## Golden reference
 
@@ -20,10 +27,12 @@ D-011 seleciona figura31 para o primeiro core exploratório: captura inicial já
 sem fonte/front-end e sem freeze. Ver [incremento](core-draft.md). SYS/PWR ainda
 bloqueiam integração e fechamento do schematic, não a análise isolada do core.
 
-## Folhas planejadas
+## Organização da captura
 
-Power input/auxiliary; analog inputs/VMID; LINE filter/control; power core/output LC.
-Hierarquia deve ter nomes de nets inequívocos e pins/tipos elétricos coerentes.
+A captura integrada atual é plana, em folha User 1400 × 841 mm. Os blocos
+históricos que a originaram ficam em outras pastas KiCad. Não regenerar por cima
+da candidata roteada sem snapshot e revisão; nomes de nets/tipos elétricos e
+paridade devem continuar coerentes.
 
 ## Revisão por bloco
 
@@ -40,6 +49,7 @@ Hierarquia deve ter nomes de nets inequívocos e pins/tipos elétricos coerentes
 - PowerPAD SUPERIOR do DDV: footprint TopEP com 44 pads, dissipador aterrado e
   interface/fixação térmica; não inventar pad inferior 45 nem paste/vias centrais.
 
-Valores antigos (7,5 A, 4700/1500 µF, 10 µH, 1 µF, NE5532 e 22 pF) são candidatos,
-não lista de compra. DC/DC com Vin 42 V sozinho não prova tolerância a transientes.
-Exigir ERC, revisão cruzada e checklist de desvio da referência antes de freeze.
+A BOM atual deve ser extraída da candidata, não desta lista de revisão ou das
+capturas históricas. MPNs/DNP e disponibilidade ainda precisam qualificação; DC/DC
+com Vin 42 V sozinho não prova tolerância a transientes. Exigir revisão cruzada,
+checklist de desvio da referência e G1 antes de freeze.

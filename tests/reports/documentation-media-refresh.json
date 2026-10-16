@@ -1,5 +1,6 @@
 {
   "date": "2026-10-08",
+  "current_media_evidence": "tests/reports/tpa-local-layout-review.json",
   "source_parent_commit": "e26f61fb90a43af1aa1d69a0a768e10b21122e12",
   "scope": "Documentation/tasks/native media refresh; no PCB or schematic integration",
   "native_renderer": "10.0.7",

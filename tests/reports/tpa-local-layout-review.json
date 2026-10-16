@@ -1,0 +1,635 @@
+{
+  "board_sha256": "34cb8db01aa94263fe318f606735565567186f3d7a5112dea91a4a1b1123d0cf",
+  "distance_metric": "Distância planar entre centros; não inclui espessura/vias nem prova indutância de laço.",
+  "local_components": {
+    "C16": {
+      "pin": "44",
+      "net": "/BST_A",
+      "side": "B.Cu",
+      "pad_to_pin_mm": 2.6102,
+      "position_mm": [
+        83.0,
+        58.4
+      ],
+      "rotation_deg": 90.0
+    },
+    "C17": {
+      "pin": "43",
+      "net": "/BST_B",
+      "side": "B.Cu",
+      "pad_to_pin_mm": 1.7468,
+      "position_mm": [
+        85.6,
+        57.1
+      ],
+      "rotation_deg": 90.0
+    },
+    "C18": {
+      "pin": "24",
+      "net": "/BST_C",
+      "side": "B.Cu",
+      "pad_to_pin_mm": 1.8577,
+      "position_mm": [
+        95.0,
+        57.1
+      ],
+      "rotation_deg": 90.0
+    },
+    "C19": {
+      "pin": "23",
+      "net": "/BST_D",
+      "side": "B.Cu",
+      "pad_to_pin_mm": 2.3179,
+      "position_mm": [
+        97.2,
+        58.2
+      ],
+      "rotation_deg": 90.0
+    },
+    "C4": {
+      "pin": "1",
+      "net": "/GVDD_AB",
+      "side": "B.Cu",
+      "pad_to_pin_mm": 1.8243,
+      "position_mm": [
+        83.5,
+        61.5
+      ],
+      "rotation_deg": 90.0
+    },
+    "C5": {
+      "pin": "22",
+      "net": "/GVDD_CD",
+      "side": "B.Cu",
+      "pad_to_pin_mm": 1.1668,
+      "position_mm": [
+        97.8,
+        64.2
+      ],
+      "rotation_deg": 90.0
+    },
+    "C6": {
+      "pin": "4",
+      "net": "/DVDD_INTERNAL",
+      "side": "B.Cu",
+      "pad_to_pin_mm": 3.3441,
+      "position_mm": [
+        88.9,
+        62.7
+      ],
+      "rotation_deg": 90.0
+    },
+    "C7": {
+      "pin": "14",
+      "net": "/AVDD",
+      "side": "B.Cu",
+      "pad_to_pin_mm": 0.7659,
+      "position_mm": [
+        92.4,
+        63.4
+      ],
+      "rotation_deg": 0.0
+    },
+    "C9": {
+      "pin": "20",
+      "net": "/VBG",
+      "side": "B.Cu",
+      "pad_to_pin_mm": 2.2137,
+      "position_mm": [
+        95.7,
+        61.1
+      ],
+      "rotation_deg": 90.0
+    },
+    "C2": {
+      "pin": "2",
+      "net": "/AUX_RAW",
+      "side": "B.Cu",
+      "pad_to_pin_mm": 1.6855,
+      "position_mm": [
+        85.4,
+        62.0
+      ],
+      "rotation_deg": 90.0
+    },
+    "C8": {
+      "pin": "15",
+      "net": "/C_START",
+      "side": "B.Cu",
+      "pad_to_pin_mm": 2.4925,
+      "position_mm": [
+        92.6,
+        66.1
+      ],
+      "rotation_deg": 90.0
+    },
+    "C13": {
+      "pin": "37",
+      "net": "/PVDD",
+      "side": "B.Cu",
+      "pad_to_pin_mm": 0.0645,
+      "position_mm": [
+        88.1,
+        58.1
+      ],
+      "rotation_deg": -90.0
+    },
+    "C10": {
+      "pin": "30",
+      "net": "/PVDD",
+      "side": "B.Cu",
+      "pad_to_pin_mm": 0.0376,
+      "position_mm": [
+        92.6,
+        58.1
+      ],
+      "rotation_deg": -90.0
+    }
+  },
+  "bootstrap_copper": {
+    "/BST_A": {
+      "track_length_mm": 2.1213,
+      "vias": 1,
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ]
+    },
+    "/BST_B": {
+      "track_length_mm": 3.1299,
+      "vias": 1,
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ]
+    },
+    "/BST_C": {
+      "track_length_mm": 1.0864,
+      "vias": 1,
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ]
+    },
+    "/BST_D": {
+      "track_length_mm": 1.8485,
+      "vias": 1,
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ]
+    }
+  },
+  "in1_signal_tracks": 0,
+  "manufacturing_approved": false,
+  "date": "2026-10-16T07:48:02.979981-03:00",
+  "footprints": 269,
+  "tracks": 3531,
+  "vias": 499,
+  "new_vias": [
+    "6307b76e-145b-4eed-a125-abbb6247f9e3",
+    "77ed8d24-b285-4e4c-9d81-82fc4c125e77",
+    "805d4456-9ff2-4766-adee-cfc39e12de29",
+    "aa282368-f70f-43f8-81c4-03c265fcf6b9",
+    "ed14be26-c563-49e8-8be4-73ebc78e6580",
+    "93580ac0-45f3-4b82-a147-e52fe44d2e4f",
+    "fc6cb5ea-5288-460e-a6ae-37a94d0baea0",
+    "00b2275b-8205-4007-82a6-65e31e4f0131",
+    "5a9f01be-ece2-4768-a1d4-681d58121cce",
+    "408a8e85-65ef-4350-a7e6-66f20c65f17d",
+    "6bb0a40e-7a92-4dc8-9b63-bd59d7061533",
+    "715266e8-dac7-4567-91f5-2fd3aab396b0",
+    "72f16c39-4020-4bd4-b21e-821f14d36520",
+    "a2d575b1-b517-40b0-8bc3-7c81af15a34f",
+    "d452b51e-e232-4172-b2d8-e40a5dc8d890",
+    "879fc512-c2cc-4b5a-b7b7-961d93f6f197",
+    "b2014890-c1c9-4e60-b5ab-221661442627",
+    "bac8f114-7bee-4ccc-a88c-ec33aacafe70",
+    "d6573262-933f-4a08-888b-ad357234fd2f",
+    "ee37c0fd-c01d-424d-a29f-296ae67aad07",
+    "f780e6ba-4833-44ee-8a17-dc17d456f950",
+    "a6bf13c8-90aa-4c25-8301-38a51072e2d7",
+    "a737cd3c-6b95-4a53-9f23-cec24cf7d239",
+    "00274559-7e10-4393-a94d-37cf670efaa1",
+    "0285494f-5c91-4603-9f8f-3bde6b042433",
+    "1317ee0b-4663-4cd3-a5bc-1d0de5b0b54d",
+    "39d4df9d-74bd-4c7f-a87e-56798ffc71a5",
+    "54944237-f88a-4907-8b9e-c72e949d4711",
+    "65714329-2129-47f3-8f71-cf31692c70b2",
+    "a0172da6-db43-47aa-a795-7a8641b0fcbb",
+    "af954cae-487d-43a4-8dee-4fa7e3606e29",
+    "bd8ce62d-3682-4a3f-a460-4b1da115b21c",
+    "f691c79a-7393-4eca-b3a0-b1ec032d3b7e",
+    "f8d074ad-9494-4688-8103-9ee44dc06e83",
+    "2d898470-3b9e-4e50-887f-218cf9e9d5da",
+    "ac30f22d-57ba-4ff0-96c1-1843dc2a3b7b",
+    "88d4bc18-50c4-42a2-9838-bb26ee2d3beb",
+    "c576880f-c34a-4a61-bfcb-186849f1b9c3",
+    "a4483f84-3ca2-43cf-b56f-d6f5f1a4aa5f",
+    "17023261-1669-471d-9592-df682aca3e38",
+    "5f9002f4-57df-45a1-a05e-d986722fcb1d",
+    "75556f22-d13a-4ad9-a507-75c6d4e3e54b",
+    "b237e2a8-6773-4cd2-a2e9-3c296124a6ac",
+    "eb42060a-edaf-4398-a19d-8ee00541a3d1",
+    "ee8bc668-9b45-4383-ab89-8724a5b3eaf7",
+    "c9a9206f-2d1c-4455-a42d-3d178a711693",
+    "0a8ed0da-cf3e-4756-93bb-6e953713c193",
+    "0f9b59be-9e2e-4f53-9167-8a8db41c49d2",
+    "8a8f2b5b-0444-449d-b6e7-4a5462b67a8b",
+    "cfde3b99-189e-42e3-8d2d-4f76d9879be4",
+    "f69b6f54-b8ae-4fef-a181-badfcae0f177",
+    "2b4639bc-e005-4f1d-b2bf-b3c991598c34",
+    "360f974b-415a-485a-b2a6-8540ee7ed0a5",
+    "3f966a78-42f3-4489-a939-ba3551dd8619",
+    "6df720aa-a882-473c-9495-53fefd456116",
+    "6f23efd4-6ad2-4aa8-a7da-14d3985cc816",
+    "6fdeb885-269e-4751-9acd-58c4e52ddf8c",
+    "ed7cbbab-be40-4d25-8a93-53063480eaaa",
+    "0264c77b-2d4a-45e2-afdf-9f325647ca2a",
+    "21176412-2382-4d5b-bca9-7ba122afee84",
+    "5e7a24fe-bc57-44d4-b432-82394b643b2a",
+    "6cf76e08-341d-4981-96cb-a4e36275d5c3",
+    "b61da5b7-70af-4d61-bc83-8b350b6b83e9",
+    "1d662c93-3b84-4bc1-85ba-f63dc0be2ff6",
+    "29c3ba57-0621-4d76-8ce5-579b8bc1dfc4",
+    "7ec8e13e-31ae-4a3f-9049-b6a099f3f933",
+    "99caa4d9-2dd0-4947-be1b-20fe3d46135c",
+    "a0d44aca-f99c-4dbc-81c5-dc1b6bdd504c",
+    "b0301ecb-a42c-4bba-bfcd-9a92bd693220",
+    "d1135c42-eca6-441a-86ea-88508c67de32",
+    "1d1b8ec6-be9f-4831-8c6b-14e801b2b77d",
+    "308870c9-186c-4b4d-8df4-d7368c79a7df",
+    "44c65aad-2b54-471c-b90b-c0d2da5deb03",
+    "45401a51-8c26-48d1-887e-8227e7f5a102",
+    "5c56f16e-a1af-4b7d-92e1-27262bd6795f",
+    "6e43b070-9dc0-40da-bc3d-2c7c286f5449",
+    "741b393d-7507-48b9-94f2-3a9d79a5cb45",
+    "80c40ae8-5451-4458-99c3-140048f2d4b0",
+    "a2ff0c44-e605-4997-87b4-2b5f260fac50",
+    "fbe42552-54fe-4f07-a6be-dedd6f3f51c4"
+  ],
+  "new_via_drill_intersections_with_smd": [],
+  "native_drc": {
+    "violations": 0,
+    "unconnected_items": 0,
+    "schematic_parity": 0
+  },
+  "native_ignored_checks_unchanged": true,
+  "preserved": {
+    "all_component_values_and_pad_nets": true,
+    "all_nonlocal_footprint_poses_and_pads": true,
+    "outline_bounding_box": true,
+    "schematic_design_rules_net_classes_and_erc_matrix": true
+  },
+  "baseline_pcb_sha256": "14e4d70f476c051884dc83821fcc5c39daf109524e902d5887ddc13eb79f34e6",
+  "bootstrap_return_bounds": {
+    "C16": {
+      "target": "U1.40",
+      "upper_bound_mm_including_1p6mm_per_via": 6.476955262170048
+    },
+    "C17": {
+      "target": "U1.35",
+      "upper_bound_mm_including_1p6mm_per_via": 5.633452377915607
+    },
+    "C18": {
+      "target": "U1.32",
+      "upper_bound_mm_including_1p6mm_per_via": 5.845584412271571
+    },
+    "C19": {
+      "target": "U1.27",
+      "upper_bound_mm_including_1p6mm_per_via": 6.418376618407358
+    }
+  },
+  "ground_stitch": [
+    {
+      "ref": "C13",
+      "status": "no_candidate"
+    },
+    {
+      "ref": "C10",
+      "status": "added",
+      "via_uuid": "ed14be26-c563-49e8-8be4-73ebc78e6580",
+      "xy_mm": [
+        93.58994949366117,
+        60.56494949366117
+      ],
+      "track_length_mm": 1.399999301857683
+    },
+    {
+      "ref": "C4",
+      "status": "added",
+      "via_uuid": "aa282368-f70f-43f8-81c4-03c265fcf6b9",
+      "xy_mm": [
+        82.35,
+        60.725
+      ],
+      "track_length_mm": 1.15
+    },
+    {
+      "ref": "C5",
+      "status": "no_candidate"
+    },
+    {
+      "ref": "C6",
+      "status": "no_candidate"
+    },
+    {
+      "ref": "C9",
+      "status": "no_candidate"
+    },
+    {
+      "ref": "C7",
+      "status": "no_candidate"
+    },
+    {
+      "ref": "C8",
+      "status": "existing_local_via",
+      "distance_mm": 0.678293
+    },
+    {
+      "ref": "C2",
+      "status": "no_candidate"
+    }
+  ],
+  "pvdd_reconnection": {
+    "candidate": "alt-4-0.1-0.24.json",
+    "width_mm": 1.2,
+    "grid_mm": 0.1,
+    "tracks": [
+      {
+        "uuid": "34ed62c8-34b5-41a7-a7c9-92ae52f5935b",
+        "layer": "In2.Cu",
+        "length_mm": 0.8485281374238571
+      },
+      {
+        "uuid": "8e4fe4d8-78d0-45f7-9795-665fd1e8c74e",
+        "layer": "In2.Cu",
+        "length_mm": 3.0
+      },
+      {
+        "uuid": "e5f832ff-e4b8-4d82-a7aa-087465ed5b84",
+        "layer": "In2.Cu",
+        "length_mm": 2.8284271247461903
+      },
+      {
+        "uuid": "b84c9bbf-8c8e-4b68-8e3a-cab784f3fdab",
+        "layer": "F.Cu",
+        "length_mm": 0.2
+      },
+      {
+        "uuid": "988f1011-2201-4d17-977f-694aad513010",
+        "layer": "F.Cu",
+        "length_mm": 1.1313708498984762
+      },
+      {
+        "uuid": "0f5f8d7f-7797-4bc6-8d6f-1d147d45e5be",
+        "layer": "F.Cu",
+        "length_mm": 0.2
+      },
+      {
+        "uuid": "44b87ff2-09e1-4f2b-9128-45377ba08c35",
+        "layer": "F.Cu",
+        "length_mm": 0.14142135623730953
+      },
+      {
+        "uuid": "57aca8b5-c764-4216-b50e-3470f1afaf03",
+        "layer": "F.Cu",
+        "length_mm": 0.2
+      },
+      {
+        "uuid": "9cfdd8c5-1499-45eb-8938-0c8424822e5a",
+        "layer": "F.Cu",
+        "length_mm": 0.14142135623730953
+      },
+      {
+        "uuid": "2886959b-b439-44d0-9c00-1e585e99be00",
+        "layer": "F.Cu",
+        "length_mm": 1.2
+      },
+      {
+        "uuid": "bb4d8acf-8072-405d-8a6d-6641c918a69e",
+        "layer": "F.Cu",
+        "length_mm": 1.2727922061357857
+      },
+      {
+        "uuid": "38a00424-78bd-4fac-9bd0-a5a9e8042a0f",
+        "layer": "B.Cu",
+        "length_mm": 15.2
+      },
+      {
+        "uuid": "7cfdf242-dfdc-4d5e-896c-b908e0c791d9",
+        "layer": "B.Cu",
+        "length_mm": 8.62670273047588
+      },
+      {
+        "uuid": "408d5374-cefa-4af1-9b47-31308a34ae6d",
+        "layer": "B.Cu",
+        "length_mm": 0.2
+      },
+      {
+        "uuid": "7d65297d-94b6-49ea-b641-fb1e3eed9fea",
+        "layer": "B.Cu",
+        "length_mm": 0.14142135623730953
+      },
+      {
+        "uuid": "528a2b5c-c900-4c48-9a6a-f5a9bc47281d",
+        "layer": "B.Cu",
+        "length_mm": 0.3
+      },
+      {
+        "uuid": "b0f2f45c-f406-46cb-a620-dc6d46623c9b",
+        "layer": "B.Cu",
+        "length_mm": 0.14142135623730953
+      },
+      {
+        "uuid": "0b8be359-4a55-41a2-b203-34fbb96f2d6e",
+        "layer": "B.Cu",
+        "length_mm": 25.1
+      },
+      {
+        "uuid": "5bfae7d4-b6a1-4d2c-8eba-7e5e18bf575e",
+        "layer": "F.Cu",
+        "length_mm": 6.222539674441619
+      },
+      {
+        "uuid": "304646dc-e0d4-48e7-96ef-97c3bdf95ee6",
+        "layer": "F.Cu",
+        "length_mm": 0.1
+      },
+      {
+        "uuid": "eaeb814b-09a2-4a81-8e9e-26ddab212982",
+        "layer": "In2.Cu",
+        "length_mm": 2.121320343559643
+      },
+      {
+        "uuid": "c5dceeb2-f3fc-4cf5-93f8-aaa99209e7da",
+        "layer": "In2.Cu",
+        "length_mm": 2.1
+      },
+      {
+        "uuid": "357b6bdd-92cf-4cc4-bc42-fae81819861d",
+        "layer": "In2.Cu",
+        "length_mm": 0.23426534101313407
+      },
+      {
+        "uuid": "f61e7761-c32e-447b-9032-2aa4f4e85672",
+        "layer": "In2.Cu",
+        "length_mm": 2.359343340847194
+      }
+    ],
+    "vias": [
+      "715266e8-dac7-4567-91f5-2fd3aab396b0",
+      "408a8e85-65ef-4350-a7e6-66f20c65f17d",
+      "6bb0a40e-7a92-4dc8-9b63-bd59d7061533",
+      "a2d575b1-b517-40b0-8bc3-7c81af15a34f"
+    ],
+    "total_track_length_mm": 74.01097517349102,
+    "scope": "Ramo do reservatório esquerdo C14/C15/J1/auxiliares. Retificação, bulk principal e ambos os bancos TPA à direita já estavam interligados; queda/ripple/térmica ainda exigem revisão."
+  },
+  "hardware_validated": false,
+  "nearest_ground_via_planar_mm": {
+    "C2": 3.091,
+    "C4": 1.15,
+    "C5": 4.886,
+    "C6": 3.888,
+    "C7": 1.976,
+    "C8": 0.678,
+    "C9": 2.124,
+    "C10": 1.4,
+    "C13": 4.634
+  },
+  "project_status_metadata": "ROUTED ENGINEERING CANDIDATE - NOT RELEASED FOR FABRICATION",
+  "pcb_geometry_or_schematic_changed": true,
+  "current_source_sha256": {
+    ".tasks/ROADMAP.md": "2ffd917130e9da805acfe8a0d995105e8195f847c4fbbc0c331634581314d5a3",
+    ".tasks/github-mirror.json": "831c832540b6c608e89a18aafd19e954389fb682973808bb910659c2e1d8df7e",
+    ".tasks/items/BENCH-002.md": "58ca110e4f2f7d9a583bcc8478cfd759ba6bd0406733d1550d20751a1e331c9f",
+    ".tasks/items/ELEC-003.md": "d7d02cfcef2a5033054687193ac786646fd6defb7aa058c930e2ff954791dfb9",
+    ".tasks/items/FAB-001.md": "3a6661906be07357e2994b6f132adc3708f121acffc9c077f21550bb4deae233",
+    ".tasks/items/PCB-001.md": "21bdd6d0701fc8498d3e4d1dae517b0709857e44ab801a0b8fb64d37ce0099e2",
+    ".tasks/items/PCB-002.md": "9d0344648d64b21821a80cce945bd08f368e5218e23c6b622ee28a3ae2d88c79",
+    ".tasks/project-backlog.md": "9c141731e75a9fdf55043ebc206fcde89510343327ea870ccb437b426d3d750a",
+    ".tasks/sprints/S03.md": "e0350bb7e89cb0999e4a54c179c69c8a1fddd346cc2b0521d2f65cc7bf4bcdd6",
+    ".tasks/sprints/S04.md": "1c8180f4f5f6ace0b8a8621782a98d21c085a37de619f666ec6af96607f8c448",
+    ".tasks/sprints/S05.md": "97ed74d0a2b944fc26204a09d08599e1cf6cd3c1c7924e0d6ff532ea55448c95",
+    "AGENTS.md": "82ce13a40f39560d80631fde529749df0bfab6aba9c37e3310401dd78b0f62c8",
+    "CHANGELOG.md": "eb6833f1384ffb9291a38a44952eab5733e50e405c59672c11b4ca5eed0432d1",
+    "Makefile": "642cd2abbcd5685a35db81f8fc2df11ee67ce18df7b21b644ef036344879f32e",
+    "README.md": "60d64c5be485b6c9e78d91d7ad2872f66fb36ee8a96f12df954b53fe2e28749a",
+    "docs/README.md": "7a3a8ada1b5db0382b700524f633df0267ccf000d118c59181eac41aea387a0a",
+    "docs/architecture.md": "2711cb347bc4907790a0ce71b9d7cce3cdf8008951a2d8456eaf27fa4abbecff",
+    "docs/decisions.md": "647571593fe0fdf2889d07ca960c68f1bbbe9f694536103c44028db9d81a0cd3",
+    "docs/development-status.md": "7dbf7ce745acebf65508907fbe5036ae1cdc42d9871ab01c1e166f38d95c6a76",
+    "docs/functional-readiness.md": "6e5efc1a00dd5a1d5ed116daed2303e6f57d5eec2c9b1101de3a9e891e3088ee",
+    "docs/github.md": "4e75b45560e2bc40dd8483ab141362b2d88e4d885ef58d55379df97ffcd1092f",
+    "docs/images/.ps28-gallery-q9vnf0af/README.md": "298c2fc7a2aa051da48ae94f0ac0bc0ed5d9512c1089c9a3c196305ddf67b9fe",
+    "docs/images/.ps28-gallery-q9vnf0af/oem-bottom.png": "3fea72984ccd372f9bb2dec5817697e58146132fc696ad37a272b8073393d6ac",
+    "docs/images/.ps28-gallery-q9vnf0af/oem-isometric.png": "383cfdb1836a62d9c451c496bab0513832d35961d951ae3dbf0474d177c19206",
+    "docs/images/.ps28-gallery-q9vnf0af/oem-orbit.gif": "d9f378ab71e76e5a826d0b7c85cc5e49177620da3efe1969a330e49b5123c7af",
+    "docs/images/.ps28-gallery-q9vnf0af/oem-top.png": "2a972e651cb4c3f1db3346b0293735d33b80e19f08c5b1af953bf07f4810ed88",
+    "docs/images/.ps28-gallery-q9vnf0af/selected-bottom.png": "feb51f1d904fd01c0a7a3c375695243eb73695d055b3ab5dda672bab651c910f",
+    "docs/images/.ps28-gallery-q9vnf0af/selected-isometric.png": "235da4d5e11ad7b8e2840bc38105a308a230cb72b968f5be05fb43309fe79dc2",
+    "docs/images/.ps28-gallery-q9vnf0af/selected-orbit.gif": "1c59edea5f95904c5e6f63bb4260b6b0f8cb0b85b556ac52bdd4faab802619ed",
+    "docs/images/.ps28-gallery-q9vnf0af/selected-top.png": "0c539e64e7c62b676f4cf92d156ff965048f1caf108b71a4835a8a1b82931413",
+    "docs/images/.ps28-gallery-q9vnf0af/system-isometric.png": "0292cce0a91dd0373bea77be29589ce11ecb21b4163040af64813542cbb0456b",
+    "docs/images/kicad-3d/README.md": "403d18a30fd864a17dc891581e02b743ca53f7ef297070e1b3a81a3a19609509",
+    "docs/images/kicad-3d/manifest.json": "022e71c58913398e53a8eaadde5ab14aa022936d47b54535381c0401b160a363",
+    "docs/images/kicad-3d/oem-bottom.png": "9363939a410a4b876baa70bb2e3144383d4c1fc2fc2624e9c3b0e2c5ffff4003",
+    "docs/images/kicad-3d/oem-isometric.png": "7e837b5132b862ccf73aef06edcac2fc2449f794994d8fb09a12a8f97af9a194",
+    "docs/images/kicad-3d/oem-orbit.gif": "5f3cc6de97abb9b539d55c547e8be0d33c45e1863e71815ed8bbe4e063cdcfc6",
+    "docs/images/kicad-3d/oem-top.png": "4f8dd3bf53fe40be28f8a9d389c82aa2860d97adff8ccb6047dad61921c11eee",
+    "docs/images/kicad-3d/selected-bottom.png": "1c1a727eda373ed6f450938320f524181601820cc251a58a1102e1a6e5901745",
+    "docs/images/kicad-3d/selected-isometric.png": "486d5bfa0fc8bd56cee907818b5bce6e2f46ff473ae13855071c46c4e5bf141f",
+    "docs/images/kicad-3d/selected-orbit.gif": "09b23de28fbcaa18f128ef781faf6ba65e8a8a8f290f5ed952b02942376a53ab",
+    "docs/images/kicad-3d/selected-top.png": "7fd57450887d7b3fdd8e47b7d8ac5d7e14c1fded0ea2bc8950801027f40e3a63",
+    "docs/images/kicad-3d/system-bottom.png": "1f2b13818f83553e4cc086582b4507727124817c2abe1be238d8af97f96cbe20",
+    "docs/images/kicad-3d/system-isometric.png": "1fd4d7ac9fad70c437ab9aa42ad8c83c955042fb603ac5947bb596dc6ecae8b4",
+    "docs/images/kicad-3d/system-orbit.gif": "faeffcf25ba1854a125488c606f5c21601459e1ecd38925c812344882ee0feb6",
+    "docs/images/kicad-3d/system-top.png": "4b02f4226ed3923271b07a3dfd201aaa49524df6bb66241e4f3f25ceac3f52ed",
+    "docs/images/system-candidate/README.md": "53b731d09afa3b2d3f1939a2db2b8b210c39a5c6b8b8f729abce143e4614f17d",
+    "docs/images/system-candidate/system-candidate.svg": "e95961f9920400b849ddd63e62b3c1696171f7f630c50db4b2dd53197d7a9f9d",
+    "docs/images/thermal-block-bottom.png": "2d1d65ab643ecd8e311475bf168edb8cb400792cd85c49d29ef4ccabbd85d03d",
+    "docs/images/thermal-block.png": "04c56262dd6ce27d7628c5616fbfbaba32b857f292b965015875feb16bd98b21",
+    "docs/images/thermal-budget.png": "82286bc262a3a9d7e7e2640c6a698df0d3b211f51123c176cc3de06d5f6424cc",
+    "docs/images/thermal-fit-assembly.png": "f5e692a5b03c25ebe0ab4ac67287209587fa5ac5d814d84bce67c88891302024",
+    "docs/images/thermal-fit-contact.png": "9ca175781c97701870f959ff40f9fe5fe8f8f517a1175acc5667570a587b265a",
+    "docs/images/thermal-fit-section.png": "ff76ab1a3dfed461afa445fb3006d1b58fe2b1599930e4137bb9f8e4948d09d7",
+    "docs/pcb-layout.md": "7283017cb8d81b1a54ac7ebbe212a3b1cdbce77f33e6d85db258caf01d1d96cc",
+    "docs/production-readiness-2026-10-15.md": "55a0b0cc1960ffb26748800cbfb035f9d0f849ed2e33739186d391f83b1029a9",
+    "docs/production-roadmap.md": "7804347b7068ae0e2d3f4112f132676cb42c7508a5830b8d83bf144c6aaf5898",
+    "docs/schematic.md": "c9c6218439dcf77ab8c50e83f5547dce87a00a990d3943163abea762640d1287",
+    "docs/tpa-local-layout-review.md": "6fc1c5f62d99285179641b4729b4e952a978c198c1d92e89b568bcb92e01819e",
+    "kicad/analog-protected/analog-protected.kicad_pro": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "kicad/analog-protected/analog-protected.kicad_sch": "f46adefe0383358837e4eb49a41fe21b8017f39b549f789c10675ca4ac277303",
+    "kicad/analog-protected/vmid-manifest.json": "f4ab47cd848ccf1d1e14ed1c0d52f7ccb51eb6b55bfe189640ab7730778ff119",
+    "kicad/core-oem-refined/ps28-modern.kicad_pcb": "a411e0b47843fb179f5d3bf621118539ccafcd4fc8e6c0617c5bc5c397222215",
+    "kicad/core-oem-refined/ps28-modern.kicad_pro": "6b368fee5215bb145795b3889eac20abed249211ac5030186b7798eadb9646cc",
+    "kicad/core-oem-refined/ps28-modern.kicad_sch": "134bdf8fa93e3a66d99a5d556bd45cb9c5289ed5c3b126273db16ef3ad38a2ce",
+    "kicad/core-selected/ps28-modern.kicad_pcb": "2f3ab1f1667a714c892b0e1c31d9a7447c1772f695b11268b348edec311aed99",
+    "kicad/core-selected/ps28-modern.kicad_pro": "6b368fee5215bb145795b3889eac20abed249211ac5030186b7798eadb9646cc",
+    "kicad/core-selected/ps28-modern.kicad_sch": "63ab6dc33d89510fd536616a62e29561d68b5bd0ccdd6294df5f34f85825e7e9",
+    "kicad/models/ps28-bodies/thermal_block.wrl": "abddee6c25ea789f96a8046f0ee46653f706aafcf3995fb505185a066e959090",
+    "kicad/system-candidate/system-candidate.kicad_pcb": "34cb8db01aa94263fe318f606735565567186f3d7a5112dea91a4a1b1123d0cf",
+    "kicad/system-candidate/system-candidate.kicad_pro": "080ed7cd2669eafd92bdbeb04aa9d0199568e7eff6101176d58cd59609fbd3cb",
+    "kicad/system-candidate/system-candidate.kicad_sch": "49170be93a1e615d86d8b697e106b0c82ce1caa47551dddcab6c2a8c2dd32570",
+    "mechanical/README.md": "46047eab50dbac62a4f6fe11d796b6baaa94bbb2cc26e1e6ecc0c11efa0670a6",
+    "mechanical/oem-heatsink-measurements.json": "ad3b03bb09a3cea3481f64998c24421e0055e53fddf212275483ced449e3460a",
+    "mechanical/owner-clearance-20261012.json": "2544bf20cc8da09eb3ffe0cddc6324ca84f2f47d5a10b610fd5f6e4597dfb28e",
+    "mechanical/thermal-block.md": "2410b7fcc55d1f9e6b0fe8f14b6f7c27200838d6238703a20a06a6390f6f6772",
+    "mechanical/thermal-block.stl": "18e62cfd8a3b6d20808338c19fcdb906d77dee9f15fb4903b537a7c7c87e484d",
+    "mechanical/thermal-fit.json": "6f565bf057cf8243dea57ed81229991e670c90178e32c0b3e1a3c185e8b0a466",
+    "reference/manifest.json": "9ab57f8d832d309331ae86f686bc15c500f2fd5c1e74ea4f00f09a58025c3bff",
+    "scripts/blender_thermal_block.py": "7d818fa892298e8871ae5ace9d6432310e2513e9769725884dfd1b035fef96a3",
+    "scripts/check_thermal_fit.py": "1470afcea0ecf7af260406efa2b237404e0080cd48c2803a795c49a3031c3219",
+    "scripts/check_tpa_local_layout.py": "be9803d1e2de86bc46be31c61103442247d072931e1b728b1a82e52b8b03ebdc",
+    "scripts/create_debug_io.py": "314a3692791584e09a04e9855dd2ec4777e26dd6779b37a9cac9bf32c57ed340",
+    "scripts/eda_check.py": "03f14ba47c49a9a7bebbed79b4c1e1d91ca1aa5a5c182d0a7d809e50275465b3",
+    "scripts/export_fab.py": "3fec041aad68daea9a718fae4598cf9b86abbbd9c3140678e0c6ae08e28e548d",
+    "scripts/organize_assembly_labels.py": "7bf6b597ec94b2a3e8c273f07be4957d56d407fde1822565e4786c0941fdb812",
+    "scripts/render_kicad_gallery.py": "2e78e02554815100472beda498ba89d51860edfac62c452a6ef29fd27c972d36",
+    "scripts/render_thermal_budget.py": "d79a423ca335e56b0f167137ad2e46512cccf4657887e21b5622a83693259e54",
+    "simulation/analog/input-power-order.json": "9cd67b003a855e4b8f1b8e3176daf64a800a9d8a904eaf2a46301c160d4791b7",
+    "simulation/analog/vmid-protection.json": "c44c0878556a9034e0764a2635e3768964bccd538d14dec7185f44749946e62a",
+    "tests/reports/documentation-media-refresh.json": "1d1427c7791ae9780e47b1d1e62913f7aef68d44059051aa2184fd0b62ce54f3",
+    "tests/reports/production-readiness-2026-10-15.json": "5dc02d53a39efc8fd6ea26fb2cbb37ef9441f6ed8b0b04d1ec7c65589a7ace1a",
+    "tests/reports/publication-sync-2026-10-16.json": "3955f100c3c9709f4ec5226a3137fd737c7183b2e36a9beea7ef0e6b76f93366",
+    "tests/reports/thermal-fit-review.json": "ecb9944f1f90f655a4774b45f76ea7312d991b6ee062e57948752333430552b8",
+    "tests/unit/test_assembly_labels.py": "9f5f77f50687329afff88532910cceae91289dfcd86a3dca6a0c3d931d71d289",
+    "tests/unit/test_debug_schematic.py": "d9d20e342fa40636559f34a10a37341ced955307c4ee3c56051a99e0262d0b54",
+    "tests/unit/test_eda_candidate_dispatch.py": "5a66dcc155f52612d199d2774192caaa8ebae693f42218d824fe557bd7e66aa8",
+    "tests/unit/test_fab_export.py": "15bd2d9220f3c616cb1b89745cb4ad2a10006103044ca192682b019c629b980b",
+    "tests/unit/test_project_status.py": "a8cb606c0d051fec8e7aeb7bc3466336b58c82d85897fef85d78b51c43e2694c",
+    "tests/unit/test_render_gallery.py": "4081decfa603c456408c3863a6bff85f736aab60ec8bfdc85f93db886dded05e",
+    "tests/unit/test_thermal_fit.py": "e8934df5697d98c506f90f84e41f0260e2b9f0256af9476e601a67991296955d",
+    "tests/unit/test_tpa_local_layout.py": "6e8ea780e460c7908315449d15f75e0bbd31b379a95f4208aa2f9ac5fd80d190"
+  },
+  "native_erc": {
+    "violations": 0,
+    "command": "make erc (system-candidate default)"
+  },
+  "native_drc_command": "make drc (system-candidate, --schematic-parity --refill-zones)",
+  "current_media_source": "Regeneração nativa de 2026-10-16; não substitui os hashes históricos de 2026-10-08.",
+  "validation_at": "2026-10-16T12:38:24.994631-03:00",
+  "ground_return_note": "Foram adicionadas somente duas vias GND livres de conflito; distâncias e candidatos ausentes estão explícitos. Distância planar não é prova de percurso HF.",
+  "automated_tests": {
+    "command": "make check",
+    "tests": 138,
+    "passed": 138,
+    "failed": 0
+  },
+  "fabrication_draft": {
+    "path": "build/fab/drafts/b2d01f67cdc5-dirty-129oc4r4",
+    "all_checksums_verified": true,
+    "files_in_manifest": 25,
+    "manufacturing_approved": false,
+    "mechanical_fit_study_not_included_in_electrical_draft": true
+  },
+  "thermal_fit_review": "tests/reports/thermal-fit-review.json",
+  "pcb_unchanged_by_thermal_fit": true,
+  "publication_sync_report": "tests/reports/publication-sync-2026-10-16.json",
+  "external_reference_sha256": {
+    "reference/ti/tpa3255.pdf": "d8533eff6fcbb901e90c67f3a1f5af939c44daf22d9b769775079d5b789a202f",
+    "reference/parts/we-hcf-7443631000.pdf": "f42aecc53bd62d9662908ed57feb51d2f9975253c8c1ae538a50fb2fad015a78",
+    "reference/parts/littelfuse-smcj51a.pdf": "29531c61c5717811b8d6ddd669cfe41d639e747c71405e68085981af736b5942"
+  }
+}

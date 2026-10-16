@@ -1,4 +1,20 @@
-# Caminho até produção (JLCPCB) — 2026-10-10
+# Caminho até produção (JLCPCB)
+
+## Atualização — 2026-10-16
+
+[Placement local TPA e conectividade concluídos](tpa-local-layout-review.md):
+ERC 0, DRC 0, aberturas 0 e paridade 0. Próximo: revisão global de potência,
+EMI e fit/G2 → qualificar BOM/CPL JLCPCB → conferir pacote e obter G3.
+O [fit térmico nominal/orçamento](../mechanical/thermal-block.md) já foi revisto;
+conferências locais e validação térmica medida permanecem em BENCH-002.
+As novas faces/rotações dos capacitores devem entrar no CPL. Ainda não liberada.
+A [auditoria inicial de 2026-10-15](production-readiness-2026-10-15.md) permanece
+como histórico; suas nove aberturas e aviso BST_D foram resolvidos.
+D-032 mantém o preamp/limiter OEM.
+
+## Histórico — 2026-10-10
+
+A tabela abaixo registra aquele snapshot; não usar suas contagens como estado atual.
 
 Lista ordenada do que falta entre a candidata atual e um pedido de fabricação.
 **Nenhum item autoriza compra, fabricação ou energização**; cada gate é humano.

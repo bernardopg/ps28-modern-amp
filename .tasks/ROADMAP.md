@@ -1,43 +1,37 @@
 # Roadmap
 
-## Incremento atual autorizado
+## Incremento atual — 2026-10-16
 
-[PCB-003](items/PCB-003.md): captura e placement exploratório do core PBTL,
-conforme pedido de início da PCB. Não fecha M1/G0 nem libera fabricação;
-fonte D-010, magnetics, térmica e dimensões continuam dependentes de evidências.
+**Uma PCB de produto: `kicad/system-candidate/`.** Roteamento conectado, revisão
+local do TPA e fit térmico nominal concluídos: 269 footprints, ERC/DRC/paridade e
+conexões abertas zerados. [Estado técnico](../docs/development-status.md).
 
-## Snapshot D-018/D-019 — 2026-10-08
+- **Em andamento — PCB-002:** revisão global de potência/retornos/EMI e gate G2.
+- **Revisão pendente — ELEC-003:** captura integrada/ERC concluídos; auditoria de
+  pinagem/MPNs/footprints e revisão humana G1 não assinadas.
+- **Próximo — BUY-001/FAB-001:** qualificar BOM/CPL/DNP/estoque, obter cotação,
+  conferir gabarito e preparar pacote rastreável; aprovação G3 pelo proprietário.
+- **Bancada — BENCH-001/002:** aprovar limites e instrumentos antes de energia;
+  validar montagem/TIM/roscas/folgas e dissipação real em carga artificial.
+- **Depois — ACOU-001:** woofer somente após bring-up/proteções aprovados.
 
-[Mapa de capturas, PCBs e bloqueios](../docs/development-status.md): core B/OEM
-preservado; analógico protegido32/80/ERC0 ainda sem PCB; isolamento/pré-carga
-D-019 ainda sem implementação. Galeria 3D nativa regenerada mostra só o núcleo,
-não integração elétrica nova. Próximo risco: proteção de sinais/power-order,
-qualificação de parts/fonte e evidência mecânica antes de roteamento/freeze.
-Tasks locais seguem canônicas, WIP2 e todos os gates pendentes; S03 não ativada.
+O preamp/limiter OEM é reaproveitado (D-032); o front-end novo anterior permanece
+histórico. O fit calculado não mede o caminho dissipador→ambiente nem garante
+150 W contínuos. Nenhum gate ou sprint foi aprovado automaticamente.
 
-## Now — M0: fundação reproduzível
+## Milestones e sprints
 
-S01: documentação, skills, ferramentas, GitHub e comandos verificáveis.
-Setup não equivale a hardware liberado; fechar M0 após review do proprietário.
+- **M0 / S01:** infraestrutura e setup.
+- **M1 / S02:** requisitos, woofer, T1, mecânica e recursos de bancada.
+- **M2 / S03 / G1:** captura, simulações e revisão elétrica independente.
+- **M3 / S04 / G2–G3:** revisão de layout, BOM/CPL, cotação e autorização fabril.
+- **M4 / S05 / G4–G5:** bring-up resistivo e integração acústica.
 
-## Next — M1: requisitos e viabilidade (G0)
-
-S02: SYS-001/002, MECH-001, PWR-001, ELEC-001, BUY-001 e BENCH-001.
-Confirmar woofer/plate/fonte; escolher baseline PBTL e definir aceitação/instrumentos.
-
-## Next — M2: schematic validado (G1)
-
-S03: ELEC-002/003. Front-end real simulado, captura/MPNs e ERC/revisão cruzada.
-
-## Later — M3: layout e produção aprovada (G2/G3)
-
-S04: PCB-001/002, FAB-001. Stackup, loops/térmica/fit, DRC/paridade, BOM/CPL e cotações.
-
-## Later — M4: protótipo e integração (G4/G5)
-
-S05: BENCH-002, ACOU-001. Resistiva primeiro, woofer depois; logs térmicos/acústicos.
+Estados oficiais: [backlog](project-backlog.md) e `items/`; WIP máximo 2.
+A ordem técnica não ativa sprint nem dispensa dependências/gates. Sequência
+verificável em [docs/production-roadmap.md](../docs/production-roadmap.md).
 
 ## Fora do compromisso
 
-DSP/auto-standby/PFFB/controle remoto só após Rev. A validada e decisão de escopo.
-Rev. A é revisão física planejada, não tag de release de setup. Nenhuma data fabril prometida.
+DSP/PFFB/controle remoto e alterações após a placa validada exigem nova decisão
+de escopo. Não criar revisões físicas intermediárias como substituto do fechamento.

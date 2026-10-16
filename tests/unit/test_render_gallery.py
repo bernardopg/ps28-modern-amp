@@ -26,9 +26,13 @@ class RenderGalleryTests(unittest.TestCase):
         )
         context = manifest["electrical_context"]
         self.assertEqual(context, gallery.electrical_context())
-        self.assertEqual(context["scope"], "POWER_CORE_PLUS_SYSTEM_CANDIDATE_IMPORT_BANKS")
-        self.assertFalse(context["system_candidate_banks_inside_oem_outline"])
-        self.assertFalse(context["analog_protection_integrated_in_rendered_pcbs"])
+        self.assertEqual(context["scope"], "HISTORICAL_CORES_AND_ROUTED_SYSTEM_CANDIDATE")
+        self.assertTrue(context["system_candidate_banks_inside_oem_outline"])
+        self.assertTrue(context["analog_protection_integrated_in_rendered_pcbs"])
+        evidence = json.loads((ROOT / context["evidence_report"]).read_text())
+        self.assertEqual(evidence["native_drc"], {"violations": 0, "unconnected_items": 0, "schematic_parity": 0})
+        self.assertEqual(evidence["board_sha256"], hashlib.sha256((ROOT / "kicad/system-candidate/system-candidate.kicad_pcb").read_bytes()).hexdigest())
+        self.assertFalse(evidence["manufacturing_approved"])
         self.assertEqual(context["protected_analog_capture_components"], 32)
         self.assertEqual(len(context["protected_analog_unassigned_footprints"]), 13)
         for name, digest in manifest["asset_sha256"].items():
@@ -54,6 +58,21 @@ class RenderGalleryTests(unittest.TestCase):
             if name != "system":  # system candidate carries Wurth CAD for C1/L1/L2
                 self.assertIn("L1", entry["without_available_model"])
             self.assertEqual(len(entry["model_audit"]), footprints[name])
+            actual_audit = gallery.audit_models(ROOT / entry["pcb"])
+            self.assertEqual(len(entry["model_audit"]), len(actual_audit))
+            for recorded, actual in zip(entry["model_audit"], actual_audit):
+                # CI need not install the host's KiCad 3D library. Assignments
+                # always match; checked-in models and every available library
+                # model must still match the bytes used for this render.
+                for field in ("reference", "footprint", "models"):
+                    self.assertEqual(recorded[field], actual[field])
+                for model, digest in actual["model_sha256"].items():
+                    self.assertEqual(recorded["model_sha256"].get(model), digest,
+                                     "Available 3D model changed: " + model)
+                for model, digest in recorded["model_sha256"].items():
+                    if "${KICAD" not in model:
+                        self.assertEqual(actual["model_sha256"].get(model), digest,
+                                         "Project 3D model missing/changed: " + model)
             for command in entry["native_commands"]:
                 self.assertEqual(command[:3], ["kicad-cli", "pcb", "render"])
 

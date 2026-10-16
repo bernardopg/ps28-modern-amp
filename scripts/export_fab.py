@@ -9,6 +9,7 @@ ERC/DRC reports and SHA-256 manifest. Generates files only: no upload, no order.
 import hashlib
 import json
 import subprocess
+import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,15 +19,34 @@ PCB, SCH = PRJ / "system-candidate.kicad_pcb", PRJ / "system-candidate.kicad_sch
 
 def run(*args):
     r = subprocess.run(["kicad-cli", *args], capture_output=True, text=True)
-    if r.returncode not in (0, 5):  # 5 = DRC/ERC found violations; judged from the report
+    allowed = (0, 5) if args[:2] in (("sch", "erc"), ("pcb", "drc")) else (0,)
+    if r.returncode not in allowed:
         raise SystemExit(f"kicad-cli {' '.join(args[:3])} failed: {r.stderr[-400:]}")
 
 
+def write_checksums(out):
+    """Write last, including summary.json; never reuse an earlier package."""
+    files = sorted(p for p in out.rglob("*") if p.is_file() and p.name != "SHA256SUMS")
+    (out / "SHA256SUMS").write_text("".join(
+        f"{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.relative_to(out)}\n" for p in files))
+
+
 def main():
-    commit = subprocess.run(["git", "rev-parse", "--short", "HEAD"], capture_output=True, text=True,
-                            cwd=ROOT).stdout.strip()
-    out = ROOT / "build/fab" / commit
-    (out / "gerber").mkdir(parents=True, exist_ok=True)
+    commit = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True,
+                            cwd=ROOT, check=True).stdout.strip()
+    dirty = bool(subprocess.run(["git", "status", "--porcelain"], capture_output=True,
+                               text=True, cwd=ROOT, check=True).stdout.strip())
+    sources = [PCB, SCH, PRJ / "system-candidate.kicad_pro", Path(__file__)]
+    source_hashes = {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
+                     for p in sources}
+    drafts = ROOT / "build/fab/drafts"
+    drafts.mkdir(parents=True, exist_ok=True)
+    out = Path(tempfile.mkdtemp(prefix=commit[:12] + ("-dirty-" if dirty else "-"), dir=drafts))
+    (out / "README.txt").write_text(
+        "RASCUNHO NÃO LIBERADO — não enviar à fábrica.\n"
+        "BOM/CPL nativos ainda exigem seleção de peças, conversão e revisão JLCPCB.\n"
+        "Somente summary.json + SHA256SUMS indicam exportação concluída, não aprovação.\n")
+    (out / "gerber").mkdir()
     layers = "F.Cu,In1.Cu,In2.Cu,B.Cu,F.Paste,B.Paste,F.SilkS,B.SilkS,F.Mask,B.Mask,Edge.Cuts"
     run("pcb", "export", "gerbers", "--layers", layers, "--subtract-soldermask", "-o", str(out / "gerber"), str(PCB))
     run("pcb", "export", "drill", "--format", "excellon", "--excellon-separate-th", "--generate-map",
@@ -47,6 +67,10 @@ def main():
     drc = json.loads((out / "drc.json").read_text())
     summary = {
         "commit": commit,
+        "working_tree_dirty": dirty,
+        "source_sha256": source_hashes,
+        "manufacturing_approved": False,
+        "release_status": "DRAFT_NOT_FOR_MANUFACTURING",
         "erc_violations": sum(len(s["violations"]) for s in erc["sheets"]),
         "drc_errors": sum(v["severity"] == "error" for v in drc["violations"]),
         "drc_warnings": sum(v["severity"] == "warning" for v in drc["violations"]),
@@ -54,10 +78,11 @@ def main():
         "parity": len(drc.get("schematic_parity", [])),
         "ordered": False,
     }
-    files = sorted(p for p in out.rglob("*") if p.is_file() and p.name != "SHA256SUMS")
-    (out / "SHA256SUMS").write_text("".join(
-        f"{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.relative_to(out)}\n" for p in files))
+    if any(hashlib.sha256(p.read_bytes()).hexdigest() != source_hashes[str(p.relative_to(ROOT))]
+           for p in sources):
+        raise SystemExit("Sources changed during export; draft incomplete, discard it.")
     (out / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
+    write_checksums(out)
     print(json.dumps(summary), out)
 
 

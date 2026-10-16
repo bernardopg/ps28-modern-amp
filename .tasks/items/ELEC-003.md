@@ -5,7 +5,7 @@ status: To Do
 milestone: M2
 sprint: S03
 depends_on: ELEC-001
-updated: 2026-10-10
+updated: 2026-10-16
 ---
 
 # ELEC-003 — Capturar schematic e revisar ERC
@@ -20,6 +20,11 @@ Capturar schematic e revisar ERC, atendendo docs/requirements.md e gates docs/sa
 - [ ] ERC sem erros não justificados e revisão humana G1
 
 ## Evidência
+2026-10-16: captura de sistema integrada e roteada, ERC 0 e paridade 0 após
+correção TP127/R506; 138 testes aprovados. D-032 mantém preamp/limiter OEM.
+O trabalho restante desta task é revisão independente de pinagem/MPN/footprint
+(incluindo itens sem MPN), não captura dos blocos já integrados. G1 não assinado;
+To Do preservado para essa revisão. Ver `docs/tpa-local-layout-review.md`.
 
 2026-10-10: D-024a (clamp BAT54 + 3,3 kΩ), footprint DGK local e auditoria do
 G6K-2F. Front-end completo passou para ELEC-004.

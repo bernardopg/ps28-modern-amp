@@ -18,14 +18,15 @@ def has_design(text, kind):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("kind", choices=["erc", "drc"])
+    parser.add_argument("--design", type=Path, default=Path("kicad/system-candidate/system-candidate"),
+                        help="Caminho base sem extensão; padrão é a placa única atual, nunca fallback histórico.")
     args = parser.parse_args()
     out = ROOT / "build"
     report = out / f"{args.kind}.json"
     report.unlink(missing_ok=True)  # Never reuse a report after an empty/invalid input.
     ext = "sch" if args.kind == "erc" else "pcb"
-    selected = ROOT / 'kicad/core-selected'
-    directory = selected if (selected / 'ps28-modern.kicad_pro').exists() else ROOT / 'kicad'
-    path = directory / f"ps28-modern.kicad_{ext}"
+    design = args.design if args.design.is_absolute() else ROOT / args.design
+    path = design.with_suffix(f".kicad_{ext}")
     if not path.exists() or not has_design(path.read_text(), args.kind):
         print("BLOCKED: empty EDA container; no circuit to validate.", file=sys.stderr)
         return 2
@@ -42,7 +43,7 @@ def main():
         str(out / f"{args.kind}.json"),
     ]
     if args.kind == "drc":
-        command.append("--schematic-parity")
+        command.extend(["--schematic-parity", "--refill-zones"])
     command.append(str(path))
     result = subprocess.run(command, cwd=ROOT, timeout=180)
     print("Rule-check result only; human gates still required.")

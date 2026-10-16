@@ -1,56 +1,61 @@
-# Arquitetura proposta — capturas parciais, não sistema aprovado
+# Arquitetura da candidata integrada
 
-[Estado consolidado](development-status.md): distinguir proposta funcional,
-schematic de estudo e componentes efetivamente colocados na PCB.
+Estado em **2026-10-16**: uma placa principal roteada em
+`kicad/system-candidate/`; estudos em outras pastas são referências históricas.
+ERC/DRC/conectividade/paridade zerados não substituem G1/G2 ou ensaios.
+[Estado e evidências](development-status.md).
+
+## Baseline atual — D-010/D-021/D-032
 
 ```text
-FUNÇÕES PLANEJADAS (ainda não integradas)
-RCA L/R → soma resistiva → buffer → LR4 50–150 Hz ┐
-RCA LFE → buffer ────────────────────────────┴→ seleção/volume/fase
- → drivers diferenciais → C20/C21 → isolamento/pré-carga D-019 [TBD]
- → INPUT_A/B → TPA3255 PBTL → dois ramos LC → SPK±
+T1 original, secundário CT → dois diodos + bulk/proteção → PVDD ≈42–50 V
+                                                      ├→ TPA3255 PBTL
+                                                      ├→ auxiliar 12 V
+                                                      └→ alimentação do preamp OEM
 
-FONTE SECUNDÁRIA PLANEJADA D-010
-T1 original → retificação/bulk/proteção → conversão regulada 36 V → PVDD
-                                    └→ AUX_RAW 12 V → VDD/GVDD TPA
+Preamp/limiter OEM (RCA L/R/LFE, crossover 50–150 Hz, volume, fase)
+  → chicote OEM J7 → interface de áudio/bias/isolamento/mute
+  → INPUT_A/B → TPA3255 PBTL → dois ramos LC → SPK±
 
-RAMO ANALÓGICO CAPTURADO SEPARADAMENTE D-018 (sem PCB)
-AUX_RAW → diodo/15 Ω/2×470 µF → ANALOG_12V → quatro amps OPA1656 candidatos
-                                      └→ divisor150/150 Ω +1 µF → VMID
+Supervisão de rails/DC/falhas + sequenciador discreto → RESET/mute/isolamento
 ```
 
-O isolamento D-019 fica **no lado TPA dos capacitores**; a cadeia funcional
-não substitui schematic/pinagem/controle qualificados. Ver
-[contrato e contraprovas](input-power-order-study.md) antes de capturar chaves.
-L/R, LINE/LFE, volume/fase, mute/supervisor, limiter/high-pass e proteção DC
-permanecem incompletos. Posição/implementação de fase/volume deve cumprir o
-envelope de saltos/slew D-019; não autoriza hot-swap do par diferencial.
+PVDD é **não regulado**; a antiga proposta de conversor principal 36 V foi
+substituída por D-021. Não há MCU nem primário AC na PCB nova. Nunca usar uma
+ponte vermelho–vermelho em T1. [Fonte](power-d021.md) · [T1](transformer-reuse.md).
 
-D-010 seleciona T1 reaproveitado; VAC/DC, VA/corrente, ripple, transientes e
-térmica ainda exigem envelope medido. Nenhum ±Vcc antigo ligado diretamente ao
-TPA; primário original separado da PCB nova. Saúde informada pelo proprietário
-não é medida pelo agente. Fonte externa é bancada/fallback, não nova baseline.
-Ver [reaproveitamento](transformer-reuse.md).
+D-032 reaproveita as placas originais de preamp/limiter e o chicote de sete vias
+(manual PS28 p.22–24), em vez de fabricar o front-end de controle anterior.
+Pinagem, interface e premissas estão em [decisions.md](decisions.md).
+O front-end novo D-022/ELEC-004 e as capturas isoladas anteriores continuam como
+histórico de projeto, não como outra PCB de produto.
 
-D-016 mantém OPA1656ID como candidato reversível. NE5532 em 12 V não foi
-qualificado. D-018 substitui a candidata VMID ativa insegura D-017 por bias
-passivo com rail protegido; a correção vale **somente sob o envelope declarado**.
-ANALOG_12V não alimenta o TPA: seu mínimo calculado pode ficar abaixo de 10,8 V.
-Não usar AVDD/DVDD como fonte genérica. [Fonte/VMID](vmid-protection.md).
+## Pontos críticos da revisão
 
-O pré-amplificador pode sobreviver à alimentação TPA: RESET/mute do TPA não
-protege INPUT_A/B. Pré-carga, defaults e isolamento de ambos os terminais de
-chaves desenergizadas ainda não estão implementados. J102 permanece separado
-do núcleo; RCA ativa durante power-off também não está qualificada.
+- **PBTL:** TI SLASEA8A §10.2.4/Fig.31/tabela11: M2 alto, M1 baixo,
+  INPUT_C/D ao GND, A+C e B+D paralelados antes dos dois ramos LC. Não misturar
+  com o ponto de paralelamento/filtro da EVM SLOU441.
+- **Áudio e power-order:** a proteção é após os capacitores de acoplamento;
+  RESET sozinho não protege INPUT_A/B. Qualificar sinais externos, falha única,
+  polarização, pré-carga e comportamento desenergizado contra os envelopes
+  de [D-019](input-power-order-study.md) e [D-024](iso-d019.md).
+- **Sequenciamento:** partida, hold, latch e timeout discretos; não usar AND
+  combinacional ingênuo entre FAULT e RESET. [Sequenciador](seq-d020.md).
+- **Alimentação:** AUX/rail analógico têm funções distintas; AVDD/DVDD não são
+  fontes genéricas. Ripple, regulação e transientes de T1 ainda exigem ensaio.
+- **Retornos/EMI:** revisão global de corrente e laços de comutação pendente;
+  DRC não prova indutância, capacidade de corrente nem emissão.
+- **Térmica:** PowerPAD superior → TIM → bloco/alívio com batentes → calço/TIM →
+  perfil OEM. Bond J6→perfil obrigatório; GND não é PE. Fit calculado nominal,
+  montagem/roscas/folgas e dissipação ao ambiente ainda precisam validação.
 
-Planejar GND por retorno, plano contínuo e placement; não romper retornos HF
-por regra genérica de estrela. RCA/chassi/ESD e proteção DC diferencial após LC
-precisam de decisão/revisão. SPK+ e SPK− são ativos, nunca GND.
+## Limites de evidência
 
-## Referência PBTL selecionada — não misturar LC/paralelamento
+O alvo 120–150 W não é rating contínuo garantido. A placa atual tem 269 footprints,
+3.531 segmentos e 499 vias; conectividade fechada e revisão local não encerram a
+revisão elétrica independente/global nem qualificam BOM/CPL ou montagem.
 
-D-011 selecionou **TI SLASEA8A §10.2.4, Fig.31/tabela11, p.28**: A+C e B+D
-paralelados antes dos dois ramos LC. Essa topologia já está no core exploratório.
-A **EVM SLOU441 §4.2 + SLAR129A/130A** usa quatro ramos LC e outro ponto de
-paralelamento; serve de comparação, não de receita híbrida. Seleção de topologia
-não fecha revisão independente, fonte/mecânica/roteamento ou os gates G0–G5.
+[Revisão local](tpa-local-layout-review.md) ·
+[Fit térmico](../mechanical/thermal-block.md) ·
+[Roadmap](production-roadmap.md) · [Segurança e gates](safety.md).
+SPK+ e SPK− são ativos/flutuantes: nunca GND ou garra terra do osciloscópio.

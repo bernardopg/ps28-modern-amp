@@ -1,13 +1,21 @@
 # Mecânica
 
-Integração selecionada: gabinete, plate e dissipador originais, com adaptador de cobre
-para PowerPAD superior se necessário. **D-014 fixa os mounting points e sistema OEM**:
-a placa nova se adapta à original, sem nova furação no plate. O manual fornece cotas
-nominais de plate, carcaça, dissipadores e suportes; não entrecentros/escala1:1 da PCB.
-Ver [referência original](original-board-reference.md), [conferência final](measurement-request.md),
-[parâmetros/limites](ps28-original-integration.json), [medidas do dissipador e perfil U](oem-heatsink-measurements.md), [chicotes e vedação](oem-harness-sealing.md), [envelopes](ps28-core-envelope.scad)
-e [revisão atual](../docs/selected-core.md).
+D-014 mantém gabinete, plate, suportes, chicotes e dissipação OEM. A placa única
+se adapta ao conjunto, sem nova furação do plate. Medidas do proprietário já
+existem: PCB 154×81 mm, perfil U, fixações e região dos eletrolíticos. Não pedir
+novo levantamento completo nem tratar modelos de estudo como medição.
 
-MECH-001: medir plate, furos, profundidade, chicotes, dissipador e vedação acústica.
-Guardar desenho dimensionado, fotos sem dados pessoais e CAD/STEP de origem conhecida.
-Não há dimensões nem painel validado neste setup. Imprimir fit-check 1:1 antes de PCB.
+- [Fit térmico atual, desenho e limites](thermal-block.md): bloco/apoios/calços,
+  contato superior DDV, cotas OEM corrigidas e orçamento 1D; não é liberação.
+- [Parâmetros verificáveis](thermal-fit.json) e
+  [evidência](../tests/reports/thermal-fit-review.json).
+- [Referência do manual](original-board-reference.md),
+  [medidas do perfil](oem-heatsink-measurements.md),
+  [chicotes e vedação](oem-harness-sealing.md),
+  [conferência física](measurement-request.md).
+
+Restam conferências **locais**: folga no bloco/verso, rosca e calços/TIM na placa
+montada; depois ensaio térmico aprovado em BENCH-002. O caminho dissipador→ambiente
+não foi medido. Gabarito 1:1 e conferência de montagem precedem fabricação/montagem.
+Os modelos nominais preservam referências/limites; não são CAD de fabricante nem
+comprovam tolerâncias. Peças mecânicas e TIM ainda exigem BOM/MPN e OK do proprietário.

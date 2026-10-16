@@ -68,9 +68,12 @@ Tasks têm ID estável, dependências e critérios verificáveis; WIP máximo 2.
 Use Conventional Commits e atualize CHANGELOG.md para mudanças relevantes.
 
 ## EDA atual
-**Placa única do produto: kicad/system-candidate/** (205 footprints, placement de estudo no
-contorno OEM, ERC 0/DRC 0, rota manual pendente), gerada por scripts/integrate_candidate.py;
-não editar à mão. Demais pastas kicad/ são histórico/insumo dos geradores. Ler docs/development-status.md
+**Placa única do produto: kicad/system-candidate/** (269 footprints, 3.531 segmentos,
+499 vias; ERC/DRC/paridade/aberturas 0 em 2026-10-16). Base gerada por
+scripts/integrate_candidate.py e pós-processada/roteada via KCAA/KiCad nativo;
+não editar à mão nem regenerar sobre o cobre atual. Revisão local TPA e fit térmico
+nominal concluídos; revisão global/G1/G2, fit físico/térmica/EMI e BOM/CPL pendentes.
+Preamp/limiter OEM reaproveitado (D-032). Demais pastas kicad/ são histórico/insumo dos geradores. Ler docs/development-status.md
 e docs/production-roadmap.md. Núcleo B em kicad/core-selected/ps28-modern.kicad_pro.
 47 footprints/142 pads, ainda sem roteamento. Ler docs/selected-core.md.
 D-014 fixa montagem/dissipação OEM e os mesmos mounting points por decisão do usuário.

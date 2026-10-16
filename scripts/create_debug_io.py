@@ -71,6 +71,12 @@ def parts():
     fet("Q707", "FAN_G", "FAN_N", "AO3400A", "PS28_PRE:AO3400A")
     out = []
     for i, (ref, lib, value, mpn, fp, nets) in enumerate(specs):
+        x, y = 38.1 + (i % 8) * 38.1, 45.72 + (i // 8) * 38.1
+        # Integrated debug bank is offset +1270 mm in X. TP127's former
+        # wire crossed the R506 INA_UV stub and shorted two named nets.
+        # Match the KCAA-reviewed repair; leave the divider and PCB untouched.
+        if ref == "TP127":
+            x, y = 101.6, 109.22
         out.append({"ref": ref, "lib_id": lib, "value": value, "mpn": mpn, "footprint": fp, "nets": nets,
-                    "units": [(1, 38.1 + (i % 8) * 38.1, 45.72 + (i // 8) * 38.1)]})
+                    "units": [(1, x, y)]})
     return out

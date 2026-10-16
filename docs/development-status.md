@@ -1,10 +1,33 @@
-# Estado de desenvolvimento — atualização de 2026-10-10
+# Estado de desenvolvimento
+
+## Revisão atual — 2026-10-16
+
+Abrir `kicad/system-candidate/system-candidate.kicad_pro`: única PCB de produto,
+com preamp/limiter OEM reaproveitado conforme D-032. 138 testes aprovados;
+cartuchos históricos das capturas não definem o estado de liberação.
+[Revisão local TPA e conectividade](tpa-local-layout-review.md): 269 footprints,
+3.531 segmentos/499 vias. **ERC 0, DRC 0, aberturas 0, paridade 0**. Bootstrap,
+VBG e desacoplamentos aproximados; GND local revisto; ramo PVDD esquerdo
+restabelecido com 1,2 mm. [Fit térmico nominal e orçamento](../mechanical/thermal-block.md)
+revistos: cotas/malha corrigidas, batentes positivos e R junção→perfil 2,25…3,97 °C/W.
+Continuam revisão global/G2, validação física/térmica/EMI e BOM/CPL antes de G3. Não liberada para fabricação. Galeria nativa atualizada.
+
+## Histórico — revisão de 2026-10-15
+
+Ver [auditoria de produção](production-readiness-2026-10-15.md): 269 footprints,
+ERC 0 e paridade 0 após correção TP127/R506 pelo KCAA; 9 conexões abertas e
+1 aviso BST_D. BOM/CPL JLCPCB, placement crítico e documentação de release ainda
+não concluídos. D-032 reutiliza preamp/limiter OEM. Não liberada para fabricação.
+
+## Histórico — atualização de 2026-10-10
+
+Os números e pendências abaixo pertencem ao snapshot histórico, não à candidata atual.
 
 Planejamento canônico: `.tasks/items/`; este resumo não muda estados ou gates.
 Não é release de hardware, montagem completa ou autorização de fabricação.
 Próximos passos até produção: [production-roadmap.md](production-roadmap.md).
 
-## Estado atual — candidata de sistema
+### Candidata de sistema naquele snapshot (2026-10-10)
 
 Abrir **`kicad/system-candidate/system-candidate.kicad_pro`**. Contém núcleo OEM +
 analógico D-018 + fonte D-021 + sequenciador D-020/D-023 + interface D-019/D-024:

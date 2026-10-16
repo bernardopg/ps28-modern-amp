@@ -1,8 +1,9 @@
 # Documentação técnica
 
 Começar pelo [estado consolidado D-018/D-019 e mapa das capturas/PCBs](development-status.md)
-e pela [galeria 3D nativa atual](images/kicad-3d/README.md). Estudos analógicos não
-foram integrados à PCB; planejamento/gates não avançam por aparência do render.
+pela [revisão local TPA/conectividade](tpa-local-layout-review.md) e pela
+[galeria 3D nativa atual](images/kicad-3d/README.md). Capturas/cores históricos não
+são a candidata integrada atual. Planejamento/gates não avançam por aparência do render.
 
 Ordem: [requisitos](requirements.md) → [arquitetura](architecture.md) →
 [captura elétrica](schematic.md) → [layout](pcb-layout.md) →

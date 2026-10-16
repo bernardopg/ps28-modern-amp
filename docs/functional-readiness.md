@@ -1,6 +1,25 @@
-# Operacionalidade — revisão do núcleo e bloqueios do produto
+# Operacionalidade — candidata integrada e histórico
 
-## Estado verificável
+## Estado atual — 2026-10-16
+
+A PCB de produto é `kicad/system-candidate/`, não os núcleos citados no histórico
+abaixo: 269 footprints, roteamento conectado, ERC/DRC/paridade/aberturas 0.
+Fonte, interface/isolamento e sequenciamento estão capturados; D-032 reaproveita o
+preamp/limiter OEM. Não afirmar que esses blocos ainda não existem na candidata.
+
+A [revisão local TPA](tpa-local-layout-review.md) e o
+[fit térmico nominal](../mechanical/thermal-block.md) estão concluídos como projeto.
+Continuam pendentes revisão global e G1/G2, BOM/CPL/G3 e ensaios de alimentação,
+proteções, EMI, montagem física e dissipação real. Conectividade ou CAD não
+comprovam produto funcionando; 150 W contínuos não são garantidos.
+[Sequência atual de fechamento](production-roadmap.md).
+
+## Histórico — revisão do núcleo OEM em 2026-10-08
+
+**Os bloqueios e números abaixo pertencem ao estudo daquela data**, não à placa
+integrada atual. Capturas/modelos são preservados como evidência histórica.
+
+### Estado verificável naquela revisão
 
 A candidata separada `kicad/core-oem-refined/` preserva B e C, sem modificar buffers
 antigos. É estudo de integração OEM, **não produto operacional nem PCB fabricável**.

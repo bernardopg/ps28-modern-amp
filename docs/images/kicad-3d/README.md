@@ -1,83 +1,80 @@
 # Galeria 3D nativa — KiCad 10
 
-Estas imagens vêm de **`kicad-cli pcb render`**, não de desenho conceitual,
-renderizador CAD alternativo ou rotação artificial de uma foto. Cada GIF contém
-16 renders de câmera independentes do KiCad. Pillow somente acrescenta faixas de
-status e codifica os GIFs. Atualização após D-018/D-019, snapshot `e26f61f`:
-**núcleo apenas, sem PCB analógica/proteção integrada**. Geometria das PCBs
-preservada; faixas e manifesto agora tornam essa separação explícita.
-Saída real: PNG1264×882; GIF784×578,
-16frames,140ms/frame, loop. O KiCad ajustou as dimensões solicitadas ao renderizar.
+Atualizada em **2026-10-16**, após a revisão local TPA e fechamento das conexões.
+Imagens de **`kicad-cli pcb render`**; cada GIF contém 16 renders independentes de
+câmera. Pillow apenas acrescenta faixas de estado e codifica os GIFs. Não são
+imagens conceituais nem rotação artificial de uma fotografia.
 
-## Candidata de sistema D-023 — núcleo + bancos fora do contorno
+## Placa única atual — candidata de sistema
 
-![Candidata de sistema — vista isométrica](system-isometric.png)
+![Candidata integrada — vista isométrica](system-isometric.png)
 
-![Candidata de sistema — órbita KiCad](system-orbit.gif)
+![Candidata integrada — órbita KiCad](system-orbit.gif)
 
 [Vista superior](system-top.png) · [Vista inferior](system-bottom.png)
 
-`kicad/system-candidate/`: núcleo OEM no contorno e, **à direita, fora dele**, os
-bancos de importação D-018 (analógico), D-021 (fonte), D-020 (sequenciador) e
-D-024 (relé/mute/janelas D-019).
-Os bancos não têm placement, fit nem roteamento; só tornam visíveis os corpos e
-footprints candidatos. Câmera com zoom/pan para enquadrar os bancos.
+`kicad/system-candidate/`: contorno OEM medido **154 × 81 mm**, **269 footprints**,
+fonte/analógico protegido/sequenciador/isolamento integrados, interfaces com o
+preamp/limiter OEM (D-032). Não há bancos de importação fora do contorno.
+Bootstrap e desacoplamentos locais foram reposicionados; o cobre está conectado.
+**ERC 0, DRC 0, aberturas 0, paridade 0** — isso não equivale a aprovação G2/G3.
+[Revisão e limites](../../tpa-local-layout-review.md).
+O modelo do bloco foi corrigido para os furos OEM a 23,65 mm e para a posição
+mundial em H5; [fit nominal, cortes e orçamento térmico](../../../mechanical/thermal-block.md).
+Não representa fit físico ou dissipação medidos.
 
-## OEM refinada — candidata de estudo
+## OEM refinada — estudo histórico do núcleo
 
-![OEM refinada — vista isométrica](oem-isometric.png)
+![Núcleo OEM histórico — vista isométrica](oem-isometric.png)
 
-![OEM refinada — órbita KiCad](oem-orbit.gif)
+![Núcleo OEM histórico — órbita KiCad](oem-orbit.gif)
 
 [Vista superior](oem-top.png) · [Vista inferior](oem-bottom.png)
 
-## Revisão B — seleção de peças preservada
+## Revisão B — seleção histórica do núcleo
 
-![Revisão B — vista isométrica](selected-isometric.png)
+![Núcleo B histórico — vista isométrica](selected-isometric.png)
 
-![Revisão B — órbita KiCad](selected-orbit.gif)
+![Núcleo B histórico — órbita KiCad](selected-orbit.gif)
 
 [Vista superior](selected-top.png) · [Vista inferior](selected-bottom.png)
 
-## D-018/D-019 não aparecem como componentes nessas PCBs
-O estudo `kicad/analog-protected/` tem schematic de 32 componentes/80 pinos e
-13 footprints pendentes, **não PCB**. D-019 ainda é contrato de isolamento/
-mute/pré-carga, não circuito capturado. Nenhum preamp/supervisor/chave/roteamento
-foi acrescentado para aparentar integração. [Estado completo](../../development-status.md).
-A inscrição em todas as imagens/GIFs acompanha essas alterações documentais,
-sem inventar geometria ou alterar mounts OEM.
+B/OEM são referências históricas separadas, não três produtos a fabricar. Não
+possuem a integração e o roteamento da candidata atual. A captura separada
+`kicad/analog-protected/` continua como referência de 32 componentes/80 pinos;
+seus 13 footprints pendentes não significam ausência desses blocos na candidata.
 
-## Limites — não omitir ao compartilhar
+## Limites ao compartilhar
 
-- As três placas estão **sem roteamento**. Galeria não é gerber, prova de fit,
-  montagem aprovada, teste térmico, nem evidência de funcionamento.
-- C1/J1/J5/L1/L2 não têm modelos associados aos footprints customizados. U1
-  referencia um STEP indisponível nesta instalação; por isso seu corpo não aparece.
-  J6 é feature de GND, sem modelo: hole/bond na B; pad de trança sem furo na OEM.
-- Os40 footprints com modelos disponíveis usam bibliotecas visuais do KiCad.
-  Não são CADs específicos dos fabricantes com tolerâncias qualificadas.
-- Nenhum componente fictício foi colocado para ocultar essas ausências.
-- A OEM utiliza contorno inferido153×79,1mm; furação, fit e contato térmico
-  permanecem não verificados. B permanece padrão de validação; OEM é estudo.
+- Render não é Gerber, aprovação de montagem, fit, térmica, EMI ou funcionamento.
+- Na candidata, os itens sem modelo são test points e features H6/J6;
+  a lista exata está no manifesto. B/OEM históricos também não mostram os corpos
+  de C1/J1/J5/J6/L1/L2/U1 por ausência de modelos associados/disponíveis.
+- Corpos disponíveis podem ser modelos genéricos/envelopes de estudo. A presença
+  visual não qualifica tolerâncias, acesso, dissipação nem contato do PowerPAD.
+- Não foram adicionados componentes fictícios para preencher ausências.
+- Fixações, placa original e dissipação OEM são interfaces preservadas, não
+  autorização para cortar gabinete ou mudar suportes. Fit final ainda exige gabarito.
+- BOM/CPL devem refletir as novas faces e rotações. Produção continua não liberada.
 
 ## Reprodução e rastreabilidade
 
 ```bash
 make render-3d
-# equivalente: python3 scripts/render_kicad_gallery.py --frames 16
 ```
 
-Dependências locais: KiCad CLI e modelos de sua biblioteca, Python/Pillow e fonte
-DejaVuSans. Não são instaladas automaticamente. Logs e frames brutos ficam em
-`build/renders/`, fora do Git. `manifest.json` registra versão KiCad, commit-fonte,
-SHA256 das PCBs/imagens/gerador, comandos e auditoria de modelos por footprint.
-O contexto elétrico também vincula hashes da captura D-018/configs D-018/D-019,
-quantidade de componentes e footprints pendentes, sem afirmar integração física.
-O gerador prepara/verifica todos os assets em staging antes de promover os arquivos;
-manifesto por último, README/notas manuais preservados. Falha de render/hash/set
-incompleto não publica um sucesso novo. Regressões offline não exigem KiCad/Pillow.
-Evidência consolidada: `tests/reports/documentation-media-refresh.json` — 60 testes
-locais e rechecagem nativa B/OEM (ERC4,109 não roteadas; geometria/paridade0).
-Nenhuma alteração das PCBs/capturas ou aprovação de fit/roteamento.
-O commit-fonte antecede o commit da mídia: é a revisão elétrica/mecânica renderizada.
-Ver [operacionalidade](../../functional-readiness.md) para os bloqueios do produto.
+Requer KiCad CLI/modelos, Python/Pillow e DejaVuSans já instalados; não instala
+nada automaticamente. Logs e frames brutos ficam em `build/renders/`.
+`manifest.json` registra hashes das PCBs, imagens, gerador, comandos e auditoria
+por footprint, incluindo hashes dos arquivos 3D efetivamente disponíveis.
+O contexto distingue referências históricas da candidata atual
+verificada e recusa rotular uma PCB cujo hash difere da evidência nativa.
+
+Publicação em staging com manifesto por último; uma falha não publica sucesso.
+A anotação dos renders não modifica a geometria da PCB. O commit-fonte pode
+anteceder o commit das imagens; os hashes, e não apenas o nome do commit, vinculam
+esta árvore de trabalho aos renders.
+
+Evidência atual: `tests/reports/tpa-local-layout-review.json`. O registro de
+2026-10-08 em `tests/reports/documentation-media-refresh.json` permanece histórico,
+com seus hashes originais e um apontamento explícito para a evidência atual.

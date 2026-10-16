@@ -1,0 +1,976 @@
+{
+  "revision": "D031-fit-20261016",
+  "scope": "CAD/envelope + calculated thermal sensitivity, not hardware sign-off",
+  "fit": {
+    "nominal_fit_pass": true,
+    "physical_fit_validated": false,
+    "pedestal_min_pad_margin_after_xy_budget_mm": [
+      0.10999999999999988,
+      0.17500000000000004
+    ],
+    "slot_combined_error_margin_mm": 0.33380962103094003,
+    "required_stop_selection_mm": [
+      3.1500000000000004,
+      3.5
+    ],
+    "upper_assembly_envelope_with_budgets_mm": 30.450000000000003,
+    "required_housing_clearance_mm": 32.0,
+    "under_body_parts": [
+      {
+        "reference": "R9",
+        "value": "4.7k 1%",
+        "footprint": "R_0603_1608Metric",
+        "courtyard_xy_mm": [
+          67.6,
+          53.35,
+          69.15,
+          56.4
+        ],
+        "height_envelope_mm": 2.1,
+        "worst_body_clearance_mm": 0.9700000000000002,
+        "height_source": "design envelope, NOT individually qualified MPN height"
+      },
+      {
+        "reference": "C3",
+        "value": "10uF 16V X5R",
+        "footprint": "C_0805_2012Metric",
+        "courtyard_xy_mm": [
+          72.755,
+          64.6,
+          76.245,
+          66.65
+        ],
+        "height_envelope_mm": 2.1,
+        "worst_body_clearance_mm": 0.9700000000000002,
+        "height_source": "design envelope, NOT individually qualified MPN height"
+      },
+      {
+        "reference": "C12",
+        "value": "1uF 100V X7R",
+        "footprint": "C_1206_3216Metric",
+        "courtyard_xy_mm": [
+          98.78,
+          53.805,
+          103.47,
+          56.195
+        ],
+        "height_envelope_mm": 2.1,
+        "worst_body_clearance_mm": 0.9700000000000002,
+        "height_source": "design envelope, NOT individually qualified MPN height"
+      },
+      {
+        "reference": "R720",
+        "value": "100k",
+        "footprint": "R_0805_2012Metric",
+        "courtyard_xy_mm": [
+          115.275,
+          64.505,
+          118.725,
+          66.495
+        ],
+        "height_envelope_mm": 2.1,
+        "worst_body_clearance_mm": 0.9700000000000002,
+        "height_source": "design envelope, NOT individually qualified MPN height"
+      },
+      {
+        "reference": "C28",
+        "value": "1nF 100V C0G",
+        "footprint": "C_1206_3216Metric",
+        "courtyard_xy_mm": [
+          77.28,
+          53.805,
+          81.97,
+          56.195
+        ],
+        "height_envelope_mm": 2.1,
+        "worst_body_clearance_mm": 0.9700000000000002,
+        "height_source": "design envelope, NOT individually qualified MPN height"
+      },
+      {
+        "reference": "D705",
+        "value": "FAULT",
+        "footprint": "LED_0805_2012Metric",
+        "courtyard_xy_mm": [
+          112.255,
+          64.025,
+          114.245,
+          67.475
+        ],
+        "height_envelope_mm": 2.1,
+        "worst_body_clearance_mm": 0.9700000000000002,
+        "height_source": "design envelope, NOT individually qualified MPN height"
+      },
+      {
+        "reference": "R2",
+        "value": "3.3R 0.25W 1%",
+        "footprint": "R_1206_3216Metric",
+        "courtyard_xy_mm": [
+          73.075,
+          58.8,
+          75.425,
+          63.45
+        ],
+        "height_envelope_mm": 2.1,
+        "worst_body_clearance_mm": 0.9700000000000002,
+        "height_source": "design envelope, NOT individually qualified MPN height"
+      },
+      {
+        "reference": "C20",
+        "value": "10uF 16V X5R",
+        "footprint": "C_0805_2012Metric",
+        "courtyard_xy_mm": [
+          69.85,
+          58.755,
+          71.9,
+          62.245
+        ],
+        "height_envelope_mm": 2.1,
+        "worst_body_clearance_mm": 0.9700000000000002,
+        "height_source": "design envelope, NOT individually qualified MPN height"
+      },
+      {
+        "reference": "D303",
+        "value": "SMCJ51A",
+        "footprint": "D_SMC",
+        "courtyard_xy_mm": [
+          109.355,
+          53.055,
+          116.145,
+          62.945
+        ],
+        "height_envelope_mm": 2.72,
+        "worst_body_clearance_mm": 0.3500000000000001,
+        "height_source": "Littelfuse SMCJ D(max) + assumed solder"
+      },
+      {
+        "reference": "C11",
+        "value": "1uF 100V X7R",
+        "footprint": "C_1206_3216Metric",
+        "courtyard_xy_mm": [
+          104.555,
+          53.03,
+          106.945,
+          57.72
+        ],
+        "height_envelope_mm": 2.1,
+        "worst_body_clearance_mm": 0.9700000000000002,
+        "height_source": "design envelope, NOT individually qualified MPN height"
+      },
+      {
+        "reference": "R1",
+        "value": "3.3R 0.25W 1%",
+        "footprint": "R_1206_3216Metric",
+        "courtyard_xy_mm": [
+          105.575,
+          58.8,
+          107.925,
+          63.45
+        ],
+        "height_envelope_mm": 2.1,
+        "worst_body_clearance_mm": 0.9700000000000002,
+        "height_source": "design envelope, NOT individually qualified MPN height"
+      },
+      {
+        "reference": "C21",
+        "value": "10uF 16V X5R",
+        "footprint": "C_0805_2012Metric",
+        "courtyard_xy_mm": [
+          69.6,
+          63.255,
+          71.65,
+          66.745
+        ],
+        "height_envelope_mm": 2.1,
+        "worst_body_clearance_mm": 0.9700000000000002,
+        "height_source": "design envelope, NOT individually qualified MPN height"
+      },
+      {
+        "reference": "R5",
+        "value": "3.3R 0.25W 1%",
+        "footprint": "R_1206_3216Metric",
+        "courtyard_xy_mm": [
+          70.325,
+          53.05,
+          72.675,
+          57.7
+        ],
+        "height_envelope_mm": 2.1,
+        "worst_body_clearance_mm": 0.9700000000000002,
+        "height_source": "design envelope, NOT individually qualified MPN height"
+      },
+      {
+        "reference": "C24",
+        "value": "1nF 100V C0G",
+        "footprint": "C_1206_3216Metric",
+        "courtyard_xy_mm": [
+          73.805,
+          53.03,
+          76.195,
+          57.72
+        ],
+        "height_envelope_mm": 2.1,
+        "worst_body_clearance_mm": 0.9700000000000002,
+        "height_source": "design envelope, NOT individually qualified MPN height"
+      },
+      {
+        "reference": "R6",
+        "value": "3.3R 0.25W 1%",
+        "footprint": "R_1206_3216Metric",
+        "courtyard_xy_mm": [
+          104.55,
+          64.575,
+          109.2,
+          66.925
+        ],
+        "height_envelope_mm": 2.1,
+        "worst_body_clearance_mm": 0.9700000000000002,
+        "height_source": "design envelope, NOT individually qualified MPN height"
+      }
+    ],
+    "clamp_hardware_clearances": [
+      {
+        "reference": "C12",
+        "side": "top",
+        "clearance_mm": 1.3049999999999997,
+        "clearance_after_xy_budget_mm": 1.0549999999999997,
+        "head_or_stop_xy_mm": [
+          102.0,
+          60.5
+        ]
+      },
+      {
+        "reference": "C28",
+        "side": "top",
+        "clearance_mm": 1.3049999999999997,
+        "clearance_after_xy_budget_mm": 1.0549999999999997,
+        "head_or_stop_xy_mm": [
+          79.0,
+          60.5
+        ]
+      },
+      {
+        "reference": "R2",
+        "side": "top",
+        "clearance_mm": 0.5750000000000028,
+        "clearance_after_xy_budget_mm": 0.32500000000000284,
+        "head_or_stop_xy_mm": [
+          79.0,
+          60.5
+        ]
+      },
+      {
+        "reference": "C11",
+        "side": "top",
+        "clearance_mm": 0.7757681337709341,
+        "clearance_after_xy_budget_mm": 0.5257681337709341,
+        "head_or_stop_xy_mm": [
+          102.0,
+          60.5
+        ]
+      },
+      {
+        "reference": "R1",
+        "side": "top",
+        "clearance_mm": 0.5750000000000028,
+        "clearance_after_xy_budget_mm": 0.32500000000000284,
+        "head_or_stop_xy_mm": [
+          102.0,
+          60.5
+        ]
+      },
+      {
+        "reference": "C24",
+        "side": "top",
+        "clearance_mm": 0.9492309377902992,
+        "clearance_after_xy_budget_mm": 0.6992309377902992,
+        "head_or_stop_xy_mm": [
+          79.0,
+          60.5
+        ]
+      },
+      {
+        "reference": "C4",
+        "side": "bottom",
+        "clearance_mm": 0.9749999999999943,
+        "clearance_after_xy_budget_mm": 0.7249999999999943,
+        "head_or_stop_xy_mm": [
+          79.0,
+          60.5
+        ]
+      },
+      {
+        "reference": "C16",
+        "side": "bottom",
+        "clearance_mm": 0.5258586660599334,
+        "clearance_after_xy_budget_mm": 0.27585866605993337,
+        "head_or_stop_xy_mm": [
+          79.0,
+          60.5
+        ]
+      },
+      {
+        "reference": "C5",
+        "side": "bottom",
+        "clearance_mm": 1.3072466033013042,
+        "clearance_after_xy_budget_mm": 1.0572466033013042,
+        "head_or_stop_xy_mm": [
+          102.0,
+          60.5
+        ]
+      },
+      {
+        "reference": "C19",
+        "side": "bottom",
+        "clearance_mm": 1.3489327879339577,
+        "clearance_after_xy_budget_mm": 1.0989327879339577,
+        "head_or_stop_xy_mm": [
+          102.0,
+          60.5
+        ]
+      }
+    ],
+    "external_side_hardware_clearances": [
+      {
+        "reference": "R9",
+        "hardware": "load_spreader",
+        "courtyard_xy_mm": [
+          67.6,
+          53.35,
+          69.15,
+          56.4
+        ],
+        "height_envelope_mm": 2.1,
+        "worst_vertical_clearance_mm": 12.749999999999998
+      },
+      {
+        "reference": "C12",
+        "hardware": "load_spreader",
+        "courtyard_xy_mm": [
+          98.78,
+          53.805,
+          103.47,
+          56.195
+        ],
+        "height_envelope_mm": 2.1,
+        "worst_vertical_clearance_mm": 12.749999999999998
+      },
+      {
+        "reference": "C28",
+        "hardware": "load_spreader",
+        "courtyard_xy_mm": [
+          77.28,
+          53.805,
+          81.97,
+          56.195
+        ],
+        "height_envelope_mm": 2.1,
+        "worst_vertical_clearance_mm": 12.749999999999998
+      },
+      {
+        "reference": "L1",
+        "hardware": "screw_head",
+        "courtyard_xy_mm": [
+          66.805,
+          29.33,
+          89.195,
+          51.92
+        ],
+        "height_envelope_mm": 14.6,
+        "worst_vertical_clearance_mm": 4.499999999999998
+      },
+      {
+        "reference": "D303",
+        "hardware": "load_spreader",
+        "courtyard_xy_mm": [
+          109.355,
+          53.055,
+          116.145,
+          62.945
+        ],
+        "height_envelope_mm": 2.72,
+        "worst_vertical_clearance_mm": 12.129999999999997
+      },
+      {
+        "reference": "C11",
+        "hardware": "load_spreader",
+        "courtyard_xy_mm": [
+          104.555,
+          53.03,
+          106.945,
+          57.72
+        ],
+        "height_envelope_mm": 2.1,
+        "worst_vertical_clearance_mm": 12.749999999999998
+      },
+      {
+        "reference": "L2",
+        "hardware": "screw_head",
+        "courtyard_xy_mm": [
+          91.805,
+          29.33,
+          114.195,
+          51.92
+        ],
+        "height_envelope_mm": 14.6,
+        "worst_vertical_clearance_mm": 4.499999999999998
+      },
+      {
+        "reference": "R5",
+        "hardware": "load_spreader",
+        "courtyard_xy_mm": [
+          70.325,
+          53.05,
+          72.675,
+          57.7
+        ],
+        "height_envelope_mm": 2.1,
+        "worst_vertical_clearance_mm": 12.749999999999998
+      },
+      {
+        "reference": "C24",
+        "hardware": "load_spreader",
+        "courtyard_xy_mm": [
+          73.805,
+          53.03,
+          76.195,
+          57.72
+        ],
+        "height_envelope_mm": 2.1,
+        "worst_vertical_clearance_mm": 12.749999999999998
+      }
+    ],
+    "old_side_hole_height_error_mm": 17.299999999999997,
+    "local_clearances_to_confirm": [
+      "housing >=32 mm above PCB at the block; not inferred from capacitor photos",
+      "bottom screw heads >=5 mm clearance around H5/H6",
+      "actual top TIM gap and lateral shim; useful OEM M3 thread depth"
+    ]
+  },
+  "thermal": {
+    "method": "1D lumped steady-state sensitivity; NOT FEM; full loss scenario allocated to U1 conservatively",
+    "rjc_top_K_W": 0.36,
+    "r_pedestal_K_W": 0.6986027944111778,
+    "r_top_tim_range_K_W": [
+      0.925925925925926,
+      1.851851851851852
+    ],
+    "r_side_interfaces_and_shim_K_W": 0.06453759148369928,
+    "r_junction_to_profile_range_K_W": [
+      2.2490663118208034,
+      3.9749922377467293
+    ],
+    "cases": [
+      {
+        "ambient_C": 35,
+        "loss_W": 5,
+        "legacy_path_K_W": 1.5,
+        "junction_range_C": [
+          53.74533155910402,
+          62.37496118873365
+        ],
+        "worst_meets_design_target": true,
+        "worst_within_recommended_range": true
+      },
+      {
+        "ambient_C": 35,
+        "loss_W": 5,
+        "legacy_path_K_W": 3.0,
+        "junction_range_C": [
+          61.24533155910402,
+          69.87496118873365
+        ],
+        "worst_meets_design_target": true,
+        "worst_within_recommended_range": true
+      },
+      {
+        "ambient_C": 35,
+        "loss_W": 5,
+        "legacy_path_K_W": 5.0,
+        "junction_range_C": [
+          71.24533155910402,
+          79.87496118873365
+        ],
+        "worst_meets_design_target": true,
+        "worst_within_recommended_range": true
+      },
+      {
+        "ambient_C": 35,
+        "loss_W": 10,
+        "legacy_path_K_W": 1.5,
+        "junction_range_C": [
+          72.49066311820803,
+          89.7499223774673
+        ],
+        "worst_meets_design_target": true,
+        "worst_within_recommended_range": true
+      },
+      {
+        "ambient_C": 35,
+        "loss_W": 10,
+        "legacy_path_K_W": 3.0,
+        "junction_range_C": [
+          87.49066311820803,
+          104.7499223774673
+        ],
+        "worst_meets_design_target": true,
+        "worst_within_recommended_range": true
+      },
+      {
+        "ambient_C": 35,
+        "loss_W": 10,
+        "legacy_path_K_W": 5.0,
+        "junction_range_C": [
+          107.49066311820803,
+          124.7499223774673
+        ],
+        "worst_meets_design_target": false,
+        "worst_within_recommended_range": true
+      },
+      {
+        "ambient_C": 35,
+        "loss_W": 15,
+        "legacy_path_K_W": 1.5,
+        "junction_range_C": [
+          91.23599467731205,
+          117.12488356620094
+        ],
+        "worst_meets_design_target": false,
+        "worst_within_recommended_range": true
+      },
+      {
+        "ambient_C": 35,
+        "loss_W": 15,
+        "legacy_path_K_W": 3.0,
+        "junction_range_C": [
+          113.73599467731205,
+          139.62488356620094
+        ],
+        "worst_meets_design_target": false,
+        "worst_within_recommended_range": false
+      },
+      {
+        "ambient_C": 35,
+        "loss_W": 15,
+        "legacy_path_K_W": 5.0,
+        "junction_range_C": [
+          143.73599467731205,
+          169.62488356620094
+        ],
+        "worst_meets_design_target": false,
+        "worst_within_recommended_range": false
+      },
+      {
+        "ambient_C": 35,
+        "loss_W": 20,
+        "legacy_path_K_W": 1.5,
+        "junction_range_C": [
+          109.98132623641607,
+          144.4998447549346
+        ],
+        "worst_meets_design_target": false,
+        "worst_within_recommended_range": false
+      },
+      {
+        "ambient_C": 35,
+        "loss_W": 20,
+        "legacy_path_K_W": 3.0,
+        "junction_range_C": [
+          139.98132623641607,
+          174.4998447549346
+        ],
+        "worst_meets_design_target": false,
+        "worst_within_recommended_range": false
+      },
+      {
+        "ambient_C": 35,
+        "loss_W": 20,
+        "legacy_path_K_W": 5.0,
+        "junction_range_C": [
+          179.98132623641607,
+          214.4998447549346
+        ],
+        "worst_meets_design_target": false,
+        "worst_within_recommended_range": false
+      },
+      {
+        "ambient_C": 40,
+        "loss_W": 5,
+        "legacy_path_K_W": 1.5,
+        "junction_range_C": [
+          58.74533155910402,
+          67.37496118873365
+        ],
+        "worst_meets_design_target": true,
+        "worst_within_recommended_range": true
+      },
+      {
+        "ambient_C": 40,
+        "loss_W": 5,
+        "legacy_path_K_W": 3.0,
+        "junction_range_C": [
+          66.24533155910402,
+          74.87496118873365
+        ],
+        "worst_meets_design_target": true,
+        "worst_within_recommended_range": true
+      },
+      {
+        "ambient_C": 40,
+        "loss_W": 5,
+        "legacy_path_K_W": 5.0,
+        "junction_range_C": [
+          76.24533155910402,
+          84.87496118873365
+        ],
+        "worst_meets_design_target": true,
+        "worst_within_recommended_range": true
+      },
+      {
+        "ambient_C": 40,
+        "loss_W": 10,
+        "legacy_path_K_W": 1.5,
+        "junction_range_C": [
+          77.49066311820803,
+          94.7499223774673
+        ],
+        "worst_meets_design_target": true,
+        "worst_within_recommended_range": true
+      },
+      {
+        "ambient_C": 40,
+        "loss_W": 10,
+        "legacy_path_K_W": 3.0,
+        "junction_range_C": [
+          92.49066311820803,
+          109.7499223774673
+        ],
+        "worst_meets_design_target": true,
+        "worst_within_recommended_range": true
+      },
+      {
+        "ambient_C": 40,
+        "loss_W": 10,
+        "legacy_path_K_W": 5.0,
+        "junction_range_C": [
+          112.49066311820803,
+          129.7499223774673
+        ],
+        "worst_meets_design_target": false,
+        "worst_within_recommended_range": false
+      },
+      {
+        "ambient_C": 40,
+        "loss_W": 15,
+        "legacy_path_K_W": 1.5,
+        "junction_range_C": [
+          96.23599467731205,
+          122.12488356620094
+        ],
+        "worst_meets_design_target": false,
+        "worst_within_recommended_range": true
+      },
+      {
+        "ambient_C": 40,
+        "loss_W": 15,
+        "legacy_path_K_W": 3.0,
+        "junction_range_C": [
+          118.73599467731205,
+          144.62488356620094
+        ],
+        "worst_meets_design_target": false,
+        "worst_within_recommended_range": false
+      },
+      {
+        "ambient_C": 40,
+        "loss_W": 15,
+        "legacy_path_K_W": 5.0,
+        "junction_range_C": [
+          148.73599467731205,
+          174.62488356620094
+        ],
+        "worst_meets_design_target": false,
+        "worst_within_recommended_range": false
+      },
+      {
+        "ambient_C": 40,
+        "loss_W": 20,
+        "legacy_path_K_W": 1.5,
+        "junction_range_C": [
+          114.98132623641607,
+          149.4998447549346
+        ],
+        "worst_meets_design_target": false,
+        "worst_within_recommended_range": false
+      },
+      {
+        "ambient_C": 40,
+        "loss_W": 20,
+        "legacy_path_K_W": 3.0,
+        "junction_range_C": [
+          144.98132623641607,
+          179.4998447549346
+        ],
+        "worst_meets_design_target": false,
+        "worst_within_recommended_range": false
+      },
+      {
+        "ambient_C": 40,
+        "loss_W": 20,
+        "legacy_path_K_W": 5.0,
+        "junction_range_C": [
+          184.98132623641607,
+          219.4998447549346
+        ],
+        "worst_meets_design_target": false,
+        "worst_within_recommended_range": false
+      },
+      {
+        "ambient_C": 50,
+        "loss_W": 5,
+        "legacy_path_K_W": 1.5,
+        "junction_range_C": [
+          68.74533155910402,
+          77.37496118873365
+        ],
+        "worst_meets_design_target": true,
+        "worst_within_recommended_range": true
+      },
+      {
+        "ambient_C": 50,
+        "loss_W": 5,
+        "legacy_path_K_W": 3.0,
+        "junction_range_C": [
+          76.24533155910402,
+          84.87496118873365
+        ],
+        "worst_meets_design_target": true,
+        "worst_within_recommended_range": true
+      },
+      {
+        "ambient_C": 50,
+        "loss_W": 5,
+        "legacy_path_K_W": 5.0,
+        "junction_range_C": [
+          86.24533155910402,
+          94.87496118873365
+        ],
+        "worst_meets_design_target": true,
+        "worst_within_recommended_range": true
+      },
+      {
+        "ambient_C": 50,
+        "loss_W": 10,
+        "legacy_path_K_W": 1.5,
+        "junction_range_C": [
+          87.49066311820803,
+          104.7499223774673
+        ],
+        "worst_meets_design_target": true,
+        "worst_within_recommended_range": true
+      },
+      {
+        "ambient_C": 50,
+        "loss_W": 10,
+        "legacy_path_K_W": 3.0,
+        "junction_range_C": [
+          102.49066311820803,
+          119.7499223774673
+        ],
+        "worst_meets_design_target": false,
+        "worst_within_recommended_range": true
+      },
+      {
+        "ambient_C": 50,
+        "loss_W": 10,
+        "legacy_path_K_W": 5.0,
+        "junction_range_C": [
+          122.49066311820803,
+          139.7499223774673
+        ],
+        "worst_meets_design_target": false,
+        "worst_within_recommended_range": false
+      },
+      {
+        "ambient_C": 50,
+        "loss_W": 15,
+        "legacy_path_K_W": 1.5,
+        "junction_range_C": [
+          106.23599467731205,
+          132.12488356620094
+        ],
+        "worst_meets_design_target": false,
+        "worst_within_recommended_range": false
+      },
+      {
+        "ambient_C": 50,
+        "loss_W": 15,
+        "legacy_path_K_W": 3.0,
+        "junction_range_C": [
+          128.73599467731205,
+          154.62488356620094
+        ],
+        "worst_meets_design_target": false,
+        "worst_within_recommended_range": false
+      },
+      {
+        "ambient_C": 50,
+        "loss_W": 15,
+        "legacy_path_K_W": 5.0,
+        "junction_range_C": [
+          158.73599467731205,
+          184.62488356620094
+        ],
+        "worst_meets_design_target": false,
+        "worst_within_recommended_range": false
+      },
+      {
+        "ambient_C": 50,
+        "loss_W": 20,
+        "legacy_path_K_W": 1.5,
+        "junction_range_C": [
+          124.98132623641607,
+          159.4998447549346
+        ],
+        "worst_meets_design_target": false,
+        "worst_within_recommended_range": false
+      },
+      {
+        "ambient_C": 50,
+        "loss_W": 20,
+        "legacy_path_K_W": 3.0,
+        "junction_range_C": [
+          154.98132623641607,
+          189.4998447549346
+        ],
+        "worst_meets_design_target": false,
+        "worst_within_recommended_range": false
+      },
+      {
+        "ambient_C": 50,
+        "loss_W": 20,
+        "legacy_path_K_W": 5.0,
+        "junction_range_C": [
+          194.98132623641607,
+          229.4998447549346
+        ],
+        "worst_meets_design_target": false,
+        "worst_within_recommended_range": false
+      }
+    ],
+    "required_limits": [
+      {
+        "ambient_C": 35,
+        "loss_W": 5,
+        "profile_max_C_for_design_target": 90.12503881126635,
+        "legacy_path_max_K_W_for_design_target": 11.02500776225327
+      },
+      {
+        "ambient_C": 35,
+        "loss_W": 10,
+        "profile_max_C_for_design_target": 70.2500776225327,
+        "legacy_path_max_K_W_for_design_target": 3.5250077622532707
+      },
+      {
+        "ambient_C": 35,
+        "loss_W": 15,
+        "profile_max_C_for_design_target": 50.375116433799064,
+        "legacy_path_max_K_W_for_design_target": 1.0250077622532707
+      },
+      {
+        "ambient_C": 35,
+        "loss_W": 20,
+        "profile_max_C_for_design_target": 30.500155245065415,
+        "legacy_path_max_K_W_for_design_target": -0.22499223774672927
+      },
+      {
+        "ambient_C": 40,
+        "loss_W": 5,
+        "profile_max_C_for_design_target": 90.12503881126635,
+        "legacy_path_max_K_W_for_design_target": 10.02500776225327
+      },
+      {
+        "ambient_C": 40,
+        "loss_W": 10,
+        "profile_max_C_for_design_target": 70.2500776225327,
+        "legacy_path_max_K_W_for_design_target": 3.0250077622532707
+      },
+      {
+        "ambient_C": 40,
+        "loss_W": 15,
+        "profile_max_C_for_design_target": 50.375116433799064,
+        "legacy_path_max_K_W_for_design_target": 0.6916744289199377
+      },
+      {
+        "ambient_C": 40,
+        "loss_W": 20,
+        "profile_max_C_for_design_target": 30.500155245065415,
+        "legacy_path_max_K_W_for_design_target": -0.4749922377467293
+      },
+      {
+        "ambient_C": 50,
+        "loss_W": 5,
+        "profile_max_C_for_design_target": 90.12503881126635,
+        "legacy_path_max_K_W_for_design_target": 8.02500776225327
+      },
+      {
+        "ambient_C": 50,
+        "loss_W": 10,
+        "profile_max_C_for_design_target": 70.2500776225327,
+        "legacy_path_max_K_W_for_design_target": 2.0250077622532707
+      },
+      {
+        "ambient_C": 50,
+        "loss_W": 15,
+        "profile_max_C_for_design_target": 50.375116433799064,
+        "legacy_path_max_K_W_for_design_target": 0.025007762253270727
+      },
+      {
+        "ambient_C": 50,
+        "loss_W": 20,
+        "profile_max_C_for_design_target": 30.500155245065415,
+        "legacy_path_max_K_W_for_design_target": -0.9749922377467293
+      }
+    ],
+    "legacy_path_measured": false,
+    "thermal_performance_validated": false
+  },
+  "manufacturing_approved": false,
+  "mesh": {
+    "bounds_world_mm": [
+      [
+        63.99999952,
+        117.0000002
+      ],
+      [
+        54.000000299999996,
+        66.9999997
+      ],
+      [
+        1.20000014,
+        30.00000096
+      ]
+    ],
+    "side_holes_blocked": [
+      false,
+      false
+    ],
+    "old_wrong_height_is_solid": [
+      true,
+      true
+    ]
+  },
+  "mesh_checked": true,
+  "source_sha256": {
+    "mechanical/thermal-fit.json": "6f565bf057cf8243dea57ed81229991e670c90178e32c0b3e1a3c185e8b0a466",
+    "kicad/system-candidate/system-candidate.kicad_pcb": "34cb8db01aa94263fe318f606735565567186f3d7a5112dea91a4a1b1123d0cf",
+    "scripts/check_thermal_fit.py": "1470afcea0ecf7af260406efa2b237404e0080cd48c2803a795c49a3031c3219",
+    "mechanical/oem-heatsink-measurements.json": "ad3b03bb09a3cea3481f64998c24421e0055e53fddf212275483ced449e3460a",
+    "mechanical/owner-clearance-20261012.json": "2544bf20cc8da09eb3ffe0cddc6324ca84f2f47d5a10b610fd5f6e4597dfb28e",
+    "reference/ti/tpa3255.pdf": "d8533eff6fcbb901e90c67f3a1f5af939c44daf22d9b769775079d5b789a202f",
+    "reference/parts/littelfuse-smcj51a.pdf": "29531c61c5717811b8d6ddd669cfe41d639e747c71405e68085981af736b5942",
+    "reference/parts/we-hcf-7443631000.pdf": "f42aecc53bd62d9662908ed57feb51d2f9975253c8c1ae538a50fb2fad015a78",
+    "kicad/models/ps28-bodies/thermal_block.wrl": "abddee6c25ea789f96a8046f0ee46653f706aafcf3995fb505185a066e959090",
+    "mechanical/thermal-block.stl": "18e62cfd8a3b6d20808338c19fcdb906d77dee9f15fb4903b537a7c7c87e484d",
+    "scripts/blender_thermal_block.py": "7d818fa892298e8871ae5ace9d6432310e2513e9769725884dfd1b035fef96a3"
+  }
+}

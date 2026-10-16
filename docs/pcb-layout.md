@@ -2,6 +2,12 @@
 
 Prioridade: loops de comutação, desacoplamento, PowerPAD/térmica, LC, retorno e analógico.
 
+Atualização 2026-10-16: [fit térmico CAD e orçamento](../mechanical/thermal-block.md).
+Bloco Z=3,3…30 mm, furos laterais em Z=23,65, pedestal dentro do pad mínimo e
+apoios calibrados (nunca o CI como batente). Nominal verificado; fit físico e
+capacidade térmica não medidos. Contato e vínculo J6 são requisitos de montagem.
+Cobre segue ERC/DRC/paridade 0; não há liberação G2/G3.
+
 ## Placa única — placement e cobre (D-031/D-033, 2026-10-12)
 
 Placa: `kicad/system-candidate/` (contorno OEM medido 154×81 mm, 4 camadas).
@@ -21,7 +27,9 @@ Cobre:
 - In1.Cu: plano GND contínuo. In2.Cu: plano PVDD na faixa do U1 + região do
   retificador/bulk; resto livre para sinais. F.Cu/B.Cu: preenchimento GND.
 - U1: fileiras de PVDD/GND unidas com tira de 0,3 mm e duas vias por fileira até os
-  planos; cada pad SMD de GND tem via própria para In1.
+  planos; retornos locais usam pours e vias existentes/adicionadas conforme a
+  revisão local. Não presumir uma via própria em cada pad; ver distâncias em
+  `tests/reports/tpa-local-layout-review.json`.
 - Larguras: SPK±/T1 1,5 mm; PVDD/BUCK_SW/AUX 0,6 mm; PWM_AC/BD 0,4 mm (pad do U1);
   sinais 0,2 mm. Trilhas restantes traçadas pelo Freerouting dentro dessas restrições
   (planos e fanout já fixos); revisar no KiCad antes do pedido.

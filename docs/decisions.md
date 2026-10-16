@@ -270,7 +270,15 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   Para caber: C14/C15 passam a Nichicon UHE1J681MHD (680 µF/63 V, D12,5×40,
   0,071 Ω; CAT.8100M) → bulk PVDD 10,76 mF (≥10 mF D-021). J5 passa a JST
   B2P-VH: chicote do woofer é 2 vias VH (P102 no manual p.14), pluga sem emenda;
-  vermelho = SPK_P (+), preto = SPK_N. Desenho do bloco: a fazer com a rota (PCB-002).
+  vermelho = SPK_P (+), preto = SPK_N.
+  **Revisão de engenharia 2026-10-16, sem liberação fabril:** modelo e fit nominal em
+  `mechanical/thermal-fit.json`/`thermal-block.md`. Corrigida altura dos furos OEM
+  para 23,65 mm e transformação WRL; corpo com alívio nominal 3,3 mm/topo 30 mm,
+  pedestal 6×3 mm dentro do pad mínimo, apoios metálicos/calços independentes do CI.
+  TIM superior fino com gap calibrado e calço lateral sólido; J6 continua obrigatório.
+  Não usar o encapsulamento como batente nem supor perfil a 50 °C. Orçamento 1D
+  usa Rjc(top)=0,36, hipóteses declaradas e caminho OEM→ambiente não medido;
+  confirmar folgas/roscas/calços na montagem e perdas/térmica em BENCH-002.
 
 - D-032 — **Front-end = placas originais de preamp e limiter reaproveitadas.**
   2026-10-12, ELEC-004, por delegação do proprietário ("aproveitar o que faz sentido").

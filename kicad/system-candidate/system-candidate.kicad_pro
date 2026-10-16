@@ -243,7 +243,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "B-selected-NOT-RELEASED"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -622,7 +622,7 @@
       "include_excluded_from_bom": true,
       "name": "Default Editing",
       "sort_asc": true,
-      "sort_field": "Refer\u00eancia"
+      "sort_field": "Referência"
     },
     "bus_aliases": {},
     "connection_grid_size": 50.0,
@@ -653,6 +653,14 @@
     "meta": {
       "version": 1
     },
+    "ngspice": {
+      "fix_include_paths": true,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 4,
+      "workbook_filename": ""
+    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "reuse_designators": true,
@@ -662,15 +670,20 @@
       {
         "filename": "system-candidate.kicad_sch",
         "name": "system-candidate",
-        "uuid": "00000000-0000-0000-0000-000000000000"
+        "uuid": "2e10e179-0743-5984-a76c-4020e7e5915a"
       }
     ],
     "used_designators": "",
     "variants": []
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "2e10e179-0743-5984-a76c-4020e7e5915a",
+      "system-candidate"
+    ]
+  ],
   "text_variables": {
-    "PROJECT_STATUS": "CORE DRAFT - UNROUTED - NOT FOR FABRICATION"
+    "PROJECT_STATUS": "ROUTED ENGINEERING CANDIDATE - NOT RELEASED FOR FABRICATION"
   },
   "tuning_profiles": {
     "meta": {

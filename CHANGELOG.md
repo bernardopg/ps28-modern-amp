@@ -3,12 +3,57 @@
 Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 
 ## [Unreleased]
+### Consolidação de documentação e planejamento — 2026-10-16
+- README reestruturado com candidata roteada, renders nativos, esquema e fit
+  térmico; arquitetura/operacionalidade alinhadas ao reaproveitamento OEM D-032.
+- Backlog/roadmap/sprints e instruções de EDA atualizados sem fechar gates
+  humanos; issues espelhadas reconciliadas com as tasks locais.
+- Esquema SVG e galerias regenerados; proveniência e relatórios sincronizados.
+- Validação também em cópia limpa: PDFs locais são vinculados ao manifesto
+  de referências, sem exigir cache do proprietário ou redistribuir material.
+- Renders parciais de sessão interrompida preservados como arquivo histórico,
+  sem serem apresentados como galeria atual ou evidência de fit.
+### Fit térmico/mecânico D-031 — 2026-10-16
+- Corrigidos rasgos OEM em Z=23,65 mm e exportação WRL (transformação mundial).
+  Bloco com pedestal 6×3 mm, apoios/calços independentes do CI e alívio de 3,3 mm.
+- Fit nominal/tolerâncias verificados contra a PCB atual, incluindo D303 e
+  cabeças/plaquetas acima de L1/L2. Malha testada por raios e limites; cobre inalterado.
+- Orçamento 1D explícito: R junção→perfil 2,25…3,97 °C/W; caminho OEM→ambiente
+  não medido. Não se presume perfil a 50 °C nem se promete 150 W contínuos.
+- STL/WRL, vistas/corte, curva de cenários e galeria nativa atualizados;
+  hashes dos modelos entram na auditoria de mídia. `make thermal-fit/thermal-model`.
+- Validação física/térmica continua em BENCH-002; nenhuma liberação de fabricação.
+### Placement local TPA e conectividade fechada — 2026-10-16
+- KCAA/native KiCad: C16–C19 e desacoplamentos locais aproximados, retornos GND
+  revistos; zero vias novas em pads SMD. Todas as conexões fechadas e stubs removidos.
+- 269 footprints, 3.531 segmentos/499 vias; ERC/DRC/paridade 0, sem relaxar regras.
+  Ramo PVDD esquerdo reconectado com 1,2 mm; revisão global/térmica/G2 ainda pendente.
+- `make erc/drc` agora verifica a candidata de sistema; seleção histórica explícita
+  por `--design`. Regressões de placement/dispatch, cartucho, Fab e mídia atualizados.
+- Evidência: `docs/tpa-local-layout-review.md`; nenhuma liberação de fabricação.
+### Auditoria de produção e correção de esquema — 2026-10-15
+- KCAA: separadas INPUT_A_AC/INA_UV em TP127/R506; ERC e paridade zerados.
+  Gerador corrigido; cobre preservado, 9 conexões abertas e aviso BST_D pendentes.
+- Exportador gera rascunhos únicos com hashes das fontes e árvore suja explícita;
+  falhas de exportação não são aceitas como resultado ERC/DRC; summary coberto pelo manifesto.
+- Cinco testes de regressão; auditoria técnica/JLCPCB em
+  `docs/production-readiness-2026-10-15.md`. Nenhuma liberação de produção.
+### Revisão de layout e organização Fab — 2026-10-13
+- Organizadas 269 referências de montagem por pós-processador reproduzível;
+valores da BOM preservados, referências gráficas redundantes removidas, sem mudar cobre.
+- Confirmadas 9 aberturas; tentativas MCP em cópia isolada não encontraram caminho.
+Bootstrap C16–C19 afastado de U1 requer revisão de placement, não só roteamento.
+- Identificadas 7 divergências esquema↔PCB e ERC 2 erros/1 aviso já presentes
+nas alterações locais iniciais; arquivos do proprietário preservados.
+- BENCH-002 exige termopar isolado nos escapes de 0,25 mm na potência aprovada;
+nenhum resultado de bancada ou aprovação de fabricação.
 
 ### Saídas do TPA à mão e fechamento de conexões (D-035) — 2026-10-13
 - PWM_AC/BD: escapes 0,25 mm, barramentos e 1,5 mm até L1/L2; C8 sob o U1.
 - `scripts/close_open_connections.py` (A* com checagem DRC por ligação) e
   `scripts/rework_tpa_outputs.py`; `make fab` gera o pacote em `build/fab/<commit>/`.
-- ERC 0, DRC 0 erros, paridade 0; 9 conexões de sinal fraco para fechar no KiCad.
+- No snapshot D-035: ERC 0, DRC 0 erros, paridade 0; 9 conexões abertas.
+Revisão posterior corrige a classificação de sinal fraco: inclui laços de bootstrap.
 
 ### Placement afrouxado e nova rota (D-034) — 2026-10-13
 - Anel livre em volta do U1; lógica afastada. Rota: 3.343 trilhas, 448 vias,

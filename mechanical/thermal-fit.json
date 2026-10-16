@@ -1,0 +1,20 @@
+{
+  "revision": "D031-fit-20261016",
+  "status": "ENGINEERING_STUDY_NOT_FOR_MANUFACTURING",
+  "frame": "mm; KiCad +Y down; Z=0 PCB component surface; positive Z above PCB",
+  "body_mm": {"x": [64.0, 117.0], "y": [54.0, 67.0], "z": [3.3, 30.0]},
+  "pedestal": {"center_xy_mm": [90.375, 60.375], "size_xy_mm": [6.0, 3.0], "bottom_z_nominal_mm": 1.20, "step_from_body_bottom_mm": 2.10},
+  "clamp_holes_xy_mm": [[79.0, 60.5], [102.0, 60.5]],
+  "clamp_tap_drill_mm": 2.5,
+  "clamp_tap_depth_mm": 8.0,
+  "side_holes": {"x_mm": [70.7, 110.3], "z_mm": 23.65, "slot_width_mm": 6.0, "slot_total_height_mm": 8.4, "counterbore_diameter_mm": 0.0, "counterbore_depth_mm": 0.0, "external_load_spreader_mm": [12.0, 12.0, 1.0], "spreader_hole_mm": 3.4, "spreader_hole_from_bottom_mm": 7.0, "combined_alignment_budget_xz_mm": [1.0, 1.8]},
+  "stops": {"nominal_mm": 3.3, "selection_range_mm": [3.1, 3.5], "outer_diameter_max_mm": 6.0, "bottom_head_diameter_max_mm": 5.5, "stop_plane_tolerance_mm": 0.03, "pcb_thickness_mm": 1.6, "oem_pcb_thickness_mm": 1.0},
+  "device": {"reference": "U1", "height_range_mm": [1.0, 1.2], "assembly_height_allowance_mm": 0.10, "model_pad_top_mm": 1.15, "exposed_pad_min_xy_world_mm": [6.72, 3.85], "relative_xy_error_budget_mm": 0.25, "source": "TI SLASEA8A DDV0044D/4218830A 08-2016, package outline; X/Y rotated with U1=90 deg; CAD height is not a measurement"},
+  "interface": {"top_tim_gap_range_mm": [0.05, 0.10], "tim_conductivity_min_assumed_W_mK": 3.0, "top_tim_contact_area_mm2": 18.0, "side_effective_area_assumed_mm2": 600.0, "side_tim_layers": 2, "side_tim_each_mm": 0.05, "side_shim_nominal_mm": 0.90, "al_conductivity_assumed_W_mK": 167.0, "body_spreading_resistance_assumed_K_W": [0.2, 1.0]},
+  "thermal": {"rjc_top_K_W": 0.36, "rjc_source": "TI SLASEA8A section 7.4; use Rjc(top), not Rja=2.4 under a fixed 85 C sink", "junction_recommended_max_C": 125.0, "design_target_assumed_C": 110.0, "ambient_scenarios_C": [35, 40, 50], "loss_scenarios_W": [5, 10, 15, 20], "legacy_path_to_ambient_scenarios_K_W": [1.5, 3.0, 5.0], "legacy_path_measured": false},
+  "height_envelopes": {"generic_low_smd_max_mm": 2.0, "solder_allowance_mm": 0.10, "D303_catalog_max_mm": 2.620, "D303_source": "Littelfuse SMCJ series JC.10/29/20 Dimensions D max 2.620 mm; DO-214AB", "L1_L2_catalog_max_mm": 14.5, "L1_L2_source": "Wurth 7443631000 Rev006.000 2025-07-08 p1 height max14.5 mm", "minimum_body_clearance_mm": 0.20},
+  "assembly_requirements": ["Positive metal stops at H5/H6; package is never a hard stop", "Select equal stop/shim stacks to set the ACTUAL package-to-pedestal gap before tightening; do not infer it from maximum package height", "Use qualified thin TIM >=3 W/mK; no 1 mm grease bridge", "Select solid side shim thickness from actual lateral gap minus TWO thin TIM layers; nominal 0.90 mm is not a measured gap", "J6 bond to the OEM profile is mandatory; electrical GND is not protective earth", "Check bottom head clearance >=5 mm and local head/body interference before assembly", "No standard 7 mm washer at H5/H6; maximum bottom bearing/head diameter 5.5 mm", "Check useful OEM M3 thread depth; side M3x20 and bottom M3x10 are candidates, never blindly bottom a screw"],
+  "manufacturing_approved": false,
+  "physical_fit_validated": false,
+  "thermal_performance_validated": false
+}

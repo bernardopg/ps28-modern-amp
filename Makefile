@@ -65,3 +65,13 @@ route-system:
 .PHONY: fab
 fab:
 	python3 scripts/export_fab.py
+
+.PHONY: thermal-fit thermal-model
+thermal-fit:
+	python3 scripts/check_thermal_fit.py
+
+thermal-model:
+	python3 scripts/check_thermal_fit.py --skip-mesh
+	xvfb-run -a blender --background --factory-startup --python scripts/blender_thermal_block.py
+	python3 scripts/check_thermal_fit.py
+	python3 scripts/render_thermal_budget.py

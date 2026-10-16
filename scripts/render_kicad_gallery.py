@@ -26,11 +26,11 @@ DESIGNS = {
     "system": ROOT / "kicad/system-candidate/system-candidate.kicad_pcb",
 }
 CAMERA = {}  # per-design kicad-cli camera overrides, none needed now
-STATUS = {"system": "ESTUDO / AUTOROTEAMENTO NAO REVISADO / SEM APROVACAO PARA FABRICACAO"}
+STATUS = {"system": "ROTEADA / REVISAO LOCAL TPA / G2 E FABRICACAO NAO APROVADOS"}
 FOOTERS = {
     "selected": "NUCLEO APENAS | D-018/D-019 SEM PCB INTEGRADA",
     "oem": "NUCLEO APENAS | D-018/D-019 SEM PCB INTEGRADA",
-    "system": "CONTORNO OEM MEDIDO 154x81; 204 PECAS; AUTOROTEADA 463/470 (FREEROUTING), SEM REVISAO DE LAYOUT",
+    "system": "OEM 154x81; 269 FOOTPRINTS; CONECTIVIDADE FECHADA; REVISAO GLOBAL/FIT/TERMICA PENDENTES",
 }
 
 
@@ -46,6 +46,7 @@ def audit_models(board):
         )
         models = [text(n[1]) for n in fp if isinstance(n, list) and n[0] == "model"]
         missing = []
+        model_hashes = {}
         for model in models:
             resolved = model.replace("${KIPRJMOD}", str(board.parent))
             for version in [10, 9, 8]:
@@ -55,11 +56,14 @@ def audit_models(board):
                 )
             if not Path(resolved).is_file():
                 missing.append(model)
+            else:
+                model_hashes[model] = hashlib.sha256(Path(resolved).read_bytes()).hexdigest()
         records.append(
             {
                 "reference": ref,
                 "footprint": text(fp[1]),
                 "models": models,
+                "model_sha256": model_hashes,
                 "missing_models": missing,
                 "has_available_model": bool(models) and not missing,
             }
@@ -68,7 +72,13 @@ def audit_models(board):
 
 
 def electrical_context():
-    """Capture exists without PCB integration; never invent geometry for it."""
+    """Distinguish historical reference captures from the current integrated PCB."""
+    evidence = json.loads((ROOT / "tests/reports/tpa-local-layout-review.json").read_text())
+    board = DESIGNS["system"]
+    if evidence["board_sha256"] != hashlib.sha256(board.read_bytes()).hexdigest():
+        raise ValueError("Current PCB needs fresh native validation before labelled rendering")
+    if any(evidence["native_drc"].values()) or evidence["manufacturing_approved"]:
+        raise ValueError("Gallery context requires the checked, non-released candidate")
     capture = ROOT / "kicad/analog-protected/analog-protected.kicad_sch"
     inventory = ROOT / "kicad/analog-protected/vmid-manifest.json"
     parts = json.loads(inventory.read_text())["parts"]
@@ -81,21 +91,27 @@ def electrical_context():
         inventory,
         ROOT / "simulation/analog/vmid-protection.json",
         ROOT / "simulation/analog/input-power-order.json",
+        board,
+        board.with_suffix(".kicad_sch"),
+        ROOT / "mechanical/thermal-fit.json",
+        ROOT / "scripts/blender_thermal_block.py",
+        ROOT / "kicad/models/ps28-bodies/thermal_block.wrl",
     ]
     return {
-        "scope": "POWER_CORE_PLUS_SYSTEM_CANDIDATE_IMPORT_BANKS",
-        "analog_protection_integrated_in_rendered_pcbs": False,
+        "scope": "HISTORICAL_CORES_AND_ROUTED_SYSTEM_CANDIDATE",
+        "analog_protection_integrated_in_rendered_pcbs": True,
         "system_candidate_rendered": True,
-        "system_candidate_banks_inside_oem_outline": False,
+        "system_candidate_banks_inside_oem_outline": True,
+        "evidence_report": "tests/reports/tpa-local-layout-review.json",
         "protected_analog_capture_components": len(parts),
         "protected_analog_unassigned_footprints": sorted(
             p["ref"] for p in parts if not p.get("footprint")
         ),
         "notes": [
-            "D-018 captured separately; no analog PCB",
-            "system-candidate: D-018/D-021/D-020 footprints in unplaced banks outside OEM outline",
-            "D-019 isolation/precharge contract not implemented",
-            "No added mounts, routing or fabricated 3D substitutes",
+            "selected/oem are historical core-only studies; the 32-part protected capture remains a separate reference",
+            "system-candidate integrates power, analog protection, sequencer and D-024 isolation inside the measured OEM outline",
+            "D-032 retains the OEM preamp/limiter; local TPA placement and connectivity reviewed, not full G2",
+            "Native ERC/DRC/parity zero; no manufacturing, thermal or EMI approval inferred from a render",
         ],
         "source_sha256": {
             str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()

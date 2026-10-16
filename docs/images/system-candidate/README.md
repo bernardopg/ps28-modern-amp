@@ -1,26 +1,26 @@
-# Candidata D-020 — mídia nativa, incompleta
+# Candidata integrada — esquema e referências de mídia
 
-- [Schematic nativo SVG](system-candidate.svg): 204 componentes na mesma captura
-  (D-023/D-024: blocos D-021, D-020 e D-019 à direita); ponte de sinal só via relé;
-  front-end de áudio (RCA/crossover/volume) ainda incompleto. Nets AUX_RAW/GND
-  compartilhadas não significam roteamento; saída de sinal permanece aberta.
-- Render 3D completo da candidata, com bancos fora do contorno:
-  [galeria](../kicad-3d/README.md) (`system-*`).
-- [Núcleo com CAD Würth](core-with-vendor-cad.png) (2026-10-08, anterior a D-023): render nativo KiCad, pixels
-  preservados e faixa de status acrescentada. O enquadramento mostra o núcleo;
-  os29 footprints analógicos estão FORA do contorno/recorte, não escondidos como
-  se integrados fisicamente. Não representa layout completo nem fit OEM.
-- Modelos oficiais nominal WCAP-ATG5/HCF2013 CC BY-SA4.0, atribuição/avisos em
-  [kicad/models/vendor-wurth](../../../kicad/models/vendor-wurth/README.md).
-  Bornes/U1 continuam sem modelos; J6 é pad de trança sem corpo comprado.
-  Demais corpos genéricos não são CAD qualificados do fabricante.
+Atualização: **2026-10-16**. Uma PCB principal, `kicad/system-candidate/`, com
+269 footprints e conectividade fechada. ERC/DRC/paridade/aberturas 0 não são G1/G2/G3.
+D-032 reaproveita preamp/limiter OEM; os estudos anteriores não descrevem a candidata atual.
 
-Regenerar nativamente (arquivos atuais preservados antes de mutação):
+- [Esquema nativo SVG atual](system-candidate.svg), exportado do `.kicad_sch`
+  integrado. O cartucho herdado da captura não define o estado de liberação;
+  a fonte de estado é [development-status.md](../../development-status.md).
+- [Galeria nativa atual](../kicad-3d/README.md): isométrica, topo, base e órbita
+  de `system-*`; sem bancos fora do contorno. Modelos genéricos/ausentes constam
+  no [manifesto](../kicad-3d/manifest.json); render não valida fit físico.
+- [Núcleo com CAD Würth](core-with-vendor-cad.png): **histórico de 2026-10-08**,
+  anterior à integração. Não é a placa de produto nem imagem atual da candidata.
+- Modelos Würth CC BY-SA 4.0: [atribuição](../../../kicad/models/vendor-wurth/README.md).
+
+Regenerar em diretório isolado e conferir antes de promover:
 
 ```sh
 kicad-cli sch export svg --output build/system-svg/ kicad/system-candidate/system-candidate.kicad_sch
-kicad-cli pcb render --output build/system-native.png --width 1600 --height 1200 --perspective --rotate 325,0,25 kicad/system-candidate/system-candidate.kicad_pcb
+make render-3d
 ```
 
-Cadeia de hashes/reportes em `tests/reports/system-candidate-review.json`.
-Imagens/ferramentas/regressões não aprovam fabricação, compra ou energização.
+Hashes atuais em `tests/reports/tpa-local-layout-review.json` e
+`docs/images/kicad-3d/manifest.json`. O antigo `system-candidate-review.json`
+é evidência de snapshot histórico, não de liberação atual.
