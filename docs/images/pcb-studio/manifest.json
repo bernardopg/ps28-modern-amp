@@ -1,0 +1,21 @@
+{
+  "blender": "5.2.2 LTS",
+  "engine": "CYCLES",
+  "mesh_count": 296,
+  "samples": 32,
+  "manufacturing_approved": false,
+  "limitations": [
+    "Catalog and proxy models inherited from KiCad; no as-built validation",
+    "GLB exporter warning is recorded in build/studio/export.log"
+  ],
+  "source_sha256": {
+    "build/studio/board.glb": "677f6ba6ff769d61b8b808cfb359d02e4fd53fb6bf8ad3c732f7c7b99fb9ffa5",
+    "scripts/blender_pcb_studio.py": "52cfe0c98babd5c32dff15365f57cdb045a1760d29b24f0c5b5b03c79b3049ff",
+    "kicad/system-candidate/system-candidate.kicad_pcb": "2e180d6f245f7661eb276d67438203f1b9f0270a925ab8c68b90b3c5cdaace4c"
+  },
+  "image_sha256": {
+    "isometric.png": "093f3cc8255cc3c6ad2dcbb1af4c47d32b91a3e33e74c62483393aa495d89ad5",
+    "top.png": "ae13e1a1f061e810616fc17ff26e6ce909f599dea90a2d89979b2088d6930a35",
+    "bottom.png": "73e50465e9579a7eda4cdf7491d6c58dbb32271a8c72ea7a55786fcb164bc7d5"
+  }
+}

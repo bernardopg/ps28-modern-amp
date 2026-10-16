@@ -1,5 +1,18 @@
 # Toolchain e auditoria local
 
+## Complemento verificado — 2026-10-16
+
+KiCad 10.0.7/bibliotecas, ngspice 47 e Blender 5.2.2 LTS disponíveis; MCP Blender
+compatível, addon 1.8. Gerbonara 1.6.3 instalado via uv em `build/validation-venv`
+(Python 3.13 isolado), sem alterar o sistema. `scripts/verify_gerbers.py` verifica
+os rascunhos com parser independente. ReportLab e pypdf já disponíveis para
+desenho cotado e inspeção PDF. API IPC KiCad indisponível; KCAA operou em disco.
+Instalação/reprodução e todos os avisos em
+[revisão final](final-design-review-2026-10-16.md). FreeCAD/KiBot/novos addons não
+são necessários para as verificações executadas; não substituem bancada/DFM.
+
+## Snapshot anterior
+
 Snapshot em 2026-10-07 (relógio da máquina); reproduzir com make doctor.
 
 ## Verificado

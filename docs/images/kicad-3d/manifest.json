@@ -2,13 +2,13 @@
   "renderer": "10.0.7",
   "source_commit": "b2d01f67cdc5b77168b9b159e23abbed9689223d",
   "method": "kicad-cli pcb render; Pillow adds status bands and encodes GIFs only",
-  "generator_sha256": "2e78e02554815100472beda498ba89d51860edfac62c452a6ef29fd27c972d36",
+  "generator_sha256": "ea25d613326c5fb22febb4a3244950224a754158d1f0f125dea42568a94bab8a",
   "electrical_context": {
     "scope": "HISTORICAL_CORES_AND_ROUTED_SYSTEM_CANDIDATE",
     "analog_protection_integrated_in_rendered_pcbs": true,
     "system_candidate_rendered": true,
     "system_candidate_banks_inside_oem_outline": true,
-    "evidence_report": "tests/reports/tpa-local-layout-review.json",
+    "evidence_report": "tests/reports/final-design-review-2026-10-16.json",
     "protected_analog_capture_components": 32,
     "protected_analog_unassigned_footprints": [
       "C101",
@@ -36,8 +36,8 @@
       "kicad/analog-protected/vmid-manifest.json": "f4ab47cd848ccf1d1e14ed1c0d52f7ccb51eb6b55bfe189640ab7730778ff119",
       "simulation/analog/vmid-protection.json": "c44c0878556a9034e0764a2635e3768964bccd538d14dec7185f44749946e62a",
       "simulation/analog/input-power-order.json": "9cd67b003a855e4b8f1b8e3176daf64a800a9d8a904eaf2a46301c160d4791b7",
-      "kicad/system-candidate/system-candidate.kicad_pcb": "34cb8db01aa94263fe318f606735565567186f3d7a5112dea91a4a1b1123d0cf",
-      "kicad/system-candidate/system-candidate.kicad_sch": "49170be93a1e615d86d8b697e106b0c82ce1caa47551dddcab6c2a8c2dd32570",
+      "kicad/system-candidate/system-candidate.kicad_pcb": "2e180d6f245f7661eb276d67438203f1b9f0270a925ab8c68b90b3c5cdaace4c",
+      "kicad/system-candidate/system-candidate.kicad_sch": "6dadd2d5618995b88552eb81780005c92debb2d12ce7cf31ea694cc18414ce7d",
       "mechanical/thermal-fit.json": "6f565bf057cf8243dea57ed81229991e670c90178e32c0b3e1a3c185e8b0a466",
       "scripts/blender_thermal_block.py": "7d818fa892298e8871ae5ace9d6432310e2513e9769725884dfd1b035fef96a3",
       "kicad/models/ps28-bodies/thermal_block.wrl": "abddee6c25ea789f96a8046f0ee46653f706aafcf3995fb505185a066e959090"
@@ -1992,7 +1992,7 @@
     },
     "system": {
       "pcb": "kicad/system-candidate/system-candidate.kicad_pcb",
-      "pcb_sha256": "34cb8db01aa94263fe318f606735565567186f3d7a5112dea91a4a1b1123d0cf",
+      "pcb_sha256": "2e180d6f245f7661eb276d67438203f1b9f0270a925ab8c68b90b3c5cdaace4c",
       "footprints": 269,
       "without_available_model": [
         "H6",
@@ -5582,5 +5582,11 @@
     "system-isometric.png": "1fd4d7ac9fad70c437ab9aa42ad8c83c955042fb603ac5947bb596dc6ecae8b4",
     "system-orbit.gif": "faeffcf25ba1854a125488c606f5c21601459e1ecd38925c812344882ee0feb6",
     "system-top.png": "4b02f4226ed3923271b07a3dfd201aaa49524df6bb66241e4f3f25ceac3f52ed"
+  },
+  "metadata_refresh": {
+    "date": "2026-10-16",
+    "reason": "Only hidden MPN/Manufacturer fields changed; image bytes retained after full PCB AST equivalence check",
+    "previous_pcb_sha256": "34cb8db01aa94263fe318f606735565567186f3d7a5112dea91a4a1b1123d0cf",
+    "evidence": "tests/reports/final-design-review-2026-10-16.json"
   }
 }

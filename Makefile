@@ -39,6 +39,12 @@ simulate:
 render-3d:
 	python3 scripts/render_kicad_gallery.py --frames 16
 
+.PHONY: render-studio
+render-studio:
+	mkdir -p build/studio
+	kicad-cli pcb export glb --include-pads --include-silkscreen --include-soldermask --no-dnp --force -o build/studio/board.glb kicad/system-candidate/system-candidate.kicad_pcb > build/studio/export.log 2>&1
+	xvfb-run -a blender --background --factory-startup --python scripts/blender_pcb_studio.py > build/studio/render.log 2>&1
+
 eda-smoke:
 	python3 scripts/eda_smoke.py
 

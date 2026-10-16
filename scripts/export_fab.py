@@ -36,7 +36,8 @@ def main():
                             cwd=ROOT, check=True).stdout.strip()
     dirty = bool(subprocess.run(["git", "status", "--porcelain"], capture_output=True,
                                text=True, cwd=ROOT, check=True).stdout.strip())
-    sources = [PCB, SCH, PRJ / "system-candidate.kicad_pro", Path(__file__)]
+    sources = [PCB, SCH, PRJ / "system-candidate.kicad_pro", Path(__file__),
+               Path(__file__).with_name("export_mechanical_drawing.py")]
     source_hashes = {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
                      for p in sources}
     drafts = ROOT / "build/fab/drafts"
@@ -59,7 +60,22 @@ def main():
     run("sch", "export", "pdf", "-o", str(out / "schematic.pdf"), str(SCH))
     # 1:1 template: print at 100 %, check against the original board/brackets (FAB-001).
     run("pcb", "export", "pdf", "--layers", "Edge.Cuts,Dwgs.User,F.CrtYd,F.Fab", "--mode-single",
-        "--include-border-title", "-o", str(out / "template-1to1.pdf"), str(PCB))
+        "--scale", "1", "-o", str(out / "template-1to1.pdf"), str(PCB))
+    for side, layers in (("front", "F.Fab,F.CrtYd,F.SilkS,Edge.Cuts"),
+                         ("back", "B.Fab,B.CrtYd,B.SilkS,Edge.Cuts")):
+        run("pcb", "export", "pdf", "--layers", layers, "--mode-single",
+            "--scale", "1", "--sketch-pads-on-fab-layers", "--crossout-DNP-footprints-on-fab-layers",
+            *(["--mirror"] if side == "back" else []),
+            "-o", str(out / f"assembly-{side}.pdf"), str(PCB))
+    run("pcb", "export", "pdf", "--layers", "F.Cu,In1.Cu,In2.Cu,B.Cu",
+        "--common-layers", "Edge.Cuts", "--mode-multipage", "--scale", "1",
+        "-o", str(out / "copper-layers.pdf"), str(PCB))
+    run("pcb", "export", "dxf", "--layers", "Edge.Cuts,Dwgs.User", "--mode-single", "--output-units", "mm",
+        "-o", str(out / "mechanical.dxf"), str(PCB))
+    from export_mechanical_drawing import export, stamp_draft
+    export(PCB, out / "mechanical-dimensioned-1to1.pdf")
+    for name in ("template-1to1.pdf", "assembly-front.pdf", "assembly-back.pdf", "copper-layers.pdf"):
+        stamp_draft(out / name, source_hashes[str(PCB.relative_to(ROOT))])
     run("sch", "erc", "--format", "json", "--severity-all", "-o", str(out / "erc.json"), str(SCH))
     run("pcb", "drc", "--format", "json", "--schematic-parity", "--refill-zones", "--severity-all",
         "-o", str(out / "drc.json"), str(PCB))

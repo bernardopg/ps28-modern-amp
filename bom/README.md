@@ -1,5 +1,16 @@
 # BOM
 
+## Inventário atual — 2026-10-16
+
+Fonte atual: `system-candidate-inventory.csv`, extraído do esquema único por
+`python3 scripts/audit_final_design.py`. Contém 263 referências, DNP e itens sem
+compra separados; 235 posições de compra, 190 com fabricante ausente ou MPN
+não normalizado. Não é BOM de compra aprovada nem CPL qualificado.
+Correções de MPN, fontes e pendências em
+[`docs/final-design-review-2026-10-16.md`](../docs/final-design-review-2026-10-16.md).
+
+## Histórico do núcleo e seleção inicial
+
 Seleção atual do core: `kicad/core-selected/selected-bom.csv` e `core-manifest.json`.
 MPNs, fontes e footprints incluídos; **seleção para validação, não compra/liberação**.
 J6 é feature GND da PCB, não item de compra; hardware em mechanical/.

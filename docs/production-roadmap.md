@@ -1,5 +1,13 @@
 # Caminho até produção (JLCPCB)
 
+## Complemento de fechamento — 2026-10-16
+
+[Revisão final](final-design-review-2026-10-16.md): conectividade confirmada,
+seis MPNs corrigidos, desenhos de montagem/cobre e gabarito cotado adicionados,
+Gerbonara instalado e arquivos fab conferidos com parser independente. Faltam
+normalizar/qualificar 190 registros de compra, revisar CPL e acessórios, fechar
+revisão global de potência/EMI e gates G1/G2/G3. Render melhorado não fecha esses itens.
+
 ## Atualização — 2026-10-16
 
 [Placement local TPA e conectividade concluídos](tpa-local-layout-review.md):

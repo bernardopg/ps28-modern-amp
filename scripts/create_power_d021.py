@@ -157,7 +157,7 @@ def parts():
          "", {"1": "BUCK_BST", "2": "BUCK_SW"}),
         ("L301", "Device:L", "68u", "MSS1246T-683MLB (TI Table 7-1); Isat above 1.5 A limit", "",
          {"1": "BUCK_SW", "2": "AUX_RAW"}),
-        ("R310", "Device:R", "100k 1%", "RG1608P-1053-B-T5 (TI Table 7-1); FSW 300 kHz", "",
+        ("R310", "Device:R", "100k 1%", "RT0603BRD07100KL", "",
          {"1": "BUCK_RON", "2": "GND"}),
         ("R311", "Device:R", "453k 1%",
          "TBD: TI Table 7-1 lists RT0603BRD07448KL (448k) against value 453k; resolve before BOM", "",

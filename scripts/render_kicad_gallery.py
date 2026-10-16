@@ -73,7 +73,9 @@ def audit_models(board):
 
 def electrical_context():
     """Distinguish historical reference captures from the current integrated PCB."""
-    evidence = json.loads((ROOT / "tests/reports/tpa-local-layout-review.json").read_text())
+    status = json.loads((ROOT / "tests/reports/documentation-media-refresh.json").read_text())
+    evidence_path = status["current_media_evidence"]
+    evidence = json.loads((ROOT / evidence_path).read_text())
     board = DESIGNS["system"]
     if evidence["board_sha256"] != hashlib.sha256(board.read_bytes()).hexdigest():
         raise ValueError("Current PCB needs fresh native validation before labelled rendering")
@@ -102,7 +104,7 @@ def electrical_context():
         "analog_protection_integrated_in_rendered_pcbs": True,
         "system_candidate_rendered": True,
         "system_candidate_banks_inside_oem_outline": True,
-        "evidence_report": "tests/reports/tpa-local-layout-review.json",
+        "evidence_report": evidence_path,
         "protected_analog_capture_components": len(parts),
         "protected_analog_unassigned_footprints": sorted(
             p["ref"] for p in parts if not p.get("footprint")

@@ -93,9 +93,9 @@ def analog_changes(parts):
     out = [p for p in parts if p["ref"] not in lr4]
     for p in out:
         if p["ref"] == "R101":
-            p.update(value="1k", mpn="CRCW06031K00FKEA")
+            p.update(value="1k", mpn="CRCW08051K00FKEA")
         elif p["ref"] == "R102":
-            p.update(value="100k", mpn="CRCW0603100KFKEA")
+            p.update(value="100k", mpn="CRCW0805100KFKEA")
         elif p["ref"] == "U2":
             p["nets"].update({"2": "U2_FB", "5": "VMID", "6": "U2B_PARK", "7": "U2B_PARK"})
         elif p["ref"] == "U3":

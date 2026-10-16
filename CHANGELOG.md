@@ -3,6 +3,16 @@
 Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 
 ## [Unreleased]
+### Render Blender, BOM e desenhos técnicos — 2026-10-16
+- Estúdio Cycles reproduzível com três vistas da geometria KiCad real e cena editável.
+- Corrigidos seis MPNs divergentes do valor/package: C14/C15, J5, R101/R102 e R310;
+  esquema/PCB e geradores sincronizados, sem modificar o cobre ou placement.
+- Rascunho fab com montagem frente/verso, cobre multicamada, DXF mm e gabarito
+  cotado 1:1, coordenadas de fixação e barra de aferição.
+- Inventário completo e parser Gerbonara isolado: quatro camadas e arquivos
+  PTH/NPTH conferidos; pendências de BOM e avisos preservados no relatório.
+- Desenvolvimento ainda não liberado: 190 posições com metadados de compra
+  incompletos/não normalizados, revisão global e gates físicos/fabris pendentes.
 ### Publicação em main e cobertura de simulação — 2026-10-16
 - Política explícita do proprietário: trabalhar e publicar em main, sem branches
   de trabalho; snapshots e validação permanecem obrigatórios, sem force-push.

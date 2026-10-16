@@ -34065,7 +34065,7 @@
 				)
 			)
 		)
-		(property "MPN" "UHE1J152MHD"
+		(property "MPN" "UHE1J681MHD"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -39740,7 +39740,7 @@
 				)
 			)
 		)
-		(property "MPN" "691137710002"
+		(property "MPN" "B2P-VH(LF)(SN)"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -39752,7 +39752,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Wurth Elektronik"
+		(property "Manufacturer" "JST"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -40327,7 +40327,7 @@
 				)
 			)
 		)
-		(property "MPN" "UHE1J152MHD"
+		(property "MPN" "UHE1J681MHD"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -59952,7 +59952,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "RG1608P-1053-B-T5 (TI Table 7-1); FSW 300 kHz"
+		(property "MPN" "RT0603BRD07100KL"
 			(at 0 0 270)
 			(layer "B.SilkS")
 			(hide yes)
@@ -59965,6 +59965,7 @@
 				(justify mirror)
 			)
 		)
+		(property "Manufacturer" "YAGEO" (at 0 0 270) (layer "B.SilkS") (hide yes) (uuid "43061983-14f5-4086-8014-b5ca24432318") (effects (font (size 1.27 1.27) (thickness 0.15)) (justify mirror)))
 		(property "SelectionStatus" "STUDY; passives/interfaces not selected"
 			(at 0 0 270)
 			(layer "B.SilkS")
@@ -67162,7 +67163,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "CRCW0603100KFKEA"
+		(property "MPN" "CRCW0805100KFKEA"
 			(at 0 0 180)
 			(layer "B.SilkS")
 			(hide yes)
@@ -67175,6 +67176,7 @@
 				(justify mirror)
 			)
 		)
+		(property "Manufacturer" "Vishay" (at 0 0 180) (layer "B.SilkS") (hide yes) (uuid "2680cdb6-5605-413b-bdc0-23e63be6f58b") (effects (font (size 1.27 1.27) (thickness 0.15)) (justify mirror)))
 		(property "SelectionStatus" "CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"
 			(at 0 0 180)
 			(layer "B.SilkS")
@@ -71752,7 +71754,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "CRCW06031K00FKEA"
+		(property "MPN" "CRCW08051K00FKEA"
 			(at 0 0 180)
 			(layer "B.SilkS")
 			(hide yes)
@@ -71765,6 +71767,7 @@
 				(justify mirror)
 			)
 		)
+		(property "Manufacturer" "Vishay" (at 0 0 180) (layer "B.SilkS") (hide yes) (uuid "d4ffc44a-a0c2-4269-8339-86e2d44f6141") (effects (font (size 1.27 1.27) (thickness 0.15)) (justify mirror)))
 		(property "SelectionStatus" "CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED"
 			(at 0 0 180)
 			(layer "B.SilkS")

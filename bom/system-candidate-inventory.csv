@@ -1,0 +1,264 @@
+Reference,Value,Footprint,Manufacturer,MPN,DNP,Purchase,LCSC,Pending
+C1,470uF 35V,PS28:WE_860020575014,Wurth Elektronik,860020575014,False,True,,
+C2,100nF 50V X7R,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,False,True,,
+C3,10uF 16V X5R,Capacitor_SMD:C_0805_2012Metric,Taiyo Yuden,EMK212BJ106KG-T,False,True,,
+C4,100nF 50V X7R,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,False,True,,
+C5,100nF 50V X7R,Capacitor_SMD:C_0603_1608Metric,KEMET,C0603C104K5RACTU,False,True,,
+C6,1uF 16V X7R,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71C105KA12D,False,True,,
+C7,1uF 16V X7R,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71C105KA12D,False,True,,
+C8,47nF 25V X7R,Capacitor_SMD:C_0402_1005Metric,Murata,GRM155R71E473KA88D,False,True,,
+C9,1uF 16V X7R,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71C105KA12D,False,True,,
+C10,1uF 100V X7R,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR72A105KA01L,False,True,,
+C11,1uF 100V X7R,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR72A105KA01L,False,True,,
+C12,1uF 100V X7R,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR72A105KA01L,False,True,,
+C13,1uF 100V X7R,Capacitor_SMD:C_1206_3216Metric,Murata,GRM31CR72A105KA01L,False,True,,
+C14,680uF 63V,Capacitor_THT:CP_Radial_D12.5mm_P5.00mm,Nichicon,UHE1J681MHD,False,True,,
+C15,680uF 63V,Capacitor_THT:CP_Radial_D12.5mm_P5.00mm,Nichicon,UHE1J681MHD,False,True,,
+C16,33nF 25V X7R,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71E333KA01D,False,True,,
+C17,33nF 25V X7R,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71E333KA01D,False,True,,
+C18,33nF 25V X7R,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71E333KA01D,False,True,,
+C19,33nF 25V X7R,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71E333KA01D,False,True,,
+C20,10uF 16V X5R,Capacitor_SMD:C_0805_2012Metric,Taiyo Yuden,EMK212BJ106KG-T,False,True,,
+C21,10uF 16V X5R,Capacitor_SMD:C_0805_2012Metric,Taiyo Yuden,EMK212BJ106KG-T,False,True,,
+C22,470nF 100V PP 5%,Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2,WIMA,MKP2D034701M00JSSD,False,True,,
+C23,470nF 100V PP 5%,Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2,WIMA,MKP2D034701M00JSSD,False,True,,
+C24,1nF 100V C0G,Capacitor_SMD:C_1206_3216Metric,KYOCERA AVX,12061A102JAT2A,False,True,,
+C25,10nF 100V X7R,Capacitor_SMD:C_0603_1608Metric,KYOCERA AVX,06031C103KAT2A,False,True,,
+C26,470nF 100V PP 5%,Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2,WIMA,MKP2D034701M00JSSD,False,True,,
+C27,470nF 100V PP 5%,Capacitor_THT:C_Rect_L7.2mm_W8.5mm_P5.00mm_FKP2_FKP2_MKS2_MKP2,WIMA,MKP2D034701M00JSSD,False,True,,
+C28,1nF 100V C0G,Capacitor_SMD:C_1206_3216Metric,KYOCERA AVX,12061A102JAT2A,False,True,,
+C29,10nF 100V X7R,Capacitor_SMD:C_0603_1608Metric,KYOCERA AVX,06031C103KAT2A,False,True,,
+C107,100n,Capacitor_SMD:C_0805_2012Metric,,TBD,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C108,100n,Capacitor_SMD:C_0805_2012Metric,,TBD,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C109,2.2u 63V film,Capacitor_THT:C_Rect_L7.2mm_W5.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2,,"Film 2.2 uF >=63 V, P5 mm (WIMA MKS2 class); MPN at BOM",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C201,470u,PS28:WE_860020575014,,860020575014,False,True,,fabricante ausente
+C202,470u,PS28:WE_860020575014,,860020575014,False,True,,fabricante ausente
+C203,1u,Capacitor_THT:C_Rect_L7.2mm_W11.0mm_P5.00mm_FKS2_FKP2_MKS2_MKP2,,MKP2C041001N00JSSD,False,True,,fabricante ausente
+C301,4700u 63V snap-in,Capacitor_THT:CP_Radial_D30.0mm_P10.00mm_SnapIn,,"Rubycon 63USC4700MEFCSN30X30 (LCSC C1498587): 4700 uF/63 V, 3.49 A rms @120 Hz, D30xL30; with C14/C15 3000 uF >= OEM 2x6800 uF/50 V margin on voltage (D-030)",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C302,4700u 63V snap-in,Capacitor_THT:CP_Radial_D30.0mm_P10.00mm_SnapIn,,"Rubycon 63USC4700MEFCSN30X30 (LCSC C1498587): 4700 uF/63 V, 3.49 A rms @120 Hz, D30xL30; with C14/C15 3000 uF >= OEM 2x6800 uF/50 V margin on voltage (D-030)",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C310,2.2u 100V X7R,Capacitor_SMD:C_1210_3225Metric,,CGA6N3X7R2A225K230AB (TI Table 7-1),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C311,2.2u 100V X7R,Capacitor_SMD:C_1210_3225Metric,,CGA6N3X7R2A225K230AB (TI Table 7-1),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C312,2.2n 50V X7R,Capacitor_SMD:C_0402_1005Metric,,GCM155R71H222KA37D (TI Table 7-1); 1.5-2.5 nF abs range,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C313,3.3n,Capacitor_SMD:C_0603_1608Metric,,CGA3E2X7R2A332K080AA (TI Table 7-1); CA,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C314,56p,Capacitor_SMD:C_0603_1608Metric,,C0603C560J5GACTU (TI Table 7-1); CB,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C315,22u 25V X7R,Capacitor_SMD:C_1210_3225Metric,,TMK325B7226KMHT (TI Table 7-1),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C316,22u 25V X7R,Capacitor_SMD:C_1210_3225Metric,,TMK325B7226KMHT (TI Table 7-1),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C320,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=25 V (SBVS187G p.4 VDD bypass),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C401,1u 25V,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=25 V; CIN >=1 uF (SLVS522S Table 4-1),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C402,10n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R; CBYPASS 10 nF (SLVS522S),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C403,2.2u 10V,Capacitor_SMD:C_0603_1608Metric,,"TBD: X7R, >=1 uF effective, ESR <=1 ohm new die",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C404,180n,Capacitor_SMD:C_0603_1608Metric,,TBD: C0G/X7R low leakage; CT 180 nF => 0.62-1.44 s,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C405,1u,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R; release tau ~110 ms,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C406,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=10 V; U402,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C407,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=10 V; U403,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C408,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=10 V; U404,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C409,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=10 V; U405,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C410,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=10 V; U406,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C411,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=10 V; U407,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C412,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=10 V; U408,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C413,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=10 V; U409,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C414,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=10 V; U410,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C415,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=10 V; U411,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C416,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=25 V; U412 VDD,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C417,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=25 V; U413 VDD,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C418,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=10 V; U414,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C419,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=10 V; U415,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C420,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=10 V; U416,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C421,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=10 V; U417,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C422,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=10 V; U418,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C423,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=10 V; U419,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C503,4.7n C0G,Capacitor_SMD:C_0603_1608Metric,,TBD: C0G/NP0 >=50 V,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C504,4.7n C0G,Capacitor_SMD:C_0603_1608Metric,,TBD: C0G/NP0 >=50 V,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C505,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=25 V; U503 VDD (SCDS420E Table 4-1),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C506,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=25 V; U501 VDD,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C507,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=25 V; U502 VDD,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C508,100n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=25 V; U504 VDD,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C509,330n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=16 V; UV tap filter,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C510,680n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=16 V; OV tap filter,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C511,330n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=16 V; UV tap filter,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C512,680n,Capacitor_SMD:C_0603_1608Metric,,TBD: X7R >=16 V; OV tap filter,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C601,10u 25V,Capacitor_SMD:C_1206_3216Metric,,X7R 1206 >=25 V; MPN at BOM,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C602,100n,Capacitor_SMD:C_0603_1608Metric,,X7R 0603 50 V,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C603,120u 63V,Capacitor_THT:CP_Radial_D8.0mm_P3.50mm,,Nichicon UHE1J121MPD 120 uF/63 V 8x20 (CAT.8100M),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C604,10u 25V,Capacitor_SMD:C_1206_3216Metric,,X7R 1206 >=25 V; MPN at BOM,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+C605,100n,Capacitor_SMD:C_0603_1608Metric,,X7R 0603 50 V,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+D201,1N4007,Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal,,1N4007-E3/54,False,True,,fabricante ausente
+D301,P600J,Diode_THT:D_P600_R-6_P12.70mm_Horizontal,,"P600J (Diodes Inc./Vishay), R-6 axial: 600 V, 6 A, IFSM 400 A; > OEM KBL405 4 A/200 A (D-030)",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+D302,P600J,Diode_THT:D_P600_R-6_P12.70mm_Horizontal,,"P600J (Diodes Inc./Vishay), R-6 axial: 600 V, 6 A, IFSM 400 A; > OEM KBL405 4 A/200 A (D-030)",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+D303,SMCJ51A,Diode_SMD:D_SMC,,"Littelfuse SMCJ51A: VWM 51.0 V, Vc 82.4 V @IPP 18.2 A, PPP 1500 W, 10/1000 us. Energy absorber for fast transient; NOT primary OVP (D-026). Sustained OVP = TPS3700 window 50.97-52.24 V",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+D501,1N4148W,Diode_SMD:D_SOD-123,,1N4148W-7-F (Diodes DS30086),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+D502,BZT52C15,Diode_SMD:D_SOD-123,,BZT52C15-7-F (Diodes DS18004): 13.8-15.6 V; faster release,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+D503,BAT54,Package_TO_SOT_SMD:SOT-23,,BAT54-7-F (Diodes DS11005 Rev.34),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+D504,BAT54,Package_TO_SOT_SMD:SOT-23,,BAT54-7-F (Diodes DS11005 Rev.34),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+D601,BZT52C16,Diode_SMD:D_SOD-123,,Diodes BZT52C16 (DS18004): 15.3-17.1 V @5 mA,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+D602,S1M,Diode_SMD:D_SMA,,S1M 1000 V 1 A SMA (Vishay/onsemi); light load,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+D603,S1M,Diode_SMD:D_SMA,,S1M 1000 V 1 A SMA (Vishay/onsemi); light load,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+D604,BZT52C16,Diode_SMD:D_SOD-123,,Diodes BZT52C16 (DS18004),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+D701,PVDD,LED_SMD:LED_0805_2012Metric,,Green 0805 LED (e.g. Lite-On LTST-C171GKT),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+D702,RAILS_OK,LED_SMD:LED_0805_2012Metric,,Green 0805 LED (e.g. Lite-On LTST-C171GKT),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+D703,RUN,LED_SMD:LED_0805_2012Metric,,Green 0805 LED (e.g. Lite-On LTST-C171GKT),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+D704,AUDIO,LED_SMD:LED_0805_2012Metric,,Green 0805 LED (e.g. Lite-On LTST-C171GKT),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+D705,FAULT,LED_SMD:LED_0805_2012Metric,,Green 0805 LED (e.g. Lite-On LTST-C171GKT),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+D706,CLIP_OTW,LED_SMD:LED_0805_2012Metric,,Green 0805 LED (e.g. Lite-On LTST-C171GKT),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+D707,S1M,Diode_SMD:D_SMA,,S1M flyback across the fan,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+F301,T6.3A slow,Fuse:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open,,"Littelfuse 02186.3MXP, 218 series T 6.3 A 5x20 mm, in Schurter 0031.8201 holder; confirm at first power-up with variac/bulb limiter (D-030)",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+J1,691137710002 2P 5.00mm,PS28:WE_WR_TBL_691137710002,Wurth Elektronik,691137710002,False,True,,
+J2,Auxiliary 12V,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,Sullins,PBC02SAAN,False,True,,
+J3,Differential audio,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,Sullins,PBC03SAAN,True,False,,
+J4,Control 2x4: 3V3 RESET FAULT CLIP GND GND NC NC,Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical,Sullins,PEC04DAAN,True,False,,
+J5,B2P-VH(LF)(SN),Connector_JST:JST_VH_B2P-VH_1x02_P3.96mm_Vertical,JST,B2P-VH(LF)(SN),False,True,,
+J6,GND braid solder bond - NO mounting hole,PS28:Ground_Bond_SMD_6mm,PCB assembly feature,PCB solder land + grounded braid assembly; NOT purchase PN,False,False,,
+J7,B7B-XH-A(LF)(SN),Connector_JST:JST_XH_B7B-XH-A_1x07_P2.50mm_Vertical,,"JST B7B-XH-A(LF)(SN), 2.5 mm: mates OEM 7-way preamp harness (P101, manual p.14/p.24)",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+J8,FAN 12V,Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical,,JST B2B-XH-A(LF)(SN); fan <= 200 mA,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+J301,T1_SECONDARY,Connector_JST:JST_VH_B3P-VH_1x03_P3.96mm_Vertical,,JST B3P-VH(LF)(SN) header 3 pos 3.96 mm; mates OEM T1 harness (PS28 service manual p.14: 175-1d03v01-e 3 PIN 3.96 mm JST-VH) (D-030),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+J401,START_BUTTON,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,,TBD: panel momentary switch harness; location/mechanics not decided,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+JP701,FAN MODE,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,,"2.54 mm header + jumper: 1-2 ON, 2-3 OTW",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+K501,G6K-2F DC12,Relay_SMD:Relay_DPDT_Omron_G6K-2F,,"G6K-2F DC12 (Omron K106-E1-11 p.2-3: 1315 ohm, 3 ms operate/release max, Au alloy)",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+L1,10uH 16A 22A_Isat_typ,PS28:WE_HCF2013_7443631000,Wurth Elektronik,7443631000,False,True,,
+L2,10uH 16A 22A_Isat_typ,PS28:WE_HCF2013_7443631000,Wurth Elektronik,7443631000,False,True,,
+L301,68u,Inductor_SMD:L_Coilcraft_MSS1246T-XXX,,MSS1246T-683MLB (TI Table 7-1); Isat above 1.5 A limit,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+Q501,MMBT3904,Package_TO_SOT_SMD:SOT-23,,"MMBT3904-7-F (Diodes DS30036): VCEsat <=0.2 V at 10 mA/1 mA, VCEO 40 V",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+Q502,MMBT3904,Package_TO_SOT_SMD:SOT-23,,MMBT3904-7-F (Diodes DS30036); unmute pull-down,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+Q601,BCP56,Package_TO_SOT_SMD:SOT-223-3_TabPin2,,"onsemi BCP56T1G: 80 V, 1 A, SOT-223",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+Q602,BCP53,Package_TO_SOT_SMD:SOT-223-3_TabPin2,,"onsemi BCP53T1G: -80 V, -1 A, SOT-223",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+Q603,BSS138,Package_TO_SOT_SMD:SOT-23,,"onsemi BSS138: gate on CLIP_OTW, no DC load on the TPA pin",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+Q701,BSS138,Package_TO_SOT_SMD:SOT-23,,onsemi BSS138,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+Q702,BSS138,Package_TO_SOT_SMD:SOT-23,,onsemi BSS138,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+Q703,BSS138,Package_TO_SOT_SMD:SOT-23,,onsemi BSS138,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+Q704,BSS138,Package_TO_SOT_SMD:SOT-23,,onsemi BSS138,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+Q705,BSS138,Package_TO_SOT_SMD:SOT-23,,onsemi BSS138,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+Q706,BSS138,Package_TO_SOT_SMD:SOT-23,,onsemi BSS138,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+Q707,AO3400A,Package_TO_SOT_SMD:SOT-23,,AOS AO3400A,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R1,3.3R 0.25W 1%,Resistor_SMD:R_1206_3216Metric,Vishay,CRCW12063R30FKEA,False,True,,
+R2,3.3R 0.25W 1%,Resistor_SMD:R_1206_3216Metric,Vishay,CRCW12063R30FKEA,False,True,,
+R3,22k 1%,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW060322K0FKEA,False,True,,
+R4,30k 1%,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW060330K0FKEA,False,True,,
+R5,3.3R 0.25W 1%,Resistor_SMD:R_1206_3216Metric,Vishay,CRCW12063R30FKEA,False,True,,
+R6,3.3R 0.25W 1%,Resistor_SMD:R_1206_3216Metric,Vishay,CRCW12063R30FKEA,False,True,,
+R7,10k 1%,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW060310K0FKEA,True,False,,
+R8,10k 1%,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW060310K0FKEA,True,False,,
+R9,4.7k 1%,Resistor_SMD:R_0603_1608Metric,Vishay,CRCW06034K70FKEA,False,True,,
+R101,1k,Resistor_SMD:R_0805_2012Metric,Vishay,CRCW08051K00FKEA,False,True,,
+R102,100k,Resistor_SMD:R_0805_2012Metric,Vishay,CRCW0805100KFKEA,False,True,,
+R107,10k,Resistor_SMD:R_0805_2012Metric,,TBD,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R108,10k,Resistor_SMD:R_0805_2012Metric,,TBD,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R110,8.87k,Resistor_SMD:R_0603_1608Metric,,0603 1 % thin film; U2A gain 1+8.87k/10k = 1.887,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R111,10k,Resistor_SMD:R_0603_1608Metric,,0603 1 % thin film,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R201,15,Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P5.08mm_Vertical,,AC03000001509JAC00,False,True,,fabricante ausente
+R202,1k,PS28_ANALOG:TNPW1206_IPC_Reflow,,TNPW12061K00BEEA,False,True,,fabricante ausente
+R203,2.2k,PS28_ANALOG:TNPW1206_IPC_Reflow,,TNPW12062K20BEEA,False,True,,fabricante ausente
+R204,75,Resistor_SMD:R_1206_3216Metric,,CRCW120675R0FKEA,False,True,,fabricante ausente
+R205,75,Resistor_SMD:R_1206_3216Metric,,CRCW120675R0FKEA,False,True,,fabricante ausente
+R206,75,Resistor_SMD:R_1206_3216Metric,,CRCW120675R0FKEA,False,True,,fabricante ausente
+R207,75,Resistor_SMD:R_1206_3216Metric,,CRCW120675R0FKEA,False,True,,fabricante ausente
+R301,4.7k 2W,Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal,,"TBD: >=1 W continuous at 50 V (0.53 W), >=100 V",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R310,100k 1%,Resistor_SMD:R_0603_1608Metric,YAGEO,RT0603BRD07100KL,False,True,,
+R311,453k 1%,Resistor_SMD:R_0603_1608Metric,,TBD: TI Table 7-1 lists RT0603BRD07448KL (448k) against value 453k; resolve before BOM,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R312,49.9k 1%,Resistor_SMD:R_0603_1608Metric,,RG1608P-4992-B-T5 (TI Table 7-1),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R313,453k 1%,Resistor_SMD:R_0603_1608Metric,,RT0603BRD07453KL (TI Table 7-1); RA type-3 ripple,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R320,931k 0.1%,Resistor_SMD:R_1206_3216Metric,,"TBD: 0.1 %, <=25 ppm/K, >=100 V working (sees ~50 V)",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R321,6.04k 0.1%,Resistor_SMD:R_0603_1608Metric,,"TBD: 0.1 %, <=25 ppm/K",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R322,7.32k 0.1%,Resistor_SMD:R_0603_1608Metric,,"TBD: 0.1 %, <=25 ppm/K",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R323,100k,Resistor_SMD:R_0603_1608Metric,,TBD: pull-up to SEQ_3V3 (seq-d020 LP2985); <=14 V LM5164 PGOOD abs max,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R401,100k,Resistor_SMD:R_0603_1608Metric,,TBD: 1 %; CT to VDD 40-200k => 180/300/420 ms,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R402,100k,Resistor_SMD:R_0603_1608Metric,,TBD: RESET pull-up 10k-1M (SBVS050N Table 5-1),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R403,100k,Resistor_SMD:R_0603_1608Metric,,TBD: 1 %; CT to VDD,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R404,100k,Resistor_SMD:R_0603_1608Metric,,TBD: RESET pull-up,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R405,100k,Resistor_SMD:R_0603_1608Metric,,TBD: RESET pull-up,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R406,100k,Resistor_SMD:R_0603_1608Metric,,TBD: button pull-up,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R407,10k,Resistor_SMD:R_0603_1608Metric,,TBD: debounce series; press tau 10 ms,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R408,1k,Resistor_SMD:R_0603_1608Metric,,TBD: series to TPA RESET; with R9 4.7k gives >=2.6 V (VIH 1.9 V),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R420,1M,Resistor_SMD:R_0603_1608Metric,,"TBD: 0.1 %, <=25 ppm/K",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R421,46.4k,Resistor_SMD:R_0603_1608Metric,,"TBD: 0.1 %, <=25 ppm/K",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R422,1M,Resistor_SMD:R_0603_1608Metric,,"TBD: 0.1 %, <=25 ppm/K",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R423,30.1k,Resistor_SMD:R_0603_1608Metric,,"TBD: 0.1 %, <=25 ppm/K",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R424,909k,Resistor_SMD:R_0603_1608Metric,,"TBD: 0.1 %, <=25 ppm/K",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R425,101k,Resistor_SMD:R_0603_1608Metric,,"TBD: 0.1 %, <=25 ppm/K",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R426,1M,Resistor_SMD:R_0603_1608Metric,,"TBD: 0.1 %, <=25 ppm/K",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R427,64.9k,Resistor_SMD:R_0603_1608Metric,,"TBD: 0.1 %, <=25 ppm/K",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R428,100k,Resistor_SMD:R_0603_1608Metric,,TBD: RESET pull-up,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R429,100k,Resistor_SMD:R_0603_1608Metric,,TBD: DC_OK pull-up (open-drain from iso-d019 U501/U502),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R430,100k,Resistor_SMD:R_0603_1608Metric,,TBD: RESET pull-up,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R501,2.2k,Resistor_SMD:R_0603_1608Metric,,TBD: 1 %; IB >=1.0 mA from 3.3 V (VBEsat 0.85 V max),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R502,100k,Resistor_SMD:R_0603_1608Metric,,"TBD: base pull-down, relay off without logic",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R503,1k,Resistor_SMD:R_0603_1608Metric,,"TBD: 1 %, >=0.1 W; tau 10 ms with 10 uF",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R504,1k,Resistor_SMD:R_0603_1608Metric,,"TBD: 1 %, >=0.1 W; tau 10 ms with 10 uF",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R505,787k,Resistor_SMD:R_0603_1608Metric,,"TBD: 0.1 %, <=25 ppm/K; pin DC window and return",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R506,115k,Resistor_SMD:R_0603_1608Metric,,"TBD: 0.1 %, <=25 ppm/K; pin DC window and return",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R507,78.7k,Resistor_SMD:R_0603_1608Metric,,"TBD: 0.1 %, <=25 ppm/K; pin DC window and return",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R508,787k,Resistor_SMD:R_0603_1608Metric,,"TBD: 0.1 %, <=25 ppm/K; pin DC window and return",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R509,115k,Resistor_SMD:R_0603_1608Metric,,"TBD: 0.1 %, <=25 ppm/K; pin DC window and return",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R510,78.7k,Resistor_SMD:R_0603_1608Metric,,"TBD: 0.1 %, <=25 ppm/K; pin DC window and return",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R511,100k,Resistor_SMD:R_0603_1608Metric,,TBD: EN pull-up to ANALOG_12V (default muted),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R512,10k,Resistor_SMD:R_0603_1608Metric,,TBD: 1 %,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R513,100k,Resistor_SMD:R_0603_1608Metric,,"TBD: base pull-down, muted without logic",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R514,357k,Resistor_SMD:R_0603_1608Metric,,"TBD: 0.1 %, <=25 ppm/K; AUX window",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R515,1.5k,Resistor_SMD:R_0603_1608Metric,,"TBD: 0.1 %, <=25 ppm/K; AUX window",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R516,11.5k,Resistor_SMD:R_0603_1608Metric,,"TBD: 0.1 %, <=25 ppm/K; AUX window",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R517,3.3k,Resistor_SMD:R_0603_1608Metric,,"TBD: 1 %, thin film; RIN 10/20/40k => -2.48/-1.33/-0.69 dB",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R518,3.3k,Resistor_SMD:R_0603_1608Metric,,"TBD: 1 %, thin film; RIN 10/20/40k => -2.48/-1.33/-0.69 dB",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R601,470 1W,Resistor_SMD:R_2512_6332Metric,,2512 thick film 1 W; MPN at BOM,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R602,10k,Resistor_SMD:R_1206_3216Metric,,1206 0.25 W; 34 V max across,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R603,470 1W,Resistor_SMD:R_2512_6332Metric,,2512 thick film 1 W; MPN at BOM,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R604,10k,Resistor_SMD:R_1206_3216Metric,,1206 0.25 W,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R605,10k,Resistor_SMD:R_0603_1608Metric,,0603 1 %,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R701,47k,Resistor_SMD:R_1206_3216Metric,,SMD:R 1 %,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R702,2.2k,Resistor_SMD:R_0805_2012Metric,,SMD:R 1 %,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R703,2.2k,Resistor_SMD:R_0805_2012Metric,,SMD:R 1 %,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R704,2.2k,Resistor_SMD:R_0805_2012Metric,,SMD:R 1 %,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R705,2.2k,Resistor_SMD:R_0805_2012Metric,,SMD:R 1 %,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R706,2.2k,Resistor_SMD:R_0805_2012Metric,,SMD:R 1 %,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R715,10k,Resistor_SMD:R_0805_2012Metric,,0805 1 %,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R716,10k,Resistor_SMD:R_0805_2012Metric,,0805 1 %,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+R720,100k,Resistor_SMD:R_0805_2012Metric,,0805 1 %; fan off without jumper,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+TP102,STB,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part; preamp auto-on not used (D-032)",False,False,,
+TP103,PTC,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part; OEM protection LED line not driven",False,False,,
+TP110,GND,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part",False,False,,
+TP111,PVDD,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part",False,False,,
+TP112,12V,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part",False,False,,
+TP113,+15V,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part",False,False,,
+TP114,-15V,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part",False,False,,
+TP115,A12V,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part",False,False,,
+TP116,VMID,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part",False,False,,
+TP117,3V3,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part",False,False,,
+TP118,GVDD,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part",False,False,,
+TP119,RST,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part",False,False,,
+TP120,FLT,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part",False,False,,
+TP121,OTW,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part",False,False,,
+TP122,ROK,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part",False,False,,
+TP123,DCOK,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part",False,False,,
+TP124,IN,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part",False,False,,
+TP125,D+,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part",False,False,,
+TP126,D-,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part",False,False,,
+TP127,INA,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part",False,False,,
+TP128,INB,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part",False,False,,
+TP129,CT,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part",False,False,,
+TP130,GND,TestPoint:TestPoint_Pad_D2.0mm,,"PCB test pad, no part",False,False,,
+U1,TPA3255DDV,Package_SO:HTSSOP-44_6.1x14mm_P0.635mm_TopEP4.14x7.01mm,Texas Instruments,TPA3255DDVR,False,True,,
+U2,OPA1656ID,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,,OPA1656ID,False,True,,fabricante ausente
+U3,OPA1656ID,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,,OPA1656ID,False,True,,fabricante ausente
+U302,LM5164DDA,Package_SO:HSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.1mm,,LM5164DDAR (TI SNVSAU4D Table 7-1); HSOP-8 EP footprint not audited,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U303,TPS3700DDC,Package_TO_SOT_SMD:SOT-23-6,,TPS3700DDCR (TI SBVS187G p.23 package option addendum); SOT-23-6 footprint not audited,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U401,LP2985-33,Package_TO_SOT_SMD:SOT-23-5,,LP2985-33DBVR (TI SLVS522S p.33 orderable); VIN 16 V max,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U402,TPS3808G33,Package_TO_SOT_SMD:SOT-23-6,,"TPS3808G33DBVR (TI SBVS050N); hold stage 1, CT to VDD",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U403,TPS3808G33,Package_TO_SOT_SMD:SOT-23-6,,"TPS3808G33DBVR (TI SBVS050N); hold stage 2, CT to VDD",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U404,TPS3808G33,Package_TO_SOT_SMD:SOT-23-6,,"TPS3808G33DBVR (TI SBVS050N); start timeout, CT 180 nF",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U405,74LVC1G14,Package_TO_SOT_SMD:SOT-23-5,,SN74LVC1G14DBVR (TI SCES218AA),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U406,74LVC2G74,Package_SO:SSOP-8_2.95x2.8mm_P0.65mm,,SN74LVC2G74DCTR (TI SCES203Q); RUN latch,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U407,74LVC2G74,Package_SO:SSOP-8_2.95x2.8mm_P0.65mm,,SN74LVC2G74DCTR (TI SCES203Q); FAULT arming,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U408,74LVC1G32,Package_TO_SOT_SMD:SOT-23-5,,SN74LVC1G32DBVR (TI SCES219W),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U409,74LVC1G07,Package_TO_SOT_SMD:SOT-23-5,,SN74LVC1G07DBVR (TI SCES296AG); open-drain trip into RAILS_OK,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U410,74LVC1G08,Package_TO_SOT_SMD:SOT-23-5,,SN74LVC1G08DBVR (TI SCES217AA),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U411,74LVC1G06,Package_TO_SOT_SMD:SOT-23-5,,SN74LVC1G06DBVR (TI SCES295AB); open-drain timeout trip,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U412,TPS3700DDC,Package_TO_SOT_SMD:SOT-23-6,,TPS3700DDCR (TI SBVS187G); ANALOG_12V window,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U413,TPS3700DDC,Package_TO_SOT_SMD:SOT-23-6,,TPS3700DDCR (TI SBVS187G); VMID window,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U414,TPS3808G33,Package_TO_SOT_SMD:SOT-23-6,,"TPS3808G33DBVR (TI SBVS050N); connect-before-reset delay, CT open",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U415,74LVC1G08,Package_TO_SOT_SMD:SOT-23-5,,SN74LVC1G08DBVR (TI SCES217AA),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U416,TPS3808G33,Package_TO_SOT_SMD:SOT-23-6,,"TPS3808G33DBVR (TI SBVS050N); DC dwell, CT open",False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U417,74LVC2G74,Package_SO:SSOP-8_2.95x2.8mm_P0.65mm,,SN74LVC2G74DCTR (TI SCES203Q); AUDIO latch,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U418,74LVC1G32,Package_TO_SOT_SMD:SOT-23-5,,SN74LVC1G32DBVR (TI SCES219W),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U419,74LVC1G07,Package_TO_SOT_SMD:SOT-23-5,,SN74LVC1G07DBVR (TI SCES296AG); open-drain DC trip into RAILS_OK,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U501,TPS3700DDC,Package_TO_SOT_SMD:SOT-23-6,,TPS3700DDCR (TI SBVS187G); INPUT_A DC window,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U502,TPS3700DDC,Package_TO_SOT_SMD:SOT-23-6,,TPS3700DDCR (TI SBVS187G); INPUT_B DC window,False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U503,TMUX6219,PS28_ANALOG:TI_DGK0008A,,TMUX6219DGKR (TI SCDS420E p.39); RON <=7.5 ohm at 12 V single supply (p.10),False,True,,MPN ausente ou sem normalizacao; fabricante ausente
+U504,TPS3700DDC,Package_TO_SOT_SMD:SOT-23-6,,TPS3700DDCR (TI SBVS187G); AUX_RAW window,False,True,,MPN ausente ou sem normalizacao; fabricante ausente

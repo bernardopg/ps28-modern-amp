@@ -4,7 +4,10 @@
 TPA3255 PBTL mono, preservando gabinete, T1, dissipadores, furação e chicotes OEM.
 O preamp/limiter original é reaproveitado (D-032); a PCB nova substitui a principal.
 
-![Placa candidata — render nativo KiCad](docs/images/kicad-3d/system-isometric.png)
+![Placa candidata — estúdio Blender](docs/images/pcb-studio/isometric.png)
+
+[Revisão final, inventário e desenhos técnicos](docs/final-design-review-2026-10-16.md) ·
+[Galeria Blender](docs/images/pcb-studio/README.md)
 
 ## Estado atual — 2026-10-16
 

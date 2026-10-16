@@ -1060,8 +1060,8 @@
         94
       ],
       "selection": "Selected for engineering validation; NO procurement/release approval",
-      "mpn": "B2P-VH(LF)(SN) (JST VH 2 pos, mates OEM woofer harness)",
-      "manufacturer": "Wurth Elektronik",
+      "mpn": "B2P-VH(LF)(SN)",
+      "manufacturer": "JST",
       "source": "WE WR-TBL1377 rev001.003 2021-07-30 p.1-2: pitch5.00 NOT5.08; 2pins, D1.3 drill, 16A UL/24A VDE",
       "geometry": {
         "body_mm": [
@@ -1183,7 +1183,7 @@
         ]
       ],
       "footprint": "Resistor_SMD:R_0805_2012Metric",
-      "mpn": "CRCW06031K00FKEA",
+      "mpn": "CRCW08051K00FKEA",
       "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
       "group": "analog"
     },
@@ -1203,7 +1203,7 @@
         ]
       ],
       "footprint": "Resistor_SMD:R_0805_2012Metric",
-      "mpn": "CRCW0603100KFKEA",
+      "mpn": "CRCW0805100KFKEA",
       "selection": "ENGINEERING CANDIDATE; pulse/ESR/temp/fit/power-off qualification pending",
       "group": "analog"
     },
@@ -1779,7 +1779,7 @@
       "ref": "R310",
       "lib_id": "Device:R",
       "value": "100k 1%",
-      "mpn": "RG1608P-1053-B-T5 (TI Table 7-1); FSW 300 kHz",
+      "mpn": "RT0603BRD07100KL",
       "footprint": "Resistor_SMD:R_0603_1608Metric",
       "nets": {
         "1": "BUCK_RON",
@@ -5556,10 +5556,10 @@
   "source_sha256": {
     "kicad/core-oem-refined/ps28-modern.kicad_sch": "134bdf8fa93e3a66d99a5d556bd45cb9c5289ed5c3b126273db16ef3ad38a2ce",
     "kicad/analog-protected/analog-protected.kicad_sch": "f46adefe0383358837e4eb49a41fe21b8017f39b549f789c10675ca4ac277303",
-    "scripts/integrate_candidate.py": "558106e7e785ef6b02b73b20ebca7148df2ee265862db390de1552b1dd79f112",
+    "scripts/integrate_candidate.py": "cb5debca0171b09bea05bb8d33c01f9dede7b624ec8e3b25dd4ab95368370fc8",
     "kicad/power-d021/power-d021.kicad_sch": "b27d4cc1ab8930527ff147b3d1488ca8c04037574b6009157686842a3d801e83",
     "kicad/seq-d020/seq-d020.kicad_sch": "0d6a219fd97f4594ea756f839a9c2f616b1174abb3ba09accabca21839d0b884",
-    "scripts/create_power_d021.py": "fe24c26c60ad080f2117b629c4b9ec7f864ad851574cc90914d95e1e8cfe3162",
+    "scripts/create_power_d021.py": "504881a3d7dda2553a70c04ec173ed3084e326b0b7107fc6bffed48275134689",
     "scripts/create_seq_d020.py": "683a80d4acd83d68d237ab158e8d85e75f21aa51c66dc17d71a0b56d595e5760"
   },
   "status": "CORE + D018 + D021 POWER + D020 SEQ SUBSET IMPORT BANKS; SIGNAL SAFETY BRIDGE OPEN",
@@ -5588,5 +5588,22 @@
   "analog_placement_inside_oem": false,
   "unassigned_footprints": [],
   "hardware_validated": false,
-  "manufacturing_approved": false
+  "manufacturing_approved": false,
+  "purchasing_metadata_review": {
+    "date": "2026-10-16",
+    "references": [
+      "C14",
+      "C15",
+      "J5",
+      "R101",
+      "R102",
+      "R310"
+    ],
+    "note": "KCAA purchasing metadata corrections; PCB copper unchanged; regenerated candidate cross-checked in build/finalization/generated"
+  },
+  "previous_generator_sha256": {
+    "scripts/integrate_candidate.py": "558106e7e785ef6b02b73b20ebca7148df2ee265862db390de1552b1dd79f112",
+    "scripts/create_power_d021.py": "fe24c26c60ad080f2117b629c4b9ec7f864ad851574cc90914d95e1e8cfe3162",
+    "scripts/create_seq_d020.py": "683a80d4acd83d68d237ab158e8d85e75f21aa51c66dc17d71a0b56d595e5760"
+  }
 }

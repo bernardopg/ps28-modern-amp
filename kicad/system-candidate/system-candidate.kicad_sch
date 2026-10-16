@@ -8400,11 +8400,12 @@
 
 (property "Description" "" (at 723.9 127 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
 
-(property "MPN" "RG1608P-1053-B-T5 (TI Table 7-1); FSW 300 kHz" (at 723.9 132.08 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+(property "MPN" "RT0603BRD07100KL" (at 723.9 132.08 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
 (property "SelectionStatus" "STUDY; passives/interfaces not selected" (at 723.9 132.08 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-(property "Source" "D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md" (at 723.9 132.08 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)))) (pin "1" (uuid "cea2ef32-5f5a-5093-866f-87a23a2befee")) (pin "2" (uuid "9b12efb6-c268-5e31-96d0-ff052122c592")) (instances (project "system-candidate" (path "/2e10e179-0743-5984-a76c-4020e7e5915a" (reference "R310") (unit 1)))))
+(property "Source" "D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md" (at 723.9 132.08 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)))) (pin "1" (uuid "cea2ef32-5f5a-5093-866f-87a23a2befee")) (pin "2" (uuid "9b12efb6-c268-5e31-96d0-ff052122c592")) (instances (project "system-candidate" (path "/2e10e179-0743-5984-a76c-4020e7e5915a" (reference "R310") (unit 1))))
+(property "Manufacturer" "YAGEO" (at 723.9 132.08 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)) (hide yes))))
 
 (symbol (lib_id "Connector:TestPoint") (at 1371.6000000000001 109.22 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (fields_autoplaced yes) (uuid "55cc5667-aa06-536c-8c58-a4c008d6c639")
 
@@ -8670,11 +8671,12 @@
 
 (property "Description" "" (at 30.48 502.92 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
 
-(property "MPN" "CRCW06031K00FKEA" (at 30.48 508 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+(property "MPN" "CRCW08051K00FKEA" (at 30.48 508 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
 (property "SelectionStatus" "CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED" (at 30.48 508 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-(property "Source" "D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md" (at 30.48 508 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)))) (pin "1" (uuid "c82a1c57-bcbc-5ab3-a8c5-ac9aff494e8e")) (pin "2" (uuid "3c810b04-ab04-54b0-bb3a-d761ea68979d")) (instances (project "system-candidate" (path "/2e10e179-0743-5984-a76c-4020e7e5915a" (reference "R101") (unit 1)))))
+(property "Source" "D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md" (at 30.48 508 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)))) (pin "1" (uuid "c82a1c57-bcbc-5ab3-a8c5-ac9aff494e8e")) (pin "2" (uuid "3c810b04-ab04-54b0-bb3a-d761ea68979d")) (instances (project "system-candidate" (path "/2e10e179-0743-5984-a76c-4020e7e5915a" (reference "R101") (unit 1))))
+(property "Manufacturer" "Vishay" (at 30.48 511.81 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)) (hide yes))))
 
 (symbol (lib_id "Device:D") (at 1231.9 477.52 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "6670c9dc-730b-5299-a56d-1dd3257dc4c6")
 
@@ -8962,11 +8964,12 @@
 
 (property "Description" "" (at 81.28 502.92 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
 
-(property "MPN" "CRCW0603100KFKEA" (at 81.28 508 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+(property "MPN" "CRCW0805100KFKEA" (at 81.28 508 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
 (property "SelectionStatus" "CANDIDATE; NOT PULSE/ESR/POWER-OFF/FIT QUALIFIED" (at 81.28 508 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-(property "Source" "D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md" (at 81.28 508 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)))) (pin "1" (uuid "7d2a3514-212d-5820-bda1-d9c100dd70ab")) (pin "2" (uuid "2e32ba6b-4d7f-5a2d-b6a8-8705c716961e")) (instances (project "system-candidate" (path "/2e10e179-0743-5984-a76c-4020e7e5915a" (reference "R102") (unit 1)))))
+(property "Source" "D-020 candidate; primary parts/landpattern refs in docs/integration-protection-review.md" (at 81.28 508 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)))) (pin "1" (uuid "7d2a3514-212d-5820-bda1-d9c100dd70ab")) (pin "2" (uuid "2e32ba6b-4d7f-5a2d-b6a8-8705c716961e")) (instances (project "system-candidate" (path "/2e10e179-0743-5984-a76c-4020e7e5915a" (reference "R102") (unit 1))))
+(property "Manufacturer" "Vishay" (at 81.28 512.064 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)) (hide yes))))
 
 (symbol (lib_id "PS28_ISO:MMBT3904") (at 1155.7 248.92 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "7603268d-0eb1-525d-9e51-e1136f09c840")
 
@@ -9494,7 +9497,7 @@
 
 (property "Source" "Nichicon UHE CAT.8100M p.1/p.6: UHE1J152MHD 1500uF 63V D18 H40+2 P7.5; Zmax36mOhm/100kHz/20C; ripple2470mA/100kHz/105C (x0.8 at120Hz); 10000h/105C" (at 256.54 76.2 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-(property "MPN" "UHE1J152MHD" (at 256.54 72.2 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+(property "MPN" "UHE1J681MHD" (at 256.54 72.2 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
 (property "Manufacturer" "Nichicon" (at 256.54 72.2 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)))) (pin "1" (uuid "e2c3397a-0ad1-588b-8756-d235d85eb8b9")) (pin "2" (uuid "c20d0071-f346-5341-a164-bd1eead5e398")) (instances (project "system-candidate" (path "/2e10e179-0743-5984-a76c-4020e7e5915a" (reference "C14") (unit 1)))))
 
@@ -9930,9 +9933,9 @@
 
 (property "Source" "WE WR-TBL1377 rev001.003 2021-07-30 p.1-2: pitch5.00 NOT5.08; 2pins, D1.3 drill, 16A UL/24A VDE" (at 314.96 175.26 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-(property "MPN" "691137710002" (at 314.96 171.26 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+(property "MPN" "B2P-VH(LF)(SN)" (at 314.96 171.26 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-(property "Manufacturer" "Wurth Elektronik" (at 314.96 171.26 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)))) (pin "1" (uuid "eb076a31-4acf-5d31-bc05-0e668938df76")) (pin "2" (uuid "f92409c8-b2c9-5e7d-8521-bdc67eba4229")) (instances (project "system-candidate" (path "/2e10e179-0743-5984-a76c-4020e7e5915a" (reference "J5") (unit 1)))))
+(property "Manufacturer" "JST" (at 314.96 171.26 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)))) (pin "1" (uuid "eb076a31-4acf-5d31-bc05-0e668938df76")) (pin "2" (uuid "f92409c8-b2c9-5e7d-8521-bdc67eba4229")) (instances (project "system-candidate" (path "/2e10e179-0743-5984-a76c-4020e7e5915a" (reference "J5") (unit 1)))))
 
 (symbol (lib_id "Connector_Generic:Conn_01x02") (at 660.4 457.2 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "b347b086-87b1-55b1-becb-41ab53f3cf1c")
 
@@ -11362,7 +11365,7 @@
 
 (property "Source" "Nichicon UHE CAT.8100M p.1/p.6: UHE1J152MHD 1500uF 63V D18 H40+2 P7.5; Zmax36mOhm/100kHz/20C; ripple2470mA/100kHz/105C (x0.8 at120Hz); 10000h/105C" (at 292.1 76.2 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-(property "MPN" "UHE1J152MHD" (at 292.1 72.2 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+(property "MPN" "UHE1J681MHD" (at 292.1 72.2 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
 (property "Manufacturer" "Nichicon" (at 292.1 72.2 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)))) (pin "1" (uuid "e1e03610-3758-5925-8825-bfef1d466f12")) (pin "2" (uuid "bc52c238-d74c-5e83-9805-07213b06a688")) (instances (project "system-candidate" (path "/2e10e179-0743-5984-a76c-4020e7e5915a" (reference "C15") (unit 1)))))
 

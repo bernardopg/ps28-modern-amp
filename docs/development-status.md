@@ -1,5 +1,14 @@
 # Estado de desenvolvimento
 
+## Complemento final — 2026-10-16
+
+[Revisão final, BOM e blueprints](final-design-review-2026-10-16.md): seis MPNs
+incompatíveis corrigidos no esquema/PCB/geradores; cobre e placement preservados.
+Nenhum dos 263 componentes do esquema falta na PCB. Inventário de compra ainda
+tem 190 posições com fabricante ausente ou MPN não normalizado. Novos renders
+Cycles e desenhos de montagem/cobre/DXF/gabarito cotado disponíveis. Desenvolvimento
+não concluído para fabricação; revisão global, BOM/CPL e gates continuam pendentes.
+
 ## Revisão atual — 2026-10-16
 
 Abrir `kicad/system-candidate/system-candidate.kicad_pro`: única PCB de produto,

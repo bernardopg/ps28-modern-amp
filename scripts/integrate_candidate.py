@@ -40,7 +40,7 @@ LOGICAL = {"J302", "J303", "J402", "J501"}  # same-PCB interfaces, not connector
 # with C301/C302 (Nichicon UHE CAT.8100M: UHE1J681MHD 680 uF/63 V 12.5x40, 0.071 ohm).
 SWAPS = {
     "J5": ("Connector_JST", "JST_VH_B2P-VH_1x02_P3.96mm_Vertical", "B2P-VH(LF)(SN)",
-           "B2P-VH(LF)(SN) (JST VH 2 pos, mates OEM woofer harness)"),
+           "B2P-VH(LF)(SN)"),
     "C14": ("Capacitor_THT", "CP_Radial_D12.5mm_P5.00mm", "680uF 63V", "UHE1J681MHD"),
     "C15": ("Capacitor_THT", "CP_Radial_D12.5mm_P5.00mm", "680uF 63V", "UHE1J681MHD"),
 }
@@ -714,11 +714,13 @@ def generate(out):
                 p.update(value=value, mpn=mpn, footprint=f"{nick}:{name}")
         inventory = core + parts + added
         tree = parse(schematic(parts, added))
-        for ref, (nick, name, value, _) in SWAPS.items():
+        for ref, (nick, name, value, mpn) in SWAPS.items():
             symbol = next(n for n in tree if isinstance(n, list) and n[0] == "symbol" and any(
                 isinstance(x, list) and x[:3] == ["property", q("Reference"), q(ref)] for x in n))
             set_property(symbol, "Footprint", f"{nick}:{name}")
             set_property(symbol, "Value", value)
+            set_property(symbol, "MPN", mpn)
+            set_property(symbol, "Manufacturer", "JST" if ref == "J5" else "Nichicon")
         (stage / (PROJECT + ".kicad_sch")).write_text(render(tree) + "\n")
         shutil.copytree(SOURCE / "libraries", stage / "libraries")
         for nickname, symbols in (("PS28_POWER", [tps3700_symbol()]), ("PS28_SEQ", [lp2985_symbol()]),
