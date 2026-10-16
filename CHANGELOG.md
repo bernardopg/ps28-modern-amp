@@ -9,6 +9,8 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 - Consolidação integrada por fast-forward; issues passam a apontar para main.
 - Renders parciais movidos para docs/archive, sem perda dos arquivos; staging
   de renderização e backups Blender excluídos das próximas publicações.
+- Actions checkout/upload-artifact auditadas e fixadas por SHA em versões Node 24;
+  runner Ubuntu 24.04 explícito e upload ZIP preservado, removendo avisos de migração.
 - CI de 4346009 aprovada nos dois jobs; artefatos comparados aos três relatórios
   oficiais anteriores, com resultados idênticos. Não houve ampliação do modelo
   elétrico; cobertura, contraprovas e limitações agora estão explícitas.

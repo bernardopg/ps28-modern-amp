@@ -43,6 +43,9 @@ backlog local atendem ao planejamento.
 **aprovado nos dois jobs**, sobre `4346009`. Resultado e escopo das simulações em
 [simulation.md](simulation.md); não confundir reexecução com ampliação do modelo.
 Cada novo push em `main` dispara sua própria CI; não herda o status do commit anterior.
+Checkout v7.0.1 e upload-artifact v7.0.2 foram conferidos nos repositórios oficiais,
+fixados por SHA e usam Node 24. Os runners usam Ubuntu 24.04 explícito, não
+`ubuntu-latest`; upload permanece ZIP (`archive: true`), sem redistribuir o modelo TI.
 
 Galeria atual em `docs/images/kicad-3d/`; renders parciais preservados em
 `docs/archive/render-staging-2026-10-13/`. Staging/logs/cache ficam fora do Git.
