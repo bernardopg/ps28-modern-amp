@@ -127,7 +127,7 @@ Definir Vin máximo com rede alta, vazio e transientes; analisar falha de pass-t
 ripple/EMI, corrente de partida, dissipação, capacitores, fusíveis e proteção de sobretensão.
 Um módulo barato rotulado "300 W" não equivale a 150 W contínuos neste conjunto.
 
-## Gate antes da seleção final (PWR-001/BENCH-001)
+## Gate antes da seleção final (PWR-001; conferência na BENCH-002)
 
 - Técnico qualificado verifica isolamento, fiação, proteção/fusível, fixação e estado de T1.
 - Documentar tensão por meia-bobina e total, regulação a vazio/sob carga, envelope

@@ -14,7 +14,7 @@ Correções de MPN, fontes e pendências em
 
 ## Histórico do núcleo e seleção inicial
 
-Seleção atual do core: `kicad/core-selected/selected-bom.csv` e `core-manifest.json`.
+Seleção atual: `system-candidate-selection.csv` (235 posições de compra).
 MPNs, fontes e footprints incluídos; **seleção para validação, não compra/liberação**.
 J6 é feature GND da PCB, não item de compra; hardware em mechanical/.
 Disponibilidade/lifecycle, capacitância efetiva, ripple/temperatura e DFM não fechados.

@@ -9,41 +9,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
 from audit_final_design import inventory
-from create_core_draft import parse
-import integrate_candidate
+from pcb_model import parse
 
 
 class FinalInventoryTests(unittest.TestCase):
     @unittest.skipUnless(shutil.which("kicad-cli") and importlib.util.find_spec("pcbnew"),
                          "Native KiCad required for integrated generation")
-    def test_regenerated_swaps_carry_the_purchase_code_into_schematic(self):
-        import tempfile
-        with tempfile.TemporaryDirectory() as directory:
-            out = Path(directory) / "candidate"
-            integrate_candidate.generate(out)
-            rows = parse((out / "system-candidate.kicad_sch").read_text())
-            parts = {}
-            for node in rows:
-                if isinstance(node, list) and node[0] == "symbol":
-                    fields = {x[1].strip('"'): x[2].strip('"') for x in node
-                              if isinstance(x, list) and x[0] == "property"}
-                    parts[fields["Reference"]] = fields
-            self.assertEqual(parts["C14"]["MPN"], "UHE1J681MHD")
-            self.assertEqual(parts["C15"]["MPN"], "UHE1J681MHD")
-            self.assertEqual(parts["J5"]["MPN"], "B2P-VH(LF)(SN)")
-            self.assertIn("UHE1J681MHD", parts["C14"]["Source"])
-            self.assertIn("pitch3.96mm", parts["J5"]["Source"])
-            import json
-            manifest = json.loads((out / "system-manifest.json").read_text())
-            selected = {p["ref"]: p for p in manifest["parts"]}
-            self.assertEqual(selected["J5"]["manufacturer"], "JST")
-            choices = list(csv.DictReader((ROOT / "bom/system-candidate-selection.csv").read_text().splitlines()))
-            for row in choices:
-                ref = row["Reference"]
-                for field in ("MPN", "Manufacturer", "Footprint", "Datasheet", "SelectionNotes"):
-                    self.assertEqual(parts[ref][field], row[field], (ref, field))
-                self.assertEqual(selected[ref]["mpn"], row["MPN"])
-
     def test_missing_purchase_information_is_not_hidden_by_generic_mpn(self):
         rows = inventory('''<export><components>
           <comp ref="R1"><value>10k</value><footprint>Resistor_SMD:R_0603</footprint>

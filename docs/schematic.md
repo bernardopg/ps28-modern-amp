@@ -12,7 +12,7 @@ D-032 mantém o preamp/limiter OEM (RCA, crossover, volume/fase), ligado à inte
 da placa nova por J7. D-018/D-019/D-024 e o front-end novo anterior são referências
 de evolução, não outras placas de produto ou indicação de que a candidata atual
 esteja sem integração. Ver [arquitetura](architecture.md),
-[revisão local](tpa-local-layout-review.md) e [estado](development-status.md).
+[revisão local](tpa-local-layout-review.md) e [estado](status.md).
 
 [SVG atual](images/system-candidate/system-candidate.svg).
 U2/U3p8 usam ANALOG_12V, não AUX_RAW; VMID é referência, não fonte externa.
@@ -24,7 +24,7 @@ D-011: SLASEA8A Fig.31/tabela11 p.28, A+C/B+D antes dos dois ramos LC.
 SLOU441 §4.2 é comparação com a EVM de quatro filtros; não misturar topologias.
 Não curto-circuitar nós PWM por analogia; conferir ponto do paralelamento e figura original.
 D-011 seleciona figura31 para o primeiro core exploratório: captura inicial já existe,
-sem fonte/front-end e sem freeze. Ver [incremento](core-draft.md). SYS/PWR ainda
+sem fonte/front-end e sem freeze. Ver incremento. SYS/PWR ainda
 bloqueiam integração e fechamento do schematic, não a análise isolada do core.
 
 ## Organização da captura

@@ -1,26 +1,41 @@
-# Bring-up seguro
+# Montagem e primeira energização
 
-Pré-requisito BENCH-001: preencher limites numéricos em tests/bench-plan.md e obter
-aprovação. Fonte ajustável limitada em corrente, DMM, sonda diferencial/scope,
-gerador/analisador, carga 4 Ω não indutiva com potência/cooling suficientes,
-termopar/termômetro, ESD e extintor apropriado. Inventário físico ainda desconhecido.
+Procedimento da task [BENCH-002](../.tasks/items/BENCH-002.md). Não há ensaio de
+bancada (D-037): a placa é montada no próprio gabinete e verificada com multímetro.
+Só começar após G3 e com a placa recebida. Regras de [segurança](safety.md) valem sempre.
 
-1. Sem alimentação/woofer: inspeção óptica, polaridade, resistência PVDD-GND,
-   44 leads do DDV, PowerPAD superior/dissipador aterrado e interface térmica,
-   fixação, descarga, instrumentação. Não presumir solda/pad térmico inferior.
-2. RESET assertado: sequência conforme TI e Vin mínimo do DC/DC; não usar uma
-   rampa indiscriminada que deixe o auxiliar fora da faixa. Medir rails/VMID/RESET.
-3. PVDD: current limit definido, registrar repouso e temperaturas; confirmar FAULT.
-4. Sinal baixo: L/R/LFE, ganho/filtro, conversor diferencial e fase/mute.
-5. Saída: técnica diferencial segura, DC diferencial e comportamento sem carga
-   conforme referência; sem interpretar PWM bruto como tensão útil de áudio.
-6. Carga resistiva: 1→10→25→50→100 W→alvo apenas com checkpoints aprovados.
-   Registrar Vrms/I/P, clipping/THD+N, duração, ambiente, CI/LC/PCB/dissipador.
-7. Woofer somente após G4; volume mínimo, ensaio progressivo e excursão/ruído.
-   Não aplicar seno de alta potência sem limites do transdutor, especialmente abaixo da sintonia.
+Material: multímetro, lâmpada-série incandescente 60–100 W (ou Variac) no primário,
+pasta/TIM fino ≥3 W/(m·K), calços de precisão, chave Allen M3.
 
-Parar por corrente/temperatura/DC acima dos limites, FAULT, cheiro, oscilação ou
-ringing anormal. Desligar, medir descarga e diagnosticar; não continuar por tentativa.
+## 1. Montagem (dimensões)
+
+1. Conferir apoios H5/H6 de mesma altura (3,1–3,5 mm, `mechanical/thermal-fit.json`).
+2. Folga real entre pedestal do bloco e PowerPAD: **0,05–0,10 mm**, preenchida por TIM.
+   O CI nunca é batente; quem limita a descida são os apoios.
+3. Shim lateral sólido = vão medido − duas películas de TIM. Não forçar a PCB.
+4. Parafusos: M3 lateral com engate útil na rosca OEM; M3×10 por baixo sem arruela larga.
+5. Multímetro: continuidade J6 → bloco → perfil; nenhum lead/passivo tocando o bloco.
+6. Ligar chicotes T1 (3 vias), preamp (7 vias) e fusível OEM 2,5 A no primário.
+   **Woofer desconectado.**
+
+## 2. Primeira energização (sem woofer)
+
+1. Lâmpada-série no primário. Ao ligar, a lâmpada acende e apaga em segundos
+   (carga dos 2×4700 µF). Se ficar acesa: desligar e procurar curto.
+2. Medir nos TPs da tabela abaixo; limites em [requisitos](requirements.md) REQ-003/004.
+   PVDD < 53,5 V sempre.
+3. LEDs: PVDD, RAILS_OK e RUN acesos; FAULT e CLIP_OTW apagados.
+4. Desligar, esperar o LED PVDD apagar, medir PVDD < 5 V antes de tocar na placa.
+
+## 3. Woofer
+
+1. Conectar o woofer, retirar a lâmpada-série, volume no mínimo.
+2. Subir o volume aos poucos com música; ouvir estalos ao ligar/desligar e distorção.
+3. Uso normal: CLIP_OTW não deve acender de forma persistente. Se acender, registrar
+   condição e abrir decisão (D-037).
+
+Parar por cheiro, fumaça, FAULT, aquecimento anormal ou tensão fora da faixa.
+Desligar, aguardar descarga e diagnosticar; não insistir por tentativa.
 
 ## Pontos de medida e LEDs da placa (PCB-004)
 

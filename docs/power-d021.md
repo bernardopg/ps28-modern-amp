@@ -10,7 +10,7 @@ fabricação nem energização.** Gates G1–G4 continuam pendentes.
 > **Revisão posterior:** as seleções D-025/D-026/D-027 descritas abaixo não
 > estão qualificadas. MUR3040WTG tem IFSM=150 A, não 200 A; supervisor não
 > desconecta PVDD; F301 conduz a soma dos diodos. Ver
-> [remediação com fontes primárias e budgets](power-remediation.md), D-028
+> remediação com fontes primárias e budgets, D-028
 > proposta, e `kicad/power-researched/`. O histórico abaixo não libera BOM/PCB.
 
 ## Entradas
@@ -58,7 +58,7 @@ auditado e não serve de prova.
   exato e nº de vias TBD (ver `transformer-reuse.md`).
 - F301 no retorno CT, antes do GND: lento. **D-027**: fusível **time-lag (T)** 5×20 mm
   ≥ 63 VDC, rating pela corrente de operação (≈4,3–5,7 A rms por meia-bobina) e não
-  pelo inrush; I²t exato/ampere aconfirmar em BENCH-001. Família Littelfuse 218/892.
+  pelo inrush; I²t exato/ampere a confirmar pela queima ou não na primeira energização com lâmpada-série (BENCH-002). Família Littelfuse 218/892.
   Sem NTC/relé de bypass (D-027).
 - D301/D302: anodo no vermelho, catodo em PVDD. **D-025**: **MUR3040WTG** — VRRM 400 V,
   IF(AV) 15 A @145 °C, IFSM 200 A, TJ −65…+175 °C (MUR3020WT/D Rev.7). Cobre folgado
@@ -129,7 +129,7 @@ estão **TBD**.
    rede T2.5AL e a corrente de partida na bancada.
 2. **Integração:** feita em `system-candidate` (D-023), bancos fora do contorno.
 3. **Footprints:** candidatos KiCad atribuídos, não auditados contra os MPNs.
-4. **Bancada (PWR-001/BENCH-001):** medir regulação sob carga resistiva, ripple e
+4. **Primeira energização (BENCH-002), sem bancada (D-037):** medir regulação sob carga resistiva, ripple e
    temperatura de T1; substituem os parâmetros não medidos deste estudo.
 
 **Segurança:** nunca ligar vermelho–vermelho em ponte (≈97 V, acima do máximo absoluto

@@ -102,6 +102,6 @@ final usa 32 amostras/denoise e staging, com manifesto publicado após as três 
 5. Gabarito físico, folgas/contato térmico e bancada controlada continuam em
    BENCH-002. Não são substituídos por Blender, FreeCAD, KiBot ou outro MCP.
 
-O [roteiro de produção](production-roadmap.md) e os gates humanos permanecem
+O [roteiro de produção](status.md) e os gates humanos permanecem
 válidos. Não houve compra, upload, pedido, energização ou aprovação G1/G2/G3.
 Evidência atual: `tests/reports/final-design-review-2026-10-16.json`.

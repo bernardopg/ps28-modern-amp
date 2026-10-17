@@ -99,7 +99,7 @@ da interação com fonte/regulador e EMI Classe D.
 
 ## Captura e integração lógica reais
 
-[Revisão integrada](../kicad/analog-protected/README.md): **32 componentes/80 pinos**,
+Revisão integrada: **32 componentes/80 pinos**,
 ERC nativo **zero, sem exclusões**. Dez passivos +polaridade de D201 conferidos
 contra `simulation/analog/vmid-protected.cir`;14 R/C e pinagem dos quatro amps
 conferidos separadamente contra LR4/TI. Alterar o manifesto juntamente com uma
@@ -145,4 +145,4 @@ incorporados nas capturas auditadas, sem bibliotecas globais de KiCad nem skips.
 Isso não substitui `analog-protected-check`, que executa o KiCad nativo.
 Circuitos/dados/logs em `build/analog/vmid-protection/`; modelo do fabricante
 permanece local, nunca incluído nos commits/artifacts. Imagens PDF/SVG são
-exportações nativas do KiCad em `docs/images/analog-protected/`.
+exportações nativas do KiCad (removidas; histórico Git, D-038).

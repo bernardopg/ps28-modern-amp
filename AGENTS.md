@@ -4,7 +4,7 @@
 
 Leia README.md, docs/README.md, docs/safety.md e .tasks/PLANNING.md.
 Consulte a task e a skill pertinente antes de editar. CLAUDE.md aponta para este arquivo.
-Originais em docs/archive/chatgpt são histórico não confiável, não especificação.
+Revisões antigas e originais ChatGPT só existem no histórico Git (D-038); não são especificação.
 
 ## Headroom por projeto
 
@@ -72,13 +72,11 @@ Use Conventional Commits e atualize CHANGELOG.md para mudanças relevantes.
 
 ## EDA atual
 **Placa única do produto: kicad/system-candidate/** (269 footprints, 3.535 segmentos,
-500 vias; ERC/DRC/paridade/aberturas 0 em 2026-10-17). Base gerada por
-scripts/integrate_candidate.py e pós-processada/roteada via KCAA/KiCad nativo;
-não editar à mão nem regenerar sobre o cobre atual. Revisão local TPA e fit térmico
-nominal concluídos; revisão global/G1/G2, fit físico/térmica/EMI e BOM/CPL pendentes.
-Preamp/limiter OEM reaproveitado (D-032). Demais pastas kicad/ são histórico/insumo dos geradores. Ler docs/development-status.md
-e docs/production-roadmap.md. Núcleo B em kicad/core-selected/ps28-modern.kicad_pro.
-47 footprints/142 pads, ainda sem roteamento. Ler docs/selected-core.md.
+500 vias; ERC/DRC/paridade/aberturas 0 em 2026-10-17). Não há gerador: editar no
+KiCad/KCAA com snapshot, sem rerotear sobre o cobre atual. Revisão local TPA e fit
+térmico nominal concluídos; revisão global/G1/G2, gabarito 1:1 e BOM/CPL pendentes.
+Preamp/limiter OEM reaproveitado (D-032). É a única placa no repositório (D-038).
+Ler docs/status.md e .tasks/project-backlog.md.
 D-014 fixa montagem/dissipação OEM e os mesmos mounting points por decisão do usuário.
 Usar mechanical/original-board-reference.md: manual p.15–16 tem cotas nominais de
 plate/carçaça/dissipadores/suportes, p.17–18 tem desenhos da placa original.
@@ -93,9 +91,10 @@ Não sobrescrever documentos GUI abertos; IPC atual indisponível.
 `make check` antes de commit; `make erc`/`make drc` quando mexer na EDA. Relatórios em
 build/ (não versionado); resumos em tests/reports/. Uma task é **Done** quando o
 trabalho de projeto dela está feito e verificado (ERC/DRC/teste/medida, o que couber).
-Pendências de bancada viram critério da task de bring-up (BENCH-002), não bloqueio.
-Fechar a issue GitHub espelho junto com a task. Limites de bancada numéricos e aprovados
-pelo proprietário antes de energizar.
+Sem ensaios de bancada (D-037): verificar por análise/simulação/CAD; físico só
+gabarito 1:1 (MECH-002) e montagem/primeira energização (BENCH-002).
+Fechar a issue GitHub espelho junto com a task. Limites da primeira energização
+em docs/requirements.md, aprovados pelo proprietário antes de energizar.
 
 ## Skills locais
 

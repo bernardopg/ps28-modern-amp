@@ -1,12 +1,22 @@
-# PS28 — estúdio Blender
+# Renders Blender
 
-![Candidata em perspectiva](isometric.png)
+![Perspectiva](isometric.png)
 
-[Topo](top.png) · [Verso](bottom.png) · [Manifesto](manifest.json)
+![Detalhe do bloco térmico e perfil U](detail.png)
 
-Geometria GLB da candidata real de 154 × 81 mm; Cycles 32 amostras, AgX,
-denoise e materiais/iluminação de estúdio. Modelos de catálogo e proxies herdados
-do KiCad; não é foto, aprovação de montagem ou comprovação térmica.
+| Topo | Verso |
+|---|---|
+| ![Topo](top.png) | ![Verso](bottom.png) |
 
-Reproduzir com `make render-studio`. Cena editável em `build/studio/ps28-studio.blend`.
-Estado elétrico/BOM e limitações em [revisão final](../../final-design-review-2026-10-16.md).
+Cycles, 384 amostras, 2400 × 1500, AgX. Geometria da placa e dos componentes
+vem do GLB exportado do KiCad. O perfil U OEM (65 × 33 × 30 mm), o shim lateral,
+as plaquetas 12 × 12 mm, os parafusos M3 e os apoios H5/H6 seguem as cotas
+nominais de [thermal-fit.json](../../../mechanical/thermal-fit.json).
+
+Materiais conforme a peça real: bloco em alumínio 6061 jateado, perfil em
+alumínio extrudado, capacitores com capa preta (Nichicon UHE: "white letter on
+black sleeve"), terminais estanhados HASL, máscara verde padrão da fábrica.
+Terminais THT cortados 2 mm abaixo da placa, como após a montagem.
+
+Não é foto nem comprovação de fit físico; [manifesto](manifest.json).
+Regenerar: `make render-studio` (prévia rápida: `PS28_STUDIO_PREVIEW=1`).

@@ -187,33 +187,6 @@ def isolation_bound(c):
     }
 
 
-def audit_interfaces(core, analog):
-    parts = {p["ref"]: p for p in core["parts"]}
-    for ref, drive, receive in (
-        ("C20", "DIFF_P", "INPUT_A_AC"),
-        ("C21", "DIFF_N", "INPUT_B_AC"),
-    ):
-        if parts[ref]["nets"] != {"1": drive, "2": receive} or not parts[ref][
-            "value"
-        ].startswith("10uF "):
-            raise ValueError(f"Core coupling topology changed: {ref}")
-    frontend = {p["ref"]: p for p in analog["parts"]}
-    if frontend["J102"]["nets"] != {
-        "1": "DIFF_POS",
-        "2": "DIFF_NEG",
-        "3": "VMID",
-        "4": "GND",
-    }:
-        raise ValueError("Differential analog interface changed")
-    return {
-        "core_refs": ["C20", "C21"],
-        "source_ref": "J102",
-        "audit_level": "Manifest only; native KiCad electrical audits remain separate",
-        "mapping_for_review_only": {"DIFF_POS": "DIFF_P", "DIFF_NEG": "DIFF_N"},
-        "schematics_connected_or_modified": False,
-    }
-
-
 def oracle(t, cap, rin, rs):
     """Analytical segments corresponding to the independently authored deck."""
     bias = 3.875
@@ -409,12 +382,7 @@ def main():
     report = BUILD / "result.json"
     report.unlink(missing_ok=True)
     c = json.loads(CONFIG.read_text())
-    core = ROOT / "kicad/core-selected/core-manifest.json"
-    analog = ROOT / "kicad/analog-protected/vmid-manifest.json"
     result = study(c)
-    result["interfaces"] = audit_interfaces(
-        json.loads(core.read_text()), json.loads(analog.read_text())
-    )
     result["independent_passive_spice"] = crosscheck()
     result["coupled_d018_rail_receiver_hypotheses"] = coupled_rail_cases(c)
     hashes = {
@@ -423,10 +391,6 @@ def main():
             CONFIG,
             CIRCUIT,
             Path(__file__),
-            core,
-            analog,
-            core.with_name("ps28-modern.kicad_sch"),
-            analog.with_name("analog-protected.kicad_sch"),
             ROOT / "simulation/analog/vmid-protection.json",
             ROOT / "scripts/simulate_vmid_protection.py",
             ROOT / "scripts/simulate_opa1656.py",

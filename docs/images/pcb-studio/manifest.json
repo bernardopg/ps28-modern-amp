@@ -1,21 +1,24 @@
 {
   "blender": "5.2.2 LTS",
   "engine": "CYCLES",
-  "mesh_count": 296,
-  "samples": 32,
+  "mesh_count": 304,
+  "samples": 384,
   "manufacturing_approved": false,
   "limitations": [
-    "Catalog and proxy models inherited from KiCad; no as-built validation",
-    "GLB exporter warning is recorded in build/studio/export.log"
+    "Board and components from the KiCad GLB (catalog/proxy models)",
+    "OEM U profile, shim, spreaders and M3 heads are nominal geometry from mechanical/thermal-fit.json, not an owner scan",
+    "Solder mask colour is the fab default (green); not a sign-off"
   ],
   "source_sha256": {
-    "build/studio/board.glb": "07f4561b0f65ac249c2bc051edef5dfc959462995886a5dcbb3c4ae7ef44ac2c",
-    "scripts/blender_pcb_studio.py": "b02175500b258825442091fd626618f0b52ed47357721ba97086e008e552bca9",
-    "kicad/system-candidate/system-candidate.kicad_pcb": "e67ad575a8980b0f20a076bf441f6c74eef6c5992f5bccb4721df2fa06f75861"
+    "build/studio/board.glb": "2fda45fee92264bccb15b6c684b13a850f9017414809508134ab06a65f89ff6d",
+    "scripts/blender_pcb_studio.py": "44e87f80d9d129da718c499aee729c4512b5454c3f8d62b7f29ecc4c2f4c819f",
+    "kicad/system-candidate/system-candidate.kicad_pcb": "e67ad575a8980b0f20a076bf441f6c74eef6c5992f5bccb4721df2fa06f75861",
+    "mechanical/thermal-fit.json": "6f565bf057cf8243dea57ed81229991e670c90178e32c0b3e1a3c185e8b0a466"
   },
   "image_sha256": {
-    "isometric.png": "f6d0d9ae5288010818e00a69520790be52319482503e836d8d95ba0a29ca89a3",
-    "top.png": "75cc34eddb3047ca1b155fda504ae4a5af2a5959d542331fa71d21ee2699c880",
-    "bottom.png": "11e5f6af08353bbaa8e260995e8bbb3b4939d2aefa1bb61c875d63e126537fd5"
+    "isometric.png": "9394e40b34aaa4e8989bcea8a3eafc73ce660f558f0dce13b7b76ee3de81e860",
+    "top.png": "7b053d88d36d7cb0609e38883eedca47ff0a45af1f58d775fe6c06c7c3f61e39",
+    "detail.png": "7daa68b78da67d2619bc98df4fa39949c079c04f4ec9f4d80abc3fa63645d97c",
+    "bottom.png": "d48525024375280192570695fbfb7e05d74ec789b1ac8a4ea269694ea701d25c"
   }
 }

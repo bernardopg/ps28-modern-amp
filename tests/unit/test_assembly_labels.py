@@ -8,7 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
-from create_core_draft import parse
+from pcb_model import parse
 from organize_assembly_labels import organize
 
 HAS_PCBNEW = importlib.util.find_spec("pcbnew") is not None

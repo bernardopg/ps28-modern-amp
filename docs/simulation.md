@@ -22,7 +22,7 @@ modelos TI não são redistribuídos.
   não simula o estágio de comutação do TPA3255.
 - **LR4 com R/C explícitos:** 151 pontos AC, 16.384 corners e 2.048 amostras com
   seed fixa. Modelo comportamental limitado, não NE5532 real.
-  [Estudo e parâmetros](analog-lr4-study.md).
+  Estudo e parâmetros.
 - **OPA1656 oficial TI:** nove combinações de 10,8/12/13,2 V e 0/27/70 °C,
   AC e transiente. No testbench de referência, saída diferencial ≈1,99237 Vrms;
   desvio AC máximo ≈0,0003845 dB frente ao ideal. Avisos de gmin/source stepping
@@ -31,7 +31,7 @@ modelos TI não são redistribuídos.
 - **VMID de referência:** 32 casos de return-ratio; margem de fase mínima
   **60,67°** sob o modelo/envelope declarado. O hard power-down do circuito
   passivo antigo continua inseguro — contraprova intencional, não uma aprovação.
-  [Estudo](vmid-buffer-study.md).
+  Estudo.
 - **VMID protegido:** 30 casos de perda de alimentação e nove casos do testbench
   LR4 passam dentro do envelope declarado; não qualificam extremos de produção
   ou hardware. [Hipóteses e proteção](vmid-protection.md).
@@ -79,7 +79,6 @@ python3 scripts/simulate_opa1656.py --fetch-model  # baixa e confere hash/direti
 make simulate-vmid
 make simulate-vmid-protected
 make simulate-power
-make simulate-d019
 make thermal-fit                # cálculo/CAD, não SPICE ou FEM
 ```
 

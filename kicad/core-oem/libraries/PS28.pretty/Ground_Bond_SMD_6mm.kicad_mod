@@ -1,7 +1,0 @@
-(footprint "Ground_Bond_SMD_6mm" (version 20241229) (generator pcbnew)
-(layer "F.Cu") (descr "Soldered GND braid landing; NOT an OEM mounting point; no drill")
-(attr smd exclude_from_pos_files exclude_from_bom)
-(fp_text reference "REF**" (at 0 -4) (layer "F.SilkS") (effects (font (size 0.8 0.8))))
-(fp_text value "Ground_Bond_SMD_6mm" (at 0 4) (layer "F.Fab") (effects (font (size 1 1))))
-(fp_rect (start -3.5 -3.5) (end 3.5 3.5) (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
-(pad "1" smd rect (at 0 0) (size 6 6) (layers "F.Cu" "F.Mask")))

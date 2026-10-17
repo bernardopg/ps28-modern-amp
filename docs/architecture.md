@@ -3,7 +3,7 @@
 Estado em **2026-10-16**: uma placa principal roteada em
 `kicad/system-candidate/`; estudos em outras pastas são referências históricas.
 ERC/DRC/conectividade/paridade zerados não substituem G1/G2 ou ensaios.
-[Estado e evidências](development-status.md).
+[Estado e evidências](status.md).
 
 ## Baseline atual — D-010/D-021/D-032
 
@@ -57,5 +57,5 @@ revisão elétrica independente/global nem qualificam BOM/CPL ou montagem.
 
 [Revisão local](tpa-local-layout-review.md) ·
 [Fit térmico](../mechanical/thermal-block.md) ·
-[Roadmap](production-roadmap.md) · [Segurança e gates](safety.md).
+[Roadmap](status.md) · [Segurança e gates](safety.md).
 SPK+ e SPK− são ativos/flutuantes: nunca GND ou garra terra do osciloscópio.

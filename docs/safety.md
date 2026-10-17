@@ -22,11 +22,11 @@ O manual não comprova 34-0-34 VAC. Não ligar a fonte simétrica diretamente ao
 
 R1: topologia PBTL incorreta → curto/destruição; ELEC-001 e revisão pin-a-pin.
 R2: fonte/TVS/fusível incompatíveis → incêndio; PWR-001 e análise transientes/inrush.
-R3: swing/bias/VMID incorretos → clipping/DC/pop; ELEC-002 e BENCH-001.
+R3: swing/bias/VMID incorretos → clipping/DC/pop; ELEC-002 e medidas da primeira energização (BENCH-002).
 R4: PowerPAD/LC subdimensionados → aquecimento; PCB-001/002 e ensaio térmico.
-R5: erro scope → curto/instrumento; BENCH-001 e técnica diferencial aprovada.
-R6: excesso de excursão no gabinete → woofer danificado; SYS-001 e ACOU-001.
-R7: preço/MPN falsos → retrabalho/fraude; BUY-001 e rastreabilidade de fornecedor.
+R5: erro scope → curto/instrumento; BENCH-002 só com multímetro; nunca referência em SPK±.
+R6: excesso de excursão no gabinete → woofer danificado; SYS-001 e limiter/subsônico OEM (D-037).
+R7: preço/MPN falsos → retrabalho/fraude; FAB-001 e rastreabilidade de fornecedor.
 
 ## Gates (D-030: aprovação = "ok" do proprietário registrado na task/decisão com data e commit)
 

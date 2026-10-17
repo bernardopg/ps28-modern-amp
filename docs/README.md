@@ -1,37 +1,44 @@
-# Documentação técnica
+# Documentação
 
-[SYS-002 Rev.B e G0](sys002-baseline.md): limites numéricos de aceitação;
-[derating de48 capacitores e correções C401/C403](capacitor-derating.md).
+Tudo aqui descreve a placa atual, `kicad/system-candidate/`.
 
-[Fechamento das 190 posições de compra](bom-closeout-2026-10-16.md): 235 posições
-com fabricante e MPN completos, fontes técnicas e acessórios separados.
+## Começar
 
-Começar pelo [estado consolidado D-018/D-019 e mapa das capturas/PCBs](development-status.md)
-pela [revisão local TPA/conectividade](tpa-local-layout-review.md) e pela
-[galeria 3D nativa atual](images/kicad-3d/README.md). Capturas/cores históricos não
-são a candidata integrada atual. Planejamento/gates não avançam por aparência do render.
+- [Estado do projeto](status.md) — onde estamos e o que falta
+- [Segurança e gates](safety.md) — ler antes de qualquer manuseio
+- [Requisitos Rev.B](requirements.md) · [baseline G0](sys002-baseline.md) ·
+  [matriz de aceitação](../tests/acceptance.md)
+- [Decisões D-NNN](decisions.md)
 
-Ordem: [requisitos](requirements.md) → [arquitetura](architecture.md) →
-[captura elétrica](schematic.md) → [layout](pcb-layout.md) →
-[simulação](simulation.md) → [fabricação](manufacturing.md) → [bring-up](bringup.md).
+## Projeto elétrico
 
-Transversais: [segurança](safety.md), [decisões](decisions.md), [referências](references.md),
-[toolchain](toolchain.md), [auditoria de origem](source-review.md),
-[Headroom por projeto e harnesses](headroom.md),
-[compras/BOM](procurement.md), [assets](assets.md), [GitHub/CI](github.md), [transformador original](transformer-reuse.md), [primeiro núcleo PCB](core-draft.md), [seleção/placement atual B](selected-core.md), [operacionalidade e candidata OEM refinada](functional-readiness.md),
-[front-end LR4 e headroom em estudo](analog-lr4-study.md),
-[captura KiCad e modelo oficial OPA1656](analog-capture.md),
-[VMID físico e bloqueio de desligamento](vmid-buffer-study.md),
-[correção D-018 — rail protegido/VMID passivo](vmid-protection.md),
-[interface TPA: desligamento/pré-carga e contrato D-019](input-power-order-study.md).
-[D-021 — fonte PVDD não regulada: simulação e captura](power-d021.md),
+- [Arquitetura](architecture.md)
+- [Esquema](schematic.md) · [SVG do esquema](images/system-candidate/system-candidate.svg)
+- [Transformador T1 reaproveitado](transformer-reuse.md)
+- [Fonte PVDD não regulada (D-021)](power-d021.md)
+- [Sequenciador discreto (D-020)](seq-d020.md) ·
+  [contrato RESET/FAULT](reset-supervisor-contract.md)
+- [Isolamento da entrada por relé (D-024)](iso-d019.md) ·
+  [ordem de energização da entrada](input-power-order-study.md)
+- [VMID e rail analógico (D-018)](vmid-protection.md)
+- [Derating dos capacitores](capacitor-derating.md)
+- [Simulação](simulation.md)
 
-[D-023 — sequenciador discreto D-020](seq-d020.md),
+## PCB e mecânica
 
-[D-024 — isolamento D-019 por relé, mute e DC](iso-d019.md),
+- [Layout](pcb-layout.md) · [revisão local do TPA3255](tpa-local-layout-review.md)
+- [Mecânica e medidas OEM](../mechanical/README.md) ·
+  [fit térmico do bloco](../mechanical/thermal-block.md)
+- [Renders Blender](images/pcb-studio/README.md) · [renders KiCad](images/kicad-3d/README.md)
 
-[caminho até produção](production-roadmap.md).
-[D-020 — integração candidata, CAD e sequência executável](integration-protection-review.md):
-76 componentes importados, proteção física ainda aberta; não hardware completo.
+## Produção e instalação
 
-Planejamento vive somente em `.tasks/`; instruções de agentes somente em `AGENTS.md`.
+- [BOM: fechamento das 235 posições](bom-closeout-2026-10-16.md) · [compras](procurement.md)
+- [Fabricação](manufacturing.md) · [revisão final de projeto](final-design-review-2026-10-16.md)
+- [Montagem e primeira energização](bringup.md)
+
+## Ferramentas e fluxo
+
+- [Toolchain](toolchain.md) · [GitHub e espelho de tasks](github.md) ·
+  [memória Headroom](headroom.md)
+- [Referências](references.md) · [assets e licenças](assets.md)

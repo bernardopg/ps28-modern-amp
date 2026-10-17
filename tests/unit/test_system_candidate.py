@@ -8,40 +8,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
-import integrate_candidate as candidate
-from create_core_draft import parse
+import pcb_model as candidate
+from pcb_model import parse
 
 
 class SystemCandidateTests(unittest.TestCase):
-    def test_review_import_has_parts_but_no_fake_protection_or_fit(self):
-        d = json.loads(
-            (ROOT / "kicad/system-candidate/system-manifest.json").read_text()
-        )
-        self.assertEqual(len(d["parts"]), 263)
-        self.assertEqual(d["unassigned_footprints"], [])
-        self.assertTrue(d["signal_bridge_connected"])  # only via K501, checked below
-        self.assertTrue(d["isolation_mute_supervisor_implemented"])
-        self.assertTrue(d["staged_validation"]["signal_bridge_via_relay_only"])
-        self.assertFalse(d["analog_placement_inside_oem"])
-        self.assertFalse(d["hardware_validated"])
-        refs = {p["ref"]: p for p in d["parts"]}
-        self.assertFalse({"J101", "J102", "J103"} & set(refs))
-        for ref in ["U2", "U3"]:
-            self.assertEqual(refs[ref]["nets"]["8"], "ANALOG_12V")
-        self.assertEqual(refs["R9"]["value"], "4.7k 1%")
-        self.assertEqual(refs["C20"]["nets"], {"1": "DIFF_P", "2": "INA_ISO"})
-        self.assertEqual(refs["C20"]["nets"]["1"], refs["U3"]["nets"]["1"])
-        self.assertEqual(refs["K501"]["nets"]["3"], "INA_ISO")
-        self.assertEqual(refs["K501"]["nets"]["4"], refs["R517"]["nets"]["1"])
-        self.assertEqual(refs["R517"]["nets"]["2"], refs["U1"]["nets"]["5"])
-        self.assertEqual(refs["D503"]["nets"], {"1": "GND", "2": None, "3": refs["U1"]["nets"]["5"]})
-        self.assertNotEqual(refs["C20"]["nets"]["2"], refs["U1"]["nets"]["5"])
-        self.assertNotEqual(refs["C21"]["nets"]["2"], refs["U1"]["nets"]["6"])
-        for name, expected in d["source_sha256"].items():
-            self.assertEqual(
-                hashlib.sha256((ROOT / name).read_bytes()).hexdigest(), expected
-            )
-
     def test_power_and_sequencer_join_core_without_external_control(self):
         d = json.loads((ROOT / "kicad/system-candidate/system-manifest.json").read_text())
         refs = {p["ref"]: p for p in d["parts"]}
@@ -166,23 +137,8 @@ class SystemCandidateTests(unittest.TestCase):
                 candidate.child(fp, "path")[1].strip('"'),
                 "/" + rootid + "/" + symbols[ref],
             )
-        with tempfile.TemporaryDirectory() as temp:
-            stage = Path(temp) / "stage"
-            stage.mkdir()
-            target = Path(temp) / "target"
-            target.mkdir()  # destination appears after preflight
-            with self.assertRaises(FileExistsError):
-                candidate.publish_noreplace(stage, target)
-            self.assertTrue(stage.exists())
-            self.assertTrue(target.exists())
-            link = Path(temp) / "broken"
-            link.symlink_to(Path(temp) / "missing")
-            with self.assertRaises(FileExistsError):
-                candidate.generate(link)
 
-    def test_atomic_refusal_and_official_model_identity(self):
-        with tempfile.TemporaryDirectory() as temp, self.assertRaises(FileExistsError):
-            candidate.generate(Path(temp))
+    def test_official_vendor_model_identity(self):
         for name, expected in {
             "CP_Wurth_WCAP-ATG5-P5D10L16.step": "11f68e0547f6812b472a84f3d5affd6a70778d47113482db6f6786ac86b0a0c6",
             "L_Wurth_WE-HCF-2013.step": "f8b342ac40cd4caa08067c027411c74c2abb560f562cbca932eca4cabaa6e739",

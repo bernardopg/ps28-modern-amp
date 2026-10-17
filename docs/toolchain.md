@@ -48,10 +48,10 @@ atualização completa de sistema, nunca atualização parcial nem curl|sh cego.
 ## Lacunas físicas
 
 Fonte de bancada, sonda diferencial, scope, carga, medição térmica, ESD, bancada e
-woofer não podem ser auditados por software. BENCH-001/SYS-001 são pré-requisitos.
+woofer não podem ser auditados por software. SYS-001 e BENCH-002 cobrem o que é físico.
 Documentação/simulação funcionais; containers EDA parseados, mas instalação com ressalva:
-`make eda-smoke` registra warnings `PROPERTY_ENUM(): No enum choices defined`
+O antigo smoke test EDA registrava warnings `PROPERTY_ENUM(): No enum choices defined`
 no KiCad 10.0.7. Reproduzidos também com BOARD nativo via pcbnew; export/import
-terminaram com exit 0. Causa e impacto ainda não determinados (TOOL-001).
+terminaram com exit 0. Sem impacto nos resultados; investigação descartada em 2026-10-17.
 Não suprimir warnings nem declarar toolchain plenamente saudável. Bancada e
 arquitetura ainda não liberadas.

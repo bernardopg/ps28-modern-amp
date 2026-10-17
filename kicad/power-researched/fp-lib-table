@@ -1,1 +1,0 @@
-(fp_lib_table (lib (name "PS28_POWER") (type "KiCad") (uri "${KIPRJMOD}/libraries/PS28_POWER.pretty") (options "") (descr "Study, not for fabrication")))

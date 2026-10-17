@@ -1,14 +1,8 @@
-.PHONY: check core-check analog-check doctor simulate simulate-input-order simulate-opa simulate-vmid simulate-vmid-protected simulate-power simulate-d019 route-system analog-protected-check render-3d eda-smoke erc drc fetch-reference
+.PHONY: check doctor simulate simulate-input-order simulate-opa simulate-vmid simulate-vmid-protected simulate-power  render-3d erc drc fetch-reference
 
 check:
 	python3 scripts/validate.py
 	python3 -m unittest discover -s tests/unit -v
-
-core-check:
-	python3 scripts/check_core.py
-
-analog-check:
-	python3 scripts/check_analog_capture.py
 
 simulate-input-order:
 	python3 scripts/simulate_input_power_order.py
@@ -18,9 +12,6 @@ simulate-opa:
 
 simulate-vmid-protected:
 	python3 scripts/simulate_vmid_protection.py
-
-analog-protected-check:
-	python3 scripts/check_vmid_protection.py --integrated
 
 simulate-power:
 	python3 scripts/simulate_power_d021.py
@@ -45,9 +36,6 @@ render-studio:
 	kicad-cli pcb export glb --include-pads --include-silkscreen --include-soldermask --no-dnp --force -o build/studio/board.glb kicad/system-candidate/system-candidate.kicad_pcb > build/studio/export.log 2>&1
 	xvfb-run -a blender --background --factory-startup --python scripts/blender_pcb_studio.py > build/studio/render.log 2>&1
 
-eda-smoke:
-	python3 scripts/eda_smoke.py
-
 erc:
 	python3 scripts/eda_check.py erc
 
@@ -57,16 +45,9 @@ drc:
 fetch-reference:
 	python3 scripts/fetch_reference.py
 
-simulate-d019:
-	python3 scripts/simulate_d019.py
-
 .PHONY: pcb-readiness
 pcb-readiness:
 	python3 scripts/check_pcb_readiness.py
-
-route-system:
-	python3 scripts/make_body_models.py
-	python3 scripts/route_system_candidate.py
 
 .PHONY: fab
 fab:
@@ -81,3 +62,7 @@ thermal-model:
 	xvfb-run -a blender --background --factory-startup --python scripts/blender_thermal_block.py
 	python3 scripts/check_thermal_fit.py
 	python3 scripts/render_thermal_budget.py
+
+.PHONY: body-models
+body-models:
+	python3 scripts/make_body_models.py

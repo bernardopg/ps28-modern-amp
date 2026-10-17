@@ -1,8 +1,8 @@
 # Planejamento
 
-Scrumban solo inspirado no wingdrive: sprints de duas semanas após ativação humana,
+Scrumban solo: WIP máximo 2, backlog ordenado por dependência, roadmap Agora/Depois.
 WIP máximo 2, backlog ordenado por risco/dependência, roadmap Now/Next/Later.
-S01 é preparação: não há compromisso de datas nem capacidade inferida.
+
 
 Fonte de estado: task .tasks/items/AREA-NNN.md. project-backlog é índice ordenado,
 não segunda cópia de status; sprint lista IDs e objetivo, não marca hardware aprovado.

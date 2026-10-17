@@ -103,19 +103,6 @@ class InputOrderTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             order.advance(0, 1, 0, 0, 0, 10e-6, 20000)
 
-    def test_native_interface_mapping_is_review_only_and_rejects_mutation(self):
-        core = json.loads((ROOT / "kicad/core-selected/core-manifest.json").read_text())
-        analog = json.loads(
-            (ROOT / "kicad/analog-protected/vmid-manifest.json").read_text()
-        )
-        audit = order.audit_interfaces(core, analog)
-        self.assertFalse(audit["schematics_connected_or_modified"])
-        for p in core["parts"]:
-            if p["ref"] == "C20":
-                p["nets"]["2"] = "GND"
-        with self.assertRaises(ValueError):
-            order.audit_interfaces(core, analog)
-
     def test_stale_report_removed_before_preflight_failure(self):
         with tempfile.TemporaryDirectory() as tmp:
             build = Path(tmp)

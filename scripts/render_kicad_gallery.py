@@ -1,159 +1,122 @@
 #!/usr/bin/env python3
-"""Native KiCad 3D previews, clearly labelled, never manufacturing outputs."""
+"""Native KiCad 3D views of the product board; previews, never manufacturing outputs.
+
+kicad-cli renders the board on a transparent background; Pillow only composites it
+on the graphite studio backdrop used by the Blender renders and encodes the GIF.
+The thermal block WRL is written with inverted face winding (renders black in
+KiCad), so rendering uses a temporary board copy whose block model adds `ccw FALSE`.
+shortcut: the source WRL keeps its hash for the thermal reports; fix the exporter
+in scripts/blender_thermal_block.py when those reports are regenerated.
+"""
 
 import argparse
 import hashlib
 import json
-import os
+import re
 import shutil
 import subprocess
 import tempfile
-from contextlib import contextmanager
 from pathlib import Path
 
-from check_core import text
-from create_core_draft import parse
-
 ROOT = Path(__file__).resolve().parents[1]
-VIEWS = {
-    "isometric": ("top", "325,0,25", True),
+BOARD = ROOT / "kicad/system-candidate/system-candidate.kicad_pcb"
+VIEWS = {  # name: (side, rotation, perspective)
+    "isometric": ("top", "-38,0,32", True),
     "top": ("top", "0,0,0", False),
     "bottom": ("bottom", "0,0,0", False),
 }
-DESIGNS = {
-    "selected": ROOT / "kicad/core-selected/ps28-modern.kicad_pcb",
-    "oem": ROOT / "kicad/core-oem-refined/ps28-modern.kicad_pcb",
-    "system": ROOT / "kicad/system-candidate/system-candidate.kicad_pcb",
-}
-CAMERA = {}  # per-design kicad-cli camera overrides, none needed now
-STATUS = {"system": "ROTEADA / REVISAO LOCAL TPA / G2 E FABRICACAO NAO APROVADOS"}
-FOOTERS = {
-    "selected": "NUCLEO APENAS | D-018/D-019 SEM PCB INTEGRADA",
-    "oem": "NUCLEO APENAS | D-018/D-019 SEM PCB INTEGRADA",
-    "system": "OEM 154x81; 269 FOOTPRINTS; CONECTIVIDADE FECHADA; REVISAO GLOBAL/FIT/TERMICA PENDENTES",
-}
+STILL, ORBIT = (2400, 1500), (1200, 750)
 
 
-def audit_models(board):
-    records = []
-    for fp in parse(board.read_text()):
-        if not isinstance(fp, list) or fp[0] != "footprint":
-            continue
-        ref = next(
-            text(p[2])
-            for p in fp
-            if isinstance(p, list) and p[:2] == ["property", '"Reference"']
-        )
-        models = [text(n[1]) for n in fp if isinstance(n, list) and n[0] == "model"]
-        missing = []
-        model_hashes = {}
-        for model in models:
-            resolved = model.replace("${KIPRJMOD}", str(board.parent))
-            for version in [10, 9, 8]:
-                key = f"KICAD{version}_3DMODEL_DIR"
-                resolved = resolved.replace(
-                    "${" + key + "}", os.environ.get(key, "/usr/share/kicad/3dmodels")
-                )
-            if not Path(resolved).is_file():
-                missing.append(model)
-            else:
-                model_hashes[model] = hashlib.sha256(Path(resolved).read_bytes()).hexdigest()
-        records.append(
-            {
-                "reference": ref,
-                "footprint": text(fp[1]),
-                "models": models,
-                "model_sha256": model_hashes,
-                "missing_models": missing,
-                "has_available_model": bool(models) and not missing,
-            }
-        )
-    return records
+def missing_models(board):
+    """References whose footprint has no resolvable 3D model."""
+    text = board.read_text()
+    missing = []
+    for block in re.split(r"\n\t\(footprint ", text)[1:]:
+        ref = re.search(r'\(property "Reference" "([^"]+)"', block).group(1)
+        models = re.findall(r'\(model "([^"]+)"', block)
+        resolved = [m.replace("${KIPRJMOD}", str(board.parent))
+                    .replace("${KICAD10_3DMODEL_DIR}", "/usr/share/kicad/3dmodels") for m in models]
+        if not resolved or not all(Path(m).is_file() for m in resolved):
+            missing.append(ref)
+    return sorted(missing)
 
 
-def electrical_context():
-    """Distinguish historical reference captures from the current integrated PCB."""
-    status = json.loads((ROOT / "tests/reports/documentation-media-refresh.json").read_text())
-    evidence_path = status["current_media_evidence"]
-    evidence = json.loads((ROOT / evidence_path).read_text())
-    board = DESIGNS["system"]
-    if evidence["board_sha256"] != hashlib.sha256(board.read_bytes()).hexdigest():
-        raise ValueError("Current PCB needs fresh native validation before labelled rendering")
-    if any(evidence["native_drc"].values()) or evidence["manufacturing_approved"]:
-        raise ValueError("Gallery context requires the checked, non-released candidate")
-    capture = ROOT / "kicad/analog-protected/analog-protected.kicad_sch"
-    inventory = ROOT / "kicad/analog-protected/vmid-manifest.json"
-    parts = json.loads(inventory.read_text())["parts"]
-    if capture.with_suffix(".kicad_pcb").exists():
-        raise ValueError(
-            "Analog PCB now exists: review the gallery scope before rendering"
-        )
-    sources = [
-        capture,
-        inventory,
-        ROOT / "simulation/analog/vmid-protection.json",
-        ROOT / "simulation/analog/input-power-order.json",
-        board,
-        board.with_suffix(".kicad_sch"),
-        ROOT / "mechanical/thermal-fit.json",
-        ROOT / "scripts/blender_thermal_block.py",
-        ROOT / "kicad/models/ps28-bodies/thermal_block.wrl",
-    ]
-    return {
-        "scope": "HISTORICAL_CORES_AND_ROUTED_SYSTEM_CANDIDATE",
-        "analog_protection_integrated_in_rendered_pcbs": True,
-        "system_candidate_rendered": True,
-        "system_candidate_banks_inside_oem_outline": True,
-        "evidence_report": evidence_path,
-        "protected_analog_capture_components": len(parts),
-        "protected_analog_unassigned_footprints": sorted(
-            p["ref"] for p in parts if not p.get("footprint")
-        ),
-        "notes": [
-            "selected/oem are historical core-only studies; the 32-part protected capture remains a separate reference",
-            "system-candidate integrates power, analog protection, sequencer and D-024 isolation inside the measured OEM outline",
-            "D-032 retains the OEM preamp/limiter; local TPA placement and connectivity reviewed, not full G2",
-            "Native ERC/DRC/parity zero; no manufacturing, thermal or EMI approval inferred from a render",
-        ],
-        "source_sha256": {
-            str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
-            for p in sources
-        },
+def staged_board(tmp):
+    """Copy the board and models; fix the block winding only in the copy."""
+    shutil.copytree(BOARD.parent, tmp / "board", ignore=shutil.ignore_patterns("*-backups", "*.lck"))
+    shutil.copytree(ROOT / "kicad/models", tmp / "models")
+    wrl = tmp / "models/ps28-bodies/thermal_block.wrl"
+    wrl.write_text(wrl.read_text().replace(
+        "material Material { diffuseColor .68 .71 .74 }",
+        "material Material { diffuseColor .74 .76 .78 specularColor .45 .45 .45 shininess .3 }").replace(
+        "geometry IndexedFaceSet {", "geometry IndexedFaceSet { ccw FALSE creaseAngle .5", 1))
+    return tmp / "board" / BOARD.name
+
+
+def native(board, path, side, rotation, perspective, size, quality):
+    command = ["kicad-cli", "pcb", "render", "--width", str(size[0]), "--height", str(size[1]),
+               "--side", side, "--background", "transparent", "--quality", quality,
+               "--rotate", rotation, "--zoom", "0.92", "-o", str(path), str(board)]
+    if perspective:
+        command.insert(3, "--perspective")
+    subprocess.run(command, check=True, capture_output=True, text=True)
+    return command[:-2] + ["<output>", "<board>"]
+
+
+def backdrop(cutout):
+    """Graphite vertical gradient plus soft contact shadow from the alpha channel."""
+    from PIL import Image, ImageFilter
+    w, h = cutout.size
+    top, bottom = (34, 37, 42), (10, 11, 13)
+    grad = Image.new("RGB", (1, h))
+    for y in range(h):
+        t = y / (h - 1)
+        grad.putpixel((0, y), tuple(round(a + (b - a) * t) for a, b in zip(top, bottom)))
+    canvas = grad.resize((w, h)).convert("RGBA")
+    alpha = cutout.getchannel("A")
+    shadow = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    shadow.putalpha(alpha.point(lambda a: a * .55))
+    shadow = shadow.transform((w, h), Image.AFFINE, (1, 0, -w * .006, 0, 1, -h * .02))
+    canvas.alpha_composite(shadow.filter(ImageFilter.GaussianBlur(w / 90)))
+    canvas.alpha_composite(cutout)
+    return canvas.convert("RGB")
+
+
+def render(frames, output):
+    from PIL import Image
+    build = ROOT / "build/renders/native"
+    build.mkdir(parents=True, exist_ok=True)
+    commands = []
+    with tempfile.TemporaryDirectory(prefix="ps28-kicad-") as tmp:
+        board = staged_board(Path(tmp))
+        for name, (side, rotation, perspective) in VIEWS.items():
+            raw = build / f"{name}.png"
+            commands.append(native(board, raw, side, rotation, perspective, STILL, "high"))
+            backdrop(Image.open(raw).convert("RGBA")).save(output / f"system-{name}.png", optimize=True)
+        orbit = []
+        for i in range(frames):
+            raw = build / f"orbit-{i:02d}.png"
+            commands.append(native(board, raw, "top", f"-38,0,{i * 360 / frames:g}", True, ORBIT, "basic"))
+            orbit.append(backdrop(Image.open(raw).convert("RGBA")).quantize(colors=255))
+        orbit[0].save(output / "system-orbit.gif", save_all=True, append_images=orbit[1:],
+                      duration=180, loop=0, optimize=True)
+    assets = [f"system-{v}.png" for v in VIEWS] + ["system-orbit.gif"]
+    manifest = {
+        "renderer": subprocess.check_output(["kicad-cli", "--version"], text=True).strip(),
+        "source_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
+        "method": "kicad-cli pcb render; Pillow composites the backdrop and encodes the GIF only",
+        "generator_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        "pcb": str(BOARD.relative_to(ROOT)),
+        "pcb_sha256": hashlib.sha256(BOARD.read_bytes()).hexdigest(),
+        "frames": frames,
+        "without_available_model": missing_models(BOARD),
+        "native_commands": commands,
+        "hardware_validated": False,
+        "manufacturing_approved": False,
+        "asset_sha256": {a: hashlib.sha256((output / a).read_bytes()).hexdigest() for a in assets},
     }
-
-
-@contextmanager
-def staged_assets(output):
-    """Render/verify the whole set before touching published assets; manifest last."""
-    output.parent.mkdir(parents=True, exist_ok=True)
-    with tempfile.TemporaryDirectory(
-        prefix=".ps28-gallery-", dir=output.parent
-    ) as temporary:
-        staging = Path(temporary)
-        yield staging
-        manifest = json.loads((staging / "manifest.json").read_text())
-        expected = {
-            f"{key}-{view}.{extension}"
-            for key in DESIGNS
-            for view, extension in [
-                ("isometric", "png"),
-                ("top", "png"),
-                ("bottom", "png"),
-                ("orbit", "gif"),
-            ]
-        }
-        if set(manifest["asset_sha256"]) != expected:
-            raise ValueError("Incomplete generated gallery")
-        for name, digest in manifest["asset_sha256"].items():
-            if Path(name).name != name or not name.endswith((".png", ".gif")):
-                raise ValueError("Invalid generated asset name")
-            if hashlib.sha256((staging / name).read_bytes()).hexdigest() != digest:
-                raise ValueError("Generated asset hash mismatch")
-        output.mkdir(parents=True, exist_ok=True)
-        for name in manifest["asset_sha256"]:
-            (staging / name).replace(output / name)
-        (staging / "manifest.json").replace(output / "manifest.json")
-        # Existing README/custom files are never generated or overwritten here.
+    (output / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
 
 
 def main():
@@ -165,161 +128,8 @@ def main():
         ap.error("--frames must be between 8 and 72")
     if shutil.which("kicad-cli") is None:
         ap.error("kicad-cli is required; no substitutes for native rendering")
-    with staged_assets(args.output.resolve()) as output:
-        render(args.frames, output)
-
-
-def render(frame_count, output):
-    from PIL import Image, ImageDraw, ImageFont
-
-    build = ROOT / "build/renders/native"
-    build.mkdir(parents=True, exist_ok=True)
-    font = ImageFont.truetype("/usr/share/fonts/TTF/DejaVuSans.ttf", 18)
-    small = ImageFont.truetype("/usr/share/fonts/TTF/DejaVuSans.ttf", 13)
-    manifest = {
-        "renderer": subprocess.check_output(
-            ["kicad-cli", "--version"], text=True
-        ).strip(),
-        "source_commit": subprocess.check_output(
-            ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
-        ).strip(),
-        "method": "kicad-cli pcb render; Pillow adds status bands and encodes GIFs only",
-        "generator_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-        "electrical_context": electrical_context(),
-        "hardware_validated": False,
-        "manufacturing_approved": False,
-        "designs": {},
-    }
-
-    def native(board, path, side, rotation, perspective, width, height, camera=()):
-        command = [
-            "kicad-cli",
-            "pcb",
-            "render",
-            "--width",
-            str(width),
-            "--height",
-            str(height),
-            "--quality",
-            "high",
-            "--background",
-            "opaque",
-            "--side",
-            side,
-            "--rotate",
-            rotation,
-            "--output",
-            str(path),
-        ]
-        if perspective:
-            command.append("--perspective")
-        command.extend(camera)
-        command.append(str(board))
-        path.unlink(missing_ok=True)
-        result = subprocess.run(
-            command, cwd=ROOT, capture_output=True, text=True, timeout=180, check=False
-        )
-        path.with_suffix(".log").write_text(result.stdout + result.stderr)
-        if result.returncode or not path.is_file():
-            raise RuntimeError(f"Native render failed: {path}; see its .log")
-        # Record portable replay commands relative to the repository root.
-        return [arg.replace(str(ROOT) + "/", "") for arg in command]
-
-    def labelled(path, title, unavailable, target, footer):
-        with Image.open(path) as raw:
-            image = raw.convert("RGB")
-        canvas = Image.new("RGB", (image.width, image.height + 98), "#101821")
-        canvas.paste(image, (0, 48))
-        draw = ImageDraw.Draw(canvas)
-        draw.text((18, 8), title, font=font, fill="#eef4f8")
-        draw.text(
-            (18, 30),
-            STATUS.get(target.stem.split("-")[0] if target else title.split(" | ")[1].lower(),
-                       "ESTUDO / NAO ROTEADA / SEM APROVACAO PARA FABRICACAO"),
-            font=small,
-            fill="#ffcf78",
-        )
-        draw.text(
-            (18, image.height + 54),
-            "3D ausente: " + (", ".join(unavailable) if len(unavailable) <= 12
-                              else ", ".join(unavailable[:12]) + f" +{len(unavailable) - 12}"),
-            font=small,
-            fill="#ffcf78",
-        )
-        draw.text(
-            (18, image.height + 74),
-            footer,
-            font=small,
-            fill="#ffcf78",
-        )
-        if target:
-            canvas.save(target)
-        return canvas
-
-    for name, board in DESIGNS.items():
-        records = audit_models(board)
-        unavailable = sorted(
-            r["reference"] for r in records if not r["has_available_model"]
-        )
-        entry = {
-            "pcb": str(board.relative_to(ROOT)),
-            "pcb_sha256": hashlib.sha256(board.read_bytes()).hexdigest(),
-            "footprints": len(records),
-            "without_available_model": unavailable,
-            "model_audit": records,
-            "native_commands": [],
-            "images": [],
-            "gif": f"{name}-orbit.gif",
-            "frames": frame_count,
-            "frame_duration_ms": 140,
-            "models_are_visual_not_manufacturer_qualification": True,
-        }
-        for view, (side, rotation, perspective) in VIEWS.items():
-            path = build / f"{name}-{view}.png"
-            entry["native_commands"].append(
-                native(board, path, side, rotation, perspective, 1280, 800,
-                       CAMERA.get(name, {}).get(view, ()))
-            )
-            target = output / path.name
-            labelled(
-                path, f"PS28 | {name.upper()} | KiCad 3D | {view}", unavailable, target,
-                FOOTERS[name],
-            )
-            entry["images"].append(target.name)
-        frames = []
-        for i in range(frame_count):
-            path = build / f"{name}-frame-{i:03d}.png"
-            angle = 360 * i / frame_count
-            entry["native_commands"].append(
-                native(board, path, "top", f"325,0,{angle:g}", True, 800, 500,
-                       CAMERA.get(name, {}).get("orbit", ()))
-            )
-            frames.append(
-                labelled(path, f"PS28 | {name.upper()} | KiCad 3D", unavailable, None, FOOTERS[name])
-            )
-        # Every frame above is an independent KiCad camera render, not a 2D image rotation.
-        frames[0].save(
-            output / entry["gif"],
-            save_all=True,
-            append_images=frames[1:],
-            duration=140,
-            loop=0,
-            optimize=True,
-            disposal=2,
-        )
-        entry["gif_size_pixels"] = list(frames[0].size)
-        with Image.open(output / entry["images"][0]) as preview:
-            entry["png_size_pixels"] = list(preview.size)
-        manifest["designs"][name] = entry
-        print(
-            f"{name}: 3 PNG + {frame_count} native frames; missing models: {unavailable}",
-            flush=True,
-        )
-    assets = sorted(p for p in output.iterdir() if p.suffix in [".png", ".gif"])
-    manifest["asset_sha256"] = {
-        p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in assets
-    }
-    (output / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
+    args.output.mkdir(parents=True, exist_ok=True)
+    render(args.frames, args.output.resolve())
 
 
 if __name__ == "__main__":

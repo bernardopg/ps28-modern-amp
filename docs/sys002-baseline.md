@@ -2,7 +2,7 @@
 
 Data:2026-10-17. Baseline: D-010/D-021/D-030/D-032 + requisitos Rev.B.
 Documentos de aceitação: [requirements.md](requirements.md),
-[matriz](../tests/acceptance.md), [plano](../tests/bench-plan.md) e
+[matriz](../tests/acceptance.md), [plano](../tests/acceptance.md) e
 [derating](capacitor-derating.md). Fontes e cálculos identificam o que é medido,
 extraído do fabricante ou premissa conservadora.
 
@@ -13,10 +13,9 @@ extraído do fabricante ou premissa conservadora.
   120–150 W apenas burst3/20 a50 Hz. Nenhuma promessa de150 W contínuos no woofer.
 - Operação10–40 °C; ensaio inicial25 ±5 °C, depois40 ±2 °C, limites térmicos
   explícitos. Perfil OEM e T1 ainda não foram medidos sob essa carga.
-- Excursão≤80% do Xlin medido e≤100 W médios. Enquanto Xlin for desconhecido,
-  não energizar woofer: finalizar elétrica com carga artificial e medir em ACOU-001.
+- Excursão: limiter/subsônico OEM e ≤100 W médios (D-037 substitui a medida de Xlin).
 - C401 e C403 selecionados por capacitância efetiva; a validação de estabilidade,
-  ripple, temperatura e excursão é execução BENCH-002/ACOU-001, não evidência inventada.
+  ripple e temperatura é por análise (D-037) e conferência na primeira energização (BENCH-002).
 
 ## Registro G0
 

@@ -1,27 +1,19 @@
-# Relatórios persistentes
-Só versionar resultados reais/resumos; logs brutos grandes ficam externos ou build/.
-Separar testes de infraestrutura (não hardware), simulação ideal e medidas de bancada.
-Template: objetivo, task/REQ, commit, instrumentos/modelos, setup, limites, resultados,
-anomalias, conclusão, responsável e links/checksums dos anexos.
+# Relatórios
 
-## Índice do estado atual — 2026-10-16
+Resumos versionados de verificações reais (CAD, simulação, revisão). Logs brutos
+ficam em `build/`. Relatórios datados registram o estado daquela data; não
+reescrever seus hashes com os da placa atual.
 
-- [TPA/layout e fontes atuais](tpa-local-layout-review.json): conectividade/local;
-  não aprovação global ou fabril. Mantém hashes históricos separados dos atuais.
-- [Fit térmico](thermal-fit-review.json): CAD, malha e cálculo concentrado;
-  não montagem real, FEM ou ensaio térmico.
-- [CI/simulação](simulation-ci-2026-10-16.json): reexecução verificada do commit
-  4346009, comparada a OPA1656/VMID/VMID protegido; não um novo modelo elétrico.
-- [Issues/main](main-sync-2026-10-16.json): reconciliação de 21 tasks/issues;
-  [primeira publicação](publication-sync-2026-10-16.json) é histórico do branch anterior.
+- Layout e térmica: [revisão local TPA](tpa-local-layout-review.json),
+  [fit térmico](thermal-fit-review.json), [prontidão PCB](pcb-readiness-review.json),
+  [integração da candidata](system-candidate-review.json)
+- Revisão e BOM: [revisão final](final-design-review-2026-10-16.json),
+  [fechamento BOM](bom-closeout-2026-10-16.json),
+  [capacitores SYS-002](sys002-capacitors-2026-10-17.json),
+  [G0 Rev.B](g0-revb-approval-2026-10-17.json), [peças PWR-001](power-pwr001-parts.json)
+- Simulação: [CI](simulation-ci-2026-10-16.json), [OPA1656](opa1656-model-study.json),
+  [VMID](vmid-buffer-study.json), [VMID protegido](vmid-protection-study.json),
+  [fonte CT](power-d021-study.json), [ordem de entrada](input-power-order-study.json)
+- Ferramentas: [setup](setup.md), [Headroom](headroom-harnesses.md)
 
-Estudos elétricos: [OPA1656](opa1656-model-study.json),
-[VMID](vmid-buffer-study.json), [VMID protegido](vmid-protection-study.json),
-[fonte CT](power-d021-study.json), [D-019](d019-interface-study.json).
-[Escopo, limites e comandos](../../docs/simulation.md).
-
-`production-readiness-2026-10-15.*` e relatórios de núcleo/capturas anteriores
-são snapshots históricos. Não substituir seus números/hashes pelos do PCB atual.
-Logs brutos, macromodelos TI e pacotes de CI ficam em build/; PDFs baixados em
-reference/ são cache ignorado pelo Git. Esses caches não são necessários para
-abrir o projeto ou executar os testes de repositório offline.
+Escopo e comandos das simulações: [simulation.md](../../docs/simulation.md).

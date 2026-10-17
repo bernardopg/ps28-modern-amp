@@ -49,7 +49,7 @@ ou componentes escolhidos:
 
 ## VMID e proteção dos pinos — D-017
 
-[Estudo físico de VMID](vmid-buffer-study.md): o RC de referência pode manter
+Estudo físico de VMID: o RC de referência pode manter
 REF acima de V++0,5 V quando AUX cai. RESET baixo não evita injeção nos pinos
 analógicos nem backfeed pelo driver/VMID. Qualificar descarga/clamp/corrente e
 fonte ausente antes de integrar. Assentamento calculado/modelado com AUX já
@@ -83,7 +83,7 @@ mínimo180 ms não atende; contrato executável usa mínimo360 ms e observaçõe
 explícitas. FAULT/CLIP_OTW têm pull-ups internos20…32 kΩ aDVDD (§7.5p8):
 R7/R8 podem realimentar controle morto. Não unir nova3V3 automaticamente.
 Supervisor/mute/proteção físicos ainda não capturados; latência100 µs não provada.
-Ver [sequência e pesquisa](integration-protection-review.md).
+Ver sequência e pesquisa.
 
 ## Incremento D-023 — subconjunto capturado
 

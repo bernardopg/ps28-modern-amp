@@ -1,53 +1,32 @@
 # GitHub e espelho do planejamento
 
 Repositório: <https://github.com/bernardopg/ps28-modern-amp>.
-21 tasks/21 issues espelhadas: **12 concluídas e 9 abertas**. PCB-002 é a única
-In Progress; as outras oito abertas estão To Do. Estados e dependências em
-`.tasks/items/`; relações em [github-mirror.json](../.tasks/github-mirror.json).
+Cada task aberta de `.tasks/items/` tem uma issue espelho; o mapa está em
+[github-mirror.json](../.tasks/github-mirror.json). O backlog local é canônico.
 
-## Política de publicação — 2026-10-16
+## Publicação
 
-**Trabalhar, fazer commit e publicar diretamente em `main`**, por determinação
-explícita do proprietário. Não criar branches/PRs de trabalho sem novo pedido.
-Preservar segurança com snapshot local, revisão de diff e validações, não com
-branches permanentes. Não usar force-push nem reescrever histórico publicado.
-
-A consolidação `4346009`, inicialmente publicada em um branch temporário, foi
-integrada por **fast-forward**, sem descartar commits. O branch temporário é
-removido após confirmação do push em `main`. Links ativos nas issues apontam para
-`blob/main`; nomes de branches nos relatórios de snapshots antigos são históricos.
+**Commit e push direto em `main`** (proprietário, 2026-10-16). Sem branches de
+trabalho sem pedido. Snapshot local, `make check` e revisão do diff antes do push;
+nunca force-push nem reescrita de histórico publicado.
 
 ## Issues e gates
 
-As issues espelham corpo/estado/evidência da task local; o backlog é canônico.
-Done refere-se ao trabalho da task, não a montagem/ensaio ou aprovação de gates.
-G1/G2/G3 permanecem humanos: nenhuma issue fecha só por ERC/DRC ou render.
+- Issue espelha título, estado e critérios da task; fechar junto com a task.
+- Done é trabalho de projeto concluído, não aprovação de gate.
+- G1–G4 são registros humanos; nenhuma issue fecha só por ERC/DRC ou render.
+- Milestones M0–M4 agrupam as issues; não há Projects board.
 
 ```sh
-python3 scripts/publish_backlog.py          # dry-run do publicador inicial
-python3 scripts/publish_backlog.py --apply  # criar faltantes, com autorização
+python3 scripts/publish_backlog.py          # dry-run: issues faltantes
+python3 scripts/publish_backlog.py --apply  # criar faltantes (com autorização)
 ```
 
-Esse script não sobrescreve/reabre issues existentes e não sincroniza em duas
-vias. Reconciliações são explícitas. Não há Projects board; milestones/issues e
-backlog local atendem ao planejamento.
+O script não reabre nem sobrescreve issues existentes; reconciliações são explícitas.
 
-- [Primeira consolidação](../tests/reports/publication-sync-2026-10-16.json):
-  snapshot histórico ainda no branch temporário.
-- [Reconciliação em main](../tests/reports/main-sync-2026-10-16.json): estado atual
-  das 21 issues e destino dos links.
+## CI
 
-## CI e organização
-
-[Run 38930461712](https://github.com/bernardopg/ps28-modern-amp/actions/runs/38930461712)
-**aprovado nos dois jobs**, sobre `4346009`. Resultado e escopo das simulações em
-[simulation.md](simulation.md); não confundir reexecução com ampliação do modelo.
-Cada novo push em `main` dispara sua própria CI; não herda o status do commit anterior.
-Checkout v7.0.1 e upload-artifact v7.0.2 foram conferidos nos repositórios oficiais,
-fixados por SHA e usam Node 24. Os runners usam Ubuntu 24.04 explícito, não
-`ubuntu-latest`; upload permanece ZIP (`archive: true`), sem redistribuir o modelo TI.
-
-Galeria atual em `docs/images/kicad-3d/`; renders parciais preservados em
-`docs/archive/render-staging-2026-10-13/`. Staging/logs/cache ficam fora do Git.
-Validações nativas de ERC/DRC e revisão de hardware continuam separadas da CI.
+`.github/workflows/validate.yml` roda `make check` e as simulações ngspice
+(incluindo o macromodelo oficial OPA1656 em container efêmero). Actions fixadas
+por SHA, Ubuntu 24.04. ERC/DRC nativos e revisão de hardware são locais.
 **Nenhum push autoriza fabricar, comprar ou energizar.**

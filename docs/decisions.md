@@ -25,7 +25,7 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
 - D-011 — Baseline de core selecionado para início exploratório: SLASEA8A p.28
   figura31, dois indutores e paralelamento A+C/B+D antes do LC. Symbol local 44 pinos,
   footprint TopEP (PowerPAD superior), sem pad inferior 45. Captura/placement não
-  incluem fonte/front-end nem fecham gates. Ver [incremento](core-draft.md), PCB-003.
+  incluem fonte/front-end nem fecham gates. Ver incremento, PCB-003.
 - D-012 — Seleção do core B para validação: HCF2013 7443631000, filme WIMA MKP2,
   bulk local Nichicon UHE1500µF/63V e terminais WR-TBL1377 5,00mm; todos footprints
   críticos preenchidos. Não mistura paralelamento/filtro com EVM; sourcing e bancada pendentes.
@@ -329,3 +329,23 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   em docs/capacitor-derating.md; limites são requisitos, não medidas. G0 Rev.B
   aprovado pelo proprietário em2026-10-17 (“Aprovo o G0 da Rev.B”); BENCH-002 verifica estabilidade/ripple/
   térmica, ACOU-001 mede excursão. Sem compra/fabricação/energização automática.
+
+- D-037 — **Verificação sem bancada; único passo físico antes do pedido é dimensional.**
+  2026-10-17, pedido do proprietário. Requisitos Rev.B passam a ser verificados por
+  análise, simulação, ERC/DRC e revisão CAD; ensaios de bancada (THD, 60 min térmico,
+  burst, carga resistiva, termopar em escapes PWM, T/S do woofer) saem do plano.
+  Premissas: (1) o caminho perfil U→backplate→dissipador OEM serviu por anos a um
+  classe AB de perdas muito maiores que as 5–20 W calculadas do TPA3255 (cenários em
+  `tests/reports/thermal-fit-review.json`); OTW/OTSD do TPA protegem o restante;
+  (2) preamp/limiter OEM e woofer não mudam (D-032), então a resposta acústica é a
+  original; (3) limites elétricos ficam garantidos por projeto com derating
+  (`docs/capacitor-derating.md`). Física restante: gabarito impresso 1:1 contra a
+  unidade OEM (MECH-002) e, na instalação, conferência de folgas/TIM e primeira
+  energização com lâmpada-série sem woofer (BENCH-002). Como confirmar: se OTW/clip
+  aparecer em uso normal ou rails saírem da faixa na primeira energização, abrir decisão
+  com o dado observado. Regras de segurança de `docs/safety.md` continuam inegociáveis.
+- D-038 — **Repositório só com a placa atual.** 2026-10-17, pedido do proprietário.
+  Núcleos `core-*`, capturas parciais (`analog-*`, `power-*`, `seq-d020`, `iso-d019`,
+  `vmid-protected`), geradores, estudos superados e `docs/archive/` removidos; continuam
+  no histórico Git. A candidata `kicad/system-candidate/` não depende deles (bibliotecas
+  locais e `kicad/models/`). Decisões acima que citam essas pastas descrevem a origem.

@@ -1,77 +1,28 @@
 ---
 id: ELEC-003
-title: Capturar schematic e revisar ERC
+title: Auditoria elétrica e G1
 status: To Do
 milestone: M2
-sprint: S03
+sprint: S04
 depends_on: ELEC-001
-updated: 2026-10-16
+updated: 2026-10-17
 ---
-
-# ELEC-003 — Capturar schematic e revisar ERC
+# ELEC-003 — Auditoria elétrica e G1
 
 ## Objetivo
 
-Capturar schematic e revisar ERC, atendendo docs/requirements.md e gates docs/safety.md.
+Auditar o esquema integrado de `kicad/system-candidate/` pino a pino contra
+datasheets e obter o gate G1. Trabalho de mesa.
 
 ## Critérios de aceite
 
-- [ ] Pin mapping, MPN/footprints e TPs auditados
-- [ ] ERC sem erros não justificados e revisão humana G1
+- [ ] Pinagem dos CIs (TPA3255, LM5164, LP2985, TPS3700/3808, 74LVC, TMUX6219, OPA1656) conferida
+- [ ] MPN ↔ footprint ↔ valor das 235 posições conferidos (BOM em `bom/`)
+- [ ] Modo PBTL: M1/M2, INPUT_C/D e quatro OUTs conforme SLASEA8A Fig. 31
+- [ ] Contrato RESET/FAULT conforme `docs/reset-supervisor-contract.md`
+- [ ] G1 assinado pelo proprietário
 
 ## Evidência
-2026-10-16: captura de sistema integrada e roteada, ERC 0 e paridade 0 após
-correção TP127/R506; 138 testes aprovados. D-032 mantém preamp/limiter OEM.
-O trabalho restante desta task é revisão independente de pinagem/MPN/footprint
-(incluindo itens sem MPN), não captura dos blocos já integrados. G1 não assinado;
-To Do preservado para essa revisão. Ver `docs/tpa-local-layout-review.md`.
 
-2026-10-10: D-024a (clamp BAT54 + 3,3 kΩ), footprint DGK local e auditoria do
-G6K-2F. Front-end completo passou para ELEC-004.
-
-D-024 (2026-10-09): interface D-019 capturada (`kicad/iso-d019`, ERC0) e ponte de
-sinal fechada só via relé na candidata; ver `docs/iso-d019.md`. Critérios abertos.
-
-D-023 (2026-10-09): sequenciador discreto capturado (`kicad/seq-d020`, ERC0) e
-integrado à candidata com D-021; ver `docs/seq-d020.md`. Pin mapping conferido
-contra datasheets TI; footprints não auditados, sem revisão G1. Critérios abertos.
-
-Captura integrada pendente. Contrato preparatório do supervisor em
-`docs/reset-supervisor-contract.md`, contra TI SLASEA8A p.20–21/30–31:
-RESET baixo apaga FAULT; startup normalmente leva FAULT baixo. Proibido AND
-combinacional ingênuo; memória de falha e intervalo mínimo de4ms exigidos.
-Não é implementação nem teste de bancada; critérios acima continuam pendentes.
-
-D-016: captura analógica ISOLADA em `kicad/analog-front-end`,21 componentes,
-58 pinos, quatro unidades em dois OPA1656ID. ERC nativo0 sem exclusões,14R/C
-comparados pin-a-pin/valor com SPICE e pinout SOIC8 contra TI. Fonte/VMID/supervisor
-externos; RCA/LFE/volume/fase/proteção ainda não capturados,9 footprints pendentes.
-Esquema INTEGRADO continua pendente. Ver `docs/analog-capture.md` e relatório.
-
-D-018: revisão integrada `kicad/analog-protected/`,32 componentes/80 pinos/ERC0;
-10 passivos/polaridade D201 auditados contra topologia independente;14 R/C LR4
-mais pinagem TI dos4amps conferidos. U2/U3p8 exclusivamente ANALOG_12V;
-J103p2 somente VMID monitor. Fonte+VMID capturados, não uma PCB adicional.
-13 footprints e MPNs/ESR/pulso/temp pendentes; sinais externos/TPA power-order,
-LINE/LFE/volume/DC/supervisor não completos. Não concluir task/gates por ERC0.
-
-D-019 documenta contrato preparatório para INPUT_A/B: isolar depois de C20/C21,
-controlar placa isolada, mute analógico e pré-carga observada antes do áudio.
-A captura D-018 e o núcleo NÃO foram conectados. Chaves/retorno/capacitância/
-comparadores, defaults e tempos seguem TBD; estudos RC não fecham G1 nem a
-dependência ELEC-002. Ver `docs/input-power-order-study.md`.
-
-Atualização docs/3D: `docs/development-status.md` e galeria agora explicitam que
-D-018/D-019 não estão integrados à PCB. Nenhum schematic/PCB foi alterado; 13
-footprints e pinagem/MPNs/control/proteção/supervisor finais seguem pendentes.
-Status To Do/dependência ELEC-002 preservados; não fechar G1 por imagem/ERC0.
-
-D-020: `kicad/system-candidate/` integra captura core+29 analógicos (76/212),
-GND/AUX_RAW compartilhados, p8OPA emANALOG_12V. J101–103 eram interfaces lógicas,
-removidas sem novos conectores OEM. Footprints/MPNs candidatos atribuídos;
-saída permanece ABERTA e proteção/mute/control/fonte/funções RCA não completos.
-Não fechar G1 nem marcar task Done. Baselines intactas; ver D-020.
-
-## Risco / aprovação
-
-Alterações de hardware exigem fonte primária e gate humano; sem pedidos automáticos.
+ERC 0 e paridade 0; captura integrada (D-020/D-032). Simulações em CI:
+[simulação](../../docs/simulation.md). Revisão independente ainda não feita.

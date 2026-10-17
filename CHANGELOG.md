@@ -4,6 +4,20 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 
 ## [Unreleased]
 
+### Reorganização, plano sem bancada e renders — 2026-10-17
+
+- D-037: requisitos verificados por análise/simulação/CAD; único passo físico antes
+  do pedido é o gabarito 1:1 (MECH-002); BENCH-002 vira montagem e primeira energização.
+- Tasks: BUY-001 absorvida por FAB-001; BENCH-001/ACOU-001 por BENCH-002; TOOL-001 e
+  PCB-003 removidas; MECH-002 criada. Issues GitHub espelhadas, obsoletas apagadas.
+- D-038: removidas revisões antigas (`core-*`, capturas parciais), geradores, estudos
+  superados, galerias OEM/núcleo e `docs/archive/`. Helpers restantes em `scripts/pcb_model.py`.
+- README direto, índice `docs/README.md` e `docs/status.md` (substitui estado/roadmap).
+- Render Blender refeito: perfil U OEM, bloco em alumínio jateado, parafusos/plaquetas
+  nominais, materiais conforme datasheet, luz de estúdio e vista de detalhe.
+- Galeria KiCad sem faixas de texto, qualidade alta, fundo grafite; corrige no render
+  o WRL do bloco com faces invertidas (aparecia preto).
+
 ### SYS-002 e revisão de capacitores —2026-10-17
 
 - Requisitos Rev.B: potência/duração/duty/THD/banda/ambiente/rails/térmica/excursão,

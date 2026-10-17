@@ -1,24 +1,20 @@
-# Matriz de aceitação — SYS-002 / Rev.B
+# Matriz de aceitação — Rev.B verificada sem bancada (D-037)
 
-Limites em [requirements](../docs/requirements.md); execução em
-[bench-plan](bench-plan.md). Especificar um limite não comprova conformidade.
+Limites em [requisitos](../docs/requirements.md). Método: **A** análise/cálculo,
+**S** simulação (CI), **C** CAD (ERC/DRC/fit), **D** dimensional, **I** instalação
+([procedimento](../docs/bringup.md)). Especificar um limite não comprova conformidade.
 
-| Requisito | Tasks / ensaio | Limites / evidência de aceite | Situação |
+| Requisito | Método | Evidência / onde fecha | Situação |
 |---|---|---|---|
-| REQ-001 | SYS-001 / MECH-001 / ACOU-001 | Etiqueta/DCR4,4 Ω e inspeção do proprietário; conferir fit e medir T/S/Xlin. | Identificação/integridade concluídas; fit/acústica pendentes. |
-| REQ-002 | SYS-002 / BENCH-002 | 100 W/4 Ω/50 Hz/60 min/100% duty;25±5 e40±2 °C; THD+N≤1%;120–150 W burst3/20/50 Hz/60 s. | Limites definidos; bancada pendente. |
-| REQ-003 | PWR-001 / BENCH-002 | PVDD<53,5 V incluindo picos; ripple≤5 Vpp a100 W; não cruzar UV/OV; medir inrush/T1 e fusível. | Cálculo/proteção capturados; bancada pendente. |
-| REQ-004 | PWR-001 / BENCH-002 | AUX11,69–12,50 V/≤120 mVpp/0,5 A; analog10,5–12,5 V; VMID48–52%/≤10 mVpp;3V3=3,20–3,40 V/≤33 mVpp;±15=14–16 V/≤150 mVpp. | Orçamento e limites definidos; medir corrente/estabilidade. |
-| REQ-005/006 | ELEC-002 / BENCH-002 | Entrada>10kΩ;20–150 Hz ±1 dB a1 W;THD+N≤0,3%/1 W e≤1%/100 W;LR4 e LFE/phase conforme Rev.B. | Reuso OEM definido; ensaios de caminho completo pendentes. |
-| REQ-007/008 | ELEC-001 / BENCH-001/002 | DC≤50 mV;pop≤100 mVp;hold≥360 ms;RESET/DC dwell12–28 ms;timeout≤1,44 s;trips bloqueiam áudio. | Captura/modelos disponíveis; sequência física pendente. |
-| REQ-009 | PCB-001/002 / MECH-001 / FAB-001 | ERC/DRC/paridade/aberturas0;MPN/BOM/CPL;C401≥1 µF/C403≥2,2 µF efetivos;fit/DFM/stackup. | Ver relatórios digitais atuais; sem aprovação G2/G3. |
-| REQ-010 | THERM-001 / BENCH-002 / ACOU-001 | Tj<110 °C/caps<70 °C/PCB e L<85 °C;repouso≤15 W;eficiência≥85%;X≤0,8Xlin eP≤100 W;woofer0 W antes Xlin. | Critérios definidos; medição térmica/acústica pendente. |
+| REQ-001 woofer | A, I | Woofer OEM identificado (SYS-001); uso no gabinete original | Identificado; instalação pendente |
+| REQ-002 potência | A | Perdas e margem térmica: `tests/reports/thermal-fit-review.json`; OTW/OTSD do TPA | Calculado; não declarar 150 W contínuos |
+| REQ-003 PVDD | A, S, I | `docs/power-d021.md`, derating; medida de PVDD na 1ª energização | Projeto fechado; medida na instalação |
+| REQ-004 rails | A, I | Orçamento em `docs/capacitor-derating.md`; TPs na 1ª energização | Projeto fechado; medida na instalação |
+| REQ-005/006 áudio | A, S | Preamp/crossover OEM sem alteração (D-032); simulações em `docs/simulation.md` | Reuso OEM; audição na instalação |
+| REQ-007 proteção/sequência | A, S, C | `docs/seq-d020.md`, `docs/iso-d019.md`, `docs/reset-supervisor-contract.md`; ELEC-003 | Captura feita; auditoria G1 pendente |
+| REQ-008 test points | C | PCB-004; TPs sem acesso a SPK± | Concluído |
+| REQ-009 PCB/BOM | C, D | ERC/DRC/paridade 0; BOM 235 posições; PCB-002, MECH-002, FAB-001 | G2/G3 pendentes |
+| REQ-010 térmica/ambiente | A, D, I | Fit térmico em `mechanical/thermal-block.md`; montagem BENCH-002 | Calculado; montagem pendente |
 
-Ruído adicional OEM: residual≤1,5 mVrms (alvo1 mV), SNR≥85 dBA ou≥80 dB
-sem ponderação referido a100 W, e≥60 dB a1 W. Mesmo filtro22 kHz da distorção;
-subtrair ruído do instrumento somente se método documentado.
-
-Cada relatório registra instrumento/modelo/série, calibração conhecida, carga real
-medida, configuração/filtros, ambiente, commit, duração, limite, resultado e responsável.
-Falha térmica/THD não autoriza reduzir silenciosamente a especificação: abrir decisão
-com dado medido. G0 da Rev.B e G4 de energização são registros humanos distintos.
+Falha observada na instalação não autoriza reduzir a especificação em silêncio:
+abrir decisão com o dado observado. G4 é registro humano.

@@ -1,45 +1,29 @@
-# Project backlog
+# Backlog
 
-Estado canônico nos arquivos de task; espelho em
-[github-mirror.json](github-mirror.json). Atualização: **2026-10-16**.
-21 tasks: **12 Done, 1 In Progress, 8 To Do**; nenhum gate humano inferido desses totais.
+Estado canônico em `items/`; espelho GitHub em [github-mirror.json](github-mirror.json).
+Atualizado em **2026-10-17**: 17 tasks, 12 Done, 1 In Progress, 4 To Do.
 
-## Trabalho atual e próximo
+## Caminho até a placa funcionando
 
-- **In Progress:** [PCB-002 — revisão global de layout/G2](items/PCB-002.md).
-  Rotas conectadas, revisão local do TPA e fit térmico nominal concluídos.
-- **To Do:** [ELEC-003 — auditoria elétrica/G1](items/ELEC-003.md),
-  [SYS-002 — limites de aceitação](items/SYS-002.md),
-  [BUY-001 — cotação/suprimento](items/BUY-001.md),
-  [FAB-001 — BOM/CPL e G3](items/FAB-001.md),
-  [BENCH-001 — instrumentos/limites](items/BENCH-001.md),
-  [BENCH-002 — bring-up/fit físico/térmica](items/BENCH-002.md),
-  [ACOU-001 — resposta acústica](items/ACOU-001.md),
-  [TOOL-001 — warnings da instalação](items/TOOL-001.md).
+Tudo é trabalho de mesa, exceto MECH-002 (dimensional) e BENCH-002 (instalação), conforme D-037.
 
-## Projeto concluído e referências
+| Ordem | Task | Estado | Gate | Depende de |
+|---|---|---|---|---|
+| 1 | [PCB-002 — revisão global de layout](items/PCB-002.md) | In Progress | G2 | PCB-001 |
+| 2 | [ELEC-003 — auditoria elétrica](items/ELEC-003.md) | To Do | G1 | ELEC-001 |
+| 3 | [MECH-002 — gabarito 1:1 na unidade OEM](items/MECH-002.md) | To Do | — | MECH-001 |
+| 4 | [FAB-001 — pacote, cotação e pedido](items/FAB-001.md) | To Do | G3 | PCB-002, ELEC-003, MECH-002 |
+| 5 | [BENCH-002 — montagem e primeira energização](items/BENCH-002.md) | To Do | G4 | FAB-001 |
 
-- [SETUP-001 — estrutura/docs/skills](items/SETUP-001.md)
-- [SETUP-002 — toolchain e CI](items/SETUP-002.md)
-- [SETUP-003 — GitHub e setup](items/SETUP-003.md)
-- [SYS-001 — woofer](items/SYS-001.md)
-- [MECH-001 — envelope OEM](items/MECH-001.md)
-- [PWR-001 — fonte e proteção](items/PWR-001.md)
-- [ELEC-001 — baseline PBTL](items/ELEC-001.md)
-- [ELEC-002 — simulações de front-end](items/ELEC-002.md)
-- [ELEC-004 — front-end D-032 por reaproveitamento OEM](items/ELEC-004.md)
-- [PCB-003 — estudo do núcleo](items/PCB-003.md)
-- [PCB-001 — placement e projeto térmico](items/PCB-001.md)
-- [PCB-004 — test points, LEDs e fan](items/PCB-004.md)
+PCB-002, ELEC-003 e MECH-002 podem andar em paralelo (WIP máximo 2).
 
-Done significa trabalho de projeto encerrado com a evidência aplicável, não
-aprovação física ou autorização de fabricar. Ensaios ficam em BENCH-002.
+## Concluídas
 
-## Sequência
+[SETUP-001](items/SETUP-001.md) · [SETUP-002](items/SETUP-002.md) ·
+[SETUP-003](items/SETUP-003.md) · [SYS-001](items/SYS-001.md) ·
+[SYS-002](items/SYS-002.md) · [MECH-001](items/MECH-001.md) ·
+[PWR-001](items/PWR-001.md) · [ELEC-001](items/ELEC-001.md) ·
+[ELEC-002](items/ELEC-002.md) · [ELEC-004](items/ELEC-004.md) ·
+[PCB-001](items/PCB-001.md) · [PCB-004](items/PCB-004.md)
 
-Uma placa: `kicad/system-candidate/`. Conferir revisão global e G1/G2, qualificar
-BOM/CPL e cotação; conferir gabarito/fit e obter G3 antes do pedido. Depois,
-bring-up resistivo e woofer. Não avançar gate por calendário nem ativar sprint
-implicitamente; dependências originais continuam nas tasks.
-
-[Roadmap](ROADMAP.md) · [Próximos passos de produção](../docs/production-roadmap.md)
+Done = trabalho de projeto verificado; não é autorização de compra, fabricação ou energia.

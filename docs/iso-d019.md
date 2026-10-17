@@ -72,7 +72,7 @@ acima do mínimo de VDD do TPA (10,8 V, §7.3) e abaixo do AUX mínimo (11,69 V)
    gatilho zera RUN: RESET baixo e mute imediatos, relé abre ≤ 3 ms, NC descarrega.
 6. Timeout de partida (U404, 0,62–1,44 s) cobre arme + pré-carga + dwell.
 
-## Simulação (`make simulate-d019`, 1350 casos + 216 de falha simples, `tests/reports/d019-interface-study.json`)
+## Simulação (script removido em D-038; histórico Git), 1350 casos + 216 de falha simples, `tests/reports/d019-interface-study.json`)
 
 Modelo: driver ideal (VMID + áudio), C20 8/10/12 µF, Form C com BBM, TPA = RIN
 10/20/40 kΩ para viés ideal, série 3,3 kΩ e BAT54 no **VF máximo** de catálogo; no defeito o viés vai a **0 instantaneamente** (pior
@@ -100,7 +100,7 @@ Aritmética de janela: 1,937 − 1,556 − 0,24 = 0,14 V ≥ −0,3; 5,057 + 1,5
 |---|---|---|
 | Falha simples, driver para GND | **Mitigado, não eliminado** | R517/R518 3,3 kΩ + BAT54 no pino: sem clamp ≈ −5,9 V; com clamp ≤ −0,351 V no VF **máximo** de catálogo (DS11005 p.2: ≤ 240 mV a 0,1 mA, ≤ 320 mV a 1 mA). Ainda 51 mV além de −0,3 V nesse canto; o clamp interno do TPA só divide corrente (não modelado). Fechar exigiria ≥ 12 kΩ em série (−5 dB). |
 | Falha simples, driver preso alto | **Aberto** | Pino até 12,5 V até a janela OV (filtro ~50 ms) abrir o relé; corrente limitada por 3,3 kΩ. Clamp superior exigiria trilho entre 6,5 e 6,7 V com tolerância que não existe na placa. |
-| Entrada real do TPA desligado/em RESET | **Não resolvível por projeto** | TI não publica o circuito; só RIN para viés ideal. Medir em bancada (BENCH-001). |
+| Entrada real do TPA desligado/em RESET | **Não resolvível por projeto** | TI não publica o circuito; só RIN para viés ideal. Aceito por projeto: relé isola a entrada até RESET liberado (D-037). |
 | Bounce do contato | **Resolvido por projeto** | Fecha com placa e pino ≈ 0 V, RESET baixo e mute ativo; RESET só sai 12–28 ms depois (bounce ≪ 3 ms de operação). Na abertura, bounce só reconecta brevemente o estado anterior. |
 | Contato colado | **Aberto, baixa probabilidade** | Sinal sem corrente (µA): solda de contato improvável. Sem contato auxiliar para detectar. |
 | Áudio < 20 Hz | **Falha segura** | Dispara a janela DC → mute e desligamento travado, não excursão do pino. Passa-altas subsônico registrado em ELEC-002 para evitar desligamento incômodo. |

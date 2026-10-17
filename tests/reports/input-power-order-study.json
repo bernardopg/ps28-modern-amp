@@ -63,19 +63,6 @@
     "passes_if_all_unmeasured_requirements_hold": true,
     "hardware_implemented_or_qualified": false
   },
-  "interfaces": {
-    "core_refs": [
-      "C20",
-      "C21"
-    ],
-    "source_ref": "J102",
-    "audit_level": "Manifest only; native KiCad electrical audits remain separate",
-    "mapping_for_review_only": {
-      "DIFF_POS": "DIFF_P",
-      "DIFF_NEG": "DIFF_N"
-    },
-    "schematics_connected_or_modified": false
-  },
   "independent_passive_spice": [
     {
       "name": "rc-c1e-05-r20000-s0",
@@ -130,11 +117,7 @@
   "hashes": {
     "simulation/analog/input-power-order.json": "9cd67b003a855e4b8f1b8e3176daf64a800a9d8a904eaf2a46301c160d4791b7",
     "simulation/analog/input-coupling.cir": "9b64afc18d15118cefefb26f640e7add702372589c5673bb05234f8d988fc876",
-    "scripts/simulate_input_power_order.py": "8658c5470fb2f7d44ebb1eeb20db8f2af5648f8164ca160590afba79e2f89af7",
-    "kicad/core-selected/core-manifest.json": "c30dd838895f625e641d76fe2199a89b2cbdbbac9b7194beaaefc5e15e2dbd74",
-    "kicad/analog-protected/vmid-manifest.json": "f4ab47cd848ccf1d1e14ed1c0d52f7ccb51eb6b55bfe189640ab7730778ff119",
-    "kicad/core-selected/ps28-modern.kicad_sch": "63ab6dc33d89510fd536616a62e29561d68b5bd0ccdd6294df5f34f85825e7e9",
-    "kicad/analog-protected/analog-protected.kicad_sch": "f46adefe0383358837e4eb49a41fe21b8017f39b549f789c10675ca4ac277303",
+    "scripts/simulate_input_power_order.py": "2563ac9147f24c633718e26dcc843b26235871ab16fb68cfa57571782b732f65",
     "simulation/analog/vmid-protection.json": "c44c0878556a9034e0764a2635e3768964bccd538d14dec7185f44749946e62a",
     "scripts/simulate_vmid_protection.py": "ff745ebfc8f0a0d61380580ed5b2494fda64e078c694873effce407eba019b10",
     "scripts/simulate_opa1656.py": "462214c11b8ee4decbd9afa32ee6e5493a7cfe38dbed35cd80369ded83e5318a"
