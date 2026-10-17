@@ -58,7 +58,7 @@ deste projeto. Memória e configurações locais não devem ser versionadas.
 
 MCP fornece acesso às ferramentas; compressão automática de todas as chamadas
 depende da integração de cada harness. O proxy local existente continua em
-`http://127.0.0.1:8787`, com serviço `headroom.service`. A extensão do Pi usa esse
+`http://127.0.0.1:8791`, com serviço `headroom.service`. A extensão do Pi usa esse
 proxy; os hooks de Claude/Codex asseguram sua disponibilidade. Trocar provedor
 não garante que sua API passe automaticamente pelo proxy.
 
