@@ -15,7 +15,7 @@ nominais de [thermal-fit.json](../../../mechanical/thermal-fit.json).
 
 Materiais conforme a peça real: bloco em alumínio 6061 jateado, perfil em
 alumínio extrudado, capacitores com capa preta (Nichicon UHE: "white letter on
-black sleeve"), terminais estanhados HASL, máscara verde padrão da fábrica.
+black sleeve"), pads em ENIG e máscara verde, conforme a especificação de fabricação (D-039).
 Terminais THT cortados 2 mm abaixo da placa, como após a montagem.
 
 Não é foto nem comprovação de fit físico; [manifesto](manifest.json).

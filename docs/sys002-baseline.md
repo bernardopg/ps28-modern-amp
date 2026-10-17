@@ -29,3 +29,11 @@ Commit da baseline aprovada: [`6cf2260da231`](https://github.com/bernardopg/ps28
 Regra aplicável: SYS-002 exige “Baseline e G0 aprovados pelo proprietário”; docs/safety.md
 exige “IA recomenda, humano aprova”. O aceite explícito foi recebido; ensaios físicos e demais gates permanecem
 independentes.
+
+## Emenda Rev.B1 — 2026-10-17 (D-037/D-040)
+
+Verificação por análise, simulação e CAD em vez de bancada; excursão limitada pelo
+limiter/subsônico OEM e ≤100 W médios, sem medida de Xlin. Aprovada por delegação
+explícita do proprietário: “Resolva todas essas pendências, decida tudo por conta
+própria pelo melhor resultado do projeto”. Limites elétricos da Rev.B mantidos.
+G4 (energização) continua exigindo o "ok" do proprietário no momento da instalação.

@@ -1,4 +1,4 @@
-# Requisitos Rev. B — SYS-002
+# Requisitos Rev. B1 — SYS-002
 
 Baseline de engenharia de 2026-10-17. Os limites abaixo são requisitos de aceitação,
 não resultados medidos nem autorização de energização. Aprovação humana G0 em

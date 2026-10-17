@@ -1,8 +1,8 @@
 {
   "renderer": "10.0.7",
-  "source_commit": "0d775bf322b2250560db7d38254dbb2d6f84cca5",
+  "source_commit": "5e7c47963c46534e3a8f83aa29844df7e66d1b31",
   "method": "kicad-cli pcb render; Pillow composites the backdrop and encodes the GIF only",
-  "generator_sha256": "4d362fbce2e0d5e00cfc0add2594079d7cbf12f4c23db161f0f9955d7d9cc460",
+  "generator_sha256": "49009e4fd0b222d30962d48e9d53e15635698fbb03ee95db29e60d749a549c67",
   "pcb": "kicad/system-candidate/system-candidate.kicad_pcb",
   "pcb_sha256": "e67ad575a8980b0f20a076bf441f6c74eef6c5992f5bccb4721df2fa06f75861",
   "frames": 16,
@@ -473,9 +473,9 @@
   "hardware_validated": false,
   "manufacturing_approved": false,
   "asset_sha256": {
-    "system-isometric.png": "205c4c7cfb83097e9a13470dd17083714cc45075487642cebb75d35439ff9cc9",
-    "system-top.png": "d9be6fbd8fca73a44193dca2ea88ab7a498eb9003e238fbb9669369a6da2dfb9",
-    "system-bottom.png": "d6ac8fa44b58818849eb3262a79977bd1a99b5f3e443ed994038470698374f5b",
-    "system-orbit.gif": "cb761e59d3985f4b9461822ae1a34801c2de9fe9bf927bf4afd3b379fc92032a"
+    "system-isometric.png": "572f1714816a9e334b78ef36f5b7e863b9b20640525715f54b4435dd17a042e3",
+    "system-top.png": "faa0819cfc593470599355a3a0e886df4a8c9df03e3a72921e7c7e69d72cb1d6",
+    "system-bottom.png": "01ddf7f9021b7fe3773ba0a9c9c2856f4d1fa275a4ea9d668761ed39c8dc3213",
+    "system-orbit.gif": "37cef265b60c0bfa6d6554ee0f63bd4bc0a7fc505fd7d3119db11926223c2a7d"
   }
 }

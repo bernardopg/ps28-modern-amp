@@ -349,3 +349,14 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
   `vmid-protected`), geradores, estudos superados e `docs/archive/` removidos; continuam
   no histórico Git. A candidata `kicad/system-candidate/` não depende deles (bibliotecas
   locais e `kicad/models/`). Decisões acima que citam essas pastas descrevem a origem.
+- D-039 — **Especificação de fabricação: 4 camadas 1,6 mm, ENIG, máscara verde.**
+  2026-10-17, decisão delegada pelo proprietário ("decida tudo por conta própria").
+  ENIG pela planicidade no TPA3255DDV (passo 0,635 mm) e nos pads de potência; HASL
+  sem chumbo deixa relevo irregular. Máscara verde: a placa fica dentro do gabinete,
+  verde dá melhor contraste para inspeção e retrabalho de uma unidade única, é o
+  padrão de AOI/prazo da JLCPCB. Como confirmar: cotação FAB-001 com esses parâmetros.
+- D-040 — **Emenda Rev.B1 dos requisitos aprovada por delegação.** 2026-10-17. A
+  verificação sem bancada (D-037) substitui a medida de Xlin por limiter/subsônico
+  OEM e ≤100 W médios e troca ensaios por análise. O proprietário delegou a decisão
+  ("Resolva todas essas pendências, decida tudo por conta própria pelo melhor
+  resultado do projeto"); registrado em `docs/sys002-baseline.md`. G4 continua humano.

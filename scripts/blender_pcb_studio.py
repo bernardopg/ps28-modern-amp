@@ -5,7 +5,7 @@ Board/component geometry comes only from the GLB. The OEM U profile, side shim,
 load spreaders and M3 screws are added from mechanical/thermal-fit.json and the
 same nominal profile used by scripts/blender_thermal_block.py (not an owner scan).
 Materials follow datasheets where known (Nichicon UHE: white print on black sleeve).
-Set PS28_STUDIO_PREVIEW=1 for a fast low-sample check.
+Set PS28_STUDIO_PREVIEW=1 for a fast low-sample check, PS28_STUDIO_VIEWS=top,... for a subset.
 """
 import contextlib
 import hashlib
@@ -63,7 +63,7 @@ def library():
     return {
         "mask": mat("Solder mask green", (.008, .12, .045), rough=.3, coat=.55),
         "silk": mat("Silkscreen", (.93, .93, .9), rough=.7),
-        "hasl": mat("HASL tin", (.86, .86, .84), metal=1, rough=.2),
+        "enig": mat("ENIG gold", (1.0, .77, .42), metal=1, rough=.18),
         "fr4": mat("FR4 edge", (.5, .45, .28), rough=.65),
         "blasted": mat("Al 6061 bead blasted", (.83, .84, .85), metal=1, rough=.42, bump=.25),
         "extrusion": mat("Al extrusion mill finish", (.78, .79, .8), metal=1, rough=.3, aniso=.6, bump=.12),
@@ -84,7 +84,7 @@ def library():
 
 def classify(lib, obj):
     name = obj.data.name
-    for key, role in (("soldermask", "mask"), ("silkscreen", "silk"), ("_pad", "hasl"),
+    for key, role in (("soldermask", "mask"), ("silkscreen", "silk"), ("_pad", "enig"),
                       ("_PCB", "fr4"), ("thermal_block", "blasted")):
         if key in name:
             obj.data.materials.clear()
@@ -314,7 +314,7 @@ def studio(scene, k):
         p.use_smooth = True
     cyc.modifiers.clear()
     lights = [
-        ("Key softbox", (-.16, .2, .34), 1.7, (.34, .22)),
+        ("Key softbox", (-.1, .14, .36), 2.2, (.34, .22)),
         ("Fill softbox", (.3, .26, .14), .3, (.3, .3)),
         ("Rim strip left", (-.26, -.18, .1), 1.0, (.04, .4)),
         ("Rim strip right", (.28, -.22, .12), .85, (.04, .4)),
@@ -324,7 +324,8 @@ def studio(scene, k):
         data = bpy.data.lights.new(name, "AREA")
         data.shape, data.energy = "RECTANGLE", power
         data.size, data.size_y = size
-        data.spread = math.radians(75)
+        # Narrow softbox beams stop spill onto the back wall (hotspot behind the board).
+        data.spread = math.radians(38 if "softbox" in name else 75)
         obj = bpy.data.objects.new(name, data)
         scene.collection.objects.link(obj)
         obj.location = centre + Vector(off)
@@ -335,6 +336,12 @@ def studio(scene, k):
     scene.camera = cam
     cam_data.lens, cam_data.clip_start, cam_data.clip_end = 85, .005, 20
     cam_data.sensor_width = 36
+    # Rim strips only sculpt product edges; light linking keeps them off the sweep (no hotspot).
+    sweep_only = bpy.data.collections.new("Sweep excluded from rims")
+    sweep_only.objects.link(cyc)
+    sweep_only.collection_objects[0].light_linking.link_state = "EXCLUDE"
+    for name in ("Rim strip left", "Rim strip right"):
+        scene.objects[name].light_linking.receiver_collection = sweep_only
     under = scene.objects["Underside softbox"]
     return cyc, under, centre
 
@@ -369,17 +376,24 @@ def render():
         "detail": (k(90, 62, 14), (-.1, .16, .085), .72, detail, True),
         "bottom": (k(97, 60.5, 0), (.12, .22, -.3), .86, None, False),
     }
+    only = os.environ.get("PS28_STUDIO_VIEWS", "").split(",")  # e.g. "top" re-renders one view
     for name, (target, offset, margin, fit, floor) in views.items():
+        if only != [""] and name not in only:
+            continue
         cyc.hide_render, under.hide_render = not floor, floor
+        scene.view_settings.exposure = -.8 if name == "top" else 0  # key light sits right above
         frame(scene, target, offset, margin, fit)
         scene.render.filepath = str(staging / f"{name}.png")
         bpy.ops.render.render(write_still=True)
     cyc.hide_render, under.hide_render = False, True
+    scene.view_settings.exposure = 0
     frame(scene, views["isometric"][0], views["isometric"][1], views["isometric"][2])
     bpy.ops.wm.save_as_mainfile(filepath=str(OUT / "ps28-studio.blend"))
     if PREVIEW:
         return
     for name in views:
+        if only != [""] and name not in only:
+            continue
         shutil.copy2(staging / f"{name}.png", MEDIA / f"{name}.png")
     sources = [GLB, Path(__file__), ROOT / "kicad/system-candidate/system-candidate.kicad_pcb",
                ROOT / "mechanical/thermal-fit.json"]
@@ -389,7 +403,7 @@ def render():
                 "limitations": ["Board and components from the KiCad GLB (catalog/proxy models)",
                                 "OEM U profile, shim, spreaders and M3 heads are nominal geometry "
                                 "from mechanical/thermal-fit.json, not an owner scan",
-                                "Solder mask colour is the fab default (green); not a sign-off"],
+                                "Green mask and ENIG pads per D-039 fab spec; not a sign-off"],
                 "source_sha256": {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest() for p in sources},
                 "image_sha256": {f"{n}.png": hashlib.sha256((MEDIA / f"{n}.png").read_bytes()).hexdigest() for n in views}}
     (MEDIA / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")

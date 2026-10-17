@@ -31,15 +31,9 @@ class RenderGalleryTests(unittest.TestCase):
         missing = gallery.missing_models(gallery.BOARD)
         self.assertEqual(missing, ["H6", "J6"] + sorted(f"TP{n}" for n in [102, 103, *range(110, 131)]))
 
-    def test_staged_block_model_fixes_winding_without_touching_source(self):
-        import tempfile
-        source = ROOT / "kicad/models/ps28-bodies/thermal_block.wrl"
-        before = source.read_bytes()
-        with tempfile.TemporaryDirectory() as tmp:
-            board = gallery.staged_board(Path(tmp))
-            self.assertTrue(board.exists())
-            self.assertIn("ccw FALSE", (Path(tmp) / "models/ps28-bodies/thermal_block.wrl").read_text())
-        self.assertEqual(source.read_bytes(), before)
+    def test_block_model_faces_outward_in_kicad(self):
+        text = (ROOT / "kicad/models/ps28-bodies/thermal_block.wrl").read_text()
+        self.assertIn("ccw FALSE", text)
 
 
 if __name__ == "__main__":

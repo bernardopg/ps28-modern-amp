@@ -3,10 +3,6 @@
 
 kicad-cli renders the board on a transparent background; Pillow only composites it
 on the graphite studio backdrop used by the Blender renders and encodes the GIF.
-The thermal block WRL is written with inverted face winding (renders black in
-KiCad), so rendering uses a temporary board copy whose block model adds `ccw FALSE`.
-shortcut: the source WRL keeps its hash for the thermal reports; fix the exporter
-in scripts/blender_thermal_block.py when those reports are regenerated.
 """
 
 import argparse
@@ -15,7 +11,6 @@ import json
 import re
 import shutil
 import subprocess
-import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,18 +35,6 @@ def missing_models(board):
         if not resolved or not all(Path(m).is_file() for m in resolved):
             missing.append(ref)
     return sorted(missing)
-
-
-def staged_board(tmp):
-    """Copy the board and models; fix the block winding only in the copy."""
-    shutil.copytree(BOARD.parent, tmp / "board", ignore=shutil.ignore_patterns("*-backups", "*.lck"))
-    shutil.copytree(ROOT / "kicad/models", tmp / "models")
-    wrl = tmp / "models/ps28-bodies/thermal_block.wrl"
-    wrl.write_text(wrl.read_text().replace(
-        "material Material { diffuseColor .68 .71 .74 }",
-        "material Material { diffuseColor .74 .76 .78 specularColor .45 .45 .45 shininess .3 }").replace(
-        "geometry IndexedFaceSet {", "geometry IndexedFaceSet { ccw FALSE creaseAngle .5", 1))
-    return tmp / "board" / BOARD.name
 
 
 def native(board, path, side, rotation, perspective, size, quality):
@@ -88,19 +71,17 @@ def render(frames, output):
     build = ROOT / "build/renders/native"
     build.mkdir(parents=True, exist_ok=True)
     commands = []
-    with tempfile.TemporaryDirectory(prefix="ps28-kicad-") as tmp:
-        board = staged_board(Path(tmp))
-        for name, (side, rotation, perspective) in VIEWS.items():
-            raw = build / f"{name}.png"
-            commands.append(native(board, raw, side, rotation, perspective, STILL, "high"))
-            backdrop(Image.open(raw).convert("RGBA")).save(output / f"system-{name}.png", optimize=True)
-        orbit = []
-        for i in range(frames):
-            raw = build / f"orbit-{i:02d}.png"
-            commands.append(native(board, raw, "top", f"-38,0,{i * 360 / frames:g}", True, ORBIT, "basic"))
-            orbit.append(backdrop(Image.open(raw).convert("RGBA")).quantize(colors=255))
-        orbit[0].save(output / "system-orbit.gif", save_all=True, append_images=orbit[1:],
-                      duration=180, loop=0, optimize=True)
+    for name, (side, rotation, perspective) in VIEWS.items():
+        raw = build / f"{name}.png"
+        commands.append(native(BOARD, raw, side, rotation, perspective, STILL, "high"))
+        backdrop(Image.open(raw).convert("RGBA")).save(output / f"system-{name}.png", optimize=True)
+    orbit = []
+    for i in range(frames):
+        raw = build / f"orbit-{i:02d}.png"
+        commands.append(native(BOARD, raw, "top", f"-38,0,{i * 360 / frames:g}", True, ORBIT, "basic"))
+        orbit.append(backdrop(Image.open(raw).convert("RGBA")).quantize(colors=255))
+    orbit[0].save(output / "system-orbit.gif", save_all=True, append_images=orbit[1:],
+                  duration=180, loop=0, optimize=True)
     assets = [f"system-{v}.png" for v in VIEWS] + ["system-orbit.gif"]
     manifest = {
         "renderer": subprocess.check_output(["kicad-cli", "--version"], text=True).strip(),

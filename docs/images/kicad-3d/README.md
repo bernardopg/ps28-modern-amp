@@ -14,6 +14,6 @@ Para a apresentação de produto, ver os [renders Blender](../pcb-studio/README.
 
 Modelos de catálogo KiCad (cores genéricas). Sem modelo 3D: test pads, J6 e H6
 (o bloco térmico usa o modelo de H5); lista no [manifesto](manifest.json).
-O WRL do bloco tem faces invertidas; o render usa cópia corrigida (ver script).
+
 
 Regenerar: `make render-3d`.

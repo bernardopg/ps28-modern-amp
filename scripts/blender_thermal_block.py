@@ -98,8 +98,9 @@ assert all(abs(z-(b['z'][0]+C['clamp_tap_depth_mm']))<.001 for z in mesh_check['
 (OUT/'mesh-check.json').write_text(json.dumps(mesh_check,indent=2)+'\n')
 model=ROOT/'kicad/models/ps28-bodies/thermal_block.wrl';model.parent.mkdir(parents=True,exist_ok=True)
 model.write_text('#VRML V2.0 utf8\n# ENGINEERING STUDY - NOT FOR MANUFACTURING\n'
-                 'Shape { appearance Appearance { material Material { diffuseColor .68 .71 .74 } } '
-                 f'geometry IndexedFaceSet {{ coord Coordinate {{ point [ {vertices} ] }} coordIndex [ {faces} ] }} }}\n')
+                 'Shape { appearance Appearance { material Material { diffuseColor .74 .76 .78 specularColor .45 .45 .45 shininess .3 } } '
+                 # Exported triangles wind clockwise seen from outside; ccw FALSE keeps KiCad normals outward.
+                 f'geometry IndexedFaceSet {{ ccw FALSE creaseAngle .5 coord Coordinate {{ point [ {vertices} ] }} coordIndex [ {faces} ] }} }}\n')
 block['status']='NOT RELEASED; calibrate stops/TIM on actual assembly'
 block['side_hole_height_mm']=s['z_mm']
 

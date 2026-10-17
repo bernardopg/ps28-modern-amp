@@ -4,6 +4,15 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 
 ## [Unreleased]
 
+### Pendências da reorganização — 2026-10-17
+
+- WRL do bloco térmico corrigido na origem (`ccw FALSE`, alumínio); galeria KiCad
+  usa o modelo direto, relatório térmico regenerado.
+- D-039: especificação de fabricação 4 camadas 1,6 mm, ENIG, máscara verde.
+- D-040: emenda Rev.B1 (verificação sem bancada) aprovada por delegação do proprietário.
+- Render Blender sem ponto claro no fundo (light linking nas rims), pads ENIG.
+- Bloco de memória Headroom do AGENTS.md versionado.
+
 ### Reorganização, plano sem bancada e renders — 2026-10-17
 
 - D-037: requisitos verificados por análise/simulação/CAD; único passo físico antes
