@@ -1,5 +1,9 @@
 # D-021 — Fonte PVDD não regulada: estudo e captura
 
+Atualização2026-10-17: [SYS-002 Rev.B](sys002-baseline.md) e
+[derating atual](capacitor-derating.md) prevalecem para limites/capacitância
+efetiva; C40110u50V0805 próximo do LP2985 e C40310u25V0603.
+
 Estudo ngspice e captura KiCad isolada. **Não é hardware validado, não libera compra,
 fabricação nem energização.** Gates G1–G4 continuam pendentes.
 

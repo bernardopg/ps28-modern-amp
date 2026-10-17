@@ -9,19 +9,13 @@
     "GLB exporter warning is recorded in build/studio/export.log"
   ],
   "source_sha256": {
-    "build/studio/board.glb": "17ceae211f5d537474df0ff84a6b4056c35f6f1ff550bcc2a0e86373ca0ae7db",
+    "build/studio/board.glb": "07f4561b0f65ac249c2bc051edef5dfc959462995886a5dcbb3c4ae7ef44ac2c",
     "scripts/blender_pcb_studio.py": "b02175500b258825442091fd626618f0b52ed47357721ba97086e008e552bca9",
-    "kicad/system-candidate/system-candidate.kicad_pcb": "208b01279bb4931c4e7fe21d8753ae3d13a545c27a326bf394bc800612cbb65e"
+    "kicad/system-candidate/system-candidate.kicad_pcb": "e67ad575a8980b0f20a076bf441f6c74eef6c5992f5bccb4721df2fa06f75861"
   },
   "image_sha256": {
-    "isometric.png": "44822bc090a039ffce3b5a2da79e8e469d90c55391d35b57073637a9a1b15db8",
-    "top.png": "d8ffc5af5afd7313d0a97c5dfa86e2899e17283188cceb0127f4dfcbeecf2947",
-    "bottom.png": "2aa7e4993f617b538c22d5252572a13f4dec845ecc0d13fbb915a2c89cfad125"
-  },
-  "metadata_refresh": {
-    "rendered_pcb_sha256": "0da323ec279f35226040927c67065f3517109f6dec64e5d2d34a2e95689db80f",
-    "current_pcb_sha256": "208b01279bb4931c4e7fe21d8753ae3d13a545c27a326bf394bc800612cbb65e",
-    "reason": "Purchasing fields and non-rendered duplicate F.Fab reference only; current full GLTF scene graph/geometry/binary equals rendered GLB excluding asset filename/timestamp",
-    "evidence": "tests/reports/bom-closeout-2026-10-16.json"
+    "isometric.png": "f6d0d9ae5288010818e00a69520790be52319482503e836d8d95ba0a29ca89a3",
+    "top.png": "75cc34eddb3047ca1b155fda504ae4a5af2a5959d542331fa71d21ee2699c880",
+    "bottom.png": "11e5f6af08353bbaa8e260995e8bbb3b4939d2aefa1bb61c875d63e126537fd5"
   }
 }

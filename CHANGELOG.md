@@ -4,6 +4,18 @@ Mudanças de infraestrutura/documentação separadas da revisão física Rev. A.
 
 ## [Unreleased]
 
+### SYS-002 e revisão de capacitores —2026-10-17
+
+- Requisitos Rev.B: potência/duração/duty/THD/banda/ambiente/rails/térmica/excursão,
+  matriz de aceitação e sequência numérica de bancada; G0 Rev.B aprovado
+  explicitamente pelo proprietário em2026-10-17.
+- Corrigidos C401 (10u50V0805, ramal local próximo do LP2985) e C403
+  (10u25V0603), com orçamento de capacitância efetiva e ESR legado/novo.
+- 48 capacitores de potência/auxiliares revisados: bias, tolerância, temperatura,
+  envelhecimento e correntes de ripple separados; não equivale a ensaio físico.
+- Fonte, BOM, esquema/PCB/gerador, evidência digital e artefatos sincronizados.
+
+
 ### Fechamento das 190 posições da BOM — 2026-10-16
 
 - Seleção canônica de 235 posições com fabricante, MPN, footprint, fonte e notas;

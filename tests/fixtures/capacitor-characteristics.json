@@ -1,0 +1,106 @@
+{
+  "review_date": "2026-10-17",
+  "source": "Murata SimSurfing public characteristics endpoint; c_dcbias_capacitance, tc and ac parameters",
+  "points": [
+    {
+      "partnumber": "GRM21BR61H106KE43",
+      "temperature_C": -20.0,
+      "dc_V": 13.25,
+      "ac_Vrms": 0.01,
+      "typical_uF": 2.0860468836442587
+    },
+    {
+      "partnumber": "GRM21BR61H106KE43",
+      "temperature_C": 25.0,
+      "dc_V": 13.25,
+      "ac_Vrms": 0.01,
+      "typical_uF": 2.3976917047046524
+    },
+    {
+      "partnumber": "GRM21BR61H106KE43",
+      "temperature_C": 70.0,
+      "dc_V": 13.25,
+      "ac_Vrms": 0.01,
+      "typical_uF": 2.746761183452862
+    },
+    {
+      "partnumber": "GRM188R61E106MA73",
+      "temperature_C": -20.0,
+      "dc_V": 3.5,
+      "ac_Vrms": 0.01,
+      "typical_uF": 4.317114526597604
+    },
+    {
+      "partnumber": "GRM188R61E106MA73",
+      "temperature_C": 25.0,
+      "dc_V": 3.5,
+      "ac_Vrms": 0.01,
+      "typical_uF": 4.987767346267831
+    },
+    {
+      "partnumber": "GRM188R61E106MA73",
+      "temperature_C": 70.0,
+      "dc_V": 3.5,
+      "ac_Vrms": 0.01,
+      "typical_uF": 4.978149778701233
+    }
+  ],
+  "sources": [
+    {
+      "cache": "build/sys002-capacitors/sources/murata-curves.json",
+      "url": "https://ds.murata.com/simserve/characteristics",
+      "sha256": "9783a01aac7bbb2bad110773e8911ce6d24667d64dde71ae9fbbd9b798c19f66",
+      "publisher": "Murata",
+      "retrieved": "2026-10-17",
+      "typical_not_guaranteed": true
+    },
+    {
+      "cache": "build/sys002-capacitors/sources/murata-final-candidates.json",
+      "url": "https://ds.murata.com/simserve/characteristics",
+      "sha256": "bc67e1cfed2785606324bdf81d32e384b3254fee40e032acfe50e161d042c069",
+      "publisher": "Murata",
+      "retrieved": "2026-10-17",
+      "typical_not_guaranteed": true
+    },
+    {
+      "cache": "build/sys002-capacitors/sources/murata-other-power.json",
+      "url": "https://ds.murata.com/simserve/characteristics",
+      "sha256": "a9be2735d70ad4d2935c7b7c24affe09c6120848fbc605132ec13f9092f72d3c",
+      "publisher": "Murata",
+      "retrieved": "2026-10-17",
+      "typical_not_guaranteed": true
+    },
+    {
+      "cache": "build/sys002-capacitors/sources/murata-esr.json",
+      "url": "https://ds.murata.com/simserve/characteristics",
+      "sha256": "8f26896d6b30d46d79b3acfb8734c6edf029d135c134887834ec2b62e0a7f465",
+      "publisher": "Murata",
+      "retrieved": "2026-10-17",
+      "typical_not_guaranteed": true
+    },
+    {
+      "cache": "build/sys002-capacitors/sources/tdk-input.pdf",
+      "url": "https://www.rxelectronics.de/datasheet/2e/cga6n3x7r2a225k230ab.pdf",
+      "sha256": "9827eb18af696866d0694ecaf01863fe0bf8088c41e3d5dd43f8fd9436026123",
+      "publisher": "TDK",
+      "retrieved": "2026-10-17",
+      "typical_not_guaranteed": true
+    },
+    {
+      "cache": "build/sys002-capacitors/sources/taiyo-output.pdf",
+      "url": "https://media.digikey.com/pdf/Data%20Sheets/Taiyo%20Yuden%20PDFs%20URL%20links/TMK325B7226KM-PR_SS.pdf",
+      "sha256": "5a77c6edb0453263646898bbfb2d21f8dc0e49d440f344a649f0340358f3ab4f",
+      "publisher": "Taiyo Yuden",
+      "retrieved": "2026-10-17",
+      "typical_not_guaranteed": true
+    },
+    {
+      "cache": "build/sys002-capacitors/sources/rubycon-usc.pdf",
+      "url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/502/USC.pdf",
+      "sha256": "c087f003be3327836ac2eec4c678e877acda92f8da705c6293d91a52a2486732",
+      "publisher": "Rubycon",
+      "retrieved": "2026-10-17",
+      "typical_not_guaranteed": true
+    }
+  ]
+}

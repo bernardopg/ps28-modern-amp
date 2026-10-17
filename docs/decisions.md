@@ -318,3 +318,14 @@ Usar D-NNN: problema, opções, fonte, consequência, responsável, status/data 
 
 
 2026-10-16 — Fechamento BOM: selecionar códigos exatos nas 235 posições; usar RT 0,1%/25 ppm nas janelas, CRCW comuns no tamanho real, WIMA C109 W7,2 mm com pads P5 preservados; separar porta-fusível/fusível e acessórios; confirmar derating MLCC, fornecimento e montagem nos gates de compra/DFM e bancada. Evidência: `docs/bom-closeout-2026-10-16.md`.
+
+- D-036 — **SYS-002 Rev.B e derating**,2026-10-17: qualificar100 W contínuos em
+  carga artificial e120–150 W burst3/20; ambiente10–40 °C; woofer0 W até Xlin
+  medido, depois≤80%Xlin e≤100 W médios. C401 passa a10u50V0805 próximo do U401;
+  C40310u25V0603 para≥2,2uF efetivos e versões legado/nova do LP2985, com ESR
+  incluindo cobre. C310/C311100V mantidos apesar da recomendação2×VINmáx
+  (107V): C efetiva e ripple calculados pela curva/Eq.23; exceção explícita no
+  relatório, a confirmar em bancada. Curvas típicas, tolerância/idade/modelo e48 capacitores revistos
+  em docs/capacitor-derating.md; limites são requisitos, não medidas. G0 Rev.B
+  aprovado pelo proprietário em2026-10-17 (“Aprovo o G0 da Rev.B”); BENCH-002 verifica estabilidade/ripple/
+  térmica, ACOU-001 mede excursão. Sem compra/fabricação/energização automática.

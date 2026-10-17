@@ -1,39 +1,34 @@
-# Requisitos Rev. A — rascunho verificável
+# Requisitos Rev. B — SYS-002
 
-Status: baseline herdada do starter, pendente de confirmação física e do proprietário.
+Baseline de engenharia de 2026-10-17. Os limites abaixo são requisitos de aceitação,
+não resultados medidos nem autorização de energização. Aprovação humana G0 em
+`docs/sys002-baseline.md`; G4 continua independente. D-010/D-021/D-030/D-032 mantidos.
 
-- REQ-001: preservar gabinete/dutos/woofer; confirmar modelo, impedância nominal,
-  DCR, integridade, dimensões e dados do fabricante (task SYS-001).
-  Medido pelo proprietário 2026-10-09: Re = 5,0 − 0,6 (pontas) = 4,4 Ω, igual ao
-  4,4 Ω ±10% do manual p.9. Etiqueta (foto do proprietário): `20PR10DAG-FW06-E`,
-  código `070917`. Família 8" Harman/Infinity; parts list do manual não traz o woofer.
-  Busca pública (eBay/Encompass, fonte fraca) não achou Xmax, Fs, Qts, Vas nem
-  potência térmica; variante FW01 é outra impedância e não serve de referência.
-  Sem dados: limiter provisório 100 W contínuos (rated output do manual p.2) até
-  medir T/S em ACOU-001. Manual p.2–3: DC offset ≤10 mV (máx. 50), transitórios
-  liga/desliga ≤50 mV pico (máx. 100) e proteção DC por relé/crowbar; usar como
-  piso de REQ-007, não como garantia do projeto novo.
-- REQ-002: alvo 120–150 W em carga nominal 4 Ω, não compromisso de potência.
-  Definir frequência, duração, THD+N, duty cycle e temperatura ambiente em SYS-002.
-  P=V_RMS²/R: 150 W requerem 24,49 Vrms, 34,64 Vp e 6,12 Arms.
-  Com Re 4,4 Ω, 150 W pedem 25,7 Vrms/36,3 Vp; PVDD D-021 ≈42–46 V sob carga
-  deixa margem de swing, então o limite passa a ser limiter/woofer, não a fonte.
-- REQ-003 (D-010/D-021): reaproveitar T1 original com retificação full-wave CT
-  dois diodos, PVDD não regulado ≈42–50 V calculado (34,35 VAC por metade medido);
-  sobretensão abaixo de 53,5 V, bulk ≥63 V e limiter obrigatórios;
-  fonte externa isolada somente bancada/fallback; VA e regulação sob carga não medidos;
-  especificar tolerância, ripple, transient, inrush, proteções e conector em PWR-001.
-- REQ-004: rail auxiliar 12 V; orçamento candidato ≥0,5 A a calcular; VMID ~6 V.
-- REQ-005: RCA L/R sem curto entre fontes; LFE independente com bypass do LPF,
-  seleção LINE/LFE, volume 50 kΩ log candidato e fase 0°/180° sem MCU.
-- REQ-006 (D-022): LINE LR4 ajustável 50–150 Hz no controle CROSSOVER original, -6,02 dB em Fc; tolerâncias, ganho e headroom
-  com entrada 2 Vrms a aprovar após SPICE e bancada; LFE não atravessa LPF.
-- REQ-007: RESET seguro na partida/desligamento; indicadores FAULT/CLIP_OTW;
-  fusível, polaridade reversa, transientes, térmica e proteção DC analisados.
-- REQ-008: test points PVDD/12 V/VMID/RESET/FAULT/CLIP_OTW/LINE/LFE/DIFF/SPK±;
-  3V3 somente se justificado; potência/referência de cada TP documentadas.
-- REQ-009: PCB reparável com footprint/PowerPAD e dissipador revisados; número de
-  camadas/cobre aprovados com fábrica, não escolhidos apenas por estética.
+| ID | Requisito verificável | Aceitação / fronteira |
+|---|---|---|
+| REQ-001 | Reutilizar gabinete, dutos e woofer `20PR10DAG-FW06-E`, etiqueta `070917`. | DCR corrigido das pontas **4,4 Ω**, medido pelo proprietário; referência OEM 4,4 Ω ±10%. Identificação/integridade SYS-001 concluídas; fit físico em MECH-001 e T/S/excursão em ACOU-001. Não transferir dados da variante FW01. |
+| REQ-002 | Eletrônica: **100 W / 4 Ω / 50 Hz / 60 min / duty 100% / ambiente 25 ±5 °C**, THD+N ≤1%. | Carga resistiva não indutiva, refrigeração dimensionada, 20 Vrms / 5 Arms. Repetir qualificação a **40 ±2 °C** após aprovação térmica progressiva. Alvo adicional **120–150 W em burst 3 ciclos ON / 20 ciclos totais a 50 Hz**, 15% duty, 60 s; 150 W =24,495 Vrms /6,124 Arms, THD+N ≤1% na janela ON estabilizada. Não declarar 150 W contínuos. |
+| REQ-003 | T1 original, retificação CT com **dois diodos**, PVDD não regulado. | Metade do secundário 34,35 VAC medida; operação nominal calculada 42–50 V, bancada permitida inicialmente 24–48 V DC isolados; tensão de trabalho, inclusive ripple/picos, **<53,5 V**. OV/UV de projeto em power-d021; não contornar trips. Ripple PVDD ≤5 Vpp a100 W/60 Hz de rede, sem queda abaixo do UV. Nenhuma autorização de rede/primário por este requisito. |
+| REQ-004 | AUX_RAW e ANALOG_12V, VMID, SEQ_3V3 e ±15 V dentro do orçamento. | AUX_RAW **11,69–12,50 V DC**, ripple ≤120 mVpp; envelope de seleção de capacitor **13,2 V**. ANALOG_12V **10,5–12,5 V**, VMID **0,48–0,52 × ANALOG_12V**; ripple VMID ≤10 mVpp. SEQ_3V3 **3,20–3,40 V**, ripple ≤33 mVpp, seleção a3,5 V. P15V/N15V: magnitude **14–16 V**, ripple ≤150 mVpp. Auxiliar requerido ≥0,5 A; fan limitado a0,20 A, TPA0,12 A, lógica0,01 A, relé0,02 A, áudio/monitores0,05 A, reserva0,10 A. Verificar consumo real em BENCH-002. |
+| REQ-005 | Reutilizar preamp/limiter OEM D-032, com controles LINE/LFE, volume e fase. | RCA L/R sem curto entre fontes; impedância de entrada >10 kΩ; LINE soma canais; LFE contorna crossover. Fase 0°/180° funcional, ganho entre posições ±1 dB. Máximo de entrada de ensaio2 Vrms, ajustar volume para não ultrapassar potência/excursão. Não reintroduzir LPF nem auto-on novo. |
+| REQ-006 | Banda e distorção definidas, preservando o crossover OEM 50–150 Hz /24 dB por oitava. | Eletrônica isolada do crossover:20–150 Hz, ganho ±1 dB a1 W; THD+N ≤0,3% a1 W e≤1% a100 W, frequências20/35/50/100/150 Hz, 5 s/ponto em carga artificial. LINE: Fc nos extremos50/150 Hz ±20%, resposta LR4 −6,02 ±2 dB em Fc, inclinação24 ±4 dB/oitava onde mensurável acima do piso de ruído; LFE sem corte variável. Sistema acústico: alvo OEM35–150 Hz ±3 dB em ACOU-001, sem inventar resposta já obtida. |
+| REQ-007 | Proteção e sequência seguras, sem usar proteção térmica como ponto normal. | Offset diferencial SPK+−SPK−: alvo≤10 mV, limite50 mV DC; pop ON/OFF≤100 mV pico, alvo50 mV, medido após filtro áudio22 kHz. RESET seguro e novo comando humano após trip. Hold≥360 ms; relé antes de liberar RESET (12–28 ms); DC_OK2–5 V por12–28 ms antes de AUDIO_EN; timeout de partida≤1,44 s. FAULT/CLIP_OTW, janelas de rails, perda de alimentação e DC devem bloquear áudio conforme D-023/D-024. Sem aprovar woofer somente por ERC/DRC. |
+| REQ-008 | Test points e método de medição sem curto de saída PBTL. | Registrar PVDD/AUX/ANALOG_12V/VMID/SEQ_3V3/RESET/FAULT/CLIP_OTW/DIFF/SPK±. Somente sonda diferencial adequada ou aquisição isolada para SPK; nunca garra terra em SPK±. THD+N20 Hz–22 kHz, PWM rejeitado por filtro de medição; registrar largura de banda e ruído do instrumento. |
+| REQ-009 | PCB única reparável, stackup de4 camadas, fit e capacitores qualificados. | ERC/DRC/paridade/aberturas=0. Footprints/MPNs/BOM/CPL concordantes, polaridades e rotações conferidas, cobre externo35–70 µm e stackup confirmados pela fábrica antes G3. C401≥1 µF efetivo, C403≥2,2 µF efetivo para LP2985 legado ou novo; regras e orçamento em capacitor-derating.md. Fit físico, dissipador e EMI ainda precisam de validação. |
+| REQ-010 | Ambiente, aquecimento, repouso e excursão limitados. | Operação qualificada10–40 °C ambiente; armazenamento−20–70 °C, seco/desenergizado. Alvos de interrupção: Tj calculada≥110 °C, case de capacitor≥70 °C, indutor/PCB≥85 °C ou trip térmico. Perfil OEM deve satisfazer mechanical/thermal-block.md; a15 W perdidos requer perfil≤50,4 °C a40 °C ambiente. Potência de entrada em repouso sem áudio≤15 W, alvo≤12 W (OEM); eficiência da etapa de potência a100 W≥85%, separar auxiliares. Woofer desconectado em toda a qualificação elétrica. Excursão permitida somente após ACOU-001: pico unilateral≤0,8×Xlin medido, potência média≤100 W e sem clipping, usando o menor limite; abaixo de35 Hz sem ensaio energizado do woofer até comprovar proteção subsônica/excursão. |
+
+Xlin é o deslocamento unilateral medido no qual compressão de deslocamento versus
+tensão atinge10% em relação à região de pequeno sinal, em qualquer sentido; usar o
+menor valor dos dois sentidos e das frequências ensaiadas. Não equivale a Xmax do
+fabricante. Sem Xlin medido, **potência de ensaio no woofer=0 W**; isso é uma regra
+operacional fechada, não um valor fictício de excursão. ACOU-001 deve fornecer a
+curva tensão/frequência→deslocamento antes de liberar reprodução.
+
+Origem dos limites: manual PS28 Rev.1 mar/2007 pp.2–3 (100 W, burst3/20, THD,
+DC/pop, ruído, térmica e repouso); pp.1/9 (banda/woofer); TI TPA3255 SLASEA8A,
+LP2985 SLVS522S e LM5164 SNVSAU4D. Duração60 min, ambiente40 °C, reserva de
+corrente, ripple, Xlin80% e temperaturas de interrupção são **margens de engenharia
+D-036**, a verificar, não especificações publicadas do woofer.
 
 Fora de escopo: fonte AC integrada, DSP, rádio, app, PFFB customizado e EQ.
-Matriz requisito→task→ensaio em tests/acceptance.md. Limites TBD bloqueiam aprovação.
+Matriz requisito→task→ensaio em tests/acceptance.md.

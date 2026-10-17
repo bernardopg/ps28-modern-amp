@@ -36,3 +36,7 @@ G4 carga resistiva/rails/DC/FAULT/térmica aprovados; G5 teste acústico e integ
 Status inicial: todos PENDENTES. ERC vazio não muda status. IA recomenda, humano aprova.
 Gates são marcos curtos, não auditorias: G0–G2 podem ser aprovados juntos na revisão
 final do layout; G3 antes do pedido; G4/G5 na bancada.
+
+Registro atual2026-10-17: **G0 Rev.B aprovado pelo proprietário** (“Aprovo o G0
+da Rev.B”); baseline/commit em [sys002-baseline.md](sys002-baseline.md).
+G1–G5 permanecem pendentes. Esse aceite não autoriza energização/fabricação.

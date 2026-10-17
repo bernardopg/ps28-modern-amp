@@ -1,5 +1,16 @@
 # Estado de desenvolvimento
 
+## SYS-002 e capacitores —2026-10-17
+
+[Requisitos Rev.B / G0](sys002-baseline.md) preparados com potência, duração,
+duty, THD, banda, ambiente, térmica e excursão verificáveis.
+[48 capacitores revistos](capacitor-derating.md); C40110u50V0805 aproximado
+do LP2985 e C40310u25V0603 para capacitância efetiva legado/novo. PCB269
+footprints,3.535 segmentos/500 vias; verificação nativa ERC/DRC/paridade/aberturas0.
+G0 Rev.B aprovado pelo proprietário em2026-10-17; ripple/estabilidade/térmica reais pertencem
+a BENCH-002, excursão a ACOU-001. Nenhuma liberação fabril/energização.
+
+
 ## Complemento final — 2026-10-16
 
 [Revisão final, BOM e blueprints](final-design-review-2026-10-16.md): seis MPNs

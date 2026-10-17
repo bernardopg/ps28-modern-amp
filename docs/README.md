@@ -1,5 +1,8 @@
 # Documentação técnica
 
+[SYS-002 Rev.B e G0](sys002-baseline.md): limites numéricos de aceitação;
+[derating de48 capacitores e correções C401/C403](capacitor-derating.md).
+
 [Fechamento das 190 posições de compra](bom-closeout-2026-10-16.md): 235 posições
 com fabricante e MPN completos, fontes técnicas e acessórios separados.
 

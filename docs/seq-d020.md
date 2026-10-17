@@ -1,5 +1,9 @@
 # D-020 — Subconjunto discreto do sequenciador (sem MCU)
 
+Atualização2026-10-17: [SYS-002 Rev.B](sys002-baseline.md) e
+[derating atual](capacitor-derating.md) prevalecem para limites/capacitância
+efetiva; C40110u50V0805 próximo do LP2985 e C40310u25V0603.
+
 Captura `kicad/seq-d020/` (ERC 0) e integração em `kicad/system-candidate/`.
 **Estudo; não é hardware validado, não libera compra, fabricação nem energização.**
 D-024 acrescentou a lógica da interface D-019 (RESET depois do relé, dwell DC,

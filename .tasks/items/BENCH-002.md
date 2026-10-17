@@ -5,7 +5,7 @@ status: To Do
 milestone: M4
 sprint: S05
 depends_on: FAB-001
-updated: 2026-10-16
+updated: 2026-10-17
 ---
 
 # BENCH-002 — Bring-up e carga resistiva
@@ -40,3 +40,11 @@ Pendente. Não marcar critérios sem evidência.
 ## Risco / aprovação
 
 Alterações de hardware exigem fonte primária e gate humano; sem pedidos automáticos.
+
+## Critérios transferidos de SYS-002 (Rev.B2026-10-17)
+
+Executar tests/bench-plan.md e tests/acceptance.md. Medir estabilidade de
+LP2985 a0–10mA contínuos e até50mA por≤50ms/duty≤10% e LM5164 a0–0,5A, extremos de alimentação/temperatura;
+capacitância efetiva de lote se necessário, ripple espectral/partilha nos
+48 capacitores, case<70C, rails/DC/pop/THD/potência/térmica conforme Rev.B.
+Registrar instrumentos e dados reais; não converter curvas típicas em medidas.

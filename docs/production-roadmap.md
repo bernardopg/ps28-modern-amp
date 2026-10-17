@@ -1,5 +1,12 @@
 # Caminho até produção (JLCPCB)
 
+## SYS-002 concluída —2026-10-17
+
+[Rev.B/G0 aprovado](sys002-baseline.md): potência, THD, duração, ambiente e
+excursão definidos; [C401/C403 corrigidos e48 capacitores revistos](capacitor-derating.md).
+Bancada física em BENCH-002/ACOU-001; G1–G5 e qualificação fabril continuam pendentes.
+
+
 ## Complemento de fechamento — 2026-10-16
 
 [Revisão final](final-design-review-2026-10-16.md): conectividade confirmada,

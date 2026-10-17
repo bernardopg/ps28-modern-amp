@@ -71,8 +71,8 @@ Tasks têm ID estável, dependências e critérios verificáveis; WIP máximo 2.
 Use Conventional Commits e atualize CHANGELOG.md para mudanças relevantes.
 
 ## EDA atual
-**Placa única do produto: kicad/system-candidate/** (269 footprints, 3.531 segmentos,
-499 vias; ERC/DRC/paridade/aberturas 0 em 2026-10-16). Base gerada por
+**Placa única do produto: kicad/system-candidate/** (269 footprints, 3.535 segmentos,
+500 vias; ERC/DRC/paridade/aberturas 0 em 2026-10-17). Base gerada por
 scripts/integrate_candidate.py e pós-processada/roteada via KCAA/KiCad nativo;
 não editar à mão nem regenerar sobre o cobre atual. Revisão local TPA e fit térmico
 nominal concluídos; revisão global/G1/G2, fit físico/térmica/EMI e BOM/CPL pendentes.

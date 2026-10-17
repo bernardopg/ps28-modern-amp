@@ -10142,21 +10142,21 @@
 
 (property "Reference" "C403" (at 787.4 370.84 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-(property "Value" "2.2u 10V" (at 787.4 381 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+(property "Value" "10u 25V" (at 787.4 381 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
 (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 787.4 381 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-(property "Datasheet" "https://www.ti.com/lit/ug/slou557a/slou557a.pdf" (at 787.4 375.92 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Datasheet" "https://ds.murata.com/simsurfing/mlcc.html?partnumbers=%5B%22GRM188R61E106MA73%22%5D" (at 787.4 375.92 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
 
 (property "Description" "" (at 787.4 375.92 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
 
-(property "MPN" "GRM188Z71C225KE43D" (at 787.4 381 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
-(property "SelectionNotes" "2.2uF; 16V; X7R(Murata); 10%; 0603; TI EVM C118; LP2985 output3.3V requires >=1uF effective incl bias/temp/age; confirm curve before procurement release" (at 787.4 381 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+(property "MPN" "GRM188R61E106MA73D" (at 787.4 381 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+(property "SelectionNotes" "10uF 25V 20% X5R 0603; effective >=2.2uF at3.5V/10mVrms incl temperature/tolerance/age budget; LP2985 legacy/new; ESR including connection path; cap case<70C; see docs/capacitor-derating.md" (at 787.4 381 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 (property "Manufacturer" "Murata" (at 787.4 381 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
 (property "SelectionStatus" "MPN SELECTED; supply/DFM/bench release pending" (at 787.4 381 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-(property "Source" "D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md" (at 787.4 381 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)))) (pin "1" (uuid "761ca779-cf47-5181-9ae0-5fbc195f6749")) (pin "2" (uuid "7bca8031-78be-5142-b61a-196125669757")) (instances (project "system-candidate" (path "/2e10e179-0743-5984-a76c-4020e7e5915a" (reference "C403") (unit 1)))))
+(property "Source" "https://ds.murata.com/simsurfing/mlcc.html?partnumbers=%5B%22GRM188R61E106MA73%22%5D; 10uF 25V 20% X5R 0603; effective >=2.2uF at3.5V/10mVrms incl temperature/tolerance/age budget; LP2985 legacy/new; ESR including connection path; cap case<70C; see docs/capacitor-derating.md" (at 787.4 381 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)))) (pin "1" (uuid "761ca779-cf47-5181-9ae0-5fbc195f6749")) (pin "2" (uuid "7bca8031-78be-5142-b61a-196125669757")) (instances (project "system-candidate" (path "/2e10e179-0743-5984-a76c-4020e7e5915a" (reference "C403") (unit 1)))))
 
 (symbol (lib_id "Device:C") (at 149.86 76.2 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "b20cea80-0d7f-5dd8-bc20-51783799ecdd")
 
@@ -11065,21 +11065,21 @@
 
 (property "Reference" "C401" (at 660.4 370.84 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-(property "Value" "1u 25V" (at 660.4 381 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+(property "Value" "10u 50V" (at 660.4 381 0) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 660.4 381 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 660.4 381 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-(property "Datasheet" "https://www.murata.com/products/productdetail?partno=GRM188R71E105KA12%23" (at 660.4 375.92 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+(property "Datasheet" "https://ds.murata.com/simsurfing/mlcc.html?partnumbers=%5B%22GRM21BR61H106KE43%22%5D" (at 660.4 375.92 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
 
 (property "Description" "" (at 660.4 375.92 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
 
-(property "MPN" "GRM188R71E105KA12D" (at 660.4 381 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
-(property "SelectionNotes" "1uF; 25V; X7R; 10%; 0603; C401 input at12V: bias derating applies" (at 660.4 381 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+(property "MPN" "GRM21BR61H106KE43L" (at 660.4 381 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
+(property "SelectionNotes" "10uF 50V 10% X5R 0805; effective >=1uF at13.2V/10mVrms incl temperature/tolerance/age budget; place within10mm U401; see docs/capacitor-derating.md" (at 660.4 381 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 (property "Manufacturer" "Murata" (at 660.4 381 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
 (property "SelectionStatus" "MPN SELECTED; supply/DFM/bench release pending" (at 660.4 381 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1))))
 
-(property "Source" "D-021/D-020 captures; see docs/power-d021.md and docs/seq-d020.md" (at 660.4 381 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)))) (pin "1" (uuid "f0d1ea75-c964-5448-bd9f-9a5e12c8b0cd")) (pin "2" (uuid "b6e4372b-7972-53d9-bd26-b6c6a443b69c")) (instances (project "system-candidate" (path "/2e10e179-0743-5984-a76c-4020e7e5915a" (reference "C401") (unit 1)))))
+(property "Source" "https://ds.murata.com/simsurfing/mlcc.html?partnumbers=%5B%22GRM21BR61H106KE43%22%5D; 10uF 50V 10% X5R 0805; effective >=1uF at13.2V/10mVrms incl temperature/tolerance/age budget; place within10mm U401; see docs/capacitor-derating.md" (at 660.4 381 0) (hide yes) (show_name no) (do_not_autoplace no) (effects (font (size 1 1)))) (pin "1" (uuid "f0d1ea75-c964-5448-bd9f-9a5e12c8b0cd")) (pin "2" (uuid "b6e4372b-7972-53d9-bd26-b6c6a443b69c")) (instances (project "system-candidate" (path "/2e10e179-0743-5984-a76c-4020e7e5915a" (reference "C401") (unit 1)))))
 
 (symbol (lib_id "Device:C") (at 1092.2 289.56 0) (unit 1) (body_style 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "d4314d0b-c84f-59c0-bad6-2542838eb190")
 

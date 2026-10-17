@@ -2312,9 +2312,9 @@
     {
       "ref": "C401",
       "lib_id": "Device:C",
-      "value": "1u 25V",
-      "mpn": "GRM188R71E105KA12D",
-      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "value": "10u 50V",
+      "mpn": "GRM21BR61H106KE43L",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
       "nets": {
         "1": "AUX_RAW",
         "2": "GND"
@@ -2329,8 +2329,9 @@
       "group": "seq",
       "selection": "MPN SELECTED; supply/DFM/bench release pending",
       "manufacturer": "Murata",
-      "datasheet": "https://www.murata.com/products/productdetail?partno=GRM188R71E105KA12%23",
-      "selection_notes": "1uF; 25V; X7R; 10%; 0603; C401 input at12V: bias derating applies"
+      "datasheet": "https://ds.murata.com/simsurfing/mlcc.html?partnumbers=%5B%22GRM21BR61H106KE43%22%5D",
+      "selection_notes": "10uF 50V 10% X5R 0805; effective >=1uF at13.2V/10mVrms incl temperature/tolerance/age budget; place within10mm U401; see docs/capacitor-derating.md",
+      "source": "https://ds.murata.com/simsurfing/mlcc.html?partnumbers=%5B%22GRM21BR61H106KE43%22%5D; 10uF 50V 10% X5R 0805; effective >=1uF at13.2V/10mVrms incl temperature/tolerance/age budget; place within10mm U401; see docs/capacitor-derating.md"
     },
     {
       "ref": "C402",
@@ -2358,8 +2359,8 @@
     {
       "ref": "C403",
       "lib_id": "Device:C",
-      "value": "2.2u 10V",
-      "mpn": "GRM188Z71C225KE43D",
+      "value": "10u 25V",
+      "mpn": "GRM188R61E106MA73D",
       "footprint": "Capacitor_SMD:C_0603_1608Metric",
       "nets": {
         "1": "SEQ_3V3",
@@ -2375,8 +2376,9 @@
       "group": "seq",
       "selection": "MPN SELECTED; supply/DFM/bench release pending",
       "manufacturer": "Murata",
-      "datasheet": "https://www.ti.com/lit/ug/slou557a/slou557a.pdf",
-      "selection_notes": "2.2uF; 16V; X7R(Murata); 10%; 0603; TI EVM C118; LP2985 output3.3V requires >=1uF effective incl bias/temp/age; confirm curve before procurement release"
+      "datasheet": "https://ds.murata.com/simsurfing/mlcc.html?partnumbers=%5B%22GRM188R61E106MA73%22%5D",
+      "selection_notes": "10uF 25V 20% X5R 0603; effective >=2.2uF at3.5V/10mVrms incl temperature/tolerance/age budget; LP2985 legacy/new; ESR including connection path; cap case<70C; see docs/capacitor-derating.md",
+      "source": "https://ds.murata.com/simsurfing/mlcc.html?partnumbers=%5B%22GRM188R61E106MA73%22%5D; 10uF 25V 20% X5R 0603; effective >=2.2uF at3.5V/10mVrms incl temperature/tolerance/age budget; LP2985 legacy/new; ESR including connection path; cap case<70C; see docs/capacitor-derating.md"
     },
     {
       "ref": "U402",
@@ -6219,13 +6221,13 @@
     }
   ],
   "source_sha256": {
-    "bom/system-candidate-selection.csv": "ab663dca5dd93fb3cc4efd7b17102571d586733aa572a33818f439ca28b2208c",
+    "bom/system-candidate-selection.csv": "009ffb84f81370958db3e1ee85d7b633dcb595e547cc69c5bbd56bdd1baa03c3",
     "kicad/analog-protected/analog-protected.kicad_sch": "f46adefe0383358837e4eb49a41fe21b8017f39b549f789c10675ca4ac277303",
     "kicad/core-oem-refined/ps28-modern.kicad_sch": "134bdf8fa93e3a66d99a5d556bd45cb9c5289ed5c3b126273db16ef3ad38a2ce",
     "kicad/power-d021/power-d021.kicad_sch": "b27d4cc1ab8930527ff147b3d1488ca8c04037574b6009157686842a3d801e83",
     "kicad/seq-d020/seq-d020.kicad_sch": "0d6a219fd97f4594ea756f839a9c2f616b1174abb3ba09accabca21839d0b884",
     "scripts/create_power_d021.py": "504881a3d7dda2553a70c04ec173ed3084e326b0b7107fc6bffed48275134689",
-    "scripts/create_seq_d020.py": "683a80d4acd83d68d237ab158e8d85e75f21aa51c66dc17d71a0b56d595e5760",
+    "scripts/create_seq_d020.py": "e66e86130374900ebe22799fa4551f7c66ab1c215f0a207d222ae9751285f31c",
     "scripts/integrate_candidate.py": "4f505004d50128d1557d4bb5cd2c65bb7c455e70b701191690f449686747ac9b"
   },
   "status": "CORE + D018 + D021 POWER + D020 SEQ SUBSET IMPORT BANKS; SIGNAL SAFETY BRIDGE OPEN",
@@ -6282,5 +6284,6 @@
     "kicad/seq-d020/seq-d020.kicad_sch": "0d6a219fd97f4594ea756f839a9c2f616b1174abb3ba09accabca21839d0b884",
     "scripts/create_power_d021.py": "504881a3d7dda2553a70c04ec173ed3084e326b0b7107fc6bffed48275134689",
     "scripts/create_seq_d020.py": "683a80d4acd83d68d237ab158e8d85e75f21aa51c66dc17d71a0b56d595e5760"
-  }
+  },
+  "capacitor_revision": "2026-10-17: C40110u50V0805 moved near U401, C40310u25V0603; local branch only; docs/capacitor-derating.md"
 }
