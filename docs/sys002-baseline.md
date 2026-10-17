@@ -24,8 +24,8 @@ Estado: **G0 da Rev.B aprovado explicitamente pelo proprietário em2026-10-17**.
 Registro da resposta: “Aprovo o G0 da Rev.B”.
 Não reutilizar D-030 como aprovação de limites que foram definidos depois.
 Responsável: proprietário do projeto (bitter). Data:2026-10-17.
-Commit da baseline aprovada: será vinculado ao commit de engenharia no fechamento
-versionado desta revisão, após validação dos arquivos. Aprovar G0 não autoriza compra, fabricação, energização nem substitui G1–G5.
+Commit da baseline aprovada: [`6cf2260da231`](https://github.com/bernardopg/ps28-modern-amp/commit/6cf2260da231e5125bdf267e938a8d7b2d3235dc).
+[Registro G0 com hashes dos arquivos aprovados](../tests/reports/g0-revb-approval-2026-10-17.json). Aprovar G0 não autoriza compra, fabricação, energização nem substitui G1–G5.
 
 Regra aplicável: SYS-002 exige “Baseline e G0 aprovados pelo proprietário”; docs/safety.md
 exige “IA recomenda, humano aprova”. O aceite explícito foi recebido; ensaios físicos e demais gates permanecem

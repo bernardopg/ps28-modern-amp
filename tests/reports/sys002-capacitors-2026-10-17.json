@@ -57,7 +57,7 @@
     ".tasks/items/FAB-001.md": "48ffc2b077c0958f7d5e874061a7e437c2ab8536a1fb9d5e9ef2cf3c401aa6ec",
     ".tasks/items/PCB-001.md": "21bdd6d0701fc8498d3e4d1dae517b0709857e44ab801a0b8fb64d37ce0099e2",
     ".tasks/items/PCB-002.md": "9d0344648d64b21821a80cce945bd08f368e5218e23c6b622ee28a3ae2d88c79",
-    ".tasks/items/SYS-002.md": "3557aa2cac0dd3ffd2e3879d4bbfa7c6b06544144180de6d961250278f24bc98",
+    ".tasks/items/SYS-002.md": "8caeed152d4a51dcb8faa59071eab1ae5307c205fd1dca92421b61c91d8ba006",
     ".tasks/project-backlog.md": "9c141731e75a9fdf55043ebc206fcde89510343327ea870ccb437b426d3d750a",
     ".tasks/sprints/S02.md": "c543a9dd0187fa5c42d47f951a2a97e7018742de5fc0fd3773112d91d19e61f6",
     ".tasks/sprints/S03.md": "e0350bb7e89cb0999e4a54c179c69c8a1fddd346cc2b0521d2f65cc7bf4bcdd6",
@@ -127,7 +127,7 @@
     "docs/schematic.md": "c9c6218439dcf77ab8c50e83f5547dce87a00a990d3943163abea762640d1287",
     "docs/seq-d020.md": "47157334fd9d10368548ce9273125673ed3652b3d5f479d28eeab5ac8a7dc037",
     "docs/simulation.md": "80bb5caf58c1db299a1d31a59ef1a090a46a1696300751cdf465910bf1fa45d4",
-    "docs/sys002-baseline.md": "d4e3725897919fa95d570555b9cb32d191ba46e143b378f4e6f9462e326b9c0a",
+    "docs/sys002-baseline.md": "64f1eafe23de10daaef785ea97af28aaec08bb96f58b789dc2a316e53c011d08",
     "docs/toolchain.md": "8015b53b6115f7a1e588895f117e9cc3df75bced678edb07ae3e5e7878401256",
     "docs/tpa-local-layout-review.md": "6fc1c5f62d99285179641b4729b4e952a978c198c1d92e89b568bcb92e01819e",
     "kicad/analog-protected/analog-protected.kicad_pro": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
@@ -176,6 +176,7 @@
     "tests/fixtures/capacitor-characteristics.json": "65aa067f4de4cf3991f3dab4e07ee818fdc456b0988747fbf7a3e828000b6cea",
     "tests/reports/README.md": "b8114c27916603b47c1ad6d3c7e3ded08ac7121541d4d0c55de8c82c0ba70c1e",
     "tests/reports/documentation-media-refresh.json": "007dddf91f0cf0af19171ece0f291555ba8af1181e0e4dd85eb9e38e6e11d50e",
+    "tests/reports/g0-revb-approval-2026-10-17.json": "7f2b3300c08c71d8482cb0fe7a2485d419bfe1cd2250d667e352e3ffa878b449",
     "tests/reports/main-sync-2026-10-16.json": "5014989e137ea42a397d513a55f5222c7eca32a034c3d8d866675fd3cb30928e",
     "tests/reports/production-readiness-2026-10-15.json": "5dc02d53a39efc8fd6ea26fb2cbb37ef9441f6ed8b0b04d1ec7c65589a7ace1a",
     "tests/reports/publication-sync-2026-10-16.json": "3955f100c3c9709f4ec5226a3137fd737c7183b2e36a9beea7ef0e6b76f93366",
@@ -196,7 +197,7 @@
     "command": "make check",
     "passed": 146,
     "failed": 0,
-    "log": "build/sys002-capacitors/check-final.log"
+    "log": "build/sys002-capacitors/check-g0.log"
   },
   "studio_media_manifest": "docs/images/pcb-studio/manifest.json",
   "media_note": "Studio pixels and source hashes are bound by their own manifest, published only after all three renders",
@@ -271,7 +272,9 @@
   "g0_approval": {
     "owner_response": "Aprovo o G0 da Rev.B",
     "date": "2026-10-17",
-    "scope": "Requirements Rev.B baseline only; no manufacturing or energization approval"
+    "scope": "Requirements Rev.B baseline only; no manufacturing or energization approval",
+    "approved_baseline_commit": "6cf2260da231e5125bdf267e938a8d7b2d3235dc",
+    "record": "tests/reports/g0-revb-approval-2026-10-17.json"
   },
   "fab_summary": {
     "commit": "f5a0e8507d3edb5ec0ede8862ba09cbf59aaf252",

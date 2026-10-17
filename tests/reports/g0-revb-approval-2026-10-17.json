@@ -1,0 +1,23 @@
+{
+  "gate": "G0",
+  "revision": "Requirements Rev.B / SYS-002 / D-036",
+  "approved": true,
+  "owner": "project owner (bitter)",
+  "date": "2026-10-17",
+  "owner_response": "Aprovo o G0 da Rev.B",
+  "approved_baseline_commit": "6cf2260da231e5125bdf267e938a8d7b2d3235dc",
+  "source_sha256": {
+    "docs/requirements.md": "4ef69fe3b3862dbb289e61844d2f18b7ca59ad83b8c56fa7d4cc24719e0c3041",
+    "tests/acceptance.md": "d5a3575d7c3a2411e8c509fe779826b54fa5492f286c6c6d445bfe9fe6505090",
+    "tests/bench-plan.md": "44f17c63171199be16162a46254ea4f8f3cf31194da69f373d183c108b34513d",
+    "docs/capacitor-derating.md": "1d42a744211c2f57edc22acb5b4f7b29a04adf988505b57a7ca1c5fa10d19fcb",
+    "bom/system-candidate-capacitor-derating.csv": "a24585c712b80df0ad0216c5739a41dd0ba840fcf6a25ea94690a332cd0a754b",
+    "tests/fixtures/capacitor-characteristics.json": "65aa067f4de4cf3991f3dab4e07ee818fdc456b0988747fbf7a3e828000b6cea",
+    "kicad/system-candidate/system-candidate.kicad_sch": "4cd7d1a885d282f5334c31a94fea58b657f47453e0c40dd31a8107540949e271",
+    "kicad/system-candidate/system-candidate.kicad_pcb": "e67ad575a8980b0f20a076bf441f6c74eef6c5992f5bccb4721df2fa06f75861"
+  },
+  "hardware_validated": false,
+  "manufacturing_approved": false,
+  "energization_approved": false,
+  "scope": "Requirements baseline approval only; physical qualification remains BENCH-002/ACOU-001; G1-G5 unapproved"
+}
